@@ -24,7 +24,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--prompt_model_name_or_path",
         type=str,
-        default="",
+        default="google-t5/t5-small",
         help="Path to the prompt model.",
     )
     
