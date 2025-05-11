@@ -19,11 +19,16 @@ export PYTHONPATH=${PWD}/src/
 # module load devel/cuda/11.7
 module load devel/cuda/12.8
 
+# currently we use python 3.12.x
+module load devel/python/3.12.3-gnu-11.4
+
 if [ ! -d "venv" ]; then
     echo "Creating virtual environment..."
     python -m venv venv
+    source venv/bin/activate
     pip install -r requirements.txt
+else
+    source venv/bin/activate
 fi
-source venv/bin/activate
 
-python main.py
+python src/main.py
