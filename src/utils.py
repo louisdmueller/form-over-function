@@ -1,5 +1,6 @@
 import pandas as pd
 import argparse
+import yaml
 
 def get_df_from_file(file_path: str) -> pd.DataFrame:
     """
@@ -35,5 +36,17 @@ def parse_args() -> argparse.Namespace:
         help="Path to the data directory.",
     )
 
+    parser.add_argument(
+        "--config_path",
+        type=str,
+        default="config.yml",
+        help="Path to the config file.",
+    )
+
     args = parser.parse_args()
     return args
+
+def load_config(path: str) -> dict:
+    with open(path, "r") as f:
+        config = yaml.safe_load(f)
+    return config

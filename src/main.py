@@ -1,11 +1,17 @@
 import transformers
 import torch
 import math
+from huggingface_hub import login
 
-from utils import get_df_from_file, parse_args
+from utils import get_df_from_file, parse_args, load_config
 
 def main() -> None:
     args = parse_args()
+    config = load_config(args.config_path)
+
+    # access to llama models is restricted
+    login(token=config["huggingface_hub_token"])
+
     data_df = get_df_from_file(args.data_path)
 
     prompt = {
