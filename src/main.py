@@ -19,9 +19,9 @@ def main() -> None:
         "template": "~~~ Question\n{question}\n ~~~\n ~~~ Answer1 \n{answer1}\n ~~~\n ~~~ Answer2 \n{answer2}\n ~~~"
     }
 
-    model = transformers.T5ForConditionalGeneration.from_pretrained(args.prompt_model_name_or_path)
-    tokenizer = transformers.AutoTokenizer.from_pretrained(args.prompt_model_name_or_path)
-    tokenizer.model_max_length = 1024
+    # model = transformers.T5ForConditionalGeneration.from_pretrained(args.prompt_model_name_or_path)
+    # tokenizer = transformers.AutoTokenizer.from_pretrained(args.prompt_model_name_or_path)
+    # tokenizer.model_max_length = 1024
 
     system_prompt = prompt["system"]
 
@@ -31,13 +31,35 @@ def main() -> None:
             answer1 = data["answers"]["answer1"]["answer"]
             answer2 = data["answers"]["answer2"]["answer"]
 
-            input_text = system_prompt + prompt["template"].format(
-                question=question, answer1=answer1, answer2=answer2
-            )
-            inputs = tokenizer(input_text, return_tensors="pt")
+            # input_text = system_prompt + prompt["template"].format(
+            #     question=question, answer1=answer1, answer2=answer2
+            # )
+            # inputs = tokenizer(input_text, return_tensors="pt")
 
-            output = model.generate(
-                inputs["input_ids"],
+            # output = model.generate(
+            #     inputs["input_ids"],
+            #     num_beams=6,
+            #     num_return_sequences=6,
+            #     do_sample=False,
+            #     output_scores=True,
+            #     return_dict_in_generate=True
+            # )
+
+            # # Diese Scores sind log-probs: höher = besser (weniger negativ)
+            # sequence_scores = output.sequences_scores.tolist()
+
+            pipe = transformers.pipeline(
+                "text-generation", 
+                model=args.prompt_model_name_or_path,
+                torch_dtype=torch.bfloat16, 
+                device_map="auto"
+            )
+
+            pipe(
+                system_prompt + prompt["template"].format(
+                    question=question, answer1=answer1, answer2=answer2
+                ),
+                max_length=1024,
                 num_beams=6,
                 num_return_sequences=6,
                 do_sample=False,
@@ -45,19 +67,16 @@ def main() -> None:
                 return_dict_in_generate=True
             )
 
-            # Diese Scores sind log-probs: höher = besser (weniger negativ)
-            sequence_scores = output.sequences_scores.tolist()
+            # results = []
+            # for i, (sequence, log_score) in enumerate(zip(output.sequences, sequence_scores)):
+            #     decoded_text = tokenizer.decode(sequence, skip_special_tokens=True, clean_up_tokenization_spaces=True)
+            #     # convert log prob to probability
+            #     prob_score = math.exp(log_score)
+            #     results.append((decoded_text, prob_score))
 
-            results = []
-            for i, (sequence, log_score) in enumerate(zip(output.sequences, sequence_scores)):
-                decoded_text = tokenizer.decode(sequence, skip_special_tokens=True, clean_up_tokenization_spaces=True)
-                # convert log prob to probability
-                prob_score = math.exp(log_score)
-                results.append((decoded_text, prob_score))
-
-            for i, (text, score) in enumerate(results):
-                print(f"Generated Text {i + 1}: {text}")
-                print(f"Sequence Score: {score:.4f}")
+            # for i, (text, score) in enumerate(results):
+            #     print(f"Generated Text {i + 1}: {text}")
+            #     print(f"Sequence Score: {score:.4f}")
 
             break
 
