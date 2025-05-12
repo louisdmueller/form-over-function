@@ -57,10 +57,11 @@ def translate_text(text: str) -> str:
     response = client.responses.create(
         model="gpt-4o-mini",
         input=user_input,
+        max_output_tokens=len(text) + 50,
     )
 
     pattern = r"The translation is:\s*(.*)"
-    match = re.search(pattern, response.output_text)
+    match = re.search(pattern, response.output_text, re.DOTALL)
     if match:
         translated_text = match.group(1)
     else:

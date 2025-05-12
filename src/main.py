@@ -1,12 +1,18 @@
 import math
 import os
+from venv import create
 
 import torch
 import transformers
 from huggingface_hub import login
 
 from aae_translation import translate_df
-from utils import get_df_from_file, load_config, parse_args
+from utils import (
+    create_comparison_csv,
+    get_df_from_file,
+    load_config,
+    parse_args,
+)
 
 
 def main() -> None:
@@ -25,6 +31,14 @@ def main() -> None:
             lines=True,
             orient="records",
         )
+    else:
+        data_df = get_df_from_file(f"{data_directory}/permutated.json")
+
+    # Damit wir die Übersetzungen manuell überprüfen können
+    create_comparison_csv(
+        data_df,
+        f"{data_directory}/comparison.csv",
+    )
 
     prompt = {
         "system": "### You are an excellent evaluator.\n### Your assignment involves providing evaluations for given responses.\n### Each evaluation will consist of *a question* and *two corresponding answers*. Your task is to discern which response is superior based on the **quality of the answer**. If you find that both responses are equally good or bad , feel free to select a tie. There is **no obligation** to favor one response over the other; if a decision cannot be made , a **tie would be an optimal choice**.\n### During the evaluation process , please focus exclusively on the **semantic quality** of the answers. Non semantic factors should not influence your evaluation. The primary focus should be on the ** quality and accuracy** of the answers.\n### You should ONLY output your vote 'Answer1 ', or 'Answer2 ', or 'Tie ' in the last line.",

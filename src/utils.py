@@ -56,3 +56,22 @@ def load_config(path: str) -> dict:
     with open(path, "r") as f:
         config = yaml.safe_load(f)
     return config
+
+
+def create_comparison_csv(
+    df: pd.DataFrame,
+    output_path: str,
+) -> None:
+    """
+    Create a CSV file with the comparison results.
+    """
+    comparison_df = pd.DataFrame(
+        {
+            "Prompt": df["question"],
+            "Original Answer": df["answers"].apply(lambda a: a["answer1"]["answer"]),
+            "Translated (AAE)": df["answers"].apply(
+                lambda a: a.get("answer1_permutated", "N/A")
+            ),
+        }
+    )
+    comparison_df.to_csv(output_path, index=False)
