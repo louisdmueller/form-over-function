@@ -1,6 +1,8 @@
-import pandas as pd
 import argparse
+
+import pandas as pd
 import yaml
+
 
 def get_df_from_file(file_path: str) -> pd.DataFrame:
     """
@@ -9,11 +11,14 @@ def get_df_from_file(file_path: str) -> pd.DataFrame:
     df = pd.read_json(file_path, lines=True)
     return df
 
+
 def parse_args() -> argparse.Namespace:
     """
     Parse arguments
     """
-    parser = argparse.ArgumentParser(description="Argument parser for our research project.")
+    parser = argparse.ArgumentParser(
+        description="Argument parser for our research project."
+    )
 
     parser.add_argument(
         "--judge_model_name_or_path",
@@ -25,10 +30,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--prompt_model_name_or_path",
         type=str,
-        default="google-t5/t5-small",
+        default="meta-llama/Llama-3.1-8B-Instruct",
         help="Path to the prompt model.",
     )
-    
+
     parser.add_argument(
         "--data_path",
         type=str,
@@ -45,6 +50,7 @@ def parse_args() -> argparse.Namespace:
 
     args = parser.parse_args()
     return args
+
 
 def load_config(path: str) -> dict:
     with open(path, "r") as f:
