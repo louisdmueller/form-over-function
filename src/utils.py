@@ -2,6 +2,7 @@ import argparse
 
 import pandas as pd
 import yaml
+from nltk import edit_distance
 
 
 def get_df_from_file(file_path: str) -> pd.DataFrame:
@@ -69,9 +70,41 @@ def create_comparison_csv(
         {
             "Prompt": df["question"],
             "Original Answer": df["answers"].apply(lambda a: a["answer1"]["answer"]),
-            "Translated (AAE)": df["answers"].apply(
+            "Translated Answer (AAE)": df["answers"].apply(
                 lambda a: a.get("answer1_permutated", "N/A")
             ),
         }
     )
+    comparison_df = add_length_column(comparison_df)
+    comparison_df = add_edit_distance_column(comparison_df)
+
     comparison_df.to_csv(output_path, index=False)
+
+
+def add_length_column(
+    df: pd.DataFrame,
+) -> pd.DataFrame:
+    """
+    Add a length column to the DataFrame.
+    """
+    df["Original->AAE character difference"] = df.apply(
+        lambda x: len(x["Translated Answer (AAE)"]) - len(x["Original Answer"]),
+        axis=1,
+    )
+    return df
+
+
+def add_edit_distance_column(
+    df: pd.DataFrame,
+) -> pd.DataFrame:
+    """
+    Add a edit distance column to the DataFrame.
+    """
+    df["Original->AAE Edit distance"] = df.apply(
+        lambda x: edit_distance(
+            x["Original Answer"],
+            x["Translated Answer (AAE)"],
+        ),
+        axis=1,
+    )
+    return df
