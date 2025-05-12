@@ -4,12 +4,12 @@ import pandas as pd
 from openai import OpenAI
 
 
-def setup_openai_client(api_key: str) -> None:
+def setup_openai_client(api_key: str) -> OpenAI:
     """
     Set up the OpenAI client with the provided API key.
     """
-    global openai_client
     openai_client = OpenAI(api_key=api_key)
+    return openai_client
 
 
 def replace_words(text: str, replacement_dict: dict) -> str:
@@ -23,7 +23,7 @@ def replace_words(text: str, replacement_dict: dict) -> str:
     return text
 
 
-def translate_text(text: str) -> str:
+def translate_text(text: str, openai_client) -> str:
     """
     Translate the given text into African American English (AAE) using GPT-4o mini.
     """
@@ -72,20 +72,23 @@ def translate_text(text: str) -> str:
     return updated_translation
 
 
-def add_translation(row) -> pd.Series:
+def add_translation(row: pd.Series, openai_client: OpenAI) -> pd.Series:
+    """
+    Add a translation from SAE to AAE to the row of the Dataframe.
+    """
     original_answer = row["answers"]["answer1"]["answer"]
-    translated_answer = translate_text(original_answer)
+    translated_answer = translate_text(original_answer, openai_client)
     row["answers"]["answer1_permutated"] = translated_answer
     return row
 
 
-def translate_df(df: pd.DataFrame) -> pd.DataFrame:
-    df = df.apply(add_translation, axis=1)
+def translate_df(df: pd.DataFrame, openai_client: OpenAI) -> pd.DataFrame:
+    """
+    Run the translation from SAE to AAE on the DataFrame using the OpenAI client.
+    """
+    df = df.apply(lambda row: add_translation(row, openai_client), axis=1)
     return df
 
 
 if __name__ == "__main__":
-    text = translate_text(
-        text="The square root of 36 is 6. This is because 6 multiplied by 6 equals 36. The square root of a number is a value that, when multiplied by itself, gives the original number."
-    )
-    print(text)
+    pass

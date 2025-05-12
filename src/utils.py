@@ -42,7 +42,7 @@ def parse_args() -> argparse.Namespace:
         "--data_path",
         type=str,
         default="data/chen-et-al/raw.json",
-        help="Path to the data directory.",
+        help="Path to the raw data.",
     )
 
     parser.add_argument(
@@ -67,7 +67,7 @@ def create_comparison_csv(
     output_path: str,
 ) -> None:
     """
-    Create a CSV file with the comparison results.
+    Create a CSV file to compare the translated answers to the original ones.
     """
     comparison_df = pd.DataFrame(
         {
@@ -89,7 +89,7 @@ def _add_length_column(
     df: pd.DataFrame,
 ) -> pd.DataFrame:
     """
-    Add a length column to the DataFrame.
+    Add a column that indicates the length difference between the AAE answers and the original answers.
     """
     df["Original->AAE character difference"] = df.apply(
         lambda x: len(x["Translated Answer (AAE)"]) - len(x["Original Answer"]),
@@ -102,7 +102,7 @@ def _add_edit_distance_column(
     df: pd.DataFrame,
 ) -> pd.DataFrame:
     """
-    Add a edit distance column to the DataFrame.
+    Add a column that indicates the minimal edit distance from the original answers to the AAE answers.
     """
     df["Original->AAE Edit distance"] = df.apply(
         lambda x: edit_distance(
@@ -119,6 +119,7 @@ def _add_type_token_ratio_column(
 ) -> pd.DataFrame:
     """
     Add a type-token ratio column to the DataFrame.
+    The type-token ratio is the number of unique words divided by the total number of words.
     """
     df["Type-Token Ratio Original"] = df.apply(
         lambda x: len(set(word_tokenize(x["Original Answer"])))

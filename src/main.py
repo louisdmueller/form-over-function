@@ -21,12 +21,12 @@ def main() -> None:
 
     # access to llama models is restricted
     login(token=config["huggingface_hub_token"])
-    setup_openai_client(config["openai_key"])
+    openai_client = setup_openai_client(config["openai_key"])
 
     data_df = get_df_from_file(args.data_path)
     data_directory = os.path.dirname(args.data_path)
     if not os.path.exists(f"{data_directory}/translated.json"):
-        translate_df(data_df)
+        translate_df(data_df, openai_client)
         data_df.to_json(
             f"{data_directory}/translated.json",
             lines=True,
