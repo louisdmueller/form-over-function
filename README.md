@@ -10,4 +10,9 @@ To access the newest Llama models one needs to accept the Meta tos on HuggingFac
 ```yaml
 huggingface_hub_token: <key>
 ```
+
+To generate the translations using GPT4o mini, we use the OpenAI API. Include your API key as follows:
+```yaml
+openai_key: <key>
+```
 In the future this config file may be used to store other configurations as well.
