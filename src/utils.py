@@ -2,7 +2,10 @@ import argparse
 
 import pandas as pd
 import yaml
-from nltk import edit_distance
+from nltk import download, edit_distance
+from nltk.tokenize import word_tokenize
+
+download("punkt_tab")
 
 
 def get_df_from_file(file_path: str) -> pd.DataFrame:
@@ -77,6 +80,7 @@ def create_comparison_csv(
     )
     comparison_df = _add_length_column(comparison_df)
     comparison_df = _add_edit_distance_column(comparison_df)
+    comparison_df = _add_type_token_ratio_column(comparison_df)
 
     comparison_df.to_csv(output_path, index=False)
 
@@ -105,6 +109,25 @@ def _add_edit_distance_column(
             x["Original Answer"],
             x["Translated Answer (AAE)"],
         ),
+        axis=1,
+    )
+    return df
+
+
+def _add_type_token_ratio_column(
+    df: pd.DataFrame,
+) -> pd.DataFrame:
+    """
+    Add a type-token ratio column to the DataFrame.
+    """
+    df["Type-Token Ratio Original"] = df.apply(
+        lambda x: len(set(word_tokenize(x["Original Answer"])))
+        / len(word_tokenize(x["Original Answer"])),
+        axis=1,
+    )
+    df["Type-Token Ratio AAE"] = df.apply(
+        lambda x: len(set(word_tokenize(x["Translated Answer (AAE)"])))
+        / len(word_tokenize(x["Translated Answer (AAE)"])),
         axis=1,
     )
     return df
