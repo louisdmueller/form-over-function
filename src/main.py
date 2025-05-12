@@ -24,17 +24,18 @@ def main() -> None:
 
     data_df = get_df_from_file(args.data_path)
     data_directory = os.path.dirname(args.data_path)
-    if not os.path.exists(f"{data_directory}/permutated.json"):
+    if not os.path.exists(f"{data_directory}/translated.json"):
         translate_df(data_df)
         data_df.to_json(
-            f"{data_directory}/permutated.json",
+            f"{data_directory}/translated.json",
             lines=True,
             orient="records",
         )
     else:
-        data_df = get_df_from_file(f"{data_directory}/permutated.json")
+        data_df = get_df_from_file(f"{data_directory}/translated.json")
 
-    # Damit wir die Übersetzungen manuell überprüfen können
+    # Damit wir die Übersetzungen manuell überprüfen können erstelle ich eine CSV
+    # mit den Originalen und den permutierten Antworten
     create_comparison_csv(
         data_df,
         f"{data_directory}/comparison.csv",

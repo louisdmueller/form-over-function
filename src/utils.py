@@ -75,13 +75,13 @@ def create_comparison_csv(
             ),
         }
     )
-    comparison_df = add_length_column(comparison_df)
-    comparison_df = add_edit_distance_column(comparison_df)
+    comparison_df = _add_length_column(comparison_df)
+    comparison_df = _add_edit_distance_column(comparison_df)
 
     comparison_df.to_csv(output_path, index=False)
 
 
-def add_length_column(
+def _add_length_column(
     df: pd.DataFrame,
 ) -> pd.DataFrame:
     """
@@ -94,7 +94,7 @@ def add_length_column(
     return df
 
 
-def add_edit_distance_column(
+def _add_edit_distance_column(
     df: pd.DataFrame,
 ) -> pd.DataFrame:
     """
