@@ -3,10 +3,13 @@ import re
 import pandas as pd
 from openai import OpenAI
 
-from utils import load_config
 
-config = load_config("config.yml")
-client = OpenAI(api_key=config["openai_key"])
+def setup_openai_client(api_key: str) -> None:
+    """
+    Set up the OpenAI client with the provided API key.
+    """
+    global openai_client
+    openai_client = OpenAI(api_key=api_key)
 
 
 def replace_words(text: str, replacement_dict: dict) -> str:
@@ -24,7 +27,6 @@ def translate_text(text: str) -> str:
     """
     Translate the given text into African American English (AAE) using GPT-4o mini.
     """
-
     replacement_dict = {
         "isn't": "ain't",
         "going to": "gonna",
@@ -54,7 +56,7 @@ def translate_text(text: str) -> str:
     3. Format the output exactly like this: 'The translation is: ...' \
     4. Ensure the text sounds natural and realistic in AAVE. "
 
-    response = client.responses.create(
+    response = openai_client.responses.create(
         model="gpt-4o-mini",
         input=user_input,
         max_output_tokens=len(text) + 50,

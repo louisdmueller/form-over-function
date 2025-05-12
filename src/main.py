@@ -6,7 +6,7 @@ import torch
 import transformers
 from huggingface_hub import login
 
-from aae_translation import translate_df
+from aae_translation import setup_openai_client, translate_df
 from utils import (
     create_comparison_csv,
     get_df_from_file,
@@ -21,6 +21,7 @@ def main() -> None:
 
     # access to llama models is restricted
     login(token=config["huggingface_hub_token"])
+    setup_openai_client(config["openai_key"])
 
     data_df = get_df_from_file(args.data_path)
     data_directory = os.path.dirname(args.data_path)
