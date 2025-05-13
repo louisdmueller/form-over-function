@@ -1,7 +1,7 @@
 import json
 import math
 import os
-
+from model import get_model
 import torch
 import transformers
 from huggingface_hub import login
@@ -22,6 +22,18 @@ def main() -> None:
     # access to llama models is restricted
     login(token=config["huggingface_hub_token"])
     openai_client = setup_openai_client(config["openai_key"])
+    
+    judge_model = get_model(
+        model_name_or_path=args.judge_model_name_or_path,
+        model_type=config["model_type"],
+        openai_key=config["openai_key"],
+    )
+    
+    prompt_generation_model = get_model(
+        model_name_or_path=args.prompt_model_name_or_path,
+        model_type=config["prompt_generation_model_type"],
+        openai_key=config["openai_key"],
+    )
 
     data_df = get_df_from_file(args.data_path)
     data_directory = os.path.dirname(args.data_path)
@@ -46,81 +58,36 @@ def main() -> None:
         f"{data_directory}/comparison.csv",
     )
 
-    model = transformers.AutoModelForCausalLM.from_pretrained(
-        args.prompt_model_name_or_path, torch_dtype=torch.float16, device_map="auto"
-    )
-    tokenizer = transformers.AutoTokenizer.from_pretrained(
-        args.prompt_model_name_or_path
-    )
-    tokenizer.pad_token = tokenizer.eos_token  # for correct padding
-
     system_prompt = prompt["system"]
 
-    with torch.no_grad():
-        for idx, data in data_df.iterrows():
-            question = data["question"]
-            answer1 = data["answers"]["answer1"]["answer"]
-            answer2 = data["answers"]["answer1_permutated"]
+    for idx, data in data_df.iterrows():
+        question = data["question"]
+        answer1 = data["answers"]["answer1"]["answer"]
+        answer2 = data["answers"]["answer1_permutated"]
 
-            input_text = prompt["template"].format(
-                question=question, answer1=answer1, answer2=answer2
-            )
+        input_text = prompt["template"].format(
+            question=question, answer1=answer1, answer2=answer2
+        )
 
-            messages = [
-                {"role": "system", "content": system_prompt},
-                {
-                    "role": "user",
-                    "content": input_text,
-                },
-            ]
+        messages = [
+            {"role": "system", "content": system_prompt},
+            {
+                "role": "user",
+                "content": input_text,
+            },
+        ]
 
-            formatted_input = tokenizer.apply_chat_template(
-                messages,
-                return_tensors="pt",
-                tokenize=False,
-                add_generation_prompt=True,
-                max_length=tokenizer.model_max_length,
-            )
-            inputs = tokenizer(
-                formatted_input,
-                return_tensors="pt",
-                padding=True,
-                truncation=True,
-                max_length=tokenizer.model_max_length,
-            )
-            inputs = inputs.to(model.device)
-            output = model.generate(
-                **inputs,
-                max_new_tokens=64,
-                num_beams=6,
-                num_return_sequences=6,
-                do_sample=False,
-                output_scores=True,
-                return_dict_in_generate=True,
-            )
+        results = judge_model.prompt(messages, num_generations=6)
 
-            sequence_scores = output.sequences_scores  # es.tolist()
+        # for i, (text, score) in enumerate(results):
+        #     print(f"Generated Text {i + 1}: {text}")
+        #     print(f"Sequence Score: {score:.4f}")
 
-            results = []
-            for i, (sequence, log_score) in enumerate(
-                zip(output.sequences, sequence_scores)
-            ):
-                decoded_text = tokenizer.decode(
-                    sequence,
-                    skip_special_tokens=True,
-                    clean_up_tokenization_spaces=True,
-                )
+        for i, text in enumerate(results):
+            print(f"Generated Text {i + 1}: {text}")
 
-                decoded_text = decoded_text.split("assistant\n")[1].strip()
 
-                prob_score = math.exp(log_score)
-                results.append((decoded_text, prob_score))
-
-            for i, (text, score) in enumerate(results):
-                print(f"Generated Text {i + 1}: {text}")
-                print(f"Sequence Score: {score:.4f}")
-
-            break
+        break
 
 
 if __name__ == "__main__":

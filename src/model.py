@@ -1,0 +1,82 @@
+from abc import ABC, abstractmethod
+from typing import List, Dict
+from openai import OpenAI
+from transformers import AutoModelForCausalLM, AutoTokenizer
+import torch
+
+class Model(ABC):
+    
+    def __init__(self, model_name_or_path: str):
+        self.model_name_or_path = model_name_or_path
+    
+    @abstractmethod
+    def prompt(self, messages: List[Dict[str, str]], num_generations: int) -> List[str]:
+        pass
+    
+class HuggingfaceModel(Model):
+    def __init__(self, model_name_or_path: str):
+        super().__init__(model_name_or_path)
+        self.model = AutoModelForCausalLM.from_pretrained(
+            model_name_or_path, torch_dtype=torch.float16, device_map="auto"
+        )
+        self.tokenizer = AutoTokenizer.from_pretrained(
+            model_name_or_path
+        )
+        self.tokenizer.pad_token = self.tokenizer.eos_token
+        
+    def prompt(self, messages: List[Dict[str, str]], num_generations: int, **kwargs) -> List[str]:
+        with torch.no_grad():
+            formatted_input = self.tokenizer.apply_chat_template(
+                messages,
+                return_tensors="pt",
+                tokenize=False,
+                add_generation_prompt=True,
+                max_length=self.tokenizer.model_max_length,
+            )
+            inputs = self.tokenizer(
+                formatted_input,
+                return_tensors="pt",
+                padding=True,
+                truncation=True,
+                max_length=self.tokenizer.model_max_length,
+            )
+            inputs = inputs.to(self.model.device)
+            output = self.model.generate(
+                **inputs,
+                max_new_tokens=64,
+                num_beams=num_generations,
+                num_return_sequences=num_generations,
+                do_sample=False,
+                return_dict_in_generate=True,
+                **kwargs,
+            )
+            
+        sequences = output.sequences
+        decoded_sequences = self.tokenizer.batch_decode(sequences, skip_special_tokens=True)
+        assistant_responses = [sequence[len(formatted_input):].strip() for sequence in decoded_sequences]
+                
+        return assistant_responses
+    
+class OpenAIModel(Model):
+    def __init__(self, model_name_or_path: str, api_key: str):
+        super().__init__(model_name_or_path)
+        self.openai_client = OpenAI(api_key=api_key)
+        
+    def prompt(self, messages: List[Dict[str, str]], num_generations: int, **kwargs) -> List[str]:
+        assistant_responses = []
+        for _ in range(num_generations):
+            response = self.openai_client.responses.create(model=self.model_name_or_path, input=messages, **kwargs) #type: ignore
+            assistant_responses.append(response.output_text)
+        return assistant_responses
+    
+    
+def get_model(model_name_or_path: str, **kwargs) -> Model:
+    if "huggingface" in model_name_or_path:
+        return HuggingfaceModel(model_name_or_path, **kwargs)
+    elif "gpt" in model_name_or_path:
+        api_key = kwargs.get("api_key")
+        if not api_key:
+            raise ValueError("API key is required for OpenAI models.")
+        return OpenAIModel(model_name_or_path, api_key)
+    else:
+        raise ValueError(f"Model {model_name_or_path} not supported.")
