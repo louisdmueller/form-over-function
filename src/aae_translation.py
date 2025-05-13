@@ -3,6 +3,8 @@ import re
 import pandas as pd
 from openai import OpenAI
 
+from model import Model
+
 
 def setup_openai_client(api_key: str) -> OpenAI:
     """
@@ -23,7 +25,7 @@ def replace_words(text: str, replacement_dict: dict) -> str:
     return text
 
 
-def translate_text(text: str, openai_client) -> str:
+def translate_text(text: str, model: Model) -> str:
     """
     Translate the given text into African American English (AAE) using GPT-4o mini.
     """
@@ -55,15 +57,17 @@ def translate_text(text: str, openai_client) -> str:
     2. Do not mention any of the 13 rules in your translation.\
     3. Format the output exactly like this: 'The translation is: ...' \
     4. Ensure the text sounds natural and realistic in AAVE. "
-
-    response = openai_client.responses.create(
-        model="gpt-4o-mini",
-        input=user_input,
+    
+    response = model.prompt(
+        messages=[
+            {"role": "user", "content": user_input},
+        ],
+        num_generations=1,
         max_output_tokens=len(text) + 50,
     )
 
     pattern = r"The translation is:\s*(.*)"
-    match = re.search(pattern, response.output_text, re.DOTALL)
+    match = re.search(pattern, str(response), re.DOTALL)
     if match:
         translated_text = match.group(1)
     else:
@@ -72,21 +76,21 @@ def translate_text(text: str, openai_client) -> str:
     return updated_translation
 
 
-def add_translation(row: pd.Series, openai_client: OpenAI) -> pd.Series:
+def add_translation(row: pd.Series, model: Model) -> pd.Series:
     """
     Add a translation from SAE to AAE to the row of the Dataframe.
     """
     original_answer = row["answers"]["answer1"]["answer"]
-    translated_answer = translate_text(original_answer, openai_client)
+    translated_answer = translate_text(original_answer, model)
     row["answers"]["answer1_permutated"] = translated_answer
     return row
 
 
-def translate_df(df: pd.DataFrame, openai_client: OpenAI) -> pd.DataFrame:
+def translate_df(df: pd.DataFrame, model: Model) -> pd.DataFrame:
     """
     Run the translation from SAE to AAE on the DataFrame using the OpenAI client.
     """
-    df = df.apply(lambda row: add_translation(row, openai_client), axis=1)
+    df = df.apply(lambda row: add_translation(row, model), axis=1)
     return df
 
 

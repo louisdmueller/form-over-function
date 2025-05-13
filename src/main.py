@@ -1,9 +1,7 @@
 import json
-import math
 import os
 from model import get_model
-import torch
-import transformers
+
 from huggingface_hub import login
 
 from aae_translation import setup_openai_client, translate_df
@@ -25,20 +23,18 @@ def main() -> None:
     
     judge_model = get_model(
         model_name_or_path=args.judge_model_name_or_path,
-        model_type=config["model_type"],
         openai_key=config["openai_key"],
     )
     
     prompt_generation_model = get_model(
         model_name_or_path=args.prompt_model_name_or_path,
-        model_type=config["prompt_generation_model_type"],
         openai_key=config["openai_key"],
     )
 
     data_df = get_df_from_file(args.data_path)
     data_directory = os.path.dirname(args.data_path)
     if not os.path.exists(f"{data_directory}/translated.json"):
-        translate_df(data_df, openai_client)
+        translate_df(data_df, prompt_generation_model)
         data_df.to_json(
             f"{data_directory}/translated.json",
             lines=True,
@@ -77,7 +73,7 @@ def main() -> None:
             },
         ]
 
-        results = judge_model.prompt(messages, num_generations=6)
+        results = judge_model.prompt(messages, num_generations=6, max_output_tokens=512)
 
         # for i, (text, score) in enumerate(results):
         #     print(f"Generated Text {i + 1}: {text}")

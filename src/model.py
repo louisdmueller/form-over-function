@@ -10,7 +10,7 @@ class Model(ABC):
         self.model_name_or_path = model_name_or_path
     
     @abstractmethod
-    def prompt(self, messages: List[Dict[str, str]], num_generations: int) -> List[str]:
+    def prompt(self, messages: List[Dict[str, str]], num_generations: int, max_output_tokens: int, **kwargs) -> str|List[str]:
         pass
     
 class HuggingfaceModel(Model):
@@ -24,7 +24,7 @@ class HuggingfaceModel(Model):
         )
         self.tokenizer.pad_token = self.tokenizer.eos_token
         
-    def prompt(self, messages: List[Dict[str, str]], num_generations: int, **kwargs) -> List[str]:
+    def prompt(self, messages: List[Dict[str, str]], num_generations: int, max_output_tokens: int, **kwargs) -> str|List[str]:
         with torch.no_grad():
             formatted_input = self.tokenizer.apply_chat_template(
                 messages,
@@ -43,7 +43,7 @@ class HuggingfaceModel(Model):
             inputs = inputs.to(self.model.device)
             output = self.model.generate(
                 **inputs,
-                max_new_tokens=64,
+                max_new_tokens=max_output_tokens,
                 num_beams=num_generations,
                 num_return_sequences=num_generations,
                 do_sample=False,
@@ -55,23 +55,28 @@ class HuggingfaceModel(Model):
         decoded_sequences = self.tokenizer.batch_decode(sequences, skip_special_tokens=True)
         assistant_responses = [sequence[len(formatted_input):].strip() for sequence in decoded_sequences]
                 
-        return assistant_responses
+        return assistant_responses if num_generations > 1 else assistant_responses[0]
     
 class OpenAIModel(Model):
     def __init__(self, model_name_or_path: str, api_key: str):
         super().__init__(model_name_or_path)
         self.openai_client = OpenAI(api_key=api_key)
         
-    def prompt(self, messages: List[Dict[str, str]], num_generations: int, **kwargs) -> List[str]:
+    def prompt(self, messages: List[Dict[str, str]], num_generations: int, max_output_tokens: int, **kwargs) -> str|List[str]:
         assistant_responses = []
         for _ in range(num_generations):
-            response = self.openai_client.responses.create(model=self.model_name_or_path, input=messages, **kwargs) #type: ignore
+            response = self.openai_client.responses.create(
+                model=self.model_name_or_path, 
+                input=messages, #type: ignore
+                max_output_tokens=max_output_tokens, 
+                **kwargs
+            ) 
             assistant_responses.append(response.output_text)
-        return assistant_responses
+        return assistant_responses if num_generations > 1 else assistant_responses[0]
     
     
 def get_model(model_name_or_path: str, **kwargs) -> Model:
-    if "huggingface" in model_name_or_path:
+    if "/" in model_name_or_path:
         return HuggingfaceModel(model_name_or_path, **kwargs)
     elif "gpt" in model_name_or_path:
         api_key = kwargs.get("api_key")
