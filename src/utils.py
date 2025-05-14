@@ -27,7 +27,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--judge_model_name_or_path",
         type=str,
-        default="",
+        default="gpt-4o-mini",
         help="Path to the judge model.",
     )
 

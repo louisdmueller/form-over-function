@@ -1,8 +1,9 @@
 from abc import ABC, abstractmethod
-from typing import List, Dict
+from typing import List, Dict, Optional
 from openai import OpenAI
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
+from huggingface_hub import repo_exists
 
 class Model(ABC):
     
@@ -75,11 +76,11 @@ class OpenAIModel(Model):
         return assistant_responses if num_generations > 1 else assistant_responses[0]
     
     
-def get_model(model_name_or_path: str, **kwargs) -> Model:
-    if "/" in model_name_or_path:
+def get_model(model_name_or_path: str, openai_key: Optional[str], **kwargs) -> Model:
+    if repo_exists(model_name_or_path, repo_type="model"):
         return HuggingfaceModel(model_name_or_path, **kwargs)
     elif "gpt" in model_name_or_path:
-        api_key = kwargs.get("api_key")
+        api_key = openai_key
         if not api_key:
             raise ValueError("API key is required for OpenAI models.")
         return OpenAIModel(model_name_or_path, api_key)

@@ -19,14 +19,13 @@ def main() -> None:
 
     # access to llama models is restricted
     login(token=config["huggingface_hub_token"])
-    openai_client = setup_openai_client(config["openai_key"])
     
     judge_model = get_model(
         model_name_or_path=args.judge_model_name_or_path,
         openai_key=config["openai_key"],
     )
     
-    prompt_generation_model = get_model(
+    prompt_gen_model = get_model(
         model_name_or_path=args.prompt_model_name_or_path,
         openai_key=config["openai_key"],
     )
@@ -34,7 +33,7 @@ def main() -> None:
     data_df = get_df_from_file(args.data_path)
     data_directory = os.path.dirname(args.data_path)
     if not os.path.exists(f"{data_directory}/translated.json"):
-        translate_df(data_df, prompt_generation_model)
+        translate_df(data_df, prompt_gen_model)
         data_df.to_json(
             f"{data_directory}/translated.json",
             lines=True,
