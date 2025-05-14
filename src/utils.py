@@ -89,10 +89,10 @@ def _add_length_column(
     df: pd.DataFrame,
 ) -> pd.DataFrame:
     """
-    Add a column that indicates the length difference between the AAE answers and the original answers.
+    Add a column that indicates the normalized length difference between the AAE answers and the original answers.
     """
     df["Original->AAE character difference"] = df.apply(
-        lambda x: len(x["Translated Answer (AAE)"]) - len(x["Original Answer"]),
+        lambda x: len(x["Translated Answer (AAE)"]) - len(x["Original Answer"]) / len(x["Original Answer"]),
         axis=1,
     )
     return df
@@ -102,13 +102,13 @@ def _add_edit_distance_column(
     df: pd.DataFrame,
 ) -> pd.DataFrame:
     """
-    Add a column that indicates the minimal edit distance from the original answers to the AAE answers.
+    Add a column that indicates the normalized minimal edit distance from the original answers to the AAE answers.
     """
     df["Original->AAE Edit distance"] = df.apply(
         lambda x: edit_distance(
             x["Original Answer"],
             x["Translated Answer (AAE)"],
-        ),
+        ) / len(x["Original Answer"]),
         axis=1,
     )
     return df
