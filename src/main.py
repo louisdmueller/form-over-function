@@ -1,5 +1,7 @@
 import json
 import os
+from tqdm import tqdm
+
 from model import get_model
 
 from huggingface_hub import login
@@ -55,7 +57,7 @@ def main() -> None:
 
     system_prompt = prompt["system"]
 
-    for idx, data in data_df.iterrows():
+    for idx, data in tqdm(data_df.iterrows(), total=len(data_df), desc="Generating results"):
         question = data["question"]
 
         for i in range(2):
