@@ -57,31 +57,36 @@ def main() -> None:
 
     for idx, data in data_df.iterrows():
         question = data["question"]
-        answer1 = data["answers"]["answer1"]["answer"]
-        answer2 = data["answers"]["answer1_permutated"]
 
-        input_text = prompt["template"].format(
-            question=question, answer1=answer1, answer2=answer2
-        )
+        for i in range(2):
+            # make judge model generate its answer for both permutations
+            if i == 0:
+                answer1 = data["answers"]["answer1"]["answer"]
+                answer2 = data["answers"]["answer1_permutated"]
+            else:
+                answer1 = data["answers"]["answer1_permutated"]
+                answer2 = data["answers"]["answer1"]["answer"]
 
-        messages = [
-            {"role": "system", "content": system_prompt},
-            {
-                "role": "user",
-                "content": input_text,
-            },
-        ]
+            input_text = prompt["template"].format(
+                question=question, answer1=answer1, answer2=answer2
+            )
 
-        results = judge_model.prompt(messages, num_generations=6, max_output_tokens=512)
+            messages = [
+                {"role": "system", "content": system_prompt},
+                {
+                    "role": "user",
+                    "content": input_text,
+                },
+            ]
 
-        # for i, (text, score) in enumerate(results):
-        #     print(f"Generated Text {i + 1}: {text}")
-        #     print(f"Sequence Score: {score:.4f}")
+            results = judge_model.prompt(messages, num_generations=6, max_output_tokens=512)
 
-        for i, text in enumerate(results):
-            print(f"Generated Text {i + 1}: {text}")
+            # for i, (text, score) in enumerate(results):
+            #     print(f"Generated Text {i + 1}: {text}")
+            #     print(f"Sequence Score: {score:.4f}")
 
-
+            for i, text in enumerate(results):
+                print(f"Generated Text {i + 1}: {text}")
         break
 
 
