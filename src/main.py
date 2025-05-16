@@ -59,19 +59,19 @@ def main() -> None:
 
     for idx, data in tqdm(data_df.iterrows(), total=len(data_df), desc="Generating results"):
         question = data["question"]
+        answer1 = data["answers"]["answer1"]["answer"]
+        answer2 = data["answers"]["answer1_permutated"]
 
         for i in range(2):
             # make judge model generate its answer for both permutations
             if i == 0:
-                answer1 = data["answers"]["answer1"]["answer"]
-                answer2 = data["answers"]["answer1_permutated"]
+                input_text = prompt["template"].format(
+                    question=question, answer1=answer1, answer2=answer2
+                )
             else:
-                answer1 = data["answers"]["answer1_permutated"]
-                answer2 = data["answers"]["answer1"]["answer"]
-
-            input_text = prompt["template"].format(
-                question=question, answer1=answer1, answer2=answer2
-            )
+                input_text = prompt["template"].format(
+                    question=question, answer1=answer2, answer2=answer1
+                )           
 
             messages = [
                 {"role": "system", "content": system_prompt},
