@@ -65,10 +65,12 @@ def main() -> None:
         for i in range(2):
             # make judge model generate its answer for both permutations
             if i == 0:
+                print("Answers in original order")
                 input_text = prompt["template"].format(
                     question=question, answer1=answer1, answer2=answer2
                 )
             else:
+                print("Answers in switched order")
                 input_text = prompt["template"].format(
                     question=question, answer1=answer2, answer2=answer1
                 )           
