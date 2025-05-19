@@ -25,7 +25,7 @@ def replace_words(text: str, replacement_dict: dict) -> str:
     return text
 
 
-def translate_text(text: str, model: Model) -> str:
+def convert_to_aae(text: str, model: Model) -> str:
     """
     Translate the given text into African American English (AAE) using GPT-4o mini.
     """
@@ -69,28 +69,34 @@ def translate_text(text: str, model: Model) -> str:
     pattern = r"The translation is:\s*(.*)"
     match = re.search(pattern, str(response), re.DOTALL)
     if match:
-        translated_text = match.group(1)
+        aae_text = match.group(1)
     else:
-        translated_text = text
-    updated_translation = replace_words(translated_text, replacement_dict)
-    return updated_translation
+        aae_text = text
+    aae_text = replace_words(aae_text, replacement_dict)
+    return aae_text
 
 
-def add_translation(row: pd.Series, model: Model) -> pd.Series:
+def add_aae_to_answers(row: pd.Series, model: Model) -> pd.Series:
     """
     Add a translation from SAE to AAE to the row of the Dataframe.
     """
-    original_answer = row["answers"]["answer1"]["answer"]
-    translated_answer = translate_text(original_answer, model)
-    row["answers"]["answer1_permutated"] = translated_answer
+    original_answer1 = row["answers"]["answer1"]["answer"]
+    original_answer2 = row["answers"]["answer2"]["answer"]
+
+    aae_answer1 = convert_to_aae(original_answer1, model)
+    aae_answer2 = convert_to_aae(original_answer2, model)
+    row["answers"]["answer1_aae"] = aae_answer1
+    row["answers"]["answer2_aae"] = aae_answer2
     return row
 
 
-def translate_df(df: pd.DataFrame, model: Model) -> pd.DataFrame:
+def add_aae_to_df(df: pd.DataFrame, model: Model) -> pd.DataFrame:
     """
     Run the translation from SAE to AAE on the DataFrame using the OpenAI client.
     """
-    df = df.apply(lambda row: add_translation(row, model), axis=1)
+    df = df.apply(lambda row: add_aae_to_answers(row, model), axis=1)
+    df["question"] = df["question"].apply(lambda question: "Hi there, I'm a bit stuck on a question and was wondering if you could help me out. Here's the question: " + str(question))
+    df["question_aae"] = df["question"].apply(lambda question: convert_to_aae(str(question), model))
     return df
 
 

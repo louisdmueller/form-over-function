@@ -6,7 +6,7 @@ from model import get_model
 
 from huggingface_hub import login
 
-from aae_translation import setup_openai_client, translate_df
+from aae_translation import add_aae_to_df
 from utils import (
     create_comparison_csv,
     get_df_from_file,
@@ -34,15 +34,15 @@ def main() -> None:
 
     data_df = get_df_from_file(args.data_path)
     data_directory = os.path.dirname(args.data_path)
-    if not os.path.exists(f"{data_directory}/translated.json"):
-        translate_df(data_df, prompt_gen_model)
+    if not os.path.exists(f"{data_directory}/data_with_aae_gpt4-1.json"):
+        data_df = add_aae_to_df(data_df, prompt_gen_model)
         data_df.to_json(
-            f"{data_directory}/translated.json",
+            f"{data_directory}/data_with_aae_gpt4-1.json",
             lines=True,
             orient="records",
         )
     else:
-        data_df = get_df_from_file(os.path.join(data_directory, "translated.json"))
+        data_df = get_df_from_file(os.path.join(data_directory, "data_with_aae_gpt4-1.json"))
 
     with open(os.path.join(data_directory, "prompts.json"), "r") as f:
         prompts = json.load(f)
@@ -60,7 +60,7 @@ def main() -> None:
     for idx, data in tqdm(data_df.iterrows(), total=len(data_df), desc="Generating results"):
         question = data["question"]
         answer1 = data["answers"]["answer1"]["answer"]
-        answer2 = data["answers"]["answer1_permutated"]
+        answer2 = data["answers"]["answer1_aae"]
 
         for i in range(2):
             # make judge model generate its answer for both permutations
