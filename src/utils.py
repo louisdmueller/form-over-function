@@ -41,7 +41,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--data_path",
         type=str,
-        default="data/chen-et-al/raw.json",
+        default="data/chen-et-al/raw_data.json",
         help="Path to the raw data.",
     )
 
