@@ -22,12 +22,12 @@ def main() -> None:
 
     # access to llama models is restricted
     login(token=config["huggingface_hub_token"])
-    
+
     judge_model = get_model(
         model_name_or_path=args.judge_model_name_or_path,
         openai_key=config["openai_key"],
     )
-    
+
     prompt_gen_model = get_model(
         model_name_or_path=args.prompt_model_name_or_path,
         openai_key=config["openai_key"],
@@ -43,7 +43,9 @@ def main() -> None:
             orient="records",
         )
     else:
-        data_df = get_df_from_file(os.path.join(data_directory, "data_with_aae_gpt4-1.json"))
+        data_df = get_df_from_file(
+            os.path.join(data_directory, "data_with_aae_gpt4-1.json")
+        )
 
     with open(os.path.join(data_directory, "prompts.json"), "r") as f:
         prompts = json.load(f)
@@ -60,44 +62,74 @@ def main() -> None:
 
     current_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
-    for idx, data in tqdm(data_df.iterrows(), total=len(data_df), desc="Generating results"):
-        question = data["question"]
-        answer1 = data["answers"]["answer1"]["answer"]
-        answer2 = data["answers"]["answer1_aae"]
+    for idx, data in tqdm(
+        data_df.iterrows(), total=len(data_df), desc="Generating results"
+    ):
+        question_sae = data["question"]
+        question_aae = data["question_aae"]
+        answer_sae = data["answers"]["answer1"]["answer"]
+        answer_aae = data["answers"]["answer1_aae"]
 
-        for i in range(2):
-            # make judge model generate its answer for both permutations
-            if i == 0:
-                print("Answers in original order")
-                input_text = prompt["template"].format(
-                    question=question, answer1=answer1, answer2=answer2
+        for prompt_style in ["sae", "aae"]:
+            question = question_sae if prompt_style == "sae" else question_aae
+
+            for answer_position in ["sae-first", "aae-first"]:
+                # make judge model generate its answer for both permutations
+                if answer_position == "sae-first":
+                    print("Answers in original order")
+                    input_text = prompt["template"].format(
+                        question=question, answer1=answer_sae, answer2=answer_aae
+                    )
+                else:
+                    print("Answers in switched order")
+                    input_text = prompt["template"].format(
+                        question=question, answer1=answer_aae, answer2=answer_sae
+                    )
+
+                messages = [
+                    {"role": "system", "content": system_prompt},
+                    {
+                        "role": "user",
+                        "content": input_text,
+                    },
+                ]
+
+                results = judge_model.prompt(
+                    messages, num_generations=6, max_output_tokens=512
                 )
-            else:
-                print("Answers in switched order")
-                input_text = prompt["template"].format(
-                    question=question, answer1=answer2, answer2=answer1
-                )           
 
-            messages = [
-                {"role": "system", "content": system_prompt},
-                {
-                    "role": "user",
-                    "content": input_text,
-                },
-            ]
+                # for i, (text, score) in enumerate(results):
+                #     print(f"Generated Text {i + 1}: {text}")
+                #     print(f"Sequence Score: {score:.4f}")
 
-            results = judge_model.prompt(messages, num_generations=6, max_output_tokens=512)
+                with open(f"{data_directory}/results-{current_time}.json", "a") as f:
+                    f.write(
+                        json.dumps(
+                            {
+                                "question_nr": idx,
+                                "prompt_style": prompt_style,
+                                "answer_order": answer_position,
+                                "question": question,
+                                "answer1": (
+                                    answer_sae
+                                    if answer_position == "sae-first"
+                                    else answer_aae
+                                ),
+                                "answer2": (
+                                    answer_sae
+                                    if answer_position == "aae-first"
+                                    else answer_aae
+                                ),
+                                "result": results,
+                            },
+                            indent=4,
+                        )
+                    )
+                    f.write("\n")
 
-            # for i, (text, score) in enumerate(results):
-            #     print(f"Generated Text {i + 1}: {text}")
-            #     print(f"Sequence Score: {score:.4f}")
+                for i, text in enumerate(results):
+                    print(f"Generated Text {idx} {i}/{len(results)}: {text}")
 
-            with open(f"{data_directory}/results-{current_time}.json", "a") as f:
-                f.write(json.dumps({"question_nr": idx, "question": question, "answer1": answer1, "answer2": answer2, "result": results}, indent=4))
-                f.write("\n")
-
-            for i, text in enumerate(results):
-                print(f"Generated Text {idx} {i}/{len(results)}: {text}")
 
 if __name__ == "__main__":
     main()
