@@ -51,12 +51,13 @@ def main() -> None:
         prompts = json.load(f)
     prompt = prompts["cot_and_then_answer_question"]
 
-    # To manually verify the translations, create a CSV
-    # with the originals and the permuted answers
-    create_comparison_csv(
-        data_df,
-        f"{data_directory}/comparison.csv",
-    )
+    if not os.path.exists(f"{data_directory}/comparison.csv"):
+        # To manually verify the translations, create a CSV
+        # with the originals and the permuted answers
+        create_comparison_csv(
+            data_df,
+            f"{data_directory}/comparison.csv",
+        )
 
     system_prompt = prompt["system"]
 
