@@ -1,6 +1,7 @@
 import json
 import os
 from tqdm import tqdm
+from datetime import datetime
 
 from model import get_model
 
@@ -57,6 +58,8 @@ def main() -> None:
 
     system_prompt = prompt["system"]
 
+    current_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+
     for idx, data in tqdm(data_df.iterrows(), total=len(data_df), desc="Generating results"):
         question = data["question"]
         answer1 = data["answers"]["answer1"]["answer"]
@@ -89,10 +92,12 @@ def main() -> None:
             #     print(f"Generated Text {i + 1}: {text}")
             #     print(f"Sequence Score: {score:.4f}")
 
-            for i, text in enumerate(results):
-                print(f"Generated Text {i + 1}: {text}")
-        break
+            with open(f"{data_directory}/results-{current_time}.json", "a") as f:
+                f.write(json.dumps({"question_nr": idx, "question": question, "answer1": answer1, "answer2": answer2, "result": results}, indent=4))
+                f.write("\n")
 
+            for i, text in enumerate(results):
+                print(f"Generated Text {idx} {i}/{len(results)}: {text}")
 
 if __name__ == "__main__":
     main()

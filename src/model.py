@@ -24,6 +24,9 @@ class HuggingfaceModel(Model):
             model_name_or_path
         )
         self.tokenizer.pad_token = self.tokenizer.eos_token
+
+        self.model.to(self.model.device)
+        self.model.eval()
         
     def prompt(self, messages: List[Dict[str, str]], num_generations: int, max_output_tokens: int, **kwargs) -> str|List[str]:
         with torch.no_grad():
