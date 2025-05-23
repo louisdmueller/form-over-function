@@ -1,9 +1,9 @@
 #!/bin/bash
-#SBATCH --partition=dev_gpu_h100
+#SBATCH --partition=gpu_h100
 #SBATCH --job-name=unperturbed-questions
 #SBATCH --output=%j-unperturbed-questions.out
 #SBATCH --error=%j-unperturbed-questions.err
-#SBATCH --time=00:30:00
+#SBATCH --time=01:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
