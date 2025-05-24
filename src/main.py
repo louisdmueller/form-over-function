@@ -63,14 +63,12 @@ def main() -> None:
 
     current_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
-    file_content = []
-    file_content.append(
-        {
-            "judge_model": args.judge_model_name_or_path,
-            "prompt_model": args.prompt_model_name_or_path,
-            "data_source": args.data_path,
-        }
-    )
+    file_content = {}
+    file_content["metadata"] = {
+        "judge_model": args.judge_model_name_or_path,
+        "prompt_model": args.prompt_model_name_or_path,
+        "data_source": args.data_path,
+    }
     
     for idx, data in tqdm(
         data_df.iterrows(), total=len(data_df), desc="Generating results"
@@ -80,6 +78,11 @@ def main() -> None:
         answer_sae = data["answers"]["answer1"]["answer"]
         answer_aae = data["answers"]["answer1_aae"]
 
+        # key of each entry is the index of the question in the dataframe
+        # and the value is a list of dictionaries with the results
+        # for each permutation of the answers and prompt style
+        file_content[idx] = []
+        
         for prompt_style in ["sae", "aae"]:
             question = question_sae if prompt_style == "sae" else question_aae
 
@@ -123,9 +126,8 @@ def main() -> None:
                 #     print(f"Generated Text {i + 1}: {text}")
                 #     print(f"Sequence Score: {score:.4f}")
 
-                file_content.append(
+                file_content[idx].append(
                     {
-                        "question_nr": idx,
                         "prompt_style": prompt_style,
                         "answer_order": answer_position,
                         "question": question,
