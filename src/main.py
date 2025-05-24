@@ -76,17 +76,23 @@ def main() -> None:
 
             for answer_position in ["sae-first", "aae-first"]:
                 # make judge model generate its answer for both permutations
-                if answer_position == "sae-first":
-                    print("Answers in original order")
-                    input_text = prompt["template"].format(
-                        question=question, answer1=answer_sae, answer2=answer_aae
-                    )
-                else:
-                    print("Answers in switched order")
-                    input_text = prompt["template"].format(
-                        question=question, answer1=answer_aae, answer2=answer_sae
-                    )
-
+                answer_dict = {
+                    "sae-first": {
+                        "answer1": {"text": answer_sae, "label": "SAE Answer"},
+                        "answer2": {"text": answer_aae, "label": "AAE Answer"},
+                        "tie": {"text": None, "label": "TIE"},
+                    },
+                    "aae-first": {
+                        "answer1": {"text": answer_aae, "label": "AAE Answer"},
+                        "answer2": {"text": answer_sae, "label": "SAE Answer"},
+                        "tie": {"text": None, "label": "TIE"},
+                    },
+                }
+                input_text = prompt["template"].format(
+                    question=question,
+                    answer1=answer_dict[answer_position]["answer1"],
+                    answer2=answer_dict[answer_position]["answer2"],
+                )
                 messages = [
                     {"role": "system", "content": system_prompt},
                     {
@@ -96,8 +102,13 @@ def main() -> None:
                 ]
 
                 results = judge_model.prompt(
-                    messages, num_generations=6, max_output_tokens=512
+                    messages, num_generations=3, max_output_tokens=512
                 )
+
+                answer_preferences = [
+                    answer_dict[answer_position][answer]["label"]
+                    for answer in results["extracted_answers"]
+                ]
 
                 # for i, (text, score) in enumerate(results):
                 #     print(f"Generated Text {i + 1}: {text}")
@@ -111,17 +122,10 @@ def main() -> None:
                                 "prompt_style": prompt_style,
                                 "answer_order": answer_position,
                                 "question": question,
-                                "answer1": (
-                                    answer_sae
-                                    if answer_position == "sae-first"
-                                    else answer_aae
-                                ),
-                                "answer2": (
-                                    answer_sae
-                                    if answer_position == "aae-first"
-                                    else answer_aae
-                                ),
-                                "result": results,
+                                "answer1": answer_dict[answer_position]["answer1"],
+                                "answer2": answer_dict[answer_position]["answer2"],
+                                "result": results["output"],
+                                "extracted_answers": answer_preferences,
                             },
                             indent=4,
                         )

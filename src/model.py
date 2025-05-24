@@ -4,31 +4,59 @@ from openai import OpenAI
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 from huggingface_hub import repo_exists
+import re
+
 
 class Model(ABC):
-    
+
     def __init__(self, model_name_or_path: str):
         self.model_name_or_path = model_name_or_path
-    
+
     @abstractmethod
-    def prompt(self, messages: List[Dict[str, str]], num_generations: int, max_output_tokens: int, **kwargs) -> str|List[str]:
+    def prompt(
+        self,
+        messages: List[Dict[str, str]],
+        num_generations: int,
+        max_output_tokens: int,
+        **kwargs,
+    ) -> Dict:
         pass
-    
+
+    def extract_answer(self, text: str) -> str | None:
+        possible_answers = [
+            line.strip()
+            for line in text.strip().split("\n")
+            if re.fullmatch(r"\S+", line.strip())
+        ]
+        for possible_answer in possible_answers:
+            if "1" in possible_answer:
+                return "answer1"
+            elif "2" in possible_answer:
+                return "answer2"
+            elif "tie" in possible_answer or "Tie" in possible_answer:
+                return "tie"
+        return None
+
+
 class HuggingfaceModel(Model):
     def __init__(self, model_name_or_path: str):
         super().__init__(model_name_or_path)
         self.model = AutoModelForCausalLM.from_pretrained(
             model_name_or_path, torch_dtype=torch.float16, device_map="auto"
         )
-        self.tokenizer = AutoTokenizer.from_pretrained(
-            model_name_or_path
-        )
+        self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
         self.tokenizer.pad_token = self.tokenizer.eos_token
 
         self.model.to(self.model.device)
         self.model.eval()
-        
-    def prompt(self, messages: List[Dict[str, str]], num_generations: int, max_output_tokens: int, **kwargs) -> str|List[str]:
+
+    def prompt(
+        self,
+        messages: List[Dict[str, str]],
+        num_generations: int,
+        max_output_tokens: int,
+        **kwargs,
+    ) -> Dict:
         with torch.no_grad():
             formatted_input = self.tokenizer.apply_chat_template(
                 messages,
@@ -54,31 +82,68 @@ class HuggingfaceModel(Model):
                 return_dict_in_generate=True,
                 **kwargs,
             )
-            
+
         sequences = output.sequences
-        decoded_sequences = self.tokenizer.batch_decode(sequences, skip_special_tokens=True)
-        assistant_responses = [sequence[len(formatted_input):].strip() for sequence in decoded_sequences]
-                
-        return assistant_responses if num_generations > 1 else assistant_responses[0]
-    
+        decoded_sequences = self.tokenizer.batch_decode(
+            sequences, skip_special_tokens=True
+        )
+        assistant_responses = [
+            sequence[len(formatted_input) :].strip() for sequence in decoded_sequences
+        ]
+        extracted_answers = [
+            self.extract_answer(response) for response in assistant_responses
+        ]
+
+        result_dict = {
+            "output": (
+                assistant_responses if num_generations > 1 else assistant_responses[0]
+            ),
+            "extracted_answers": (
+                extracted_answers if num_generations > 1 else extracted_answers[0]
+            ),
+        }
+
+        return result_dict
+
+
 class OpenAIModel(Model):
     def __init__(self, model_name_or_path: str, api_key: str):
         super().__init__(model_name_or_path)
         self.openai_client = OpenAI(api_key=api_key)
-        
-    def prompt(self, messages: List[Dict[str, str]], num_generations: int, max_output_tokens: int, **kwargs) -> str|List[str]:
+
+    def prompt(
+        self,
+        messages: List[Dict[str, str]],
+        num_generations: int,
+        max_output_tokens: int,
+        **kwargs,
+    ) -> Dict:
         assistant_responses = []
         for _ in range(num_generations):
             response = self.openai_client.responses.create(
-                model=self.model_name_or_path, 
-                input=messages, #type: ignore
-                max_output_tokens=max_output_tokens, 
-                **kwargs
-            ) 
+                model=self.model_name_or_path,
+                input=messages,  # type: ignore
+                max_output_tokens=max_output_tokens,
+                **kwargs,
+            )
             assistant_responses.append(response.output_text)
-        return assistant_responses if num_generations > 1 else assistant_responses[0]
-    
-    
+
+        extracted_answers = [
+            self.extract_answer(response) for response in assistant_responses
+        ]
+
+        result_dict = {
+            "output": (
+                assistant_responses if num_generations > 1 else assistant_responses[0]
+            ),
+            "extracted_answers": (
+                extracted_answers if num_generations > 1 else extracted_answers[0]
+            ),
+        }
+
+        return result_dict
+
+
 def get_model(model_name_or_path: str, openai_key: Optional[str], **kwargs) -> Model:
     if repo_exists(model_name_or_path, repo_type="model"):
         return HuggingfaceModel(model_name_or_path, **kwargs)
