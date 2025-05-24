@@ -63,6 +63,15 @@ def main() -> None:
 
     current_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
+    file_content = []
+    file_content.append(
+        {
+            "judge_model": args.judge_model_name_or_path,
+            "prompt_model": args.prompt_model_name_or_path,
+            "data_source": args.data_path,
+        }
+    )
+    
     for idx, data in tqdm(
         data_df.iterrows(), total=len(data_df), desc="Generating results"
     ):
@@ -114,27 +123,24 @@ def main() -> None:
                 #     print(f"Generated Text {i + 1}: {text}")
                 #     print(f"Sequence Score: {score:.4f}")
 
-                with open(f"{data_directory}/results-{current_time}.json", "a") as f:
-                    f.write(
-                        json.dumps(
-                            {
-                                "question_nr": idx,
-                                "prompt_style": prompt_style,
-                                "answer_order": answer_position,
-                                "question": question,
-                                "answer1": answer_dict[answer_position]["answer1"],
-                                "answer2": answer_dict[answer_position]["answer2"],
-                                "result": results["output"],
-                                "extracted_answers": answer_preferences,
-                            },
-                            indent=4,
-                        )
-                    )
-                    f.write("\n")
+                file_content.append(
+                    {
+                        "question_nr": idx,
+                        "prompt_style": prompt_style,
+                        "answer_order": answer_position,
+                        "question": question,
+                        "answer1": answer_dict[answer_position]["answer1"],
+                        "answer2": answer_dict[answer_position]["answer2"],
+                        "result": results["output"],
+                        "extracted_answers": answer_preferences,
+                    }
+                )
 
                 for i, text in enumerate(results):
                     print(f"Generated Text {idx} {i}/{len(results)}: {text}")
 
+    with open(f"{data_directory}/results-{current_time}.json", "a") as f:
+        f.write(json.dumps(file_content, indent=4))
 
 if __name__ == "__main__":
     main()
