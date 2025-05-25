@@ -78,8 +78,8 @@ def main() -> None:
     
     for idx, data in tqdm(
         data_df.iloc[ args.start_index : args.end_index ].iterrows(),
-        total=len(data_df), 
-        desc="Generating results"
+        total = args.end_index - args.start_index, 
+        desc = "Generating results"
     ):
         question_sae = data["question"]
         question_aae = data["question_aae"]
