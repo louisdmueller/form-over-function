@@ -85,7 +85,10 @@ class HuggingfaceModel(Model):
             sequences, skip_special_tokens=True
         )
         assistant_responses = [
-            sequence[len(formatted_input) :].strip() for sequence in decoded_sequences
+            # We remove the first part of the output
+            # But since the output could also be solely the answer, 
+            # we ensure to only strip the last part of the sequence
+            sequence[ - len(formatted_input) :].strip() for sequence in decoded_sequences
         ]
         extracted_answers = [
             self.extract_answer(response) for response in assistant_responses
