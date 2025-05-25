@@ -4,7 +4,6 @@ from openai import OpenAI
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 from huggingface_hub import repo_exists
-import re
 
 
 class Model(ABC):
@@ -41,7 +40,7 @@ class HuggingfaceModel(Model):
             model_name_or_path, torch_dtype=torch.float16, device_map="auto"
         )
         self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
-        # self.tokenizer.pad_token = self.tokenizer.eos_token
+        self.tokenizer.pad_token = self.tokenizer.eos_token
         self.model.generation_config.pad_token_id = self.tokenizer.pad_token_id
 
         self.model.to(self.model.device)
