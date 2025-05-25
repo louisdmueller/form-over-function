@@ -23,17 +23,13 @@ class Model(ABC):
         pass
 
     def extract_answer(self, text: str) -> str | None:
-        possible_answers = [
-            line.strip()
-            for line in text.strip().split("\n")
-            if re.fullmatch(r"\S+", line.strip())
-        ]
-        for possible_answer in possible_answers:
-            if "1" in possible_answer:
+        for line in text.strip().split("\n"):
+            line_stripped = line.strip()
+            if "1" in line_stripped:
                 return "answer1"
-            elif "2" in possible_answer:
+            elif "2" in line_stripped:
                 return "answer2"
-            elif "tie" in possible_answer.lower():
+            elif "tie" in line_stripped.lower():
                 return "tie"
         return None
 
