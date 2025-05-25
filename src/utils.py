@@ -5,8 +5,7 @@ import yaml
 from nltk import download, edit_distance
 from nltk.tokenize import word_tokenize
 
-download("punkt_tab")
-
+download("punkt_tab", quiet=True)
 
 def get_df_from_file(file_path: str) -> pd.DataFrame:
     """

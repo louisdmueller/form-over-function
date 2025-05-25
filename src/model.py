@@ -33,7 +33,7 @@ class Model(ABC):
                 return "answer1"
             elif "2" in possible_answer:
                 return "answer2"
-            elif "tie" in possible_answer or "Tie" in possible_answer:
+            elif "tie" in possible_answer.lower():
                 return "tie"
         return None
 
@@ -45,7 +45,8 @@ class HuggingfaceModel(Model):
             model_name_or_path, torch_dtype=torch.float16, device_map="auto"
         )
         self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
-        self.tokenizer.pad_token = self.tokenizer.eos_token
+        # self.tokenizer.pad_token = self.tokenizer.eos_token
+        self.model.generation_config.pad_token_id = self.tokenizer.pad_token_id
 
         self.model.to(self.model.device)
         self.model.eval()
