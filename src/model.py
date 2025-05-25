@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+import re
 from typing import List, Dict, Optional
 from openai import OpenAI
 from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -22,15 +23,19 @@ class Model(ABC):
         pass
 
     def extract_answer(self, text: str) -> str | None:
-        for line in text.strip().split("\n"):
-            line_stripped = line.strip()
-            if "1" in line_stripped:
-                return "answer1"
-            elif "2" in line_stripped:
-                return "answer2"
-            elif "tie" in line_stripped.lower():
-                return "tie"
-        return None
+        # If there are multiple answers in the last 100 characters, return None
+        if sum([re.search(rf'{answer}', text[-100:], flags=re.IGNORECASE) is not None 
+                for answer in ["Answer1", "Answer2", "Tie"]]) > 1:
+            return None
+        
+        # Use regex to find the last occurrence of 'Answer1', 'Answer2', or 'Tie'
+        matches = re.findall(r'^\s*(Answer1|Answer2|Tie)\s*$', text, flags=re.MULTILINE | re.IGNORECASE)
+
+        if matches:
+            # Take the last match as the vote
+            return matches[-1].lower()
+        else:
+            return None
 
 
 class HuggingfaceModel(Model):
@@ -39,14 +44,13 @@ class HuggingfaceModel(Model):
         self.model = AutoModelForCausalLM.from_pretrained(
             model_name_or_path,
             torch_dtype=torch.float16,
-            device_map="balanced",
+            device_map="auto",
             max_memory={0: "92GB", 1: "92GB"} # H100 has 94GB, leave some reserve
         )
         self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
         self.tokenizer.pad_token = self.tokenizer.eos_token
         self.model.generation_config.pad_token_id = self.tokenizer.pad_token_id
 
-        self.model.to(self.model.device)
         self.model.eval()
 
     def prompt(
