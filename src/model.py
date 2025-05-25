@@ -37,7 +37,10 @@ class HuggingfaceModel(Model):
     def __init__(self, model_name_or_path: str):
         super().__init__(model_name_or_path)
         self.model = AutoModelForCausalLM.from_pretrained(
-            model_name_or_path, torch_dtype=torch.float16, device_map="auto"
+            model_name_or_path,
+            torch_dtype=torch.float16,
+            device_map="balanced",
+            max_memory={0: "92GB", 1: "92GB"} # H100 has 94GB, leave some reserve
         )
         self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
         self.tokenizer.pad_token = self.tokenizer.eos_token
