@@ -117,10 +117,18 @@ def main() -> None:
                     messages, num_generations=3, max_output_tokens=512
                 )
 
-                answer_preferences = [
-                    answer_dict[answer_position][answer]["label"]
-                    for answer in results["extracted_answers"]
-                ]
+                # only included for debugging purposes
+                try:
+                    answer_preferences = [
+                        answer_dict[answer_position][answer]["label"]
+                        for answer in results["extracted_answers"]
+                    ]
+                except KeyError:
+                    print(
+                        f"KeyError: {answer_position} or extracted_answers not found in results for idx {idx}"
+                    )
+                    print(f"Results: {json.dumps(results, indent=4)}")
+                    print(f"Answer Dict: {json.dumps(answer_dict, indent=4)}")
 
                 # for i, (text, score) in enumerate(results):
                 #     print(f"Generated Text {i + 1}: {text}")
@@ -139,10 +147,11 @@ def main() -> None:
                 )
 
                 for i, text in enumerate(results):
-                    print(f"Generated Text {idx} {i}/{len(results)}: {text}")
+                    print(f"Generated Text {idx} {i+1}/{len(results)}: {text}")
 
-    with open(f"{data_directory}/results-{current_time}.json", "a") as f:
-        f.write(json.dumps(file_content, indent=4))
+        # Writing after every question to avoid losing results in case of an error or timeout
+        with open(f"{data_directory}/results-{current_time}.json", "w") as f:
+            f.write(json.dumps(file_content, indent=4))
 
 if __name__ == "__main__":
     main()
