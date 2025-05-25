@@ -51,6 +51,22 @@ def parse_args() -> argparse.Namespace:
         help="Path to the config file.",
     )
 
+    # provide start and end index to process a subset of the data
+    # useful for debugging and testing
+    parser.add_argument(
+        "--start_index",
+        type=int,
+        default=0,
+        help="Index to start processing the data from.",
+    )
+    
+    parser.add_argument(
+        "--end_index",
+        type=int,
+        default=None,
+        help="Index to stop processing the data at. If None, process all data.",
+    )
+
     args = parser.parse_args()
     return args
 

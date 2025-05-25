@@ -69,9 +69,17 @@ def main() -> None:
         "prompt_model": args.prompt_model_name_or_path,
         "data_source": args.data_path,
     }
+
+    # If end_index is not provided, it it set to None, since
+    # the data length is not initialized yet.
+    # We need to manually set it to the length of the dataframe
+    if args.end_index is None:
+        args.end_index = len(data_df)
     
     for idx, data in tqdm(
-        data_df.iterrows(), total=len(data_df), desc="Generating results"
+        data_df.iloc[ args.start_index : args.end_index ].iterrows(),
+        total=len(data_df), 
+        desc="Generating results"
     ):
         question_sae = data["question"]
         question_aae = data["question_aae"]
