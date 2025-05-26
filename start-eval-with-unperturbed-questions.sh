@@ -1,14 +1,16 @@
 #!/bin/bash
-#SBATCH --partition=gpu_h100
+#SBATCH --partition=dev_gpu_h100
 #SBATCH --job-name=unperturbed-questions
 #SBATCH --output=%j-unperturbed-questions.out
 #SBATCH --error=%j-unperturbed-questions.err
-#SBATCH --time=01:00:00
+#SBATCH --time=00:30:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=32G
-#SBATCH --gres=gpu:1
+#SBATCH --gres=gpu:2
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user="cluster-notifications.7fo8i@simplelogin.com"
 set -e
 
 echo Time is `date +"%H:%M %d-%m-%y"`
@@ -31,4 +33,5 @@ else
     source venv/bin/activate
 fi
 
-python src/main.py
+# python src/main.py --end_index 29
+python src/main.py --start_index 0
