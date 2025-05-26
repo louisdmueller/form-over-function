@@ -49,7 +49,7 @@ def main() -> None:
 
     with open(os.path.join(data_directory, "prompts.json"), "r") as f:
         prompts = json.load(f)
-    prompt = prompts["cot_and_then_answer_question"]
+    prompt = prompts[args.prompt_name]
 
     if not os.path.exists(f"{data_directory}/comparison.csv"):
         # To manually verify the translations, create a CSV
@@ -68,6 +68,7 @@ def main() -> None:
         "judge_model": args.judge_model_name_or_path,
         "prompt_model": args.prompt_model_name_or_path,
         "data_source": args.data_path,
+        "prompt_name": args.prompt_name,
     }
 
     # If end_index is not provided, it it set to None, since

@@ -67,6 +67,13 @@ def parse_args() -> argparse.Namespace:
         help="Index to stop processing the data at. If None, process all data.",
     )
 
+    parser.add_argument(
+        "--prompt_name",
+        type=str,
+        default="directly_answer_question_without_cot",
+        help="Name of the prompt to use from the prompts.json file.",
+    )
+
     args = parser.parse_args()
     return args
 
