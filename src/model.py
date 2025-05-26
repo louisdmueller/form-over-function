@@ -76,6 +76,8 @@ class HuggingfaceModel(Model):
                 max_length=self.tokenizer.model_max_length,
             )
             inputs = inputs.to(self.model.device)
+            input_length = inputs['input_ids'].shape[1]
+
             output = self.model.generate(
                 **inputs,
                 max_new_tokens=max_output_tokens,
@@ -87,14 +89,16 @@ class HuggingfaceModel(Model):
             )
 
         sequences = output.sequences
+        # Remove the input part from the generated sequences
+        generated_sequences = sequences[:, input_length:]
         decoded_sequences = self.tokenizer.batch_decode(
-            sequences, skip_special_tokens=True
+            generated_sequences, skip_special_tokens=True
         )
         assistant_responses = [
             # We remove the first part of the output
             # But since the output could also be solely the answer, 
             # we ensure to only strip the last part of the sequence
-            sequence[ - len(formatted_input) :].strip() for sequence in decoded_sequences
+            sequence.strip() for sequence in decoded_sequences
         ]
         extracted_answers = [
             self.extract_answer(response) for response in assistant_responses
