@@ -128,10 +128,14 @@ def main() -> None:
 
                 # only included for debugging purposes
                 try:
-                    answer_preferences = [
-                        answer_dict[answer_position][answer]["label"]
-                        for answer in results["extracted_answers"]
-                    ]
+                    answer_preferences = []
+                    for answer in results["extracted_answers"]:
+                            if answer in answer_dict[answer_position]:
+                                answer_preferences.append(
+                                    answer_dict[answer_position][answer]["label"]
+                                )
+                            else:
+                                answer_preferences.append("Unknown")
                 except KeyError:
                     print(
                         f"KeyError: {answer_position} or extracted_answers not found in results for idx {idx}"
