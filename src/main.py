@@ -76,11 +76,11 @@ def main() -> None:
     # We need to manually set it to the length of the dataframe
     if args.end_index is None:
         args.end_index = len(data_df)
-    
+
     for idx, data in tqdm(
-        data_df.iloc[ args.start_index : args.end_index ].iterrows(),
-        total = args.end_index - args.start_index, 
-        desc = "Generating results"
+        data_df.iloc[args.start_index : args.end_index].iterrows(),
+        total=args.end_index - args.start_index,
+        desc="Generating results",
     ):
         question_sae = data["question"]
         question_aae = data["question_aae"]
@@ -91,7 +91,7 @@ def main() -> None:
         # and the value is a list of dictionaries with the results
         # for each permutation of the answers and prompt style
         file_content[idx] = []
-        
+
         for prompt_style in ["sae", "aae"]:
             question = question_sae if prompt_style == "sae" else question_aae
 
@@ -130,12 +130,12 @@ def main() -> None:
                 try:
                     answer_preferences = []
                     for answer in results["extracted_answers"]:
-                            if answer in answer_dict[answer_position]:
-                                answer_preferences.append(
-                                    answer_dict[answer_position][answer]["label"]
-                                )
-                            else:
-                                answer_preferences.append("Unknown")
+                        if answer in answer_dict[answer_position]:
+                            answer_preferences.append(
+                                answer_dict[answer_position][answer]["label"]
+                            )
+                        else:
+                            answer_preferences.append("Unknown")
                 except KeyError:
                     print(
                         f"KeyError: {answer_position} or extracted_answers not found in results for idx {idx}"
@@ -165,6 +165,7 @@ def main() -> None:
         # Writing after every question to avoid losing results in case of an error or timeout
         with open(f"{data_directory}/results-{current_time}.json", "w") as f:
             f.write(json.dumps(file_content, indent=4))
+
 
 if __name__ == "__main__":
     main()
