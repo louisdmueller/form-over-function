@@ -40,7 +40,7 @@ for directory in subdirs:
     with open(file_path, "r", encoding="utf-8") as f:
         raw_data = json.load(f)
 
-    aggregated_data = defaultdict(lambda: {"AAE Answer": 0, "SAE Answer": 0, "TIE": 0, "total": 0})
+    aggregated_data = defaultdict(lambda: {"AAE Answer": 0, "SAE Answer": 0, "TIE": 0, "Unknown": 0, "total": 0})
 
     for question_id, entries in raw_data.items():
         if question_id == "metadata":
@@ -61,6 +61,7 @@ for directory in subdirs:
             "SAE": counts["SAE Answer"],
             "TIE": counts["TIE"],
             "": "",
+            "Unknown": counts["Unknown"],
             "total": counts["total"]
         })
 
