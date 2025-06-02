@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH --partition=dev_gpu_h100
-#SBATCH --job-name=unperturbed-questions
-#SBATCH --output=%j-unperturbed-questions.out
-#SBATCH --error=%j-unperturbed-questions.err
+#SBATCH --job-name=LLM-Judge-Bias
+#SBATCH --output=%j.out
+#SBATCH --error=%j.err
 #SBATCH --time=00:30:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1

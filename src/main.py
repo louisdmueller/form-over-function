@@ -25,26 +25,26 @@ def main() -> None:
 
     judge_model = get_model(
         model_name_or_path=args.judge_model_name_or_path,
-        openai_key=config["openai_key"],
+        api_key=config["openai_key"],
     )
 
     prompt_gen_model = get_model(
         model_name_or_path=args.prompt_model_name_or_path,
-        openai_key=config["openai_key"],
+        api_key=config["openai_key"],
     )
 
     data_df = get_df_from_file(args.data_path)
     data_directory = os.path.dirname(args.data_path)
-    if not os.path.exists(f"{data_directory}/data_with_aae_gpt4-1.json"):
+    if not os.path.exists(f"{data_directory}/data_with_aae_{args.prompt_model_name_or_path}.json"):
         data_df = add_aae_to_df(data_df, prompt_gen_model)
         data_df.to_json(
-            f"{data_directory}/data_with_aae_gpt4-1.json",
+            f"{data_directory}/data_with_aae_{args.prompt_model_name_or_path}.json",
             lines=True,
             orient="records",
         )
     else:
         data_df = get_df_from_file(
-            os.path.join(data_directory, "data_with_aae_gpt4-1.json")
+            os.path.join(data_directory, f"data_with_aae_{args.prompt_model_name_or_path}.json")
         )
 
     with open(os.path.join(data_directory, "prompts.json"), "r") as f:

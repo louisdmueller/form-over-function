@@ -2,7 +2,9 @@ from abc import ABC, abstractmethod
 import re
 from typing import List, Dict, Optional
 from openai import OpenAI
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from google import genai
+from google.genai import types
+from transformers import AutoModelForCausalLM, AutoTokenizer # type: ignore
 import torch
 from huggingface_hub import repo_exists
 
@@ -152,15 +154,58 @@ class OpenAIModel(Model):
         }
 
         return result_dict
+    
+class GeminiModel(OpenAIModel):
+    def __init__(self, model_name_or_path: str, api_key: str):
+        Model.__init__(self, model_name_or_path)
+        self.client = genai.Client(api_key=api_key)
 
+    def prompt(
+            self,
+            messages: list[dict],
+            num_generations: int,
+            max_output_tokens: int,
+            **kwargs,
+        ) -> dict:
+        assistant_responses = []
+        # Concatenate all message contents into a single string
+        prompt_text = "\n".join([m["content"] for m in messages])
+        for _ in range(num_generations):
+            response = self.client.models.generate_content(
+                model=self.model_name_or_path,
+                contents=[prompt_text],  # Gemini expects a list of strings
+                config=types.GenerateContentConfig(
+                    max_output_tokens=max_output_tokens,
+                )
+            )
+            # Gemini's response object may differ; adjust as needed
+            assistant_responses.append(response.text if hasattr(response, "text") else str(response))
 
-def get_model(model_name_or_path: str, openai_key: Optional[str], **kwargs) -> Model:
+        extracted_answers = [
+            self.extract_answer(response) for response in assistant_responses
+        ]
+
+        result_dict = {
+            "output": (
+                assistant_responses if num_generations > 1 else assistant_responses[0]
+            ),
+            "extracted_answers": (
+                extracted_answers if num_generations > 1 else extracted_answers[0]
+            ),
+        }
+
+        return result_dict
+
+def get_model(model_name_or_path: str, api_key: Optional[str], **kwargs) -> Model:
     if repo_exists(model_name_or_path, repo_type="model"):
         return HuggingfaceModel(model_name_or_path, **kwargs)
     elif "gpt" in model_name_or_path:
-        api_key = openai_key
         if not api_key:
             raise ValueError("API key is required for OpenAI models.")
         return OpenAIModel(model_name_or_path, api_key)
+    elif "gemini" in model_name_or_path:
+        if not api_key:
+            raise ValueError("API key is required for OpenAI models.")
+        return GeminiModel(model_name_or_path, api_key)
     else:
         raise ValueError(f"Model {model_name_or_path} not supported.")

@@ -33,7 +33,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--prompt_model_name_or_path",
         type=str,
-        default="gpt-4.1",
+        default="gemini-1.5-flash",
         help="Path to the prompt model.",
     )
 
