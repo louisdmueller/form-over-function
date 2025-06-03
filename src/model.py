@@ -186,15 +186,20 @@ class GeminiModel(OpenAIModel):
 
         return assistant_responses
 
-def get_model(model_name_or_path: str, api_key: Optional[str], **kwargs) -> Model:
+def get_model(model_name_or_path: str, config: dict, **kwargs) -> Model:
     if repo_exists(model_name_or_path, repo_type="model"):
+        # Some models are restricted and require a token to access
+        from huggingface_hub import login
+        if not (token := config.get("huggingface_hub_token")):
+            raise ValueError("Hugging Face Hub token is required for Hugging Face models.")
+        login(token)
         return HuggingfaceModel(model_name_or_path, **kwargs)
     elif "gpt" in model_name_or_path:
-        if not api_key:
+        if not (api_key := config.get("openai_key")):
             raise ValueError("API key is required for OpenAI models.")
         return OpenAIModel(model_name_or_path, api_key)
     elif "gemini" in model_name_or_path:
-        if not api_key:
+        if not (api_key := config.get("gemini_key")):
             raise ValueError("API key is required for OpenAI models.")
         return GeminiModel(model_name_or_path, api_key)
     else:
