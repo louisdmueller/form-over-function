@@ -46,5 +46,9 @@ if __name__ == "__main__":
         input_directory = os.path.join("data/chen-et-al", directory)
         output_file_path = os.path.join(input_directory, "merged_data.json")
 
+        if os.path.exists(output_file_path):
+            print(f"Output file {output_file_path} already exists. Skipping merge.")
+            continue
+
         merge_json_files(input_directory, output_file_path)
         print(f"Merged JSON files from {input_directory} into {output_file_path}")
