@@ -1,9 +1,8 @@
 from abc import ABC, abstractmethod
 import re
-from typing import List, Dict, Optional
+from typing import List, Dict
 from openai import OpenAI
 from google import genai
-from google.genai import types
 from transformers import AutoModelForCausalLM, AutoTokenizer # type: ignore
 import torch
 from huggingface_hub import repo_exists
@@ -160,29 +159,21 @@ class GeminiModel(OpenAIModel):
         Model.__init__(self, model_name_or_path)
         self.client = genai.Client(api_key=api_key)
 
-    def prompt(
+    def generate_answers(
             self,
             message: str,
             num_generations: int,
-            # max_output_tokens: int,
-            # **kwargs,
         ) -> list[str]:
-        """
-        Used to generate answers from one prompt. Not to be used to judge answers.
-        """
         assistant_responses = []
-        # Concatenate all message contents into a single string
-        # prompt_text = "\n".join([m["content"] for m in messages])
         for _ in range(num_generations):
             response = self.client.models.generate_content(
                 model=self.model_name_or_path,
                 contents=[message],
-                # config=types.GenerateContentConfig(
-                #     max_output_tokens=max_output_tokens,
-                # )
             )
-            # Gemini's response object may differ; adjust as needed
-            assistant_responses.append(response.text if hasattr(response, "text") else str(response))
+
+            assistant_responses.append(
+                response.text if hasattr(response, "text") else str(response)
+            )
 
         return assistant_responses
 
