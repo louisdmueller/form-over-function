@@ -162,39 +162,29 @@ class GeminiModel(OpenAIModel):
 
     def prompt(
             self,
-            messages: list[dict],
+            message: str,
             num_generations: int,
-            max_output_tokens: int,
-            **kwargs,
-        ) -> dict:
+            # max_output_tokens: int,
+            # **kwargs,
+        ) -> list[str]:
+        """
+        Used to generate answers from one prompt. Not to be used to judge answers.
+        """
         assistant_responses = []
         # Concatenate all message contents into a single string
-        prompt_text = "\n".join([m["content"] for m in messages])
+        # prompt_text = "\n".join([m["content"] for m in messages])
         for _ in range(num_generations):
             response = self.client.models.generate_content(
                 model=self.model_name_or_path,
-                contents=[prompt_text],  # Gemini expects a list of strings
-                config=types.GenerateContentConfig(
-                    max_output_tokens=max_output_tokens,
-                )
+                contents=[message],
+                # config=types.GenerateContentConfig(
+                #     max_output_tokens=max_output_tokens,
+                # )
             )
             # Gemini's response object may differ; adjust as needed
             assistant_responses.append(response.text if hasattr(response, "text") else str(response))
 
-        extracted_answers = [
-            self.extract_answer(response) for response in assistant_responses
-        ]
-
-        result_dict = {
-            "output": (
-                assistant_responses if num_generations > 1 else assistant_responses[0]
-            ),
-            "extracted_answers": (
-                extracted_answers if num_generations > 1 else extracted_answers[0]
-            ),
-        }
-
-        return result_dict
+        return assistant_responses
 
 def get_model(model_name_or_path: str, api_key: Optional[str], **kwargs) -> Model:
     if repo_exists(model_name_or_path, repo_type="model"):
