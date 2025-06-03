@@ -184,14 +184,18 @@ def get_model(model_name_or_path: str, config: dict, **kwargs) -> Model:
         if not (token := config.get("huggingface_hub_token")):
             raise ValueError("Hugging Face Hub token is required for Hugging Face models.")
         login(token)
+        
         return HuggingfaceModel(model_name_or_path, **kwargs)
+    
     elif "gpt" in model_name_or_path:
         if not (api_key := config.get("openai_key")):
             raise ValueError("API key is required for OpenAI models.")
         return OpenAIModel(model_name_or_path, api_key)
+    
     elif "gemini" in model_name_or_path:
         if not (api_key := config.get("gemini_key")):
             raise ValueError("API key is required for OpenAI models.")
         return GeminiModel(model_name_or_path, api_key)
+    
     else:
         raise ValueError(f"Model {model_name_or_path} not supported.")
