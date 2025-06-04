@@ -3,6 +3,7 @@ import re
 from typing import List, Dict
 from openai import OpenAI
 from google import genai
+from google.genai.types import GenerateContentConfig
 from transformers import AutoModelForCausalLM, AutoTokenizer # type: ignore
 import torch
 from huggingface_hub import repo_exists
@@ -16,12 +17,31 @@ class Model(ABC):
     @abstractmethod
     def prompt(
         self,
-        messages: List[Dict[str, str]],
-        num_generations: int,
-        max_output_tokens: int,
+        system_prompt: str,
+        message: str,
+        # num_generations: int,
+        # max_output_tokens: int,
         **kwargs,
     ) -> Dict:
         pass
+
+    def query_model(
+        self,
+        message: str,
+        num_generations: int,
+    ) -> List[str]:
+        raise NotImplementedError(
+            "This model does not support generating answers directly from a message."
+        )
+    
+    def apply_chat_template(
+        self,
+        messages: List[Dict[str, str]] | str,
+    ) -> List[Dict[str, str]] | str:
+        raise NotImplementedError(
+            "This model does not support applying chat templates directly."
+        )
+        
 
     def extract_answer(self, text: str) -> str | None:
         # If there are multiple answers in the last 100 characters, return None
@@ -122,22 +142,127 @@ class OpenAIModel(Model):
         super().__init__(model_name_or_path)
         self.openai_client = OpenAI(api_key=api_key)
 
+    def apply_chat_template(
+        self,
+        system_prompt: str,
+        message: str,
+    ) -> List[Dict[str, str]]:
+        """
+        Applies a chat template to the given message and system prompt.
+        """
+        messages = []
+        if system_prompt:
+            messages.append({"role": "system", "content": system_prompt})
+        messages.append({"role": "user", "content": message})
+        return messages
+
     def prompt(
         self,
-        messages: List[Dict[str, str]],
-        num_generations: int,
-        max_output_tokens: int,
+        system_prompt: str,
+        message: str,
+        # num_generations: int,
+        # max_output_tokens: int,
         **kwargs,
     ) -> Dict:
+        # messages = self.apply_chat_template(
+        #     system_prompt, message
+        # )
+        # assistant_responses = []
+        # for _ in range(num_generations):
+        #     response = self.openai_client.responses.create(
+        #         model=self.model_name_or_path,
+        #         input=messages, # type: ignore
+        #         max_output_tokens=max_output_tokens,
+        #         **kwargs,
+        #     )
+        #     assistant_responses.append(response.output_text)
+        assistant_responses = self.query_model(
+            system_prompt,
+            message,
+            # num_generations=num_generations,
+            # max_output_tokens=max_output_tokens,
+            **kwargs,
+        )
+
+        extracted_answers = [
+            self.extract_answer(response) for response in assistant_responses
+        ]
+
+        result_dict = {
+            "output": (
+                assistant_responses if kwargs.get("num_generations", 0) > 1 else assistant_responses[0]
+            ),
+            "extracted_answers": (
+                extracted_answers if kwargs.get("num_generations", 0) > 1 else extracted_answers[0]
+            ),
+        }
+
+        return result_dict
+    
+    def query_model(
+        self,
+        system_instruction: str,
+        message: str,
+        num_generations: int,
+        **kwargs: dict,
+    ) -> list[str]:
+        messages = self.apply_chat_template(
+            system_instruction, message
+        )
+
         assistant_responses = []
         for _ in range(num_generations):
             response = self.openai_client.responses.create(
                 model=self.model_name_or_path,
-                input=messages,  # type: ignore
-                max_output_tokens=max_output_tokens,
-                **kwargs,
+                input=messages, # type: ignore
+                max_output_tokens=kwargs.get("max_output_tokens", 512), # type: ignore
+                # **kwargs,
             )
             assistant_responses.append(response.output_text)
+
+        return assistant_responses
+    
+class GeminiModel(Model):
+    def __init__(self, model_name_or_path: str, api_key: str):
+        super().__init__(model_name_or_path)
+        self.client = genai.Client(api_key=api_key)
+
+    def query_model(
+            self,
+            message: str,
+            num_generations: int,
+            system_instruction: str
+        ) -> list[str]:
+
+        assistant_responses = []
+        for _ in range(num_generations):
+            response = self.client.models.generate_content(
+                model=self.model_name_or_path,
+                contents=message,
+                config=GenerateContentConfig(
+                    system_instruction=system_instruction if system_instruction else None,
+                ),
+            )
+
+            assistant_responses.append(
+                response.text if hasattr(response, "text") else str(response)
+            )
+
+        return assistant_responses
+    
+    def prompt(
+        self,
+        system_prompt: str,
+        message: str,
+        num_generations: int = 1,
+        max_output_tokens: int = 512,
+        **kwargs,
+    ) -> Dict:
+        assistant_responses = self.query_model(
+            message=message,
+            num_generations=num_generations,
+            system_instruction=system_prompt
+        )
 
         extracted_answers = [
             self.extract_answer(response) for response in assistant_responses
@@ -153,29 +278,6 @@ class OpenAIModel(Model):
         }
 
         return result_dict
-    
-class GeminiModel(OpenAIModel):
-    def __init__(self, model_name_or_path: str, api_key: str):
-        Model.__init__(self, model_name_or_path)
-        self.client = genai.Client(api_key=api_key)
-
-    def generate_answers(
-            self,
-            message: str,
-            num_generations: int,
-        ) -> list[str]:
-        assistant_responses = []
-        for _ in range(num_generations):
-            response = self.client.models.generate_content(
-                model=self.model_name_or_path,
-                contents=[message],
-            )
-
-            assistant_responses.append(
-                response.text if hasattr(response, "text") else str(response)
-            )
-
-        return assistant_responses
 
 def get_model(model_name_or_path: str, config: dict, **kwargs) -> Model:
     if repo_exists(model_name_or_path, repo_type="model"):

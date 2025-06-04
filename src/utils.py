@@ -1,4 +1,6 @@
 import argparse
+import random
+import string
 
 import pandas as pd
 import yaml
@@ -33,8 +35,15 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--prompt_model_name_or_path",
         type=str,
-        default="gemini-1.5-flash",
+        default="gpt-4.1",
         help="Path to the prompt model.",
+    )
+
+    parser.add_argument(
+        "--answer_generation_model_name_or_path",
+        type=str,
+        default="gemini-1.5-flash",
+        help="Path to the answer generation model.",
     )
 
     parser.add_argument(
@@ -49,6 +58,20 @@ def parse_args() -> argparse.Namespace:
         type=str,
         default="config.yml",
         help="Path to the config file.",
+    )
+
+    parser.add_argument(
+        "--output_path",
+        type=str,
+        default=None,
+        help="Path to the output file."
+    )
+
+    parser.add_argument(
+        "--comment",
+        type=str,
+        default="",
+        help="Comment to add to the output file metadata.",
     )
 
     # provide start and end index to process a subset of the data
@@ -82,6 +105,10 @@ def load_config(path: str) -> dict:
     with open(path, "r") as f:
         config = yaml.safe_load(f)
     return config
+
+def random_id(length=8):
+    chars = string.ascii_letters + string.digits
+    return ''.join(random.choices(chars, k=length))
 
 
 def create_comparison_csv(
