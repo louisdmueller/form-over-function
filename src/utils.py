@@ -54,6 +54,20 @@ def parse_args() -> argparse.Namespace:
     )
 
     parser.add_argument(
+        "--data_1_path",
+        type=str,
+        default="data/chen-et-al/raw_data-new_format.json",
+        help="Path to the raw data.",
+    )
+
+    parser.add_argument(
+        "--data_2_path",
+        type=str,
+        default="data/chen-et-al/raw_data-new_format.json",
+        help="Path to the raw data.",
+    )
+
+    parser.add_argument(
         "--config_path",
         type=str,
         default="config.yml",
@@ -95,6 +109,12 @@ def parse_args() -> argparse.Namespace:
         type=str,
         default="directly_answer_question_without_cot",
         help="Name of the prompt to use from the prompts.json file.",
+    )
+
+    parser.add_argument(
+        "--aae",
+        action="store_true",
+        help="If set, the answers will be translated from SAE to AAE.",
     )
 
     args = parser.parse_args()

@@ -29,6 +29,9 @@ class Model(ABC):
         self,
         message: str,
         num_generations: int,
+        system_prompt: str = "",
+        # max_output_tokens: int,
+        **kwargs: dict[str, int],
     ) -> List[str]:
         raise NotImplementedError(
             "This model does not support generating answers directly from a message."
@@ -201,13 +204,14 @@ class OpenAIModel(Model):
     
     def query_model(
         self,
-        system_instruction: str,
+        system_prompt: str,
         message: str,
         num_generations: int,
+        # max_output_tokens: int,
         **kwargs: dict,
     ) -> list[str]:
         messages = self.apply_chat_template(
-            system_instruction, message
+            system_prompt, message
         )
 
         assistant_responses = []
@@ -226,29 +230,6 @@ class GeminiModel(Model):
     def __init__(self, model_name_or_path: str, api_key: str):
         super().__init__(model_name_or_path)
         self.client = genai.Client(api_key=api_key)
-
-    def query_model(
-            self,
-            message: str,
-            num_generations: int,
-            system_instruction: str
-        ) -> list[str]:
-
-        assistant_responses = []
-        for _ in range(num_generations):
-            response = self.client.models.generate_content(
-                model=self.model_name_or_path,
-                contents=message,
-                config=GenerateContentConfig(
-                    system_instruction=system_instruction if system_instruction else None,
-                ),
-            )
-
-            assistant_responses.append(
-                response.text if hasattr(response, "text") else str(response)
-            )
-
-        return assistant_responses
     
     def prompt(
         self,
@@ -261,7 +242,7 @@ class GeminiModel(Model):
         assistant_responses = self.query_model(
             message=message,
             num_generations=num_generations,
-            system_instruction=system_prompt
+            system_prompt=system_prompt
         )
 
         extracted_answers = [
@@ -278,6 +259,31 @@ class GeminiModel(Model):
         }
 
         return result_dict
+    
+    def query_model(
+            self,
+            message: str,
+            num_generations: int,
+            system_prompt: str = "",
+            **kwargs: dict,
+        ) -> list[str]:
+
+        assistant_responses = []
+        for _ in range(num_generations):
+            response = self.client.models.generate_content(
+                model=self.model_name_or_path,
+                contents=message,
+                config=GenerateContentConfig(
+                    system_instruction=system_prompt if system_prompt else None,
+                    max_output_tokens=kwargs.get("max_output_tokens", 512), # type: ignore
+                ),
+            )
+
+            assistant_responses.append(
+                response.text if hasattr(response, "text") else str(response)
+            )
+
+        return assistant_responses
 
 class RandomAnswer(Model):
     def __init__(self):
