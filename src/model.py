@@ -279,6 +279,45 @@ class GeminiModel(Model):
 
         return result_dict
 
+class RandomAnswer(Model):
+    def __init__(self):
+        """
+        This model is for debugging purposes only.
+        It randomly chooses between "Answer1", "Answer2", and "Tie" as the output.
+        This is useful to test the pipeline without needing the hardware to run a big LLM
+        or using API credits.
+        """
+        super().__init__("random_choice_model")
+
+    def prompt(
+        self,
+        system_prompt: str,
+        input_text: str,
+        num_generations: int,
+        max_output_tokens: int = 512,
+    ) -> Dict:
+        assistant_responses = self.query_model(num_generations)
+        extracted_answers = [
+            self.extract_answer(response) for response in assistant_responses
+        ]
+
+        result_dict = {
+            "output": (
+                assistant_responses if num_generations > 1 else assistant_responses[0]
+            ),
+            "extracted_answers": (
+                extracted_answers if num_generations > 1 else extracted_answers[0]
+            ),
+        }
+        return result_dict
+
+    def query_model(
+        self,
+        num_generations
+    ) -> list[str]:
+        from random import choice
+        return [choice(["Answer1", "Answer2", "Tie"]) for _ in range(num_generations)]
+
 def get_model(model_name_or_path: str, config: dict, **kwargs) -> Model:
     if repo_exists(model_name_or_path, repo_type="model"):
         # Some models are restricted and require a token to access
@@ -298,6 +337,7 @@ def get_model(model_name_or_path: str, config: dict, **kwargs) -> Model:
         if not (api_key := config.get("gemini_key")):
             raise ValueError("API key is required for OpenAI models.")
         return GeminiModel(model_name_or_path, api_key)
-    
+    elif model_name_or_path == "RandomAnswer":
+        return RandomAnswer()
     else:
         raise ValueError(f"Model {model_name_or_path} not supported.")
