@@ -1,3 +1,8 @@
+"""
+This script generates two files with answers to the prompts in the data file.
+ - The first file contains the answers in Standard American English (SAE),
+ - The second file (if AAE translation is requested) contains the answers translated to African American English (AAE)
+"""
 import json
 import os
 from tqdm import tqdm
@@ -8,6 +13,7 @@ from utils import (
     parse_args,
     random_id
 )
+from aae_translation import add_aae_to_df
 
 args = parse_args()
 config = load_config(args.config_path)
@@ -16,23 +22,29 @@ if os.path.exists(args.output_path):
     print(f"Output file {args.output_path} already exists. Exiting to avoid overwriting.")
     exit(1)
 
+    # # delete files if they exist
+    # if os.path.exists(args.output_path):
+    #     print(f"Output file {args.output_path} already exists. Deleting to avoid overwriting.")
+    #     os.remove(args.output_path)
+
+    # if os.path.exists(args.output_path.replace(".json", "_aae.json")):
+    #     print(f"Output file {args.output_path.replace('.json', '_aae.json')} already exists. Deleting to avoid overwriting.")
+    #     os.remove(args.output_path.replace(".json", "_aae.json"))
+
 model = get_model(
     model_name_or_path=args.answer_generation_model_name_or_path,
     config=config,
 )
 
-# generate answers without AAE
 with open(args.data_path, "r") as f:
     data = [json.loads(line) for line in f.readlines()]
 
 for entry in tqdm(data, desc="Generating SAE answers"):
     generated_data = {}
     # copy original data to new file
-    for key in [key for key in entry.keys() if key not in ["answers"]]:
-        # TODO: currently the data copied includes aae answers
-        #       which is not needed for model comparisons
+    for key in [key for key in entry.keys()]:
         generated_data[key] = entry[key]
-    generated_data["original_answers"] = entry["answers"]
+    generated_data["model_name"] = args.answer_generation_model_name_or_path
 
     prompt = entry["prompt"]
     text = model.query_model(
@@ -40,7 +52,7 @@ for entry in tqdm(data, desc="Generating SAE answers"):
         num_generations=2,
     )
 
-    generated_data["answers_gemini"] = {
+    generated_data["answers"] = {
         "answer1": {
             "answer": text[0],
             "answer_id": random_id(8),
@@ -50,7 +62,30 @@ for entry in tqdm(data, desc="Generating SAE answers"):
             "answer_id": random_id(8),
         },
     }
-    
+
     # append to output file in order to not lose data in case of an error
     with open(args.output_path, "a") as f:
         f.write(json.dumps(generated_data) + "\n")
+
+    if args.aae:
+        # If AAE translation is requested, add AAE translations to the answers
+        import pandas as pd
+        df = pd.DataFrame([generated_data])
+        df = add_aae_to_df(df, model)
+
+        generated_data["question"] = df["question"].iloc[0]
+
+        generated_data["answers"] = {
+            "answer1": {
+                "answer": df["answers"].iloc[0]["answer1_aae"],
+                "answer_id": generated_data["answers"]["answer1"]["answer_id"],
+            },
+            "answer2": {
+                "answer": df["answers"].iloc[0]["answer2_aae"],
+                "answer_id": generated_data["answers"]["answer2"]["answer_id"],
+            },
+        }
+
+        # Save in a different file to make project structure cleaner
+        with open(args.output_path.replace(".json", "_aae.json"), "a") as f_aae:
+            f_aae.write(json.dumps(generated_data) + "\n")

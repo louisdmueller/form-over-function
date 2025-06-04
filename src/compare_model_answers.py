@@ -23,7 +23,10 @@ def main() -> None:
         config=config,
     )
 
-    data_df = get_df_from_file(args.data_path)
+    # TODO: is it necessary to load the data as dataframes? 
+    #       we are later using iloc to access the data
+    #       maybe we can just use the json lines file directly?
+    df_1, df_2 = load_dataframes(args.data_1_path, args.data_2_path)
 
     data_directory = os.path.dirname(args.data_path)
     with open(os.path.join(data_directory, "prompts.json"), "r") as f:
@@ -46,18 +49,22 @@ def main() -> None:
     # the data length is not initialized yet.
     # We need to manually set it to the length of the dataframe
     if args.end_index is None:
-        args.end_index = len(data_df)
+        args.end_index = len(df_1)
 
-    for idx, data in tqdm(
-        data_df.iloc[args.start_index : args.end_index].iterrows(),
+    for idx in tqdm(
+        range(args.start_index, args.end_index),
         total=args.end_index - args.start_index,
         desc="Generating results",
     ):
-        question = data["question"]
-        answer_model_1 = data["model_1"]["answer1"]["answer"]
-        name_model_1 = data["model_1"]["model_name"]
-        answer_model_2 = data["model_2"]["answer1"]["answer"]
-        name_model_2 = data["model_2"]["model_name"]
+        # question is also available in df_2, using df_1 for consistency
+        question = df_1.iloc[idx]["question"]
+
+        # there were multiple answers generated to the same question
+        # we use the answer1 for both models
+        answer_model_1 = df_1.iloc[idx]["answers"]["answer1"]["answer"]
+        answer_model_2 = df_2.iloc[idx]["answers"]["answer1"]["answer"]
+        name_model_1 = df_1.iloc[idx]["model_name"]
+        name_model_2 = df_2.iloc[idx]["model_name"]
 
         # key of each entry is the index of the question in the dataframe
         # and the value is a list of dictionaries with the results
@@ -128,6 +135,35 @@ def main() -> None:
         # Writing after every question to avoid losing results in case of an error or timeout
         with open(f"{data_directory}/results-{current_time}-{name_model_1}-{name_model_2}.json", "w") as f:
             f.write(json.dumps(file_content, indent=4))
+
+def load_dataframes(data_1_path: str, data_2_path: str) -> tuple:
+    print("Is it necessary to load the data as dataframes?")
+    if data_1_path == data_2_path:
+        raise ValueError(
+            "The paths for data_1 and data_2 are the same. "
+            "Please provide different paths."
+        )
+    data_df_1 = get_df_from_file(data_1_path)
+    data_df_2 = get_df_from_file(data_2_path)
+
+    # with open(data_1_path, "r") as f:
+    #     data_df_1 = [json.loads(line) for line in f.readlines()]
+    # with open(data_2_path, "r") as f:
+    #     data_df_2 = [json.loads(line) for line in f.readlines()]
+    
+    if len(data_df_1) != len(data_df_2):
+        raise ValueError(
+            "The dataframes have different lengths: "
+            f"{len(data_df_1)} and {len(data_df_2)}. "
+            "Please provide dataframes with the same length."
+        )
+    # if not data_df_1.columns.equals(data_df_2.columns):
+    #     raise ValueError(
+    #         "The dataframes have different columns: "
+    #         f"{data_df_1.columns} and {data_df_2.columns}. "
+    #         "Please provide dataframes with the same columns."
+    #     )
+    return data_df_1, data_df_2
 
 
 if __name__ == "__main__":
