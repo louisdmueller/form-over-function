@@ -16,6 +16,8 @@ def main() -> None:
     args = parse_args()
     config = load_config(args.config_path)
 
+    # args.judge_model_name_or_path = "RandomAnswer"
+
     judge_model = get_model(
         model_name_or_path=args.judge_model_name_or_path,
         config=config,
@@ -52,10 +54,10 @@ def main() -> None:
         desc="Generating results",
     ):
         question = data["question"]
-        answer_model_1 = data["model_1"]["answers"]["answer1"]["answer"]
-        name_model_1 = data["model_1"]["name"]
-        answer_model_2 = data["model_2"]["answers"]["answer1"]["answer"]
-        name_model_2 = data["model_2"]["name"]
+        answer_model_1 = data["model_1"]["answer1"]["answer"]
+        name_model_1 = data["model_1"]["model_name"]
+        answer_model_2 = data["model_2"]["answer1"]["answer"]
+        name_model_2 = data["model_2"]["model_name"]
 
         # key of each entry is the index of the question in the dataframe
         # and the value is a list of dictionaries with the results
@@ -120,11 +122,11 @@ def main() -> None:
                 }
             )
 
-            for i, text in enumerate(results):
-                print(f"Generated Text {idx} {i+1}/{len(results)}: {text}")
+            # for i, text in enumerate(results):
+            #     print(f"Generated Text {idx} {i+1}/{len(results)}: {text}")
 
         # Writing after every question to avoid losing results in case of an error or timeout
-        with open(f"{data_directory}/results-{current_time}.json", "w") as f:
+        with open(f"{data_directory}/results-{current_time}-{name_model_1}-{name_model_2}.json", "w") as f:
             f.write(json.dumps(file_content, indent=4))
 
 

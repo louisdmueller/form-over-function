@@ -29,6 +29,8 @@ for entry in tqdm(data, desc="Generating SAE answers"):
     generated_data = {}
     # copy original data to new file
     for key in [key for key in entry.keys() if key not in ["answers"]]:
+        # TODO: currently the data copied includes aae answers
+        #       which is not needed for model comparisons
         generated_data[key] = entry[key]
     generated_data["original_answers"] = entry["answers"]
 
@@ -41,11 +43,11 @@ for entry in tqdm(data, desc="Generating SAE answers"):
     generated_data["answers_gemini"] = {
         "answer1": {
             "answer": text[0],
-            "answer_id": random_id(),
+            "answer_id": random_id(8),
         },
         "answer2": {
             "answer": text[1],
-            "answer_id": random_id(),
+            "answer_id": random_id(8),
         },
     }
     
