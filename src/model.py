@@ -1,9 +1,8 @@
 from abc import ABC, abstractmethod
 import re
-from typing import List, Dict, Optional
+from typing import List, Dict
 from openai import OpenAI
 from google import genai
-from google.genai import types
 from transformers import AutoModelForCausalLM, AutoTokenizer # type: ignore
 import torch
 from huggingface_hub import repo_exists
@@ -160,42 +159,43 @@ class GeminiModel(OpenAIModel):
         Model.__init__(self, model_name_or_path)
         self.client = genai.Client(api_key=api_key)
 
-    def prompt(
+    def generate_answers(
             self,
             message: str,
             num_generations: int,
-            # max_output_tokens: int,
-            # **kwargs,
         ) -> list[str]:
-        """
-        Used to generate answers from one prompt. Not to be used to judge answers.
-        """
         assistant_responses = []
-        # Concatenate all message contents into a single string
-        # prompt_text = "\n".join([m["content"] for m in messages])
         for _ in range(num_generations):
             response = self.client.models.generate_content(
                 model=self.model_name_or_path,
                 contents=[message],
-                # config=types.GenerateContentConfig(
-                #     max_output_tokens=max_output_tokens,
-                # )
             )
-            # Gemini's response object may differ; adjust as needed
-            assistant_responses.append(response.text if hasattr(response, "text") else str(response))
+
+            assistant_responses.append(
+                response.text if hasattr(response, "text") else str(response)
+            )
 
         return assistant_responses
 
-def get_model(model_name_or_path: str, api_key: Optional[str], **kwargs) -> Model:
+def get_model(model_name_or_path: str, config: dict, **kwargs) -> Model:
     if repo_exists(model_name_or_path, repo_type="model"):
+        # Some models are restricted and require a token to access
+        from huggingface_hub import login
+        if not (token := config.get("huggingface_hub_token")):
+            raise ValueError("Hugging Face Hub token is required for Hugging Face models.")
+        login(token)
+        
         return HuggingfaceModel(model_name_or_path, **kwargs)
+    
     elif "gpt" in model_name_or_path:
-        if not api_key:
+        if not (api_key := config.get("openai_key")):
             raise ValueError("API key is required for OpenAI models.")
         return OpenAIModel(model_name_or_path, api_key)
+    
     elif "gemini" in model_name_or_path:
-        if not api_key:
+        if not (api_key := config.get("gemini_key")):
             raise ValueError("API key is required for OpenAI models.")
         return GeminiModel(model_name_or_path, api_key)
+    
     else:
         raise ValueError(f"Model {model_name_or_path} not supported.")
