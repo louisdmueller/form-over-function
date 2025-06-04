@@ -34,4 +34,4 @@ else
 fi
 
 # python src/main.py --end_index 29
-python src/main.py --start_index 0
+python src/main-copy.py --start_index 100
