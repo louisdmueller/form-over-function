@@ -4,6 +4,7 @@ from typing import List, Dict
 from openai import OpenAI
 from google import genai
 from google.genai.types import GenerateContentConfig
+from tqdm import trange
 from transformers import AutoModelForCausalLM, AutoTokenizer # type: ignore
 import torch
 from huggingface_hub import repo_exists
@@ -168,7 +169,7 @@ class HuggingfaceModel(Model):
         all_extracted_answers = []
 
         # Create batches
-        for i in range(0, len(input_texts), batch_size):
+        for i in trange(0, len(input_texts), batch_size, desc="Processing batches", unit="batch"):
             batch_system_prompts = system_prompts[i:i+batch_size]
             batch_input_texts = input_texts[i:i+batch_size]
 
@@ -214,6 +215,8 @@ class HuggingfaceModel(Model):
                     num_beams=num_generations,
                     num_return_sequences=num_generations,
                     do_sample=False,
+                    top_p=None, # only set if do_sample=False
+                    top_k=None, # only set if do_sample=False
                     return_dict_in_generate=True,
                     **kwargs,
                 )
