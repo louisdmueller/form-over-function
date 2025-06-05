@@ -85,6 +85,7 @@ class HuggingfaceModel(Model):
         )
         self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
         self.tokenizer.pad_token = self.tokenizer.eos_token
+        self.tokenizer.padding_side = "left"
         self.model.generation_config.pad_token_id = self.tokenizer.pad_token_id
 
         self.model.eval()
