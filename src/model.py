@@ -44,8 +44,20 @@ class Model(ABC):
         raise NotImplementedError(
             "This model does not support applying chat templates directly."
         )
+    
+    def prompt_batched(
+        self,
+        system_prompts: list[str],
+        input_texts: list[str],
+        num_generations: int = 1,
+        max_output_tokens: int = 512,
+        batch_size: int = 8,
+        **kwargs,
+    ) -> dict:
+        raise NotImplementedError(
+            "This model does not support applying chat templates directly."
+        )
         
-
     def extract_answer(self, text: str) -> str | None:
         # If there are multiple answers in the last 100 characters, return None
         if sum([re.search(rf'{answer}', text[-100:], flags=re.IGNORECASE) is not None 
@@ -138,6 +150,93 @@ class HuggingfaceModel(Model):
         }
 
         return result_dict
+    
+    def prompt_batched(
+        self,
+        system_prompts: list[str],
+        input_texts: list[str],
+        num_generations: int = 1,
+        max_output_tokens: int = 512,
+        batch_size: int = 8,
+        **kwargs,
+    ) -> dict:
+        """
+        Batched inference for HuggingfaceModel.
+        """
+        all_outputs = []
+        all_extracted_answers = []
+
+        # Create batches
+        for i in range(0, len(input_texts), batch_size):
+            batch_system_prompts = system_prompts[i:i+batch_size]
+            batch_input_texts = input_texts[i:i+batch_size]
+
+            # Build messages for each example in the batch
+            messages_batch = [
+                [
+                    {"role": "system", "content": sys_prompt} if sys_prompt else None,
+                    {"role": "user", "content": input_text}
+                ]
+                for sys_prompt, input_text in zip(batch_system_prompts, batch_input_texts)
+            ]
+            # Remove None if there is no system_prompt
+            messages_batch = [
+                [msg for msg in msgs if msg is not None]
+                for msgs in messages_batch
+            ]
+
+            with torch.no_grad():
+                formatted_inputs = [
+                    self.tokenizer.apply_chat_template(
+                        msgs,
+                        return_tensors="pt",
+                        tokenize=False,
+                        add_generation_prompt=True,
+                        max_length=self.tokenizer.model_max_length,
+                    )
+                    for msgs in messages_batch
+                ]
+                # Tokenize all inputs in the batch
+                inputs = self.tokenizer(
+                    formatted_inputs,
+                    return_tensors="pt",
+                    padding=True,
+                    truncation=True,
+                    max_length=self.tokenizer.model_max_length,
+                )
+                inputs = inputs.to(self.model.device)
+                input_length = inputs['input_ids'].shape[1]
+
+                output = self.model.generate(
+                    **inputs,
+                    max_new_tokens=max_output_tokens,
+                    num_beams=num_generations,
+                    num_return_sequences=num_generations,
+                    do_sample=False,
+                    return_dict_in_generate=True,
+                    **kwargs,
+                )
+
+            sequences = output.sequences
+            # Remove the input part from the generated sequences
+            generated_sequences = sequences[:, input_length:]
+            decoded_sequences = self.tokenizer.batch_decode(
+                generated_sequences, skip_special_tokens=True
+            )
+            # Extract the answers for each example in the batch
+            for j in range(len(batch_input_texts)):
+                # For num_generations > 1: slice the correct sequences
+                start = j * num_generations
+                end = (j + 1) * num_generations
+                responses = [seq.strip() for seq in decoded_sequences[start:end]]
+                extracted = [self.extract_answer(resp) for resp in responses]
+                all_outputs.append(responses if num_generations > 1 else responses[0])
+                all_extracted_answers.append(extracted if num_generations > 1 else extracted[0])
+
+        return {
+            "output": all_outputs,
+            "extracted_answers": all_extracted_answers,
+        }
 
 
 class OpenAIModel(Model):
