@@ -217,6 +217,7 @@ class HuggingfaceModel(Model):
                     do_sample=False,
                     top_p=None, # only set if do_sample=False
                     top_k=None, # only set if do_sample=False
+                    temperature=None, # only set if do_sample=False
                     return_dict_in_generate=True,
                     **kwargs,
                 )
