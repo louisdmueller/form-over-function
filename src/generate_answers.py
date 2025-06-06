@@ -31,15 +31,21 @@ if os.path.exists(args.output_path):
     #     print(f"Output file {args.output_path.replace('.json', '_aae.json')} already exists. Deleting to avoid overwriting.")
     #     os.remove(args.output_path.replace(".json", "_aae.json"))
 
-model = get_model(
+answer_generation_model = get_model(
     model_name_or_path=args.answer_generation_model_name_or_path,
     config=config,
 )
+if args.aae:
+    prompt_gen_model = get_model(
+        model_name_or_path=args.prompt_model_name_or_path,
+        config=config,
+    )
 
 with open(args.data_path, "r") as f:
     data = [json.loads(line) for line in f.readlines()]
 
-for entry in tqdm(data, desc="Generating SAE answers"):
+desc = "Generating SAE answers" if not args.aae else "Generating SAE and AAE answers"
+for entry in tqdm(data, desc=desc):
     generated_data = {}
     # copy original data to new file
     for key in [key for key in entry.keys()]:
@@ -47,7 +53,7 @@ for entry in tqdm(data, desc="Generating SAE answers"):
     generated_data["model_name"] = args.answer_generation_model_name_or_path
 
     prompt = entry["prompt"]
-    text = model.query_model(
+    text = answer_generation_model.query_model(
         message=prompt,
         num_generations=2,
     )
@@ -63,6 +69,10 @@ for entry in tqdm(data, desc="Generating SAE answers"):
         },
     }
 
+    generated_data["metadata"] = {
+        "generation_model_name": args.answer_generation_model_name_or_path,
+    }
+
     # append to output file in order to not lose data in case of an error
     with open(args.output_path, "a") as f:
         f.write(json.dumps(generated_data) + "\n")
@@ -71,7 +81,7 @@ for entry in tqdm(data, desc="Generating SAE answers"):
         # If AAE translation is requested, add AAE translations to the answers
         import pandas as pd
         df = pd.DataFrame([generated_data])
-        df = add_aae_to_df(df, model)
+        df = add_aae_to_df(df, prompt_gen_model)
 
         generated_data["question"] = df["question"].iloc[0]
 
@@ -84,6 +94,11 @@ for entry in tqdm(data, desc="Generating SAE answers"):
                 "answer": df["answers"].iloc[0]["answer2_aae"],
                 "answer_id": generated_data["answers"]["answer2"]["answer_id"],
             },
+        }
+
+        generated_data["metadata"] = {
+            "translation_model_name": args.prompt_model_name_or_path,
+            "generation_model_name": args.answer_generation_model_name_or_path,
         }
 
         # Save in a different file to make project structure cleaner
