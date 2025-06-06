@@ -54,6 +54,7 @@ for entry in tqdm(data, desc=desc):
 
     prompt = entry["prompt"]
     text = answer_generation_model.query_model(
+        system_prompt="",
         message=prompt,
         num_generations=2,
     )
@@ -83,7 +84,7 @@ for entry in tqdm(data, desc=desc):
         df = pd.DataFrame([generated_data])
         df = add_aae_to_df(df, prompt_gen_model)
 
-        generated_data["question"] = df["question"].iloc[0]
+        generated_data["question"] = df["question_aae"].iloc[0]
 
         generated_data["answers"] = {
             "answer1": {
