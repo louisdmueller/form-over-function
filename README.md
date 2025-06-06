@@ -9,8 +9,39 @@ To access the newest Llama models one needs to accept the Meta tos on HuggingFac
 huggingface_hub_token: <key>
 ```
 
-To generate the translations using GPT4o mini, we use the OpenAI API. Include your API key as follows:
+To generate the translations using GPT-4.1, we use the OpenAI API. Include your API key as follows:
 ```yaml
 openai_key: <key>
 ```
-In the future this config file may be used to store other configurations as well.
+
+---
+
+For better project structure, we use multiple scripts to handle different tasks:
+
+## Generating data and translating it to AAE
+```bash
+bash generate_data.sh
+```
+
+## Generating the models judgements
+(Local)
+```bash
+bash generate_judgements.sh
+```
+
+(SLURM Cluster)
+```bash
+sbatch start-generate-judgements.sh
+```
+
+## Evaluating the models judgements
+First merge the judgement outputs in to a single file:
+```bash
+python merge_json_files.py
+```
+
+Then evaluate the merged judgements:
+
+```bash
+
+```
