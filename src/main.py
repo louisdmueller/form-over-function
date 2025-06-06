@@ -22,12 +22,12 @@ def main() -> None:
 
     judge_model = get_model(
         model_name_or_path=args.judge_model_name_or_path,
-        api_key=config["openai_key"],
+        config=config,
     )
 
     prompt_gen_model = get_model(
         model_name_or_path=args.prompt_model_name_or_path,
-        api_key=config["openai_key"],
+        config=config,
     )
 
     data_df = get_df_from_file(args.data_path)
