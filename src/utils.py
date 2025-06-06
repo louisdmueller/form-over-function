@@ -92,16 +92,16 @@ def parse_args() -> argparse.Namespace:
     # useful for debugging and testing
     parser.add_argument(
         "--start_index",
-        type=int,
-        default=0,
-        help="Index to start processing the data from.",
+        type=float,
+        default=0.0,
+        help="Index to start processing the data from. Can be an integer or a float (e.g., 0.1 for 10% of the data).",
     )
     
     parser.add_argument(
         "--end_index",
-        type=int,
+        type=float,
         default=None,
-        help="Index to stop processing the data at. If None, process all data.",
+        help="Index to stop processing the data at. Can be an integer or a float (e.g., 0.5 for 50% of the data). If None, process all data.",
     )
 
     parser.add_argument(
@@ -129,6 +129,27 @@ def load_config(path: str) -> dict:
 def random_id(length=8):
     chars = string.ascii_letters + string.digits
     return ''.join(random.choices(chars, k=length))
+
+def get_start_end_indices(start_index, end_index, data_length) -> tuple:
+    # If end_index is not provided, it it set to None, since
+    # the data length is not initialized yet.
+    # We need to manually set it to the length of the dataframe
+    if end_index is None or end_index > data_length:
+        end_index = data_length
+    if start_index < 0 or end_index < 0 or start_index >= data_length or end_index > data_length:
+        raise ValueError("Invalid start or end index.")
+    
+    if start_index.is_integer():
+        start_index = int(start_index)
+    else:
+        start_index = int(start_index * data_length)
+    if end_index.is_integer():
+        end_index = int(end_index)
+    else:
+        end_index = int(end_index * data_length)
+
+    return start_index, end_index
+    
 
 
 def create_comparison_csv(

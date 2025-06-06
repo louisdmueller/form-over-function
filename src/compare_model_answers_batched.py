@@ -9,14 +9,12 @@ from utils import (
     get_df_from_file,
     load_config,
     parse_args,
+    get_start_end_indices
 )
-
 
 def main() -> None:
     args = parse_args()
     config = load_config(args.config_path)
-
-    # args.judge_model_name_or_path = "RandomAnswer"
 
     judge_model = get_model(
         model_name_or_path=args.judge_model_name_or_path,
@@ -45,11 +43,7 @@ def main() -> None:
         "comment": args.comment,
     }
 
-    # If end_index is not provided, it it set to None, since
-    # the data length is not initialized yet.
-    # We need to manually set it to the length of the dataframe
-    if args.end_index is None:
-        args.end_index = len(df_1)
+    start_idx, end_idx = get_start_end_indices(args.start_index, args.end_index, len(df_1))
 
     input_texts = []
     answer_dicts = []
@@ -57,9 +51,10 @@ def main() -> None:
     idx_list = []
     answer_positions_list = []
 
+    # Create a list of all input texts and answer dictionaries
     for idx in tqdm(
-        range(args.start_index, args.end_index),
-        total=args.end_index - args.start_index,
+        range(start_idx, end_idx),
+        total=end_idx - start_idx,
         desc="Generating results",
     ):
         question = df_1.iloc[idx]["question"]
@@ -96,10 +91,14 @@ def main() -> None:
 
     system_prompts = [system_prompt] * len(input_texts)
 
+    # Pass the list of inputs to the judge model
+    # The method will handle batching internally
+    # and return the results in a single call
     results = judge_model.prompt_batched(
         system_prompts, input_texts, num_generations=3, max_output_tokens=512
     )
 
+    # Iterate over the results and populate the file_content
     for i in range(len(input_texts)):
         idx = idx_list[i]
         answer_position = answer_positions_list[i]
@@ -126,7 +125,6 @@ def main() -> None:
             }
         )
 
-    # Writing after every question to avoid losing results in case of an error or timeout
     with open(f"{data_directory}/results-{current_time}-{name_model_1}-{name_model_2}.json", "w") as f:
         f.write(json.dumps(file_content, indent=4))
 
