@@ -20,10 +20,11 @@ judge_model_name="RandomAnswer"
 #     --aae
 
 ### 1. Compare answers from the worse model to the answers from the better model
-python src/compare_model_answers.py \
+python src/compare_model_answers_batched.py \
     --judge_model_name_or_path "$judge_model_name" \
     --data_1_path "data/gpt-4.json" \
-    --data_2_path "data/gemini-1.5-flash.json" 
+    --data_2_path "data/gemini-1.5-flash.json" \
+    --end-index 0.5
     # --question_switching # TODO
     # --prompt_switchging # TODO
 
