@@ -159,12 +159,17 @@ class HuggingfaceModel(Model):
         input_texts: list[str],
         num_generations: int = 1,
         max_output_tokens: int = 512,
-        batch_size: int = 8,
+        batch_size: int = 12,
         **kwargs,
     ) -> dict:
         """
         Batched inference for HuggingfaceModel.
         """
+        print(f"Processing {len(input_texts)} examples")
+        print(f"Batch size: {batch_size}")
+        print(f"Number of generations: {num_generations}")
+        print(f"Max output tokens: {max_output_tokens}")
+
         all_outputs = []
         all_extracted_answers = []
 
