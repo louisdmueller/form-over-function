@@ -56,23 +56,24 @@ class Model(ABC):
         **kwargs,
     ) -> dict:
         raise NotImplementedError(
-            "This model does not support applying chat templates directly."
+            "This model does not support prompting in batches."
         )
         
     def extract_answer(self, text: str) -> str | None:
-        # If there are multiple answers in the last 100 characters, return None
-        if sum([re.search(rf'{answer}', text[-100:], flags=re.IGNORECASE) is not None 
-                for answer in ["Answer1", "Answer2", "Tie"]]) > 1:
-            return None
+        # Try to match at the start of the text
+        match_start = re.match(r'^\s*(Answer1|Answer2|Tie)\s*$', text.strip().split('\n')[0], flags=re.IGNORECASE)
+        # Try to match at the end of the text
+        match_end = re.match(r'^\s*(Answer1|Answer2|Tie)\s*$', text.strip().split('\n')[-1], flags=re.IGNORECASE)
         
-        # Use regex to find the last occurrence of 'Answer1', 'Answer2', or 'Tie'
-        matches = re.findall(r'^\s*(Answer1|Answer2|Tie)\s*$', text, flags=re.MULTILINE | re.IGNORECASE)
-
-        if matches:
-            # Take the last match as the vote
-            return matches[-1].lower()
-        else:
+        # If both start and end match but are different, return None (ambiguous answer)
+        if match_start and match_end and match_start.group(1).lower() != match_end.group(1).lower():
             return None
+        if match_start:
+            return match_start.group(1).lower()
+        if match_end:
+            return match_end.group(1).lower()
+        # If neither matches, return None (no answer found)
+        return None
 
 
 class HuggingfaceModel(Model):
