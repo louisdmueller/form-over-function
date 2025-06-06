@@ -34,4 +34,4 @@ else
 fi
 
 # python src/compare_model_answers.py
-bash weak_vs_strong_model.sh
+bash generate_judgements.sh
