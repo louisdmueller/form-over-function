@@ -23,7 +23,7 @@ if os.path.exists(args.output_path):
     exit(1)
 
 if "/" in args.output_path:
-    if args.output_path == args.answer_generation_model_name_or_path:
+    if args.answer_generation_model_name_or_path in args.output_path:
         args.output_path = args.answer_generation_model_name_or_path.split("/")[-1]
     else:
         # create directory if it does not exist
