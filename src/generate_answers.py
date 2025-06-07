@@ -22,14 +22,12 @@ if os.path.exists(args.output_path):
     print(f"Output file {args.output_path} already exists. Exiting to avoid overwriting.")
     exit(1)
 
-    # # delete files if they exist
-    # if os.path.exists(args.output_path):
-    #     print(f"Output file {args.output_path} already exists. Deleting to avoid overwriting.")
-    #     os.remove(args.output_path)
-
-    # if os.path.exists(args.output_path.replace(".json", "_aae.json")):
-    #     print(f"Output file {args.output_path.replace('.json', '_aae.json')} already exists. Deleting to avoid overwriting.")
-    #     os.remove(args.output_path.replace(".json", "_aae.json"))
+if "/" in args.output_path:
+    if args.output_path == args.prompt_model_name_or_path:
+        args.output_path = args.output_path.split("/")[-1]
+    else:
+        # create directory if it does not exist
+        os.makedirs(os.path.dirname(args.output_path), exist_ok=True)
 
 answer_generation_model = get_model(
     model_name_or_path=args.answer_generation_model_name_or_path,
