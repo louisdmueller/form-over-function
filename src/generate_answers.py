@@ -23,8 +23,8 @@ if os.path.exists(args.output_path):
     exit(1)
 
 if "/" in args.output_path:
-    if args.output_path == args.prompt_model_name_or_path:
-        args.output_path = args.output_path.split("/")[-1]
+    if args.output_path == args.answer_generation_model_name_or_path:
+        args.output_path = args.answer_generation_model_name_or_path.split("/")[-1]
     else:
         # create directory if it does not exist
         os.makedirs(os.path.dirname(args.output_path), exist_ok=True)
