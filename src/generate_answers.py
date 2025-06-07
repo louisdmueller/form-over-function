@@ -59,28 +59,25 @@ for entry in tqdm(data, desc=desc):
     generated_data["model_name"] = args.answer_generation_model_name_or_path
 
     prompt = entry["prompt"]
+    num_generations=2
     responses = answer_generation_model.generate(
         system_prompts=[""],
         input_texts=[prompt],
         max_output_tokens=len(prompt) + 50,
-        num_generations=2,
+        num_generations=num_generations,
     )
 
     if isinstance(responses, list) and len(responses) == 1:
-        # generate returns a list in a list
-        # so we need to extract the first element
+        # .generate() returns a list of a batches of strings,
+        # so we need to extract the first batch
         responses = responses[0]
 
-    generated_data["answers"] = {
-        "answer1": {
-            "answer": responses[0],
+    generated_data["answers"] = {}
+    for i in range(num_generations):
+        generated_data["answers"][f"answer{i + 1}"] = {
+            "answer": responses[i],
             "answer_id": random_id(8),
-        },
-        "answer2": {
-            "answer": responses[1],
-            "answer_id": random_id(8),
-        },
-    }
+        }
 
     generated_data["metadata"] = {
         "generation_model_name": args.answer_generation_model_name_or_path,

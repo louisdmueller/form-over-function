@@ -119,7 +119,7 @@ class HuggingfaceModel(Model):
         self.tokenizer.padding_side = "left"
         self.model.generation_config.pad_token_id = self.tokenizer.pad_token_id
 
-        # Prüfe, ob ein Chat-Template existiert
+        # Newer models are optimized for chat-based interactions and have a chat template
         self.has_chat_template = hasattr(self.tokenizer, "chat_template") and self.tokenizer.chat_template is not None
 
         self.model.eval()
@@ -167,6 +167,7 @@ class HuggingfaceModel(Model):
                     for msgs in messages_batch
                 ]
             else:
+                # If no chat template is available, just concatenate the system prompt and input text
                 formatted_inputs = [
                     (sys_prompt + "\n" if sys_prompt else "") + input_text
                     for input_text, sys_prompt in zip(batch_input_texts, batch_system_prompts)
@@ -188,10 +189,10 @@ class HuggingfaceModel(Model):
                     max_new_tokens=max_output_tokens,
                     num_beams=num_generations,
                     num_return_sequences=num_generations,
-                    do_sample=False,
-                    top_p=None,
-                    top_k=None,
-                    temperature=None,
+                    do_sample=kwargs.get("do_sample", False),
+                    top_p=kwargs.get("top_p", None),
+                    top_k=kwargs.get("top_k", None),
+                    temperature= kwargs.get("temperature", None),
                     return_dict_in_generate=True,
                     **kwargs,
                 )
