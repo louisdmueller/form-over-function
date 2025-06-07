@@ -94,9 +94,10 @@ def main() -> None:
     # Pass the list of inputs to the judge model
     # The method will handle batching internally
     # and return the results in a single call
-    results = judge_model.prompt_batched(
+    results = judge_model.generate(
         system_prompts, input_texts, num_generations=3, max_output_tokens=512
     )
+    extracted_answers = judge_model.get_response_data(results)
 
     # Iterate over the results and populate the file_content
     for i in range(len(input_texts)):
@@ -106,7 +107,7 @@ def main() -> None:
         question = questions[i]
 
         answer_preferences = []
-        for answer in results["extracted_answers"][i]:
+        for answer in extracted_answers["extracted_answers"][i]:
             if answer in answer_dict[answer_position]:
                 answer_preferences.append(
                     answer_dict[answer_position][answer]["label"]
@@ -120,7 +121,7 @@ def main() -> None:
                 "question": question,
                 "answer1": answer_dict[answer_position]["answer1"],
                 "answer2": answer_dict[answer_position]["answer2"],
-                "result": results["output"][i],
+                "result": extracted_answers["output"][i],
                 "extracted_answers": answer_preferences,
             }
         )
