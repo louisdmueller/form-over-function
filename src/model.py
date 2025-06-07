@@ -155,7 +155,7 @@ class HuggingfaceModel(Model):
             #   So we preprocess the messages via Model.apply_chat_template()
             #   To get them into "role-based chat template" format.
             #   And then we apply the model's own chat template.
-            formatted_messages_batch = [
+            formatted_inputs = [
                 self.tokenizer.apply_chat_template(
                     msgs,
                     return_tensors="pt",
@@ -166,28 +166,17 @@ class HuggingfaceModel(Model):
                 for msgs in messages_batch
             ]
 
-            with torch.no_grad():
-                formatted_inputs = [
-                    self.tokenizer.apply_chat_template(
-                        msgs,
-                        return_tensors="pt",
-                        tokenize=False,
-                        add_generation_prompt=True,
-                        max_length=self.tokenizer.model_max_length,
-                    )
-                    for msgs in formatted_messages_batch
-                ]
-                # Tokenize all inputs in the batch
-                inputs = self.tokenizer(
-                    formatted_inputs,
-                    return_tensors="pt",
-                    padding=True,
-                    truncation=True,
-                    max_length=self.tokenizer.model_max_length,
-                )
-                inputs = inputs.to(self.model.device)
-                input_length = inputs['input_ids'].shape[1]
+            inputs = self.tokenizer(
+                formatted_inputs,
+                return_tensors="pt",
+                padding=True,
+                truncation=True,
+                max_length=self.tokenizer.model_max_length,
+            )
+            inputs = inputs.to(self.model.device)
+            input_length = inputs['input_ids'].shape[1]
 
+            with torch.no_grad():
                 output = self.model.generate(
                     **inputs,
                     max_new_tokens=max_output_tokens,
