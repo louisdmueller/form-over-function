@@ -20,6 +20,9 @@ def main() -> None:
     args = parse_args()
     config = load_config(args.config_path)
 
+    # access to llama models is restricted
+    login(token=config["huggingface_hub_token"])
+
     judge_model = get_model(
         model_name_or_path=args.judge_model_name_or_path,
         config=config,
