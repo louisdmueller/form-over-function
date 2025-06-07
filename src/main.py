@@ -127,8 +127,8 @@ def main() -> None:
                 )
 
                 # only included for debugging purposes
-                answer_preferences = []
                 try:
+                    answer_preferences = []
                     for answer in results["extracted_answers"]:
                         if answer in answer_dict[answer_position]:
                             answer_preferences.append(
