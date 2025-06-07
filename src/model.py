@@ -137,8 +137,6 @@ class HuggingfaceModel(Model):
         # Not all models support batched inference and max_output_tokens, so it is not passed as an argument.
         batch_size = kwargs.get("batch_size", 8)
         max_output_tokens = kwargs.get("max_output_tokens", 512)
-        # remove max_output_tokens from kwargs to avoid passing it to the model
-        kwargs.pop("max_output_tokens", None)
 
         print(f"Processing {len(input_texts)} examples")
         print(f"Batch size: {batch_size}")
@@ -183,16 +181,20 @@ class HuggingfaceModel(Model):
             inputs = inputs.to(self.model.device)
             input_length = inputs['input_ids'].shape[1]
 
+            # remove items from kwargs to avoid passing it to the model
+            explicit_keys = ["do_sample", "top_p", "top_k", "temperature", "max_output_tokens"]
+            explicit_kwargs = {k: kwargs.pop(k, None) for k in explicit_keys}
+
             with torch.no_grad():
                 output = self.model.generate(
                     **inputs,
                     max_new_tokens=max_output_tokens,
                     num_beams=num_generations,
                     num_return_sequences=num_generations,
-                    do_sample=kwargs.get("do_sample", False),
-                    top_p=kwargs.get("top_p", None),
-                    top_k=kwargs.get("top_k", None),
-                    temperature= kwargs.get("temperature", None),
+                    do_sample=explicit_kwargs["do_sample"] if explicit_kwargs["do_sample"] is not None else False,
+                    top_p=explicit_kwargs["top_p"],
+                    top_k=explicit_kwargs["top_k"],
+                    temperature=explicit_kwargs["temperature"],
                     return_dict_in_generate=True,
                     **kwargs,
                 )
