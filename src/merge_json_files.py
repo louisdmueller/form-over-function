@@ -27,14 +27,18 @@ def merge_json_files(input_dir: str, output_file: str) -> None:
 
     # sort the merged data by keys, but keep "metadata" at the top
     # do this by popping "metadata" out, sorting the rest, and then adding it back
-    metadata = merged_data.pop("metadata")
+    metadata_exists = False
+    if "metadata" in merged_data:
+        metadata = merged_data.pop("metadata")
+        metadata_exists = True
     merged_data = dict(
         sorted(
             merged_data.items(), 
             key=lambda item: int(item[0]) if item[0].isdigit() else item[0]
         )
     )
-    merged_data = {"metadata": metadata, **merged_data}
+    if metadata_exists:
+        merged_data = {"metadata": metadata, **merged_data}
 
     # Write the merged data to the output file
     with open(output_file, "w") as f:
