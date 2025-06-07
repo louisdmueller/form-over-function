@@ -15,12 +15,6 @@ from aae_translation import add_aae_to_df
 args = parse_args()
 config = load_config(args.config_path)
 
-if os.path.exists(args.output_path):
-    print(
-        f"Output file {args.output_path} already exists. Exiting to avoid overwriting."
-    )
-    exit(1)
-
 if (
     "/" in args.answer_generation_model_name_or_path
     and args.answer_generation_model_name_or_path in args.output_path
@@ -33,6 +27,12 @@ if (
     args.output_path = args.output_path.replace(
         args.answer_generation_model_name_or_path, model_name
     )
+
+if os.path.exists(args.output_path):
+    print(
+        f"Output file {args.output_path} already exists. Exiting to avoid overwriting."
+    )
+    exit(1)
 
 if not os.path.exists(os.path.dirname(args.output_path)):
     os.makedirs(os.path.dirname(args.output_path), exist_ok=True)
@@ -65,6 +65,8 @@ for entry in tqdm(data, desc=desc):
         input_texts=[prompt],
         max_output_tokens=len(prompt) + 50,
         num_generations=num_generations,
+        do_sample=True,
+        temperature=0.7,
     )
 
     if isinstance(responses, list) and len(responses) == 1:
@@ -96,16 +98,9 @@ for entry in tqdm(data, desc=desc):
 
         generated_data["question"] = df["question_aae"].iloc[0]
 
-        generated_data["answers"] = {
-            "answer1": {
-                "answer": df["answers"].iloc[0]["answer1_aae"],
-                "answer_id": generated_data["answers"]["answer1"]["answer_id"],
-            },
-            "answer2": {
-                "answer": df["answers"].iloc[0]["answer2_aae"],
-                "answer_id": generated_data["answers"]["answer2"]["answer_id"],
-            },
-        }
+        for i in range(num_generations):
+            generated_data["answers"][f"answer{i + 1}"]["answer"] = df["answers"].iloc[0][f"answer{i + 1}"]
+            generated_data["answers"][f"answer{i + 1}"]["answer_id"] = generated_data["answers"][f"answer{i + 1}"]["answer_id"]
 
         generated_data["metadata"] = {
             "translation_model_name": args.prompt_model_name_or_path,
@@ -115,5 +110,3 @@ for entry in tqdm(data, desc=desc):
         # Save in a different file to make project structure cleaner
         with open(args.output_path.replace(".json", "_aae.json"), "a") as f_aae:
             f_aae.write(json.dumps(generated_data) + "\n")
-
-        exit()
