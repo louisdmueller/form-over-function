@@ -285,7 +285,6 @@ class RandomAnswer(Model):
         **kwargs,
     ) -> List[List[str]]:
         from random import choice
-        # return [choice(["Answer1", "Answer2", "Tie"]) for _ in range(num_generations)]
 
         responses = []
         for input_text, system_prompt in zip(input_texts, system_prompts):
@@ -313,7 +312,7 @@ def get_model(model_name_or_path: str, config: dict, **kwargs) -> Model:
     
     elif "gemini" in model_name_or_path:
         if not (api_key := config.get("gemini_key")):
-            raise ValueError("API key is required for OpenAI models.")
+            raise ValueError("API key is required for Gemini models.")
         return GeminiModel(model_name_or_path, api_key)
     elif model_name_or_path == "RandomAnswer":
         return RandomAnswer()
