@@ -112,12 +112,15 @@ class HuggingfaceModel(Model):
             model_name_or_path,
             torch_dtype=torch.float16,
             device_map="auto",
-            max_memory={0: "92GB", 1: "92GB"} # H100 has 94GB, leave some reserve
+            max_memory={0: "92GB", 1: "92GB"}
         )
         self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
         self.tokenizer.pad_token = self.tokenizer.eos_token
         self.tokenizer.padding_side = "left"
         self.model.generation_config.pad_token_id = self.tokenizer.pad_token_id
+
+        # Prüfe, ob ein Chat-Template existiert
+        self.has_chat_template = hasattr(self.tokenizer, "chat_template") and self.tokenizer.chat_template is not None
 
         self.model.eval()
 
@@ -148,25 +151,26 @@ class HuggingfaceModel(Model):
             batch_system_prompts = system_prompts[i:i+batch_size]
             batch_input_texts = input_texts[i:i+batch_size]
 
-            messages_batch = [
-                self.apply_chat_template(input_text, sys_prompt) 
-                for input_text, sys_prompt in zip(batch_input_texts, batch_system_prompts)
-            ]
-            # Convert to model specific format
-            #   Depending on the model, this is done differently.
-            #   So we preprocess the messages via Model.apply_chat_template()
-            #   To get them into "role-based chat template" format.
-            #   And then we apply the model's own chat template.
-            formatted_inputs = [
-                self.tokenizer.apply_chat_template(
-                    msgs,
-                    return_tensors="pt",
-                    tokenize=False,
-                    add_generation_prompt=True,
-                    max_length=self.tokenizer.model_max_length,
-                )
-                for msgs in messages_batch
-            ]
+            if self.has_chat_template:
+                messages_batch = [
+                    self.apply_chat_template(input_text, sys_prompt)
+                    for input_text, sys_prompt in zip(batch_input_texts, batch_system_prompts)
+                ]
+                formatted_inputs = [
+                    self.tokenizer.apply_chat_template(
+                        msgs,
+                        return_tensors="pt",
+                        tokenize=False,
+                        add_generation_prompt=True,
+                        max_length=self.tokenizer.model_max_length,
+                    )
+                    for msgs in messages_batch
+                ]
+            else:
+                formatted_inputs = [
+                    (sys_prompt + "\n" if sys_prompt else "") + input_text
+                    for input_text, sys_prompt in zip(batch_input_texts, batch_system_prompts)
+                ]
 
             inputs = self.tokenizer(
                 formatted_inputs,
@@ -185,9 +189,9 @@ class HuggingfaceModel(Model):
                     num_beams=num_generations,
                     num_return_sequences=num_generations,
                     do_sample=False,
-                    top_p=None, # only set if do_sample=False
-                    top_k=None, # only set if do_sample=False
-                    temperature=None, # only set if do_sample=False
+                    top_p=None,
+                    top_k=None,
+                    temperature=None,
                     return_dict_in_generate=True,
                     **kwargs,
                 )
