@@ -134,6 +134,8 @@ class HuggingfaceModel(Model):
         # Not all models support batched inference and max_output_tokens, so it is not passed as an argument.
         batch_size = kwargs.get("batch_size", 8)
         max_output_tokens = kwargs.get("max_output_tokens", 512)
+        # remove max_output_tokens from kwargs to avoid passing it to the model
+        kwargs.pop("max_output_tokens", None)
 
         print(f"Processing {len(input_texts)} examples")
         print(f"Batch size: {batch_size}")
