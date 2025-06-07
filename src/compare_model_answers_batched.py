@@ -55,7 +55,7 @@ def main() -> None:
     for idx in tqdm(
         range(start_idx, end_idx),
         total=end_idx - start_idx,
-        desc="Creatin batched inputs",
+        desc="Creating batched inputs",
         unit="batch",
     ):
         question = df_1.iloc[idx]["question"]
