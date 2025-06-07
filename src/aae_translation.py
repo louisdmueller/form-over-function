@@ -60,16 +60,22 @@ def convert_to_aae(text: str, model: Model) -> str:
     " 3. Format the output exactly like this: 'The translation is: ...'"
     " 4. Ensure the text sounds natural and realistic in AAVE.")
     
-    response = model.query_model(
-        system_prompt="",
-        message = user_input,
-        num_generations=1,
+    
+    # TODO: generate awaits a list of input texts and system prompts.
+    #       But currently we only pass a single input text and an empty system prompt.
+    #       We should modify convert_to_aae to accept a list of texts and prompts.
+    #       And return a list of translations.
+    response = model.generate(
+        system_prompts=[""],
+        input_texts = [user_input],
         max_output_tokens=len(text) + 50,
     )
 
-    # For some models the response is a list of strings, for others it is a single string.
     if isinstance(response, list) and len(response) == 1:
-        response = response[0]
+        # generate returns a list in a list
+        # so we need to extract the first element
+        # because we only get one single response from the model
+        response = response[0][0]
 
     pattern = r"The translation is:\s*(.*)"
     match = re.search(pattern, str(response), re.DOTALL)

@@ -53,19 +53,26 @@ for entry in tqdm(data, desc=desc):
     generated_data["model_name"] = args.answer_generation_model_name_or_path
 
     prompt = entry["prompt"]
-    text = answer_generation_model.query_model(
-        system_prompt="",
-        message=prompt,
+    responses = answer_generation_model.generate(
+        system_prompts=[""],
+        input_texts = [prompt],
+        max_output_tokens=len(prompt) + 50,
         num_generations=2,
     )
 
+    if isinstance(responses, list) and len(responses) == 1:
+        # generate returns a list in a list
+        # so we need to extract the first element
+        responses = responses[0]
+
+
     generated_data["answers"] = {
         "answer1": {
-            "answer": text[0],
+            "answer": responses[0],
             "answer_id": random_id(8),
         },
         "answer2": {
-            "answer": text[1],
+            "answer": responses[1],
             "answer_id": random_id(8),
         },
     }
@@ -105,3 +112,5 @@ for entry in tqdm(data, desc=desc):
         # Save in a different file to make project structure cleaner
         with open(args.output_path.replace(".json", "_aae.json"), "a") as f_aae:
             f_aae.write(json.dumps(generated_data) + "\n")
+
+        exit()
