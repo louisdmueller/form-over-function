@@ -99,7 +99,7 @@ for entry in tqdm(data, desc=desc):
         generated_data["question"] = df["question_aae"].iloc[0]
 
         for i in range(num_generations):
-            generated_data["answers"][f"answer{i + 1}"]["answer"] = df["answers"].iloc[0][f"answer{i + 1}"]
+            generated_data["answers"][f"answer{i + 1}"]["answer"] = df["answers"].iloc[0][f"answer{i + 1}_aae"]
             generated_data["answers"][f"answer{i + 1}"]["answer_id"] = generated_data["answers"][f"answer{i + 1}"]["answer_id"]
 
         generated_data["metadata"] = {
