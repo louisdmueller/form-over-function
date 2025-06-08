@@ -60,13 +60,15 @@ for entry in tqdm(data, desc=desc):
 
     prompt = entry["prompt"]
     num_generations=2
+    do_sample = False
+    temperature = entry.get("temperature", None) if do_sample else None
     responses = answer_generation_model.generate(
         system_prompts=[""],
         input_texts=[prompt],
         max_output_tokens=len(prompt) + 50,
         num_generations=num_generations,
-        do_sample=True,
-        temperature=0.7,
+        do_sample=do_sample,
+        temperature=temperature,
     )
 
     if isinstance(responses, list) and len(responses) == 1:
@@ -83,6 +85,8 @@ for entry in tqdm(data, desc=desc):
 
     generated_data["metadata"] = {
         "generation_model_name": args.answer_generation_model_name_or_path,
+        "temperature": temperature,
+        "do_sample": do_sample,
     }
 
     # append to output file in order to not lose data in case of an error

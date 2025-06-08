@@ -160,7 +160,7 @@ class HuggingfaceModel(Model):
                         return_tensors="pt",
                         tokenize=False,
                         add_generation_prompt=True,
-                        max_length=self.tokenizer.model_max_length,
+                        max_length=self.tokenizer.model_max_length, # 4096 # if OverflowError e.g. for gpt-neox
                     )
                     for msgs in messages_batch
                 ]
@@ -176,7 +176,7 @@ class HuggingfaceModel(Model):
                 return_tensors="pt",
                 padding=True,
                 truncation=True,
-                max_length=self.tokenizer.model_max_length,
+                max_length=self.tokenizer.model_max_length, # 4096 # if OverflowError e.g. for gpt-neox
             )
             inputs = inputs.to(self.model.device)
             input_length = inputs['input_ids'].shape[1]
