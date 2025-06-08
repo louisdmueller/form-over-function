@@ -33,10 +33,5 @@ else
     source venv/bin/activate
 fi
 
-<<<<<<< HEAD:start-eval-with-unperturbed-questions.sh
-# python src/main.py --end_index 29
-python src/main-copy.py --start_index 100
-=======
 # python src/compare_model_answers.py
 bash generate_data.sh
->>>>>>> 41c5afebcc3767e6a340bf5d37a3d0eeaa6cd07e:start-generate-data.sh
