@@ -1,4 +1,6 @@
 import argparse
+import random
+import string
 
 import pandas as pd
 import yaml
@@ -33,8 +35,15 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--prompt_model_name_or_path",
         type=str,
-        default="gemini-1.5-flash",
+        default="gpt-4.1",
         help="Path to the prompt model.",
+    )
+
+    parser.add_argument(
+        "--answer_generation_model_name_or_path",
+        type=str,
+        default="gemini-1.5-flash",
+        help="Path to the answer generation model.",
     )
 
     parser.add_argument(
@@ -45,26 +54,54 @@ def parse_args() -> argparse.Namespace:
     )
 
     parser.add_argument(
+        "--data_1_path",
+        type=str,
+        default="data/chen-et-al/raw_data-new_format.json",
+        help="Path to the raw data.",
+    )
+
+    parser.add_argument(
+        "--data_2_path",
+        type=str,
+        default="data/chen-et-al/raw_data-new_format.json",
+        help="Path to the raw data.",
+    )
+
+    parser.add_argument(
         "--config_path",
         type=str,
         default="config.yml",
         help="Path to the config file.",
     )
 
+    parser.add_argument(
+        "--output_path",
+        type=str,
+        default=None,
+        help="Path to the output file."
+    )
+
+    parser.add_argument(
+        "--comment",
+        type=str,
+        default="",
+        help="Comment to add to the output file metadata.",
+    )
+
     # provide start and end index to process a subset of the data
     # useful for debugging and testing
     parser.add_argument(
         "--start_index",
-        type=int,
-        default=0,
-        help="Index to start processing the data from.",
+        type=float,
+        default=0.0,
+        help="Index to start processing the data from. Can be an integer or a float (e.g., 0.1 for 10% of the data).",
     )
     
     parser.add_argument(
         "--end_index",
-        type=int,
+        type=float,
         default=None,
-        help="Index to stop processing the data at. If None, process all data.",
+        help="Index to stop processing the data at. Can be an integer or a float (e.g., 0.5 for 50% of the data). If None, process all data.",
     )
 
     parser.add_argument(
@@ -72,6 +109,12 @@ def parse_args() -> argparse.Namespace:
         type=str,
         default="directly_answer_question_without_cot",
         help="Name of the prompt to use from the prompts.json file.",
+    )
+
+    parser.add_argument(
+        "--aae",
+        action="store_true",
+        help="If set, the answers will be translated from SAE to AAE.",
     )
 
     args = parser.parse_args()
@@ -82,6 +125,31 @@ def load_config(path: str) -> dict:
     with open(path, "r") as f:
         config = yaml.safe_load(f)
     return config
+
+def random_id(length=8):
+    chars = string.ascii_letters + string.digits
+    return ''.join(random.choices(chars, k=length))
+
+def get_start_end_indices(start_index, end_index, data_length) -> tuple:
+    # If end_index is not provided, it it set to None, since
+    # the data length is not initialized yet.
+    # We need to manually set it to the length of the dataframe
+    if end_index is None or end_index > data_length:
+        end_index = data_length
+    if start_index < 0 or end_index < 0 or start_index >= data_length or end_index > data_length:
+        raise ValueError("Invalid start or end index.")
+    
+    if start_index.is_integer():
+        start_index = int(start_index)
+    else:
+        start_index = int(start_index * data_length)
+    if end_index.is_integer():
+        end_index = int(end_index)
+    else:
+        end_index = int(end_index * data_length)
+
+    return start_index, end_index
+    
 
 
 def create_comparison_csv(

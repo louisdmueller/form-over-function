@@ -33,5 +33,5 @@ else
     source venv/bin/activate
 fi
 
-# python src/main.py --end_index 29
-python src/main.py --start_index 0
+# python src/compare_model_answers.py
+bash generate_data.sh
