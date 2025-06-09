@@ -1,9 +1,9 @@
 #!/bin/bash
-#SBATCH --partition=dev_gpu_h100
-#SBATCH --job-name=LLM-Judge-Bias
+#SBATCH --partition=gpu_h100
+#SBATCH --job-name=FULL-LLM-Judge-Bias
 #SBATCH --output=%j.out
 #SBATCH --error=%j.err
-#SBATCH --time=00:30:00
+#SBATCH --time=01:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
@@ -33,5 +33,16 @@ else
     source venv/bin/activate
 fi
 
-# python src/compare_model_answers.py
-bash generate_judgements.sh
+judge_model_name="meta-llama/Llama-3.3-70B-Instruct"
+# judge_model_name="RandomAnswer"
+# judge_model_name="meta-llama/Llama-3.1-8B-Instruct"
+
+### Compare answers from the worse model to the answers from the better model
+python src/compare_model_answers_batched.py \
+    --judge_model_name_or_path "$judge_model_name" \
+    --data_1_path "data/gpt-4.1-answers_aae.json" \
+    --data_2_path "data/gpt-neox-20b-answers-temperature-0.5.json" \
+    --start_index 0.0 \
+    # --end_index 0.5
+    # --question_switching # TODO
+    # --prompt_switchging # TODO
