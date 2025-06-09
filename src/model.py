@@ -36,7 +36,7 @@ class Model(ABC):
     def get_response_data(
         self,
         responses: List[List[str]],
-    ) -> Dict[str, List[str]]:
+    ) -> Dict[str, List[List[str]]]:
         """
         Extracts the response data from the generated responses.
         The method should return a dictionary with the following structure:
@@ -220,11 +220,7 @@ class HuggingfaceModel(Model):
                     max_new_tokens=max_output_tokens,
                     num_beams=num_generations,
                     num_return_sequences=num_generations,
-                    do_sample=(
-                        explicit_kwargs["do_sample"]
-                        if explicit_kwargs["do_sample"] is not None
-                        else False
-                    ),
+                    do_sample=explicit_kwargs.get("do_sample", False),
                     top_p=explicit_kwargs["top_p"],
                     top_k=explicit_kwargs["top_k"],
                     temperature=explicit_kwargs["temperature"],
@@ -238,8 +234,13 @@ class HuggingfaceModel(Model):
             decoded_sequences = self.tokenizer.batch_decode(
                 generated_sequences, skip_special_tokens=True
             )
-            responses = [seq.strip() for seq in decoded_sequences]
-            all_outputs.append(responses)
+            responses_flattened = [seq.strip() for seq in decoded_sequences]
+
+            grouped_responses = [
+                responses_flattened[i : i + num_generations]
+                for i in range(0, len(responses_flattened), num_generations)
+            ]
+            all_outputs.extend(grouped_responses)
 
         return all_outputs
 
