@@ -3,9 +3,9 @@ set -e # Exit on error
 set -u # Treat unset variables as an error
 
 : ' 
-Usage: ./generate_data.sh <answer_generation_model> [aae_conversion_model]
+Usage: ./generate_data.sh [answer_generation_model] [aae_conversion_model]
 Arguments:
-    answer_generation_model (required) Name / path of model used to generate answers
+    answer_generation_model (optional) Name / path of model used to generate answers
                                 Example models:
                                 - gemini-1.5-flash
                                 - meta-llama/Llama-3.1-8B-Instruct
@@ -14,9 +14,21 @@ Arguments:
                                 - EleutherAI/gpt-neox-20b
 
     aae_conversion_model    (optional) Converts SAE answers to AAE
+
+Notes: The optional command line arguments will overwrite the values specified in the script.
 '
+answer_generation_model = "gemini-1.5-flash"
+conversion_model = ""
+
+if [[ $# -lt 1 ]]; then
+    answer_generation_model = $1
+fi
 
 if [[ $# -ge 2 ]]; then
+    conversion_model = $2
+fi
+
+if [[ "$conversion_model" != "" ]]; then
     echo "Converting SAE answers to AAE, since conversion model was given."
     python src/generate_answers.py \
         --answer_generation_model_name_or_path "$1" \
