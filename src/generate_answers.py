@@ -7,26 +7,14 @@ This script generates two files with answers to the prompts in the data file.
 import json
 import os
 from tqdm import tqdm
-
 from model import get_model
-from utils import load_config, parse_args, random_id
+from utils import load_config, parse_args, random_id, remove_slash_in_model_name
 from aae_translation import add_aae_to_df
 
 args = parse_args()
 config = load_config(args.config_path)
 
-if (
-    "/" in args.answer_generation_model_name_or_path
-    and args.answer_generation_model_name_or_path in args.output_path
-):
-    # If the model name contains a slash, it is a Hugging Face model
-    # but slash is also used in the path
-    # Since the name is often used in the output file name,
-    # we replace the slash with an underscore to avoid issues
-    model_name = args.answer_generation_model_name_or_path.split("/")[-1]
-    args.output_path = args.output_path.replace(
-        args.answer_generation_model_name_or_path, model_name
-    )
+remove_slash_in_model_name(args)
 
 if os.path.exists(args.output_path):
     print(

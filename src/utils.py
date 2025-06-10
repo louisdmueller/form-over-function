@@ -222,3 +222,22 @@ def _add_type_token_ratio_column(
         axis=1,
     )
     return df
+
+def remove_slash_in_model_name(args: argparse.Namespace) -> None:
+    """
+    Remove the organization from the (huggingface) model name.
+    This is necessary because the slash used in the model name is also 
+    used in the path and this can cause issues when saving the output file.
+
+    Example:    
+        "meta-llama/Llama-3.3-70B-Instruct" will be replaced with 
+        "Llama-3.3-70B-Instruct".
+    """
+    if (
+        "/" in args.answer_generation_model_name_or_path
+        and args.answer_generation_model_name_or_path in args.output_path
+    ):
+        model_name = args.answer_generation_model_name_or_path.split("/")[-1]
+        args.output_path = args.output_path.replace(
+            args.answer_generation_model_name_or_path, model_name
+        )
