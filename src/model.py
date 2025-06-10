@@ -93,13 +93,13 @@ class Model(ABC):
         """
         # Try to match at the start of the text
         match_start = re.match(
-            r"^\s*(Answer1|Answer2|Tie)\s*$",
+            r"^\s*(Answer1|Answer2|Tie)\s*",
             text.strip().split("\n")[0],
             flags=re.IGNORECASE,
         )
         # Try to match at the end of the text
         match_end = re.match(
-            r"^\s*(Answer1|Answer2|Tie)\s*$",
+            r"\s*(Answer1|Answer2|Tie)\s*$",
             text.strip().split("\n")[-1],
             flags=re.IGNORECASE,
         )
