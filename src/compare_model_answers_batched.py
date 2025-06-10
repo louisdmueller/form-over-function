@@ -127,6 +127,10 @@ def main() -> None:
             }
         )
 
+    if "/" in name_model_1:
+        name_model_1 = name_model_1.replace("/", "_")
+    if "/" in name_model_2:
+        name_model_2 = name_model_2.replace("/", "_")
     with open(f"{data_directory}/results-{current_time}-{name_model_1}-{name_model_2}.json", "w") as f:
         f.write(json.dumps(file_content, indent=4))
 
