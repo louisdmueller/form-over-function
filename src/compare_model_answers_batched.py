@@ -38,7 +38,8 @@ def main() -> None:
     file_content = {}
     file_content["metadata"] = {
         "judge_model": args.judge_model_name_or_path,
-        "data_source": args.data_path,
+        "data_1_path": args.data_1_path,
+        "data_2_path": args.data_2_path,
         "prompt_name": args.prompt_name,
         "comment": args.comment,
     }
@@ -48,6 +49,7 @@ def main() -> None:
     input_texts = []
     answer_dicts = []
     questions = []
+    question_styles = []
     idx_list = []
     answer_positions_list = []
 
@@ -58,7 +60,8 @@ def main() -> None:
         desc="Creating batched inputs",
         unit="batch",
     ):
-        question = df_1.iloc[idx]["question"]
+        question_1 = df_1.iloc[idx]["question"]
+        question_2 = df_2.iloc[idx]["question"]
         answer_model_1 = df_1.iloc[idx]["answers"]["answer1"]["answer"]
         answer_model_2 = df_2.iloc[idx]["answers"]["answer1"]["answer"]
         name_model_1 = df_1.iloc[idx]["model_name"]
@@ -66,29 +69,44 @@ def main() -> None:
 
         file_content[idx] = []
 
-        for answer_position in ["model1-first", "model2-first"]:
-            answer_dict = {
-                "model1-first": {
-                    "answer1": {"text": answer_model_1, "label": name_model_1},
-                    "answer2": {"text": answer_model_2, "label": name_model_2},
-                    "tie": {"text": None, "label": "TIE"},
-                },
-                "model2-first": {
-                    "answer1": {"text": answer_model_2, "label": name_model_2},
-                    "answer2": {"text": answer_model_1, "label": name_model_1},
-                    "tie": {"text": None, "label": "TIE"},
-                },
-            }
-            input_text = prompt["template"].format(
-                question=question,
-                answer1=answer_dict[answer_position]["answer1"],
-                answer2=answer_dict[answer_position]["answer2"],
-            )
-            input_texts.append(input_text)
-            answer_dicts.append(answer_dict)
-            questions.append(question)
-            idx_list.append(idx)
-            answer_positions_list.append(answer_position)
+        if question_1 == question_2:
+            questions_to_use = [(question_1, name_model_1)] 
+        else:
+            questions_to_use = [(question_1, name_model_1), (question_2, name_model_2)]
+
+        for question, model_name in questions_to_use:
+            for answer_position in ["model1-first", "model2-first"]:
+                answer_dict = {
+                    "model1-first": {
+                        "answer1": {"text": answer_model_1, "label": name_model_1},
+                        "answer2": {"text": answer_model_2, "label": name_model_2},
+                        "tie": {"text": None, "label": "TIE"},
+                    },
+                    "model2-first": {
+                        "answer1": {"text": answer_model_2, "label": name_model_2},
+                        "answer2": {"text": answer_model_1, "label": name_model_1},
+                        "tie": {"text": None, "label": "TIE"},
+                    },
+                }
+                # TODO: all questions should start with "Hi there,..."
+                #       this should be done in generate_data
+                #       quick fix for now
+                beginnings = ["hey", "yo", "ay"]
+                for beginning in beginnings:
+                    if not question.lower().startswith(beginning):
+                        question = "Hi there, I'm a bit stuck on a question and was wondering if you could help me out. Here's the question: " + question
+
+                input_text = prompt["template"].format(
+                    question=question,
+                    answer1=answer_dict[answer_position]["answer1"],
+                    answer2=answer_dict[answer_position]["answer2"],
+                )
+                input_texts.append(input_text)
+                answer_dicts.append(answer_dict)
+                questions.append(question)
+                question_styles.append(model_name)
+                idx_list.append(idx)
+                answer_positions_list.append(answer_position)
 
     system_prompts = [system_prompt] * len(input_texts)
 
@@ -106,6 +124,7 @@ def main() -> None:
         answer_position = answer_positions_list[i]
         answer_dict = answer_dicts[i]
         question = questions[i]
+        question_style = question_styles[i]
 
         answer_preferences = []
         for answer in extracted_answers["extracted_answers"][i]:
@@ -118,6 +137,7 @@ def main() -> None:
 
         file_content[idx].append(
             {
+                "prompt_style": question_style,  # model1 or model2
                 "answer_order": answer_position,
                 "question": question,
                 "answer1": answer_dict[answer_position]["answer1"],
