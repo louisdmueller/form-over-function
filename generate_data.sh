@@ -15,17 +15,18 @@ Arguments:
 
     aae_conversion_model    (optional) Converts SAE answers to AAE
 
-Notes: The optional command line arguments will overwrite the values specified in the script.
+Notes: 
+    The optional command line arguments will overwrite the values specified in the script.
 '
-answer_generation_model = "gemini-1.5-flash"
-conversion_model = ""
+answer_generation_model="gemini-1.5-flash"
+conversion_model=""
 
-if [[ $# -lt 1 ]]; then
-    answer_generation_model = $1
+if [[ $# -ge 1 ]]; then
+    answer_generation_model=$1
 fi
 
 if [[ $# -ge 2 ]]; then
-    conversion_model = $2
+    conversion_model=$2
 fi
 
 if [[ "$conversion_model" != "" ]]; then
@@ -38,8 +39,8 @@ if [[ "$conversion_model" != "" ]]; then
 else
    echo "Running generation without converting of answers to AAE."
     python src/generate_answers.py \
-        --answer_generation_model_name_or_path "$1" \
-        --output_path "data/$1-answers.json"
+        --answer_generation_model_name_or_path $answer_generation_model \
+        --output_path "data/$answer_generation_model-answers.json"
 fi
 
 # TODO: implement input_path so already generated answers can be translated to aae
