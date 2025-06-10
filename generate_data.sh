@@ -30,7 +30,9 @@ if [[ $# -ge 2 ]]; then
 fi
 
 if [[ "$conversion_model" != "" ]]; then
-    echo "Converting SAE answers to AAE, since conversion model was given."
+    echo "Converting SAE answers to AAE, since conversion model was given.
+    Chosen answer generation model: $answer_generation_model
+    Chosen AAE conversion model: $conversion_model"
     python src/generate_answers.py \
         --answer_generation_model_name_or_path "$1" \
         --prompt_model_name_or_path "$2" \
@@ -38,6 +40,7 @@ if [[ "$conversion_model" != "" ]]; then
         --aae
 else
    echo "Running generation without converting of answers to AAE."
+    echo "Chosen answer generation model: $answer_generation_model"
     python src/generate_answers.py \
         --answer_generation_model_name_or_path $answer_generation_model \
         --output_path "data/$answer_generation_model-answers.json"
