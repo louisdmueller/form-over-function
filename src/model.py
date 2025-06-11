@@ -106,13 +106,13 @@ class Model(ABC):
         return None
     
 class HuggingfaceModel(Model):
-    def __init__(self, model_name_or_path: str):
+    def __init__(self, model_name_or_path: str, **kwargs):
         super().__init__(model_name_or_path)
         self.model = AutoModelForCausalLM.from_pretrained(
             model_name_or_path,
             torch_dtype=torch.float16,
             device_map="auto",
-            max_memory={0: "92GB", 1: "92GB"}
+            max_memory=kwargs.get("max_memory", {0: "92GB", 1: "92GB"})
         )
         self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
         self.tokenizer.pad_token = self.tokenizer.eos_token
