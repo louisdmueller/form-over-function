@@ -1,5 +1,5 @@
 #!/bin/bash
-#set -e # Exit on error
+set -e # Exit on error
 set -u # Treat unset variables as an error
 
 : ' 
@@ -47,4 +47,3 @@ else
 fi
 
 # TODO: implement input_path so already generated answers can be translated to aae
-read -p "Press any key to continue" x
