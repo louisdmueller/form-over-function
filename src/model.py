@@ -120,13 +120,13 @@ class Model(ABC):
 
 
 class HuggingfaceModel(Model):
-    def __init__(self, model_name_or_path: str):
+    def __init__(self, model_name_or_path: str, **kwargs):
         super().__init__(model_name_or_path)
         self.model = AutoModelForCausalLM.from_pretrained(
             model_name_or_path,
             torch_dtype=torch.float16,
             device_map="auto",
-            max_memory={0: "92GB", 1: "92GB"},
+            max_memory=kwargs.get("max_memory", {0: "92GB", 1: "92GB"})
         )
         self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
         self.tokenizer.pad_token = self.tokenizer.eos_token
@@ -339,21 +339,17 @@ class RandomAnswer(Model):
             responses.append(response_batch)
         return responses
 
-
-def get_model(model_name_or_path: str, config: dict, **kwargs) -> Model:
-    if repo_exists(
-        model_name_or_path, repo_type="model", token=config.get("huggingface_hub_token")
-    ):
+def get_model(model_name_or_path: str, config: dict) -> Model:
+    if repo_exists(model_name_or_path, repo_type="model", token=config.get("huggingface_hub_token")):
         # Some models are restricted and require a token to access
         from huggingface_hub import login
-
         if not (token := config.get("huggingface_hub_token")):
             raise ValueError(
                 "Hugging Face Hub token is required for Hugging Face models."
             )
         login(token)
 
-        return HuggingfaceModel(model_name_or_path, **kwargs)
+        return HuggingfaceModel(model_name_or_path, **config)
 
     elif "gpt" in model_name_or_path:
         if not (api_key := config.get("openai_key")):
