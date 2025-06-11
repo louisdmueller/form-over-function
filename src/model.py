@@ -339,7 +339,6 @@ class RandomAnswer(Model):
             responses.append(response_batch)
         return responses
 
-<<<<<<< src/model.py
 def get_model(model_name_or_path: str, config: dict) -> Model:
     if repo_exists(model_name_or_path, repo_type="model", token=config.get("huggingface_hub_token")):
         # Some models are restricted and require a token to access
