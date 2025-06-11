@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e # Exit on error
+#set -e # Exit on error
 set -u # Treat unset variables as an error
 
 : ' 
@@ -19,24 +19,24 @@ Notes:
     The optional command line arguments will overwrite the values specified in the script.
 '
 answer_generation_model="gemini-1.5-flash"
-conversion_model=""
+aae_conversion_model=""
 
 if [[ $# -ge 1 ]]; then
     answer_generation_model=$1
 fi
 
 if [[ $# -ge 2 ]]; then
-    conversion_model=$2
+    aae_conversion_model=$2
 fi
 
-if [[ "$conversion_model" != "" ]]; then
+if [[ -n "$aae_conversion_model" ]]; then
     echo "Converting SAE answers to AAE, since conversion model was given.
     Chosen answer generation model: $answer_generation_model
-    Chosen AAE conversion model: $conversion_model"
+    Chosen AAE conversion model: $aae_conversion_model"
     python src/generate_answers.py \
-        --answer_generation_model_name_or_path "$1" \
-        --prompt_model_name_or_path "$2" \
-        --output_path "data/$1-answers.json" \
+        --answer_generation_model_name_or_path "$answer_generation_model" \
+        --prompt_model_name_or_path "aae_conversion_model" \
+        --output_path "data/$answer_generation_model-answers.json" \
         --aae
 else
    echo "Running generation without converting of answers to AAE."
@@ -47,3 +47,4 @@ else
 fi
 
 # TODO: implement input_path so already generated answers can be translated to aae
+read -p "Press any key to continue" x
