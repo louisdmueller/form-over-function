@@ -302,7 +302,7 @@ class RandomAnswer(Model):
             responses.append(response_batch)
         return responses
 
-def get_model(model_name_or_path: str, config: dict, **kwargs) -> Model:
+def get_model(model_name_or_path: str, config: dict) -> Model:
     if repo_exists(model_name_or_path, repo_type="model"):
         # Some models are restricted and require a token to access
         from huggingface_hub import login
@@ -310,7 +310,7 @@ def get_model(model_name_or_path: str, config: dict, **kwargs) -> Model:
             raise ValueError("Hugging Face Hub token is required for Hugging Face models.")
         login(token)
         
-        return HuggingfaceModel(model_name_or_path, **kwargs)
+        return HuggingfaceModel(model_name_or_path, **config)
     
     elif "gpt" in model_name_or_path:
         if not (api_key := config.get("openai_key")):
