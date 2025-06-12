@@ -35,16 +35,6 @@ fi
 
 # Output directory is the name of the job
 output_dir="data/${SLURM_JOB_NAME}"
-# if [ -d "$output_dir" ]; then
-#     echo "Output directory $output_dir already exists. Incrementing the name in order not to overwrite it."
-#     i=1
-#     while [ -d "${output_dir}_${i}" ]; do
-#         i=$((i + 1))
-#     done
-#     output_dir="${output_dir}_${i}"
-# else
-#     echo "Creating output directory $output_dir"
-# fi
 mkdir -p "$output_dir"
 
 
@@ -67,13 +57,12 @@ python src/compare_model_answers_batched.py \
     # --prompt_switching # TODO
 
 
-# # This checks whether all answers have been generated
-# # If true it will return 0, otherwise it will return 1
-# # If script returns 0, we will continue with merging the results
-# if python src/check_if_all_data_processed.py --data_1_path "data/gpt-4.1-answers_aae.json" --input_dir "$output_dir/"; then
-#     echo "All answers have been generated. Proceeding to merge results."
-#     python src/merge_json_files.py \
-#         --merge_path "$output_dir"
-# else
-#     echo "Not all answers have been generated. Exiting."
-# fi
+# This checks whether all answers have been generated
+# If script returns 0, we will continue with merging the results
+if python src/check_if_all_data_processed.py --data_1_path "data/gpt-4.1-answers_aae.json" --input_dir "$output_dir/"; then
+    echo "All answers have been generated. Proceeding to merge results."
+    python src/merge_json_files.py \
+        --merge_path "$output_dir"
+else
+    echo "Not all answers have been generated. Exiting."
+fi
