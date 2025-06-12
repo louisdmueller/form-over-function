@@ -61,14 +61,10 @@ python src/compare_model_answers_batched.py \
     --data_2_path "data/gpt-neox-20b-answers-temperature-0.5.json" \
     --output_path "$output_dir" \
     --start_index "auto" \
-    --step_size 2
+    --step_size 71 # optional, default is 32
     # --question_switching # uncomment to switch questions between e.g. AAE and SAE style (depends if questions in files differ)
     # --introductionary_beginning # uncomment to add an introductionary beginning to the prompt e.g. "Hi there, I am kind of stuck on this question..."
     # --prompt_switching # TODO
-
-
-# --judge_model_name_or_path "RandomAnswer" --data_1_path "data/gpt-4.1-answers_aae.json" --data_2_path "data/gpt-neox-20b-answers-temperature-0.5.json" --output_path "data/GPT4.1_AAE-vs-GPT-Neox-0.5" --start_index "auto" --step_size 2
-
 
 
 # # This checks whether all answers have been generated
