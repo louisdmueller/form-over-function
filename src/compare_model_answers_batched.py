@@ -6,11 +6,30 @@ from datetime import datetime
 from model import get_model
 
 from utils import (
-    get_df_from_file,
+    get_start_end_by_newest_file,
+    read_file,
     load_config,
     parse_args,
     get_start_end_indices
 )
+
+def load_data_lists(data_1_path: str, data_2_path: str) -> tuple:
+    if data_1_path == data_2_path:
+        raise ValueError(
+            "The paths for data_1 and data_2 are the same. "
+            "Please provide different paths."
+        )
+    data_1 = read_file(data_1_path)
+    data_2 = read_file(data_2_path)
+
+    if len(data_1) != len(data_2):
+        raise ValueError(
+            "The data lists have different lengths: "
+            f"{len(data_1)} and {len(data_2)}. "
+            "Please provide lists with the same length."
+        )
+    return data_1, data_2
+
 
 def main() -> None:
     args = parse_args()
@@ -21,10 +40,7 @@ def main() -> None:
         config=config,
     )
 
-    # TODO: is it necessary to load the data as dataframes? 
-    #       we are later using iloc to access the data
-    #       maybe we can just use the json lines file directly?
-    df_1, df_2 = load_dataframes(args.data_1_path, args.data_2_path)
+    data_1, data_2 = load_data_lists(args.data_1_path, args.data_2_path)
 
     data_directory = os.path.dirname(args.data_path)
     with open(os.path.join(data_directory, "prompts.json"), "r") as f:
@@ -44,7 +60,29 @@ def main() -> None:
         "comment": args.comment,
     }
 
-    start_idx, end_idx = get_start_end_indices(args.start_index, args.end_index, len(df_1))
+    name_model_1 = data_1[0]["model_name"]
+    name_model_2 = data_2[0]["model_name"]
+    if "/" in name_model_1:
+        name_model_1 = name_model_1.replace("/", "_")
+    if "/" in name_model_2:
+        name_model_2 = name_model_2.replace("/", "_")
+
+    if args.output_path is not None:
+        if os.path.isdir(args.output_path):
+            args.output_path = os.path.join(
+                args.output_path, f"results-{current_time}-{name_model_1}-{name_model_2}.json"
+            )
+    # if args.output_path is not set, we save it in the same directory as the data file
+    else:
+        args.output_path = os.path.join(
+            data_directory, f"results-{current_time}-{name_model_1}-{name_model_2}.json"
+        )
+
+    if args.start_index == "auto":
+        start_idx, end_idx = get_start_end_by_newest_file(args.output_path, args.step_size, len(data_1))
+        print(start_idx, end_idx)
+    else:
+        start_idx, end_idx = get_start_end_indices(args.start_index, args.step_size, len(data_1))
 
     input_texts = []
     answer_dicts = []
@@ -53,26 +91,34 @@ def main() -> None:
     idx_list = []
     answer_positions_list = []
 
-    # Create a list of all input texts and answer dictionaries
     for idx in tqdm(
         range(start_idx, end_idx),
         total=end_idx - start_idx,
         desc="Creating batched inputs",
         unit="batch",
     ):
-        question_1 = df_1.iloc[idx]["question"]
-        question_2 = df_2.iloc[idx]["question"]
-        answer_model_1 = df_1.iloc[idx]["answers"]["answer1"]["answer"]
-        answer_model_2 = df_2.iloc[idx]["answers"]["answer1"]["answer"]
-        name_model_1 = df_1.iloc[idx]["model_name"]
-        name_model_2 = df_2.iloc[idx]["model_name"]
+        question_1 = data_1[idx]["question"]
+        question_2 = data_2[idx]["question"]
+        answer_model_1 = data_1[idx]["answers"]["answer1"]["answer"]
+        answer_model_2 = data_2[idx]["answers"]["answer1"]["answer"]
+        name_model_1 = data_1[idx]["model_name"]
+        name_model_2 = data_2[idx]["model_name"]
 
         file_content[idx] = []
 
-        if question_1 == question_2:
-            questions_to_use = [(question_1, name_model_1)] 
-        else:
+        if question_1 != question_2 and args.question_style_switching:
             questions_to_use = [(question_1, name_model_1), (question_2, name_model_2)]
+        else:
+            questions_to_use = [(question_1, name_model_1)] 
+
+        if args.introductionary_beginning:
+            for question, model_name in questions_to_use:
+                if data_1[idx]["answers"]["answer1"]["style"] == "aave":
+                    question_1 = "Hey, I'm stuck on this question and was wonderin' if you could help me out. So, the question go: " + str(question_1)
+                    question_2 = "Hi there, I'm a bit stuck on a question and was wondering if you could help me out. Here's the question: " + str(question_2)
+                elif data_2[idx]["answers"]["answer1"]["style"] == "aave":
+                    question_1 = "Hi there, I'm a bit stuck on a question and was wondering if you could help me out. Here's the question: " + str(question_1)
+                    question_2 = "Hey, I'm stuck on this question and was wonderin' if you could help me out. So, the question go: " + str(question_2)
 
         for question, model_name in questions_to_use:
             for answer_position in ["model1-first", "model2-first"]:
@@ -88,14 +134,6 @@ def main() -> None:
                         "tie": {"text": None, "label": "TIE"},
                     },
                 }
-                # TODO: all questions should start with "Hi there,..."
-                #       this should be done in generate_data
-                #       quick fix for now
-                beginnings = ["hey", "yo", "ay"]
-                for beginning in beginnings:
-                    if not question.lower().startswith(beginning):
-                        question = "Hi there, I'm a bit stuck on a question and was wondering if you could help me out. Here's the question: " + question
-
                 input_text = prompt["template"].format(
                     question=question,
                     answer1=answer_dict[answer_position]["answer1"],
@@ -110,15 +148,11 @@ def main() -> None:
 
     system_prompts = [system_prompt] * len(input_texts)
 
-    # Pass the list of inputs to the judge model
-    # The method will handle batching internally
-    # and return the results in a single call
     results = judge_model.generate(
         system_prompts, input_texts, num_generations=3, max_output_tokens=512
     )
     extracted_answers = judge_model.get_response_data(results)
 
-    # Iterate over the results and populate the file_content
     for i in range(len(input_texts)):
         idx = idx_list[i]
         answer_position = answer_positions_list[i]
@@ -137,7 +171,7 @@ def main() -> None:
 
         file_content[idx].append(
             {
-                "prompt_style": question_style,  # model1 or model2
+                "prompt_style": question_style,
                 "answer_order": answer_position,
                 "question": question,
                 "answer1": answer_dict[answer_position]["answer1"],
@@ -147,42 +181,8 @@ def main() -> None:
             }
         )
 
-    if "/" in name_model_1:
-        name_model_1 = name_model_1.replace("/", "_")
-    if "/" in name_model_2:
-        name_model_2 = name_model_2.replace("/", "_")
-    with open(f"{data_directory}/results-{current_time}-{name_model_1}-{name_model_2}.json", "w") as f:
+    with open(args.output_path, "w") as f:
         f.write(json.dumps(file_content, indent=4))
-
-def load_dataframes(data_1_path: str, data_2_path: str) -> tuple:
-    print("Is it necessary to load the data as dataframes?")
-    if data_1_path == data_2_path:
-        raise ValueError(
-            "The paths for data_1 and data_2 are the same. "
-            "Please provide different paths."
-        )
-    data_df_1 = get_df_from_file(data_1_path)
-    data_df_2 = get_df_from_file(data_2_path)
-
-    # with open(data_1_path, "r") as f:
-    #     data_df_1 = [json.loads(line) for line in f.readlines()]
-    # with open(data_2_path, "r") as f:
-    #     data_df_2 = [json.loads(line) for line in f.readlines()]
-    
-    if len(data_df_1) != len(data_df_2):
-        raise ValueError(
-            "The dataframes have different lengths: "
-            f"{len(data_df_1)} and {len(data_df_2)}. "
-            "Please provide dataframes with the same length."
-        )
-    # if not data_df_1.columns.equals(data_df_2.columns):
-    #     raise ValueError(
-    #         "The dataframes have different columns: "
-    #         f"{data_df_1.columns} and {data_df_2.columns}. "
-    #         "Please provide dataframes with the same columns."
-    #     )
-    return data_df_1, data_df_2
-
 
 if __name__ == "__main__":
     main()
