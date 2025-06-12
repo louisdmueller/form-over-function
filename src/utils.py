@@ -1,6 +1,9 @@
 import argparse
+import json
+import os
 import random
 import string
+from typing import Any, Dict, List, Tuple
 
 import pandas as pd
 import yaml
@@ -15,6 +18,13 @@ def get_df_from_file(file_path: str) -> pd.DataFrame:
     """
     df = pd.read_json(file_path, lines=True)
     return df
+
+def read_file(file_path: str) -> List[Dict[str, Any]]:
+    """
+    Read a Jsonl file and return a list of dicts.
+    """
+    with open(file_path, "r") as f:
+        return [json.loads(line) for line in f]
 
 
 def parse_args() -> argparse.Namespace:
@@ -92,16 +102,16 @@ def parse_args() -> argparse.Namespace:
     # useful for debugging and testing
     parser.add_argument(
         "--start_index",
-        type=float,
+        # type=float,
         default=0.0,
         help="Index to start processing the data from. Can be an integer or a float (e.g., 0.1 for 10% of the data).",
     )
     
     parser.add_argument(
-        "--end_index",
+        "--step_size",
         type=float,
         default=None,
-        help="Index to stop processing the data at. Can be an integer or a float (e.g., 0.5 for 50% of the data). If None, process all data.",
+        help="Step size to process the data in chunks. If not provided, the entire data will be processed. Can either be an integer or a float (e.g., 0.1 for 10% of the data).",
     )
 
     parser.add_argument(
@@ -117,6 +127,31 @@ def parse_args() -> argparse.Namespace:
         help="If set, the answers will be translated from SAE to AAE.",
     )
 
+    parser.add_argument(
+        "--question_style_switching",
+        action="store_true",
+        help="If set, the question style will be switched between the two models.",
+    )
+
+    parser.add_argument(
+        "--introductionary_beginning",
+        action="store_true",
+        help="If set, an introductionary beginning will be added to the prompts.",
+    )
+
+    parser.add_argument(
+        "--merge_path",
+        type=str,
+        default=None,
+        help="Path to the directory of the individual JSON files to merge.",
+    )
+
+    parser.add_argument(
+        "--input_dir",
+        type=str,
+        help="Path to the directory containing the judge files.",
+    )
+
     args = parser.parse_args()
     return args
 
@@ -130,26 +165,82 @@ def random_id(length=8):
     chars = string.ascii_letters + string.digits
     return ''.join(random.choices(chars, k=length))
 
-def get_start_end_indices(start_index, end_index, data_length) -> tuple:
-    # If end_index is not provided, it it set to None, since
-    # the data length is not initialized yet.
-    # We need to manually set it to the length of the dataframe
-    if end_index is None or end_index > data_length:
-        end_index = data_length
-    if start_index < 0 or end_index < 0 or start_index >= data_length or end_index > data_length:
-        raise ValueError("Invalid start or end index.")
+def get_start_end_indices(start_index, step_size, data_length) -> Tuple[int, int]:
+    """
+    Calculate the start and end indices based on the provided start index and step size.
+    If the start index is a float, it is treated as a percentage of the data length.
+    The end index is calculated as start_index + step_size.
+    """
+    if start_index < 0 or step_size <= 0:
+        raise ValueError("Start index must be non-negative and step size must be positive.")
     
-    if start_index.is_integer():
-        start_index = int(start_index)
-    else:
+    if isinstance(start_index, float):
         start_index = int(start_index * data_length)
-    if end_index.is_integer():
-        end_index = int(end_index)
     else:
-        end_index = int(end_index * data_length)
+        start_index = int(start_index)
+
+    if step_size.is_integer():
+        step_size = int(step_size)
+    elif isinstance(step_size, float):
+        if step_size < 0 or step_size > 1:
+            raise ValueError("Step size as a float must be between 0 and 1.")
+        step_size = int(step_size * data_length)
+
+    end_index = start_index + step_size
+    if end_index > data_length:
+        end_index = data_length
 
     return start_index, end_index
+
+def get_start_end_by_newest_file(
+    data_file_path: str,
+    step_size: float,
+    length: int,
+) -> Tuple[int, int]:
+    """
+    Get the start and end indices based on the newest file in the data directory.
+    The newest file is determined by the last modified time.
+    """
+    data_directory = os.path.dirname(data_file_path)
+    files = [f for f in os.listdir(data_directory) if f.endswith('.json') and f.startswith('results-')]
+    if not files:
+        print("No JSON files found in the directory.")
+        if step_size is not None:
+            start_index, end_index = get_start_end_indices(0, step_size, length)
+            return start_index, end_index
+        else:
+            print("No step size provided, returning default indices (0, 64).")
+            return 0, 64
+
+    newest_file = max(
+        files,
+        key=lambda f: os.path.getmtime(os.path.join(data_directory, f))
+    )
     
+    with open(os.path.join(data_directory, newest_file), 'r') as f:
+        data = json.load(f)
+    
+    indices = [int(indice) for indice in data.keys() if indice != "metadata"]
+    if not indices:
+        raise ValueError(
+            "No indices found in the newest file. "
+            f"Only {data.keys()} were found, but expected indices."
+        )
+    new_start_index = max(indices) + 1
+    if step_size is not None:
+        new_start_index, new_end_index = get_start_end_indices(
+            new_start_index, step_size, length
+        )
+    else:
+        new_end_index = new_start_index + len(indices)
+
+    if new_start_index == new_end_index:
+        raise ValueError(
+            "The new start index is equal to the new end index. "
+            "The data was probably already processed completely."
+        )
+    
+    return new_start_index, new_end_index
 
 
 def create_comparison_csv(

@@ -1,14 +1,14 @@
 #!/bin/bash
-#SBATCH --partition=gpu_h100
-#SBATCH --job-name=FULL-LLM-Judge-Bias
-#SBATCH --output=%j.out
-#SBATCH --error=%j.err
-#SBATCH --time=01:00:00
+#SBATCH --partition=dev_cpu
+#SBATCH --job-name=GPT4.1_AAE-vs-GPT-Neox-0.5
+#SBATCH --output=%j-%x.out
+#SBATCH --error=%j-%x.err
+#SBATCH --time=00:05:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=32G
-#SBATCH --gres=gpu:2
+## SBATCH --gres=gpu:1
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user="cluster-notifications.7fo8i@simplelogin.com"
 set -e
@@ -33,16 +33,51 @@ else
     source venv/bin/activate
 fi
 
+# Output directory is the name of the job
+output_dir="data/${SLURM_JOB_NAME}"
+# if [ -d "$output_dir" ]; then
+#     echo "Output directory $output_dir already exists. Incrementing the name in order not to overwrite it."
+#     i=1
+#     while [ -d "${output_dir}_${i}" ]; do
+#         i=$((i + 1))
+#     done
+#     output_dir="${output_dir}_${i}"
+# else
+#     echo "Creating output directory $output_dir"
+# fi
+mkdir -p "$output_dir"
+
+
 judge_model_name="meta-llama/Llama-3.3-70B-Instruct"
 # judge_model_name="RandomAnswer"
-# judge_model_name="meta-llama/Llama-3.1-8B-Instruct"
+judge_model_name="meta-llama/Llama-3.1-8B-Instruct"
+# judge_model_name="Qwen/Qwen2.5-72B-Instruct"
+judge_model_name="RandomAnswer"
 
 ### Compare answers from the worse model to the answers from the better model
 python src/compare_model_answers_batched.py \
     --judge_model_name_or_path "$judge_model_name" \
     --data_1_path "data/gpt-4.1-answers_aae.json" \
     --data_2_path "data/gpt-neox-20b-answers-temperature-0.5.json" \
-    --start_index 0.0 \
-    # --end_index 0.5
-    # --question_switching # TODO
-    # --prompt_switchging # TODO
+    --output_path "$output_dir" \
+    --start_index "auto" \
+    --step_size 2
+    # --question_switching # uncomment to switch questions between e.g. AAE and SAE style (depends if questions in files differ)
+    # --introductionary_beginning # uncomment to add an introductionary beginning to the prompt e.g. "Hi there, I am kind of stuck on this question..."
+    # --prompt_switching # TODO
+
+
+# --judge_model_name_or_path "RandomAnswer" --data_1_path "data/gpt-4.1-answers_aae.json" --data_2_path "data/gpt-neox-20b-answers-temperature-0.5.json" --output_path "data/GPT4.1_AAE-vs-GPT-Neox-0.5" --start_index "auto" --step_size 2
+
+
+
+# # This checks whether all answers have been generated
+# # If true it will return 0, otherwise it will return 1
+# # If script returns 0, we will continue with merging the results
+# if python src/check_if_all_data_processed.py --data_1_path "data/gpt-4.1-answers_aae.json" --input_dir "$output_dir/"; then
+#     echo "All answers have been generated. Proceeding to merge results."
+#     python src/merge_json_files.py \
+#         --merge_path "$output_dir"
+# else
+#     echo "Not all answers have been generated. Exiting."
+# fi

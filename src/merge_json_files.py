@@ -1,5 +1,6 @@
 import os
 import json
+from utils import parse_args
 
 def merge_json_files(input_dir: str, output_file: str) -> None:
     """
@@ -45,14 +46,31 @@ def merge_json_files(input_dir: str, output_file: str) -> None:
         json.dump(merged_data, f, indent=4)
 
 if __name__ == "__main__":
-    subdirs = [directory for directory in os.listdir("data/chen-et-al/") if os.path.isdir(os.path.join("data/chen-et-al", directory))]
-    for directory in subdirs:
-        input_directory = os.path.join("data/chen-et-al", directory)
-        output_file_path = os.path.join(input_directory, "merged_data.json")
+    args = parse_args()
+    if args.merge_path is None:
+        print("Setting default merge path to 'data/chen-et-al/'")
+        print("You can change this by using the --merge_path argument.")
+        args.merge_path = "data/chen-et-al/"
 
-        if os.path.exists(output_file_path):
-            print(f"Output file {output_file_path} already exists. Skipping merge.")
-            continue
+    # subdirs = [directory for directory in os.listdir(args.merge_path) if os.path.isdir(os.path.join(args.merge_path, directory))]
+    # for directory in subdirs:
+        # input_directory = os.path.join(args.merge_path, directory)
+        # output_file_path = os.path.join(input_directory, "merged_data.json")
 
-        merge_json_files(input_directory, output_file_path)
-        print(f"Merged JSON files from {input_directory} into {output_file_path}")
+        # if os.path.exists(output_file_path):
+        #     print(f"Output file {output_file_path} already exists. Skipping merge.")
+        #     continue
+
+        # print(input_directory)
+        # print(output_file_path)
+
+        # merge_json_files(input_directory, output_file_path)
+        # print(f"Merged JSON files from {input_directory} into {output_file_path}")
+
+    input_directory = args.merge_path
+    output_file_path = os.path.join(input_directory, "merged_data.json")
+    if os.path.exists(output_file_path):
+        print(f"Output file {output_file_path} already exists. Skipping merge.")
+        exit(0)
+    merge_json_files(input_directory, output_file_path)
+    print(f"Merged JSON files from {input_directory} into {output_file_path}")

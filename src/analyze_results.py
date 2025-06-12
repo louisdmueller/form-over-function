@@ -179,7 +179,7 @@ def main():
     parser = argparse.ArgumentParser(
         description="Analyze ASR (Attack Success Rate) between two JSON result files for any model pair"
     )
-    parser.add_argument("file1", type=str, help="Path to the first JSON results file")
+    parser.add_argument("--file1", type=str, help="Path to the first JSON results file")
     parser.add_argument(
         "--file2",
         type=str,
