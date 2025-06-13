@@ -136,8 +136,8 @@ def main() -> None:
                 }
                 input_text = prompt["template"].format(
                     question=question,
-                    answer1=answer_dict[answer_position]["answer1"],
-                    answer2=answer_dict[answer_position]["answer2"],
+                    answer1=answer_dict[answer_position]["answer1"]["text"],
+                    answer2=answer_dict[answer_position]["answer2"]["text"],
                 )
                 input_texts.append(input_text)
                 answer_dicts.append(answer_dict)
