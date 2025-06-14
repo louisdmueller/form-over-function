@@ -80,9 +80,10 @@ def main() -> None:
 
     if args.start_index == "auto":
         start_idx, end_idx = get_start_end_by_newest_file(args.output_path, args.step_size, len(data_1))
-        print(start_idx, end_idx)
+        print(f"Auto-detected start index: {start_idx}, end index: {end_idx}")
     else:
         start_idx, end_idx = get_start_end_indices(args.start_index, args.step_size, len(data_1))
+        print(f"Using start index: {start_idx}, end index: {end_idx}")
 
     input_texts = []
     answer_dicts = []

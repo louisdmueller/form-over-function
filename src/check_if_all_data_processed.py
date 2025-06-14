@@ -3,8 +3,6 @@ import os
 from utils import parse_args
 
 args = parse_args()
-print(args.input_dir)
-print(os.path.dirname(args.input_dir))
 data_directory = os.path.dirname(args.input_dir)
 files = [f for f in os.listdir(data_directory) if f.endswith('.json')]
 newest_file = max(
