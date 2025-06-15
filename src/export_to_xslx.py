@@ -7,6 +7,7 @@ id  question	question_style	answer1	answer_style1	answer2	answer_style2	model_an
 import json
 from pathlib import Path
 import xlsxwriter
+import argparse
 
 def export_merged_json_to_xlsx(
     json_path,
@@ -88,7 +89,9 @@ def export_merged_json_to_xlsx(
     workbook.close()
 
 if __name__ == "__main__":
-    # Example usage
-    json_path = Path(__file__).parent.parent / "data/GPT4.1-vs-Mistral-7B-Instruct/merged_data.json"
-    xlsx_path = Path(__file__).parent.parent / "data/GPT4.1-vs-Mistral-7B-Instruct/GPT4.1-vs-Mistral-7B-Instruct.xlsx"
-    export_merged_json_to_xlsx(json_path, xlsx_path)
+    parser = argparse.ArgumentParser(description="Convert merged_data.json to XLSX.")
+    parser.add_argument("json_path", type=Path, help="Path to the merged_data.json file")
+    parser.add_argument("xlsx_path", type=Path, help="Path to the output XLSX file")
+    args = parser.parse_args()
+
+    export_merged_json_to_xlsx(args.json_path, args.xlsx_path)
