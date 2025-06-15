@@ -1,16 +1,16 @@
 """
-This file takes merged_data.json and converts it into a single CSV file.
-The CSV file will have the following columns:
+This file takes merged_data.json and converts it into a single XLSX file.
+The XLSX file will have the following columns:
 id  question	question_style	answer1	answer_style1	answer2	answer_style2	model_answer1	extracted_answer1	model_answer2	extracted_answer2	model_answer3	extracted_answer3
 """
 
 import json
-import csv
 from pathlib import Path
+import xlsxwriter
 
-def export_merged_json_to_csv(
+def export_merged_json_to_xlsx(
     json_path,
-    csv_path,
+    xlsx_path,
     columns=[
         "id", "question", "question_style",
         "answer1", "answer_style1",
@@ -29,7 +29,6 @@ def export_merged_json_to_csv(
 
     rows = []
     for id_, entries in data.items():
-        # Each id_ has a list of 2 entries (model1-first, model2-first)
         for entry in entries:
             row = {
                 "id": id_,
@@ -46,31 +45,50 @@ def export_merged_json_to_csv(
                 "model_answer3": "",
                 "extracted_answer3": "",
             }
-            # Try to extract model answers and extracted answers from result/extracted_answers
-            # The result field is a list of strings (usually 1 element)
             if "result" in entry and entry["result"]:
-                row["model_answer1"] = entry["result"][0]
-            # if "result" in entry and entry["result"]:
-                row["model_answer2"] = entry["result"][1]
-            # if "result" in entry and entry["result"]:
-                row["model_answer3"] = entry["result"][2]
-            
+                if len(entry["result"]) > 0:
+                    row["model_answer1"] = entry["result"][0]
+                if len(entry["result"]) > 1:
+                    row["model_answer2"] = entry["result"][1]
+                if len(entry["result"]) > 2:
+                    row["model_answer3"] = entry["result"][2]
             if "extracted_answers" in entry and entry["extracted_answers"]:
-                # If extracted_answers is a list, fill as many as possible
                 for i, ans in enumerate(entry["extracted_answers"]):
                     if i < 3:
                         row[f"extracted_answer{i+1}"] = ans
             rows.append(row)
 
-    # Write CSV
-    with open(csv_path, "w", encoding="utf-8", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=columns, delimiter="\t")
-        writer.writeheader()
-        for row in rows:
-            writer.writerow(row)
+    # Write XLSX using xlsxwriter
+    workbook = xlsxwriter.Workbook(str(xlsx_path))
+    worksheet = workbook.add_worksheet()
+
+    worksheet.set_row(0, 30)  # Set header row height
+
+    # Set column width for model_answer1, model_answer2, model_answer3
+    for col_idx, col_name in enumerate(columns):
+        if col_name in ["question", "question_style", "answer_style1", "answer_style2"]:
+            worksheet.set_column(col_idx, col_idx, 20)
+        if col_name in ["answer1", "answer2"]:
+            worksheet.set_column(col_idx, col_idx, 30)
+        if col_name in ["model_answer1", "model_answer2", "model_answer3"]:
+            worksheet.set_column(col_idx, col_idx, 100)
+
+    wrap_format = workbook.add_format({'text_wrap': True}) 
+    worksheet.freeze_panes(1, 7) # Freeze header row and first 7 columns
+
+    # Write header
+    for col_idx, col_name in enumerate(columns):
+        worksheet.write(0, col_idx, col_name, wrap_format)
+
+    # Write data rows
+    for row_idx, row in enumerate(rows, start=1):
+        for col_idx, col_name in enumerate(columns):
+            worksheet.write(row_idx, col_idx, row.get(col_name, ""), wrap_format)
+
+    workbook.close()
 
 if __name__ == "__main__":
     # Example usage
     json_path = Path(__file__).parent.parent / "data/GPT4.1-vs-Mistral-7B-Instruct/merged_data.json"
-    csv_path = Path(__file__).parent.parent / "data/GPT4.1-vs-Mistral-7B-Instruct/merged_data.csv"
-    export_merged_json_to_csv(json_path, csv_path)
+    xlsx_path = Path(__file__).parent.parent / "data/GPT4.1-vs-Mistral-7B-Instruct/GPT4.1-vs-Mistral-7B-Instruct.xlsx"
+    export_merged_json_to_xlsx(json_path, xlsx_path)
