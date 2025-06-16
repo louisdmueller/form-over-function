@@ -169,7 +169,7 @@ def analyze_files(
         print(f"\nVote counts for File {i}:")
         print(get_total_votes_table(data, model_a, model_b))
 
-    flips, asr = calculate_asr(file1_results, file2_results, model_a, model_b)
+    asr, flips = calculate_asr(file1_results, file2_results, model_a, model_b)
     print(f"\nASR Results:")
     print(f"Flips ({model_a} -> {model_b}): {flips}")
     print(f"Attack Success Rate: {asr:.4f} ({asr*100:.2f}%)")
