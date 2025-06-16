@@ -80,9 +80,10 @@ def main() -> None:
 
     if args.start_index == "auto":
         start_idx, end_idx = get_start_end_by_newest_file(args.output_path, args.step_size, len(data_1))
-        print(start_idx, end_idx)
+        print(f"Auto-detected start index: {start_idx}, end index: {end_idx}")
     else:
         start_idx, end_idx = get_start_end_indices(args.start_index, args.step_size, len(data_1))
+        print(f"Using start index: {start_idx}, end index: {end_idx}")
 
     input_texts = []
     answer_dicts = []
@@ -149,7 +150,7 @@ def main() -> None:
     system_prompts = [system_prompt] * len(input_texts)
 
     results = judge_model.generate(
-        system_prompts, input_texts, num_generations=3, max_output_tokens=512
+        system_prompts, input_texts, num_generations=3, max_output_tokens=512, **config
     )
     extracted_answers = judge_model.get_response_data(results)
 
