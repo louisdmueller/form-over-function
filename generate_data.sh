@@ -35,7 +35,7 @@ if [[ -n "$aae_conversion_model" ]]; then
     Chosen AAE conversion model: $aae_conversion_model"
     python src/generate_answers.py \
         --answer_generation_model_name_or_path "$answer_generation_model" \
-        --prompt_model_name_or_path "aae_conversion_model" \
+        --prompt_model_name_or_path "$aae_conversion_model" \
         --output_path "data/$answer_generation_model-answers.json" \
         --aae
 else
