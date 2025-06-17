@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --partition=dev_gpu_h100
-#SBATCH --job-name=GPT4.1_aae-vs-Qwen2.5-3B-Instruct
+#SBATCH --job-name=GPT4.1-vs-Qwen2-0.5B-Instruct
 #SBATCH --output=%j-%x.out
 #SBATCH --error=%j-%x.err
 #SBATCH --time=00:30:00
@@ -34,14 +34,14 @@ else
 fi
 
 # Output directory is the name of the job
-output_dir="data/${SLURM_JOB_NAME}/Llama-3.3-70B-Instruct"
+output_dir="data/${SLURM_JOB_NAME}/Qwen2.5-72B-Instruct"
 # Choose an output directory
-data_1_path="data/Qwen2.5-3B-Instruct-answers.json"
+data_1_path="data/Qwen2-0.5B-Instruct-answers.json"
 mkdir -p "$output_dir"
 
 
-judge_model_name="meta-llama/Llama-3.3-70B-Instruct"
-# judge_model_name="Qwen/Qwen2.5-72B-Instruct"
+# judge_model_name="meta-llama/Llama-3.3-70B-Instruct"
+judge_model_name="Qwen/Qwen2.5-72B-Instruct"
 # judge_model_name="mistralai/Mistral-7B-Instruct-v0.2"
 # judge_model_name="RandomAnswer"
 
