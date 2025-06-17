@@ -7,7 +7,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
-#SBATCH --mem=8G
+#SBATCH --mem=32G
 #SBATCH --gres=gpu:2
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user="cluster-notifications.7fo8i@simplelogin.com"
