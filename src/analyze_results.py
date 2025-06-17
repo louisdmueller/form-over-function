@@ -25,18 +25,20 @@ def extract_model_names(data: dict) -> Tuple[str, str]:
     return "Model A", "Model B"
 
 
-def map_vote_to_value(vote: str, model_a: str, model_b: str) -> Optional[float]:
+def map_vote_to_value(
+    vote: str, better_model: str, worse_model: str
+) -> Optional[float]:
     """Map vote to numeric value
-    1.0 for model_a,
-    0.0 for model_b,
+    1.0 for better_model,
+    0.0 for worse_model,
     0.5 for tie
     """
-    mapping = {model_a: 1.0, model_b: 0.0, "TIE": 0.5}
+    mapping = {better_model: 1.0, worse_model: 0.0, "TIE": 0.5}
     return mapping.get(vote)
 
 
 def extract_question_results(
-    data: dict, model_a: str, model_b: str
+    data: dict, better_model: str, worse_model: str
 ) -> Dict[str, Dict[str, float]]:
     """Extract and process question results for the given model pair."""
     question_results = {}
@@ -59,7 +61,7 @@ def extract_question_results(
                 }
 
             for vote in extracted_answers:
-                vote_value = map_vote_to_value(vote, model_a, model_b)
+                vote_value = map_vote_to_value(vote, better_model, worse_model)
                 if vote_value is not None:
                     question_results[question_id]["all_votes"].append(vote_value)
 
@@ -67,25 +69,25 @@ def extract_question_results(
     for question_id, votes_data in question_results.items():
         all_votes = votes_data["all_votes"]
         if all_votes:
-            model_a_avg = statistics.mean(all_votes)
+            better_model_avg = statistics.mean(all_votes)
             final_results[question_id] = {
                 "question_text": votes_data["question_text"],
-                f"{model_a}_avg": model_a_avg,
-                f"{model_b}_avg": 1.0 - model_a_avg,
+                f"{better_model}_avg": better_model_avg,
+                f"{worse_model}_avg": 1.0 - better_model_avg,
                 "winner": (
-                    model_a
-                    if model_a_avg > 0.5
-                    else model_b if model_a_avg < 0.5 else "tie"
+                    better_model
+                    if better_model_avg > 0.5
+                    else worse_model if better_model_avg < 0.5 else "tie"
                 ),
                 "total_votes": len(all_votes),
             }
     return final_results
 
 
-def get_total_votes_table(data: dict, model_a: str, model_b: str) -> DataFrame:
+def get_total_votes_table(data: dict, better_model: str, worse_model: str) -> DataFrame:
     """Create a DataFrame summarizing total votes for each answer order."""
     aggregated_data = defaultdict(
-        lambda: {model_a: 0, model_b: 0, "TIE": 0, "Unknown": 0, "total": 0}
+        lambda: {better_model: 0, worse_model: 0, "TIE": 0, "Unknown": 0, "total": 0}
     )
     for question_id, entries in data.items():
         if question_id == "metadata":
@@ -102,8 +104,8 @@ def get_total_votes_table(data: dict, model_a: str, model_b: str) -> DataFrame:
             {
                 "answer_order": answer_order,
                 " ": "",
-                model_a: counts[model_a],
-                model_b: counts[model_b],
+                better_model: counts[better_model],
+                worse_model: counts[worse_model],
                 "TIE": counts["TIE"],
                 "": "",
                 "Unknown": counts["Unknown"],
@@ -116,11 +118,11 @@ def get_total_votes_table(data: dict, model_a: str, model_b: str) -> DataFrame:
 
 
 def calculate_asr(
-    file1_results: Dict, file2_results: Dict, model_a: str, model_b: str
+    file1_results: Dict, file2_results: Dict, better_model: str, worse_model: str
 ) -> Tuple[float, int]:
-    """Calculate Attack Success Rate: how often model_a wins flip to model_b wins."""
+    """Calculate Attack Success Rate: how often better_model wins flip to worse_model wins."""
     flips = 0
-    model_a_wins_file1 = 0
+    better_model_wins_file1 = 0
 
     for question_id in file1_results.keys():
         if question_id not in file2_results:
@@ -129,49 +131,49 @@ def calculate_asr(
         file1_winner = file1_results[question_id]["winner"]
         file2_winner = file2_results[question_id]["winner"]
 
-        if file1_winner == model_a:
-            model_a_wins_file1 += 1
-            if file2_winner == model_b:
+        if file1_winner == better_model:
+            better_model_wins_file1 += 1
+            if file2_winner == worse_model:
                 flips += 1
 
-    asr = flips / model_a_wins_file1 if model_a_wins_file1 > 0 else 0.0
+    asr = flips / better_model_wins_file1 if better_model_wins_file1 > 0 else 0.0
     return asr, flips
 
 
 def analyze_files(
     file1_path: str,
     file2_path: str,
-    model_a: Optional[str] = None,
-    model_b: Optional[str] = None,
+    better_model: Optional[str] = None,
+    worse_model: Optional[str] = None,
 ):
     """Analyze two result files and calculate ASR."""
     file1_data = load_json_file(file1_path)
     file2_data = load_json_file(file2_path)
 
-    if model_a is None or model_b is None:
+    if better_model is None or worse_model is None:
         (detected_a, detected_b) = extract_model_names(file1_data)
-        model_a = model_a or detected_a
-        model_b = model_b or detected_b
-        print(f"Models: {model_a} vs {model_b}")
+        better_model = better_model or detected_a
+        worse_model = worse_model or detected_b
+        print(f"Models: {better_model} vs {worse_model}")
 
-    file1_results = extract_question_results(file1_data, model_a, model_b)
-    file2_results = extract_question_results(file2_data, model_a, model_b)
+    file1_results = extract_question_results(file1_data, better_model, worse_model)
+    file2_results = extract_question_results(file2_data, better_model, worse_model)
 
     for i, (results, data) in enumerate(
         [(file1_results, file1_data), (file2_results, file2_data)]
     ):
-        wins_a = sum(1 for r in results.values() if r["winner"] == model_a)
+        wins_a = sum(1 for r in results.values() if r["winner"] == better_model)
         ties = sum(1 for r in results.values() if r["winner"] == "tie")
         wins_b = len(results) - wins_a - ties
 
         print(f"\nFile {i}: {len(results)} questions")
-        print(f"{model_a}: {wins_a}, {model_b}: {wins_b}, Ties: {ties}")
+        print(f"{better_model}: {wins_a}, {worse_model}: {wins_b}, Ties: {ties}")
         print(f"\nVote counts for File {i}:")
-        print(get_total_votes_table(data, model_a, model_b))
+        print(get_total_votes_table(data, better_model, worse_model))
 
-    flips, asr = calculate_asr(file1_results, file2_results, model_a, model_b)
+    asr, flips = calculate_asr(file1_results, file2_results, better_model, worse_model)
     print(f"\nASR Results:")
-    print(f"Flips ({model_a} -> {model_b}): {flips}")
+    print(f"Flips ({better_model} -> {worse_model}): {flips}")
     print(f"Attack Success Rate: {asr:.4f} ({asr*100:.2f}%)")
 
 
@@ -187,19 +189,19 @@ def main():
         required=False,
     )
     parser.add_argument(
-        "--model-a",
+        "--better_model",
         type=str,
         help="Name of the first model (auto-detected if not provided)",
     )
     parser.add_argument(
-        "--model-b",
+        "--worse_model",
         type=str,
         help="Name of the second model (auto-detected if not provided)",
     )
 
     args = parser.parse_args()
 
-    analyze_files(args.file1, args.file2, args.model_a, args.model_b)
+    analyze_files(args.file1, args.file2, args.better_model, args.worse_model)
 
 
 if __name__ == "__main__":
