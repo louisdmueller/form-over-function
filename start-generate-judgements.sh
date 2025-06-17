@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --partition=dev_gpu_h100
-#SBATCH --job-name=Mistral-Large-Instruct-2411
+#SBATCH --job-name="JudgeAnswers"
 #SBATCH --output=%j-%x.out
 #SBATCH --error=%j-%x.err
 #SBATCH --time=00:30:00
@@ -67,7 +67,8 @@ python src/compare_model_answers_batched.py \
 
 # This checks whether all answers have been generated
 # If script returns 0, we will continue with merging the results
-if python src/check_if_all_data_processed.py --data_1_path "data/Llama-3.1-8B-Instruct-answers.json" --input_dir "$output_dir/"; then
+# data_1_path is just used to compare how many answers there should be
+if python src/check_if_all_data_processed.py --data_1_path "$model_1_file" --input_dir "$output_dir/"; then
     echo "All answers have been generated. Proceeding to merge results."
     python src/merge_json_files.py \
         --merge_path "$output_dir"
