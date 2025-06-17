@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --partition=dev_gpu_h100
-#SBATCH --job-name=GPT4.1-vs-Llama3.1-8B
+#SBATCH --job-name=GPT4.1_aae-vs-Llama3.1-8B
 #SBATCH --output=%j-%x.out
 #SBATCH --error=%j-%x.err
 #SBATCH --time=00:30:00
@@ -42,14 +42,14 @@ mkdir -p "$output_dir"
 # judge_model_name="RandomAnswer"
 # judge_model_name="meta-llama/Llama-3.1-8B-Instruct"
 # judge_model_name="Qwen/Qwen2.5-72B-Instruct"
-judge_model_name="mistralai/Mistral-7B-Instruct-v0.2"
 # judge_model_name="RandomAnswer"
+judge_model_name="mistralai/Mistral-7B-Instruct-v0.2"
 
 ### Compare answers from the worse model to the answers from the better model
 python src/compare_model_answers_batched.py \
     --judge_model_name_or_path "$judge_model_name" \
     --data_1_path "data/Llama-3.1-8B-Instruct-answers.json" \
-    --data_2_path "data/gpt-4.1-answers.json" \
+    --data_2_path "data/gpt-4.1-answers_aae.json" \
     --output_path "$output_dir" \
     --start_index "auto" \
     --step_size 71 # optional, default is 32
@@ -66,5 +66,5 @@ if python src/check_if_all_data_processed.py --data_1_path "data/Llama-3.1-8B-In
         --merge_path "$output_dir"
 else
     echo "Not all answers have been generated. Launching new job."
-    sbatch start-generate-judgements.sh
+    sbatch start-generate-judgements_aae.sh
 fi

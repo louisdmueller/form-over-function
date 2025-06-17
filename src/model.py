@@ -126,7 +126,7 @@ class HuggingfaceModel(Model):
             model_name_or_path,
             torch_dtype=torch.float16,
             device_map="auto",
-            max_memory=kwargs.get("max_memory", {0: "92GB", 1: "92GB"})
+            max_memory=kwargs.get("max_memory", {0: "92GB", 1: "92GB"}),
         )
         self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
         self.tokenizer.pad_token = self.tokenizer.eos_token
@@ -181,7 +181,10 @@ class HuggingfaceModel(Model):
                         return_tensors="pt",
                         tokenize=False,
                         add_generation_prompt=True,
-                        max_length=kwargs.get("judge_tokenizer_max_length", self.tokenizer.model_max_length), # 4096 # if OverflowError e.g. for gpt-neox
+                        max_length=kwargs.get(
+                            "judge_tokenizer_max_length",
+                            self.tokenizer.model_max_length,
+                        ),  # 4096 # if OverflowError e.g. for gpt-neox
                     )
                     for msgs in messages_batch
                 ]
@@ -199,11 +202,13 @@ class HuggingfaceModel(Model):
                 return_tensors="pt",
                 padding=True,
                 truncation=True,
-                max_length=kwargs.get("judge_tokenizer_max_length", self.tokenizer.model_max_length),  # 4096 # if OverflowError e.g. for gpt-neox
+                max_length=kwargs.get(
+                    "judge_tokenizer_max_length", self.tokenizer.model_max_length
+                ),  # 4096 # if OverflowError e.g. for gpt-neox
             )
             inputs = inputs.to(self.model.device)
             input_length = inputs["input_ids"].shape[1]
-            
+
             with torch.no_grad():
                 output = self.model.generate(
                     **inputs,
@@ -328,10 +333,14 @@ class RandomAnswer(Model):
             responses.append(response_batch)
         return responses
 
+
 def get_model(model_name_or_path: str, config: dict) -> Model:
-    if repo_exists(model_name_or_path, repo_type="model", token=config.get("huggingface_hub_token")):
+    if repo_exists(
+        model_name_or_path, repo_type="model", token=config.get("huggingface_hub_token")
+    ):
         # Some models are restricted and require a token to access
         from huggingface_hub import login
+
         if not (token := config.get("huggingface_hub_token")):
             raise ValueError(
                 "Hugging Face Hub token is required for Hugging Face models."
