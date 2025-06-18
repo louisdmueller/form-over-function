@@ -126,7 +126,9 @@ class HuggingfaceModel(Model):
             model_name_or_path,
             torch_dtype=torch.float16,
             device_map="auto",
-            max_memory=kwargs.get("max_memory", {0: "92GB", 1: "92GB"}),
+            # max_memory=kwargs.get("max_memory", {0: "92GB", 1: "92GB"}),
+            cache_dir=kwargs.get("cache_dir", None),
+            force_download=kwargs.get("force_download", False),
         )
         self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
         self.tokenizer.pad_token = self.tokenizer.eos_token

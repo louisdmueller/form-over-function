@@ -90,8 +90,8 @@ def export_merged_json_to_xlsx(
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Convert merged_data.json to XLSX.")
-    parser.add_argument("json_path", type=Path, help="Path to the merged_data.json file")
-    parser.add_argument("xlsx_path", type=Path, help="Path to the output XLSX file")
+    parser.add_argument("--json_path", type=Path, help="Path to the merged_data.json file")
+    parser.add_argument("--xlsx_path", type=Path, help="Path to the output XLSX file")
     args = parser.parse_args()
 
     export_merged_json_to_xlsx(args.json_path, args.xlsx_path)
