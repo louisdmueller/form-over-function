@@ -33,7 +33,8 @@ else
     source venv/bin/activate
 fi
 
-data_path="data/"
+data_path="data/generated_answers/"
+judgments_path="data/judgments/"
 
 judge_model_name="meta-llama/Llama-3.3-70B-Instruct"
 # judge_model_name="meta-llama/Llama-3.1-8B-Instruct"
@@ -49,14 +50,14 @@ model_2=$(echo "$model_2_file" | sed -E 's/-answers(_[a-z]+)?\.json$/\1/')
 
 # Output directory is the combination of the models and the judge model
 experiment_name="$(basename "${judge_model_name}")---$model_1-vs-$model_2"
-output_dir="$data_path/$experiment_name"
+output_dir="${judgments_path}${experiment_name}"
 mkdir -p "$output_dir"
 
 ### Compare answers from the worse model to the answers from the better model
 python src/compare_model_answers_batched.py \
     --judge_model_name_or_path "$judge_model_name" \
-    --data_1_path "data/$model_1_file" \
-    --data_2_path "data/$model_2_file" \
+    --data_1_path "${data_path}${model_1_file}" \
+    --data_2_path "${data_path}${model_2_file}" \
     --output_path "$output_dir" \
     --start_index "auto" \
     --step_size 71 # optional, default is 64
