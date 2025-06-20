@@ -36,14 +36,14 @@ if [[ -n "$aae_conversion_model" ]]; then
     python src/generate_answers.py \
         --answer_generation_model_name_or_path "$answer_generation_model" \
         --prompt_model_name_or_path "$aae_conversion_model" \
-        --output_path "data/$answer_generation_model-answers.json" \
+        --output_path "data/generated_answers/$answer_generation_model-answers.json" \
         --aae
 else
    echo "Running generation without converting of answers to AAE."
     echo "Chosen answer generation model: $answer_generation_model"
     python src/generate_answers.py \
         --answer_generation_model_name_or_path $answer_generation_model \
-        --output_path "data/$answer_generation_model-answers.json"
+        --output_path "data/generated_answers/$answer_generation_model-answers.json"
 fi
 
 # TODO: implement input_path so already generated answers can be translated to aae
