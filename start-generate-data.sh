@@ -13,6 +13,24 @@
 #SBATCH --mail-user="cluster-notifications.7fo8i@simplelogin.com"
 
 set -e # Exit on error
+set -u # Treat unset variables as an error
+
+: ' 
+Usage: sbatch start-generate_data.sh [answer_generation_model] [aae_conversion_model]
+Arguments:
+    answer_generation_model (optional) Name / path of model used to generate answers
+                                Example models:
+                                - gemini-1.5-flash
+                                - meta-llama/Llama-3.1-8B-Instruct
+                                - openai-community/gpt2
+                                - EleutherAI/gpt-neo-1.3B
+                                - Qwen/Qwen2-0.5B-Instruct
+
+    aae_conversion_model    (optional) Converts SAE answers to AAE
+
+Notes: 
+    The optional command line arguments will overwrite the values specified in the script.
+'
 
 echo Time is `date +"%H:%M %d-%m-%y"`
 
@@ -52,7 +70,7 @@ if [[ -n "$aae_conversion_model" ]]; then
     python src/generate_answers.py \
         --answer_generation_model_name_or_path "$answer_generation_model" \
         --prompt_model_name_or_path "$aae_conversion_model" \
-        --output_path "data/$answer_generation_model-answers.json" \
+        --output_path "data/generated_answers/$answer_generation_model-answers.json" \
         --aae
         
 else
@@ -60,5 +78,5 @@ else
     echo "Chosen answer generation model: $answer_generation_model"
     python src/generate_answers.py \
         --answer_generation_model_name_or_path $answer_generation_model \
-        --output_path "data/$answer_generation_model-answers.json"
+        --output_path "data/generated_answers/$answer_generation_model-answers.json"
 fi
