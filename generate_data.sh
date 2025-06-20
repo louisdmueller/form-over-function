@@ -11,7 +11,7 @@ Arguments:
                                 - meta-llama/Llama-3.1-8B-Instruct
                                 - openai-community/gpt2
                                 - EleutherAI/gpt-neo-1.3B
-                                - EleutherAI/gpt-neox-20b
+                                - Qwen/Qwen2-0.5B-Instruct
 
     aae_conversion_model    (optional) Converts SAE answers to AAE
 

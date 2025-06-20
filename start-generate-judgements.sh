@@ -36,14 +36,14 @@ fi
 data_path="data/generated_answers/"
 judgments_path="data/judgments/"
 
-judge_model_name="meta-llama/Llama-3.3-70B-Instruct"
+# judge_model_name="meta-llama/Llama-3.3-70B-Instruct"
 # judge_model_name="meta-llama/Llama-3.1-8B-Instruct"
 # judge_model_name="Qwen/Qwen2.5-72B-Instruct"
-# judge_model_name="mistralai/Mistral-7B-Instruct-v0.2"
+judge_model_name="mistralai/Mistral-7B-Instruct-v0.2"
 # judge_model_name="mistralai/Mistral-Large-Instruct-2411"
 
 model_1_file="gpt-4.1-answers_aae.json"
-model_2_file="Mistral-7B-Instruct-v0.2-answers.json"
+model_2_file="Qwen2-1.5B-Instruct-answers.json"
 
 model_1=$(echo "$model_1_file" | sed -E 's/-answers(_[a-z]+)?\.json$/\1/')
 model_2=$(echo "$model_2_file" | sed -E 's/-answers(_[a-z]+)?\.json$/\1/')
@@ -60,7 +60,7 @@ python src/compare_model_answers_batched.py \
     --data_2_path "${data_path}${model_2_file}" \
     --output_path "$output_dir" \
     --start_index "auto" \
-    --step_size 71 # optional, default is 64
+    --step_size 142 # optional, default is 64
     # --question_switching # uncomment to switch questions between e.g. AAE and SAE style (depends if questions in files differ)
     # --introductionary_beginning # uncomment to add an introductionary beginning to the prompt e.g. "Hi there, I am kind of stuck on this question..."
     # --prompt_switching # TODO
@@ -69,7 +69,7 @@ python src/compare_model_answers_batched.py \
 # This checks whether all answers have been generated
 # If script returns 0, we will continue with merging the results
 # data_1_path is just used to compare how many answers there should be
-if python src/check_if_all_data_processed.py --data_1_path "$model_1_file" --input_dir "$output_dir/"; then
+if python src/check_if_all_data_processed.py --data_1_path "${data_path}${model_1_file}" --input_dir "$output_dir/"; then
     echo "All answers have been generated. Proceeding to merge results."
     python src/merge_json_files.py \
         --merge_path "$output_dir"
