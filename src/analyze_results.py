@@ -154,7 +154,7 @@ def analyze_files(
         (detected_a, detected_b) = extract_model_names(file1_data)
         better_model = better_model or detected_a
         worse_model = worse_model or detected_b
-        print(f"Models: {better_model} vs {worse_model}")
+        # print(f"Models: {better_model} vs {worse_model}")
 
     file1_results = extract_question_results(file1_data, better_model, worse_model)
     file2_results = extract_question_results(file2_data, better_model, worse_model)
@@ -166,15 +166,17 @@ def analyze_files(
         ties = sum(1 for r in results.values() if r["winner"] == "tie")
         wins_b = len(results) - wins_a - ties
 
-        print(f"\nFile {i}: {len(results)} questions")
-        print(f"{better_model}: {wins_a}, {worse_model}: {wins_b}, Ties: {ties}")
-        print(f"\nVote counts for File {i}:")
-        print(get_total_votes_table(data, better_model, worse_model))
+        # print(f"\nFile {i}: {len(results)} questions")
+        # print(f"{better_model}: {wins_a}, {worse_model}: {wins_b}, Ties: {ties}")
+        # print(f"\nVote counts for File {i}:")
+        # print(get_total_votes_table(data, better_model, worse_model))
 
     asr, flips = calculate_asr(file1_results, file2_results, better_model, worse_model)
-    print(f"\nASR Results:")
-    print(f"Flips ({better_model} -> {worse_model}): {flips}")
-    print(f"Attack Success Rate: {asr:.4f} ({asr*100:.2f}%)")
+    # print(f"\nASR Results:")
+    # print(f"Flips ({better_model} -> {worse_model}): {flips}")
+    # print(f"Attack Success Rate: {asr:.4f} ({asr*100:.2f}%)")
+
+    return asr, flips
 
 
 def main():
