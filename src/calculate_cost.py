@@ -10,7 +10,7 @@ translation to aae and it should support different models.
 import json
 import anthropic
 
-def calculate_input_length(inputs: dict, prompt_style) -> tuple:
+def calculate_input_length(inputs: dict, prompt_style, model) -> tuple:
     with open("data/chen-et-al/prompts.json", "r") as f:
         prompts = json.load(f)
     if prompt_style not in prompts:
@@ -55,8 +55,8 @@ def calculate_input_length(inputs: dict, prompt_style) -> tuple:
 
     # Count tokens in batch
     anthropic_client = anthropic.Anthropic()
-    input_tokens = anthropic_client.messages.count_tokens(messages=input_messages_list, model="claude-3-5-haiku-20241022").input_tokens
-    output_tokens = anthropic_client.messages.count_tokens(messages=output_messages_list, model="claude-3-5-haiku-20241022").input_tokens
+    input_tokens = anthropic_client.messages.count_tokens(messages=input_messages_list, model=model).input_tokens
+    output_tokens = anthropic_client.messages.count_tokens(messages=output_messages_list, model=model).input_tokens
 
     return input_tokens, output_tokens
 
@@ -71,16 +71,18 @@ def calculate_cost(
     with open("model-prices.json") as f:
         model_to_price = json.load(f)
         
-    inp_tokens, out_tokens = calculate_input_length(inputs, prompt_style)
-
-    # multiply tokens by number of generations
-    ## this also needs to be done for input tokens, since we do not set the model to generate three times
-    ## but prompt the model three times with the same prompt
-    inp_tokens *= num_generations
-    out_tokens *= num_generations
-
-    total_cost = 0
     for model in models:
+        if model not in model_to_price:
+            raise ValueError(f"Model '{model}' not found in model-prices.json.")
+        inp_tokens, out_tokens = calculate_input_length(inputs, prompt_style, model)
+
+        # multiply tokens by number of generations
+        ## this also needs to be done for input tokens, since we do not set the model to generate three times
+        ## but prompt the model three times with the same prompt
+        inp_tokens *= num_generations
+        out_tokens *= num_generations
+
+        total_cost = 0
         price_basis = 1_000_000  # price is calculated per 1 mio tokens
         if batch:
             input_token_price = model_to_price[model]["input"] / 2
@@ -101,11 +103,11 @@ def calculate_cost(
 
 
 if __name__ == "__main__":
-    with open("data/judgements/claude-3-5-haiku-20241022---gpt-4.1_aae-vs-Llama-3.1-8B-Instruct/results-2025-06-26_00-46-02-gpt-4.1-meta-llama_Llama-3.1-8B-Instruct.json", "r") as f:
+    with open("data/judgements/GPT4.1-vs-Llama3.1-8B/Mistral-7B-Instruct-v0.2/merged_data.json", "r") as f:
         inputs = json.load(f)
     calculate_cost(
         inputs=inputs,
         prompt_style="directly_answer_question_without_cot",
-        models=["claude-3-5-haiku-latest"],
+        models=["claude-3-5-haiku-latest", "claude-sonnet-4-20250514"],
         batch=False,
     )
