@@ -92,9 +92,19 @@ for pair in pairs:
     #     "ASR": asr,
     #     "Flips": flips,
     # }
-    results[judge_model_name][base_model_name] = (asr, v1)
+    results[judge_model_name][base_model_name] = f"ASR: {asr:.4f} | V1: {v1}"
     # results[judge_model_name][aae_model_name] = asr
 
 # Create a DataFrame from the results
 df = pd.DataFrame.from_dict(results, orient="index")
+
+# sort alphabetically and hope it works
+df = df[sorted(df.columns)]
+
 print(df)
+
+df.to_excel(
+    "overview.xlsx",
+    sheet_name="ASR Overview",
+    index_label="Judge Model",
+)
