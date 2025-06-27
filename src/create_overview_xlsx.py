@@ -1,7 +1,7 @@
 """
 This script takes all "merged_data.json" files in the "data/judgements" directory,
 computes ASR for each file, and creates an overview Excel file with the results.
-The rows are the individual judgment models, the columns are the models and the 
+The rows are the individual judgment models, the columns are the models and the
 items are the ASR values and the V1 Values.
 Model columns are sorted by the strength of the model.
 
@@ -18,22 +18,28 @@ from analyze_results import analyze_files
 BASE_DIR = "data/judgements"
 
 # first we need to find the two merged_data.json from the same model comparison subfolder
-# we do this by finding pairs of folders where the folder names are the same except that one has 
+# we do this by finding pairs of folders where the folder names are the same except that one has
 # _aae in it
 pairs = []
 subfolders = [f.path for f in os.scandir(BASE_DIR) if f.is_dir()]
 for folder in subfolders:
     if "_aae" in folder:
-        aae_folder_name  = folder
+        aae_folder_name = folder
         base_folder_name = folder.replace("_aae", "")
 
         # directory structure is like this: data/judgements/ModelA_aae-vs-ModelB/JudgeModelX
         #                                   data/judgements/ModelA-vs-ModelB/JudgeModelX
         # So we need to check if the aae comparison was done for the same judge models
         for aae_model_judge_directory in os.listdir(aae_folder_name):
-            aae_judge_model_path = os.path.join(aae_folder_name, aae_model_judge_directory)
-            base_judge_model_path = os.path.join(base_folder_name, aae_model_judge_directory)
-            if os.path.exists(aae_judge_model_path) and os.path.exists(base_judge_model_path):
+            aae_judge_model_path = os.path.join(
+                aae_folder_name, aae_model_judge_directory
+            )
+            base_judge_model_path = os.path.join(
+                base_folder_name, aae_model_judge_directory
+            )
+            if os.path.exists(aae_judge_model_path) and os.path.exists(
+                base_judge_model_path
+            ):
                 pairs.append((aae_judge_model_path, base_judge_model_path))
 
 
@@ -63,9 +69,10 @@ for pair in pairs:
 
     # print(aae_model_name)
     # print(base_model_name)
-
     # analyze the files and get the ASR values
-    asr, flips = analyze_files(aae_file, base_file)#, aae_model_name, base_model_name)
+    asr, flips, v1 = analyze_files(
+        base_file, aae_file
+    )  # , aae_model_name, base_model_name)
 
     judge_model_name = os.path.basename(aae_folder)
     data = {
@@ -74,6 +81,7 @@ for pair in pairs:
         "AAE Model": aae_model_name,
         "ASR": asr,
         "Flips": flips,
+        "V1": v1,
     }
 
     # results[judge_model_name][base_model_name] = {
@@ -84,9 +92,9 @@ for pair in pairs:
     #     "ASR": asr,
     #     "Flips": flips,
     # }
-    results[judge_model_name][base_model_name] = asr
+    results[judge_model_name][base_model_name] = (asr, v1)
     # results[judge_model_name][aae_model_name] = asr
 
 # Create a DataFrame from the results
-df = pd.DataFrame.from_dict(results, orient='index')
+df = pd.DataFrame.from_dict(results, orient="index")
 print(df)
