@@ -92,7 +92,8 @@ for pair in pairs:
     #     "ASR": asr,
     #     "Flips": flips,
     # }
-    results[judge_model_name][base_model_name] = f"ASR: {asr:.4f} | V1: {v1}"
+    if judge_model_name != base_model_name:
+        results[judge_model_name][base_model_name] = f"ASR: {asr:.4f} | V1: {v1}"
     # results[judge_model_name][aae_model_name] = asr
 
 # Create a DataFrame from the results
