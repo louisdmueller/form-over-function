@@ -93,7 +93,7 @@ for pair in pairs:
     #     "Flips": flips,
     # }
     if judge_model_name != base_model_name:
-        results[judge_model_name][base_model_name] = f"ASR: {asr:.4f} | V1: {v1}"
+        results[judge_model_name][base_model_name] = f"ASR: {asr:.2f}\nV1: {v1}"
     # results[judge_model_name][aae_model_name] = asr
 
 # Create a DataFrame from the results
@@ -104,8 +104,15 @@ df = df[sorted(df.columns)]
 
 print(df)
 
-df.to_excel(
-    "overview.xlsx",
-    sheet_name="ASR Overview",
-    index_label="Judge Model",
-)
+with pd.ExcelWriter("overview.xlsx", engine="xlsxwriter") as writer:
+    df.to_excel(
+        writer,
+        sheet_name="ASR-Overview",
+        index_label="Judge Model",
+    )
+    workbook = writer.book
+    worksheet = writer.sheets["ASR-Overview"]
+    wrap_format = workbook.add_format({"text_wrap": True})  # type: ignore
+    wrap_format.set_align("center")
+    for col_num, _ in enumerate(df.columns):
+        worksheet.set_column(col_num, col_num, 20, wrap_format)
