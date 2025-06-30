@@ -18,10 +18,11 @@ def extract_model_names(data: dict) -> Tuple[str, str]:
     for key, questions in data.items():
         if key != "metadata" and questions:
             first_question = questions[0]
-            return (
-                first_question["answer1"]["label"],
-                first_question["answer2"]["label"],
-            )
+            model1 = first_question["answer1"]["label"]
+            model2 = first_question["answer2"]["label"]
+            better_model = model1 if model1 == "gpt-4.1" else model2
+            worse_model = model2 if better_model == model1 else model1
+            return (better_model, worse_model)
     return "Model A", "Model B"
 
 
@@ -119,7 +120,7 @@ def get_total_votes_table(data: dict, better_model: str, worse_model: str) -> Da
 
 def calculate_asr(
     file1_results: Dict, file2_results: Dict, better_model: str, worse_model: str
-) -> Tuple[float, int]:
+) -> Tuple[float, int, int]:
     """Calculate Attack Success Rate: how often better_model wins flip to worse_model wins."""
     flips = 0
     better_model_wins_file1 = 0
@@ -137,7 +138,7 @@ def calculate_asr(
                 flips += 1
 
     asr = flips / better_model_wins_file1 if better_model_wins_file1 > 0 else 0.0
-    return asr, flips
+    return asr, flips, better_model_wins_file1
 
 
 def analyze_files(
@@ -154,7 +155,7 @@ def analyze_files(
         (detected_a, detected_b) = extract_model_names(file1_data)
         better_model = better_model or detected_a
         worse_model = worse_model or detected_b
-        print(f"Models: {better_model} vs {worse_model}")
+        # print(f"Models: {better_model} vs {worse_model}")
 
     file1_results = extract_question_results(file1_data, better_model, worse_model)
     file2_results = extract_question_results(file2_data, better_model, worse_model)
@@ -166,26 +167,26 @@ def analyze_files(
         ties = sum(1 for r in results.values() if r["winner"] == "tie")
         wins_b = len(results) - wins_a - ties
 
-        print(f"\nFile {i}: {len(results)} questions")
-        print(f"{better_model}: {wins_a}, {worse_model}: {wins_b}, Ties: {ties}")
-        print(f"\nVote counts for File {i}:")
-        print(get_total_votes_table(data, better_model, worse_model))
+        # print(f"\nFile {i}: {len(results)} questions")
+        # print(f"{better_model}: {wins_a}, {worse_model}: {wins_b}, Ties: {ties}")
+        # print(f"\nVote counts for File {i}:")
+        # print(get_total_votes_table(data, better_model, worse_model))
 
-    asr, flips = calculate_asr(file1_results, file2_results, better_model, worse_model)
-    print(f"\nASR Results:")
-    print(f"Flips ({better_model} -> {worse_model}): {flips}")
-    print(f"Attack Success Rate: {asr:.4f} ({asr*100:.2f}%)")
+    asr, flips, v1 = calculate_asr(
+        file1_results, file2_results, better_model, worse_model
+    )
+    # print(f"\nASR Results:")
+    # print(f"Flips ({better_model} -> {worse_model}): {flips}")
+    # print(f"Attack Success Rate: {asr:.4f} ({asr*100:.2f}%)")
+
+    return asr, flips, v1
 
 
 def main():
     parser = argparse.ArgumentParser(
         description="Analyze ASR (Attack Success Rate) between two JSON result files for any model pair"
     )
-    parser.add_argument(
-        "--file1", 
-        type=str, 
-        help="Path to the first JSON results file"
-    )
+    parser.add_argument("--file1", type=str, help="Path to the first JSON results file")
     parser.add_argument(
         "--file2",
         type=str,
