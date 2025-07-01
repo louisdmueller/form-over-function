@@ -2,7 +2,7 @@
 This script takes all "merged_data.json" files in the "data/judgements" directory,
 computes ASR for each file, and creates an overview Excel file with the results.
 The rows are the individual judgment models, the columns are the models and the
-items are the ASR values and the V1 Values.
+items are the ASR values the V1, V2 and Vties values.
 Model columns are sorted by the strength of the model.
 
 The output file is saved as "overview.xlsx" in the "data/judgements" directory.
@@ -70,19 +70,9 @@ for pair in pairs:
     # print(aae_model_name)
     # print(base_model_name)
     # analyze the files and get the ASR values
-    asr, flips, v1 = analyze_files(
-        base_file, aae_file
-    )  # , aae_model_name, base_model_name)
+    analysis_results = analyze_files(base_file, aae_file)
 
     judge_model_name = os.path.basename(aae_folder)
-    data = {
-        "Judge Model": judge_model_name,
-        "Base Model": base_model_name,
-        "AAE Model": aae_model_name,
-        "ASR": asr,
-        "Flips": flips,
-        "V1": v1,
-    }
 
     # results[judge_model_name][base_model_name] = {
     #     "ASR": asr,
@@ -93,7 +83,9 @@ for pair in pairs:
     #     "Flips": flips,
     # }
     if judge_model_name != base_model_name:
-        results[judge_model_name][base_model_name] = f"ASR: {asr:.2f}\nV1: {v1}"
+        results[judge_model_name][
+            base_model_name
+        ] = f"ASR: {analysis_results["ASR"]:.2f}\nV1: {analysis_results["V1"]} V2: {analysis_results["V2"]} Vties: {analysis_results["Vties"]}"
     # results[judge_model_name][aae_model_name] = asr
 
 # Create a DataFrame from the results
@@ -114,5 +106,6 @@ with pd.ExcelWriter("overview.xlsx", engine="xlsxwriter") as writer:
     worksheet = writer.sheets["ASR-Overview"]
     wrap_format = workbook.add_format({"text_wrap": True})  # type: ignore
     wrap_format.set_align("center")
-    for col_num, _ in enumerate(df.columns):
+    wrap_format.set_align("vcenter")
+    for col_num in range(len(df.columns) + 1):  # +1 for the index column
         worksheet.set_column(col_num, col_num, 20, wrap_format)

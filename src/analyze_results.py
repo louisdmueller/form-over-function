@@ -120,10 +120,12 @@ def get_total_votes_table(data: dict, better_model: str, worse_model: str) -> Da
 
 def calculate_asr(
     file1_results: Dict, file2_results: Dict, better_model: str, worse_model: str
-) -> Tuple[float, int, int]:
+) -> Tuple[float, int, int, int, int]:
     """Calculate Attack Success Rate: how often better_model wins flip to worse_model wins."""
     flips = 0
     better_model_wins_file1 = 0
+    worse_model_wins_file1 = 0
+    ties_file1 = 0
 
     for question_id in file1_results.keys():
         if question_id not in file2_results:
@@ -136,9 +138,13 @@ def calculate_asr(
             better_model_wins_file1 += 1
             if file2_winner == worse_model:
                 flips += 1
+        elif file1_winner == worse_model:
+            worse_model_wins_file1 += 1
+        else:
+            ties_file1 += 1
 
     asr = flips / better_model_wins_file1 if better_model_wins_file1 > 0 else 0.0
-    return asr, flips, better_model_wins_file1
+    return asr, flips, better_model_wins_file1, worse_model_wins_file1, ties_file1
 
 
 def analyze_files(
@@ -160,26 +166,19 @@ def analyze_files(
     file1_results = extract_question_results(file1_data, better_model, worse_model)
     file2_results = extract_question_results(file2_data, better_model, worse_model)
 
-    for i, (results, data) in enumerate(
-        [(file1_results, file1_data), (file2_results, file2_data)]
-    ):
-        wins_a = sum(1 for r in results.values() if r["winner"] == better_model)
-        ties = sum(1 for r in results.values() if r["winner"] == "tie")
-        wins_b = len(results) - wins_a - ties
+    # print(f"\nFile {i}: {len(results)} questions")
+    # print(f"{better_model}: {wins_a}, {worse_model}: {wins_b}, Ties: {ties}")
+    # print(f"\nVote counts for File {i}:")
+    # print(get_total_votes_table(data, better_model, worse_model))
 
-        # print(f"\nFile {i}: {len(results)} questions")
-        # print(f"{better_model}: {wins_a}, {worse_model}: {wins_b}, Ties: {ties}")
-        # print(f"\nVote counts for File {i}:")
-        # print(get_total_votes_table(data, better_model, worse_model))
-
-    asr, flips, v1 = calculate_asr(
+    asr, flips, v1, v2, ties = calculate_asr(
         file1_results, file2_results, better_model, worse_model
     )
     # print(f"\nASR Results:")
     # print(f"Flips ({better_model} -> {worse_model}): {flips}")
     # print(f"Attack Success Rate: {asr:.4f} ({asr*100:.2f}%)")
 
-    return asr, flips, v1
+    return {"ASR": asr, "Flips": flips, "V1": v1, "V2": v2, "Vties": ties}
 
 
 def main():
