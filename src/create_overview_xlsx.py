@@ -42,70 +42,76 @@ for folder in subfolders:
             ):
                 pairs.append((aae_judge_model_path, base_judge_model_path))
 
-
-# now that we have the pairs, we can analyze the files
-results = defaultdict(dict)
-for pair in pairs:
-    aae_folder, base_folder = pair
-    aae_file = os.path.join(aae_folder, "merged_data.json")
-    base_file = os.path.join(base_folder, "merged_data.json")
-
-    if not os.path.exists(aae_file) or not os.path.exists(base_file):
-        print(f"Skipping pair {pair} because one of the files does not exist.")
-        continue
-
-    def get_model_name(folder_path):
-        """
-        Extracts the model name from the folder path.
-        The folder name is expected to be in the format 'ModelA_aae-vs-ModelB' or 'ModelA-vs-ModelB'.
-        """
-        if "_aae" in folder_path:
-            return folder_path.split("-vs-")[0].split("/")[-1].replace("_aae", "")
-        else:
-            return folder_path.split("-vs-")[1].split("/")[0]
-
-    aae_model_name = get_model_name(aae_folder)
-    base_model_name = get_model_name(base_folder)
-
-    # print(aae_model_name)
-    # print(base_model_name)
-    # analyze the files and get the ASR values
-    analysis_results = analyze_files(base_file, aae_file)
-
-    judge_model_name = os.path.basename(aae_folder)
-
-    # results[judge_model_name][base_model_name] = {
-    #     "ASR": asr,
-    #     "Flips": flips,
-    # }
-    # results[judge_model_name][aae_model_name] = {
-    #     "ASR": asr,
-    #     "Flips": flips,
-    # }
-    if judge_model_name != base_model_name:
-        results[judge_model_name][
-            base_model_name
-        ] = f"ASR: {analysis_results["ASR"]:.2f}\nV1: {analysis_results["V1"]} V2: {analysis_results["V2"]} Vties: {analysis_results["Vties"]}"
-    # results[judge_model_name][aae_model_name] = asr
-
-# Create a DataFrame from the results
-df = pd.DataFrame.from_dict(results, orient="index")
-
-# sort alphabetically and hope it works
-df = df[sorted(df.columns)]
-
-print(df)
-
+# Create the ExcelWriter outside the loop
 with pd.ExcelWriter("overview.xlsx", engine="xlsxwriter") as writer:
-    df.to_excel(
-        writer,
-        sheet_name="ASR-Overview",
-        index_label="Judge Model",
-    )
-    workbook = writer.book
-    worksheet = writer.sheets["ASR-Overview"]
-    wrap_format = workbook.add_format({"text_wrap": True})  # type: ignore
-    wrap_format.set_align("center")
-    wrap_format.set_align("vcenter")
-    for col_num in range(len(df.columns) + 1):  # +1 for the index column
-        worksheet.set_column(col_num, col_num, 20, wrap_format)
+    for metric in ["ASR", "AASR", "FR", "CR"]:
+        # now that we have the pairs, we can analyze the files
+        results = defaultdict(dict)
+        for pair in pairs:
+            aae_folder, base_folder = pair
+            aae_file = os.path.join(aae_folder, "merged_data.json")
+            base_file = os.path.join(base_folder, "merged_data.json")
+
+            if not os.path.exists(aae_file) or not os.path.exists(base_file):
+                print(f"Skipping pair {pair} because one of the files does not exist.")
+                continue
+
+            def get_model_name(folder_path):
+                """
+                Extracts the model name from the folder path.
+                The folder name is expected to be in the format 'ModelA_aae-vs-ModelB' or 'ModelA-vs-ModelB'.
+                """
+                if "_aae" in folder_path:
+                    return (
+                        folder_path.split("-vs-")[0].split("/")[-1].replace("_aae", "")
+                    )
+                else:
+                    return folder_path.split("-vs-")[1].split("/")[0]
+
+            aae_model_name = get_model_name(aae_folder)
+            base_model_name = get_model_name(base_folder)
+
+            # print(aae_model_name)
+            # print(base_model_name)
+            # analyze the files and get the metric values
+            analysis_results = analyze_files(base_file, aae_file)
+
+            judge_model_name = os.path.basename(aae_folder)
+
+            # results[judge_model_name][base_model_name] = {
+            #     "ASR": asr,
+            #     "Flips": flips,
+            # }
+            # results[judge_model_name][aae_model_name] = {
+            #     "ASR": asr,
+            #     "Flips": flips,
+            # }
+            if judge_model_name != base_model_name:
+                results[judge_model_name][
+                    base_model_name
+                ] = f"{metric}: {analysis_results[metric]:.2f}\nV1: {analysis_results["V1"]} V2: {analysis_results["V2"]} Vties: {analysis_results["Vties"]}"
+            # results[judge_model_name][aae_model_name] = asr
+
+        # Create a DataFrame from the results
+        df = pd.DataFrame.from_dict(results, orient="index")
+
+        # sort alphabetically and hope it works
+        df = df[sorted(df.columns)]
+
+        print(df)
+
+        # Write each metric to a separate sheet
+        df.to_excel(
+            writer,
+            sheet_name=f"{metric}-Overview",
+            index_label="Judge Model",
+        )
+
+        # Apply formatting to the current sheet
+        workbook = writer.book
+        worksheet = writer.sheets[f"{metric}-Overview"]
+        wrap_format = workbook.add_format({"text_wrap": True})  # type: ignore
+        wrap_format.set_align("center")
+        wrap_format.set_align("vcenter")
+        for col_num in range(len(df.columns) + 1):  # +1 for the index column
+            worksheet.set_column(col_num, col_num, 20, wrap_format)
