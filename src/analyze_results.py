@@ -118,12 +118,29 @@ def get_total_votes_table(data: dict, better_model: str, worse_model: str) -> Da
     return df
 
 
-def calculate_asr(
+def count_outcomes(
     file1_results: Dict, file2_results: Dict, better_model: str, worse_model: str
-) -> Tuple[float, int, int]:
-    """Calculate Attack Success Rate: how often better_model wins flip to worse_model wins."""
-    flips = 0
+):
+    """
+    This function counts the following averaged outcomes:
+    - How many times better_model wins in file1
+    - How many times worse_model wins in file1
+    - How often the tie occurs in file1
+    - How often worse_model wins in file2, after better_model wins in file1
+    - How often worse_model wins in file2, after worse_model wins in file1
+    - How often better_model wins in file2, after worse_model wins in file1
+    - How often better_model wins in file2, after better_model wins in file1
+    - How often the outcome in file 1 changes in file 2
+    """
     better_model_wins_file1 = 0
+    worse_model_wins_file1 = 0
+    ties_file1 = 0
+
+    better_model_wins_file2_after_better = 0
+    worse_model_wins_file2_after_better = 0
+    better_model_wins_file2_after_worse = 0
+    worse_model_wins_file2_after_worse = 0
+    flips = 0
 
     for question_id in file1_results.keys():
         if question_id not in file2_results:
@@ -135,10 +152,95 @@ def calculate_asr(
         if file1_winner == better_model:
             better_model_wins_file1 += 1
             if file2_winner == worse_model:
+                worse_model_wins_file2_after_better += 1
+                flips += 1
+            elif file2_winner == "TIE":
+                flips += 1
+            else:
+                better_model_wins_file2_after_better += 1
+        elif file1_winner == worse_model:
+            worse_model_wins_file1 += 1
+            if file2_winner == better_model:
+                better_model_wins_file2_after_worse += 1
+                flips += 1
+            elif file2_winner == "TIE":
+                flips += 1
+            else:
+                worse_model_wins_file2_after_worse += 1
+        else:
+            ties_file1 += 1
+            if file2_winner != "TIE":
                 flips += 1
 
-    asr = flips / better_model_wins_file1 if better_model_wins_file1 > 0 else 0.0
-    return asr, flips, better_model_wins_file1
+    return {
+        "better_model_wins_file1": better_model_wins_file1,
+        "worse_model_wins_file1": worse_model_wins_file1,
+        "ties_file1": ties_file1,
+        "better_model_wins_file2_after_better": better_model_wins_file2_after_better,
+        "worse_model_wins_file2_after_better": worse_model_wins_file2_after_better,
+        "better_model_wins_file2_after_worse": better_model_wins_file2_after_worse,
+        "worse_model_wins_file2_after_worse": worse_model_wins_file2_after_worse,
+        "flips": flips,
+    }
+
+
+def calculate_asr(outcomes: Dict[str, int]) -> float:
+    """Calculate Attack Success Rate: how often better_model wins flip to worse_model wins."""
+    asr = (
+        outcomes["worse_model_wins_file2_after_better"]
+        / outcomes["better_model_wins_file1"]
+        if outcomes["better_model_wins_file1"] > 0
+        else 0.0
+    )
+    return asr
+
+
+def calculate_aasr(outcomes: Dict[str, int]) -> float:
+    """Calculate Anti Attack Success Rate: how often worse_model wins after better_model wins."""
+    aasr = (
+        outcomes["better_model_wins_file2_after_worse"]
+        / outcomes["worse_model_wins_file1"]
+        if outcomes["worse_model_wins_file1"] > 0
+        else 0.0
+    )
+    return aasr
+
+
+def calculate_fr(outcomes: Dict[str, int]) -> float:
+    """Calculate Flip Rate: how often the outcome in file 1 changes in file 2."""
+    fr = (
+        outcomes["flips"]
+        / (
+            outcomes["better_model_wins_file1"]
+            + outcomes["worse_model_wins_file1"]
+            + outcomes["ties_file1"]
+        )
+        if (
+            outcomes["better_model_wins_file1"]
+            + outcomes["worse_model_wins_file1"]
+            + outcomes["ties_file1"]
+        )
+        > 0
+        else 0.0
+    )
+
+    return fr
+
+
+def calculate_cr(outcomes: Dict[str, int]) -> float:
+    """Calculate Consistency Rate: how often the answer (worse or better) in file 1 remains the same in file 2. (Ties excluded)"""
+    cr = (
+        (
+            outcomes["better_model_wins_file2_after_better"]
+            + outcomes["worse_model_wins_file2_after_worse"]
+        )
+        / (outcomes["better_model_wins_file1"] + outcomes["worse_model_wins_file1"])
+        if (outcomes["better_model_wins_file1"] + outcomes["worse_model_wins_file1"])
+        > 0
+        else 0.0
+    )
+
+    return cr
 
 
 def analyze_files(
@@ -160,26 +262,33 @@ def analyze_files(
     file1_results = extract_question_results(file1_data, better_model, worse_model)
     file2_results = extract_question_results(file2_data, better_model, worse_model)
 
-    for i, (results, data) in enumerate(
-        [(file1_results, file1_data), (file2_results, file2_data)]
-    ):
-        wins_a = sum(1 for r in results.values() if r["winner"] == better_model)
-        ties = sum(1 for r in results.values() if r["winner"] == "tie")
-        wins_b = len(results) - wins_a - ties
+    # print(f"\nFile {i}: {len(results)} questions")
+    # print(f"{better_model}: {wins_a}, {worse_model}: {wins_b}, Ties: {ties}")
+    # print(f"\nVote counts for File {i}:")
+    # print(get_total_votes_table(data, better_model, worse_model))
 
-        # print(f"\nFile {i}: {len(results)} questions")
-        # print(f"{better_model}: {wins_a}, {worse_model}: {wins_b}, Ties: {ties}")
-        # print(f"\nVote counts for File {i}:")
-        # print(get_total_votes_table(data, better_model, worse_model))
+    outcomes = count_outcomes(file1_results, file2_results, better_model, worse_model)
 
-    asr, flips, v1 = calculate_asr(
-        file1_results, file2_results, better_model, worse_model
-    )
+    asr = calculate_asr(outcomes)
+    aasr = calculate_aasr(outcomes)
+    fr = calculate_fr(outcomes)
+    cr = calculate_cr(outcomes)
+    v1 = outcomes["better_model_wins_file1"]
+    v2 = outcomes["worse_model_wins_file1"]
+    ties = outcomes["ties_file1"]
     # print(f"\nASR Results:")
     # print(f"Flips ({better_model} -> {worse_model}): {flips}")
     # print(f"Attack Success Rate: {asr:.4f} ({asr*100:.2f}%)")
 
-    return asr, flips, v1
+    return {
+        "ASR": asr,
+        "AASR": aasr,
+        "FR": fr,
+        "CR": cr,
+        "V1": v1,
+        "V2": v2,
+        "Vties": ties,
+    }
 
 
 def main():
