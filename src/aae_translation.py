@@ -110,7 +110,6 @@ def add_aae_to_df(df: pd.DataFrame, model: Model) -> pd.DataFrame:
     Run the translation from SAE to AAE on the DataFrame using the OpenAI client.
     """
     df = df.apply(lambda row: add_aae_to_answers(row, model), axis=1)
-    df["question"] = df["question"].apply(lambda question: "Hi there, I'm a bit stuck on a question and was wondering if you could help me out. Here's the question: " + str(question))
     df["question_aae"] = df["question"].apply(lambda question: convert_to_aae(str(question), model))
     return df
 
