@@ -36,8 +36,10 @@ original_dicts = read_file(original_file)
 
 new_dicts = [dict(dictionary) for dictionary in original_dicts]
 
-answers = [[entry["answers"]["answer1"]["answer"] for entry in original_dicts], [entry["answers"]["answer2"]["answer"] for entry in original_dicts]]
-prompts = [[user_input + answer + "'" for answer in answers[0]],[user_input + answer + "'" for answer in answers[1]]]
+answers = [[entry["answers"]["answer1"]["answer"] for entry in original_dicts], 
+           [entry["answers"]["answer2"]["answer"] for entry in original_dicts]]
+prompts = [[user_input + answer + "'" for answer in answers[0]],
+           [user_input + answer + "'" for answer in answers[1]]]
 
 model = get_model(
     model_name_or_path=model_name_or_path,
