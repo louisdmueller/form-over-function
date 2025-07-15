@@ -1,8 +1,5 @@
 import yaml
-import re
-import pandas as pd
-from openai import OpenAI
-from model import Model, get_model
+from model import get_model
 from utils import read_file, write_file
 
 with open("config.yml", "r") as file:
@@ -40,7 +37,7 @@ original_dicts = read_file(original_file)
 new_dicts = [dict(dictionary) for dictionary in original_dicts]
 
 answers = [[entry["answers"]["answer1"]["answer"] for entry in original_dicts], [entry["answers"]["answer2"]["answer"] for entry in original_dicts]]
-prompts = [[user_input + answer + "'" for answer in answers[0]],[[user_input + answer + "'" for answer in answers[1]]]]
+prompts = [[user_input + answer + "'" for answer in answers[0]],[user_input + answer + "'" for answer in answers[1]]]
 
 model = get_model(
     model_name_or_path=model_name_or_path,
@@ -49,26 +46,13 @@ model = get_model(
 
 system_prompts = [""] * len(prompts[0])
 
-responses = [model.generate(system_prompts=system_prompts, input_texts=prompts[0][:3]), model.generate(system_prompts=system_prompts, input_texts=prompts[1][:3])]
+responses = [model.generate(system_prompts=system_prompts, input_texts=prompts[0]), 
+             model.generate(system_prompts=system_prompts, input_texts=prompts[1])]
 
 for i, dictionary in enumerate(new_dicts):
-    if i == 3:
-        break
     dictionary["model_name"] = model_name_or_path
     dictionary["answers"]["answer1"]["answer"] = responses[0][i][0]
     dictionary["answers"]["answer2"]["answer"] = responses[1][i][0]
     del dictionary["prompt"]
 
 write_file(original_file.replace(".json", "_basic.json"), new_dicts)
-
-# client = OpenAI(api_key=my_api_key)
-
-# response = client.chat.completions.create(
-#     model="gpt-4o-mini",  # or "gpt-4o"
-#     messages=[
-#         {"role": "user", "content": user_input}
-#     ],
-#     temperature=0.5,
-# )
-
-# print(response.choices[0].message.content)
