@@ -34,16 +34,17 @@ else
 fi
 
 data_path="data/generated_answers/"
-judgments_path="data/judgments/"
+judgments_path="data/judgements/"
 
 # judge_model_name="meta-llama/Llama-3.3-70B-Instruct"
 # judge_model_name="meta-llama/Llama-3.1-8B-Instruct"
 # judge_model_name="Qwen/Qwen2.5-72B-Instruct"
-judge_model_name="mistralai/Mistral-7B-Instruct-v0.2"
+judge_model_name="mistralai/Mixtral-8x7B-Instruct-v0.1"
 # judge_model_name="mistralai/Mistral-Large-Instruct-2411"
 
+# model_1_file="gpt-4.1-answers.json"
 model_1_file="gpt-4.1-answers_aae.json"
-model_2_file="Qwen2-1.5B-Instruct-answers.json"
+model_2_file="Llama-2-7b-chat-hf-answers.json"
 
 model_1=$(echo "$model_1_file" | sed -E 's/-answers(_[a-z]+)?\.json$/\1/')
 model_2=$(echo "$model_2_file" | sed -E 's/-answers(_[a-z]+)?\.json$/\1/')
