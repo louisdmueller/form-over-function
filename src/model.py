@@ -215,10 +215,11 @@ class HuggingfaceModel(Model):
                 output = self.model.generate(
                     **inputs,
                     max_new_tokens=max_output_tokens,
-                    num_beams=num_generations,
+                    # num_beams=num_generations,
                     num_return_sequences=num_generations,
                     do_sample=kwargs.get("do_sample", False),
                     top_p=kwargs.get("top_p", None),
+                    min_p=kwargs.get("min_p", None),
                     top_k=kwargs.get("top_k", None),
                     temperature=kwargs.get("temperature", None),
                     return_dict_in_generate=True,
