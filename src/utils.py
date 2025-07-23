@@ -26,6 +26,13 @@ def read_file(file_path: str) -> List[Dict[str, Any]]:
     with open(file_path, "r") as f:
         return [json.loads(line) for line in f]
 
+def write_file(file_path: str, data: List[Dict[str, Any]]) -> None:
+    """
+    Write a list of dicts to a Jsonl file.
+    """
+    with open(file_path, "w") as f:
+        for entry in data:
+            f.write(json.dumps(entry) + "\n")
 
 def parse_args() -> argparse.Namespace:
     """

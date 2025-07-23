@@ -5,7 +5,7 @@ from typing import List, Dict
 from openai import OpenAI
 from google import genai
 from google.genai.types import GenerateContentConfig
-from tqdm import trange
+from tqdm import trange, tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer  # type: ignore
 import torch
 from huggingface_hub import repo_exists
@@ -255,7 +255,7 @@ class OpenAIModel(Model):
     ) -> List[List[str]]:
 
         responses = []
-        for input_text, system_prompt in zip(input_texts, system_prompts):
+        for input_text, system_prompt in tqdm(zip(input_texts, system_prompts), total=len(input_texts), desc="Generating model responses"):
             message = self.apply_chat_template(input_text, system_prompt)
             response_batch = []
             for _ in range(num_generations):

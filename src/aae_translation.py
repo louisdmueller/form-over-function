@@ -42,7 +42,7 @@ def convert_to_aae(text: str, model: Model) -> str:
     " 2. Negative concord: Negatives agree with each other (e.g., “nobody never say nothing” → “nobody ever says anything”)."
     " 3. Negative inversion: Auxiliary raises, but interpretation remains the same (e.g., “don't nobody never say nothing to them” → “nobody ever says anything to them”)."
     " 4. Deletion of possessive /s/: Possessive markers are omitted, but the meaning remains (e.g., “his baby mama brother friend was there” → “his baby’s mother’s brother’s friend was there”)."
-    " 5. Habitual 'be like': descrbing something (e.g., “This song be like fire” → “This song is amazing”)."
+    " 5. Habitual 'be like': describing something (e.g., “This song be like fire” → “This song is amazing”)."
     " 6. Stressed 'been': short for have been doing something (e.g., “I been working out” → “I have been working out”)."
     " 7. Preterite 'had': Signals the preterite or past action (e.g., “we had went to the store” → “we went to the store”)."
     " 8. Question inversion in subordinate clauses: Inverts clauses similar to Standard English (e.g., “I was wondering did his white friend call?” → “I was wondering whether his white friend called”)."
