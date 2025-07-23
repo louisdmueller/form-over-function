@@ -1,6 +1,8 @@
-import yaml
+# from calculate_readability_metrics import load_onestopqa
 from model import get_model
 from utils import read_file, write_file
+import json
+import yaml
 
 with open("config.yml", "r") as file:
     config = yaml.safe_load(file)
@@ -20,26 +22,30 @@ rules = (f"""
     9. Measurement, numerals, currency, calendar, and international terms are in English form.
     10. Technical expressions required and customary for the immediate task are included in the locally used form.""")
 
-
-text = "Historical analysis involves examining past events to understand their causes, impacts, and significance. Let's use the American Civil War as an example. First, identify the event: The American Civil War occurred from 1861 to 1865. Second, establish context: The war took place in the backdrop of growing tensions between the Northern and Southern states over issues like slavery and states' rights. Third, examine primary sources: Diaries, letters, and newspaper articles from the period provide firsthand accounts of the war. Fourth, consider different perspectives: The war was seen differently by Northerners, Southerners, slaves, and foreign observers. Fifth, identify cause and effect: The war was caused by deep-seated disagreements over slavery and resulted in the abolition of slavery and a more powerful federal government. Finally, understand significance: The war was a turning point in American history, setting the stage for the civil rights movement a century later."
-
-user_input = (f"""I need your help translating a sentence from Standard English to Basis English in a way that feels natural and preserves the original meaning and tone. You should use the following 850-word vocabulary of Basic English:\n{vocabulary}\nYou should also follow these 10 rules of grammar for Basic English:\n{rules}.\nFinally, your output must follow these guidelines:
+user_input = (f"""I need your help translating a sentence from Standard English to Basis English in a way that feels natural and preserves the original meaning and tone. You should use the following 850-word vocabulary of Basic English:\n{vocabulary}\nThe answer should follow these 12 rules of grammar for Basic English:\n{rules}.\n\nFinally, your output must follow these guidelines:
     1. Only provide the translation. Do not mention or explain how the translation was done.
     2. Do not mention any of the 10 rules in your translation.
     3. Ensure the text sounds natural and realistic in Basic English.\n
 Please translate the following text:\n'""")
 
+# This is a simple_prompt. It's currently not used as it had worse SARI results
+# user_input_simple = """
+#     '\nRewrite the above text so that it can be easily understood by a 
+#     non-native speaker of English:"""
+
 model_name_or_path = "gpt-4o-mini"
 
-original_file = "data/generated_answers/gpt-4-original-answers.json"
+original_file = "data/generated_answers/gpt-4.1-answers.json"
 original_dicts = read_file(original_file)
 
 new_dicts = [dict(dictionary) for dictionary in original_dicts]
 
-answers = [[entry["answers"]["answer1"]["answer"] for entry in original_dicts], 
+texts = [[entry["question"] for entry in original_dicts],
+           [entry["answers"]["answer1"]["answer"] for entry in original_dicts], 
            [entry["answers"]["answer2"]["answer"] for entry in original_dicts]]
-prompts = [[user_input + answer + "'" for answer in answers[0]],
-           [user_input + answer + "'" for answer in answers[1]]]
+prompts = [[user_input + question + "'" for question in texts[0]],
+           [user_input + answer + "'" for answer in texts[1]],
+           [user_input + answer + "'" for answer in texts[2]]]
 
 model = get_model(
     model_name_or_path=model_name_or_path,
@@ -48,13 +54,31 @@ model = get_model(
 
 system_prompts = [""] * len(prompts[0])
 
-responses = [model.generate(system_prompts=system_prompts, input_texts=prompts[0]), 
-             model.generate(system_prompts=system_prompts, input_texts=prompts[1])]
+responses = [
+    model.generate(system_prompts=system_prompts, input_texts=prompts[0]),
+    model.generate(system_prompts=system_prompts, input_texts=prompts[1]), 
+    model.generate(system_prompts=system_prompts, input_texts=prompts[2])]
 
 for i, dictionary in enumerate(new_dicts):
     dictionary["model_name"] = model_name_or_path
-    dictionary["answers"]["answer1"]["answer"] = responses[0][i][0]
-    dictionary["answers"]["answer2"]["answer"] = responses[1][i][0]
-    del dictionary["prompt"]
+    dictionary["question"] = responses[0][i][0]
+    dictionary["answers"]["answer1"]["answer"] = responses[1][i][0]
+    dictionary["answers"]["answer2"]["answer"] = responses[2][i][0]
 
 write_file(original_file.replace(".json", "_basic.json"), new_dicts)
+
+# articles = load_onestopqa(reference=False)
+# articles_truncated = [
+#     " ".join(paragraph[:3]) for paragraph in articles]
+# prompts = [user_input + article + "'" for article in articles_truncated]
+# prompts_simple = [
+#     "'" + article + user_input_simple for article in articles_truncated]
+# system_prompts = [""] * len(prompts)
+# responses = model.generate(
+#     system_prompts=system_prompts,
+#     input_texts=prompts_simple,
+# )
+# simple_language_paragraphs = [response[0] for response in responses]
+# # write output list to file
+# with open("data/readability_metrics/onestopqa_test_data/simple_prompt.json", "w") as file:
+#     json.dump(simple_language_paragraphs, file, indent=4)
