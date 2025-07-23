@@ -67,6 +67,8 @@ for i, dictionary in enumerate(new_dicts):
 
 write_file(original_file.replace(".json", "_basic.json"), new_dicts)
 
+
+### following code is for generating simple language from the OpenQA data
 # articles = load_onestopqa(reference=False)
 # articles_truncated = [
 #     " ".join(paragraph[:3]) for paragraph in articles]
