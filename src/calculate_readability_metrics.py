@@ -1,21 +1,24 @@
-import textstat as ts
-from utils import read_file, write_file
+from datasets import load_dataset
+from easse.sari import corpus_sari
+from spacy.matcher import Matcher
 from typing import List
+from utils import read_file, write_file
+import json
 import matplotlib.pyplot as plt
 import seaborn as sns
 import spacy
-from spacy.matcher import Matcher
-from easse.sari import corpus_sari
+import textstat as ts
 
 
-def calculate_readability_metrics(texts: List[str]):
+def calculate_readability_metrics(texts: List[str]) -> dict:
     """
     Calculate readability metrics for a list of texts.
 
     Args:
-        texts (List[str]): List of texts to analyze.
+      texts (List[str]): List of texts to analyze.
+
     Returns:
-        dict: Dictionary containing readability metrics.
+      dict: A dictionary containing the readability metrics.
     """
     readability_functions = {
         "flesch_reading_ease": ts.flesch_reading_ease,
@@ -23,7 +26,8 @@ def calculate_readability_metrics(texts: List[str]):
         "syllable_count": ts.syllable_count,
         "lexicon_count": ts.lexicon_count,
         "polysllabic_word_count": ts.polysyllabcount,
-        "consensus_readability_score": lambda text: ts.text_standard(text, float_output=True)
+        "consensus_readability_score": 
+            lambda text: ts.text_standard(text, float_output=True)
     }
 
     metrics = {
@@ -35,15 +39,16 @@ def calculate_readability_metrics(texts: List[str]):
 
     return metrics
 
+
 def calculate_passive_ratio(texts: List[str]):
     """
     Calculate the ratio of passive constructions per sentence in a list of
     texts.
 
     Args:
-        texts (List[str]): List of texts to analyze.
+      texts (List[str]): List of texts to analyze.
     Returns:
-        float: Ratio of passive voice in the texts.
+      float: Ratio of passive voice in the texts.
     """
     nlp = spacy.load("en_core_web_lg")
     matcher = Matcher(nlp.vocab)
@@ -51,8 +56,9 @@ def calculate_passive_ratio(texts: List[str]):
     for text in texts:
         doc = nlp(text)
         sents = list(doc.sents)
-        passive_rule = [{'DEP': 'nsubjpass'}, {'DEP': 'aux', 'OP': '*'},
-                        {'DEP': 'auxpass'}, {'TAG': 'VBN'}]
+        passive_rule = [
+            {'DEP': 'nsubjpass'}, {'DEP': 'aux', 'OP': '*'},
+            {'DEP': 'auxpass'}, {'TAG': 'VBN'}]
         matcher.add('Passive', [passive_rule])
         matches = matcher(doc)
         passive_ratios.append(len(matches) / len(sents))
@@ -60,42 +66,124 @@ def calculate_passive_ratio(texts: List[str]):
     return passive_ratios
 
 
-sae_file = "data/generated_answers/gpt-4-original-answers.json"
-sae_dicts = read_file(sae_file)
-basic_file = "data/generated_answers/gpt-4-original-answers_basic.json"
-basic_dicts = read_file(basic_file)
+def load_onestopqa(reference: bool=True)-> List[List[str]]:
+    """
+    Load articles from the OneStopQA dataset.
+
+    Args:
+      reference (bool): If True, load articles in Basic English. If False, load
+      the original articles (e.g. to then convert them to Basic English).
+
+    Returns:
+      List[List[str]]: A list of articles, where each article is a list of
+        paragraphs.
+    """
+
+    dataset = load_dataset("malmaud/onestop_qa")
+    texts = []
+    text = []
+    count = 0
+    title = dataset["train"][0]["title"]
+    range_start = 6 if reference else 0
+    train_data = dataset["train"].select(
+        range(range_start, len(dataset["train"]), 9))
+
+    for paragraph in train_data:
+        if paragraph["title"] == title:
+            text.append(paragraph["paragraph"])
+            count += 1
+        else:
+            title = paragraph["title"]
+            texts.append(text)
+            text = [paragraph["paragraph"]]
+
+    return texts
+
+def calculate_sari(path_to_system_output:str, paragraph_count:int=3) -> float:
+    """
+    Calculate SARI for system output generated from the ONESTOP QA dataset.
+    
+    Args:
+      path_to_system_output (str): Path to a JSON file containing a list of
+        system output articles (e.g. in 'data/readability_metrics').
+      paragraph_count (int): Number of paragraphs to consider from each 
+        article. Should match the number of paragraphs used for system output.
+
+    Returns:
+      float: SARI score of the system output.
+    """
+    original_articles = load_onestopqa(reference=False)
+    reference_articles = load_onestopqa(reference=True)
+    original_articles_truncated = [" ".join(
+        paragraph[:paragraph_count]) for paragraph in original_articles]
+    # reference articles need to be list of lists
+    reference_articles_truncated = [[" ".join(
+        paragraph[:paragraph_count]) for paragraph in reference_articles]]
+    with open(path_to_system_output, "r") as file:
+        generated_articles = json.load(file)
+
+    corpus_sari_sae = corpus_sari(
+        orig_sents=original_articles_truncated, 
+        sys_sents=generated_articles, 
+        refs_sents=reference_articles_truncated)
+
+    return corpus_sari_sae
 
 
-readability_metrics_sae = calculate_readability_metrics(
-    [entry["answers"]["answer1"]["answer"] for entry in sae_dicts] +
-    [entry["answers"]["answer2"]["answer"] for entry in sae_dicts])
+def plot_readability_metrics(
+        readability_metrics:tuple[dict, dict], 
+        output_dir:str="data/readability_metrics"
+    ) -> None:
+    """
+    Save a boxplot for each readability metric, comparing SAE and Basic English
+    answers.
 
-readability_metrics_basic = calculate_readability_metrics(
-    [entry["answers"]["answer1"]["answer"] for entry in basic_dicts] +
-    [entry["answers"]["answer2"]["answer"] for entry in basic_dicts])
+    Args:
+      readability_metrics (tuple[dict, dict]): A tuple containing two
+        dictionaries with readability metrics for SAE and Basic English
+        answers, respectively. Each dictionary should be an output of
+        'calculate_readability_metrics'.
+      output_dir (str): Directory to save the plots.
+    """
+    title = "Readability Comparison: SAE vs Basic English Answers --"
+    for metric in readability_metrics[0].keys():
+        # Set plot style
+        sns.set_theme(style="whitegrid")
+        # Create a boxplot
+        plt.figure(figsize=(10, 6))
+        sns.boxplot(data=[readability_metrics[0][metric],
+                        readability_metrics[1][metric]],)
+        plt.xticks([0, 1], ["SAE Answers", "Basic English Answers"])
+        plt.ylabel(metric.replace("_", " ").title())
+        plt.title(f"{title} {metric.replace("_", " ").title()}")
+        # Save to file
+        plt.tight_layout()
+        plt.savefig(f"{output_dir}/{metric}.png")
+        plt.close()
 
-print("Readability metrics for SAE answers:")
-for metric, values in readability_metrics_sae.items():
-    print(f"{metric}: {values[:5]}...")  # Print first 5 values for brevity
-print("\nReadability metrics for Basic English answers:")
-for metric, values in readability_metrics_basic.items():
-    print(f"{metric}: {values[:5]}...")  # Print first 5 values for brevity
 
-exit(0)
-for metric in readability_metrics_sae.keys():
 
-    # Set plot style
-    sns.set_theme(style="whitegrid")
-    # Create a boxplot
-    plt.figure(figsize=(10, 6))
-    sns.boxplot(data=[readability_metrics_sae[metric],
-                      readability_metrics_basic[metric]],)
-    plt.xticks([0, 1], ["SAE Answers", "Basic English Answers"])
-    plt.ylabel(metric.replace("_", " ").title())
-    plt.title("Readability Comparison: SAE vs Basic English Answers -- " +
-              metric.replace("_", " ").title())
-    # Save to file
-    plt.tight_layout()
-    plt.savefig("data/readability_metrics/" +
-                metric + "_boxplot.png")
-    plt.close()
+### Example usage of the functions defined above ###
+# sae_file = "data/generated_answers/gpt-4-original-answers.json"
+# sae_dicts = read_file(sae_file)
+# basic_file = "data/generated_answers/gpt-4-original-answers_basic.json"
+# basic_dicts = read_file(basic_file)
+
+# readability_metrics_sae = calculate_readability_metrics(
+#     [entry["answers"]["answer1"]["answer"] for entry in sae_dicts] +
+#     [entry["answers"]["answer2"]["answer"] for entry in sae_dicts])
+
+# readability_metrics_basic = calculate_readability_metrics(
+#     [entry["answers"]["answer1"]["answer"] for entry in basic_dicts] +
+#     [entry["answers"]["answer2"]["answer"] for entry in basic_dicts])
+
+# print("Readability metrics for SAE answers:")
+# for metric, values in readability_metrics_sae.items():
+#     print(f"{metric}: {values[:5]}...")  # Print first 5 values for brevity
+# print("\nReadability metrics for Basic English answers:")
+# for metric, values in readability_metrics_basic.items():
+#     print(f"{metric}: {values[:5]}...")  # Print first 5 values for brevity
+
+# plot_readability_metrics((readability_metrics_sae, readability_metrics_basic))
+
+# calculate_sari("data/readability_metrics/onestopqa_test_data/simple_prompt.json")
