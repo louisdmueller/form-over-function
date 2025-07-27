@@ -1,3 +1,5 @@
+from calendar import c
+from logging import config
 from pathlib import Path
 from typing import List
 
@@ -24,15 +26,6 @@ nltk.download("wordnet")
 nlp = spacy.load("en_core_web_sm")
 
 
-def preprocess_text(text):
-    """Basic text preprocessing"""
-    text = text.lower()
-    text = re.sub(r"[^a-zA-Z\s]", "", text)
-    text = " ".join(text.split())
-
-    return text
-
-
 def only_keep_sentences_with_answer(text: str, answer: str) -> List[str]:
     """Remove sentences containing specific words from the text.
 
@@ -45,14 +38,61 @@ def only_keep_sentences_with_answer(text: str, answer: str) -> List[str]:
     """
     sentences = nltk.sent_tokenize(text)
     opposite_answer = "answer2" if answer == "answer1" else "answer1"
+
     filtered_sentences = [
-        sentence
+        preprocess_sentence(sentence)
         for sentence in sentences
         if answer.lower() in sentence.lower()
         and opposite_answer.lower() not in sentence.lower()
         and len(sentence) > 15
     ]
+    filtered_sentences = split_sentences_more(filtered_sentences)
     return list(set(filtered_sentences))
+
+
+def split_sentences_more(sentences: List[str]) -> List[str]:
+    """Split sentences into smaller sentences if they are too long."""
+    new_sentences = []
+    for sentence in sentences:
+        doc = nlp(sentence)
+        conjunctions = [
+            token.text for token in doc if token.pos_ in ["CCONJ", "SCONJ", "PUNCT"]
+        ]
+
+        if conjunctions:
+            # Escape special regex characters in conjunctions
+            escaped_conjunctions = [re.escape(conj) for conj in conjunctions]
+            parts = re.split(
+                r"\b(?:{})\b".format("|".join(escaped_conjunctions)), sentence
+            )
+            for part in parts:
+                part = part.strip() if part else ""
+                if len(part) > 15:
+                    part = part.lower()
+                    part = re.sub(r"[^a-zA-Z0-9\s]", "", part)
+                    if part is not None:
+                        part = part.strip()
+                        new_sentences.append(part)
+        else:
+            if len(sentence) > 15:
+                new_sentences.append(sentence)
+    return new_sentences
+
+
+def preprocess_sentence(sentence: str) -> str:
+    """Remove every noise word such as "Answer2EMPLARYassistant" that contains Answer1 or Answer2,
+    but don't remove Answer1 or Answer2 if they stand alone."""
+
+    sentence = re.sub(
+        r"\b\w*answer1\w+\b|\b\w+answer1\w*\b", "", sentence, flags=re.IGNORECASE
+    )
+    sentence = re.sub(
+        r"\b\w*answer2\w+\b|\b\w+answer2\w*\b", "", sentence, flags=re.IGNORECASE
+    )
+
+    sentence = re.sub(r"\s+", " ", sentence)
+
+    return sentence.strip()
 
 
 def filter_reasonings(reasonings: list[str], answer: str):
@@ -63,6 +103,7 @@ def filter_reasonings(reasonings: list[str], answer: str):
     filtered_reasoning = only_keep_sentences_with_answer(reasonings[1], answer)
     if len(filtered_reasoning) >= 1:
         filtered_reasonings.extend(filtered_reasoning)
+    print(filtered_reasonings)
     return filtered_reasonings
 
 
@@ -112,6 +153,14 @@ def extract_reasoning_from_files(
             sample_reasonings_worse = filter_reasonings(sample_reasonings, worse_answer)
             reasonings[better_model].extend(sample_reasonings_better)
             reasonings[worse_model].extend(sample_reasonings_worse)
+    print(
+        f"Extracted {len(reasonings[better_model])} reasonings for {better_model}"
+        f" and {len(reasonings[worse_model])} reasonings for {worse_model}"
+    )
+    reasonings[better_model] = list(set(reasonings[better_model]))
+    reasonings[worse_model] = list(set(reasonings[worse_model]))
+    print(f"Unique reasonings for {better_model}: {len(reasonings[better_model])}")
+    print(f"Unique reasonings for {worse_model}: {len(reasonings[worse_model])}")
     return reasonings
 
 
@@ -121,56 +170,39 @@ def analyze_reasonings_topic_model(
     """
     Analyze results using topic modeling
     """
-    config = load_config("config.yml")
-    client = openai.OpenAI(api_key=config["openai_key"])
-    llm_representation_model = OpenAI(
-        client=client,
-        model="gpt-4o-mini",
-        chat=True,
-    )
-
     stop_words = nltk.corpus.stopwords.words("english")
     stop_words.extend(["answer1", "answer2"])
-    # Clustering model: See [2] for more details
-    cluster_model = HDBSCAN(
-        min_cluster_size=15,
-        metric="euclidean",
-        cluster_selection_method="eom",
-        prediction_data=True,
+
+    config = load_config("config.yml")
+    api_key = config["openai_key"]
+    client = openai.OpenAI(api_key=api_key)
+    representation_model = OpenAI(client, model="gpt-4.1", chat=True)
+    cluster_model_worse = HDBSCAN(
+        min_cluster_size=45,
     )
 
-    ctfidf_model = ClassTfidfTransformer(bm25_weighting=True)
+    cluster_model_better = HDBSCAN(
+        min_cluster_size=12,
+    )
     vectorizer_model = CountVectorizer(
         analyzer="word",
         stop_words=stop_words,
-        ngram_range=(1, 2),
-        min_df=0.05,
-        max_df=0.85,
     )
 
     embedding_model = load_bert_model()
 
-    key_bert_inspired_representation_model = KeyBERTInspired()
-
-    representation_model = {
-        "KeyBertInspired Representation": key_bert_inspired_representation_model,
-        "LLM Representation": llm_representation_model,
-    }
-
     better_topic_model = BERTopic(
         embedding_model=embedding_model,
-        hdbscan_model=cluster_model,
-        ctfidf_model=ctfidf_model,
-        vectorizer_model=vectorizer_model,
+        hdbscan_model=cluster_model_better,
         representation_model=representation_model,
+        vectorizer_model=vectorizer_model,
         language="english",
     )
     worse_topic_model = BERTopic(
         embedding_model=embedding_model,
-        hdbscan_model=cluster_model,
-        ctfidf_model=ctfidf_model,
-        vectorizer_model=vectorizer_model,
+        hdbscan_model=cluster_model_worse,
         representation_model=representation_model,
+        vectorizer_model=vectorizer_model,
         language="english",
     )
 
@@ -182,6 +214,10 @@ def analyze_reasonings_topic_model(
         output_directory / f"better_model_topics_{better_model}_vs_{worse_model}.xlsx",
         index=False,
     )
+    better_hierarchical_topics = better_topic_model.hierarchical_topics(
+        reasonings[better_model]
+    )
+    print(better_topic_model.get_topic_tree(better_hierarchical_topics))
 
     worse_topic_model.fit_transform(reasonings[worse_model])
 
@@ -191,3 +227,8 @@ def analyze_reasonings_topic_model(
         output_directory / f"worse_model_topics_{better_model}_vs_{worse_model}.xlsx",
         index=False,
     )
+
+    worse_hierarchical_topics = worse_topic_model.hierarchical_topics(
+        reasonings[worse_model]
+    )
+    print(worse_topic_model.get_topic_tree(worse_hierarchical_topics))
