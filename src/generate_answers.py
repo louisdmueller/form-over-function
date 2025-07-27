@@ -52,7 +52,8 @@ responses_batch = answer_generation_model.generate(
     max_output_tokens=max([len(p) for p in prompts]) + 50,
     num_generations=num_generations,
     do_sample=do_sample,
-    temperature=None, 
+    temperature=None,
+    **config,
 )
 
 generated_data_list = []
@@ -90,7 +91,9 @@ if args.aae:
     for idx, generated_data in enumerate(generated_data_list):
         generated_data["question"] = df["question_aae"].iloc[idx]
         for i in range(num_generations):
-            generated_data["answers"][f"answer{i + 1}"]["answer"] = df["answers"].iloc[idx][f"answer{i + 1}_aae"]
+            generated_data["answers"][f"answer{i + 1}"]["answer"] = df["answers"].iloc[
+                idx
+            ][f"answer{i + 1}_aae"]
             # answer_id stays the same
 
         generated_data["metadata"] = {

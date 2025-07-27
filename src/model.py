@@ -5,7 +5,7 @@ from typing import List, Dict
 from openai import OpenAI
 from google import genai
 from google.genai.types import GenerateContentConfig
-from tqdm import trange, tqdm
+from tqdm import tqdm, trange
 from transformers import AutoModelForCausalLM, AutoTokenizer  # type: ignore
 import torch
 from huggingface_hub import repo_exists
@@ -123,7 +123,7 @@ class HuggingfaceModel(Model):
     def __init__(self, model_name_or_path: str, **kwargs):
         super().__init__(model_name_or_path)
         self.model = AutoModelForCausalLM.from_pretrained(
-            model_name_or_path,
+            pretrained_model_name_or_path=model_name_or_path,
             torch_dtype=torch.float16,
             device_map="auto",
             # max_memory=kwargs.get("max_memory", {0: "92GB", 1: "92GB"}),
@@ -215,10 +215,11 @@ class HuggingfaceModel(Model):
                 output = self.model.generate(
                     **inputs,
                     max_new_tokens=max_output_tokens,
-                    num_beams=num_generations,
+                    # num_beams=num_generations,
                     num_return_sequences=num_generations,
                     do_sample=kwargs.get("do_sample", False),
                     top_p=kwargs.get("top_p", None),
+                    min_p=kwargs.get("min_p", None),
                     top_k=kwargs.get("top_k", None),
                     temperature=kwargs.get("temperature", None),
                     return_dict_in_generate=True,
@@ -253,21 +254,25 @@ class OpenAIModel(Model):
         num_generations: int = 1,
         **kwargs,
     ) -> List[List[str]]:
+        if kwargs.get("use_batch_api", False):
+            raise NotImplementedError(
+                "Batch API is not implemented for OpenAI models yet."
+            )
+        else:
+            responses = []
+            for input_text, system_prompt in zip(input_texts, system_prompts):
+                message = self.apply_chat_template(input_text, system_prompt)
+                response_batch = []
+                for _ in range(num_generations):
+                    response = self.openai_client.responses.create(
+                        model=self.model_name_or_path,
+                        input=message,  # type: ignore
+                        max_output_tokens=kwargs.get("max_output_tokens", 512),  # type: ignore
+                    )
+                    response_batch.append(response.output_text)
+                responses.append(response_batch)
 
-        responses = []
-        for input_text, system_prompt in tqdm(zip(input_texts, system_prompts), total=len(input_texts), desc="Generating model responses"):
-            message = self.apply_chat_template(input_text, system_prompt)
-            response_batch = []
-            for _ in range(num_generations):
-                response = self.openai_client.responses.create(
-                    model=self.model_name_or_path,
-                    input=message,  # type: ignore
-                    max_output_tokens=kwargs.get("max_output_tokens", 512),  # type: ignore
-                )
-                response_batch.append(response.output_text)
-            responses.append(response_batch)
-
-        return responses
+            return responses
 
 
 class GeminiModel(Model):
@@ -303,6 +308,46 @@ class GeminiModel(Model):
             responses.append(response_batch)
 
         return responses
+
+
+class ClaudeModel(Model):
+    def __init__(self, model_name_or_path: str, api_key: str):
+        super().__init__(model_name_or_path)
+        import anthropic
+
+        self.claude_client = anthropic.Anthropic(api_key=api_key)
+
+    def generate(
+        self,
+        system_prompts: List[str],
+        input_texts: List[str],
+        num_generations: int = 1,
+        **kwargs,
+    ) -> List[List[str]]:
+        if kwargs.get("use_batch_api", False):
+            raise NotImplementedError(
+                "Batch API is not implemented for Claude models yet."
+            )
+        else:
+            responses = []
+            for input_text, system_prompt in tqdm(
+                zip(input_texts, system_prompts),
+                total=len(input_texts),
+                desc="Processing Claude inputs",
+            ):
+                message = self.apply_chat_template(input_text)
+                response_batch = []
+                for _ in range(num_generations):
+                    response = self.claude_client.messages.create(
+                        model=self.model_name_or_path,
+                        system=system_prompt,
+                        messages=message,  # type: ignore
+                        max_tokens=kwargs.get("max_output_tokens", 512),
+                    )
+                    response_batch.append(response.content[0].text)  # type: ignore
+                responses.append(response_batch)
+
+            return responses
 
 
 class RandomAnswer(Model):
@@ -360,6 +405,10 @@ def get_model(model_name_or_path: str, config: dict) -> Model:
         if not (api_key := config.get("gemini_key")):
             raise ValueError("API key is required for Gemini models.")
         return GeminiModel(model_name_or_path, api_key)
+    elif "claude" in model_name_or_path:
+        if not (api_key := config.get("claude_key")):
+            raise ValueError("API key is required for Claude models.")
+        return ClaudeModel(model_name_or_path, api_key)
     elif model_name_or_path == "RandomAnswer":
         return RandomAnswer()
     else:
