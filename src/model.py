@@ -260,7 +260,11 @@ class OpenAIModel(Model):
             )
         else:
             responses = []
-            for input_text, system_prompt in zip(input_texts, system_prompts):
+            for input_text, system_prompt in tqdm(
+                zip(input_texts, system_prompts),
+                total=len(input_texts),
+                desc="Generating model responses",
+            ):
                 message = self.apply_chat_template(input_text, system_prompt)
                 response_batch = []
                 for _ in range(num_generations):
