@@ -304,9 +304,15 @@ def main():
     parser = argparse.ArgumentParser(
         description="Analyze ASR (Attack Success Rate) between two JSON result files for any model pair"
     )
-    parser.add_argument("--file1", type=str, help="Path to the first JSON results file")
+    parser.add_argument(
+        "--file1",
+        default="/home/hd/hd_hd/hd_go226/projects/research-project/data/judgements/GPT4.1-vs-gemini-1.5-flash/Llama-3.3-70B-Instruct/merged_data.json",
+        type=str,
+        help="Path to the first JSON results file",
+    )
     parser.add_argument(
         "--file2",
+        default="/home/hd/hd_hd/hd_go226/projects/research-project/data/judgements/Llama-3.3-70B-Instruct---gpt-4.1_basic-vs-gemini-1.5-flash/merged_data.json",
         type=str,
         help="Path to the second JSON results file",
     )
@@ -338,9 +344,9 @@ def main():
         better_model = better_model or detected_a
         worse_model = worse_model or detected_b
 
-    analyze_reasonings_topic_model(
-        file2_data, better_model, worse_model, output_directory
-    )
+    # analyze_reasonings_topic_model(
+    #     file2_data, better_model, worse_model, output_directory
+    # )
     analyze_files(file1_data, file2_data, better_model, worse_model, output_directory)
 
 

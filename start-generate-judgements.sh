@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --partition=dev_gpu_h100
+#SBATCH --partition="dev_gpu_h100"
 #SBATCH --job-name="JudgeAnswers"
 #SBATCH --output=%j-%x.out
 #SBATCH --error=%j-%x.err
@@ -7,10 +7,10 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
-#SBATCH --mem=8G
+#SBATCH --mem=128G
 #SBATCH --gres=gpu:2
 #SBATCH --mail-type=ALL
-#SBATCH --mail-user="cluster-notifications.7fo8i@simplelogin.com"
+
 set -e
 
 echo Time is `date +"%H:%M %d-%m-%y"`
@@ -36,15 +36,15 @@ fi
 data_path="data/generated_answers/"
 judgments_path="data/judgements/"
 
-# judge_model_name="meta-llama/Llama-3.3-70B-Instruct"
+judge_model_name="meta-llama/Llama-3.3-70B-Instruct"
 # judge_model_name="meta-llama/Llama-3.1-8B-Instruct"
 # judge_model_name="Qwen/Qwen2.5-72B-Instruct"
-judge_model_name="mistralai/Mixtral-8x7B-Instruct-v0.1"
+# judge_model_name="mistralai/Mixtral-8x7B-Instruct-v0.1"
 # judge_model_name="mistralai/Mistral-Large-Instruct-2411"
 
 # model_1_file="gpt-4.1-answers.json"
-model_1_file="gpt-4.1-answers_aae.json"
-model_2_file="Llama-2-7b-chat-hf-answers.json"
+model_1_file="gpt-4.1-answers_basic.json"
+model_2_file="gemini-1.5-flash-answers.json"
 
 model_1=$(echo "$model_1_file" | sed -E 's/-answers(_[a-z]+)?\.json$/\1/')
 model_2=$(echo "$model_2_file" | sed -E 's/-answers(_[a-z]+)?\.json$/\1/')
@@ -61,7 +61,7 @@ python src/compare_model_answers_batched.py \
     --data_2_path "${data_path}${model_2_file}" \
     --output_path "$output_dir" \
     --start_index "auto" \
-    --step_size 142 # optional, default is 64
+    --step_size 64 # optional, default is 64
     # --question_switching # uncomment to switch questions between e.g. AAE and SAE style (depends if questions in files differ)
     # --introductionary_beginning # uncomment to add an introductionary beginning to the prompt e.g. "Hi there, I am kind of stuck on this question..."
     # --prompt_switching # TODO
