@@ -1,7 +1,10 @@
 import json
 import os
+from openai import timeout
 from tqdm import tqdm
 from datetime import datetime
+
+from utils import SlurmTimeoutHandler
 
 from model import get_model
 
@@ -10,8 +13,9 @@ from utils import (
     read_file,
     load_config,
     parse_args,
-    get_start_end_indices
+    get_start_end_indices,
 )
+
 
 def load_data_lists(data_1_path: str, data_2_path: str) -> tuple:
     if data_1_path == data_2_path:
@@ -39,6 +43,8 @@ def main() -> None:
         model_name_or_path=args.judge_model_name_or_path,
         config=config,
     )
+
+    timeout_handler = SlurmTimeoutHandler()
 
     data_1, data_2 = load_data_lists(args.data_1_path, args.data_2_path)
 
@@ -70,7 +76,8 @@ def main() -> None:
     if args.output_path is not None:
         if os.path.isdir(args.output_path):
             args.output_path = os.path.join(
-                args.output_path, f"results-{current_time}-{name_model_1}-{name_model_2}.json"
+                args.output_path,
+                f"results-{current_time}-{name_model_1}-{name_model_2}.json",
             )
     # if args.output_path is not set, we save it in the same directory as the data file
     else:
@@ -79,10 +86,14 @@ def main() -> None:
         )
 
     if args.start_index == "auto":
-        start_idx, end_idx = get_start_end_by_newest_file(args.output_path, args.step_size, len(data_1))
+        start_idx, end_idx = get_start_end_by_newest_file(
+            args.output_path, args.step_size, len(data_1)
+        )
         print(f"Auto-detected start index: {start_idx}, end index: {end_idx}")
     else:
-        start_idx, end_idx = get_start_end_indices(args.start_index, args.step_size, len(data_1))
+        start_idx, end_idx = get_start_end_indices(
+            args.start_index, args.step_size, len(data_1)
+        )
         print(f"Using start index: {start_idx}, end index: {end_idx}")
 
     input_texts = []
@@ -105,21 +116,31 @@ def main() -> None:
         name_model_1 = data_1[idx]["model_name"]
         name_model_2 = data_2[idx]["model_name"]
 
-        file_content[idx] = []
-
         if question_1 != question_2 and args.question_style_switching:
             questions_to_use = [(question_1, name_model_1), (question_2, name_model_2)]
         else:
-            questions_to_use = [(question_1, name_model_1)] 
+            questions_to_use = [(question_1, name_model_1)]
 
         if args.introductionary_beginning:
             for question, model_name in questions_to_use:
                 if data_1[idx]["answers"]["answer1"]["style"] == "aave":
-                    question_1 = "Hey, I'm stuck on this question and was wonderin' if you could help me out. So, the question go: " + str(question_1)
-                    question_2 = "Hi there, I'm a bit stuck on a question and was wondering if you could help me out. Here's the question: " + str(question_2)
+                    question_1 = (
+                        "Hey, I'm stuck on this question and was wonderin' if you could help me out. So, the question go: "
+                        + str(question_1)
+                    )
+                    question_2 = (
+                        "Hi there, I'm a bit stuck on a question and was wondering if you could help me out. Here's the question: "
+                        + str(question_2)
+                    )
                 elif data_2[idx]["answers"]["answer1"]["style"] == "aave":
-                    question_1 = "Hi there, I'm a bit stuck on a question and was wondering if you could help me out. Here's the question: " + str(question_1)
-                    question_2 = "Hey, I'm stuck on this question and was wonderin' if you could help me out. So, the question go: " + str(question_2)
+                    question_1 = (
+                        "Hi there, I'm a bit stuck on a question and was wondering if you could help me out. Here's the question: "
+                        + str(question_1)
+                    )
+                    question_2 = (
+                        "Hey, I'm stuck on this question and was wonderin' if you could help me out. So, the question go: "
+                        + str(question_2)
+                    )
 
         for question, model_name in questions_to_use:
             for answer_position in ["model1-first", "model2-first"]:
@@ -150,9 +171,27 @@ def main() -> None:
     system_prompts = [system_prompt] * len(input_texts)
 
     results = judge_model.generate(
-        system_prompts, input_texts, num_generations=3, max_output_tokens=512, **config
+        system_prompts,
+        input_texts,
+        num_generations=3,
+        max_output_tokens=512,
+        timeout_handler=timeout_handler,
+        **config,
     )
     extracted_answers = judge_model.get_response_data(results)
+    n_successfully_generated = len(extracted_answers["output"])
+
+    print(
+        f"Successfully generated {n_successfully_generated} out of {len(input_texts)} results"
+    )
+
+    # Only process the results we actually got
+    input_texts = input_texts[:n_successfully_generated]
+    idx_list = idx_list[:n_successfully_generated]
+    answer_positions_list = answer_positions_list[:n_successfully_generated]
+    answer_dicts = answer_dicts[:n_successfully_generated]
+    questions = questions[:n_successfully_generated]
+    question_styles = question_styles[:n_successfully_generated]
 
     for i in range(len(input_texts)):
         idx = idx_list[i]
@@ -161,12 +200,14 @@ def main() -> None:
         question = questions[i]
         question_style = question_styles[i]
 
+        # Create the entry only when we have actual results
+        if idx not in file_content:
+            file_content[idx] = []
+
         answer_preferences = []
         for answer in extracted_answers["extracted_answers"][i]:
             if answer in answer_dict[answer_position]:
-                answer_preferences.append(
-                    answer_dict[answer_position][answer]["label"]
-                )
+                answer_preferences.append(answer_dict[answer_position][answer]["label"])
             else:
                 answer_preferences.append("Unknown")
 
@@ -184,6 +225,16 @@ def main() -> None:
 
     with open(args.output_path, "w") as f:
         f.write(json.dumps(file_content, indent=4))
+
+    if n_successfully_generated < len(system_prompts):
+        print(
+            f"Job was interrupted. Saved partial results: {n_successfully_generated}/{len(system_prompts)} items processed."
+        )
+    else:
+        print(
+            f"Job completed successfully. All {n_successfully_generated} items processed."
+        )
+
 
 if __name__ == "__main__":
     main()

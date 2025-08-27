@@ -148,6 +148,7 @@ class HuggingfaceModel(Model):
         system_prompts: List[str],
         input_texts: List[str],
         num_generations: int = 1,
+        timeout_handler=None,
         **kwargs,
     ) -> List[List[str]]:
         """
@@ -238,6 +239,10 @@ class HuggingfaceModel(Model):
                 for i in range(0, len(responses_flattened), num_generations)
             ]
             all_outputs.extend(grouped_responses)
+
+            if timeout_handler and timeout_handler.is_timeout_imminent():
+                print("Timeout imminent, stopping generation.")
+                break
 
         return all_outputs
 
