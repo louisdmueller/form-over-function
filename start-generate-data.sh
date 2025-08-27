@@ -36,11 +36,8 @@ echo Time is `date +"%H:%M %d-%m-%y"`
 
 export PYTHONPATH=${PWD}/src/
 
-## we have to decide which cuda version to use
-# module load devel/cuda/11.7
 module load devel/cuda/12.8
 
-# currently we use python 3.12.x
 module load devel/python/3.12.3-gnu-11.4
 
 if [ ! -d "venv" ]; then
@@ -67,7 +64,7 @@ if [[ -n "$aae_conversion_model" ]]; then
     echo "Converting SAE answers to AAE, since conversion model was given.
     Chosen answer generation model: $answer_generation_model
     Chosen AAE conversion model: $aae_conversion_model"
-    python src/generate_answers.py \
+    srun python src/generate_answers.py \
         --answer_generation_model_name_or_path "$answer_generation_model" \
         --prompt_model_name_or_path "$aae_conversion_model" \
         --output_path "data/generated_answers/$answer_generation_model-answers.json" \
@@ -76,7 +73,7 @@ if [[ -n "$aae_conversion_model" ]]; then
 else
    echo "Running generation without converting of answers to AAE."
     echo "Chosen answer generation model: $answer_generation_model"
-    python src/generate_answers.py \
+    srun python src/generate_answers.py \
         --answer_generation_model_name_or_path $answer_generation_model \
         --output_path "data/generated_answers/$answer_generation_model-answers.json"
 fi
