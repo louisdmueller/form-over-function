@@ -150,7 +150,17 @@ def main() -> None:
     system_prompts = [system_prompt] * len(input_texts)
 
     results = judge_model.generate(
-        system_prompts, input_texts, num_generations=3, max_output_tokens=512, **config
+        system_prompts,
+        input_texts,
+        num_generations=6,
+        # num_beams=6,
+        max_new_tokens=1024,
+        # do_sample=True,
+        # temperature=0.6,
+        # top_p=0.95,
+        # top_k=20,
+        # min_p=0,
+        **config
     )
     extracted_answers = judge_model.get_response_data(results)
 
