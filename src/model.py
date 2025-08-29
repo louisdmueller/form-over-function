@@ -11,7 +11,9 @@ from transformers import pipeline
 import torch
 from torch.utils.data import Dataset
 from huggingface_hub import repo_exists
+from transformers.distributed import DistributedConfig
 
+MAX_OUTPUT_TOKENS = 512
 
 class Model(ABC):
 
@@ -126,7 +128,8 @@ class HuggingfaceModel(Model):
         super().__init__(model_name_or_path)
         self.model = AutoModelForCausalLM.from_pretrained(
             pretrained_model_name_or_path=model_name_or_path,
-            torch_dtype=torch.float16,
+            # torch_dtype=torch.float16,
+            torch_dtype=torch.bfloat16,
             device_map="auto",
             # max_memory=kwargs.get("max_memory", {0: "92GB", 1: "92GB"}),
             cache_dir=kwargs.get("cache_dir", None),
@@ -157,7 +160,7 @@ class HuggingfaceModel(Model):
         """
         # Not all models support batched inference and max_output_tokens, so it is not passed as an argument.
         batch_size = kwargs.get("batch_size", 12)
-        max_output_tokens = kwargs.get("max_output_tokens", 512)
+        max_output_tokens = kwargs.get("max_output_tokens", MAX_OUTPUT_TOKENS)
 
         print(f"Processing {len(input_texts)} examples")
         print(f"Batch size: {batch_size}")
@@ -213,11 +216,11 @@ class HuggingfaceModel(Model):
             inputs = inputs.to(self.model.device)
             input_length = inputs["input_ids"].shape[1]
 
-            with torch.no_grad():
+            with torch.no_grad(), torch.autocast("cuda", dtype=torch.bfloat16):
                 output = self.model.generate(
                     **inputs,
                     max_new_tokens=max_output_tokens,
-                    # num_beams=num_generations,
+                    num_beams=num_generations,
                     num_return_sequences=num_generations,
                     do_sample=kwargs.get("do_sample", False),
                     top_p=kwargs.get("top_p", None),
@@ -273,7 +276,7 @@ class OpenAIModel(Model):
                     response = self.openai_client.responses.create(
                         model=self.model_name_or_path,
                         input=message,  # type: ignore
-                        max_output_tokens=kwargs.get("max_output_tokens", 512),  # type: ignore
+                        max_output_tokens=kwargs.get("max_output_tokens", MAX_OUTPUT_TOKENS),  # type: ignore
                     )
                     response_batch.append(response.output_text)
                 responses.append(response_batch)
@@ -297,12 +300,12 @@ class GeminiModel(Model):
         for input_text, system_prompt in zip(input_texts, system_prompts):
             if system_prompt:
                 config = GenerateContentConfig(
-                    max_output_tokens=kwargs.get("max_output_tokens", 512),
+                    max_output_tokens=kwargs.get("max_output_tokens", MAX_OUTPUT_TOKENS),
                     system_instruction=system_prompt,
                 )
             else:
                 config = GenerateContentConfig(
-                    max_output_tokens=kwargs.get("max_output_tokens", 512),
+                    max_output_tokens=kwargs.get("max_output_tokens", MAX_OUTPUT_TOKENS),
                 )
 
             response_batch = []
@@ -348,7 +351,7 @@ class ClaudeModel(Model):
                         model=self.model_name_or_path,
                         system=system_prompt,
                         messages=message,  # type: ignore
-                        max_tokens=kwargs.get("max_output_tokens", 512),
+                        max_tokens=kwargs.get("max_output_tokens", MAX_OUTPUT_TOKENS),
                     )
                     response_batch.append(response.content[0].text)  # type: ignore
                 responses.append(response_batch)
@@ -477,6 +480,9 @@ def get_model(model_name_or_path: str, config: dict) -> Model:
         login(token)
 
         return HuggingfaceModel(model_name_or_path, **config)
+        # Originally I used Huggingface's pipeline for gpt-oss but normal .generate() works fine too
+        # so I am leaving the class here for future reference
+        # return HuggingfacePipelineModel(model_name_or_path, **config)
 
     elif "gpt" in model_name_or_path:
         if not (api_key := config.get("openai_key")):
