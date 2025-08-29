@@ -1,13 +1,15 @@
 from abc import ABC, abstractmethod
 import re
 from string import ascii_letters, digits
-from typing import List, Dict
+from typing import Any, List, Dict
 from openai import OpenAI
 from google import genai
 from google.genai.types import GenerateContentConfig
 from tqdm import tqdm, trange
 from transformers import AutoModelForCausalLM, AutoTokenizer  # type: ignore
+from transformers import pipeline
 import torch
+from torch.utils.data import Dataset
 from huggingface_hub import repo_exists
 
 
@@ -383,6 +385,82 @@ class RandomAnswer(Model):
                 response_batch.append(response)
             responses.append(response_batch)
         return responses
+
+class HuggingfacePipelineDataset(Dataset):
+    def __init__(self, formatted_inputs: List[Dict[str, str]]):
+        self.data = formatted_inputs
+
+    def __len__(self):
+        return len(self.data)
+    
+    def __getitem__(self, idx):
+        return self.data[idx]
+
+class HuggingfacePipelineModel(Model):
+    def __init__(self, model_name_or_path: str, **kwargs):
+        # super().__init__(model_name_or_path, **kwargs)
+        self.pipe = pipeline(
+            "text-generation",
+            model=model_name_or_path,
+            torch_dtype=kwargs.get("torch_dtype", "auto"),
+            device_map="auto",
+        )
+        self.tokenizer = self.pipe.tokenizer
+        
+        self.has_chat_template = (
+            hasattr(self.tokenizer, "chat_template")
+            and self.tokenizer.chat_template is not None
+        )
+
+
+    def generate(
+        self,
+        system_prompts: List[str],
+        input_texts: List[str],
+        num_generations: int = 1,
+        **kwargs,
+    ) -> List[List[str]]:
+        """
+        Batched inference for HuggingFace's Pipelined models.
+
+        Attention:
+        This class is not optimized and is only for reference.
+        In the future one should implement a dataset and dataloader for better performance.
+        Also the outputs are not extracted properly yet.
+        """
+        max_output_tokens = kwargs.get("max_output_tokens", MAX_OUTPUT_TOKENS)
+        batch_size = kwargs.get("batch_size", 12)
+
+        formatted_inputs = self.apply_chat_template_batched(input_texts, system_prompts, kwargs)
+        formatted_inputs = formatted_inputs[:5]
+        # dataset = HuggingfacePipelineDataset(formatted_inputs)
+
+        # The pipeline returns a flat list of outputs, each with num_return_sequences
+        outputs = self.pipe(
+            formatted_inputs,
+            batch_size=batch_size,
+            max_new_tokens=max_output_tokens,
+            num_beams=num_generations,
+            num_return_sequences=num_generations,
+            do_sample=kwargs.get("do_sample", False),
+            top_p=kwargs.get("top_p", None),
+            min_p=kwargs.get("min_p", None),
+            top_k=kwargs.get("top_k", None),
+            temperature=kwargs.get("temperature", None),
+            return_dict_in_generate=False,
+        )
+
+        print(outputs)
+
+        # Flatten and group outputs per input
+        # Each output is a dict with 'generated_text'
+        responses_flattened = [o["generated_text"].strip() for o in outputs]
+        grouped_responses = [
+            responses_flattened[i : i + num_generations]
+            for i in range(0, len(responses_flattened), num_generations)
+        ]
+
+        return grouped_responses
 
 
 def get_model(model_name_or_path: str, config: dict) -> Model:
