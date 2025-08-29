@@ -108,6 +108,15 @@ class Model(ABC):
             flags=re.IGNORECASE,
         )
 
+        # when gpt-oss uses "thinking" in the answer the answer will be at the very end but prepended "assistantfinal"
+        # e.g. "assistantfinalAnswer1"
+        # we simply just look at the last word and see whether it matches
+        match_thinking = re.search(
+            r"(Answer1|Answer2|Tie)\s*$",
+            text.strip().split("\n")[-1],
+            flags=re.IGNORECASE,
+        )
+
         # If both start and end match but are different, return None (ambiguous answer)
         if (
             match_start
@@ -119,6 +128,8 @@ class Model(ABC):
             return match_start.group(1).lower()
         if match_end:
             return match_end.group(1).lower()
+        if match_thinking:
+            return match_thinking.group(1).lower()
         # If neither matches, return None (no answer found)
         return None
     
