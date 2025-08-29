@@ -121,6 +121,42 @@ class Model(ABC):
             return match_end.group(1).lower()
         # If neither matches, return None (no answer found)
         return None
+    
+    def apply_chat_template_batched(
+        self,
+        batch_input_texts: List[str],
+        batch_system_prompts: List[str],
+        kwargs: Dict[str, Any]
+    ):
+        if self.has_chat_template:
+            messages_batch = [
+                self.apply_chat_template(input_text, sys_prompt)
+                for input_text, sys_prompt in zip(
+                    batch_input_texts, batch_system_prompts
+                )
+            ]
+            formatted_inputs = [
+                self.tokenizer.apply_chat_template(
+                    msgs,
+                    return_tensors="pt",
+                    tokenize=False,
+                    add_generation_prompt=True,
+                    max_length=kwargs.get(
+                        "judge_tokenizer_max_length",
+                        self.tokenizer.model_max_length,
+                    ),  # 4096 # if OverflowError e.g. for gpt-neox
+                )
+                for msgs in messages_batch
+            ]
+        else:
+            # If no chat template is available, just concatenate the system prompt and input text
+            formatted_inputs = [
+                (sys_prompt + "\n" if sys_prompt else "") + input_text
+                for input_text, sys_prompt in zip(
+                    batch_input_texts, batch_system_prompts
+                )
+            ]
+        return formatted_inputs
 
 
 class HuggingfaceModel(Model):
@@ -175,34 +211,7 @@ class HuggingfaceModel(Model):
             batch_system_prompts = system_prompts[i : i + batch_size]
             batch_input_texts = input_texts[i : i + batch_size]
 
-            if self.has_chat_template:
-                messages_batch = [
-                    self.apply_chat_template(input_text, sys_prompt)
-                    for input_text, sys_prompt in zip(
-                        batch_input_texts, batch_system_prompts
-                    )
-                ]
-                formatted_inputs = [
-                    self.tokenizer.apply_chat_template(
-                        msgs,
-                        return_tensors="pt",
-                        tokenize=False,
-                        add_generation_prompt=True,
-                        max_length=kwargs.get(
-                            "judge_tokenizer_max_length",
-                            self.tokenizer.model_max_length,
-                        ),  # 4096 # if OverflowError e.g. for gpt-neox
-                    )
-                    for msgs in messages_batch
-                ]
-            else:
-                # If no chat template is available, just concatenate the system prompt and input text
-                formatted_inputs = [
-                    (sys_prompt + "\n" if sys_prompt else "") + input_text
-                    for input_text, sys_prompt in zip(
-                        batch_input_texts, batch_system_prompts
-                    )
-                ]
+            formatted_inputs = self.apply_chat_template_batched(batch_input_texts, batch_system_prompts, kwargs)
 
             inputs = self.tokenizer(
                 formatted_inputs,
