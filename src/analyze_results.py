@@ -5,7 +5,6 @@ import argparse
 from typing import Dict, Optional, Tuple
 
 from pathlib import Path
-from httpx import get
 from pandas import DataFrame
 
 from analyze_reasonings import analyze_reasonings_topic_model
@@ -250,7 +249,7 @@ def calculate_cr(outcomes: Dict[str, int]) -> float:
     return cr
 
 
-def analyze_files(
+def run_analysis_on_judgements(
     file1_data: dict,
     file2_data: dict,
     better_model: str,
@@ -275,22 +274,14 @@ def analyze_files(
         file1_results, file2_results, better_model, worse_model
     )
 
-    asr = calculate_asr(outcomes)
-    aasr = calculate_aasr(outcomes)
-    fr = calculate_fr(outcomes)
-    cr = calculate_cr(outcomes)
-    v1 = outcomes["better_model_wins_file1"]
-    v2 = outcomes["worse_model_wins_file1"]
-    ties = outcomes["ties_file1"]
-
     result = {
-        "asr": asr,
-        "aasr": aasr,
-        "fr": fr,
-        "cr": cr,
-        "v1": v1,
-        "v2": v2,
-        "ties": ties,
+        "asr": calculate_asr(outcomes),
+        "aasr": calculate_aasr(outcomes),
+        "fr": calculate_fr(outcomes),
+        "cr": calculate_cr(outcomes),
+        "v1": outcomes["better_model_wins_file1"],
+        "v2": outcomes["worse_model_wins_file1"],
+        "ties": outcomes["ties_file1"],
     }
     pd.DataFrame([result]).to_excel(
         output_directory / f"metrics_{better_model}_vs_{worse_model}.xlsx",
@@ -304,44 +295,65 @@ def main():
     parser = argparse.ArgumentParser(
         description="Analyze ASR (Attack Success Rate) between two JSON result files for any model pair"
     )
-    parser.add_argument("--file1", type=str, help="Path to the first JSON results file")
+    parser.add_argument(
+        "--file1",
+        default="/home/hd/hd_hd/hd_go226/projects/research-project/data/judgements/GPT4.1-vs-gemini-1.5-flash/Llama-3.3-70B-Instruct/merged_data.json",
+        type=str,
+        help="Path to the first JSON results file",
+    )
     parser.add_argument(
         "--file2",
+        default="/home/hd/hd_hd/hd_go226/projects/research-project/data/judgements/Llama-3.3-70B-Instruct---gpt-4.1_basic-vs-gemini-1.5-flash/merged_data.json",
         type=str,
         help="Path to the second JSON results file",
     )
     parser.add_argument(
-        "--better_model",
+        "--better_model_name",
         type=str,
         help="Name of the first model (auto-detected if not provided)",
     )
     parser.add_argument(
-        "--worse_model",
+        "--worse_model_name",
         type=str,
         help="Name of the second model (auto-detected if not provided)",
+    )
+
+    parser.add_argument(
+        "--analyze_reasonings",
+        action="store_true",
+        help="If set, analyze reasonings using topic modeling",
+        default=False,
+    )
+
+    parser.add_argument(
+        "--output_directory",
+        type=str,
+        default="data/analysis_results",
+        help="Directory to save the output files",
     )
 
     args = parser.parse_args()
 
     # Output into the same directory as file1 or file2
-    output_directory = (
-        Path(args.file2).parent if args.file2 else Path(args.file1).parent
-    )
+    output_path = Path(args.output_directory)
     file1_data = load_json_file(args.file1)
     file2_data = load_json_file(args.file2)
 
-    better_model = args.better_model
-    worse_model = args.worse_model
+    better_model_name = args.better_model_name
+    worse_model_name = args.worse_model_name
 
-    if better_model is None or worse_model is None:
+    if better_model_name is None or worse_model_name is None:
         (detected_a, detected_b) = extract_model_names_from_data(file1_data)
-        better_model = better_model or detected_a
-        worse_model = worse_model or detected_b
+        better_model_name = better_model_name or detected_a
+        worse_model_name = worse_model_name or detected_b
 
-    analyze_reasonings_topic_model(
-        file2_data, better_model, worse_model, output_directory
+    if args.analyze_reasonings:
+        analyze_reasonings_topic_model(
+            file2_data, better_model_name, worse_model_name, output_path
+        )
+    run_analysis_on_judgements(
+        file1_data, file2_data, better_model_name, worse_model_name, output_path
     )
-    analyze_files(file1_data, file2_data, better_model, worse_model, output_directory)
 
 
 if __name__ == "__main__":
