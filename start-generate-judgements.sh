@@ -58,7 +58,7 @@ else
 fi
 
 if [[ $# -ge 2 ]]; then
-    amswer_file1=$2
+    answer_file1=$2
 else
     answer_file1="gpt-4.1-answers_basic.json"
     echo "No answer file 1 provided as argument, using script default: $answer_file1"
