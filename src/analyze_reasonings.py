@@ -1,12 +1,7 @@
-from calendar import c
-from logging import config
-from pathlib import Path
-from typing import List
+import os
+from typing import List, Optional
 
 from bertopic import BERTopic
-from bertopic.representation import KeyBERTInspired
-
-from bertopic.vectorizers import ClassTfidfTransformer
 import nltk
 import re
 import openai
@@ -17,7 +12,6 @@ from sklearn.feature_extraction.text import CountVectorizer
 from hdbscan import HDBSCAN
 
 import spacy
-
 from utils import load_config
 
 nltk.download("punkt")
@@ -123,12 +117,12 @@ def load_bert_model(model_name="sentence-transformers/all-MiniLM-L6-v2"):
 
 
 def extract_reasoning_from_files(
-    file_data: dict, better_model: str, worse_model: str
+    file_data: dict, better_model_name: str, worse_model_name: str
 ) -> dict[str, list[str]]:
     """
     Extract reasoning from a dictionary containing file data
     """
-    reasonings = {model: [] for model in [better_model, worse_model]}
+    reasonings = {model: [] for model in [better_model_name, worse_model_name]}
     for question_group_key in file_data.keys():
         if question_group_key == "metadata":
             continue
@@ -139,33 +133,40 @@ def extract_reasoning_from_files(
             sample_reasonings = question_data["result"]
             better_answer = (
                 "answer1"
-                if question_data["answer1"]["label"] == better_model
+                if question_data["answer1"]["label"] == better_model_name
                 else "answer2"
             )
             worse_answer = (
                 "answer1"
-                if question_data["answer1"]["label"] == worse_model
+                if question_data["answer1"]["label"] == worse_model_name
                 else "answer2"
             )
             sample_reasonings_better = filter_reasonings(
                 sample_reasonings, better_answer
             )
             sample_reasonings_worse = filter_reasonings(sample_reasonings, worse_answer)
-            reasonings[better_model].extend(sample_reasonings_better)
-            reasonings[worse_model].extend(sample_reasonings_worse)
+            reasonings[better_model_name].extend(sample_reasonings_better)
+            reasonings[worse_model_name].extend(sample_reasonings_worse)
     print(
-        f"Extracted {len(reasonings[better_model])} reasonings for {better_model}"
-        f" and {len(reasonings[worse_model])} reasonings for {worse_model}"
+        f"Extracted {len(reasonings[better_model_name])} reasonings for {better_model_name}"
+        f" and {len(reasonings[worse_model_name])} reasonings for {worse_model_name}"
     )
-    reasonings[better_model] = list(set(reasonings[better_model]))
-    reasonings[worse_model] = list(set(reasonings[worse_model]))
-    print(f"Unique reasonings for {better_model}: {len(reasonings[better_model])}")
-    print(f"Unique reasonings for {worse_model}: {len(reasonings[worse_model])}")
+    reasonings[better_model_name] = list(set(reasonings[better_model_name]))
+    reasonings[worse_model_name] = list(set(reasonings[worse_model_name]))
+    print(
+        f"Unique reasonings for {better_model_name}: {len(reasonings[better_model_name])}"
+    )
+    print(
+        f"Unique reasonings for {worse_model_name}: {len(reasonings[worse_model_name])}"
+    )
     return reasonings
 
 
 def analyze_reasonings_topic_model(
-    file_data: dict, better_model: str, worse_model: str, output_directory: Path
+    file_data: dict,
+    output_directory: str,
+    better_model_name: str,
+    worse_model_name: str,
 ):
     """
     Analyze results using topic modeling
@@ -206,29 +207,37 @@ def analyze_reasonings_topic_model(
         language="english",
     )
 
-    reasonings = extract_reasoning_from_files(file_data, better_model, worse_model)
+    reasonings = extract_reasoning_from_files(
+        file_data, better_model_name, worse_model_name
+    )
 
-    better_topic_model.fit_transform(reasonings[better_model])
+    better_topic_model.fit_transform(reasonings[better_model_name])
     print(f"Better model topics: {better_topic_model.get_topic_info() }")
     better_topic_model.get_topic_info().to_excel(
-        output_directory / f"better_model_topics_{better_model}_vs_{worse_model}.xlsx",
+        os.path.join(
+            output_directory,
+            f"better_model_name_topics_{better_model_name}_vs_{worse_model_name}.xlsx",
+        ),
         index=False,
     )
     better_hierarchical_topics = better_topic_model.hierarchical_topics(
-        reasonings[better_model]
+        reasonings[better_model_name]
     )
     print(better_topic_model.get_topic_tree(better_hierarchical_topics))
 
-    worse_topic_model.fit_transform(reasonings[worse_model])
+    worse_topic_model.fit_transform(reasonings[worse_model_name])
 
     print(f"Worse model topics: {worse_topic_model.get_topic_info() }")
 
     worse_topic_model.get_topic_info().to_excel(
-        output_directory / f"worse_model_topics_{better_model}_vs_{worse_model}.xlsx",
+        os.path.join(
+            output_directory,
+            f"worse_model_name_topics_{better_model_name}_vs_{worse_model_name}.xlsx",
+        ),
         index=False,
     )
 
     worse_hierarchical_topics = worse_topic_model.hierarchical_topics(
-        reasonings[worse_model]
+        reasonings[worse_model_name]
     )
     print(worse_topic_model.get_topic_tree(worse_hierarchical_topics))
