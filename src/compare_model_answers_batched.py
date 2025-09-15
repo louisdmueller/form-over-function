@@ -228,9 +228,15 @@ def main() -> None:
         system_prompts,
         input_texts,
         num_generations=3,
-        max_output_tokens=512,
+        # num_beams=3,
+        max_new_tokens=512,
+        # do_sample=True,
+        # temperature=0.6,
+        # top_p=0.95,
+        # top_k=20,
+        # min_p=0,
         timeout_handler=timeout_handler,
-        **config,
+        **config
     )
     extracted_answers = judge_model.get_response_data(results)
     n_successfully_generated = len(extracted_answers["output"])

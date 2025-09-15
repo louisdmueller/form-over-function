@@ -1,14 +1,19 @@
 from abc import ABC, abstractmethod
 import re
 from string import ascii_letters, digits
-from typing import List, Dict
+from typing import Any, List, Dict
 from openai import OpenAI
 from google import genai
 from google.genai.types import GenerateContentConfig
 from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer  # type: ignore
+from transformers import pipeline
 import torch
+from torch.utils.data import Dataset
 from huggingface_hub import repo_exists
+from transformers.distributed import DistributedConfig
+
+MAX_OUTPUT_TOKENS = 512
 
 
 class Model(ABC):
@@ -114,6 +119,15 @@ class Model(ABC):
             flags=re.IGNORECASE,
         )
 
+        # when gpt-oss uses "thinking" in the answer the answer will be at the very end but prepended "assistantfinal"
+        # e.g. "assistantfinalAnswer1"
+        # we simply just look at the last word and see whether it matches
+        match_thinking = re.search(
+            r"(Answer1|Answer2|Tie)\s*$",
+            text.strip().split("\n")[-1],
+            flags=re.IGNORECASE,
+        )
+
         # If both start and end match but are different, return None (ambiguous answer)
         if (
             match_start
@@ -125,8 +139,46 @@ class Model(ABC):
             return match_start.group(1).lower()
         if match_end:
             return match_end.group(1).lower()
+        if match_thinking:
+            return match_thinking.group(1).lower()
         # If neither matches, return None (no answer found)
         return None
+
+    def apply_chat_template_batched(
+        self,
+        batch_input_texts: List[str],
+        batch_system_prompts: List[str],
+        kwargs: Dict[str, Any],
+    ):
+        if self.has_chat_template:
+            messages_batch = [
+                self.apply_chat_template(input_text, sys_prompt)
+                for input_text, sys_prompt in zip(
+                    batch_input_texts, batch_system_prompts
+                )
+            ]
+            formatted_inputs = [
+                self.tokenizer.apply_chat_template(
+                    msgs,
+                    return_tensors="pt",
+                    tokenize=False,
+                    add_generation_prompt=True,
+                    max_length=kwargs.get(
+                        "judge_tokenizer_max_length",
+                        self.tokenizer.model_max_length,
+                    ),  # 4096 # if OverflowError e.g. for gpt-neox
+                )
+                for msgs in messages_batch
+            ]
+        else:
+            # If no chat template is available, just concatenate the system prompt and input text
+            formatted_inputs = [
+                (sys_prompt + "\n" if sys_prompt else "") + input_text
+                for input_text, sys_prompt in zip(
+                    batch_input_texts, batch_system_prompts
+                )
+            ]
+        return formatted_inputs
 
 
 class HuggingfaceModel(Model):
@@ -134,7 +186,8 @@ class HuggingfaceModel(Model):
         super().__init__(model_name_or_path)
         self.model = AutoModelForCausalLM.from_pretrained(
             pretrained_model_name_or_path=model_name_or_path,
-            torch_dtype=torch.float16,
+            # torch_dtype=torch.float16,
+            torch_dtype=torch.bfloat16,
             device_map="auto",
             # max_memory=kwargs.get("max_memory", {0: "92GB", 1: "92GB"}),
             cache_dir=kwargs.get("cache_dir", None),
@@ -195,7 +248,7 @@ class HuggingfaceModel(Model):
         """
         # Not all models support batched inference and max_output_tokens, so it is not passed as an argument.
         batch_size = kwargs.get("batch_size", 12)
-        max_output_tokens = kwargs.get("max_output_tokens", 512)
+        max_output_tokens = kwargs.get("max_output_tokens", MAX_OUTPUT_TOKENS)
 
         print(f"Processing {len(input_texts)} examples")
         print(f"Batch size: {batch_size}")
@@ -229,11 +282,11 @@ class HuggingfaceModel(Model):
             tokenized_inputs = tokenized_inputs.to(self.model.device)
             input_length = tokenized_inputs["input_ids"].shape[1]
 
-            with torch.no_grad():
+            with torch.no_grad(), torch.autocast("cuda", dtype=torch.bfloat16):
                 output = self.model.generate(
                     **tokenized_inputs,
                     max_new_tokens=max_output_tokens,
-                    # num_beams=num_generations,
+                    num_beams=num_generations,
                     num_return_sequences=num_generations,
                     do_sample=kwargs.get("do_sample", False),
                     top_p=kwargs.get("top_p", None),
@@ -293,7 +346,7 @@ class OpenAIModel(Model):
                     response = self.openai_client.responses.create(
                         model=self.model_name_or_path,
                         input=message,  # type: ignore
-                        max_output_tokens=kwargs.get("max_output_tokens", 512),  # type: ignore
+                        max_output_tokens=kwargs.get("max_output_tokens", MAX_OUTPUT_TOKENS),  # type: ignore
                     )
                     response_batch.append(response.output_text)
                 responses.append(response_batch)
@@ -317,12 +370,16 @@ class GeminiModel(Model):
         for input_text, system_prompt in zip(input_texts, system_prompts):
             if system_prompt:
                 config = GenerateContentConfig(
-                    max_output_tokens=kwargs.get("max_output_tokens", 512),
+                    max_output_tokens=kwargs.get(
+                        "max_output_tokens", MAX_OUTPUT_TOKENS
+                    ),
                     system_instruction=system_prompt,
                 )
             else:
                 config = GenerateContentConfig(
-                    max_output_tokens=kwargs.get("max_output_tokens", 512),
+                    max_output_tokens=kwargs.get(
+                        "max_output_tokens", MAX_OUTPUT_TOKENS
+                    ),
                 )
 
             response_batch = []
@@ -368,7 +425,7 @@ class ClaudeModel(Model):
                         model=self.model_name_or_path,
                         system=system_prompt,
                         messages=message,  # type: ignore
-                        max_tokens=kwargs.get("max_output_tokens", 512),
+                        max_tokens=kwargs.get("max_output_tokens", MAX_OUTPUT_TOKENS),
                     )
                     response_batch.append(response.content[0].text)  # type: ignore
                 responses.append(response_batch)
@@ -407,6 +464,85 @@ class RandomAnswer(Model):
         return responses
 
 
+class HuggingfacePipelineDataset(Dataset):
+    def __init__(self, formatted_inputs: List[Dict[str, str]]):
+        self.data = formatted_inputs
+
+    def __len__(self):
+        return len(self.data)
+
+    def __getitem__(self, idx):
+        return self.data[idx]
+
+
+class HuggingfacePipelineModel(Model):
+    def __init__(self, model_name_or_path: str, **kwargs):
+        # super().__init__(model_name_or_path, **kwargs)
+        self.pipe = pipeline(
+            "text-generation",
+            model=model_name_or_path,
+            torch_dtype=kwargs.get("torch_dtype", "auto"),
+            device_map="auto",
+        )
+        self.tokenizer = self.pipe.tokenizer
+
+        self.has_chat_template = (
+            hasattr(self.tokenizer, "chat_template")
+            and self.tokenizer.chat_template is not None
+        )
+
+    def generate(
+        self,
+        system_prompts: List[str],
+        input_texts: List[str],
+        num_generations: int = 1,
+        **kwargs,
+    ) -> List[List[str]]:
+        """
+        Batched inference for HuggingFace's Pipelined models.
+
+        Attention:
+        This class is not optimized and is only for reference.
+        In the future one should implement a dataset and dataloader for better performance.
+        Also the outputs are not extracted properly yet.
+        """
+        max_output_tokens = kwargs.get("max_output_tokens", MAX_OUTPUT_TOKENS)
+        batch_size = kwargs.get("batch_size", 12)
+
+        formatted_inputs = self.apply_chat_template_batched(
+            input_texts, system_prompts, kwargs
+        )
+        formatted_inputs = formatted_inputs[:5]
+        # dataset = HuggingfacePipelineDataset(formatted_inputs)
+
+        # The pipeline returns a flat list of outputs, each with num_return_sequences
+        outputs = self.pipe(
+            formatted_inputs,
+            batch_size=batch_size,
+            max_new_tokens=max_output_tokens,
+            num_beams=num_generations,
+            num_return_sequences=num_generations,
+            do_sample=kwargs.get("do_sample", False),
+            top_p=kwargs.get("top_p", None),
+            min_p=kwargs.get("min_p", None),
+            top_k=kwargs.get("top_k", None),
+            temperature=kwargs.get("temperature", None),
+            return_dict_in_generate=False,
+        )
+
+        print(outputs)
+
+        # Flatten and group outputs per input
+        # Each output is a dict with 'generated_text'
+        responses_flattened = [o["generated_text"].strip() for o in outputs]
+        grouped_responses = [
+            responses_flattened[i : i + num_generations]
+            for i in range(0, len(responses_flattened), num_generations)
+        ]
+
+        return grouped_responses
+
+
 def get_model(model_name_or_path: str, config: dict) -> Model:
     if repo_exists(
         model_name_or_path, repo_type="model", token=config.get("huggingface_hub_token")
@@ -421,6 +557,9 @@ def get_model(model_name_or_path: str, config: dict) -> Model:
         login(token)
 
         return HuggingfaceModel(model_name_or_path, **config)
+        # Originally I used Huggingface's pipeline for gpt-oss but normal .generate() works fine too
+        # so I am leaving the class here for future reference
+        # return HuggingfacePipelineModel(model_name_or_path, **config)
 
     elif "gpt" in model_name_or_path:
         if not (api_key := config.get("openai_key")):
