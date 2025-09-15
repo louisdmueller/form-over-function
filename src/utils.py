@@ -3,7 +3,7 @@ import json
 import os
 import random
 import string
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List
 
 import pandas as pd
 import yaml
@@ -11,9 +11,6 @@ from nltk import download, edit_distance
 from nltk.tokenize import word_tokenize
 
 import signal
-import sys
-import pickle
-import time
 
 download("punkt_tab", quiet=True)
 
@@ -121,10 +118,10 @@ def parse_args() -> argparse.Namespace:
     )
 
     parser.add_argument(
-        "--step_size",
+        "--data_fraction",
         type=float,
-        default=None,
-        help="Step size to process the data in chunks. If not provided, the entire data will be processed. Can either be an integer or a float (e.g., 0.1 for 10% of the data).",
+        default=1.0,
+        help="Fraction of the data to process, between 0 and 1. Default is 1 (all data). For debugging and testing.",
     )
 
     parser.add_argument(
@@ -180,46 +177,19 @@ def random_id(length=8):
     return "".join(random.choices(chars, k=length))
 
 
-def get_start_end_indices(start_index, step_size, data_length) -> Tuple[int, int]:
+def get_start_index_by_newest_file(
+    data_directory: str,
+) -> int:
     """
-    Calculate the start and end indices based on the provided start index and step size.
-    If the start index is a float, it is treated as a percentage of the data length.
-    The end index is calculated as start_index + step_size.
-    """
-    if start_index < 0 or step_size <= 0:
-        raise ValueError(
-            "Start index must be non-negative and step size must be positive."
-        )
-
-    if isinstance(start_index, float):
-        start_index = int(start_index * data_length)
-    else:
-        start_index = int(start_index)
-
-    if step_size.is_integer():
-        step_size = int(step_size)
-    elif isinstance(step_size, float):
-        if step_size < 0 or step_size > 1:
-            raise ValueError("Step size as a float must be between 0 and 1.")
-        step_size = int(step_size * data_length)
-
-    end_index = start_index + step_size
-    if end_index > data_length:
-        end_index = data_length
-
-    return start_index, end_index
-
-
-def get_start_end_by_newest_file(
-    data_file_path: str,
-    step_size: float,
-    length: int,
-) -> Tuple[int, int]:
-    """
-    Get the start and end indices based on the newest file in the data directory.
+    Get the start index based on the newest file in the data directory.
     The newest file is determined by the last modified time.
+
+    Args:
+        data_directory (str): The directory containing the judgement data files.
+
+    Returns:
+        int: The start index to continue processing from.
     """
-    data_directory = os.path.dirname(data_file_path)
     files = [
         f
         for f in os.listdir(data_directory)
@@ -227,14 +197,7 @@ def get_start_end_by_newest_file(
     ]
     if not files:
         print("No JSON files found in the directory.")
-        if step_size is not None:
-            start_index, end_index = get_start_end_indices(0, step_size, length)
-            return start_index, end_index
-        else:
-            print(
-                "No step size provided, returning default indices (0, 142)."
-            )  # TODO change this to length of data
-            return 0, 142
+        return 0
 
     newest_file = max(
         files, key=lambda f: os.path.getmtime(os.path.join(data_directory, f))
@@ -250,20 +213,8 @@ def get_start_end_by_newest_file(
             f"Only {data.keys()} were found, but expected indices."
         )
     new_start_index = max(indices) + 1
-    if step_size is not None:
-        new_start_index, new_end_index = get_start_end_indices(
-            new_start_index, step_size, length
-        )
-    else:
-        new_end_index = new_start_index + len(indices)
 
-    if new_start_index == new_end_index:
-        raise ValueError(
-            "The new start index is equal to the new end index. "
-            "The data was probably already processed completely."
-        )
-
-    return new_start_index, new_end_index
+    return new_start_index
 
 
 def create_comparison_csv(
@@ -340,7 +291,26 @@ def _add_type_token_ratio_column(
     return df
 
 
-def remove_slash_in_model_name(args: argparse.Namespace) -> None:
+def sanitize_output_path(output_path: str, model_name: str) -> str:
+    """
+    If the model name contains a slash and is part of the output path,
+    replace the model name in the output path with a sanitized version
+    that has the slash removed.
+
+    Args:
+        output_path (str): The original output path.
+        model_name (str): The model name that may contain a slash.
+
+    Returns:
+        str: The sanitized output path.
+    """
+    if "/" in model_name and model_name in output_path:
+        sanitized_model_name = remove_organization_from_hf_model_name(model_name)
+        output_path = output_path.replace(model_name, sanitized_model_name)
+    return output_path
+
+
+def remove_organization_from_hf_model_name(model_name: str) -> str:
     """
     Remove the organization from the (huggingface) model name.
     This is necessary because the slash used in the model name is also
@@ -350,14 +320,47 @@ def remove_slash_in_model_name(args: argparse.Namespace) -> None:
         "meta-llama/Llama-3.3-70B-Instruct" will be replaced with
         "Llama-3.3-70B-Instruct".
     """
-    if (
-        "/" in args.answer_generation_model_name_or_path
-        and args.answer_generation_model_name_or_path in args.output_path
-    ):
-        model_name = args.answer_generation_model_name_or_path.split("/")[-1]
-        args.output_path = args.output_path.replace(
-            args.answer_generation_model_name_or_path, model_name
+    return model_name.split("/")[-1] if "/" in model_name else model_name
+
+
+def sanitize_model_name(model_name: str) -> str:
+    """
+    Sanitize the model name by replacing slashes with underscores.
+    This is useful for creating file names that include the model name.
+
+    Args:
+        model_name (str): The original model name.
+
+    Returns:
+        str: The sanitized model name.
+    """
+    return model_name.replace("/", "_") if "/" in model_name else model_name
+
+
+def prepare_question_with_intro(
+    question: str,
+    style: str,
+) -> str:
+    """
+    Add introductory text to question based on style.
+    Args:
+        question (str): The original question.
+        style (str): The style of the question, e.g., 'aave' or 'sae'.
+
+    """
+    if style == "aave":
+        return (
+            "Hey, I'm stuck on this question and was wonderin' if you could help me out. So, the question go: "
+            + str(question)
         )
+    elif style == "sae":
+        return (
+            "Hi there, I'm a bit stuck on a question and was wondering if you could help me out. Here's the question: "
+            + str(question)
+        )
+    else:
+        print(f"Unknown style '{style}' for question. No introductory text added.")
+        return question
 
 
 class SlurmTimeoutHandler:
