@@ -1,23 +1,42 @@
+"""
+This script lets a judge model evaluate answers from two different models
+in batches.
+"""
+
+from dataclasses import dataclass
+from typing import List, Tuple
 import json
 import os
-from openai import timeout
 from tqdm import tqdm
 from datetime import datetime
 
-from utils import SlurmTimeoutHandler
+from utils import (
+    SlurmTimeoutHandler,
+    get_start_index_by_newest_file,
+    prepare_question_with_intro,
+    sanitize_model_name,
+)
 
 from model import get_model
 
 from utils import (
-    get_start_end_by_newest_file,
     read_file,
     load_config,
     parse_args,
-    get_start_end_indices,
 )
 
 
-def load_data_lists(data_1_path: str, data_2_path: str) -> tuple:
+def load_data_lists(data_1_path: str, data_2_path: str) -> Tuple[list, list]:
+    """
+    Load the data lists from the given file paths and ensure they are valid.
+
+    Args:
+        data_1_path (str): Path to the first data file.
+        data_2_path (str): Path to the second data file.
+
+    Returns:
+        tuple: A tuple containing two lists of data.
+    """
     if data_1_path == data_2_path:
         raise ValueError(
             "The paths for data_1 and data_2 are the same. "
@@ -33,6 +52,108 @@ def load_data_lists(data_1_path: str, data_2_path: str) -> tuple:
             "Please provide lists with the same length."
         )
     return data_1, data_2
+
+
+@dataclass
+class JudgementInput:
+    input_text: str
+    answer_dict: dict
+    question: str
+    question_style: str
+    idx: int
+    answer_position: str
+
+
+def create_position_bias_mitigation_dict(
+    answer_model_1: str, answer_model_2: str, name_model_1: str, name_model_2: str
+) -> dict:
+    """Create the answer dictionary with both orderings to mitigate position bias.
+
+    Args:
+        answer_model_1 (str): Answer from model 1.
+        answer_model_2 (str): Answer from model 2.
+        name_model_1 (str): Name of model 1.
+        name_model_2 (str): Name of model 2.
+
+    Returns:
+        dict: A dictionary containing both orderings of answers.
+    """
+    return {
+        "model1-first": {
+            "answer1": {"text": answer_model_1, "label": name_model_1},
+            "answer2": {"text": answer_model_2, "label": name_model_2},
+            "tie": {"text": None, "label": "TIE"},
+        },
+        "model2-first": {
+            "answer1": {"text": answer_model_2, "label": name_model_2},
+            "answer2": {"text": answer_model_1, "label": name_model_1},
+            "tie": {"text": None, "label": "TIE"},
+        },
+    }
+
+
+def prepare_judgement_inputs(
+    data_1: list,
+    data_2: list,
+    prompt_template: str,
+    start_idx: int,
+    end_idx: int,
+    question_style_switching: bool,
+    introductory_beginning: bool,
+) -> List[JudgementInput]:
+    """Prepare all inputs for model evaluation."""
+    judgement_inputs = []
+
+    for idx in tqdm(
+        range(start_idx, end_idx),
+        total=end_idx - start_idx,
+        desc="Creating batched inputs",
+        unit="batch",
+    ):
+        item_1, item_2 = data_1[idx], data_2[idx]
+        question_1, question_2 = item_1["question"], item_2["question"]
+        answer_1 = item_1["answers"]["answer1"]["answer"]
+        answer_2 = item_2["answers"]["answer1"]["answer"]
+        name_1, name_2 = item_1["model_name"], item_2["model_name"]
+
+        questions_to_use = (
+            [(question_1, name_1), (question_2, name_2)]
+            if question_1 != question_2 and question_style_switching
+            else [(question_1, name_1)]
+        )
+
+        if introductory_beginning:
+            question_1 = prepare_question_with_intro(
+                question_1, item_1["answers"]["answer1"]["style"]
+            )
+            question_2 = prepare_question_with_intro(
+                question_2, item_2["answers"]["answer1"]["style"]
+            )
+
+        answer_dict = create_position_bias_mitigation_dict(
+            answer_1, answer_2, name_1, name_2
+        )
+
+        for question, model_name in questions_to_use:
+            for answer_position in ["model1-first", "model2-first"]:
+                input_text = prompt_template.format(
+                    question=question,
+                    answer1=answer_dict[answer_position]["answer1"]["text"],
+                    answer2=answer_dict[answer_position]["answer2"]["text"],
+                )
+
+                judgement_inputs.append(
+                    JudgementInput(
+                        input_text=input_text,
+                        answer_dict=answer_dict,
+                        question=question,
+                        question_style=model_name,
+                        idx=idx,
+                        answer_position=answer_position,
+                    )
+                )
+
+    return judgement_inputs
 
 
 def main() -> None:
@@ -52,7 +173,6 @@ def main() -> None:
     with open(os.path.join(data_directory, "prompts.json"), "r") as f:
         prompts = json.load(f)
     prompt = prompts[args.prompt_name]
-
     system_prompt = prompt["system"]
 
     current_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
@@ -66,108 +186,42 @@ def main() -> None:
         "comment": args.comment,
     }
 
-    name_model_1 = data_1[0]["model_name"]
-    name_model_2 = data_2[0]["model_name"]
-    if "/" in name_model_1:
-        name_model_1 = name_model_1.replace("/", "_")
-    if "/" in name_model_2:
-        name_model_2 = name_model_2.replace("/", "_")
+    name_model_1 = sanitize_model_name(data_1[0]["model_name"])
+    name_model_2 = sanitize_model_name(data_2[0]["model_name"])
 
     if args.output_path is not None:
-        if os.path.isdir(args.output_path):
-            args.output_path = os.path.join(
-                args.output_path,
-                f"results-{current_time}-{name_model_1}-{name_model_2}.json",
-            )
-    # if args.output_path is not set, we save it in the same directory as the data file
-    else:
-        args.output_path = os.path.join(
-            data_directory, f"results-{current_time}-{name_model_1}-{name_model_2}.json"
+        os.makedirs(args.output_path, exist_ok=True)
+        output_filepath = os.path.join(
+            args.output_path,
+            f"results-{current_time}-{name_model_1}-{name_model_2}.json",
         )
+    # if args.output_path is not set, we save it in the judgements directory
+    else:
+        output_filepath = os.path.join(
+            data_directory,
+            f"../judgements/results-{current_time}-{name_model_1}-{name_model_2}.json",
+        )
+
+    end_idx = int(len(data_1) * args.data_fraction)
 
     if args.start_index == "auto":
-        start_idx, end_idx = get_start_end_by_newest_file(
-            args.output_path, args.step_size, len(data_1)
-        )
+        start_idx = get_start_index_by_newest_file(os.path.dirname(output_filepath))
         print(f"Auto-detected start index: {start_idx}, end index: {end_idx}")
     else:
-        start_idx, end_idx = get_start_end_indices(
-            args.start_index, args.step_size, len(data_1)
-        )
+        start_idx = int(args.start_index)
         print(f"Using start index: {start_idx}, end index: {end_idx}")
 
-    input_texts = []
-    answer_dicts = []
-    questions = []
-    question_styles = []
-    idx_list = []
-    answer_positions_list = []
+    judgement_inputs = prepare_judgement_inputs(
+        data_1,
+        data_2,
+        prompt["template"],
+        start_idx,
+        end_idx,
+        args.question_switching,
+        args.introductionary_beginning,
+    )
 
-    for idx in tqdm(
-        range(start_idx, end_idx),
-        total=end_idx - start_idx,
-        desc="Creating batched inputs",
-        unit="batch",
-    ):
-        question_1 = data_1[idx]["question"]
-        question_2 = data_2[idx]["question"]
-        answer_model_1 = data_1[idx]["answers"]["answer1"]["answer"]
-        answer_model_2 = data_2[idx]["answers"]["answer1"]["answer"]
-        name_model_1 = data_1[idx]["model_name"]
-        name_model_2 = data_2[idx]["model_name"]
-
-        if question_1 != question_2 and args.question_style_switching:
-            questions_to_use = [(question_1, name_model_1), (question_2, name_model_2)]
-        else:
-            questions_to_use = [(question_1, name_model_1)]
-
-        if args.introductionary_beginning:
-            for question, model_name in questions_to_use:
-                if data_1[idx]["answers"]["answer1"]["style"] == "aave":
-                    question_1 = (
-                        "Hey, I'm stuck on this question and was wonderin' if you could help me out. So, the question go: "
-                        + str(question_1)
-                    )
-                    question_2 = (
-                        "Hi there, I'm a bit stuck on a question and was wondering if you could help me out. Here's the question: "
-                        + str(question_2)
-                    )
-                elif data_2[idx]["answers"]["answer1"]["style"] == "aave":
-                    question_1 = (
-                        "Hi there, I'm a bit stuck on a question and was wondering if you could help me out. Here's the question: "
-                        + str(question_1)
-                    )
-                    question_2 = (
-                        "Hey, I'm stuck on this question and was wonderin' if you could help me out. So, the question go: "
-                        + str(question_2)
-                    )
-
-        for question, model_name in questions_to_use:
-            for answer_position in ["model1-first", "model2-first"]:
-                answer_dict = {
-                    "model1-first": {
-                        "answer1": {"text": answer_model_1, "label": name_model_1},
-                        "answer2": {"text": answer_model_2, "label": name_model_2},
-                        "tie": {"text": None, "label": "TIE"},
-                    },
-                    "model2-first": {
-                        "answer1": {"text": answer_model_2, "label": name_model_2},
-                        "answer2": {"text": answer_model_1, "label": name_model_1},
-                        "tie": {"text": None, "label": "TIE"},
-                    },
-                }
-                input_text = prompt["template"].format(
-                    question=question,
-                    answer1=answer_dict[answer_position]["answer1"]["text"],
-                    answer2=answer_dict[answer_position]["answer2"]["text"],
-                )
-                input_texts.append(input_text)
-                answer_dicts.append(answer_dict)
-                questions.append(question)
-                question_styles.append(model_name)
-                idx_list.append(idx)
-                answer_positions_list.append(answer_position)
-
+    input_texts = [item.input_text for item in judgement_inputs]
     system_prompts = [system_prompt] * len(input_texts)
 
     results = judge_model.generate(
@@ -185,45 +239,39 @@ def main() -> None:
         f"Successfully generated {n_successfully_generated} out of {len(input_texts)} results"
     )
 
-    # Only process the results we actually got
-    input_texts = input_texts[:n_successfully_generated]
-    idx_list = idx_list[:n_successfully_generated]
-    answer_positions_list = answer_positions_list[:n_successfully_generated]
-    answer_dicts = answer_dicts[:n_successfully_generated]
-    questions = questions[:n_successfully_generated]
-    question_styles = question_styles[:n_successfully_generated]
-
-    for i in range(len(input_texts)):
-        idx = idx_list[i]
-        answer_position = answer_positions_list[i]
-        answer_dict = answer_dicts[i]
-        question = questions[i]
-        question_style = question_styles[i]
-
-        # Create the entry only when we have actual results
-        if idx not in file_content:
-            file_content[idx] = []
+    # Process results
+    for i, judgement_input in enumerate(judgement_inputs[:n_successfully_generated]):
+        if judgement_input.idx not in file_content:
+            file_content[judgement_input.idx] = []
 
         answer_preferences = []
         for answer in extracted_answers["extracted_answers"][i]:
-            if answer in answer_dict[answer_position]:
-                answer_preferences.append(answer_dict[answer_position][answer]["label"])
+            if answer in judgement_input.answer_dict[judgement_input.answer_position]:
+                answer_preferences.append(
+                    judgement_input.answer_dict[judgement_input.answer_position][
+                        answer
+                    ]["label"]
+                )
             else:
                 answer_preferences.append("Unknown")
 
-        file_content[idx].append(
+        file_content[judgement_input.idx].append(
             {
-                "prompt_style": question_style,
-                "answer_order": answer_position,
-                "question": question,
-                "answer1": answer_dict[answer_position]["answer1"],
-                "answer2": answer_dict[answer_position]["answer2"],
+                "prompt_style": judgement_input.question_style,
+                "answer_order": judgement_input.answer_position,
+                "question": judgement_input.question,
+                "answer1": judgement_input.answer_dict[judgement_input.answer_position][
+                    "answer1"
+                ],
+                "answer2": judgement_input.answer_dict[judgement_input.answer_position][
+                    "answer2"
+                ],
                 "result": extracted_answers["output"][i],
                 "extracted_answers": answer_preferences,
             }
         )
 
-    with open(args.output_path, "w") as f:
+    with open(output_filepath, "w") as f:
         f.write(json.dumps(file_content, indent=4))
 
     if n_successfully_generated < len(system_prompts):
