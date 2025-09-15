@@ -1,7 +1,5 @@
 import re
-
-import pandas as pd
-from openai import OpenAI
+from typing import Callable, List
 
 from model import Model
 
@@ -10,15 +8,6 @@ def convert_to_aae(text: str, model: Model) -> str:
     """
     Translate the given text into African American English (AAE) using a LLM.
     """
-    replacement_dict = {
-        "isn't": "ain't",
-        "going to": "gonna",
-        "because": "cuz",
-        "have": "got",
-        "ing": "in",
-        "about": "bout",
-    }
-
     rules = (
         "1. Null copula: Verbal copula is deleted (e.g., “he a delivery man” → “he's a delivery man”)."
         " 2. Negative concord: Negatives agree with each other (e.g., “nobody never say nothing” → “nobody ever says anything”)."
@@ -73,32 +62,36 @@ def convert_to_aae(text: str, model: Model) -> str:
     return aae_text
 
 
-def add_aae_to_answers(row: pd.Series, model: Model) -> pd.Series:
+def convert_data(
+    data: list[dict],
+    model: Model,
+    columns: List[str],
+    translation_function: Callable = convert_to_aae,
+) -> List[dict]:
     """
-    Add a translation from SAE to AAE to the row of the Dataframe.
+    Convert the answers in the data to AAE using a LLM.
+    # TODO also handle standard english -> basic english conversion
     """
-    original_answer1 = row["answers"]["answer1"]["answer"]
-    original_answer2 = row["answers"]["answer2"]["answer"]
-
-    aae_answer1 = convert_to_aae(original_answer1, model)
-    aae_answer2 = convert_to_aae(original_answer2, model)
-    row["answers"]["answer1_aae"] = aae_answer1
-    row["answers"]["answer2_aae"] = aae_answer2
-
-    # theoretically returning the row is not strictly necessary,
-    # since the data is modified in place
-    return row
-
-
-def add_aae_to_df(df: pd.DataFrame, model: Model) -> pd.DataFrame:
-    """
-    Run the translation from SAE to AAE on the DataFrame using a LLM.
-    """
-    df = df.apply(lambda row: add_aae_to_answers(row, model), axis=1)
-    df["question_aae"] = df["question"].apply(
-        lambda question: convert_to_aae(str(question), model)
-    )
-    return df
+    for column in columns:
+        if column == "answers":  # handle nested structure
+            for entry in data:
+                original_answer1 = entry["answers"]["answer1"]["answer"]
+                original_answer2 = entry["answers"]["answer2"]["answer"]
+                aae_answer1 = translation_function(original_answer1, model)
+                aae_answer2 = translation_function(original_answer2, model)
+                entry["answers"]["answer1"]["answer"] = aae_answer1
+                entry["answers"]["answer2"]["answer"] = aae_answer2
+                if "metadata" not in entry:
+                    entry["metadata"] = {}
+                entry["metadata"]["translation_model_name"] = model.model_name_or_path
+        else:  # handle flat structure
+            column_data = [convert_to_aae(entry[column], model) for entry in data]
+            for i, entry in enumerate(data):
+                entry[column] = column_data[i]
+                if "metadata" not in entry:
+                    entry["metadata"] = {}
+                entry["metadata"]["translation_model_name"] = model.model_name_or_path
+    return data
 
 
 if __name__ == "__main__":
