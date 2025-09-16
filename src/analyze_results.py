@@ -63,6 +63,14 @@ def aggregate_voting_data(
         for question_data in question_group:
             question_text = question_data["question"]
             extracted_answers = question_data["extracted_answers"]
+            # TODO In the basic experiment answer files
+            # (for example gpt-4.1-answers_basic.json), the model_name is gpt-4o-mini instead of gpt-4.1.
+            # This is not intended and leads to a KeyError and unexpected results. Therefore, I am adding this hacky fix here.
+            # It should be fixed in the files.
+            extracted_answers = [
+                better_model_name if ans == "gpt-4o-mini" else ans
+                for ans in extracted_answers
+            ]
             question_id = question_group_key
 
             if question_id not in question_results:
@@ -116,6 +124,11 @@ def create_vote_counts_table(
         for entry in entries:
             answer_order = entry["answer_order"]
             for answer in entry["extracted_answers"]:
+                # TODO In the basic experiment answer files
+                # (for example gpt-4.1-answers_basic.json), the model_name is gpt-4o-mini instead of gpt-4.1.
+                # This is not intended and leads to a KeyError. Therefore, I am adding this hacky fix here.
+                if answer == "gpt-4o-mini":
+                    answer = better_model_name
                 aggregated_data[answer_order][answer] += 1
                 aggregated_data[answer_order]["total"] += 1
 
