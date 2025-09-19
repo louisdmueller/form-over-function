@@ -1,14 +1,20 @@
 from collections import defaultdict
 import json
+import os
 import statistics
 import argparse
 from typing import Dict, Optional, Tuple
 
-from pathlib import Path
+from numpy import extract
 from pandas import DataFrame
 
 from analyze_reasonings import analyze_reasonings_topic_model
 import pandas as pd
+
+from utils import remove_organization_from_hf_model_name
+
+
+perturbations = ["default", "basic", "aae"]
 
 
 def load_json_file(filepath: str) -> dict:
@@ -24,26 +30,26 @@ def extract_model_names_from_data(data: dict) -> Tuple[str, str]:
             first_question = questions[0]
             model1 = first_question["answer1"]["label"]
             model2 = first_question["answer2"]["label"]
-            better_model = model1 if model1 == "gpt-4.1" else model2
-            worse_model = model2 if better_model == model1 else model1
-            return (better_model, worse_model)
+            better_model_name = model1 if model1 == "gpt-4.1" else model2
+            worse_model_name = model2 if better_model_name == model1 else model1
+            return (better_model_name, worse_model_name)
     return "Model A", "Model B"
 
 
 def map_vote_to_value(
-    vote: str, better_model: str, worse_model: str
+    vote: str, better_model_name: str, worse_model_name: str
 ) -> Optional[float]:
     """Map vote to numeric value
-    1.0 for better_model,
-    0.0 for worse_model,
+    1.0 for better_model_name,
+    0.0 for worse_model_name,
     0.5 for tie
     """
-    mapping = {better_model: 1.0, worse_model: 0.0, "TIE": 0.5}
+    mapping = {better_model_name: 1.0, worse_model_name: 0.0, "TIE": 0.5}
     return mapping.get(vote)
 
 
 def aggregate_voting_data(
-    data: dict, better_model: str, worse_model: str
+    data: dict, better_model_name: str, worse_model_name: str
 ) -> Dict[str, Dict[str, float]]:
     """Extract and process question results for the given model pair."""
     question_results = {}
@@ -57,6 +63,14 @@ def aggregate_voting_data(
         for question_data in question_group:
             question_text = question_data["question"]
             extracted_answers = question_data["extracted_answers"]
+            # TODO In the basic experiment answer files
+            # (for example gpt-4.1-answers_basic.json), the model_name is gpt-4o-mini instead of gpt-4.1.
+            # This is not intended and leads to a KeyError and unexpected results. Therefore, I am adding this hacky fix here.
+            # It should be fixed in the files.
+            extracted_answers = [
+                better_model_name if ans == "gpt-4o-mini" else ans
+                for ans in extracted_answers
+            ]
             question_id = question_group_key
 
             if question_id not in question_results:
@@ -66,7 +80,9 @@ def aggregate_voting_data(
                 }
 
             for vote in extracted_answers:
-                vote_value = map_vote_to_value(vote, better_model, worse_model)
+                vote_value = map_vote_to_value(
+                    vote, better_model_name, worse_model_name
+                )
                 if vote_value is not None:
                     question_results[question_id]["all_votes"].append(vote_value)
 
@@ -77,12 +93,12 @@ def aggregate_voting_data(
             better_model_avg = statistics.mean(all_votes)
             final_results[question_id] = {
                 "question_text": votes_data["question_text"],
-                f"{better_model}_avg": better_model_avg,
-                f"{worse_model}_avg": 1.0 - better_model_avg,
+                f"{better_model_name}_avg": better_model_avg,
+                f"{worse_model_name}_avg": 1.0 - better_model_avg,
                 "winner": (
-                    better_model
+                    better_model_name
                     if better_model_avg > 0.5
-                    else worse_model if better_model_avg < 0.5 else "tie"
+                    else worse_model_name if better_model_avg < 0.5 else "tie"
                 ),
                 "total_votes": len(all_votes),
             }
@@ -90,11 +106,17 @@ def aggregate_voting_data(
 
 
 def create_vote_counts_table(
-    data: dict, better_model: str, worse_model: str
+    data: dict, better_model_name: str, worse_model_name: str
 ) -> DataFrame:
     """Create a DataFrame summarizing total votes for each answer order."""
     aggregated_data = defaultdict(
-        lambda: {better_model: 0, worse_model: 0, "TIE": 0, "Unknown": 0, "total": 0}
+        lambda: {
+            better_model_name: 0,
+            worse_model_name: 0,
+            "TIE": 0,
+            "Unknown": 0,
+            "total": 0,
+        }
     )
     for question_id, entries in data.items():
         if question_id == "metadata":
@@ -102,6 +124,11 @@ def create_vote_counts_table(
         for entry in entries:
             answer_order = entry["answer_order"]
             for answer in entry["extracted_answers"]:
+                # TODO In the basic experiment answer files
+                # (for example gpt-4.1-answers_basic.json), the model_name is gpt-4o-mini instead of gpt-4.1.
+                # This is not intended and leads to a KeyError. Therefore, I am adding this hacky fix here.
+                if answer == "gpt-4o-mini":
+                    answer = better_model_name
                 aggregated_data[answer_order][answer] += 1
                 aggregated_data[answer_order]["total"] += 1
 
@@ -111,8 +138,8 @@ def create_vote_counts_table(
             {
                 "answer_order": answer_order,
                 " ": "",
-                better_model: counts[better_model],
-                worse_model: counts[worse_model],
+                better_model_name: counts[better_model_name],
+                worse_model_name: counts[worse_model_name],
                 "TIE": counts["TIE"],
                 "": "",
                 "Unknown": counts["Unknown"],
@@ -125,17 +152,20 @@ def create_vote_counts_table(
 
 
 def count_judgement_transitions_between_files(
-    file1_results: Dict, file2_results: Dict, better_model: str, worse_model: str
+    file1_results: Dict,
+    file2_results: Dict,
+    better_model_name: str,
+    worse_model_name: str,
 ):
     """
     This function counts the following averaged outcomes:
-    - How many times better_model wins in file1
-    - How many times worse_model wins in file1
+    - How many times better_model_name wins in file1
+    - How many times worse_model_name wins in file1
     - How often the tie occurs in file1
-    - How often worse_model wins in file2, after better_model wins in file1
-    - How often worse_model wins in file2, after worse_model wins in file1
-    - How often better_model wins in file2, after worse_model wins in file1
-    - How often better_model wins in file2, after better_model wins in file1
+    - How often worse_model_name wins in file2, after better_model_name wins in file1
+    - How often worse_model_name wins in file2, after worse_model_name wins in file1
+    - How often better_model_name wins in file2, after worse_model_name wins in file1
+    - How often better_model_name wins in file2, after better_model_name wins in file1
     - How often the outcome in file 1 changes in file 2
     """
     better_model_wins_file1 = 0
@@ -155,18 +185,18 @@ def count_judgement_transitions_between_files(
         file1_winner = file1_results[question_id]["winner"]
         file2_winner = file2_results[question_id]["winner"]
 
-        if file1_winner == better_model:
+        if file1_winner == better_model_name:
             better_model_wins_file1 += 1
-            if file2_winner == worse_model:
+            if file2_winner == worse_model_name:
                 worse_model_wins_file2_after_better += 1
                 flips += 1
             elif file2_winner == "TIE":
                 flips += 1
             else:
                 better_model_wins_file2_after_better += 1
-        elif file1_winner == worse_model:
+        elif file1_winner == worse_model_name:
             worse_model_wins_file1 += 1
-            if file2_winner == better_model:
+            if file2_winner == better_model_name:
                 better_model_wins_file2_after_worse += 1
                 flips += 1
             elif file2_winner == "TIE":
@@ -191,7 +221,7 @@ def count_judgement_transitions_between_files(
 
 
 def calculate_asr(outcomes: Dict[str, int]) -> float:
-    """Calculate Attack Success Rate: how often better_model wins flip to worse_model wins."""
+    """Calculate Attack Success Rate: how often better_model_name wins flip to worse_model_name wins."""
     asr = (
         outcomes["worse_model_wins_file2_after_better"]
         / outcomes["better_model_wins_file1"]
@@ -202,7 +232,7 @@ def calculate_asr(outcomes: Dict[str, int]) -> float:
 
 
 def calculate_aasr(outcomes: Dict[str, int]) -> float:
-    """Calculate Anti Attack Success Rate: how often worse_model wins after better_model wins."""
+    """Calculate Anti Attack Success Rate: how often worse_model_name wins after better_model_name wins."""
     aasr = (
         outcomes["better_model_wins_file2_after_worse"]
         / outcomes["worse_model_wins_file1"]
@@ -249,29 +279,76 @@ def calculate_cr(outcomes: Dict[str, int]) -> float:
     return cr
 
 
+def extract_perturbation_style(file_data: dict) -> str:
+    """Extract perturbation style from metadata in the file data."""
+    for file_idx in [1, 2]:
+        file_path = file_data.get("metadata", {}).get(f"data_{file_idx}_path", "")
+        file_name = os.path.splitext(os.path.basename(file_path))[0]
+        for perturbation in perturbations:
+            if file_name.lower().endswith(perturbation):
+                return perturbation
+    return "default"
+
+
+def extract_judge_model(file_data: dict) -> str:
+    """Extract judge model from metadata in the file data."""
+    return file_data.get("metadata", {}).get("judge_model", "unknown_judge_model")
+
+
 def run_analysis_on_judgements(
     file1_data: dict,
     file2_data: dict,
-    better_model: str,
-    worse_model: str,
-    output_directory: Path,
+    output_directory: str,
+    better_model_name: Optional[str] = None,
+    worse_model_name: Optional[str] = None,
 ):
     """Analyze two result files and calculate ASR."""
 
-    file1_results = aggregate_voting_data(file1_data, better_model, worse_model)
-    file2_results = aggregate_voting_data(file2_data, better_model, worse_model)
+    if not better_model_name or not worse_model_name:
+        better_model_name, worse_model_name = extract_model_names_from_data(file1_data)
 
-    create_vote_counts_table(file1_data, better_model, worse_model).to_excel(
-        output_directory / f"total_votes_file1_{better_model}_vs_{worse_model}.xlsx",
+    file1_results = aggregate_voting_data(
+        file1_data, better_model_name, worse_model_name
+    )
+    file2_results = aggregate_voting_data(
+        file2_data, better_model_name, worse_model_name
+    )
+
+    judge_model_name = remove_organization_from_hf_model_name(
+        extract_judge_model(file1_data)
+    )
+
+    output_directory = os.path.join(
+        output_directory,
+        (
+            better_model_name
+            + "_vs_"
+            + remove_organization_from_hf_model_name(worse_model_name)
+        ),
+        judge_model_name,
+    )
+    for style_perturbation in perturbations:
+        os.makedirs(os.path.join(output_directory, style_perturbation), exist_ok=True)
+
+    create_vote_counts_table(file1_data, better_model_name, worse_model_name).to_excel(
+        os.path.join(
+            output_directory,
+            perturbation_style_1 := extract_perturbation_style(file1_data),
+            f"total_votes_file.xlsx",
+        ),
         index=False,
     )
-    create_vote_counts_table(file2_data, better_model, worse_model).to_excel(
-        output_directory / f"total_votes_file2_{better_model}_vs_{worse_model}.xlsx",
+    create_vote_counts_table(file2_data, better_model_name, worse_model_name).to_excel(
+        os.path.join(
+            output_directory,
+            perturbation_style_2 := extract_perturbation_style(file2_data),
+            f"total_votes_file.xlsx",
+        ),
         index=False,
     )
 
     outcomes = count_judgement_transitions_between_files(
-        file1_results, file2_results, better_model, worse_model
+        file1_results, file2_results, better_model_name, worse_model_name
     )
 
     result = {
@@ -284,7 +361,10 @@ def run_analysis_on_judgements(
         "ties": outcomes["ties_file1"],
     }
     pd.DataFrame([result]).to_excel(
-        output_directory / f"metrics_{better_model}_vs_{worse_model}.xlsx",
+        os.path.join(
+            output_directory,
+            f"metrics_{perturbation_style_1}_vs_{perturbation_style_2}.xlsx",
+        ),
         index=False,
     )
 
@@ -310,11 +390,13 @@ def main():
     parser.add_argument(
         "--better_model_name",
         type=str,
+        default=None,
         help="Name of the first model (auto-detected if not provided)",
     )
     parser.add_argument(
         "--worse_model_name",
         type=str,
+        default=None,
         help="Name of the second model (auto-detected if not provided)",
     )
 
@@ -335,24 +417,22 @@ def main():
     args = parser.parse_args()
 
     # Output into the same directory as file1 or file2
-    output_path = Path(args.output_directory)
     file1_data = load_json_file(args.file1)
     file2_data = load_json_file(args.file2)
 
-    better_model_name = args.better_model_name
-    worse_model_name = args.worse_model_name
-
-    if better_model_name is None or worse_model_name is None:
-        (detected_a, detected_b) = extract_model_names_from_data(file1_data)
-        better_model_name = better_model_name or detected_a
-        worse_model_name = worse_model_name or detected_b
-
     if args.analyze_reasonings:
         analyze_reasonings_topic_model(
-            file2_data, better_model_name, worse_model_name, output_path
+            file2_data,
+            args.better_model_name,
+            args.worse_model_name,
+            args.output_directory,
         )
     run_analysis_on_judgements(
-        file1_data, file2_data, better_model_name, worse_model_name, output_path
+        file1_data,
+        file2_data,
+        args.better_model_name,
+        args.worse_model_name,
+        args.output_directory,
     )
 
 

@@ -58,7 +58,7 @@ else
 fi
 
 if [[ $# -ge 2 ]]; then
-    amswer_file1=$2
+    answer_file1=$2
 else
     answer_file1="gpt-4.1-answers_basic.json"
     echo "No answer file 1 provided as argument, using script default: $answer_file1"
@@ -90,7 +90,7 @@ srun python src/compare_model_answers_batched.py \
     --data_2_path "${data_path}${answer_file2}" \
     --output_path "$output_dir" \
     --start_index "auto" \
-    --step_size 142 # optional, default is 142 now as progress is automatically saved when time is running out
+    --data_fraction 1.0 \ # process all data, for testing you can set e.g. 0.1 to only process 10% of the data
     # --question_switching # uncomment to switch questions between e.g. AAE and SAE style (depends if questions in files differ)
     # --introductionary_beginning # uncomment to add an introductionary beginning to the prompt e.g. "Hi there, I am kind of stuck on this question..."
     # --prompt_switching # TODO
