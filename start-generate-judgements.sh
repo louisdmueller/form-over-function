@@ -10,7 +10,7 @@
 #SBATCH --mem=128G
 #SBATCH --gres=gpu:2
 #SBATCH --mail-type=ALL
-#SBATCH --signal=USR1@30    # Send SIGUSR1 signal 30 seconds before the job ends to allow for graceful shutdown
+#SBATCH --signal=SIGUSR1@30    # Send SIGUSR1 signal 30 seconds before the job ends to allow for graceful shutdown
 
 set -e
 set -u
@@ -60,14 +60,14 @@ fi
 if [[ $# -ge 2 ]]; then
     answer_file1=$2
 else
-    answer_file1="gpt-4.1-answers_basic.json"
+    answer_file1="gpt-4.1-answers_aae.json"
     echo "No answer file 1 provided as argument, using script default: $answer_file1"
 fi
 
 if [[ $# -ge 3 ]]; then
     answer_file2=$3
 else
-    answer_file2="Qwen2.5-3B-Instruct-answers.json"
+    answer_file2="gpt-4.1-answers_errors.json"
     echo "No answer file 2 provided as argument, using script default: $answer_file2"
 fi
 
@@ -90,7 +90,7 @@ srun python src/compare_model_answers_batched.py \
     --data_2_path "${data_path}${answer_file2}" \
     --output_path "$output_dir" \
     --start_index "auto" \
-    --data_fraction 1.0 \ # process all data, for testing you can set e.g. 0.1 to only process 10% of the data
+    --data_fraction 1 # process all data, for testing you can set e.g. 0.1 to only process 10% of the data
     # --question_switching # uncomment to switch questions between e.g. AAE and SAE style (depends if questions in files differ)
     # --introductionary_beginning # uncomment to add an introductionary beginning to the prompt e.g. "Hi there, I am kind of stuck on this question..."
     # --prompt_switching # TODO

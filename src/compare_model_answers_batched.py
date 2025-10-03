@@ -217,7 +217,7 @@ def main() -> None:
         prompt["template"],
         start_idx,
         end_idx,
-        args.question_switching,
+        args.question_style_switching,
         args.introductionary_beginning,
     )
 
@@ -236,7 +236,7 @@ def main() -> None:
         # top_k=20,
         # min_p=0,
         timeout_handler=timeout_handler,
-        **config
+        **config,
     )
     extracted_answers = judge_model.get_response_data(results)
     n_successfully_generated = len(extracted_answers["output"])

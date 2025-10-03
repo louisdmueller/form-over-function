@@ -1,5 +1,7 @@
 import argparse
+import ctypes
 import json
+from multiprocessing import Value
 import os
 import random
 import string
@@ -135,6 +137,12 @@ def parse_args() -> argparse.Namespace:
         "--aae",
         action="store_true",
         help="If set, the answers will be translated from SAE to AAE.",
+    )
+
+    parser.add_argument(
+        "--errors",
+        action="store_true",
+        help="If set, errors will be added to the answers.",
     )
 
     parser.add_argument(
@@ -370,7 +378,7 @@ class SlurmTimeoutHandler:
     """
 
     def __init__(self):
-        self.timeout_imminent = False
+        self.timeout_imminent = Value(ctypes.c_bool, False)
         self._setup_signals()
 
     def _setup_signals(self):
@@ -381,11 +389,11 @@ class SlurmTimeoutHandler:
 
     def _handle_timeout_signal(self, signum, frame):
         """Handle the SIGUSR1 signal by setting the timeout_imminent flag to True."""
-        self.timeout_imminent = True
+        self.timeout_imminent.value = True
         print(f"Received signal {signum}. Setting timeout_imminent to True.")
 
     def is_timeout_imminent(self) -> bool:
         """
         Check if the timeout is imminent.
         """
-        return self.timeout_imminent
+        return self.timeout_imminent.value

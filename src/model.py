@@ -7,11 +7,10 @@ from google import genai
 from google.genai.types import GenerateContentConfig
 from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer  # type: ignore
-from transformers import pipeline
+from transformers.pipelines import pipeline
 import torch
 from torch.utils.data import Dataset
 from huggingface_hub import repo_exists
-from transformers.distributed import DistributedConfig
 
 MAX_OUTPUT_TOKENS = 512
 

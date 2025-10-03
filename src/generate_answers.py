@@ -6,9 +6,11 @@ This script generates two files with answers to the prompts in the data file.
 
 import json
 import os
+
+from click import prompt
 from model import get_model
 from utils import load_config, parse_args, random_id, read_file, sanitize_output_path
-from style_conversion import convert_data
+from style_conversion import convert_data, add_errors
 
 args = parse_args()
 config = load_config(args.config_path)
@@ -17,7 +19,29 @@ data = read_file(args.data_path)
 
 desc = "Generating SAE answers" if not args.aae else "Generating AAE answers"
 
-if not args.aae:
+if args.aae:
+    data = read_file(args.output_path)
+    prompt_gen_model = get_model(
+        model_name_or_path=args.prompt_model_name_or_path,
+        config=config,
+    )
+    aae_data = convert_data(data, prompt_gen_model, ["answers"])
+    with open(args.output_path.replace(".json", "_aae.json"), "a") as f_aae:
+        for entry in aae_data:
+            f_aae.write(json.dumps(entry) + "\n")
+
+elif args.errors:
+    data = read_file(args.output_path)
+    prompt_gen_model = get_model(
+        model_name_or_path=args.prompt_model_name_or_path,
+        config=config,
+    )
+    error_data = convert_data(data, prompt_gen_model, ["answers"], add_errors)
+    with open(args.output_path.replace(".json", "_errors.json"), "a") as f_errors:
+        for entry in error_data:
+            f_errors.write(json.dumps(entry) + "\n")
+
+else:
 
     args.output_path = sanitize_output_path(
         args.output_path, args.answer_generation_model_name_or_path
@@ -80,13 +104,3 @@ if not args.aae:
 
         with open(args.output_path, "a") as f:
             f.write(json.dumps(generated_data) + "\n")
-
-else:
-    prompt_gen_model = get_model(
-        model_name_or_path=args.prompt_model_name_or_path,
-        config=config,
-    )
-    aae_data = convert_data(data, prompt_gen_model, ["answers"])
-    with open(args.output_path.replace(".json", "_aae.json"), "a") as f_aae:
-        for entry in aae_data:
-            f_aae.write(json.dumps(entry) + "\n")
