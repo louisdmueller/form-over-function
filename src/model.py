@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 import re
 from string import ascii_letters, digits
+import sys
 from typing import Any, List, Dict
 from openai import OpenAI
 from google import genai
@@ -259,12 +260,17 @@ class HuggingfaceModel(Model):
         batched_system_prompts = self.create_batches(system_prompts, batch_size)
         batched_input_texts = self.create_batches(input_texts, batch_size)
 
+        print(f"Created {len(batched_input_texts)} batches")
+
         for batch_system_prompts, batch_input_texts in tqdm(
             zip(batched_system_prompts, batched_input_texts),
             total=len(batched_input_texts),
             desc="Processing batches",
             unit="batch",
+            disable=False,
+            file=sys.stdout,
         ):
+            print("Inside loop")
             formatted_inputs = self.format_inputs(
                 batch_input_texts, batch_system_prompts, **kwargs
             )
@@ -278,6 +284,8 @@ class HuggingfaceModel(Model):
                     "judge_tokenizer_max_length", self.tokenizer.model_max_length
                 ),  # 4096 # if OverflowError e.g. for gpt-neox
             )
+            print("Tokenized inputs")
+
             tokenized_inputs = tokenized_inputs.to(self.model.device)
             input_length = tokenized_inputs["input_ids"].shape[1]
 
@@ -295,6 +303,8 @@ class HuggingfaceModel(Model):
                     return_dict_in_generate=True,
                 )
 
+            print("Generated output")
+
             sequences = output.sequences
             # Remove the input part from the generated sequences
             generated_sequences = sequences[:, input_length:]
@@ -309,6 +319,7 @@ class HuggingfaceModel(Model):
             ]
             all_outputs.extend(grouped_responses)
 
+            print("Processed batch")
             if timeout_handler and timeout_handler.is_timeout_imminent():
                 print("Timeout imminent, stopping generation.")
                 break

@@ -1,0 +1,16 @@
+name: qwen
+channels:
+  - nvidia
+  - defaults
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
+dependencies:
+  - _libgcc_mutex=0.1=main
+  - _openmp_mutex=5.1=1_gnu
+  - cuda-version=13.0=3
+  - libcusparse=12.6.3.3=h8296a5b_0
+  - libgcc-ng=11.2.0=h1234567_1
+  - libgomp=11.2.0=h1234567_1
+  - libnvjitlink=13.0.88=hb0a779f_0
+  - libstdcxx-ng=11.2.0=h1234567_1
+prefix: /home/hd/hd_hd/hd_dg324/miniconda3/envs/qwen

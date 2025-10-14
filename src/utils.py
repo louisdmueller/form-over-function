@@ -5,6 +5,7 @@ from multiprocessing import Value
 import os
 import random
 import string
+import time
 from typing import Any, Dict, List
 
 import pandas as pd
@@ -168,6 +169,12 @@ def parse_args() -> argparse.Namespace:
         "--input_dir",
         type=str,
         help="Path to the directory containing the judge files.",
+    )
+
+    parser.add_argument(
+        "--end_time",
+        type=int,
+        help="End time as unix timestamp.",
     )
 
     args = parser.parse_args()
@@ -378,6 +385,7 @@ class SlurmTimeoutHandler:
     """
 
     def __init__(self):
+        print("Initializing SlurmTimeoutHandler.")
         self.timeout_imminent = Value(ctypes.c_bool, False)
         self._setup_signals()
 
@@ -389,11 +397,42 @@ class SlurmTimeoutHandler:
 
     def _handle_timeout_signal(self, signum, frame):
         """Handle the SIGUSR1 signal by setting the timeout_imminent flag to True."""
+        print(f"Received signal {signum} in PID {os.getpid()}")
         self.timeout_imminent.value = True
-        print(f"Received signal {signum}. Setting timeout_imminent to True.")
 
     def is_timeout_imminent(self) -> bool:
         """
         Check if the timeout is imminent.
         """
+        print(f"Timeout imminent: {self.timeout_imminent.value}")
         return self.timeout_imminent.value
+
+class TimeBasedTimeoutHandler():
+    """
+    A handler to gracefully shut down the script when the remaining time is below a certain threshold.
+    This is useful to ensure that the script can finish processing/saving before the job is terminated.
+    """
+
+    def __init__(self, end_time: int, threshold: int = 300):
+        """
+        Initialize the TimeBasedTimeoutHandler.
+
+        Args:
+            end_time (int): The end time as a unix timestamp.
+            threshold (int): The threshold in seconds to consider the timeout imminent. Default is 300 seconds (5 minutes).
+        """
+        print("Initializing TimeBasedTimeoutHandler.")
+        self.end_time = end_time
+        self.threshold = threshold
+
+    def is_timeout_imminent(self) -> bool:
+        """
+        Check if the timeout is imminent based on the remaining time.
+
+        Returns:
+            bool: True if the timeout is imminent, False otherwise.
+        """
+        current_time = int(time.time())
+        remaining_time = self.end_time - current_time
+        print(f"Remaining time: {remaining_time} seconds")
+        return remaining_time <= self.threshold

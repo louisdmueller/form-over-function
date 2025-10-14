@@ -12,6 +12,7 @@ from datetime import datetime
 
 from utils import (
     SlurmTimeoutHandler,
+    TimeBasedTimeoutHandler,
     get_start_index_by_newest_file,
     prepare_question_with_intro,
     sanitize_model_name,
@@ -24,6 +25,8 @@ from utils import (
     load_config,
     parse_args,
 )
+
+print(f"Main PID: {os.getpid()}")
 
 
 def load_data_lists(data_1_path: str, data_2_path: str) -> Tuple[list, list]:
@@ -165,7 +168,7 @@ def main() -> None:
         config=config,
     )
 
-    timeout_handler = SlurmTimeoutHandler()
+    timeout_handler = TimeBasedTimeoutHandler(args.end_time, threshold=180)
 
     data_1, data_2 = load_data_lists(args.data_1_path, args.data_2_path)
 
@@ -278,6 +281,7 @@ def main() -> None:
         )
 
     with open(output_filepath, "w") as f:
+        print(f"Saving results to {output_filepath}")
         f.write(json.dumps(file_content, indent=4))
 
     if n_successfully_generated < len(system_prompts):

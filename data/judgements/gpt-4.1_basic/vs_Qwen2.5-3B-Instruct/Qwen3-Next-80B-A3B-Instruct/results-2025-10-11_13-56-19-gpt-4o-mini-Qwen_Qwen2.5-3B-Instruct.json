@@ -1,0 +1,585 @@
+{
+    "metadata": {
+        "judge_model": "Qwen/Qwen3-Next-80B-A3B-Instruct",
+        "data_1_path": "data/generated_answers/gpt-4.1-answers_basic.json",
+        "data_2_path": "data/generated_answers/Qwen2.5-3B-Instruct-answers.json",
+        "prompt_name": "directly_answer_question_without_cot",
+        "comment": ""
+    },
+    "0": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'How can you show the way of looking at a past event by using a history event?'",
+            "answer1": {
+                "text": "To show historical study, think about the fall of the Berlin Wall in 1989. First, get main sources like speeches, photos, and news reports from the event. Next, put the event in context by looking at the Cold War tensions and plans like Perestroika in the Soviet Union. Analyze causes, including money problems in Eastern Europe and protest groups in East Germany. Check immediate results, like the reunification of Germany and the fall of communist governments in Eastern Europe. Value different historians\u2019 views, noting differences in stress on money, political, or social parts. Finally, judge the event\u2019s long-term meaning, like its role in ending the Cold War and shaping modern Europe. Through this step-by-step way, historical study finds out not just what happened, but why it happened, its effects, and the different views around it.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "To demonstrate the process of historical analysis using a historical event, let's consider the French Revolution (1789-1799). First, identify key events such as the Estates-General, the Storming of the Bastille, the Reign of Terror, and the rise of Napoleon. Next, analyze the causes of the revolution, such as economic hardship, social inequality, and the influence of Enlightenment ideas. Examine the impact of these events on society, politics, and culture. Finally, assess the long-term effects of the French Revolution, including its influence on modern democracies and its role in shaping European history. This structured approach helps in understanding the complexities and nuances of historical events.",
+                "label": "Qwen/Qwen2.5-3B-Instruct"
+            },
+            "result": [
+                "Answer1 and Answer2 both provide clear, accurate, and well-structured explanations of how to analyze a historical event to understand its meaning and significance. They each use a specific historical example (Berlin Wall and French Revolution), outline a methodical approach (context, causes, effects, interpretations), and emphasize critical thinking and multiple perspectives.\n\nHowever, **Answer1** goes slightly further in depth by explicitly mentioning types of sources (speeches, photos, news reports), naming specific policies (Perestroika), identifying sub-causes (money problems in Eastern Europe, protest groups in East Germany), and highlighting the importance of evaluating *different historians\u2019 views* and their varying emphases (economic, political, social). This adds a layer of methodological richness and historiographical awareness that Answer2, while solid, does not match in detail.\n\nAnswer2 is concise and correct, but Answer1 demonstrates a more nuanced, scholarly approach to historical inquiry \u2014 aligning more closely with how professional historians actually work.\n\n**Answer1** is superior in semantic quality due to its greater depth, specificity, and attention to historiographical complexity.\n\nAnswer1",
+                "Answer1 and Answer2 both provide clear, accurate, and well-structured explanations of how to analyze a historical event to understand its meaning and significance. They each use a specific historical example (Berlin Wall and French Revolution), outline a methodical approach (context, causes, effects, interpretations), and emphasize critical thinking and multiple perspectives.\n\nHowever, **Answer1** goes slightly further in depth by explicitly mentioning types of sources (speeches, photos, news reports), naming specific policies (Perestroika), identifying sub-causes (money problems in Eastern Europe, protest groups in East Germany), and highlighting the importance of evaluating *different historians\u2019 views* and their varying emphases (economic, political, social). This adds a layer of methodological richness and historiographical awareness that Answer2, while solid, does not match in detail.\n\nAnswer2 is concise and correct, but Answer1 demonstrates a more nuanced and comprehensive understanding of historical methodology.\n\n**Answer1**",
+                "Answer1 and Answer2 both provide clear, accurate, and well-structured explanations of how to analyze a historical event to understand its meaning and significance. They each use a specific historical example (Berlin Wall and French Revolution), outline a methodical approach (context, causes, effects, interpretations), and emphasize critical thinking and multiple perspectives.\n\nHowever, **Answer1** goes slightly further in depth by explicitly mentioning types of sources (speeches, photos, news reports), naming specific policies (Perestroika), identifying sub-causes (money problems in Eastern Europe, protest groups in East Germany), and highlighting the importance of evaluating *different historians\u2019 views* and their varying emphases (economic, political, social). This adds a layer of methodological richness and historiographical awareness that Answer2, while solid, does not match in detail.\n\nAnswer2 is concise and correct, but Answer1 demonstrates a more nuanced, scholarly approach to historical inquiry \u2014 aligning more closely with how professional historians actually work.\n\n**Answer1** is superior in semantic quality due to its greater depth, specificity, and methodological precision.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'How can you show the way of looking at a past event by using a history event?'",
+            "answer1": {
+                "text": "To demonstrate the process of historical analysis using a historical event, let's consider the French Revolution (1789-1799). First, identify key events such as the Estates-General, the Storming of the Bastille, the Reign of Terror, and the rise of Napoleon. Next, analyze the causes of the revolution, such as economic hardship, social inequality, and the influence of Enlightenment ideas. Examine the impact of these events on society, politics, and culture. Finally, assess the long-term effects of the French Revolution, including its influence on modern democracies and its role in shaping European history. This structured approach helps in understanding the complexities and nuances of historical events.",
+                "label": "Qwen/Qwen2.5-3B-Instruct"
+            },
+            "answer2": {
+                "text": "To show historical study, think about the fall of the Berlin Wall in 1989. First, get main sources like speeches, photos, and news reports from the event. Next, put the event in context by looking at the Cold War tensions and plans like Perestroika in the Soviet Union. Analyze causes, including money problems in Eastern Europe and protest groups in East Germany. Check immediate results, like the reunification of Germany and the fall of communist governments in Eastern Europe. Value different historians\u2019 views, noting differences in stress on money, political, or social parts. Finally, judge the event\u2019s long-term meaning, like its role in ending the Cold War and shaping modern Europe. Through this step-by-step way, historical study finds out not just what happened, but why it happened, its effects, and the different views around it.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1 and Answer2 are both high-quality responses that clearly explain how to analyze a historical event using a structured, methodical approach. Both use a specific historical event (French Revolution for Answer1, Fall of the Berlin Wall for Answer2) as a concrete example, and both walk through the key components of historical analysis: identifying events, examining causes, assessing impacts, considering multiple perspectives, and evaluating long-term significance.\n\nAnswer1 is slightly more polished in language and flow, with precise terminology (\u201cEnlightenment ideas,\u201d \u201cmodern democracies,\u201d \u201cnuances of historical events\u201d) and a more formal academic tone. Answer2 is equally accurate and thorough but includes minor grammatical irregularities (\u201cget main sources,\u201d \u201cmoney problems,\u201d \u201cstress on money, political, or social parts\u201d) that slightly reduce its clarity and professionalism.\n\nHowever, since the prompt asks for an evaluation based **exclusively on semantic quality**\u2014meaning the depth, accuracy, and coherence of the ideas, not grammar or style\u2014both responses are semantically equivalent in substance. They both demonstrate a full understanding of historical methodology and apply it effectively.\n\nTherefore, neither response is meaningfully superior to the other in terms of semantic quality.\n\n**Tie**",
+                "Answer1 and Answer2 are both high-quality responses that clearly explain how to analyze a historical event using a structured, methodical approach. Both use a specific historical event (French Revolution for Answer1, Fall of the Berlin Wall for Answer2) as a concrete example, and both walk through the key components of historical analysis: identifying events, examining causes, assessing impacts, considering multiple perspectives, and evaluating long-term significance.\n\nAnswer1 is slightly more polished in language and flow, with precise terminology (\u201cEnlightenment ideas,\u201d \u201cmodern democracies,\u201d \u201cnuances of historical events\u201d) and a more formal academic tone. Answer2 is equally accurate and thorough but includes minor grammatical irregularities (\u201cget main sources,\u201d \u201cmoney problems,\u201d \u201cstress on money, political, or social parts\u201d) that slightly reduce its clarity and professionalism.\n\nHowever, since the prompt asks for an evaluation based **exclusively on semantic quality**\u2014meaning the depth, accuracy, and coherence of the ideas, not grammar or style\u2014both responses are semantically equivalent in substance. They both demonstrate a full understanding of historical methodology and apply it effectively.\n\nTherefore, neither response is meaningfully superior in semantic quality.\n\n**Tie**",
+                "Answer1 and Answer2 are both high-quality responses that clearly explain how to analyze a historical event using a structured, methodical approach. Both use a specific historical event (French Revolution for Answer1, Fall of the Berlin Wall for Answer2) as a concrete example, and both walk through the key components of historical analysis: identifying events, examining causes, assessing impacts, considering multiple perspectives, and evaluating long-term significance.\n\nAnswer1 is slightly more polished in language and flow, with precise terminology (\u201cEnlightenment ideas,\u201d \u201cmodern democracies,\u201d \u201cnuances of historical events\u201d) and a more formal academic tone. Answer2 is equally accurate and thorough but includes minor grammatical irregularities (\u201cget main sources,\u201d \u201cmoney problems,\u201d \u201cstress on money, political, or social parts\u201d) that slightly reduce its clarity and professionalism.\n\nHowever, since the prompt asks for an evaluation based **exclusively on semantic quality**\u2014meaning the depth, accuracy, and coherence of the ideas, not grammar or style\u2014both responses are semantically equivalent in substance. They both demonstrate a full understanding of historical methodology and apply it effectively.\n\nThus, neither response is meaningfully superior in semantic quality.\n\n**Tie**"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2.5-3B-Instruct",
+                "Qwen/Qwen2.5-3B-Instruct",
+                "Qwen/Qwen2.5-3B-Instruct"
+            ]
+        }
+    ],
+    "1": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'What parts are needed in an argument essay and how do these parts work together?'",
+            "answer1": {
+                "text": "An argumentative paper needs several key parts: start, main statement, body sections with support, opposing view with answer, and end. The start gives background and finishes with a clear main statement, which shows the main claim. Body sections each focus on one support point, giving proof like facts or examples to back the main statement. The opposing view takes note of different opinions and is followed by an answer that counters them, making the writer\u2019s position stronger. The end sums up the main points, restates the main statement, and gives final thoughts or a call to action. These parts work together to create context, show and support an argument, deal with opposing views, and leave the reader with a strong final feeling. Each section builds on the last to make a clear, persuasive paper.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "An argumentative essay consists of several key parts that interact to form a coherent and persuasive piece of writing. These include an introduction that outlines the thesis statement, which is the main argument or claim the essay will support. The body paragraphs follow, each presenting evidence, examples, and reasoning to support the thesis. Counterarguments are also addressed here to strengthen the essay's robustness. Finally, the conclusion summarizes the main points and restates the thesis in light of the evidence presented, aiming to leave a lasting impression on the reader. Each part builds upon the others, ensuring a logical progression of ideas and a strong, unified argument.",
+                "label": "Qwen/Qwen2.5-3B-Instruct"
+            },
+            "result": [
+                "Answer2",
+                "Answer1 and Answer2 are both accurate and well-structured, covering the essential components of an argumentative essay: introduction (with thesis), body paragraphs with evidence, counterarguments, and conclusion. Both explain how the parts work together to build a persuasive argument.\n\nHowever, **Answer1** provides slightly more detail and clarity in explaining the function of each component\u2014particularly in how the opposing view is integrated (\u201ctakes note of different opinions and is followed by an answer that counters them\u201d) and how the conclusion functions (\u201crestates the main statement, and gives final thoughts or a call to action\u201d). It also uses more concrete language like \u201cproof like facts or examples,\u201d which enhances understanding.\n\nAnswer2 is concise and correct, but slightly more generic\u2014e.g., \u201cevidence, examples, and reasoning\u201d is vague compared to Answer1\u2019s explicit mention of \u201cproof like facts or examples,\u201d and \u201cstrengthen the essay's robustness\u201d is less clear than \u201cmaking the writer\u2019s position stronger.\u201d\n\nThus, **Answer1** offers a more thorough, nuanced, and pedagogically useful explanation.\n\nAnswer1",
+                "Answer1 and Answer2 are both accurate and well-structured, covering the essential components of an argumentative essay: introduction (with thesis), body paragraphs with evidence, counterarguments, and conclusion. Both explain how the parts work together to build a persuasive argument.\n\nHowever, **Answer1** provides slightly more detail and clarity in explaining the function of each component\u2014particularly in how the opposing view is integrated (\u201ctakes note of different opinions and is followed by an answer that counters them\u201d) and how the conclusion functions (\u201crestates the main statement, and gives final thoughts or a call to action\u201d). It also uses more concrete language like \u201cproof like facts or examples,\u201d which enhances understanding.\n\nAnswer2 is concise and correct, but slightly more generic\u2014e.g., \u201cevidence, examples, and reasoning\u201d is vague compared to Answer1\u2019s explicit mention of \u201cproof like facts or examples,\u201d and \u201cstrengthen the essay's robustness\u201d is less clear than \u201cmaking the writer\u2019s position stronger.\u201d\n\nThus, **Answer1** offers a more thorough, nuanced, and pedagogically helpful explanation.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2.5-3B-Instruct",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'What parts are needed in an argument essay and how do these parts work together?'",
+            "answer1": {
+                "text": "An argumentative essay consists of several key parts that interact to form a coherent and persuasive piece of writing. These include an introduction that outlines the thesis statement, which is the main argument or claim the essay will support. The body paragraphs follow, each presenting evidence, examples, and reasoning to support the thesis. Counterarguments are also addressed here to strengthen the essay's robustness. Finally, the conclusion summarizes the main points and restates the thesis in light of the evidence presented, aiming to leave a lasting impression on the reader. Each part builds upon the others, ensuring a logical progression of ideas and a strong, unified argument.",
+                "label": "Qwen/Qwen2.5-3B-Instruct"
+            },
+            "answer2": {
+                "text": "An argumentative paper needs several key parts: start, main statement, body sections with support, opposing view with answer, and end. The start gives background and finishes with a clear main statement, which shows the main claim. Body sections each focus on one support point, giving proof like facts or examples to back the main statement. The opposing view takes note of different opinions and is followed by an answer that counters them, making the writer\u2019s position stronger. The end sums up the main points, restates the main statement, and gives final thoughts or a call to action. These parts work together to create context, show and support an argument, deal with opposing views, and leave the reader with a strong final feeling. Each section builds on the last to make a clear, persuasive paper.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Both Answer1 and Answer2 accurately describe the essential components of an argumentative essay\u2014introduction with thesis, body paragraphs with evidence, consideration of counterarguments, and a conclusion that reinforces the claim. Both also explain how the parts work together logically to build a persuasive argument.\n\nHowever, Answer1 uses more precise and academically appropriate language (e.g., \u201cthesis statement,\u201d \u201crobustness,\u201d \u201clogical progression of ideas,\u201d \u201cunified argument\u201d) and demonstrates a slightly deeper understanding of rhetorical structure. It avoids vague terms like \u201cstart\u201d and \u201cend,\u201d opting instead for the standard academic terminology (\u201cintroduction,\u201d \u201cconclusion\u201d), which enhances clarity and professionalism.\n\nAnswer2 is clear and correct but uses simpler, less formal phrasing (\u201cstart,\u201d \u201cend,\u201d \u201cmain statement\u201d) that, while understandable, lacks the precision expected in academic writing.\n\nThus, Answer1 is superior in semantic quality, accuracy, and tone.\n\nAnswer1",
+                "Both Answer1 and Answer2 accurately describe the essential components of an argumentative essay\u2014introduction with thesis, body paragraphs with evidence, consideration of counterarguments, and a conclusion that reinforces the claim. Both also explain how the parts work together logically to build a persuasive argument.\n\nHowever, Answer1 uses more precise and academically appropriate language (e.g., \u201cthesis statement,\u201d \u201crobustness,\u201d \u201clogical progression of ideas,\u201d \u201cunified argument\u201d) and demonstrates a slightly deeper understanding of rhetorical structure. It avoids vague terms like \u201cstart\u201d and \u201cend,\u201d opting instead for the standard academic terminology (\u201cintroduction,\u201d \u201cconclusion\u201d), which enhances clarity and professionalism.\n\nAnswer2 is clear and correct but uses simpler, less formal phrasing (\u201cstart,\u201d \u201cend,\u201d \u201cmain statement\u201d) that, while understandable, lacks the precision expected in academic writing.\n\nThus, Answer1 is superior in semantic quality due to its accuracy, formality, and nuanced explanation.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2.5-3B-Instruct",
+                "Qwen/Qwen2.5-3B-Instruct",
+                "Qwen/Qwen2.5-3B-Instruct"
+            ]
+        }
+    ],
+    "2": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "What are the parts of a healthy, balanced meal, and how do they work together to give good nutrition?",
+            "answer1": {
+                "text": "A healthy meal has good balance with food like grains, fruit, meat, beans, tofu, oils, nuts, and fish. Grains and fruit give energy. Meat, beans, and tofu help build and fix body parts. Oils, nuts, and fish have good fats that help the brain and hormones. Vegetables and fruit give important vitamins, minerals, and good parts that help keep us healthy. Whole grains, fruit, and vegetables have fiber that helps with digestion and keeps blood sugar steady. Water is also very important for moving nutrients and staying hydrated. All these parts work together to give energy to the body, keep muscles and bones strong, help thinking, and support body processes. Having many kinds of food and balanced amounts of each group helps the body get all the nutrients it needs for good health and well-being.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "A healthy balanced meal typically includes a variety of food groups to ensure all essential nutrients are met. It generally consists of proteins, carbohydrates, fats, vitamins, and minerals. Proteins, found in meat, fish, eggs, dairy, and legumes, provide the body with amino acids necessary for growth and repair. Carbohydrates, mainly from whole grains, fruits, and vegetables, are the body's primary source of energy. Fats, from sources like nuts, seeds, avocados, and oils, are crucial for energy, hormone production, and fat-soluble vitamin absorption. Vitamins and minerals, found in fruits, vegetables, dairy, and fortified foods, support various bodily functions. These components interact to provide a comprehensive range of nutrients, supporting overall health and well-being.",
+                "label": "Qwen/Qwen2.5-3B-Instruct"
+            },
+            "result": [
+                "Answer1",
+                "Answer1 provides a more detailed, practical, and accessible breakdown of the components of a healthy meal, explicitly naming specific food examples (e.g., tofu, nuts, fish, whole grains) and explaining their physiological roles in clear, everyday language. It also includes fiber and water\u2014two critical but often overlooked elements\u2014linking them directly to digestion and hydration, which enhances the completeness of the answer. While Answer2 is accurate and concise, it remains more abstract, listing nutrient categories without the same level of concrete food examples or functional integration.\n\nAnswer1 better fulfills the question\u2019s intent by explaining *how* the parts work together, not just *what* they are, and does so in a way that is both scientifically sound and easy to apply in real life.\n\nAnswer1",
+                "Answer1 provides a more detailed, practical, and accessible breakdown of the components of a healthy meal, explicitly naming specific food examples (e.g., tofu, nuts, fish, whole grains) and explaining their physiological roles in clear, everyday language. It also includes fiber and water\u2014two critical but often overlooked elements\u2014linking them directly to digestion and hydration, which enhances the completeness of the answer. While Answer2 is accurate and concise, it remains more abstract, listing nutrient categories without the same level of concrete food examples or functional integration.\n\nAnswer1 better fulfills the question\u2019s intent by explaining *how* the parts work together, not just *what* they are, and does so in a way that is both scientifically sound and easy to apply in daily life.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "What are the parts of a healthy, balanced meal, and how do they work together to give good nutrition?",
+            "answer1": {
+                "text": "A healthy balanced meal typically includes a variety of food groups to ensure all essential nutrients are met. It generally consists of proteins, carbohydrates, fats, vitamins, and minerals. Proteins, found in meat, fish, eggs, dairy, and legumes, provide the body with amino acids necessary for growth and repair. Carbohydrates, mainly from whole grains, fruits, and vegetables, are the body's primary source of energy. Fats, from sources like nuts, seeds, avocados, and oils, are crucial for energy, hormone production, and fat-soluble vitamin absorption. Vitamins and minerals, found in fruits, vegetables, dairy, and fortified foods, support various bodily functions. These components interact to provide a comprehensive range of nutrients, supporting overall health and well-being.",
+                "label": "Qwen/Qwen2.5-3B-Instruct"
+            },
+            "answer2": {
+                "text": "A healthy meal has good balance with food like grains, fruit, meat, beans, tofu, oils, nuts, and fish. Grains and fruit give energy. Meat, beans, and tofu help build and fix body parts. Oils, nuts, and fish have good fats that help the brain and hormones. Vegetables and fruit give important vitamins, minerals, and good parts that help keep us healthy. Whole grains, fruit, and vegetables have fiber that helps with digestion and keeps blood sugar steady. Water is also very important for moving nutrients and staying hydrated. All these parts work together to give energy to the body, keep muscles and bones strong, help thinking, and support body processes. Having many kinds of food and balanced amounts of each group helps the body get all the nutrients it needs for good health and well-being.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1 is more precise, structured, and scientifically accurate in explaining the roles of macronutrients (proteins, carbohydrates, fats) and micronutrients (vitamins, minerals), as well as their physiological functions and food sources. It clearly articulates how these components interact synergistically to support overall nutrition.\n\nAnswer2 is also correct and includes valuable points\u2014especially the mention of fiber and water\u2014but it is less systematic, uses more colloquial language (\u201cgood parts,\u201d \u201chelp build and fix\u201d), and lacks the depth and clarity in explaining biochemical roles (e.g., how fats aid fat-soluble vitamin absorption, or how carbohydrates serve as the primary energy source).\n\nAnswer1 provides a more comprehensive, coherent, and educationally superior explanation.\n\nAnswer1",
+                "Answer1 is more precise, structured, and scientifically accurate in explaining the roles of macronutrients (proteins, carbohydrates, fats) and micronutrients (vitamins, minerals), as well as their physiological functions and food sources. It clearly articulates how these components interact synergistically to support overall nutrition.\n\nAnswer2 is also correct and includes valuable points\u2014especially the mention of fiber and water\u2014but it is less systematic, uses more colloquial language (\u201cgood parts,\u201d \u201chelp build and fix\u201d), and lacks the depth and clarity in explaining biochemical roles (e.g., how fats aid in fat-soluble vitamin absorption, or how carbohydrates serve as the primary energy source).\n\nAnswer1 demonstrates superior semantic quality through greater accuracy, coherence, and educational depth.\n\nAnswer1",
+                "Answer1 is more precise, structured, and scientifically accurate in explaining the roles of macronutrients (proteins, carbohydrates, fats) and micronutrients (vitamins, minerals), as well as their physiological functions and food sources. It clearly articulates how these components interact synergistically to support overall nutrition.\n\nAnswer2 is also correct and includes valuable points\u2014especially the mention of fiber and water\u2014but it is less systematic, uses more colloquial language (\u201cgood parts,\u201d \u201chelp build and fix\u201d), and lacks the depth and clarity in explaining biochemical roles (e.g., how fats aid fat-soluble vitamin absorption, or how carbohydrates serve as the primary energy source).\n\nAnswer1 provides a more comprehensive, coherent, and educationally superior explanation of nutritional science.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2.5-3B-Instruct",
+                "Qwen/Qwen2.5-3B-Instruct",
+                "Qwen/Qwen2.5-3B-Instruct"
+            ]
+        }
+    ],
+    "3": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "How are the different parts in a digestion system joined and why is each one important?",
+            "answer1": {
+                "text": "The digestion system starts at the mouth, where food is chewed and mixed with saliva. It then goes down the tube to the stomach, where acids and enzymes break it down more. From the stomach, food moves to the small intestine. Here, digestive enzymes from the pancreas and bile from the liver help in taking in nutrients. The nutrients pass into the blood while waste moves to the large intestine, where water is taken in and the rest is made into stool. Every organ plays an important part: the mouth starts the breaking down, the stomach keeps digestion going, the small intestine takes in nutrients, the pancreas and liver give necessary chemicals, and the large intestine deals with water use and waste removal. All are joined by a long muscle tube, making sure food goes in the right way for good digestion and nutrient use.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "The digestive system is a complex network of organs that work together to break down food, absorb nutrients, and eliminate waste. Key organs include the mouth, esophagus, stomach, small intestine, large intestine, and anus. The mouth initiates digestion by breaking down food with teeth and saliva. The esophagus moves food to the stomach through peristaltic contractions. The stomach churns and secretes acids to further break down food. The small intestine absorbs nutrients and water, while the large intestine absorbs water and forms waste. The anus and rectum expel waste. Each organ plays a crucial role in the digestive process, ensuring that nutrients are efficiently absorbed and waste is effectively eliminated.",
+                "label": "Qwen/Qwen2.5-3B-Instruct"
+            },
+            "result": [
+                "Answer1",
+                "Answer1 is superior because it provides a more detailed and accurate explanation of how the parts are physically connected (\u201cAll are joined by a long muscle tube\u201d) and explicitly mentions the roles of accessory organs like the pancreas and liver, which are critical to digestion but omitted in Answer2. It also clearly explains the functional importance of each part in the context of nutrient absorption and waste processing. While Answer2 is correct and concise, it lacks depth on the structural connection between organs and the specific contributions of the pancreas and liver, which are essential to a complete understanding of the digestive system.\n\nAnswer1",
+                "Answer1 is superior because it provides a more detailed and accurate explanation of how the parts are physically connected (\u201cAll are joined by a long muscle tube\u201d) and explicitly mentions the roles of accessory organs like the pancreas and liver, which are critical to digestion but omitted in Answer2. It also clearly explains the functional importance of each part in the context of nutrient absorption and waste processing. While Answer2 is correct and concise, it lacks depth on the structural connection between organs and the specific contributions of the pancreas and liver, which are essential for a complete understanding of the digestive system.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "How are the different parts in a digestion system joined and why is each one important?",
+            "answer1": {
+                "text": "The digestive system is a complex network of organs that work together to break down food, absorb nutrients, and eliminate waste. Key organs include the mouth, esophagus, stomach, small intestine, large intestine, and anus. The mouth initiates digestion by breaking down food with teeth and saliva. The esophagus moves food to the stomach through peristaltic contractions. The stomach churns and secretes acids to further break down food. The small intestine absorbs nutrients and water, while the large intestine absorbs water and forms waste. The anus and rectum expel waste. Each organ plays a crucial role in the digestive process, ensuring that nutrients are efficiently absorbed and waste is effectively eliminated.",
+                "label": "Qwen/Qwen2.5-3B-Instruct"
+            },
+            "answer2": {
+                "text": "The digestion system starts at the mouth, where food is chewed and mixed with saliva. It then goes down the tube to the stomach, where acids and enzymes break it down more. From the stomach, food moves to the small intestine. Here, digestive enzymes from the pancreas and bile from the liver help in taking in nutrients. The nutrients pass into the blood while waste moves to the large intestine, where water is taken in and the rest is made into stool. Every organ plays an important part: the mouth starts the breaking down, the stomach keeps digestion going, the small intestine takes in nutrients, the pancreas and liver give necessary chemicals, and the large intestine deals with water use and waste removal. All are joined by a long muscle tube, making sure food goes in the right way for good digestion and nutrient use.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1 is superior because it provides a more comprehensive, accurate, and structured explanation of the digestive system. It clearly lists all major organs involved (mouth, esophagus, stomach, small intestine, large intestine, anus), describes their specific functions with appropriate physiological detail (e.g., peristalsis, acid secretion, nutrient and water absorption), and emphasizes the importance of each part in the overall process. It also correctly identifies the anus and rectum as the endpoint for waste elimination.\n\nAnswer2 is generally correct but less precise. It omits the esophagus as a distinct organ with a defined function (merely calling it \u201ca tube\u201d), and while it mentions the pancreas and liver, it incorrectly implies they are part of the \u201cdigestion system\u201d in the same structural way as the intestines \u2014 they are accessory organs, not part of the alimentary canal. Additionally, Answer2 lacks clarity on how the organs are physically joined (only vaguely referring to \u201ca long muscle tube\u201d), whereas Answer1 implicitly acknowledges the continuous nature of the GI tract through its sequential description.\n\nAnswer1 demonstrates better scientific accuracy, completeness, and clarity.\n\nAnswer1",
+                "Answer1 is superior because it provides a more comprehensive, accurate, and structured explanation of the digestive system. It clearly lists all major organs involved (mouth, esophagus, stomach, small intestine, large intestine, anus), describes their specific functions with appropriate physiological detail (e.g., peristalsis, acid secretion, nutrient and water absorption), and emphasizes the importance of each part in the overall process. It also correctly identifies the anus and rectum as the endpoint for waste elimination.\n\nAnswer2 is generally correct but less precise. It omits the esophagus as a distinct organ with a defined function (merely calling it \u201ca tube\u201d), and while it mentions the pancreas and liver, it incorrectly implies they are part of the \u201cdigestion system\u201d in the same structural way as the intestines \u2014 they are accessory organs, not part of the alimentary canal. Additionally, Answer2 lacks clarity on how the organs are physically joined (only vaguely referring to \u201ca long muscle tube\u201d), whereas Answer1 implicitly acknowledges the continuous nature of the GI tract through its sequential description.\n\nAnswer1 demonstrates greater scientific accuracy, completeness, and clarity in explaining both structure and function.\n\nAnswer1",
+                "Answer1 is superior because it provides a more comprehensive, accurate, and structured explanation of the digestive system. It clearly lists all major organs involved (mouth, esophagus, stomach, small intestine, large intestine, anus), describes their specific functions with appropriate physiological detail (e.g., peristalsis, acid secretion, nutrient and water absorption), and emphasizes the importance of each part in the overall process. It also correctly identifies the anus and rectum as the endpoint for waste elimination.\n\nAnswer2 is generally correct but less precise. It omits the esophagus as a distinct organ with a defined function (merely calling it \u201ca tube\u201d), and while it mentions the pancreas and liver, it incorrectly implies they are part of the \u201cdigestion system\u201d in the same structural way as the intestines \u2014 they are accessory organs, not part of the alimentary canal. Additionally, Answer2 lacks clarity on how the organs are physically joined (only vaguely referring to \u201ca long muscle tube\u201d), whereas Answer1 implicitly acknowledges the continuous nature of the GI tract through its sequential description.\n\nAnswer1 demonstrates greater scientific accuracy, completeness, and clarity in explaining both the structure and functional importance of each component.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2.5-3B-Instruct",
+                "Qwen/Qwen2.5-3B-Instruct",
+                "Qwen/Qwen2.5-3B-Instruct"
+            ]
+        }
+    ],
+    "4": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "Look at the different powers on a still car and talk about how each one changes the vehicle.",
+            "answer1": {
+                "text": "Several forces act on a car that is not moving:\n\ngravitational force \u2013 This pulls down because of the Earth, bringing the car toward the ground and making its weight.  \nnormal reaction \u2013 The road gives an upward force (normal force) that balances the car\u2019s weight, stopping it from going into the ground.  \nfrictional force \u2013 Static friction is between the tires and the road, stopping movement and keeping the car at rest unless another force is applied.  \nair resistance \u2013 This is small when the car is not moving but still pushes very slightly on open surfaces.  \nupthrust \u2013 This is a small upward force from air below the car, usually not important compared to other forces.\n\nThese forces are balanced when the car is not moving, which makes no net force and, so, no movement. When any of these forces changes or becomes unbalanced, the car can start to move or change place.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "A stationary car is influenced by several forces. Gravity pulls the car downwards, but since it's stationary, the upward normal force from the ground balances this. Frictional forces, both static and rolling, prevent the car from moving. Static friction prevents the car from sliding on the ground, while rolling friction acts between the tires and the road, opposing the car's movement. Air resistance, although negligible for a stationary car, becomes significant when the car starts moving. Lastly, any applied force (like a push or pull) must be balanced by an equal and opposite reaction force to keep the car stationary. These forces collectively ensure the car remains at rest until an external unbalanced force acts upon it.",
+                "label": "Qwen/Qwen2.5-3B-Instruct"
+            },
+            "result": [
+                "Answer1 provides a more detailed and accurate breakdown of the forces acting on a stationary car. It correctly identifies gravitational force, normal force, static friction, air resistance, and even mentions upthrust (though it appropriately notes its insignificance). It also clearly explains that the forces are balanced, leading to no net force and no motion \u2014 a key concept in Newtonian mechanics. The explanation of how changes in these forces could lead to motion is also well-articulated.\n\nAnswer2 is also correct and concise, but it contains a minor inaccuracy: it mentions \u201crolling friction\u201d acting on a stationary car. Rolling friction typically applies when an object is rolling \u2014 not when it\u2019s fully at rest. For a stationary car, only static friction is relevant to prevent sliding or starting to move. Including rolling friction here is misleading. Additionally, Answer2 mentions \u201cany applied force... must be balanced by an equal and opposite reaction force,\u201d which confuses Newton\u2019s third law (action-reaction pairs) with the condition for equilibrium (net force = 0). This is a subtle but important conceptual error.\n\nTherefore, Answer1 is superior in both accuracy and depth.\n\nAnswer1",
+                "Answer1 provides a more detailed and accurate breakdown of the forces acting on a stationary car. It correctly identifies gravitational force, normal force, static friction, air resistance, and even mentions upthrust (though it appropriately notes its insignificance). It also clearly explains that the forces are balanced, leading to no net force and no motion \u2014 a key concept in Newtonian mechanics. The explanation of how changes in these forces could lead to motion is also well-articulated.\n\nAnswer2 is also correct and concise, but it contains a minor inaccuracy: it mentions \u201crolling friction\u201d acting on a stationary car. Rolling friction typically applies when an object is rolling \u2014 not when it\u2019s fully at rest. For a stationary car, only static friction is relevant to prevent sliding or starting to move. Including rolling friction here is misleading. Additionally, Answer2 mentions \u201cany applied force... must be balanced by an equal and opposite reaction force,\u201d which confuses Newton\u2019s third law (action-reaction pairs) with the condition for equilibrium (net force = 0). This is a subtle but important conceptual error.\n\nTherefore, Answer1 is superior due to its greater accuracy and clarity.\n\nAnswer1",
+                "Answer1 provides a more detailed and accurate breakdown of the forces acting on a stationary car. It correctly identifies gravitational force, normal force, static friction, air resistance, and even mentions upthrust (though it appropriately notes its insignificance). It also clearly explains that the forces are balanced, leading to no net force and no motion \u2014 a key concept in Newtonian mechanics. The explanation of how changes in these forces could lead to motion is also well-articulated.\n\nAnswer2 is also correct and concise, but it contains a minor inaccuracy: it mentions \u201crolling friction\u201d acting on a stationary car. Rolling friction typically applies when an object is rolling \u2014 not when it\u2019s fully at rest. For a stationary car, only static friction is relevant to prevent sliding or starting to move. Including rolling friction here is misleading. Additionally, Answer2 mentions \u201cany applied force... must be balanced by an equal and opposite reaction force,\u201d which confuses Newton\u2019s third law (action-reaction pairs) with the condition for equilibrium (net force = 0). This is a subtle but important conceptual error.\n\nTherefore, Answer1 is superior due to its accuracy, completeness, and clarity.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "Look at the different powers on a still car and talk about how each one changes the vehicle.",
+            "answer1": {
+                "text": "A stationary car is influenced by several forces. Gravity pulls the car downwards, but since it's stationary, the upward normal force from the ground balances this. Frictional forces, both static and rolling, prevent the car from moving. Static friction prevents the car from sliding on the ground, while rolling friction acts between the tires and the road, opposing the car's movement. Air resistance, although negligible for a stationary car, becomes significant when the car starts moving. Lastly, any applied force (like a push or pull) must be balanced by an equal and opposite reaction force to keep the car stationary. These forces collectively ensure the car remains at rest until an external unbalanced force acts upon it.",
+                "label": "Qwen/Qwen2.5-3B-Instruct"
+            },
+            "answer2": {
+                "text": "Several forces act on a car that is not moving:\n\ngravitational force \u2013 This pulls down because of the Earth, bringing the car toward the ground and making its weight.  \nnormal reaction \u2013 The road gives an upward force (normal force) that balances the car\u2019s weight, stopping it from going into the ground.  \nfrictional force \u2013 Static friction is between the tires and the road, stopping movement and keeping the car at rest unless another force is applied.  \nair resistance \u2013 This is small when the car is not moving but still pushes very slightly on open surfaces.  \nupthrust \u2013 This is a small upward force from air below the car, usually not important compared to other forces.\n\nThese forces are balanced when the car is not moving, which makes no net force and, so, no movement. When any of these forces changes or becomes unbalanced, the car can start to move or change place.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Answer1 is superior because it provides a more precise, technically accurate, and comprehensive explanation of the forces acting on a stationary car. It correctly distinguishes between static and rolling friction (noting that rolling friction is minimal when stationary but still conceptually relevant), accurately describes air resistance as negligible in the stationary state (not misleadingly suggesting it \u201cpushes very slightly\u201d as in Answer2), and properly invokes Newton\u2019s third law with the concept of reaction forces. It also concludes with a clear reference to Newton\u2019s first law, reinforcing the physics principle behind equilibrium.\n\nAnswer2 contains some inaccuracies: \u201cupthrust\u201d is not a standard or meaningful term in this context\u2014it\u2019s typically used in fluid dynamics for buoyancy, which is negligible and irrelevant for a car on solid ground. Also, describing air resistance as \u201cpushing very slightly on open surfaces\u201d is vague and misleading; air resistance doesn\u2019t act meaningfully on a stationary car, and the phrasing implies it does, which confuses the concept.\n\nAnswer1 maintains scientific rigor and clarity; Answer2 introduces confusion with imprecise terminology and oversimplifications.\n\nAnswer1",
+                "Answer1 is superior because it provides a more precise, technically accurate, and comprehensive explanation of the forces acting on a stationary car. It correctly distinguishes between static and rolling friction (noting that rolling friction is minimal when stationary but still conceptually relevant), accurately describes air resistance as negligible in the stationary state (not misleadingly suggesting it \u201cpushes very slightly\u201d as in Answer2), and properly invokes Newton\u2019s third law with the concept of reaction forces. It also concludes with a clear reference to Newton\u2019s first law, reinforcing the physics principle behind equilibrium.\n\nAnswer2 contains some inaccuracies: \u201cupthrust\u201d is not a standard or meaningful term in this context\u2014it\u2019s typically used in fluid dynamics for buoyancy, which is negligible and irrelevant for a car on solid ground. Also, describing air resistance as \u201cpushing very slightly on open surfaces\u201d is vague and misleading; air resistance doesn\u2019t act meaningfully on a stationary car, and the phrasing implies it does, which confuses the concept. Additionally, Answer2 lacks the clarity and depth of physical reasoning found in Answer1.\n\nThus, Answer1 demonstrates higher semantic quality, accuracy, and conceptual clarity.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2.5-3B-Instruct",
+                "Qwen/Qwen2.5-3B-Instruct",
+                "Qwen/Qwen2.5-3B-Instruct"
+            ]
+        }
+    ],
+    "5": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'How do a character's actions help the whole story?'",
+            "answer1": {
+                "text": "A person's actions have a big effect on the whole plot of a story by pushing events forward and making cause-and-effect links. When a person makes a choice or does something, it often brings new challenges, fights, or chances. This moves the tale along and shapes how the story goes. For instance, a person\u2019s choice to trust another may lead to betrayal, adding a new fight. Their actions can also show their reasons, wishes, and character, making the story more interesting. Also, a person's growth or change, shown through their actions, helps with the story\u2019s ideas and message. In short, without a person's actions, there would be no movement or growth in the plot, and the story would have no direction or aim.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "A character's actions significantly contribute to the overall plot of a story by driving the narrative forward, creating conflicts, and influencing the development of other characters. Actions reveal a character's motivations, desires, and flaws, which can lead to pivotal moments that propel the plot. They also create opportunities for character growth and change, as well as unexpected twists that keep the story engaging and unpredictable. Through actions, a character can resolve conflicts, solve problems, or face new challenges, all of which are crucial elements in advancing the plot and deepening the story's themes.",
+                "label": "Qwen/Qwen2.5-3B-Instruct"
+            },
+            "result": [
+                "Answer2",
+                "Both Answer1 and Answer2 are well-written, clear, and accurate in explaining how a character\u2019s actions contribute to the story. They both correctly identify key functions: advancing the plot, creating conflict, revealing motivation, enabling character growth, and reinforcing themes.\n\nHowever, **Answer2** is slightly superior because:\n\n- It uses more precise and sophisticated language (e.g., \u201cpropel the plot,\u201d \u201cpivotal moments,\u201d \u201cdeepening the story\u2019s themes\u201d).\n- It more concisely integrates multiple dimensions (narrative drive, conflict, character development, thematic depth) without redundancy.\n- It avoids minor informal phrasing like \u201ca person\u2019s\u201d (instead of \u201ca character\u2019s\u201d) and \u201cthe tale\u201d (which is less standard in literary analysis), maintaining a more consistent academic tone.\n- It better emphasizes the *interconnectedness* of actions with other story elements (e.g., influencing other characters, creating twists), which adds depth.\n\nAnswer1 is strong, but Answer2 is more polished, comprehensive, and aligned with literary analysis conventions.\n\nAnswer2",
+                "Both Answer1 and Answer2 are well-written, clear, and accurate in explaining how a character\u2019s actions contribute to the story. They both correctly identify key functions: advancing the plot, creating conflict, revealing motivation, enabling character growth, and reinforcing themes.\n\nHowever, **Answer2** is slightly superior because:\n\n- It uses more precise and sophisticated language (e.g., \u201cpropel the plot,\u201d \u201cpivotal moments,\u201d \u201cdeepening the story\u2019s themes\u201d).\n- It more concisely integrates multiple dimensions (narrative drive, conflict, character development, thematic depth) without redundancy.\n- It avoids minor informal phrasing like \u201ca person\u2019s\u201d (instead of \u201ca character\u2019s\u201d) and \u201cthe tale\u201d (which is less standard in literary analysis), maintaining a more consistent academic tone.\n- It better emphasizes the *interconnectedness* of actions with other story elements (e.g., influencing other characters, creating twists), which adds depth.\n\nAnswer1 is strong, but Answer2 is more polished, comprehensive, and thematically nuanced.\n\n**Answer2**"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2.5-3B-Instruct",
+                "Qwen/Qwen2.5-3B-Instruct",
+                "Unknown"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'How do a character's actions help the whole story?'",
+            "answer1": {
+                "text": "A character's actions significantly contribute to the overall plot of a story by driving the narrative forward, creating conflicts, and influencing the development of other characters. Actions reveal a character's motivations, desires, and flaws, which can lead to pivotal moments that propel the plot. They also create opportunities for character growth and change, as well as unexpected twists that keep the story engaging and unpredictable. Through actions, a character can resolve conflicts, solve problems, or face new challenges, all of which are crucial elements in advancing the plot and deepening the story's themes.",
+                "label": "Qwen/Qwen2.5-3B-Instruct"
+            },
+            "answer2": {
+                "text": "A person's actions have a big effect on the whole plot of a story by pushing events forward and making cause-and-effect links. When a person makes a choice or does something, it often brings new challenges, fights, or chances. This moves the tale along and shapes how the story goes. For instance, a person\u2019s choice to trust another may lead to betrayal, adding a new fight. Their actions can also show their reasons, wishes, and character, making the story more interesting. Also, a person's growth or change, shown through their actions, helps with the story\u2019s ideas and message. In short, without a person's actions, there would be no movement or growth in the plot, and the story would have no direction or aim.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Answer1 is superior because it provides a more nuanced, cohesive, and sophisticated analysis of how character actions function within a narrative. It explicitly connects actions to plot progression, conflict creation, character development, thematic depth, and narrative unpredictability\u2014all with precise language and logical flow. While Answer2 is accurate and clear, it uses less formal phrasing (\u201ca person\u2019s actions,\u201d \u201cthe tale,\u201d \u201cno direction or aim\u201d) and lacks the depth and precision of Answer1. Answer1 also better integrates literary terminology and conceptual relationships, making it more insightful and academically robust.\n\nAnswer1",
+                "Answer1 is superior because it provides a more nuanced, cohesive, and sophisticated analysis of how character actions function within a narrative. It explicitly connects actions to plot progression, conflict creation, character development, thematic depth, and narrative unpredictability\u2014all with precise language and logical flow. While Answer2 is accurate and clear, it uses less formal phrasing (\u201ca person\u2019s actions,\u201d \u201cthe tale,\u201d \u201cno direction or aim\u201d) and lacks the depth and precision of Answer1. Answer1 better demonstrates an understanding of literary structure and storytelling mechanics.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2.5-3B-Instruct",
+                "Qwen/Qwen2.5-3B-Instruct",
+                "Qwen/Qwen2.5-3B-Instruct"
+            ]
+        }
+    ],
+    "6": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'What are the main parts of a democratic government and how do they work together?'",
+            "answer1": {
+                "text": "A democratic government has some main parts. First, it is based on free and fair elections, letting people choose their leaders. Second, there is the rule of law, making sure everyone, including leaders, must follow the law. Third, it protects basic rights and freedoms, such as speech, assembly, and religion. Fourth, it supports the rule of the majority while respecting the rights of the minority, keeping balance in society. Fifth, it has a separation of powers among parts like the executive, legislative, and judiciary, stopping misuse of power. Sixth, it needs accountability and transparency, so officials must explain their decisions and actions. These parts work together by letting public participation, stopping concentration of power, and making sure leaders act in the interests of the people. As a result, a democratic government is responsive, responsible, and really represents the wishes of the people.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "A democratic government features several key features that work together to ensure governance by the people, for the people, and of the people. These include:\n\n1. **Representation**: Citizens elect representatives who make decisions on their behalf. This ensures that governance is responsive to public needs and preferences.\n\n2. **Rule of Law**: All citizens, including government officials, are subject to the same laws and legal processes. This principle ensures fairness and equality under the law.\n\n3. **Free and Fair Elections**: Regular, transparent, and competitive elections allow citizens to choose their leaders and hold them accountable.\n\n4. **Separation of Powers**: The government is divided into distinct branches (executive, legislative, and judicial) to prevent any one branch from becoming too powerful. Each branch checks the others to ensure no abuse of power.\n\n5. **Civil Liberties**: Rights such as freedom of speech, press, assembly, and religion protect individuals from arbitrary government action and foster a vibrant society.\n\n6. **Economic Freedom**: Markets are allowed to operate freely, which encourages innovation, competition, and economic growth.\n\nThese features work together to create a stable, fair, and responsive government that serves the interests of its citizens.",
+                "label": "Qwen/Qwen2.5-3B-Instruct"
+            },
+            "result": [
+                "Answer1",
+                "Answer1 is more comprehensive and accurate in its description of the main parts of a democratic government and how they work together. It correctly identifies core democratic principles \u2014 free and fair elections, rule of law, protection of rights, majority rule with minority rights, separation of powers, and accountability/transparency \u2014 and explicitly explains how they interact to ensure responsiveness and prevent abuse of power.\n\nAnswer2 is also well-structured and mostly accurate, but it includes **\u201cEconomic Freedom\u201d** as a key feature of democratic government. While economic freedom may often coexist with democracy, it is not a *defining* or *necessary* component of democratic governance. Many democracies have mixed or regulated economies, and some non-democracies have high economic freedom. Including it as a core part misrepresents the conceptual boundaries of democracy, which is primarily about political rights, participation, and institutional checks \u2014 not economic systems.\n\nThus, Answer1 avoids this conceptual error and provides a more precise, academically sound explanation.\n\nAnswer1",
+                "Answer1 is more comprehensive and accurate in its description of the main parts of a democratic government and how they work together. It correctly identifies core democratic principles \u2014 free and fair elections, rule of law, protection of rights, majority rule with minority rights, separation of powers, and accountability/transparency \u2014 and explicitly explains how they interact to ensure responsiveness and prevent abuse of power.\n\nAnswer2 is also well-structured and mostly accurate, but it includes **\u201cEconomic Freedom\u201d** as a key feature of democratic government. While economic freedom may often coexist with democracy, it is not a *defining* or *necessary* component of democratic governance. Many democracies have mixed or regulated economies, and some non-democracies have high economic freedom. Including it as a core part misrepresents the conceptual boundaries of democracy, which is primarily about political rights, participation, and institutional checks \u2014 not economic systems.\n\nTherefore, Answer1 avoids this conceptual error and provides a more precise, academically sound explanation.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'What are the main parts of a democratic government and how do they work together?'",
+            "answer1": {
+                "text": "A democratic government features several key features that work together to ensure governance by the people, for the people, and of the people. These include:\n\n1. **Representation**: Citizens elect representatives who make decisions on their behalf. This ensures that governance is responsive to public needs and preferences.\n\n2. **Rule of Law**: All citizens, including government officials, are subject to the same laws and legal processes. This principle ensures fairness and equality under the law.\n\n3. **Free and Fair Elections**: Regular, transparent, and competitive elections allow citizens to choose their leaders and hold them accountable.\n\n4. **Separation of Powers**: The government is divided into distinct branches (executive, legislative, and judicial) to prevent any one branch from becoming too powerful. Each branch checks the others to ensure no abuse of power.\n\n5. **Civil Liberties**: Rights such as freedom of speech, press, assembly, and religion protect individuals from arbitrary government action and foster a vibrant society.\n\n6. **Economic Freedom**: Markets are allowed to operate freely, which encourages innovation, competition, and economic growth.\n\nThese features work together to create a stable, fair, and responsive government that serves the interests of its citizens.",
+                "label": "Qwen/Qwen2.5-3B-Instruct"
+            },
+            "answer2": {
+                "text": "A democratic government has some main parts. First, it is based on free and fair elections, letting people choose their leaders. Second, there is the rule of law, making sure everyone, including leaders, must follow the law. Third, it protects basic rights and freedoms, such as speech, assembly, and religion. Fourth, it supports the rule of the majority while respecting the rights of the minority, keeping balance in society. Fifth, it has a separation of powers among parts like the executive, legislative, and judiciary, stopping misuse of power. Sixth, it needs accountability and transparency, so officials must explain their decisions and actions. These parts work together by letting public participation, stopping concentration of power, and making sure leaders act in the interests of the people. As a result, a democratic government is responsive, responsible, and really represents the wishes of the people.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Answer1\n\nAnswer1 provides a more comprehensive, structured, and precise explanation of the main parts of a democratic government. It clearly defines each component\u2014representation, rule of law, free and fair elections, separation of powers, civil liberties, and economic freedom\u2014with thoughtful elaboration on how each functions and contributes to the system. The language is formal and accurate, and the explanation of how the parts \"work together\" is implicit but logically coherent.\n\nAnswer2 is also correct and covers many essential elements, but it is less detailed and slightly less precise. For instance, it mentions \"economic freedom\" only indirectly (by omission) and includes \"accountability and transparency\" as a separate point, which, while important, are better understood as outcomes or supporting mechanisms rather than core structural parts. Additionally, Answer2\u2019s phrasing is more general and lacks the depth and clarity of Answer1.\n\nThe superior answer is Answer1 due to its greater depth, accuracy, and clarity in explaining both the components and their interrelationships.\n\nAnswer1",
+                "Answer1\n\nAnswer1 provides a more comprehensive, structured, and precise explanation of the main parts of a democratic government. It clearly defines each component\u2014representation, rule of law, free and fair elections, separation of powers, civil liberties, and economic freedom\u2014with thoughtful elaboration on how each functions and contributes to the system. The language is formal and accurate, and the explanation of how the parts \"work together\" is implicit but logically coherent.\n\nAnswer2 is also correct and covers many essential elements, but it is less detailed and slightly less precise. For instance, it mentions \"economic freedom\" only indirectly (by omission) and includes \"accountability and transparency\" as a separate point, which, while important, are better understood as outcomes or supporting mechanisms rather than core structural parts. Additionally, Answer2\u2019s phrasing is more conversational and lacks the depth and clarity of Answer1.\n\nThe superior answer is Answer1 due to its greater depth, accuracy, and clarity in explaining both the components and their interrelationships.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2.5-3B-Instruct",
+                "Qwen/Qwen2.5-3B-Instruct",
+                "Qwen/Qwen2.5-3B-Instruct"
+            ]
+        }
+    ],
+    "7": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'How do the parts in the Periodic Table connect and differ from one another?'",
+            "answer1": {
+                "text": "Elements in the Periodic Table are connected because they are all made of atoms and are put in order by growing atomic number, which is the number of protons in their cores. Elements in the same column, called groups, have similar chemical qualities because they have the same number of valence electrons. Elements in the same row, or period, grow in atomic number and often show small changes in physical and chemical qualities. Even with these connections, elements are different in their atomic design, physical state, reactivity, and other qualities like color, weight, and melting point. Metals, nonmetals, and metalloids are large groups, each with special traits. Transition metals, halogens, and noble gases each have different actions and uses. This variety comes from differences in atomic design, mainly electron order, which leads to a range of chemical and physical actions among the elements.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "Elements in the Periodic Table are arranged based on their atomic number, which is the number of protons in the nucleus of an atom. Elements differ from each other in their atomic structure, chemical properties, and physical properties. They are grouped into periods (rows) and groups (columns). Elements in the same group have similar electronic configurations in their outermost shell, leading to similar chemical behaviors. Elements in different periods show a progression in atomic size, ionization energy, and electronegativity. For example, moving from left to right across a period, atomic radius generally decreases, and ionization energy increases. Elements in the same group, like the alkali metals (Group 1), have very similar chemical properties due to their similar outer electron configuration.",
+                "label": "Qwen/Qwen2.5-3B-Instruct"
+            },
+            "result": [
+                "Answer1",
+                "Answer1  \nAnswer1 provides a more comprehensive and nuanced explanation of how elements in the Periodic Table connect and differ. It not only mentions atomic number, groups, and periods but also elaborates on key concepts like valence electrons, physical and chemical trends, and the classification of elements into metals, nonmetals, metalloids, and specific families (transition metals, halogens, noble gases). It explicitly links atomic structure (electron configuration) to observable properties (reactivity, color, melting point), offering a deeper cause-and-effect understanding. Answer2 is accurate and clear but more concise and lacks the same level of detail and synthesis of ideas. Answer1 better fulfills the question\u2019s request to explain both connections and differences in depth.\n\nTie",
+                "Answer1  \nAnswer1 provides a more comprehensive and nuanced explanation of how elements in the Periodic Table connect and differ. It not only mentions atomic number, groups, and periods but also elaborates on key concepts like valence electrons, physical and chemical trends, and the classification of elements into metals, nonmetals, metalloids, and specific families (transition metals, halogens, noble gases). It explicitly links atomic structure (electron configuration) to observable properties (reactivity, color, melting point), offering a deeper cause-and-effect understanding. Answer2 is accurate and clear but more concise and lacks the same level of detail and synthesis of ideas. Answer1 better fulfills the question\u2019s request to explain both connections and differences in depth.  \n\nTie"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "Unknown",
+                "Unknown"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'How do the parts in the Periodic Table connect and differ from one another?'",
+            "answer1": {
+                "text": "Elements in the Periodic Table are arranged based on their atomic number, which is the number of protons in the nucleus of an atom. Elements differ from each other in their atomic structure, chemical properties, and physical properties. They are grouped into periods (rows) and groups (columns). Elements in the same group have similar electronic configurations in their outermost shell, leading to similar chemical behaviors. Elements in different periods show a progression in atomic size, ionization energy, and electronegativity. For example, moving from left to right across a period, atomic radius generally decreases, and ionization energy increases. Elements in the same group, like the alkali metals (Group 1), have very similar chemical properties due to their similar outer electron configuration.",
+                "label": "Qwen/Qwen2.5-3B-Instruct"
+            },
+            "answer2": {
+                "text": "Elements in the Periodic Table are connected because they are all made of atoms and are put in order by growing atomic number, which is the number of protons in their cores. Elements in the same column, called groups, have similar chemical qualities because they have the same number of valence electrons. Elements in the same row, or period, grow in atomic number and often show small changes in physical and chemical qualities. Even with these connections, elements are different in their atomic design, physical state, reactivity, and other qualities like color, weight, and melting point. Metals, nonmetals, and metalloids are large groups, each with special traits. Transition metals, halogens, and noble gases each have different actions and uses. This variety comes from differences in atomic design, mainly electron order, which leads to a range of chemical and physical actions among the elements.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Answer1 is superior because it provides a more precise, structured, and scientifically accurate explanation of how elements in the Periodic Table connect and differ. It clearly explains the significance of atomic number, the meaning of periods and groups, and explicitly describes trends such as atomic radius, ionization energy, and electronegativity across periods and within groups. It also gives a concrete example (alkali metals) to illustrate the concept of similar chemical behavior due to electron configuration.\n\nAnswer2 is generally correct but is less precise and somewhat vague. It uses less technical language (\u201ccores\u201d instead of \u201cnucleus,\u201d \u201catomic design\u201d instead of \u201celectronic configuration\u201d), and while it mentions categories like transition metals and noble gases, it does not explain *why* they behave differently in terms of electron structure. It also lacks the clear articulation of periodic trends that Answer1 provides.\n\nThe quality of Answer1 is higher in terms of accuracy, depth, clarity, and scientific rigor.\n\nAnswer1",
+                "Answer1 is superior because it provides a more precise, structured, and scientifically accurate explanation of how elements in the Periodic Table connect and differ. It clearly explains the significance of atomic number, the meaning of periods and groups, and explicitly describes trends such as atomic radius, ionization energy, and electronegativity across periods and within groups. It also gives a concrete example (alkali metals) to illustrate the concept of similar chemical behavior due to electron configuration.\n\nAnswer2 is generally correct but is less precise and somewhat vague. It uses less technical language (\u201ccores\u201d instead of \u201cnucleus,\u201d \u201catomic design\u201d instead of \u201celectronic configuration\u201d), and while it mentions categories like transition metals and noble gases, it does not explain *why* they behave differently in terms of electron structure. It also lacks the clear articulation of periodic trends that Answer1 provides.\n\nThe quality of Answer1 is higher in terms of depth, accuracy, and clarity.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2.5-3B-Instruct",
+                "Qwen/Qwen2.5-3B-Instruct",
+                "Qwen/Qwen2.5-3B-Instruct"
+            ]
+        }
+    ],
+    "8": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'How do the other parts of a cell help with its whole work?'",
+            "answer1": {
+                "text": "Each part of a cell has a special place that helps the cell to live and do its job. The nucleus keeps genetic material and controls cell work. The cell membrane controls what comes in and goes out of the cell. The cytoplasm holds small parts and is the place for many chemical changes. Mitochondria make energy through cell breathing. Ribosomes make proteins needed for growth and fix. The endoplasmic reticulum helps in making and moving proteins and fats. The Golgi apparatus changes, sorts, and packs proteins and other things. Lysosomes have enzymes for breaking down waste. In plant cells, chloroplasts do photosynthesis, and the cell wall gives shape and safety. All these parts work together to keep the cell well and doing its work.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "Each part of a cell plays a crucial role in its overall function. The cell membrane, or plasma membrane, regulates what enters and exits the cell, maintaining homeostasis. The cytoplasm, including organelles like the nucleus, mitochondria, and endoplasmic reticulum, houses and supports cellular activities. The nucleus contains the cell's genetic material and controls gene expression. Mitochondria are the powerhouses of the cell, producing energy through cellular respiration. The endoplasmic reticulum is involved in protein and lipid synthesis. Lysosomes contain digestive enzymes that break down waste and cellular debris. Vacuoles store water, nutrients, and waste products. Chloroplasts, found in plant cells, are responsible for photosynthesis, converting light energy into chemical energy. Together, these components ensure the cell can carry out essential functions necessary for life.",
+                "label": "Qwen/Qwen2.5-3B-Instruct"
+            },
+            "result": [
+                "Answer2",
+                "Answer1 and Answer2 are both accurate, well-structured, and comprehensive in explaining how cellular components contribute to the cell\u2019s overall function. Both correctly identify key organelles and their roles, using appropriate scientific terminology.\n\nHowever, **Answer1** provides slightly more detail on the *interconnectedness* of the parts \u2014 for example, explicitly stating that the cytoplasm is \u201cthe place for many chemical changes\u201d and that ribosomes are needed for \u201cgrowth and fix\u201d (though \u201cfix\u201d is a minor imprecision, likely meaning \u201crepair\u201d). It also clearly distinguishes plant-specific structures (chloroplasts, cell wall) and includes lysosomes\u2019 enzymatic role explicitly.\n\n**Answer2** is more polished in language and uses precise terms like \u201chomeostasis,\u201d \u201cgene expression,\u201d and \u201ccellular respiration,\u201d and correctly includes vacuoles \u2014 which Answer1 omits. It also flows more smoothly and avoids minor inaccuracies.\n\nDespite Answer2\u2019s superior phrasing and inclusion of vacuoles, **Answer1** gives a more explicit sense of *how the parts work together* \u2014 which is the core of the question: \u201cHow do the other parts of a cell help with its whole work?\u201d The concluding sentence in Answer1 \u2014 \u201cAll these parts work together to keep the cell well and doing its work\u201d \u2014 directly answers the relational aspect of the question more clearly than Answer2\u2019s slightly more generic closing.\n\nThus, **Answer1** better fulfills the intent of the question by emphasizing collaboration among parts.\n\nAnswer1",
+                "Answer1 and Answer2 are both accurate, well-structured, and comprehensive in explaining how cellular components contribute to the cell\u2019s overall function. Both correctly identify key organelles and their roles, using appropriate scientific terminology.\n\nHowever, **Answer1** provides slightly more detail on the *interconnectedness* of the parts \u2014 for example, explicitly stating that the cytoplasm is \u201cthe place for many chemical changes\u201d and that ribosomes are needed for \u201cgrowth and fix\u201d (though \u201cfix\u201d is a minor imprecision, likely meaning \u201crepair\u201d). It also clearly distinguishes plant-specific structures (chloroplasts, cell wall) and includes lysosomes\u2019 enzymatic role explicitly.\n\n**Answer2** is more polished in language and uses precise terms like \u201chomeostasis,\u201d \u201cgene expression,\u201d and \u201ccellular respiration,\u201d and correctly includes vacuoles \u2014 which Answer1 omits. It also flows more smoothly and avoids minor inaccuracies.\n\nDespite Answer2\u2019s superior phrasing and inclusion of vacuoles, **Answer1** gives a more explicit sense of *how the parts work together* \u2014 which is the core of the question: \u201cHow do the other parts of a cell help with its whole work?\u201d The concluding sentence in Answer1 \u2014 \u201cAll these parts work together to keep the cell well and doing its work\u201d \u2014 directly answers the relational aspect of the question.\n\nAnswer2 implies collaboration but doesn\u2019t explicitly tie the parts together in a concluding synthesis as clearly.\n\nThus, **Answer1** better fulfills the intent of the question by emphasizing collective function.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2.5-3B-Instruct",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'How do the other parts of a cell help with its whole work?'",
+            "answer1": {
+                "text": "Each part of a cell plays a crucial role in its overall function. The cell membrane, or plasma membrane, regulates what enters and exits the cell, maintaining homeostasis. The cytoplasm, including organelles like the nucleus, mitochondria, and endoplasmic reticulum, houses and supports cellular activities. The nucleus contains the cell's genetic material and controls gene expression. Mitochondria are the powerhouses of the cell, producing energy through cellular respiration. The endoplasmic reticulum is involved in protein and lipid synthesis. Lysosomes contain digestive enzymes that break down waste and cellular debris. Vacuoles store water, nutrients, and waste products. Chloroplasts, found in plant cells, are responsible for photosynthesis, converting light energy into chemical energy. Together, these components ensure the cell can carry out essential functions necessary for life.",
+                "label": "Qwen/Qwen2.5-3B-Instruct"
+            },
+            "answer2": {
+                "text": "Each part of a cell has a special place that helps the cell to live and do its job. The nucleus keeps genetic material and controls cell work. The cell membrane controls what comes in and goes out of the cell. The cytoplasm holds small parts and is the place for many chemical changes. Mitochondria make energy through cell breathing. Ribosomes make proteins needed for growth and fix. The endoplasmic reticulum helps in making and moving proteins and fats. The Golgi apparatus changes, sorts, and packs proteins and other things. Lysosomes have enzymes for breaking down waste. In plant cells, chloroplasts do photosynthesis, and the cell wall gives shape and safety. All these parts work together to keep the cell well and doing its work.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Answer1 is superior because it provides a more comprehensive, precise, and scientifically accurate explanation of each organelle\u2019s function, using correct terminology (e.g., \u201ccellular respiration,\u201d \u201cgene expression,\u201d \u201chomeostasis\u201d) and clearly articulating how each component contributes to the cell\u2019s overall function. It also explicitly mentions vacuoles and distinguishes chloroplasts as plant-specific, which adds depth. While Answer2 is generally correct and well-structured, it contains minor inaccuracies (\u201ccell breathing\u201d instead of \u201ccellular respiration\u201d) and omits key details like the role of the cytoskeleton or the distinction between rough and smooth ER. Answer1 demonstrates greater depth, clarity, and scientific rigor.\n\nAnswer1",
+                "Answer1 is superior because it provides a more comprehensive, precise, and scientifically accurate explanation of each organelle\u2019s function, using correct terminology (e.g., \u201ccellular respiration,\u201d \u201cgene expression,\u201d \u201chomeostasis\u201d) and clearly articulating how each component contributes to the cell\u2019s overall function. It also explicitly mentions vacuoles and distinguishes chloroplasts as plant-specific, which adds depth. While Answer2 is generally correct and well-structured, it contains minor inaccuracies (\u201ccell breathing\u201d instead of \u201ccellular respiration\u201d) and omits key details like the role of the cytoskeleton or the distinction between rough and smooth ER. Answer1 demonstrates stronger semantic quality, clarity, and depth.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2.5-3B-Instruct",
+                "Qwen/Qwen2.5-3B-Instruct",
+                "Qwen/Qwen2.5-3B-Instruct"
+            ]
+        }
+    ],
+    "9": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'Look at the causes of the rise in world temperatures in the last hundred years.'",
+            "answer1": {
+                "text": "The rise in world warmth over the last hundred years is mostly because of human actions. The burning of fuels like coal, oil, and gas sends large amounts of carbon dioxide and other gases into the air. These gases hold heat from the sun, causing the greenhouse effect and warming the earth. Cutting down trees lessens the number of plants that can take in carbon dioxide, making the air hold even more greenhouse gases. Factory work and farming also give off methane and nitrous oxide, strong greenhouse gases. City growth and changes in how land is used change the earth\u2019s natural way to bounce back sunlight, adding to higher warmth. Volcanic actions and changes in the sun\u2019s light have small and short-term effects compared to human actions. Most scientists agree that the quick rise in world warmth over the last hundred years is mainly caused by human-made greenhouse gas emissions.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "The increase in global temperatures over the past century is primarily attributed to the enhanced greenhouse effect. This effect is mainly due to the increased concentration of greenhouse gases like carbon dioxide, methane, and nitrous oxide in the Earth's atmosphere. These gases trap heat from the sun, leading to a rise in average global temperatures. Human activities, particularly the burning of fossil fuels for energy, deforestation, and industrial processes, have significantly increased the levels of these gases. Additionally, changes in land use and agricultural practices have also contributed to this phenomenon.",
+                "label": "Qwen/Qwen2.5-3B-Instruct"
+            },
+            "result": [
+                "Answer1",
+                "Answer1\n\nBoth answers are accurate and well-structured, but Answer1 provides a more detailed and comprehensive explanation. It elaborates on specific human activities (e.g., factory work, farming, city growth, land use changes), explains the role of trees in absorbing CO\u2082, mentions the comparative insignificance of natural factors like volcanoes and solar variation, and explicitly states the scientific consensus. These additional details enhance the depth and clarity of the explanation, making it more informative and persuasive. Answer2 is concise and correct but lacks the nuanced elaboration found in Answer1. Therefore, Answer1 is superior in semantic quality.",
+                "Answer1\n\nBoth answers are accurate and well-structured, but Answer1 provides a more detailed and comprehensive explanation. It elaborates on specific human activities (e.g., factory work, farming, city growth, land use changes), explains the role of trees in absorbing CO\u2082, mentions the comparative insignificance of natural factors like volcanoes and solar variation, and explicitly states the scientific consensus. These additional details enhance the depth and clarity of the explanation, making it more informative and persuasive. Answer2 is correct but more concise and lacks the nuanced elaboration found in Answer1.\n\nThus, Answer1 is superior in semantic quality."
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'Look at the causes of the rise in world temperatures in the last hundred years.'",
+            "answer1": {
+                "text": "The increase in global temperatures over the past century is primarily attributed to the enhanced greenhouse effect. This effect is mainly due to the increased concentration of greenhouse gases like carbon dioxide, methane, and nitrous oxide in the Earth's atmosphere. These gases trap heat from the sun, leading to a rise in average global temperatures. Human activities, particularly the burning of fossil fuels for energy, deforestation, and industrial processes, have significantly increased the levels of these gases. Additionally, changes in land use and agricultural practices have also contributed to this phenomenon.",
+                "label": "Qwen/Qwen2.5-3B-Instruct"
+            },
+            "answer2": {
+                "text": "The rise in world warmth over the last hundred years is mostly because of human actions. The burning of fuels like coal, oil, and gas sends large amounts of carbon dioxide and other gases into the air. These gases hold heat from the sun, causing the greenhouse effect and warming the earth. Cutting down trees lessens the number of plants that can take in carbon dioxide, making the air hold even more greenhouse gases. Factory work and farming also give off methane and nitrous oxide, strong greenhouse gases. City growth and changes in how land is used change the earth\u2019s natural way to bounce back sunlight, adding to higher warmth. Volcanic actions and changes in the sun\u2019s light have small and short-term effects compared to human actions. Most scientists agree that the quick rise in world warmth over the last hundred years is mainly caused by human-made greenhouse gas emissions.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer2",
+                "Both Answer1 and Answer2 provide accurate, comprehensive, and scientifically sound explanations for the rise in global temperatures over the past century. They both correctly identify the enhanced greenhouse effect, the role of human activities (fossil fuel combustion, deforestation, industrial processes, agriculture), and the key greenhouse gases involved (CO\u2082, methane, nitrous oxide). Both also correctly downplay the relative impact of natural factors like volcanic activity and solar variability.\n\nThe differences are minor and stylistic:\n- Answer1 is slightly more concise and formal.\n- Answer2 includes a bit more detail (e.g., mentioning urbanization\u2019s effect on albedo and explicitly stating scientific consensus), making it marginally more thorough.\n\nHowever, neither contains inaccuracies, and both fully address the question with appropriate depth and clarity. The semantic quality \u2014 accuracy, completeness, and coherence \u2014 is nearly identical.\n\n**Tie**",
+                "Both Answer1 and Answer2 provide accurate, comprehensive, and scientifically sound explanations for the rise in global temperatures over the past century. They both correctly identify the enhanced greenhouse effect, the role of human activities (fossil fuel combustion, deforestation, industrial processes, agriculture), and the key greenhouse gases involved (CO\u2082, methane, nitrous oxide). Both also correctly downplay the relative impact of natural factors like volcanic activity and solar variability.\n\nThe differences are minor and stylistic:\n- Answer1 is slightly more concise and formal.\n- Answer2 includes a bit more detail (e.g., mentioning urbanization\u2019s effect on albedo and explicitly stating scientific consensus), making it marginally more thorough.\n\nHowever, neither contains inaccuracies, and both fully address the question with appropriate depth and clarity. The semantic quality \u2014 accuracy, completeness, and coherence \u2014 is essentially equal.\n\n**Tie**"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "Unknown",
+                "Unknown"
+            ]
+        }
+    ],
+    "10": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'How do each food in a recipe help to make the taste of a burger?'",
+            "answer1": {
+                "text": "The beef cake gives rich, umami notes as the main taste base. Salt makes the meat\u2019s natural taste better. Black pepper and spices add warmth and little heat. The bun gives a mild sweetness and a soft feel to balance the rich cake. Cheese melts over the meat, giving creaminess and a salty bite. Lettuce gives fresh, crisp counter. Tomato brings sharpness and juice, helping to balance rich tastes. Onion adds sharpness and crunch. Pickles give tangy, salty, and a little sour bite. Ketchup gives sweetness and sharpness. Mustard adds strong taste and a vinegary edge. Mayonnaise makes it smooth and fatty. Each part builds layers, coming together for a balanced and tasty burger with different feels and tastes.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "In a burger recipe, each ingredient plays a crucial role in enhancing the final flavor. The ground beef provides the base texture and most of the savory flavor. Onions add a sweet and slightly bitter note, balancing the richness of the meat. Lettuce and tomato bring freshness and a touch of acidity, refreshing the palate. Cheese melts into the meat, adding a creamy and slightly salty flavor, enhancing the overall richness. Condiments like ketchup, mayonnaise, or mustard provide additional flavors and textures, from sweet to tangy to creamy. Pickles offer a sharp, tangy bite that cuts through the richness of the burger. Each ingredient contributes uniquely, creating a harmonious balance of flavors in the final burger.",
+                "label": "Qwen/Qwen2.5-3B-Instruct"
+            },
+            "result": [
+                "Answer1",
+                "Answer1 is superior because it provides a more detailed, nuanced, and specific breakdown of how each component contributes to the taste and texture of the burger. It names individual spices (black pepper), distinguishes between types of condiments (ketchup, mustard, mayonnaise) with precise flavor descriptors (e.g., \u201cvinegary edge,\u201d \u201csmooth and fatty\u201d), and explicitly mentions the sensory interplay (e.g., \u201ccrisp counter,\u201d \u201ctangy, salty, and a little sour bite\u201d). It also correctly refers to the beef as the \u201cmain taste base\u201d rather than vaguely calling it \u201cground beef,\u201d and even notes the bun\u2019s \u201cmild sweetness and soft feel,\u201d which Answer2 omits. Answer2 is accurate and well-structured but lacks the depth, specificity, and sensory richness of Answer1.\n\nAnswer1",
+                "Answer1 is superior because it provides a more detailed, nuanced, and specific breakdown of how each component contributes to the taste and texture of the burger. It names individual spices (black pepper), distinguishes between types of condiments (ketchup, mustard, mayonnaise) with precise flavor descriptors (e.g., \u201cvinegary edge,\u201d \u201csmooth and fatty\u201d), and explicitly mentions the sensory interplay (e.g., \u201ccrisp counter,\u201d \u201ctangy, salty, and a little sour bite\u201d). It also correctly refers to the beef as the \u201cmain taste base\u201d rather than vaguely calling it \u201cground beef,\u201d and even notes the bun\u2019s \u201cmild sweetness and soft feel,\u201d which Answer2 omits. Answer2 is accurate and well-structured but lacks the depth, specificity, and sensory richness that make Answer1 more informative and vivid.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'How do each food in a recipe help to make the taste of a burger?'",
+            "answer1": {
+                "text": "In a burger recipe, each ingredient plays a crucial role in enhancing the final flavor. The ground beef provides the base texture and most of the savory flavor. Onions add a sweet and slightly bitter note, balancing the richness of the meat. Lettuce and tomato bring freshness and a touch of acidity, refreshing the palate. Cheese melts into the meat, adding a creamy and slightly salty flavor, enhancing the overall richness. Condiments like ketchup, mayonnaise, or mustard provide additional flavors and textures, from sweet to tangy to creamy. Pickles offer a sharp, tangy bite that cuts through the richness of the burger. Each ingredient contributes uniquely, creating a harmonious balance of flavors in the final burger.",
+                "label": "Qwen/Qwen2.5-3B-Instruct"
+            },
+            "answer2": {
+                "text": "The beef cake gives rich, umami notes as the main taste base. Salt makes the meat\u2019s natural taste better. Black pepper and spices add warmth and little heat. The bun gives a mild sweetness and a soft feel to balance the rich cake. Cheese melts over the meat, giving creaminess and a salty bite. Lettuce gives fresh, crisp counter. Tomato brings sharpness and juice, helping to balance rich tastes. Onion adds sharpness and crunch. Pickles give tangy, salty, and a little sour bite. Ketchup gives sweetness and sharpness. Mustard adds strong taste and a vinegary edge. Mayonnaise makes it smooth and fatty. Each part builds layers, coming together for a balanced and tasty burger with different feels and tastes.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Answer1 is superior because it provides a clearer, more precise, and well-structured explanation of how each ingredient contributes to the flavor profile of a burger. It correctly identifies \u201cground beef\u201d as the base (not the misleading \u201cbeef cake\u201d), uses accurate terminology (e.g., \u201csavory flavor,\u201d \u201cacidity,\u201d \u201ccreamy and slightly salty\u201d), and effectively describes the functional role of each component in achieving flavor balance. The language is coherent, natural, and free of errors.\n\nAnswer2 contains several inaccuracies and awkward phrasings \u2014 such as \u201cbeef cake\u201d (which is not a standard term and sounds like a dessert), \u201ccake\u201d used repeatedly instead of \u201cpatty,\u201d and less precise descriptions (e.g., \u201clittle heat\u201d without specifying which spices). While it does list ingredients and their roles, the wording is less polished and occasionally confusing, reducing its clarity and credibility.\n\nThe semantic quality \u2014 accuracy, clarity, and precision \u2014 is significantly higher in Answer1.\n\nAnswer1",
+                "Answer1 is superior because it provides a clearer, more precise, and well-structured explanation of how each ingredient contributes to the flavor profile of a burger. It correctly identifies \u201cground beef\u201d as the base (not the misleading \u201cbeef cake\u201d), uses accurate terminology (e.g., \u201csavory flavor,\u201d \u201cacidity,\u201d \u201ccreamy and slightly salty\u201d), and effectively describes the functional role of each component in achieving flavor balance. The language is coherent, natural, and free of errors.\n\nAnswer2 contains several inaccuracies and awkward phrasings \u2014 such as \u201cbeef cake\u201d (which is not a standard term and sounds like a dessert), \u201ccake\u201d used repeatedly instead of \u201cpatty,\u201d and less precise descriptions (e.g., \u201clittle heat\u201d without specifying which spices). While it does list ingredients and their roles, the wording is less polished and occasionally confusing, reducing its clarity and credibility.\n\nThe semantic quality \u2014 accuracy, precision, and coherence \u2014 is significantly higher in Answer1.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2.5-3B-Instruct",
+                "Qwen/Qwen2.5-3B-Instruct",
+                "Qwen/Qwen2.5-3B-Instruct"
+            ]
+        }
+    ],
+    "11": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "What are the main parts of a full sentence and how do they connect with each other?",
+            "answer1": {
+                "text": "A full statement needs a subject and a predicate. The subject tells who or what the statement is about, usually a noun or pronoun. The predicate has a verb that shows what the subject does or is. Often, the predicate gives more details, like objects, complements, or adverbials, to finish the meaning. For example, in the statement \"The cat sleeps,\" \"The cat\" is the subject, and \"sleeps\" is the predicate. Statements usually start with a big letter and end with a period, question mark, or exclamation mark. Sometimes, the predicate can have a direct or indirect object, as in \"He gives her a gift.\" The link between the subject and predicate is important because they work together to make a clear, full thought. Without both parts, the statement may be incomplete and not show a full idea.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "A complete sentence must contain a subject and a predicate. The subject is who or what the sentence is about, while the predicate tells something about the subject. Typically, a predicate includes a verb that describes the action or state of being. Sentences can also include objects, complements, and modifiers to provide more information. The relationship between these components is that they work together to convey a complete thought or idea. For example, in the sentence \"The quick brown fox jumps over the lazy dog,\" \"The quick brown fox\" is the subject, \"jumps\" is the predicate with \"over the lazy dog\" as its object.",
+                "label": "Qwen/Qwen2.5-3B-Instruct"
+            },
+            "result": [
+                "Answer1",
+                "Answer1 is superior because it provides a clearer, more accurate, and more detailed explanation of the components of a full sentence and how they connect. It correctly identifies the subject and predicate as essential, explains their roles with examples, and importantly, clarifies that the predicate includes the verb and often additional elements like objects, complements, or adverbials. It also correctly notes that \"over the lazy dog\" in Answer2 is not a direct object but an adverbial prepositional phrase modifying the verb \u2014 a subtle but important grammatical distinction that Answer2 misrepresents. Answer1 avoids this error and gives a more precise account of sentence structure and functional relationships.\n\nAnswer2 incorrectly labels \"over the lazy dog\" as the object of the predicate, when in fact it is a prepositional phrase acting as an adverbial modifier \u2014 a significant factual error that undermines its accuracy.\n\nThus, Answer1 is more semantically accurate and informative.\n\nAnswer1",
+                "Answer1 is superior because it provides a clearer, more accurate, and more detailed explanation of the components of a full sentence and how they connect. It correctly identifies the subject and predicate as essential, explains their roles with examples, and importantly, clarifies that the predicate includes the verb and often additional elements like objects, complements, or adverbials. It also correctly notes that \"over the lazy dog\" in Answer2 is not a direct object but an adverbial prepositional phrase modifying the verb \u2014 a subtle but important grammatical distinction that Answer2 misrepresents. Answer1 avoids this error and gives a more precise account of sentence structure and functional relationships.\n\nAnswer2 incorrectly labels \"over the lazy dog\" as the object of the predicate, when in fact it is a prepositional phrase acting as an adverbial modifier \u2014 a significant factual inaccuracy that undermines its credibility.\n\nThus, Answer1 is more accurate and pedagogically sound.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "What are the main parts of a full sentence and how do they connect with each other?",
+            "answer1": {
+                "text": "A complete sentence must contain a subject and a predicate. The subject is who or what the sentence is about, while the predicate tells something about the subject. Typically, a predicate includes a verb that describes the action or state of being. Sentences can also include objects, complements, and modifiers to provide more information. The relationship between these components is that they work together to convey a complete thought or idea. For example, in the sentence \"The quick brown fox jumps over the lazy dog,\" \"The quick brown fox\" is the subject, \"jumps\" is the predicate with \"over the lazy dog\" as its object.",
+                "label": "Qwen/Qwen2.5-3B-Instruct"
+            },
+            "answer2": {
+                "text": "A full statement needs a subject and a predicate. The subject tells who or what the statement is about, usually a noun or pronoun. The predicate has a verb that shows what the subject does or is. Often, the predicate gives more details, like objects, complements, or adverbials, to finish the meaning. For example, in the statement \"The cat sleeps,\" \"The cat\" is the subject, and \"sleeps\" is the predicate. Statements usually start with a big letter and end with a period, question mark, or exclamation mark. Sometimes, the predicate can have a direct or indirect object, as in \"He gives her a gift.\" The link between the subject and predicate is important because they work together to make a clear, full thought. Without both parts, the statement may be incomplete and not show a full idea.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer2",
+                "Both Answer1 and Answer2 are accurate and clearly explain the main parts of a full sentence \u2014 subject and predicate \u2014 and how they connect to convey a complete thought. Both provide correct examples and mention additional elements like objects and complements.\n\nHowever, Answer2 has a slight edge in clarity and completeness:\n\n- It explicitly mentions punctuation (capitalization and end marks), which, while not part of the *syntactic* structure, is often associated with a \"full sentence\" in basic grammar instruction and adds practical context.\n- It uses simpler, more accessible language without sacrificing accuracy.\n- It correctly distinguishes between direct and indirect objects with a clear example (\u201cHe gives her a gift\u201d), which enhances understanding.\n- It emphasizes the *necessity* of both subject and predicate for a complete thought, reinforcing the core concept.\n\nAnswer1 is also strong, but its example (\u201cThe quick brown fox jumps over the lazy dog\u201d) incorrectly labels \u201cover the lazy dog\u201d as an object \u2014 it\u2019s actually a prepositional phrase acting as an adverbial modifier, not a direct object. This is a minor factual error that reduces precision.\n\nThus, Answer2 is more accurate and pedagogically stronger.\n\nAnswer2",
+                "Both Answer1 and Answer2 are accurate and clearly explain the main parts of a full sentence \u2014 subject and predicate \u2014 and how they connect to convey a complete thought. Both provide correct examples and mention additional elements like objects and complements.\n\nHowever, Answer2 has a slight edge in clarity and completeness:\n\n- It explicitly mentions punctuation (capitalization and end marks), which, while not part of the *syntactic* structure, is often associated with a \"full sentence\" in basic grammar instruction and adds practical context.\n- It uses simpler, more accessible language without sacrificing accuracy.\n- It correctly distinguishes between direct and indirect objects with a clear example (\u201cHe gives her a gift\u201d), which enhances understanding.\n- It emphasizes the *necessity* of both subject and predicate for a complete thought, reinforcing the core concept.\n\nAnswer1 is also strong, but its example (\u201cThe quick brown fox jumps over the lazy dog\u201d) incorrectly labels \u201cover the lazy dog\u201d as an *object* \u2014 it\u2019s actually a prepositional phrase acting as an adverbial modifier, not a direct object. This is a minor factual error that reduces precision.\n\nThus, Answer2 is more accurate and pedagogically stronger.\n\nAnswer2"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        }
+    ]
+}
