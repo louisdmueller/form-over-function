@@ -116,6 +116,12 @@ def prepare_judgement_inputs(
         answer_2 = item_2["answers"]["answer1"]["answer"]
         name_1, name_2 = item_1["model_name"], item_2["model_name"]
 
+        if answer_1 == answer_2:
+            if "error" in name_1:
+                answer_1 = item_1["answers"]["answer2"]["answer"]
+            elif "error" in name_2:
+                answer_2 = item_2["answers"]["answer2"]["answer"]
+
         questions_to_use = (
             [(question_1, name_1), (question_2, name_2)]
             if question_1 != question_2 and question_style_switching
@@ -210,6 +216,10 @@ def main() -> None:
     else:
         start_idx = int(args.start_index)
         print(f"Using start index: {start_idx}, end index: {end_idx}")
+
+    for experiment_name in ["aae", "basic"]:
+        if experiment_name in args.data_1_path:
+            data_1, data_2 = data_2, data_1
 
     judgement_inputs = prepare_judgement_inputs(
         data_1,
