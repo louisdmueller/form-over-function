@@ -109,6 +109,8 @@ def create_vote_counts_table(
     data: dict, better_model_name: str, worse_model_name: str
 ) -> DataFrame:
     """Create a DataFrame summarizing total votes for each answer order."""
+    model1_name = data["0"][0]["answer1"]["label"]
+    model2_name = data["0"][0]["answer2"]["label"]
     aggregated_data = defaultdict(
         lambda: {
             better_model_name: 0,
@@ -122,7 +124,12 @@ def create_vote_counts_table(
         if question_id == "metadata":
             continue
         for entry in entries:
-            answer_order = entry["answer_order"]
+            answer_order = (
+                entry["answer_order"]
+                .replace("model1", model1_name)
+                .replace("model2", model2_name)
+            )
+            answer_order = answer_order
             for answer in entry["extracted_answers"]:
                 # TODO In the basic experiment answer files
                 # (for example gpt-4.1-answers_basic.json), the model_name is gpt-4o-mini instead of gpt-4.1.
