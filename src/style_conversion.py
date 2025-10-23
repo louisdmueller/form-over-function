@@ -25,12 +25,12 @@ def convert_to_aae(text: str, model: Model, question: Optional[str]) -> str:
     )
 
     user_input = (
-        f"You are an African American speaker fluent in both SAE (Standard American English) and AAVE (African American Vernacular English). Translate the following sentence from SAE to AAVE in a way that feels natural and preserves the original meaning and tone. Avoid overly formal language, and aim for authenticity in the AAVE translation. Apply the following 13 translation rules:\n\n{rules}\n\nYour output must also follow these guidelines:\n\n"
+        f"You are an African American speaker fluent in both SAE (Standard American English) and AAVE (African American Vernacular English). Translate from SAE to AAVE in a way that feels natural and preserves the original meaning and tone. Avoid overly formal language, and aim for authenticity in the AAVE translation. Apply the following 13 translation rules:\n\n{rules}\n\nYour output must also follow these guidelines:\n\n"
         "1. Only provide the translation. Do not mention or explain how the translation was done.\n"
         "2. Do not mention any of the 13 rules in your translation.\n"
         "3. Format the output exactly like this: 'The translation is: ...'\n"
         "4. Ensure the text sounds natural and realistic in AAVE.\n\n"
-        "Please translate the following text: '{text}'"
+        "Translate the following text: '{text}'"
     )
 
     # TODO: generate awaits a list of input texts and system prompts.

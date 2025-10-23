@@ -23,11 +23,11 @@ rules = (f"""
 10. Technical expressions required and customary for the immediate task are included in the locally used form.""")
 
 user_input = lambda src_text:(
-    f"You are a fluent English speaker. Translate a sentence from Standard English to Basis English in a way that feels natural and preserves the original meaning and tone. You should use the following 850-word vocabulary of Basic English:\n\n{vocabulary}\n\nThe answer should also follow these 12 rules of grammar for Basic English:\n{rules}\n\nFinally, your output must adhere to these guidelines:\n\n"
+    f"You are a fluent English speaker. Translate from Standard English to Basis English in a way that feels natural and preserves the original meaning and tone. You should use the following 850-word vocabulary of Basic English:\n\n{vocabulary}\n\nUse these 12 rules of grammar for Basic English:\n{rules}\n\nYour output must also follow these guidelines::\n\n"
     "1. Only provide the translation. Do not mention or explain how the translation was done.\n"
     "2. Do not mention any of the 10 rules in your translation.\n"
     "3. Ensure the text sounds natural and realistic in Basic English.\n\n"
-    f"Please translate the following text: '{src_text}'")
+    f"Translate the following text: '{src_text}'")
 
 # This is a simple_prompt. It's currently not used as it had worse SARI results
 # user_input_simple = """
