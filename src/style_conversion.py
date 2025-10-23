@@ -9,29 +9,28 @@ def convert_to_aae(text: str, model: Model, question: Optional[str]) -> str:
     Translate the given text into African American English (AAE) using a LLM.
     """
     rules = (
-        "1. Null copula: Verbal copula is deleted (e.g., “he a delivery man” → “he's a delivery man”)."
-        " 2. Negative concord: Negatives agree with each other (e.g., “nobody never say nothing” → “nobody ever says anything”)."
-        " 3. Negative inversion: Auxiliary raises, but interpretation remains the same (e.g., “don't nobody never say nothing to them” → “nobody ever says anything to them”)."
-        " 4. Deletion of possessive /s/: Possessive markers are omitted, but the meaning remains (e.g., “his baby mama brother friend was there” → “his baby’s mother’s brother’s friend was there”)."
-        " 5. Habitual 'be like': describing something (e.g., “This song be like fire” → “This song is amazing”)."
-        " 6. Stressed 'been': short for have been doing something (e.g., “I been working out” → “I have been working out”)."
-        " 7. Preterite 'had': Signals the preterite or past action (e.g., “we had went to the store” → “we went to the store”)."
-        " 8. Question inversion in subordinate clauses: Inverts clauses similar to Standard English (e.g., “I was wondering did his white friend call?” → “I was wondering whether his white friend called”)."
-        " 9. Reduction of negation: Contraction of auxiliary verbs and negation (e.g., “I ain't eem be feeling that” → “I don't much care for that”)."
-        " 10. Quotative 'talkin’ 'bout': Used as a verb of quotation (e.g., “she talkin' 'bout he don’t live here no more” → “she's saying he doesn’t live here anymore”)."
-        " 11. Modal 'tryna': Short form of “trying to” (e.g., “I was tryna go to the store” → “I was planning on going to the store”)."
-        " 12. Expletive 'it': Used in place of “there” (e.g., “it’s a lot of money out there” → “there's a lot of money out there”)."
-        " 13. Shortening ing words to in': anyword ends with ing has to be converted into a in' format (e.g. “he is playing” → “he is playin'”)"
+        "1. Null copula: Verbal copula is deleted (e.g., “He a delivery man” → “He's a delivery man”).\n"
+        "2. Negative concord: Negatives agree with each other (e.g., “Nobody never say nothing” → “Nobody ever says anything”).\n"
+        "3. Negative inversion: Auxiliary raises, but interpretation remains the same (e.g., “Don't nobody never say nothing to them” → “Nobody ever says anything to them”).\n"
+        "4. Deletion of possessive /s/: Possessive markers are omitted, but the meaning remains (e.g., “His baby mama brother friend was there” → “His baby’s mother’s brother’s friend was there”).\n"
+        "5. Habitual 'be like': describing something (e.g., “This song be like fire” → “This song is amazing”).\n"
+        "6. Stressed 'been': short for have been doing something (e.g., “I been working out” → “I have been working out”).\n"
+        "7. Preterite 'had': Signals the preterite or past action (e.g., “We had went to the store” → “We went to the store”).\n"
+        "8. Question inversion in subordinate clauses: Inverts clauses similar to Standard English (e.g., “I was wondering did his white friend call?” → “I was wondering whether his white friend called”).\n"
+        "9. Reduction of negation: Contraction of auxiliary verbs and negation (e.g., “I ain't even be feeling that” → “I don't much care for that”).\n"
+        "10. Quotative 'talkin’ ’bout': Used as a verb of quotation (e.g., “She talkin’ ’bout he don’t live here no more” → “She's saying he doesn’t live here anymore”).\n"
+        "11. Modal 'tryna': Short form of “trying to” (e.g., “I was tryna go to the store” → “I was planning on going to the store”).\n"
+        "12. Expletive 'it': Used in place of “there” (e.g., “It’s a lot of money out there” → “There's a lot of money out there”).\n"
+        "13. Shortening 'ing' words to 'in’': Any word that ends with 'ing' has to be converted into a in’ format (e.g. “he is playing” → “he is playin’”)."
     )
 
-    # TODO: To me it seems that the input_text is placed at a more or less random position in the prompt.
-    #       Maybe it would be better to put it at the end of the prompt, so that the model can focus on the translation.
     user_input = (
-        f"You are an African American speaker fluent in both SAE (Standard American English) and AAVE (African American Vernacular English). I need your help translating the following sentence from SAE to AAVE in a way that feels natural and preserves the original meaning and tone. Avoid overly formal language, and aim for authenticity in the AAVE translation. Please translate the following text: '{text}' using the 13 translation rules provided as references: {rules}. Your output must follow these guidelines:"
-        " 1. Only provide the translation. Do not mention or explain how the translation was done."
-        " 2. Do not mention any of the 13 rules in your translation."
-        " 3. Format the output exactly like this: 'The translation is: ...'"
-        " 4. Ensure the text sounds natural and realistic in AAVE."
+        f"You are an African American speaker fluent in both SAE (Standard American English) and AAVE (African American Vernacular English). Translate the following sentence from SAE to AAVE in a way that feels natural and preserves the original meaning and tone. Avoid overly formal language, and aim for authenticity in the AAVE translation. Apply the following 13 translation rules:\n\n{rules}\n\nYour output must also follow these guidelines:\n\n"
+        "1. Only provide the translation. Do not mention or explain how the translation was done.\n"
+        "2. Do not mention any of the 13 rules in your translation.\n"
+        "3. Format the output exactly like this: 'The translation is: ...'\n"
+        "4. Ensure the text sounds natural and realistic in AAVE.\n\n"
+        "Please translate the following text: '{text}'"
     )
 
     # TODO: generate awaits a list of input texts and system prompts.
