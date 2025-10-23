@@ -30,9 +30,7 @@ user_input = lambda src_text:(
     f"Translate the following text: '{src_text}'")
 
 # This is a simple_prompt. It's currently not used as it had worse SARI results
-# user_input_simple = """
-#     '\nRewrite the above text so that it can be easily understood by a 
-#     non-native speaker of English:"""
+# user_input_simple = "You are a fluent English speaker. Rewrite the following text so that it can be easily understood by a non-native speaker of English: "
 
 model_name_or_path = "gpt-4o-mini"
 
@@ -73,9 +71,8 @@ write_file(original_file.replace(".json", "_basic.json"), new_dicts)
 # articles = load_onestopqa(reference=False)
 # articles_truncated = [
 #     " ".join(paragraph[:3]) for paragraph in articles]
-# prompts = [user_input + article + "'" for article in articles_truncated]
-# prompts_simple = [
-#     "'" + article + user_input_simple for article in articles_truncated]
+# prompts = [user_input(article) for article in articles_truncated]
+# prompts_simple = [user_input_simple + article for article in articles_truncated]
 # system_prompts = [""] * len(prompts)
 # responses = model.generate(
 #     system_prompts=system_prompts,
