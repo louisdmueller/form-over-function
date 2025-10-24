@@ -103,7 +103,7 @@ def load_onestopqa(reference: bool=True)-> List[List[str]]:
 
 def calculate_sari(path_to_system_output:str, paragraph_count:int=3) -> float:
     """
-    Calculate SARI for system output generated from the ONESTOP QA dataset.
+    Calculate SARI for system output generated from the OneStopQA dataset.
     
     Args:
       path_to_system_output (str): Path to a JSON file containing a list of
@@ -133,7 +133,7 @@ def calculate_sari(path_to_system_output:str, paragraph_count:int=3) -> float:
 
 
 def plot_readability_metrics(
-        readability_metrics:tuple[dict, dict], 
+        readability_metrics:List[dict], 
         output_dir:str="data/readability_metrics"
     ) -> None:
     """
@@ -153,11 +153,11 @@ def plot_readability_metrics(
         sns.set_theme(style="whitegrid")
         # Create a boxplot
         plt.figure(figsize=(10, 6))
-        sns.boxplot(data=[readability_metrics[0][metric],
-                        readability_metrics[1][metric]],)
-        plt.xticks([0, 1], ["SAE Answers", "Basic English Answers"])
+        sns.boxplot(data=[readability_metric[metric] for readability_metric in readability_metrics])
+        plt.xticks([0, 1, 2, 3, 4], ["Advanced Article (Input)", "Simple Prompt Rewrite", "Complex Prompt Rewrite", "Basic English Prompt Rewrite", "Elementary Article (Reference)"])
+        plt.xticks(rotation=15, ha='right')
         plt.ylabel(metric.replace("_", " ").title())
-        plt.title(f"{title} {metric.replace("_", " ").title()}")
+        # plt.title(f"{title} {metric.replace("_", " ").title()}")
         # Save to file
         plt.tight_layout()
         plt.savefig(f"{output_dir}/{metric}.png")
@@ -188,6 +188,38 @@ def plot_readability_metrics(
 
 # plot_readability_metrics((readability_metrics_sae, readability_metrics_basic))
 
+# print("SARI scores for different prompts on OneStopQA test data:")
+# print("Basic English prompt:")
+# print(calculate_sari("data/readability_metrics/onestopqa_test_data/basic_english_prompt.json"))
+# print("Simple prompt:")
+# print(calculate_sari("data/readability_metrics/onestopqa_test_data/simple_prompt.json"))
+# print("Complex prompt:")
+# print(calculate_sari("data/readability_metrics/onestopqa_test_data/complex_prompt.json"))
+
+
+# original_articles = load_onestopqa(reference=True)
+# original_articles_truncated = [" ".join(
+#         paragraph[:3]) for paragraph in original_articles]
+# with open("data/readability_metrics/onestopqa_test_data/reference_sentences.json", "w") as file:
+#     json.dump(original_articles_truncated, file, indent=4)
+
+
+
+with open("data/readability_metrics/onestopqa_test_data/advanced_sentences.json", "r") as file:
+        advanced_sentences = json.load(file)
+
+with open("data/readability_metrics/onestopqa_test_data/simple_prompt.json", "r") as file:
+        simple_results = json.load(file)
+
+with open("data/readability_metrics/onestopqa_test_data/complex_prompt.json", "r") as file:
+        complex_results = json.load(file)
+
+with open("data/readability_metrics/onestopqa_test_data/basic_english_prompt.json", "r") as file:
+        basic_english_results = json.load(file)
+
+with open("data/readability_metrics/onestopqa_test_data/elementary_sentences.json", "r") as file:
+        elementary_sentences = json.load(file)
+
 
 # Compute BERTScore
 # scores = [score(results, advanced_sentences, lang="en", model_type="distilbert-base-uncased", verbose=True) for results in [basic_english_results, complex_results, simple_results]]
@@ -201,3 +233,14 @@ def plot_readability_metrics(
 #     print(f"Precision: {score_set[0].mean().item():.4f}, Recall: {score_set[1].mean().item():.4f}, F1: {score_set[2].mean().item():.4f}")
 
 
+readability_metrics = [calculate_readability_metrics(sentences) for sentences in
+    [advanced_sentences, simple_results, complex_results, basic_english_results, elementary_sentences]]
+
+# print("Readability metrics for simple answers:")
+# for metric, values in readability_metrics_simple.items():
+#     print(f"{metric}: {values[:5]}...")  # Print first 5 values for brevity
+# print("\nReadability metrics for Basic English answers:")
+# for metric, values in readability_metrics_basic.items():
+#     print(f"{metric}: {values[:5]}...")  # Print first 5 values for brevity
+
+plot_readability_metrics(readability_metrics)
