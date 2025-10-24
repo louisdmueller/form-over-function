@@ -26,6 +26,7 @@ def calculate_readability_metrics(texts: List[str]) -> dict:
         "syllable_count": ts.syllable_count,
         "lexicon_count": ts.lexicon_count,
         "polysllabic_word_count": ts.polysyllabcount,
+        "mcAlpine_EFLAW_readability_score": ts.mcalpine_eflaw,
         "consensus_readability_score": 
             lambda text: ts.text_standard(text, float_output=True)
     }
