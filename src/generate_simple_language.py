@@ -36,7 +36,7 @@ user_input = lambda src_text: f"You are a fluent English speaker. Rewrite a text
 # This is the complex prompt. It's currently not used as it had worse SARI / BERT score results
 # user_input_complex = lambda src_text: f"You are a fluent English speaker and a professional simplified text writer. Your task is to simplify the language and structure of the given text content to make it more accesibe to pupils, non-native speakers, or people with cognitive impairments. Restate the original text in simpler and easier-to-understand language without changing its meaning as much as possible. You can change paragraph or sentence structure, and replace complex and uncommon expressions with simple and common ones. Only provide the translation. Do not mention or explain how the translation was done. Simplify the following text: '{src_text}'"
 
-model_name_or_path = "gpt-4o-mini"
+model_name_or_path = "gpt-4.1"
 
 original_file = "data/generated_answers/gpt-4.1-answers.json"
 original_dicts = read_file(original_file)
