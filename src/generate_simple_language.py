@@ -70,19 +70,17 @@ for i, dictionary in enumerate(new_dicts):
 
 write_file(original_file.replace(".json", "_basic.json"), new_dicts)
 
-
-### following code is for generating simple language from the OpenQA data
+### The following code is for generating simple language from the OneStopQA data
 # articles = load_onestopqa(reference=False)
 # articles_truncated = [
 #     " ".join(paragraph[:3]) for paragraph in articles]
 # prompts = [user_input(article) for article in articles_truncated]
-# prompts_simple = [user_input_simple + article for article in articles_truncated]
 # system_prompts = [""] * len(prompts)
 # responses = model.generate(
 #     system_prompts=system_prompts,
-#     input_texts=prompts_simple,
+#     input_texts=prompts,
 # )
 # simple_language_paragraphs = [response[0] for response in responses]
 # # write output list to file
-# with open("data/readability_metrics/onestopqa_test_data/simple_prompt.json", "w") as file:
+# with open("data/readability_metrics/onestopqa_test_data/complex_prompt.json", "w") as file:
 #     json.dump(simple_language_paragraphs, file, indent=4)
