@@ -1,5 +1,6 @@
 from datasets import load_dataset
 from easse.sari import corpus_sari
+from bert_score import score
 from spacy.matcher import Matcher
 from typing import List
 from utils import read_file, write_file
@@ -187,4 +188,16 @@ def plot_readability_metrics(
 
 # plot_readability_metrics((readability_metrics_sae, readability_metrics_basic))
 
-# calculate_sari("data/readability_metrics/onestopqa_test_data/simple_prompt.json")
+
+# Compute BERTScore
+# scores = [score(results, advanced_sentences, lang="en", model_type="distilbert-base-uncased", verbose=True) for results in [basic_english_results, complex_results, simple_results]]
+# print("BERTScore results against original:")
+# for score_set in scores:
+#     print(f"Precision: {score_set[0].mean().item():.4f}, Recall: {score_set[1].mean().item():.4f}, F1: {score_set[2].mean().item():.4f}")
+
+# scores = [score(results, elementary_sentences, lang="en", model_type="distilbert-base-uncased", verbose=True) for results in [basic_english_results, complex_results, simple_results]]
+# print("BERTScore results against elementary reference:")
+# for score_set in scores:
+#     print(f"Precision: {score_set[0].mean().item():.4f}, Recall: {score_set[1].mean().item():.4f}, F1: {score_set[2].mean().item():.4f}")
+
+
