@@ -1,14 +1,15 @@
 import json
+from statistics import mean
 from typing import List
+
 import matplotlib.pyplot as plt
 import seaborn as sns
 import spacy
 import textstat as ts
 from bert_score import score
 from datasets import load_dataset
-from easse.sari import corpus_sari # type: ignore
+from easse.sari import corpus_sari  # type: ignore
 from spacy.matcher import Matcher
-from statistics import mean
 
 from utils import read_file, write_file
 
@@ -33,13 +34,13 @@ def calculate_readability_metrics(texts: List[str] | str, verbose: bool = True) 
         ]
 
     readability_functions = {
-        "flesch_reading_ease": ts.flesch_reading_ease, # type: ignore
-        "dale_chall_readability_score": ts.dale_chall_readability_score, # type: ignore
-        "syllable_count": ts.syllable_count, # type: ignore
-        "lexicon_count": ts.lexicon_count, # type: ignore
-        "polysllabic_word_count": ts.polysyllabcount, # type: ignore
-        "mcAlpine_EFLAW_readability_score": ts.mcalpine_eflaw, # type: ignore
-        "consensus_readability_score": lambda text: ts.text_standard( # type: ignore
+        "flesch_reading_ease": ts.flesch_reading_ease,  # type: ignore
+        "dale_chall_readability_score": ts.dale_chall_readability_score,  # type: ignore
+        "syllable_count": ts.syllable_count,  # type: ignore
+        "lexicon_count": ts.lexicon_count,  # type: ignore
+        "polysllabic_word_count": ts.polysyllabcount,  # type: ignore
+        "mcAlpine_EFLAW_readability_score": ts.mcalpine_eflaw,  # type: ignore
+        "consensus_readability_score": lambda text: ts.text_standard(  # type: ignore
             text, float_output=True
         ),
     }
@@ -55,7 +56,7 @@ def calculate_readability_metrics(texts: List[str] | str, verbose: bool = True) 
         print("Readability metrics:")
         for metric, values in metrics.items():
             print(f"### {metric} (mean): {mean(values):.2f}")
-        print("############################################################\n") 
+        print("############################################################\n")
     return metrics
 
 
@@ -150,18 +151,18 @@ def load_onestopqa(reference: bool = True) -> List[List[str]]:
     texts = []
     text = []
     count = 0
-    title = dataset["train"][0]["title"] # type: ignore
+    title = dataset["train"][0]["title"]  # type: ignore
     range_start = 6 if reference else 0
-    train_data = dataset["train"].select(range(range_start, len(dataset["train"]), 9)) # type: ignore
+    train_data = dataset["train"].select(range(range_start, len(dataset["train"]), 9))  # type: ignore
 
     for paragraph in train_data:
-        if paragraph["title"] == title: # type: ignore
-            text.append(paragraph["paragraph"]) # type: ignore
+        if paragraph["title"] == title:  # type: ignore
+            text.append(paragraph["paragraph"])  # type: ignore
             count += 1
         else:
-            title = paragraph["title"] # type: ignore
+            title = paragraph["title"]  # type: ignore
             texts.append(text)
-            text = [paragraph["paragraph"]] # type: ignore
+            text = [paragraph["paragraph"]]  # type: ignore
 
     return texts
 
@@ -263,6 +264,21 @@ if __name__ == "__main__":
 
     with open(onestopqa_path + "elementary_sentences.json", "r") as file:
         elementary_sentences = json.load(file)
+
+    # Calculate readability metrics for input, reference, and outputs
+    readability_metrics = [
+        calculate_readability_metrics(sentences)
+        for sentences in [
+            advanced_sentences,
+            simple_results,
+            complex_results,
+            basic_english_results,
+            elementary_sentences,
+        ]
+    ]
+
+    # Plot the calculated readability metrics
+    plot_readability_metrics(readability_metrics)
 
     # Compute DistilBERTScores
     compute_bertscore(
