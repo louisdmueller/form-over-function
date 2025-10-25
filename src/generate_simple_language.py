@@ -1,8 +1,10 @@
+import json
+
+import yaml
+
 from calculate_readability_metrics import load_onestopqa
 from model import get_model
 from utils import read_file, write_file
-import json
-import yaml
 
 with open("config.yml", "r") as file:
     config = yaml.safe_load(file)
@@ -31,7 +33,9 @@ with open("config.yml", "r") as file:
 #     f"Translate the following text: '{src_text}'")
 
 
-user_input = lambda src_text: f"You are a fluent English speaker. Rewrite a text so that it can be easily understood by a non-native speaker of English. Only provide the translation. Do not mention or explain how the translation was done. Translate the following text: '{src_text}'"
+user_input = (
+    lambda src_text: f"You are a fluent English speaker. Rewrite a text so that it can be easily understood by a non-native speaker of English. Only provide the translation. Do not mention or explain how the translation was done. Translate the following text: '{src_text}'"
+)
 
 # This is the complex prompt. It's currently not used as it had worse SARI / BERT score results
 # user_input_complex = lambda src_text: f"You are a fluent English speaker and a professional simplified text writer. Your task is to simplify the language and structure of the given text content to make it more accesibe to pupils, non-native speakers, or people with cognitive impairments. Restate the original text in simpler and easier-to-understand language without changing its meaning as much as possible. You can change paragraph or sentence structure, and replace complex and uncommon expressions with simple and common ones. Only provide the translation. Do not mention or explain how the translation was done. Simplify the following text: '{src_text}'"
@@ -43,12 +47,16 @@ original_dicts = read_file(original_file)
 
 new_dicts = [dict(dictionary) for dictionary in original_dicts]
 
-texts = [[entry["question"] for entry in original_dicts],
-           [entry["answers"]["answer1"]["answer"] for entry in original_dicts], 
-           [entry["answers"]["answer2"]["answer"] for entry in original_dicts]]
-prompts = [[user_input(question) for question in texts[0]],
-           [user_input(answer) for answer in texts[1]],
-           [user_input(answer) for answer in texts[2]]]
+texts = [
+    [entry["question"] for entry in original_dicts],
+    [entry["answers"]["answer1"]["answer"] for entry in original_dicts],
+    [entry["answers"]["answer2"]["answer"] for entry in original_dicts],
+]
+prompts = [
+    [user_input(question) for question in texts[0]],
+    [user_input(answer) for answer in texts[1]],
+    [user_input(answer) for answer in texts[2]],
+]
 
 model = get_model(
     model_name_or_path=model_name_or_path,
@@ -59,8 +67,9 @@ system_prompts = [""] * len(prompts[0])
 
 responses = [
     model.generate(system_prompts=system_prompts, input_texts=prompts[0]),
-    model.generate(system_prompts=system_prompts, input_texts=prompts[1]), 
-    model.generate(system_prompts=system_prompts, input_texts=prompts[2])]
+    model.generate(system_prompts=system_prompts, input_texts=prompts[1]),
+    model.generate(system_prompts=system_prompts, input_texts=prompts[2]),
+]
 
 for i, dictionary in enumerate(new_dicts):
     dictionary["model_name"] = model_name_or_path
