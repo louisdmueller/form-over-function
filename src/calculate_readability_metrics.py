@@ -220,8 +220,8 @@ def compute_bertscore(
             results,
             reference,
             lang="en",
-            model_type="distilbert-base-uncased",
-            verbose=True,
+            model_type=model_type,
+            verbose=False,
         )
         for results in system_outputs
     ]
@@ -231,7 +231,7 @@ def compute_bertscore(
             print(
                 f"### Precision: {score_set[0].mean().item():.3f}, Recall: {score_set[1].mean().item():.3f}, F1: {score_set[2].mean().item():.3f}"
             )
-            print("########################################################\n")
+        print("############################################################\n")
     return scores
 
 
@@ -246,7 +246,7 @@ if __name__ == "__main__":
         f"### Simple prompt: {calculate_sari_onestopQA(onestopqa_path + "simple_prompt.json")}"
     )
     print(
-        f"### Complex prompt: {calculate_sari_onestopQA(onestopqa_path + "complex_prompt.json")}"
+        f"### Complex prompt: {calculate_sari_onestopQA(onestopqa_path + "complex_prompt.json")}\n"
     )
 
     # Here we load the input, reference, and the outputs from the three different prompts
