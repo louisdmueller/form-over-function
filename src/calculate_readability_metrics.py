@@ -105,7 +105,7 @@ def plot_readability_metrics(
         plt.close()
 
 
-def calculate_passive_ratio(texts: str) -> List[float]:
+def calculate_passive_ratio(texts: List[str]) -> List[float]:
     """
     Calculate the ratio of passive constructions per sentence in a list of
     texts.
