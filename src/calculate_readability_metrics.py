@@ -11,16 +11,25 @@ import spacy
 import textstat as ts
 
 
-def calculate_readability_metrics(texts: List[str]) -> dict:
+def calculate_readability_metrics(texts: List[str] | str, verbose: bool = True) -> dict:
     """
     Calculate readability metrics for a list of texts.
 
     Args:
-      texts (List[str]): List of texts to analyze.
+      texts (List[str] | str): List of texts or path to JSON file containing
+      texts to analyze.
+      verbosity (int): If true, print the mean of each calculated metric.
 
     Returns:
       dict: A dictionary containing the readability metrics.
     """
+    # if a file path is provided, read the file and extract texts
+    if isinstance(texts, str):
+        sae_dicts = read_file(texts)
+        texts = [entry["answers"]["answer1"]["answer"] for entry in sae_dicts] + [
+            entry["answers"]["answer2"]["answer"] for entry in sae_dicts
+        ]
+
     readability_functions = {
         "flesch_reading_ease": ts.flesch_reading_ease,
         "dale_chall_readability_score": ts.dale_chall_readability_score,
@@ -28,8 +37,9 @@ def calculate_readability_metrics(texts: List[str]) -> dict:
         "lexicon_count": ts.lexicon_count,
         "polysllabic_word_count": ts.polysyllabcount,
         "mcAlpine_EFLAW_readability_score": ts.mcalpine_eflaw,
-        "consensus_readability_score": 
-            lambda text: ts.text_standard(text, float_output=True)
+        "consensus_readability_score": lambda text: ts.text_standard(
+            text, float_output=True
+        ),
     }
 
     metrics = {
@@ -37,8 +47,13 @@ def calculate_readability_metrics(texts: List[str]) -> dict:
         for metric_name, func in readability_functions.items()
     }
 
-    metrics["passive_constructions"] = calculate_passive_ratio(texts)
+    metrics["passive_constructions_ratio"] = calculate_passive_ratio(texts)
 
+    if verbose:
+        print("Readability metrics:")
+        for metric, values in metrics.items():
+            print(f"### {metric} (mean): {mean(values):.2f}")
+        print("############################################################\n") 
     return metrics
 
 
