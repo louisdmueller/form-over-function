@@ -147,115 +147,58 @@ def calculate_sari(path_to_system_output:str, paragraph_count:int=3) -> float:
     return corpus_sari_sae
 
 
-def plot_readability_metrics(
-        readability_metrics:List[dict], 
-        output_dir:str="data/readability_metrics"
-    ) -> None:
-    """
-    Save a boxplot for each readability metric, comparing SAE and Basic English
-    answers.
+if __name__ == "__main__":
+    # this block calculates SARI scores for different prompts on OneStopQA test data
+    print("SARI scores for different prompts on OneStopQA test data:")
+    onestopqa_path = "data/readability_metrics/onestopqa_test_data/"
+    print(
+        f"### Basic English prompt: {calculate_sari_onestopQA(onestopqa_path + "basic_english_prompt.json")}"
+    )
+    print(
+        f"### Simple prompt: {calculate_sari_onestopQA(onestopqa_path + "simple_prompt.json")}"
+    )
+    print(
+        f"### Complex prompt: {calculate_sari_onestopQA(onestopqa_path + "complex_prompt.json")}"
+    )
 
-    Args:
-      readability_metrics (tuple[dict, dict]): A tuple containing two
-        dictionaries with readability metrics for SAE and Basic English
-        answers, respectively. Each dictionary should be an output of
-        'calculate_readability_metrics'.
-      output_dir (str): Directory to save the plots.
-    """
-    title = "Readability Comparison: SAE vs Basic English Answers --"
-    for metric in readability_metrics[0].keys():
-        # Set plot style
-        sns.set_theme(style="whitegrid")
-        # Create a boxplot
-        plt.figure(figsize=(10, 6))
-        sns.boxplot(data=[readability_metric[metric] for readability_metric in readability_metrics])
-        plt.xticks([0, 1, 2, 3, 4], ["Advanced Article (Input)", "Simple Prompt Rewrite", "Complex Prompt Rewrite", "Basic English Prompt Rewrite", "Elementary Article (Reference)"])
-        plt.xticks(rotation=15, ha='right')
-        plt.ylabel(metric.replace("_", " ").title())
-        # plt.title(f"{title} {metric.replace("_", " ").title()}")
-        # Save to file
-        plt.tight_layout()
-        plt.savefig(f"{output_dir}/{metric}.png")
-        plt.close()
-
-
-
-### Example usage of the functions defined above ###
-# sae_file = "data/generated_answers/gpt-4-original-answers.json"
-# sae_dicts = read_file(sae_file)
-# basic_file = "data/generated_answers/gpt-4-original-answers_basic.json"
-# basic_dicts = read_file(basic_file)
-
-# readability_metrics_sae = calculate_readability_metrics(
-#     [entry["answers"]["answer1"]["answer"] for entry in sae_dicts] +
-#     [entry["answers"]["answer2"]["answer"] for entry in sae_dicts])
-
-# readability_metrics_basic = calculate_readability_metrics(
-#     [entry["answers"]["answer1"]["answer"] for entry in basic_dicts] +
-#     [entry["answers"]["answer2"]["answer"] for entry in basic_dicts])
-
-# print("Readability metrics for SAE answers:")
-# for metric, values in readability_metrics_sae.items():
-#     print(f"{metric}: {values[:5]}...")  # Print first 5 values for brevity
-# print("\nReadability metrics for Basic English answers:")
-# for metric, values in readability_metrics_basic.items():
-#     print(f"{metric}: {values[:5]}...")  # Print first 5 values for brevity
-
-# plot_readability_metrics((readability_metrics_sae, readability_metrics_basic))
-
-# print("SARI scores for different prompts on OneStopQA test data:")
-# print("Basic English prompt:")
-# print(calculate_sari("data/readability_metrics/onestopqa_test_data/basic_english_prompt.json"))
-# print("Simple prompt:")
-# print(calculate_sari("data/readability_metrics/onestopqa_test_data/simple_prompt.json"))
-# print("Complex prompt:")
-# print(calculate_sari("data/readability_metrics/onestopqa_test_data/complex_prompt.json"))
-
-
-# original_articles = load_onestopqa(reference=True)
-# original_articles_truncated = [" ".join(
-#         paragraph[:3]) for paragraph in original_articles]
-# with open("data/readability_metrics/onestopqa_test_data/reference_sentences.json", "w") as file:
-#     json.dump(original_articles_truncated, file, indent=4)
-
-
-
-with open("data/readability_metrics/onestopqa_test_data/advanced_sentences.json", "r") as file:
+    # Here we load the input, reference, and the outputs from the three different prompts
+    with open(onestopqa_path + "advanced_sentences.json", "r") as file:
         advanced_sentences = json.load(file)
 
-with open("data/readability_metrics/onestopqa_test_data/simple_prompt.json", "r") as file:
+    with open(onestopqa_path + "simple_prompt.json", "r") as file:
         simple_results = json.load(file)
 
-with open("data/readability_metrics/onestopqa_test_data/complex_prompt.json", "r") as file:
+    with open(onestopqa_path + "complex_prompt.json", "r") as file:
         complex_results = json.load(file)
 
-with open("data/readability_metrics/onestopqa_test_data/basic_english_prompt.json", "r") as file:
+    with open(onestopqa_path + "basic_english_prompt.json", "r") as file:
         basic_english_results = json.load(file)
 
-with open("data/readability_metrics/onestopqa_test_data/elementary_sentences.json", "r") as file:
+    with open(onestopqa_path + "elementary_sentences.json", "r") as file:
         elementary_sentences = json.load(file)
 
+    # Calculate readability metrics for input, reference, and outputs
+    readability_metrics = [
+        calculate_readability_metrics(sentences)
+        for sentences in [
+            advanced_sentences,
+            simple_results,
+            complex_results,
+            basic_english_results,
+            elementary_sentences,
+        ]
+    ]
 
-# Compute BERTScore
-# scores = [score(results, advanced_sentences, lang="en", model_type="distilbert-base-uncased", verbose=True) for results in [basic_english_results, complex_results, simple_results]]
-# print("BERTScore results against original:")
-# for score_set in scores:
-#     print(f"Precision: {score_set[0].mean().item():.4f}, Recall: {score_set[1].mean().item():.4f}, F1: {score_set[2].mean().item():.4f}")
+    # Plot the calculated readability metrics
+    plot_readability_metrics(readability_metrics)
 
-# scores = [score(results, elementary_sentences, lang="en", model_type="distilbert-base-uncased", verbose=True) for results in [basic_english_results, complex_results, simple_results]]
-# print("BERTScore results against elementary reference:")
-# for score_set in scores:
-#     print(f"Precision: {score_set[0].mean().item():.4f}, Recall: {score_set[1].mean().item():.4f}, F1: {score_set[2].mean().item():.4f}")
+    # Compute BERTScore
+    # scores = [score(results, advanced_sentences, lang="en", model_type="distilbert-base-uncased", verbose=True) for results in [basic_english_results, complex_results, simple_results]]
+    # print("BERTScore results against original:")
+    # for score_set in scores:
+    #     print(f"Precision: {score_set[0].mean().item():.4f}, Recall: {score_set[1].mean().item():.4f}, F1: {score_set[2].mean().item():.4f}")
 
-
-readability_metrics = [calculate_readability_metrics(sentences) for sentences in
-    [advanced_sentences, simple_results, complex_results, basic_english_results, elementary_sentences]]
-
-# print("Readability metrics for simple answers:")
-# for metric, values in readability_metrics_simple.items():
-#     print(f"{metric}: {values[:5]}...")  # Print first 5 values for brevity
-# print("\nReadability metrics for Basic English answers:")
-# for metric, values in readability_metrics_basic.items():
-#     print(f"{metric}: {values[:5]}...")  # Print first 5 values for brevity
-
-plot_readability_metrics(readability_metrics)
+    # scores = [score(results, elementary_sentences, lang="en", model_type="distilbert-base-uncased", verbose=True) for results in [basic_english_results, complex_results, simple_results]]
+    # print("BERTScore results against elementary reference:")
+    # for score_set in scores:
+    #     print(f"Precision: {score_set[0].mean().item():.4f}, Recall: {score_set[1].mean().item():.4f}, F1: {score_set[2].mean().item():.4f}")
