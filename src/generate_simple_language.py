@@ -24,7 +24,7 @@ with open("config.yml", "r") as file:
 
 # This is the Basic English prompt. It's currently not used as it had worse SARI / BERT score results
 # user_input_basic_english = lambda src_text:(
-#     f"You are a fluent English speaker. Translate from Standard English to Basis English in a way that feels natural and preserves the original meaning and tone. You should use the following 850-word vocabulary of Basic English:\n\n{vocabulary}\n\nUse these 12 rules of grammar for Basic English:\n{rules}\n\nYour output must also follow these guidelines::\n\n"
+#     f"You are a fluent English speaker. Translate from Standard English to Basis English in a way that feels natural and preserves the original meaning and tone. You should use the following 850-word vocabulary of Basic English:\n\n{vocabulary}\n\nUse these 10 rules of grammar for Basic English:\n{rules}\n\nYour output must also follow these guidelines::\n\n"
 #     "1. Only provide the translation. Do not mention or explain how the translation was done.\n"
 #     "2. Do not mention any of the 10 rules in your translation.\n"
 #     "3. Ensure the text sounds natural and realistic in Basic English.\n\n"
