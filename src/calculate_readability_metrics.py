@@ -202,6 +202,38 @@ def calculate_sari_onestopQA(
     return corpus_sari_sae
 
 
+def compute_bertscore(
+    system_outputs: List[List[str]],
+    reference: List[str],
+    verbose: bool = True,
+    model_type: str = "distilbert-base-uncased",
+) -> List[tuple]:
+    """
+    Compute BERTScore for a list of system outputs against references.
+
+    Args:
+      system_outputs (List[List[str]]): A list of system output
+    """
+    scores = [
+        score(
+            results,
+            reference,
+            lang="en",
+            model_type="distilbert-base-uncased",
+            verbose=True,
+        )
+        for results in system_outputs
+    ]
+    if verbose:
+        print("BERTScore results:")
+        for score_set in scores:
+            print(
+                f"### Precision: {score_set[0].mean().item():.3f}, Recall: {score_set[1].mean().item():.3f}, F1: {score_set[2].mean().item():.3f}"
+            )
+            print("########################################################\n")
+    return scores
+
+
 if __name__ == "__main__":
     # this block calculates SARI scores for different prompts on OneStopQA test data
     print("SARI scores for different prompts on OneStopQA test data:")
@@ -232,28 +264,24 @@ if __name__ == "__main__":
     with open(onestopqa_path + "elementary_sentences.json", "r") as file:
         elementary_sentences = json.load(file)
 
-    # Calculate readability metrics for input, reference, and outputs
-    readability_metrics = [
-        calculate_readability_metrics(sentences)
-        for sentences in [
-            advanced_sentences,
+    # Compute DistilBERTScores
+    compute_bertscore(
+        [
+            basic_english_results,
             simple_results,
             complex_results,
+        ],
+        reference=elementary_sentences,
+        verbose=True,
+        model_type="distilbert-base-uncased",
+    )
+    compute_bertscore(
+        [
             basic_english_results,
-            elementary_sentences,
-        ]
-    ]
-
-    # Plot the calculated readability metrics
-    plot_readability_metrics(readability_metrics)
-
-    # Compute BERTScore
-    # scores = [score(results, advanced_sentences, lang="en", model_type="distilbert-base-uncased", verbose=True) for results in [basic_english_results, complex_results, simple_results]]
-    # print("BERTScore results against original:")
-    # for score_set in scores:
-    #     print(f"Precision: {score_set[0].mean().item():.4f}, Recall: {score_set[1].mean().item():.4f}, F1: {score_set[2].mean().item():.4f}")
-
-    # scores = [score(results, elementary_sentences, lang="en", model_type="distilbert-base-uncased", verbose=True) for results in [basic_english_results, complex_results, simple_results]]
-    # print("BERTScore results against elementary reference:")
-    # for score_set in scores:
-    #     print(f"Precision: {score_set[0].mean().item():.4f}, Recall: {score_set[1].mean().item():.4f}, F1: {score_set[2].mean().item():.4f}")
+            simple_results,
+            complex_results,
+        ],
+        reference=advanced_sentences,
+        verbose=True,
+        model_type="distilbert-base-uncased",
+    )
