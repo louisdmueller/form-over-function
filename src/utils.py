@@ -135,18 +135,6 @@ def parse_args() -> argparse.Namespace:
     )
 
     parser.add_argument(
-        "--aae",
-        action="store_true",
-        help="If set, the answers will be translated from SAE to AAE.",
-    )
-
-    parser.add_argument(
-        "--errors",
-        action="store_true",
-        help="If set, errors will be added to the answers.",
-    )
-
-    parser.add_argument(
         "--question_style_switching",
         action="store_true",
         help="If set, the question style will be switched between the two models.",
