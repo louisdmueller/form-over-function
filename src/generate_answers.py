@@ -1,7 +1,5 @@
 """
-This script generates two files with answers to the prompts in the data file.
- - The first file contains the answers in Standard American English (SAE),
- - The second file (if AAE translation is requested) contains the answers translated to African American English (AAE)
+This script generates a file with answers to the prompts in the data file
 """
 
 import json
@@ -17,20 +15,9 @@ config = load_config(args.config_path)
 
 data = read_file(args.data_path)
 
-desc = "Generating SAE answers" if not args.aae else "Generating AAE answers"
+desc = "Generating SAE answers"
 
-if args.aae:
-    data = read_file(args.output_path)
-    prompt_gen_model = get_model(
-        model_name_or_path=args.prompt_model_name_or_path,
-        config=config,
-    )
-    aae_data = convert_data(data, prompt_gen_model, ["answers"])
-    with open(args.output_path.replace(".json", "_aae.json"), "a") as f_aae:
-        for entry in aae_data:
-            f_aae.write(json.dumps(entry) + "\n")
-
-elif args.errors:
+if args.errors:
     data = read_file(args.output_path)
     prompt_gen_model = get_model(
         model_name_or_path=args.prompt_model_name_or_path,
