@@ -37,11 +37,11 @@ def rewrite_answers(
     # rewrite to AAVE or to simplified English
     if aave:
         prompt = aave_prompt
-        file_ending = "_simple.json"
+        file_ending = "_aae.json"
 
     else:
         prompt = simple_prompt
-        file_ending = "_aae.json"
+        file_ending = "_simple.json"
     prompt = aave_prompt if aave else simple_prompt
     prompts = [
         [prompt(question) for question in texts[0]],
