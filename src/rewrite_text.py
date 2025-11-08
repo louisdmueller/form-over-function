@@ -1,0 +1,114 @@
+import json
+
+import yaml
+
+from calculate_readability_metrics import load_onestopqa
+from model import get_model
+
+# import prompt from prompt file
+from prompts import aave_prompt, simple_prompt, complex_prompt, basic_english_prompt
+from utils import read_file, write_file
+
+
+def rewrite_answers(
+    model_name_or_path: str = "gpt-4.1",
+    src_file: str = "data/generated_answers/gpt-4.1-answers.json",
+    aave: bool = True,
+) -> None:
+
+    with open("config.yml", "r") as file:
+        # supply openAI key via config
+        config = yaml.safe_load(file)
+
+    model = get_model(
+        model_name_or_path=model_name_or_path,
+        config=config,
+    )
+
+    original_dicts = read_file(src_file)
+    new_dicts = [dict(dictionary) for dictionary in original_dicts]
+
+    texts = [
+        [entry["question"] for entry in original_dicts],
+        [entry["answers"]["answer1"]["answer"] for entry in original_dicts],
+        [entry["answers"]["answer2"]["answer"] for entry in original_dicts],
+    ]
+
+    # rewrite to AAVE or to simplified English
+    if aave:
+        prompt = aave_prompt
+        file_ending = "_simple.json"
+
+    else:
+        prompt = simple_prompt
+        file_ending = "_aae.json"
+    prompt = aave_prompt if aave else simple_prompt
+    prompts = [
+        [prompt(question) for question in texts[0]],
+        [prompt(answer) for answer in texts[1]],
+        # we don't need to rewrite the 2nd answer
+        # [simple_prompt(answer) for answer in texts[2]],
+    ]
+
+    system_prompts = [""] * len(prompts[0])
+
+    responses = [
+        model.generate(system_prompts=system_prompts, input_texts=prompts[0]),
+        model.generate(system_prompts=system_prompts, input_texts=prompts[1]),
+        # model.generate(system_prompts=system_prompts, input_texts=prompts[2]),
+    ]
+
+    for i, question in enumerate(new_dicts):
+        question["model_name"] = model_name_or_path
+        question["question"] = responses[0][i][0]
+        question["answers"]["answer1"]["answer"] = responses[1][i][0]
+        # dictionary["answers"]["answer2"]["answer"] = responses[2][i][0]
+        question["metadata"]["rewrite_model"] = model.exact_model
+        question["metadata"]["temperature"] = model.temperature
+        del question["temperature"]
+        del question["model_id"]
+        del question["model_name"]
+        del question["answers"]["answer2"]
+
+    write_file(src_file.replace(".json", "_simple.json"), new_dicts)
+
+
+def rewrite_onestopqa(
+    model_name_or_path: str = "gpt-4.1",
+    prompt_type: str = "simple",
+    outfile: str = "data/readability_metrics/onestopqa_test_data/simple_prompt.json",
+) -> None:
+    with open("config.yml", "r") as file:
+        config = yaml.safe_load(file)
+
+    model = get_model(
+        model_name_or_path=model_name_or_path,
+        config=config,
+    )
+
+    prompt_options = {
+        "simple": simple_prompt,
+        "complex": complex_prompt,
+        "basic": basic_english_prompt,
+    }
+    prompt = prompt_options.get(prompt_type)
+    if not prompt:
+        raise ValueError("Prompt type must be one of [simple/complex/basic]")
+
+    articles = load_onestopqa(reference=False)
+    articles_truncated = [" ".join(paragraph[:1]) for paragraph in articles]
+    prompts = [prompt(article) for article in articles_truncated]
+    system_prompts = [""] * len(prompts)
+    responses = model.generate(
+        system_prompts=system_prompts,
+        input_texts=prompts,
+    )
+    simple_language_paragraphs = [response[0] for response in responses]
+    # write output list to file
+    with open(outfile, "w") as file:
+        json.dump(simple_language_paragraphs, file, indent=4)
+    return
+
+
+if __name__ == "__main__":
+    rewrite_answers(src_file="data/generated_answers/gpt-4.1-answers.json")
