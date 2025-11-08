@@ -41,7 +41,7 @@ def rewrite_answers(
     # rewrite to AAVE, simplified English, or introduce errors
     if rewrite_type == "aave":
         prompt = aave_prompt
-        file_ending = "_aae.json"
+        file_ending = "_aave.json"
 
     elif rewrite_type == "simple":
         prompt = simple_prompt
