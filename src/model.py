@@ -360,7 +360,11 @@ class OpenAIModel(Model):
                     )
                     response_batch.append(response.output_text)
                 responses.append(response_batch)
-
+            # save additional metadata as attribute if necessary
+            if kwargs.get("additional_information", True):
+                self.exact_model = response.model
+                self.temperature = response.temperature
+            
             return responses
 
 
