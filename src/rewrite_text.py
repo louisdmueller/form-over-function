@@ -13,7 +13,7 @@ from utils import read_file, write_file
 def rewrite_answers(
     model_name_or_path: str = "gpt-4.1",
     src_file: str = "data/generated_answers/gpt-4.1-answers.json",
-    aave: bool = True,
+    aave: bool = False,
 ) -> None:
 
     with open("config.yml", "r") as file:
@@ -70,7 +70,7 @@ def rewrite_answers(
         del question["model_name"]
         del question["answers"]["answer2"]
 
-    write_file(src_file.replace(".json", "_simple.json"), new_dicts)
+    write_file(src_file.replace(".json", file_ending), new_dicts)
 
 
 def rewrite_onestopqa(
