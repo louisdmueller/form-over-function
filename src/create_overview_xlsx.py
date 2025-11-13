@@ -105,9 +105,10 @@ def process_pair_results(
             results[judge_model_name][worse_model_name] = (
                 f"{metric.upper()}: {analysis_results[metric]:.2f}\n"
                 f"V1: {analysis_results['v1']} V2: {analysis_results['v2']} "
-                f"Vties: {analysis_results['ties']}"
+                f"Vties: {analysis_results['ties']}\n"
+                f"Stronger Model Preference: {analysis_results["smp"]}"
             )
-
+                 
     return results
 
 

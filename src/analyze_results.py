@@ -359,6 +359,7 @@ def run_analysis_on_judgements(
         "v1": outcomes["better_model_wins_file1"],
         "v2": outcomes["worse_model_wins_file1"],
         "ties": outcomes["ties_file1"],
+        "smp": outcomes["better_model_wins_file1"] / (outcomes["better_model_wins_file1"] + outcomes["worse_model_wins_file1"])
     }
     pd.DataFrame([result]).to_excel(
         os.path.join(
