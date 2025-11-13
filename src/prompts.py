@@ -57,6 +57,6 @@ basic_english_prompt = lambda src_text: (
 
 error_prompt = lambda question, answer: (
     "You are a fact checker.\nYou will be given a question-answer pair.\nYou will do your best to identify all the facts in the given answer.\nYou will re-write the answer with 1-2 factual errors that are not easy to identify.\nOnly provide the new answer. Do not mention or explain how the errors were introduced.\n\n"
-    f"Your questions is: '{question}'\n"
+    f"Your question is: '{question}'\n"
     f"Rewrite and introduce errors for the following answer: '{answer}'"
 )

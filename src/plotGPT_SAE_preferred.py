@@ -4,12 +4,12 @@ import plotly.graph_objects as go
 categories = ['Mistral-7B-Instruct-v0.2', 'Qwen2.5-72B-Instruct', 'Qwen3-32B', 'phi-4', 'Llama-3.3-70B-Instruct']
 # keep original trace names in same order as data arrays
 trace_info = [
-    ('Llama-2-7b-chat-hf', [0.23, 0.20, 0.74, 0.57, 0.0]),
-    ('Llama3.1-8B',           [0.61, 0.81, 0.83, 0.78, 0.0]),
-    ('Mistral-7B-Instruct-v0.2',[0.44, 0.41, 0.0, 0.77, 0.82]),
-    ('Qwen2-0.5B-Instruct',   [0.29, 0.30, 0.0, 0.22, 0.48]),
-    ('Qwen2.5-3B-Instruct',   [0.67, 0.0, 0.0, 0.69, 0.71]),
-    ('gemini-1.5-flash',      [0.75, 0.95, 0.94, 0.98, 0.98])
+    ('Llama-2-7b-chat-hf',      [0.84, 0.98, 0.98, 0.97, 0.0]),
+    ('Llama3.1-8B',             [0.80, 0.81, 0.74, 0.76, 0.0]),
+    ('Mistral-7B-Instruct-v0.2',[0.65, 0.85, 0.0, 0.81, 0.63]),
+    ('Qwen2-0.5B-Instruct',     [0.99, 0.99, 0.0, 1.0, 0.98]),
+    ('Qwen2.5-3B-Instruct',     [0.84, 0.0, 0.0, 0.93, 0.90]),
+    ('gemini-1.5-flash',        [0.84, 0.83, 0.71, 0.77, 0.67])
 ]
 
 # optional color list
@@ -98,7 +98,7 @@ fig.update_layout(
             text="Judge Models",
         ),
     yaxis_title=dict(
-            text="ASR (Attack Success Rate)",
+            text="GPT 4.1 (SAE) preferred",
         ),
     barmode='overlay',
     bargap=0.15,
@@ -110,4 +110,4 @@ fig.update_layout(
     )
 )
 
-fig.write_image("asr.svg", width=1600, height=400)
+fig.write_image("strong_model_preference.svg", width=1600, height=400)
