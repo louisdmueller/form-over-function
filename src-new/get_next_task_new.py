@@ -16,15 +16,20 @@ def get_next_not_finished_task(tasks) -> dict:
             return task
     return {}
 
+def is_all_subtasks_finished(tasks) -> bool:
+    if get_next_not_finished_task(tasks):
+        return False
+    return True
 
-def get_next_not_finished_task_with_base_data_variant(tasks) -> dict:
+
+def get_next_not_finished_task_with_base_data_variant(tasks) -> dict | None:
     task = get_next_not_finished_task(tasks)
     if task:
         for base_data_variant in tasks["base_data_variants"]:
             if base_data_variant not in task["done"]:
                 task = {**task, "base_data_variant": base_data_variant}
                 return task
-    return {}
+    return None
 
 
 def get_next_task_path(tasks: dict, data_dir = "data/generated_answers") -> str:
@@ -51,6 +56,41 @@ def mark_variant_as_done(task: dict, variant: str, tasks_filepath: str) -> dict:
     with open(tasks_filepath, "w") as file:
         json.dump(tasks, file, indent=4)
     return load_tasks_file(tasks_filepath)
+
+def get_next_not_finished_meta_task(tasks) -> dict:
+    """
+    Gets the next meta level task that is not yet finished.
+    """
+    for task_id, task_info in tasks.items():
+        if task_info["status"] == "NOT_FINISHED":
+            return task_info
+    return {}
+
+def get_next_meta_task_filepath(meta_tasks_file_path: str) -> str:
+    """
+    This is utilized in the context of tasks_files.json, which defines the individual tasks files to be processed.
+    """
+    tasks = load_tasks_file(meta_tasks_file_path)
+    next_task = get_next_not_finished_meta_task(tasks)
+    if next_task:
+        return next_task["path"]
+    return ""
+
+def is_all_meta_tasks_finished(meta_tasks_file_path: str) -> bool:
+    tasks = load_tasks_file(meta_tasks_file_path)
+    if get_next_not_finished_meta_task(tasks):
+        return False
+    return True
+
+def mark_meta_task_as_finished(meta_tasks_file_path: str, meta_task_path: str) -> dict:
+    tasks = load_tasks_file(meta_tasks_file_path)
+    for task_id, task_info in tasks.items():
+        if task_info["path"] == meta_task_path:
+            task_info["status"] = "FINISHED"
+            break
+    with open(meta_tasks_file_path, "w") as file:
+        json.dump(tasks, file, indent=4)
+    return load_tasks_file(meta_tasks_file_path)
 
 if __name__ == "__main__":
     tasks_file_path = "tasks.json"

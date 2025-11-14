@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+import os
 import re
 from typing import List, Dict
 from huggingface_hub import repo_exists
@@ -107,22 +108,63 @@ class Model(ABC):
 class vLLMModel(Model):
     def __init__(self, model_name_or_path: str, config: dict, tasks: dict):
         from vllm import LLM, SamplingParams
+        # from vllm.sampling_params import BeamSearchParams
+        # from torch.cuda import device_count
 
         super().__init__(model_name_or_path)
+
+        if config.get("model_zipped"):
+            # unzip the model to TMPDIR if it is zipped
+            import zipfile
+            with zipfile.ZipFile(model_name_or_path, 'r') as zip_ref:
+                tmpdir = os.environ.get("TMPDIR")
+                if tmpdir is None:
+                    raise ValueError("TMPDIR environment variable not set.")
+                unzip_path = os.path.join(tmpdir, os.path.basename(model_name_or_path) + "_unzipped")
+                zip_ref.extractall(unzip_path)
+                model_name_or_path = unzip_path
+
         self.llm = LLM(
             model=model_name_or_path,
-            tensor_parallel_size=tasks["vllm_parameters"].get("tensor_parallel_size", 1),
+            tensor_parallel_size=tasks["vllm_parameters"].get("tensor_parallel_size", 2), # device_count()
             dtype=tasks["model_parameters"].get("dtype", "bfloat16"),
+            max_model_len=tasks["model_parameters"].get("max_model_length", 512),
+            tokenizer_mode="mistral",
+            limit_mm_per_prompt={"image": 0}, # disable multimodal for this project
         )
 
-        self.sampling_params = SamplingParams(
-            temperature=tasks["sampling_parameters"].get("temperature", 0.0),
-            top_p=tasks["sampling_parameters"].get("top_p", 1.0),
-            min_p=tasks["sampling_parameters"].get("min_p", 0.0),
-            top_k=tasks["sampling_parameters"].get("top_k", -1),
-            n=tasks["model_parameters"].get("num_generations", 3),
-            max_tokens=tasks["model_parameters"].get("max_output_tokens", MAX_OUTPUT_TOKENS)
+        # Clean up sampling parameters by removing None values
+        sampling_params = tasks.get("sampling_parameters", {})
+        for key, item in list(sampling_params.items()):
+            if item is None:
+                del sampling_params[key]
+
+        # Decide whether to use sampling or beam search
+        self.has_sampling_param = any(
+            k in sampling_params for k in ("temperature", "top_p", "min_p", "top_k")
         )
+
+        # if self.has_sampling_param:
+        # Use SamplingParams when any sampling parameter is set
+        self.sampling_params = SamplingParams(
+            # TODO: (also see in generate method) Decide whether we want to continue using our own sampling params
+            # or just use the sampling params recommended by the model creators, which get loaded automatically if we don't set them here
+            # temperature=sampling_params.get("temperature", 0.0),
+            # top_p=sampling_params.get("top_p", 1.0),
+            # min_p=sampling_params.get("min_p", 0.0),
+            # top_k=sampling_params.get("top_k", -1),
+            n=tasks["model_parameters"].get("num_generations", 3),
+            max_tokens=tasks["model_parameters"].get(
+                "max_output_tokens", MAX_OUTPUT_TOKENS
+            ),
+        )
+        # else:
+        #     self.beam_search_params = BeamSearchParams(
+        #         beam_width=tasks["model_parameters"].get("num_generations", 3),
+        #         max_tokens=tasks["model_parameters"].get(
+        #             "max_output_tokens", MAX_OUTPUT_TOKENS
+        #         ),
+        #     )
     
     def format_inputs(
         self,
@@ -142,9 +184,16 @@ class vLLMModel(Model):
     ) -> List[List[str]]:
         inputs = self.format_inputs(input_texts, system_prompts)
 
+        # if self.has_sampling_param:
         outputs = self.llm.generate(inputs, self.sampling_params)
         # outputs has this format: outputs[j].output.outputs[i].text
         outputs = [[output.text for output in generation.outputs] for generation in outputs]
+        # else:
+            # TODO: Decide whether we want to continue using beam search or just use the sampling params recommended by the model creators
+            # beam_inputs = [{"prompt": text} for text in inputs]
+            # outputs = self.llm.beam_search(beam_inputs, self.beam_search_params)
+            # # outputs has this format: outputs[j].output.outputs[i].text
+            # outputs = [[output.text for output in generation.outputs] for generation in outputs]
 
         return outputs
 
