@@ -5,7 +5,6 @@ import statistics
 import argparse
 from typing import Dict, Optional, Tuple
 
-from numpy import extract
 from pandas import DataFrame
 
 from analyze_reasonings import analyze_reasonings_topic_model
@@ -384,13 +383,13 @@ def main():
     )
     parser.add_argument(
         "--file1",
-        default="/home/hd/hd_hd/hd_go226/projects/research-project/data/judgements/GPT4.1-vs-gemini-1.5-flash/Llama-3.3-70B-Instruct/merged_data.json",
+        default="/home/hd/hd_hd/hd_go226/projects/research-project/data/judgements/gpt-4.1/vs_gpt-4.1_1error_cot/phi-4/merged_data.json",
         type=str,
         help="Path to the first JSON results file",
     )
     parser.add_argument(
         "--file2",
-        default="/home/hd/hd_hd/hd_go226/projects/research-project/data/judgements/Llama-3.3-70B-Instruct---gpt-4.1_basic-vs-gemini-1.5-flash/merged_data.json",
+        default="/home/hd/hd_hd/hd_go226/projects/research-project/data/judgements/gpt-4.1_aae/vs_gpt-4.1_1error_cot/phi-4/merged_data.json",
         type=str,
         help="Path to the second JSON results file",
     )
@@ -411,7 +410,7 @@ def main():
         "--analyze_reasonings",
         action="store_true",
         help="If set, analyze reasonings using topic modeling",
-        default=False,
+        default=True,
     )
 
     parser.add_argument(
@@ -423,23 +422,24 @@ def main():
 
     args = parser.parse_args()
 
-    # Output into the same directory as file1 or file2
     file1_data = load_json_file(args.file1)
     file2_data = load_json_file(args.file2)
 
     if args.analyze_reasonings:
         analyze_reasonings_topic_model(
-            file2_data,
-            args.better_model_name,
-            args.worse_model_name,
-            args.output_directory,
+            file_data=file1_data,
+            output_directory="./output",
+            better_model_name="gpt-4.1",
+            worse_model_name="gpt-4.1_1error",
+            use_llm_filter=True,
+            llm_filter_model_name="gpt-4o-mini",
         )
     run_analysis_on_judgements(
-        file1_data,
-        file2_data,
-        args.better_model_name,
-        args.worse_model_name,
-        args.output_directory,
+        file1_data=file1_data,
+        file2_data=file2_data,
+        better_model_name=args.better_model_name,
+        worse_model_name=args.worse_model_name,
+        output_directory=args.output_directory,
     )
 
 
