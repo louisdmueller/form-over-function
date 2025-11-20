@@ -3,35 +3,33 @@ This script lets a judge model evaluate answers from two different models
 in batches.
 """
 
-from dataclasses import dataclass
+import csv
 import json
+import logging
 import os
+from dataclasses import dataclass
 from typing import List, Tuple
 
-
-from tqdm import tqdm
+# from get_next_task import get_next_valid_task, mark_task
+from get_next_task_new import (
+    get_next_meta_task_filepath,
+    get_next_not_finished_task_with_base_data_variant,
+    mark_variant_as_done,
+)
 from model_new import get_model
+from tqdm import tqdm
 from utils_new import (
-    get_judgements_path,
-    parse_args,
-    load_config,
-    get_prompt,
-    prepare_question_with_intro,
     TimeBasedTimeoutHandler,
     get_file_path,
+    get_judgements_path,
+    get_prompt,
+    load_config,
+    parse_args,
+    prepare_question_with_intro,
     read_data_file,
 )
 
 from create_overview_xlsx import create_excel_overview
-
-# from get_next_task import get_next_valid_task, mark_task
-from get_next_task_new import (
-    get_next_not_finished_task_with_base_data_variant, 
-    get_next_meta_task_filepath, 
-    mark_variant_as_done
-)
-import logging
-import csv
 
 logger = logging.getLogger("generate_judgements_logger")
 logger.setLevel(logging.DEBUG)
@@ -47,6 +45,7 @@ if not logger.handlers:
     logger.addHandler(ch)
 
 logger.debug("Logger initialized.")
+
 
 def load_data_lists(data_1_path: str, data_2_path: str) -> Tuple[list, list]:
     """
@@ -187,12 +186,14 @@ def main() -> None:
     args = parse_args()
     config = load_config(args.config_path)
     if args.multi_tasks_mode:
-        # Instead of providing a single task file we can also provide a file containing all the 
+        # Instead of providing a single task file we can also provide a file containing all the
         # individual task files to be processed
-        logger.info(f"Multi tasks mode enabled. Loading next meta task from: {args.meta_tasks_file}")
+        logger.info(
+            f"Multi tasks mode enabled. Loading next meta task from: {args.meta_tasks_file}"
+        )
         task_filepath = get_next_meta_task_filepath(args.meta_tasks_file)
         tasks = load_tasks_file(task_filepath)
-    else: 
+    else:
         task_filepath = args.tasks_file
         tasks = load_tasks_file(task_filepath)
     logger.info(f"Loaded standard tasks from: {task_filepath}")
@@ -213,7 +214,7 @@ def main() -> None:
         if task is None:
             logger.info("All tasks are finished. Aborting.")
             break
-        
+
         # I call it base data since this data does not change throughout the tasks
         # Its always compared against, doesn't matter in which form (aae, basic, errors)
         base_data_model = tasks["base_data_model"]
@@ -233,10 +234,10 @@ def main() -> None:
         )
 
         judgement_inputs = prepare_judgement_inputs(
-            base_data,
             comp_data,
-            base_data_model,
+            base_data,
             comp_data_model,
+            base_data_model,
             prompt_template,
             tasks["prompting_parameters"].get("question_style_switching", False),
             tasks["prompting_parameters"].get("introductory_beginning", False),
@@ -249,15 +250,21 @@ def main() -> None:
 
         # Process and save results
         file_content = {}
-        file_content["metadata"] = create_judgement_metadata(tasks, base_data_filepath, comp_data_path)
+        file_content["metadata"] = create_judgement_metadata(
+            tasks, base_data_filepath, comp_data_path
+        )
         for i, judgement_input in enumerate(judgement_inputs):
             if judgement_input.idx not in file_content:
                 file_content[judgement_input.idx] = []
 
-            answer_preferences = extract_answer_labels(extracted_answers, i, judgement_input)
+            answer_preferences = extract_answer_labels(
+                extracted_answers, i, judgement_input
+            )
 
             file_content[judgement_input.idx].append(
-                create_judgement_record(extracted_answers, i, judgement_input, answer_preferences)
+                create_judgement_record(
+                    extracted_answers, i, judgement_input, answer_preferences
+                )
             )
         output_filename = "judgements.json"
         output_dir = get_judgements_path(
@@ -273,13 +280,18 @@ def main() -> None:
             f.write(json.dumps(file_content, indent=4))
 
         tasks = mark_variant_as_done(task, base_data_variant, task_filepath)
-    
-    create_excel_overview(judgement_files_directory=judgement_files_directory, excel_output_directory=excel_output_directory)
+
+    create_excel_overview(
+        judgement_files_directory=judgement_files_directory,
+        excel_output_directory=excel_output_directory,
+    )
 
     log_job_info(tasks, config, timeout_handler)
 
 
-def log_job_info(tasks: dict, config: dict, timeout_handler: TimeBasedTimeoutHandler) -> None:
+def log_job_info(
+    tasks: dict, config: dict, timeout_handler: TimeBasedTimeoutHandler
+) -> None:
     # append job information to a csv file
     execution_time = timeout_handler.get_elapsed_time()
     # TODO: ressources used, files written, models used, ...
@@ -300,50 +312,49 @@ def log_job_info(tasks: dict, config: dict, timeout_handler: TimeBasedTimeoutHan
             writer.writeheader()
         writer.writerow(job_info)
 
+
 def extract_answer_labels(extracted_answers, i, judgement_input):
     answer_preferences = []
     for answer in extracted_answers["extracted_answers"][i]:
-        if (
-                    answer
-                    in judgement_input.answer_dict[judgement_input.answer_position]
-                ):
+        if answer in judgement_input.answer_dict[judgement_input.answer_position]:
             answer_preferences.append(
-                        judgement_input.answer_dict[judgement_input.answer_position][
-                            answer
-                        ]["label"]
-                    )
+                judgement_input.answer_dict[judgement_input.answer_position][answer][
+                    "label"
+                ]
+            )
         else:
             answer_preferences.append("Unknown")
     return answer_preferences
 
+
 def create_judgement_record(extracted_answers, i, judgement_input, answer_preferences):
     return {
-                    "prompt_style": judgement_input.question_style,
-                    "answer_order": judgement_input.answer_position,
-                    "question": judgement_input.question,
-                    "answer1": judgement_input.answer_dict[
-                        judgement_input.answer_position
-                    ]["answer1"],
-                    "answer2": judgement_input.answer_dict[
-                        judgement_input.answer_position
-                    ]["answer2"],
-                    "result": extracted_answers["output"][i],
-                    "extracted_answers": answer_preferences,
-                }
+        "prompt_style": judgement_input.question_style,
+        "answer_order": judgement_input.answer_position,
+        "question": judgement_input.question,
+        "answer1": judgement_input.answer_dict[judgement_input.answer_position][
+            "answer1"
+        ],
+        "answer2": judgement_input.answer_dict[judgement_input.answer_position][
+            "answer2"
+        ],
+        "result": extracted_answers["output"][i],
+        "extracted_answers": answer_preferences,
+    }
+
 
 def create_judgement_metadata(tasks, base_data_filepath, comp_data_path):
     return {
-            "judge_model": tasks["judge_model_name"],
-            "data_1_path": base_data_filepath,
-            "data_2_path": comp_data_path,
-            "prompt_name": tasks["prompting_parameters"]["prompt_key"],
-            "_comment": None,
-            "model_parameters": tasks["model_parameters"],
-            "sampling_parameters": tasks["sampling_parameters"],
-            "vllm_parameters": tasks.get("vllm_parameters", {}),
-            "prompting_parameters": tasks.get("prompting_parameters", {}),
-        }
-
+        "judge_model": tasks["judge_model_name"],
+        "data_1_path": base_data_filepath,
+        "data_2_path": comp_data_path,
+        "prompt_name": tasks["prompting_parameters"]["prompt_key"],
+        "_comment": None,
+        "model_parameters": tasks["model_parameters"],
+        "sampling_parameters": tasks["sampling_parameters"],
+        "vllm_parameters": tasks.get("vllm_parameters", {}),
+        "prompting_parameters": tasks.get("prompting_parameters", {}),
+    }
 
 
 if __name__ == "__main__":

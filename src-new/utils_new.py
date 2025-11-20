@@ -4,6 +4,7 @@ import logging
 import os
 import time
 from typing import Dict, List
+
 import yaml
 
 
@@ -30,9 +31,7 @@ def parse_args() -> argparse.Namespace:
     )
 
     parser.add_argument(
-        "--multi_tasks_mode",
-        action="store_true",
-        help="Enable multi-tasks mode."
+        "--multi_tasks_mode", action="store_true", help="Enable multi-tasks mode."
     )
 
     parser.add_argument(
@@ -71,10 +70,12 @@ def load_available_answer_files() -> set:
 
     return answer_files
 
+
 def get_full_model_variant(data_name: str, data_variant: str) -> str:
     if not data_variant:
         return data_name
     return f"{data_name}_{data_variant}"
+
 
 def get_file_path(data_name: str, data_variant: str = "") -> str:
     data_name = (
@@ -116,7 +117,9 @@ def prepare_question_with_intro(
         return question
 
 
-def get_judgements_path(base_path, base_model, base_model_variant, comp_model, judge_model):
+def get_judgements_path(
+    base_path, base_model, base_model_variant, comp_model, judge_model
+):
     # e.g. data/judgements/gpt-4_aae
     base_model_dir = (
         base_model + f"_{base_model_variant}" if base_model_variant else base_model
@@ -156,7 +159,7 @@ class TimeBasedTimeoutHandler:
     """
 
     # TODO: passing the logger as argument is a bit clunky, refactor this
-    def __init__(self, threshold: int = 300, logger = logging.getLogger(__name__)):
+    def __init__(self, threshold: int = 300, logger=logging.getLogger(__name__)):
         """
         Initialize the TimeBasedTimeoutHandler.
 
@@ -169,9 +172,7 @@ class TimeBasedTimeoutHandler:
 
         job_start_time = os.getenv("SLURM_JOB_START_TIME")
         if job_start_time is None:
-            self.logger.warning(
-                "SLURM_JOB_START_TIME environment variable not set. "
-            )
+            self.logger.warning("SLURM_JOB_START_TIME environment variable not set. ")
             job_start_time = int(time.time())
         else:
             job_start_time = int(job_start_time)
@@ -218,5 +219,3 @@ class TimeBasedTimeoutHandler:
         current_time = int(time.time())
         elapsed_time = current_time - self.start_time
         return elapsed_time
-
-    
