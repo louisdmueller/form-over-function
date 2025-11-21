@@ -1,5 +1,6 @@
 import json
 import os
+from typing import Any
 
 
 def load_tasks_file(tasks_file_path: str) -> dict:
@@ -15,6 +16,7 @@ def get_next_not_finished_task(tasks) -> dict:
         ):
             return task
     return {}
+
 
 def is_all_subtasks_finished(tasks) -> bool:
     if get_next_not_finished_task(tasks):
@@ -32,7 +34,7 @@ def get_next_not_finished_task_with_base_data_variant(tasks) -> dict | None:
     return None
 
 
-def get_next_task_path(tasks: dict, data_dir = "data/generated_answers") -> str:
+def get_next_task_path(tasks: dict, data_dir="data/generated_answers") -> str:
     next_task = get_next_not_finished_task(tasks)
     if next_task:
         compare_against = next_task["compare_against"]
@@ -43,6 +45,7 @@ def get_next_task_path(tasks: dict, data_dir = "data/generated_answers") -> str:
         task_path = os.path.join(data_dir, compare_against)
         return task_path
     return ""
+
 
 def mark_variant_as_done(task: dict, variant: str, tasks_filepath: str) -> dict:
     tasks = load_tasks_file(tasks_filepath)
@@ -57,14 +60,18 @@ def mark_variant_as_done(task: dict, variant: str, tasks_filepath: str) -> dict:
         json.dump(tasks, file, indent=4)
     return load_tasks_file(tasks_filepath)
 
-def get_next_not_finished_meta_task(tasks) -> dict:
+
+def get_next_not_finished_meta_task(tasks: dict[str, Any]) -> dict:
     """
     Gets the next meta level task that is not yet finished.
     """
     for task_id, task_info in tasks.items():
+        if task_id.startswith("_"):
+            continue
         if task_info["status"] == "NOT_FINISHED":
             return task_info
     return {}
+
 
 def get_next_meta_task_filepath(meta_tasks_file_path: str) -> str:
     """
@@ -76,11 +83,13 @@ def get_next_meta_task_filepath(meta_tasks_file_path: str) -> str:
         return next_task["path"]
     return ""
 
+
 def is_all_meta_tasks_finished(meta_tasks_file_path: str) -> bool:
     tasks = load_tasks_file(meta_tasks_file_path)
     if get_next_not_finished_meta_task(tasks):
         return False
     return True
+
 
 def mark_meta_task_as_finished(meta_tasks_file_path: str, meta_task_path: str) -> dict:
     tasks = load_tasks_file(meta_tasks_file_path)
@@ -92,6 +101,7 @@ def mark_meta_task_as_finished(meta_tasks_file_path: str, meta_task_path: str) -
         json.dump(tasks, file, indent=4)
     return load_tasks_file(meta_tasks_file_path)
 
+
 if __name__ == "__main__":
     tasks_file_path = "tasks.json"
     tasks = load_tasks_file(tasks_file_path)
@@ -99,6 +109,8 @@ if __name__ == "__main__":
     print("Next not finished task:", next_not_finished_task)
 
     mark_variant_as_done(
-        next_not_finished_task, next_not_finished_task["base_data_variant"], tasks_file_path
+        next_not_finished_task,
+        next_not_finished_task["base_data_variant"],
+        tasks_file_path,
     )
     print("Marked variant as done for the first task.")
