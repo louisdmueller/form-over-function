@@ -86,43 +86,21 @@ class Model(ABC):
         If the answer is ambiguous (e.g. both "Answer1" and "Answer2" are present), return None.
         If no answer is found, return None.
         """
-        # Try to match at the start of the text
-        match_start = re.match(
-            r"^\s*(Answer1|Answer2|Tie)\s*",
-            text.strip().split("\n")[0],
-            flags=re.IGNORECASE,
-        )
-        # Try to match at the end of the text
-        match_end = re.match(
-            r"\s*(Answer1|Answer2|Tie)\s*$",
-            text.strip().split("\n")[-1],
-            flags=re.IGNORECASE,
-        )
 
-        # when gpt-oss uses "thinking" in the answer the answer will be at the very end but prepended "assistantfinal"
-        # e.g. "assistantfinalAnswer1"
-        # we simply just look at the last word and see whether it matches
-        match_thinking = re.search(
-            r"(Answer1|Answer2|Tie)\s*$",
-            text.strip().split("\n")[-1],
-            flags=re.IGNORECASE,
-        )
-
-        # If both start and end match but are different, return None (ambiguous answer)
-        if (
-            match_start
-            and match_end
-            and match_start.group(1).lower() != match_end.group(1).lower()
-        ):
+        if not text:
             return None
-        if match_start:
-            return match_start.group(1).lower()
-        if match_end:
-            return match_end.group(1).lower()
-        if match_thinking:
-            return match_thinking.group(1).lower()
-        # If neither matches, return None (no answer found)
-        return None
+        pattern = r"^\s*\S*(Answer1|Answer2|Tie)\S*\s*$"
+        matches = []
+        for line in text.split("\n"):
+            match = re.match(pattern, line, flags=re.IGNORECASE)
+            if match:
+                matches.append(match.group(1).lower())
+        if not matches:
+            return None
+        unique_answers = set(matches)
+        if len(unique_answers) > 1:
+            return None
+        return matches[-1]
 
 
 class vLLMModel(Model):
