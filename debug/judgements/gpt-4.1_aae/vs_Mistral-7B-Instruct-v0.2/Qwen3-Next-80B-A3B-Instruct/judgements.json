@@ -191,7 +191,7 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1\n\nAnswer1 provides a clear, accurate, and well-structured explanation of how the digestive organs are connected and their specific functions. It uses proper anatomical terminology (e.g., peristalsis, chyme, electrolytes), correctly identifies the roles of all major organs including the pancreas and gallbladder, and maintains a logical flow from ingestion to elimination. The answer is complete, scientifically precise, and professionally phrased.\n\nAnswer2, while conveying the general idea, is excessively informal, contains grammatical errors and nonstandard dialect (\u201cyo\u201d, \u201cthem\u201d, \u201cget hooked up\u201d), and omits key details (e.g., no mention of gallbladder, incorrect attribution of bile to liver alone without noting storage in gallbladder). It also lacks coherence in structure and precision in biological function.\n\nThe semantic quality\u2014accuracy, completeness, clarity, and professionalism\u2014is significantly higher in Answer1.\n\nAnswer1"
+                "Answer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
@@ -212,8 +212,8 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                "Answer2\n\nAnswer2 provides a more accurate, complete, and scientifically precise explanation of the digestive system\u2019s structure and function. It correctly names all key organs (including gallbladder and rectum/anus, which Answer1 omits), uses proper terminology (e.g., \u201cchyme,\u201d \u201cperistalsis,\u201d \u201celectrolytes\u201d), and clearly describes the sequential roles of each organ with appropriate physiological detail. Answer1, while conversational and mostly correct, uses informal language (\u201cyo,\u201d \u201cthem,\u201d \u201cget pulled out\u201d), lacks precision (e.g., misattributes bile production to the liver but doesn\u2019t mention gallbladder\u2019s storage role), and truncates the final sentence.\n\nAnswer2 demonstrates superior semantic quality: it is accurate, thorough, logically structured, and uses formal scientific language appropriate to the question. Answer1, despite its clarity, is undermined by colloquialisms and omissions.\n\nTie would be tempting if content were equally complete, but Answer2 is clearly superior in accuracy and completeness.\n\nAnswer2",
                 "Answer2",
+                "Answer2\n\nAnswer2 provides a more accurate, complete, and semantically clear explanation of how the digestive organs are connected and why each is important. It correctly names all key organs (including gallbladder, rectum, and anus), uses precise terminology (e.g., \u201cchyme,\u201d \u201cperistalsis,\u201d \u201celectrolytes\u201d), and logically describes the sequential flow and functional roles of each organ without unnecessary colloquialisms.\n\nAnswer1, while conveying a general understanding, uses informal language (\u201cyo,\u201d \u201cthem,\u201d \u201cget hooked up\u201d), omits key organs (gallbladder, rectum, anus), and lacks precision in describing physiological processes (e.g., failing to mention peristalsis or the specific roles of hydrochloric acid and bile).\n\nAnswer2\u2019s structured, science-based explanation demonstrates superior semantic quality, accuracy, and completeness.\n\nAnswer2",
                 "Answer2"
             ],
             "extracted_answers": [
@@ -260,7 +260,7 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                "Answer2",
+                "Answer2 is superior.\n\nIt provides a more accurate, structured, and scientifically precise explanation of the forces acting on a stationary car. It correctly identifies gravity, normal force, and static friction as the primary forces, and clarifies the role of each with appropriate physics terminology. It also correctly states that air resistance is negligible for a stationary object (though its phrasing \u201cacts against the car\u2019s forward motion\u201d is slightly misleading\u2014since there is no motion, air resistance is zero unless there\u2019s wind, which it doesn\u2019t address). Still, it avoids the errors in Answer1.\n\nAnswer1, while conversational and mostly correct, uses imprecise language (\u201cgoin\u2019 on,\u201d \u201cchillin\u2019,\u201d \u201clil\u2019 bit\u201d), makes an incorrect claim that \u201cair might be pressin\u2019 on it\u201d as if it\u2019s meaningfully contributing (ignoring that atmospheric pressure is isotropic and cancels out), and inaccurately suggests \u201cair pushin\u2019 up under the car\u201d as a notable force\u2014when in fact, buoyancy from air is negligible for dense objects like cars.\n\nAnswer2 understands and articulates the equilibrium of forces (Newton\u2019s First Law) and distinguishes static from rolling friction appropriately. It lacks a mention of atmospheric pressure asymmetry (which is irrelevant for most purposes), but its omissions are justifiable for an introductory analysis.\n\nThe quality, clarity, and accuracy of Answer2 make it the better response.\n\nAnswer2",
                 "Answer2",
                 "Answer2"
             ],
@@ -1533,8 +1533,8 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2 is superior in semantic quality because it provides a clearer, more accurate, and complete explanation of why we have night and day. It correctly identifies that the rotation of the Earth on its axis (not its axial tilt) causes the cycle of day and night, and it correctly states that this rotation occurs approximately every 24 hours, leading to alternating periods of light and darkness.\n\nAnswer1 mistakenly attributes day and night to Earth\u2019s axial tilt \u2014 which actually causes seasons, not day and night. While the rest of Answer1 discusses variations in day length due to latitude and season (which is factually correct), it wrongly lumps this into the explanation of the basic day-night cycle, creating a fundamental conceptual error.\n\nAnswer2, despite its informal tone, correctly and simply conveys the essential science: rotation \u2192 one side lit (day), other side dark (night), full rotation every 24 hours.\n\nThus, Answer2 is semantically superior.\n\nAnswer2",
-                "Answer2 is superior in terms of semantic quality because it provides a clearer, more accurate, and more complete explanation of why we have night and day. It correctly identifies that the rotation of the Earth on its axis \u2014 not its axial tilt \u2014 is the direct cause of day and night. It also correctly states the 24-hour rotation\u5468\u671f and explains the alternation between light and dark sides in an accessible way.\n\nAnswer1 contains a factual error: it attributes night and day to Earth\u2019s axial tilt. While axial tilt is responsible for seasonal changes in day length, it is not the cause of the daily cycle of day and night. That is caused solely by rotation.\n\nTherefore, Answer2 is semantically more accurate and informative.\n\nAnswer2",
+                "Answer2 is superior in terms of semantic quality because it accurately and clearly explains the fundamental cause of day and night \u2014 the Earth\u2019s rotation on its axis \u2014 in a way that is both correct and accessible. It correctly states that one side faces the Sun (day) while the other is in shadow (night), and correctly notes the 24-hour rotation cycle. The language is informal but semantically precise and free of error.\n\nAnswer1 contains a significant error: it incorrectly attributes day and night to the *tilt of Earth\u2019s axis*. While the axial tilt is responsible for seasons and variation in day length throughout the year, it is not the cause of day and night. Day and night occur due to rotation, not tilt. This fundamental mistake undermines the accuracy of Answer1.\n\nThus, despite its colloquial tone, Answer2 is semantically correct and complete, while Answer1 is factually wrong.\n\nAnswer2",
+                "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
@@ -1556,9 +1556,9 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                "Answer1 is superior.\n\nWhile Answer2 contains a true statement about the tilt of Earth's axis and its effect on seasonal variations in day length, it incorrectly attributes the *existence* of day and night to the axial tilt. That is a common misconception. Day and night occur because the Earth rotates on its axis \u2014 not because of its axial tilt. The tilt affects the *duration* of daylight over the course of a year (causing seasons), but not the basic 24-hour cycle of day and night.\n\nAnswer1 correctly and clearly explains the rotation of the Earth as the reason for day and night, uses accessible language, and accurately states that one full rotation takes about 24 hours \u2014 making it both scientifically accurate and pedagogically effective.\n\nAnswer2 confuses cause with a related phenomenon, which undermines its correctness on this specific question.\n\nAnswer1",
+                "Answer1\n\nAnswer1 correctly and clearly explains that night and day occur because the Earth rotates on its axis, with one side facing the Sun (day) and the other side away from it (night), and notes the 24-hour cycle. This is the fundamental and direct cause of day and night.\n\nAnswer2 incorrectly attributes day and night to the tilt of Earth\u2019s axis. While the tilt is responsible for seasonal changes and variations in day length throughout the year, it is not the reason we have day and night at all. Day and night occur due to rotation, not tilt. This is a significant scientific error.\n\nThus, Answer1 is superior in accuracy and clarity.\n\nAnswer1",
                 "Answer1",
-                "Answer1 is superior because it correctly and clearly explains the fundamental cause of day and night \u2014 the Earth\u2019s rotation on its axis \u2014 in a simple, accurate, and accessible way. It correctly states that one side faces the Sun (day) while the other is in shadow (night), and that this rotation occurs roughly every 24 hours, which directly explains the daily cycle.\n\nAnswer2 is factually misleading. While it\u2019s true that Earth\u2019s axis is tilted, that tilt causes **seasons**, not day and night. Day and night are caused solely by rotation, not axial tilt. By conflating the two, Answer2 incorrectly attributes the fundamental cause of day/night cycles to the wrong phenomenon, making it scientifically inaccurate for the question asked.\n\nThus, Answer1 is clearly the better and correct response.\n\nAnswer1"
+                "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -1918,7 +1918,7 @@
             },
             "result": [
                 "Answer2",
-                "Answer2 is superior. It provides more complete and nuanced details from the story\u2014including the names of the siblings, the reason they are in the country (World War II evacuation), the fact that they rule Narnia for a time, and the important thematic detail that no time has passed in their world upon return. It also retains a natural, accessible tone while accurately conveying all key plot points. Answer1 is accurate and concise, but it omits these meaningful details that enrich the summary and reflect deeper understanding of the narrative structure and themes.\n\nAnswer2",
+                "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
@@ -1942,12 +1942,12 @@
             "result": [
                 "Answer2",
                 "Answer2",
-                "Answer2"
+                "Answer1 provides a more detailed and nuanced summary of the story, including key plot points such as the reason the children leave home (WWII), the fact that Narnia is always winter under the Witch\u2019s rule, Edmund\u2019s betrayal and forgiveness, Aslan\u2019s death and resurrection, the siblings\u2019 reign as rulers, and the\u5947\u5999 twist that no time has passed in their world. These additions enhance the completeness and emotional depth of the summary without introducing inaccuracies.\n\nAnswer2 is concise and accurate but omits several important contextual and emotional elements, such as the historical setting, the duration of the eternal winter, Edmund\u2019s redemption arc, and the siblings' rule in Narnia. While it captures the core narrative, it feels abridged and lacks the richness that makes the summary truly informative.\n\nTherefore, **Answer1** offers superior semantic quality due to its greater depth, context, and completeness.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2"
+                "gpt-4.1"
             ]
         }
     ],
@@ -1965,14 +1965,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1 provides a more precise, scientifically accurate, and coherent explanation of evaporation. It correctly identifies evaporation as a surface phenomenon that occurs below the boiling point (unlike Answer1\u2019s misleading phrasing \u201creaches its boiling point,\u201d which is inaccurate), and it clearly lists relevant daily examples. While Answer2 is conversational and includes correct examples, it contains grammatical errors, informal language (\u201c\u2019cause,\u201d \u201cbe evaporatin\u2019\u201d), and the same misconception that evaporation only occurs at boiling \u2014 though it slightly lessens the error by implying it through context. However, Answer1\u2019s clarity, correctness, and formal tone make it superior in semantic quality.\n\nAnswer1",
-                "Answer1 provides a more precise, scientifically accurate explanation of evaporation, correctly noting that it occurs at temperatures below the boiling point (unlike Answer1\u2019s misleading phrasing \u201cwhen the temperature... reaches its boiling point\u201d). It clearly distinguishes evaporation from boiling and offers well-chosen, accurate everyday examples.\n\nAnswer2, while conversational and containing correct examples, contains grammatical errors (\u201cturn into gas \u2018cause of heat,\u201d \u201csweat be evaporatin\u2019,\u201d \u201cboilin\u2019\u201d), and inaccurately conflates evaporation with boiling when mentioning boiling water\u2014evaporation occurs below boiling point, while boiling is a separate, bulk phase change.\n\nAnswer1\u2019s language is more formal and technically correct, making it superior in semantic quality.\n\nAnswer1",
-                "Answer1 is more accurate and clearly worded. It correctly defines evaporation as the transition from liquid to vapor, and importantly, it does *not* conflate evaporation with boiling (which occurs at the boiling point). Instead, it implies evaporation happens at the surface and can occur below boiling point \u2014 though the phrasing \u201cwhen the temperature or heat... reaches its boiling point\u201d is slightly misleading.\n\nStill, it lists correct everyday examples and is grammatically precise.\n\nAnswer2 is more conversational and contains accurate examples (drying clothes, puddles, sweating, spilled alcohol), but it uses informal language (\u201c\u2019cause,\u201d \u201cbe evaporatin\u2019,\u201d \u201cgo down\u201d) and incorrectly equates boiling with evaporation \u2014 boiling is a *form* of rapid vaporization occurring throughout the liquid, while evaporation occurs only at the surface and at any temperature. This is a significant scientific inaccuracy.\n\nHowever, in Answer1, the phrase \u201cwhen the temperature or heat of a liquid reaches its boiling point\u201d is misleading \u2014 evaporation does NOT require reaching the boiling point. That weakens Answer1.\n\nIn contrast, Answer2 correctly captures the molecular mechanism (\u201cmolecules on top get enough energy to break free\u201d) which is accurate for evaporation, even if poorly phrased. Its examples are *all* correct and reflect real-life observations.\n\nSo despite Answer1\u2019s cleaner tone, it contains an error about boiling point, while Answer2, though informal, correctly implies surface-level vaporization and avoids misattributing boiling to evaporation \u2014 it just doesn\u2019t *explicitly* distinguish them.\n\nActually, revisiting Answer2 \u2014 it *does* mention boiling water as an example of evaporation \u2014 which is incorrect. Boiling is not evaporation, even though both involve liquid\u2192gas. That\u2019s a factual error.\n\nSo Answer1 misstates that evaporation occurs *at* boiling point, while Answer2 incorrectly includes boiling as an example of evaporation.\n\nBoth contain errors, but Answer1\u2019s error is a conceptual confusion (evaporation \u2260 boiling), and Answer2\u2019s error is both conceptual and linguistic.\n\nLet\u2019s weigh:  \n- Answer1: Misleads by implying evaporation requires boiling point \u2192 serious scientific inaccuracy.  \n- Answer2: Mislabels boiling as evaporation \u2192 also serious, but additionally provides accurate non-boiling examples and correctly describes molecular energy.\n\nThe core definition in Answer2 (\u201cmolecules on top get enough energy to break free and turn into vapor\u201d) is scientifically correct and central to understanding evaporation. Answer1 lacks this.\n\nGiven that Answer2 captures the true mechanism and gives correct examples (drying clothes, puddles, sweat) \u2014 and only mistakenly includes boiling \u2014 whereas Answer1 misses the molecular insight and wrongly links evaporation to boiling point \u2014 **Answer2 is superior** in terms of *semantic quality*, despite its informal grammar.\n\nEvaporation happens *below* boiling point \u2014 the key truth. Answer2, by mentioning sweating, puddles, clothes drying \u2014 all below boiling \u2014 implicitly reflects this, and although it mentions boiling (wrongly), the body of the answer is more conceptually aligned with the phenomenon.\n\nAnswer1\u2019s explicit statement that evaporation happens \u201cwhen... reaches boiling point\u201d is a direct falsehood.\n\nThus: **Answer2 is more correct in substance, even with its flaws.**\n\nAnswer2"
+                "Answer1",
+                "Answer1 is more accurate and clearly structured. It correctly defines evaporation as the transition from liquid to vapor without conflating it with boiling (which is a specific type of vaporization occurring at the boiling point). It also provides appropriate, everyday examples without grammatical errors or informal language that might reduce clarity.\n\nAnswer2, while conveying the general idea, contains several inaccuracies and informal expressions: it says evaporation happens \u201c\u2019cause of heat\u201d (too vague), incorrectly implies evaporation only happens on the surface \u201ccause of heat\u201d without explaining molecular energy properly, and uses nonstandard grammar (\u201csweat be evaporatin\u2019\u201d, \u201cwater\u2026 just slowly go down\u201d). Although it includes good examples, the delivery undermines scientific precision.\n\nFor semantic quality\u2014clarity, accuracy, and correctness\u2014Answer1 is superior.\n\nAnswer1",
+                "Answer1 is superior.\n\nIt provides a more precise and scientifically accurate definition of evaporation, correctly noting that it occurs at temperatures below the boiling point (unlike Answer1's misleading phrasing that implies boiling point is required). It also correctly identifies key examples and uses complete, grammatically correct sentences with appropriate technical language.\n\nAnswer2, while understandable and containing accurate examples, contains nonstandard grammar (\u201cturn into gas \u2018cause of heat\u201d, \u201csweat be evaporatin\u2019\u201d, \u201cwater in a bowl just slowly go down\u201d), which undermines its clarity and professionalism. It also inaccurately conflates boiling with evaporation (\u201cBoilin\u2019 water for tea... that\u2019s evaporation too\u201d)\u2014boiling is a separate, bulk phase change process, not evaporation (which occurs only at the surface and below boiling point).\n\nAnswer1 correctly distinguishes evaporation as a surface phenomenon occurring below the boiling point, and this scientific accuracy gives it a clear edge.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
-                "Unknown"
+                "Mistral-7B-Instruct-v0.2"
             ]
         },
         {
@@ -1988,9 +1988,9 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                "Answer1 is superior because it provides a more accurate and nuanced explanation of evaporation \u2014 correctly noting that evaporation occurs at the surface of a liquid due to molecules gaining enough kinetic energy to escape, not necessarily only at the boiling point (a common misconception in Answer2). Answer1 also offers richer, more relatable, and varied everyday examples (wet clothes drying, puddles disappearing, sweating, spilled alcohol), and explains the cooling effect of sweat, adding scientific context. Answer2 incorrectly implies evaporation only happens at or near boiling point, which is false \u2014 evaporation occurs at all temperatures below boiling. Additionally, Answer1\u2019s conversational tone doesn\u2019t detract from accuracy; in fact, it enhances clarity and accessibility.\n\nAnswer1 is more scientifically correct and educationally valuable.\n\nAnswer1",
-                "Answer1",
-                "Answer1 is superior.\n\nWhile both answers correctly define evaporation as the transition of a liquid to a gas, Answer1 provides a more accurate and nuanced explanation. It correctly notes that evaporation occurs at the surface and does *not* require boiling \u2014 a common misconception addressed in Answer2, which incorrectly states that evaporation occurs \"when the temperature or heat of a liquid reaches its boiling point.\" This confuses evaporation with boiling. Evaporation happens at *any* temperature below the boiling point, as long as molecules at the surface have enough kinetic energy to escape.\n\nAdditionally, Answer1 offers richer, more relatable daily life examples (wet clothes drying, puddles disappearing, sweating cooling the body, alcohol evaporating from a spill), and uses conversational language that enhances clarity without sacrificing scientific accuracy. Answer2 is concise but contains a significant factual error and lacks the depth and real-world grounding of Answer1.\n\nThus, Answer1 is more accurate and informative.\n\nAnswer1"
+                "Answer1 is superior because it provides a more accurate and nuanced explanation of evaporation, correctly noting that evaporation occurs at the surface of a liquid and does not require reaching the boiling point \u2014 a key distinction that Answer2 mistakenly conflates with boiling. Answer1 also gives richer, more relatable everyday examples (wet clothes drying, puddles disappearing, sweating) and explains the cooling effect of sweat, enhancing understanding. While Answer2 is correct in essence, its error about boiling point undermines its scientific accuracy. Answer1\u2019s conversational tone doesn\u2019t compromise its correctness \u2014 in fact, it makes the concept more accessible.\n\nAnswer1",
+                "Answer1 is superior because it provides a more accurate, detailed, and nuanced explanation of evaporation \u2014 correctly emphasizing that evaporation happens at the surface and does *not* require the liquid to reach its boiling point (a key misconception in Answer2). Answer1 also offers richer, more relatable everyday examples (wet clothes drying, puddles disappearing, sweating) and uses conversational language that enhances understanding without sacrificing scientific accuracy. \n\nAnswer2 incorrectly states that evaporation occurs \u201cwhen the temperature or heat of a liquid reaches its boiling point,\u201d which conflates evaporation with boiling. Evaporation occurs at *any* temperature below boiling, as long as molecules at the surface gain enough energy to escape. This fundamental error undermines Answer2\u2019s credibility.\n\nAnswer1 correctly distinguishes evaporation from boiling and gives more varied, authentic examples from daily life.\n\nAnswer1",
+                "Answer1 is superior because it provides a more accurate and nuanced explanation of evaporation\u2014not conflating it with boiling (which is a different process that occurs at the boiling point) and correctly emphasizing that evaporation happens at the surface and below the boiling point due to molecular energy differences. It also gives more vivid, relatable, and varied everyday examples (wet clothes, puddles, sweating, spilled alcohol, water in a bowl), making the concept clearer and more grounded in real-life observation. Answer2 incorrectly implies evaporation only occurs at or above the boiling point, which is a fundamental error\u2014evaporation occurs at any temperature, as long as molecules have enough kinetic energy to escape the liquid surface.\n\nAnswer1\u2019s use of conversational language doesn\u2019t detract from its scientific accuracy, and in fact, enhances clarity for a general audience.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -2063,7 +2063,7 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1"
+                "Answer1  \nAnswer1 provides a clear, concise, and scientifically accurate explanation of the differences between inner and outer planets. It correctly identifies the inner planets as terrestrial, their rocky composition, proximity to the Sun, shorter orbits, and limited atmospheres. It accurately describes outer planets as Jovian (gas/ice giants), larger in size, with thick atmospheres, rings, and numerous moons. The language is formal and appropriate for an educational context.\n\nAnswer2, while containing mostly correct information, uses informal, colloquial language (\u201cpeople call 'em,\u201d \u201cain\u2019t got,\u201d \u201chella moons,\u201d \u201cway bigger\u201d) which undermines its clarity and professionalism. Additionally, it contains minor inaccuracies: stating \u201cinner planets... ain\u2019t got much moons, if any\u201d oversimplifies and misrepresents\u2014Venus and Mercury have no moons, but Earth has one, and Mars has two. The phrasing \u201cgas giants (\u2019cept Uranus and Neptune, they ice giants too)\u201d is correct but awkwardly structured, reducing effectiveness.\n\nThe semantic quality, precision, and clarity of Answer1 significantly outweigh those of Answer2.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
@@ -2084,12 +2084,12 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie",
-                "Answer1  \n\nAnswer1 provides a clearer, more accurate, and nuanced explanation of the differences between inner and outer planets. It correctly identifies the inner planets as terrestrial and the outer planets as gas and ice giants, notes the presence of rings and moons, and accurately describes surface composition and distance from the Sun. While it uses informal language (\u201cfolks call,\u201d \u201chella,\u201d \u201cain\u2019t\u201d), the scientific content is largely correct and comprehensive.\n\nAnswer2 contains several factual errors: it incorrectly states that inner planets \u201cdo not have significant atmospheres\u201d \u2014 Venus and Earth have very substantial atmospheres (Venus\u2019s is extremely dense), and even Mercury has a tenuous exosphere. It also oversimplifies the outer planets as merely \u201cgaseous or icy,\u201d ignoring the distinction between gas giants (Jupiter, Saturn) and ice giants (Uranus, Neptune), and misrepresents the nature of their atmospheres by not acknowledging they are thickly layered and complex.\n\nTherefore, despite its informal tone, Answer1 is scientifically superior in accuracy and completeness.\n\nAnswer1",
-                "Answer1 provides a more accurate, detailed, and nuanced explanation. It correctly identifies the inner planets as terrestrial, notes their rocky composition, proximity to the Sun, few or no moons, and solid surfaces. It also accurately distinguishes the outer planets as gas giants (Jupiter, Saturn) and ice giants (Uranus, Neptune), correctly mentions rings and numerous moons, and clarifies the lack of solid surfaces in the outer planets. While informal in tone, the content is scientifically sound.\n\nAnswer2 contains several inaccuracies: it falsely claims that inner planets \"do not have significant atmospheres\" \u2014 Earth and Venus have very substantial atmospheres (Venus\u2019s is extremely dense), and even Mercury has a tenuous exosphere. It also inaccurately lumps Uranus and Neptune as simply \u201cicy\u201d without distinguishing them as ice giants, and oversimplifies the outer planets\u2019 features.\n\nThus, Answer1, despite its colloquial style, is more scientifically accurate and complete.\n\nAnswer1"
+                "Answer1",
+                "Answer1",
+                "Answer1\n\nAlthough Answer1 uses informal language and nonstandard grammar (e.g., \u201cain\u2019t,\u201d \u201chella,\u201d \u201cfolks call these\u201d), it provides a more accurate, detailed, and nuanced explanation. It correctly identifies Mercury, Venus, Earth, and Mars as inner (terrestrial) planets and Jupiter, Saturn, Uranus, and Neptune as outer planets. It correctly distinguishes Uranus and Neptune as \u201cice giants\u201d \u2014 a key detail often omitted in simplified explanations \u2014 and notes the presence of rings and moons appropriately. It also correctly states that inner planets have solid surfaces and outer ones generally lack them.\n\nAnswer2 contains significant inaccuracies. It claims inner planets \u201cdo not have significant atmospheres,\u201d which is false \u2014 Venus has an extremely dense atmosphere, Earth has a substantial one, and even Mars has a thin but measurable atmosphere. It also oversimplifies outer planets as merely \u201cgaseous or icy,\u201d ignoring the distinction between gas giants (Jupiter, Saturn) and ice giants (Uranus, Neptune), and fails to note that outer planets\u2019 atmospheres are not just \u201cthick\u201d but dominant and layered.\n\nAnswer1, despite its colloquial tone, is higher in semantic quality and accuracy. Answer2, while more formal, misleads with factual errors.\n\nAnswer1"
             ],
             "extracted_answers": [
-                "Unknown",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -2109,12 +2109,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1 contains several factual inaccuracies: Snape does not steal the Stone, nor does he intend to use it for evil\u2014he is actually protecting it on Dumbledore\u2019s orders. Harry does not confront Snape directly in the final chamber; instead, he confronts Quirrell, who is possessed by Voldemort. The Stone is destroyed to prevent Voldemort from using it, but Dumbledore is not in danger of dying, and the claim that Harry \u201csaves Dumbledore\u2019s life\u201d is incorrect. Additionally, Voldemort does not \u201cset his sights on Harry\u201d in a new way\u2014he already had been since Harry survived the Killing Curse as a baby.\n\nAnswer2, while written in colloquial, nonstandard English (\u201che ain\u2019t got no parents,\u201d \u201cbe stayin\u2019 wit\u2019,\u201d \u201cgotta keep it safe\u201d), accurately captures the core plot points: Harry\u2019s orphaned upbringing, discovering he\u2019s a wizard, attending Hogwarts, learning about his parents\u2019 deaths, teaming up with Ron and Hermione, uncovering the threat to the Philosopher\u2019s Stone, and stopping Voldemort\u2019s attempt to return. Despite its informal tone, it gets the narrative and character motivations right, without introducing false events or misattributed actions.\n\nSemantic quality includes factual accuracy, even if style varies. Answer2, despite its dialect, is factually correct; Answer1 is semantically flawed.\n\nAnswer2",
-                "Answer2\n\nWhile Answer1 contains several factual inaccuracies \u2014 such as claiming Snape stole the Stone and that Harry destroyed it (in reality, it was Quirrell under Voldemort\u2019s control, and the Stone was destroyed by Dumbledore to prevent misuse) \u2014 Answer2, despite its informal, colloquial dialect, accurately captures the core plot: Harry\u2019s discovery of his magical identity, the threat of Voldemort, the role of the Philosopher\u2019s Stone, the teamwork with Ron and Hermione, and the ultimate prevention of Voldemort\u2019s return. It correctly identifies the central conflict and outcome without misrepresenting key events.\n\nAnswer2\u2019s semantics are still coherent and truthful, even if stylistically casual. Answer1\u2019s inaccuracies significantly undermine its reliability. Quality of answer prioritizes accuracy over formality.\n\nTie would only be justified if both were equally accurate \u2014 they are not.\n\nAnswer2",
+                "Answer2",
+                "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
-                "Unknown",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -2132,9 +2132,9 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                "Answer1\n\nAnswer1 provides a more accurate and nuanced summary of the story of 'Harry Potter and the Philosopher\u2019s Stone'. It correctly identifies key plot points: Harry\u2019s discovery of his wizarding heritage, his friendship with Ron and Hermione, the mystery surrounding his parents\u2019 deaths, and the true antagonist\u2014Voldemort, not Snape. It also correctly describes the goal of protecting the Stone from Voldemort\u2019s attempt to return to power, and the role of teamwork and bravery in achieving victory.\n\nAnswer2 contains several significant errors: It falsely claims that Professor Snape steals the Stone and that Harry confronts and defeats Snape directly \u2014 when in fact, Snape is attempting to protect the Stone, and Voldemort (possessing Quirrell) is the real villain. Additionally, there is no \"Dumbledore\u2019s life\" to save in the climax, and the Stone is not \u201cdestroyed\u201d by Harry \u2014 it is destroyed by Dumbledore after the events to prevent future misuse. The summary also misrepresents the nature of the final challenge (a series of magical puzzles, not an infiltration of Snape\u2019s classroom).\n\nAlthough Answer1 uses informal dialect, its factual content is substantially more accurate and aligned with the novel. Semantic quality \u2014 correctness, completeness, and fidelity to the source \u2014 is paramount here, and Answer1 wins on that criterion.\n\nAnswer1",
-                "Answer1\n\nAnswer1 provides a more accurate, coherent, and faithful summary of the plot of 'Harry Potter and the Philosopher's Stone'. It correctly identifies key elements: Harry\u2019s orphan status and mistreatment by the Dursleys, his discovery of his wizardry on his eleventh birthday, his attendance at Hogwarts, his friendships with Ron and Hermione, the mystery surrounding his parents\u2019 death, and the central conflict involving Voldemort\u2019s attempt to use the Philosopher\u2019s Stone to return to power. It also accurately portrays the resolution\u2014Harry and his friends prevent Voldemort from obtaining the Stone through teamwork and bravery, leading to his temporary defeat.\n\nAnswer2 contains numerous factual errors: Snape does not steal the Stone; he is not the villain. The real threat is Quirrell, who is possessed by Voldemort. Harry does not confront Snape in a classroom or destroy the Stone\u2014in fact, the Stone is destroyed by Dumbledore after the events to prevent future misuse. Also, Dumbledore\u2019s life is never in danger from the Stone\u2019s theft. The summary misrepresents major plot points and character motivations, making it misleading.\n\nWhile Answer1 uses informal language, its content is substantially more accurate and aligned with the novel\u2019s plot, which is the primary criterion for evaluation.\n\nAnswer1",
-                "Answer1\n\nAnswer1 provides a more accurate, coherent, and faithful summary of the plot of *Harry Potter and the Philosopher\u2019s Stone*. It correctly identifies key elements: Harry\u2019s orphan status and abusive upbringing, his discovery of being a wizard, his friendships with Ron and Hermione, the mystery surrounding his parents\u2019 death, and the central conflict involving Voldemort\u2019s attempt to use the Philosopher\u2019s Stone to return to power. It also accurately describes the trio\u2019s teamwork and bravery in stopping the threat, ending with Harry finding his place in the wizarding world.\n\nAnswer2 contains several major factual errors:\n- Professor Snape does not steal the Stone or intend to use it for evil\u2014he is trying to protect it.\n- Voldemort, not Snape, is the true antagonist seeking the Stone.\n- Harry does not \u201cinfiltrate Snape\u2019s classroom\u201d or confront him directly in the climax.\n- The Stone is not destroyed by Harry to save Dumbledore\u2019s life; it\u2019s destroyed by Dumbledore *after* the events to prevent future misuse.\n- The climax takes place in the underground chambers, not Snape's classroom, and Harry confronts Quirrell, not Snape.\n- Dumbledore is not in danger of dying, and the Stone\u2019s destruction does not save his life.\n\nThese inaccuracies significantly undermine Answer2\u2019s credibility, even if its tone is more formal.\n\nAnswer1, despite its informal dialect, captures the essence and plot points correctly and is therefore superior in semantic quality.\n\nAnswer1"
+                "Answer1 is superior.\n\nIt provides a more accurate and nuanced summary of the plot of *Harry Potter and the Philosopher\u2019s Stone*. It correctly identifies that Voldemort is the true antagonist seeking the Stone, not Snape; that Snape was not stealing the Stone for himself but was trying to protect it (misunderstood by Harry and friends); and that the protection of the Stone involved a series of magical challenges, not just infiltrating Snape\u2019s classroom. It also captures the emotional arc of Harry discovering his identity and finding belonging, which is central to the story.\n\nAnswer2 contains multiple factual errors: Snape did not steal the Stone; he was protecting it. Harry did not confront Snape directly at the end \u2014 he confronted Quirrell, who was being possessed by Voldemort. Dumbledore\u2019s life was never in danger from the Stone\u2019s loss, and Harry did not \u201cdestroy the Stone\u201d to save Dumbledore \u2014 he allowed it to be destroyed to prevent Voldemort from regaining power. The summary also misrepresents key plot points and character motivations.\n\nWhile Answer1 uses non-standard dialect, it is semantically accurate and faithful to the story. Answer2, while written in standard English, is factually incorrect and misleading.\n\nAnswer1",
+                "Answer1\n\nAnswer1 provides a more accurate and coherent summary of the plot of 'Harry Potter and the Philosopher's Stone.' It correctly identifies key elements: Harry\u2019s discovery of his wizarding heritage, his friendships with Ron and Hermione, the mystery surrounding his parents\u2019 death, and the central conflict involving Voldemort\u2019s attempt to regain power through the Philosopher\u2019s Stone. It also correctly notes that Voldemort is the ultimate threat \u2014 not Snape \u2014 and that the trio work together to protect the Stone.\n\nAnswer2 contains several serious factual errors: Snape does not steal the Stone; he is falsely suspected but is actually trying to protect it. It is Quirrell, not Snape, who is under Voldemort\u2019s control. Harry does not \"destroy the Stone\" \u2014 he prevents Voldemort from obtaining it, and Dumbledore later decides to destroy it. Also, Dumbledore is not in danger of dying from the Stone being stolen; he is not even present during the final confrontation.\n\nWhile Answer1 uses informal vernacular, it does not distort the story\u2019s facts. Answer2, though more formally phrased, misrepresents critical plot points, making it misleading.\n\nSemantic accuracy and fidelity to the source material are paramount \u2014 and Answer1 wins on both counts.\n\nAnswer1",
+                "Answer1\n\nAnswer1 provides a more accurate, coherent, and faithful summary of the plot of *Harry Potter and the Philosopher\u2019s Stone*. It correctly identifies key elements: Harry\u2019s discovery of his wizarding heritage, his friendships with Ron and Hermione, the mystery surrounding his parents\u2019 death, and the true antagonist \u2014 Voldemort \u2014 who seeks the Stone to regain power. It also accurately portrays the role of the Stone, the trio\u2019s collaboration, and the theme of bravery and belonging.\n\nAnswer2 contains several major factual errors: Snape does not steal the Stone or intend to use it for evil \u2014 he is actually protecting it. Voldemort, not Snape, is the true villain attempting to obtain the Stone. Harry does not confront Snape directly in the climax; he faces Quirrell, who is possessed by Voldemort. The Stone is not destroyed to save Dumbledore\u2019s life \u2014 it is destroyed to prevent Voldemort from using it, as per Dumbledore\u2019s plan. Additionally, Dumbledore is not in danger of dying.\n\nThese inaccuracies significantly undermine Answer2\u2019s reliability. While Answer1 uses informal language, it captures the plot correctly and meaningfully.\n\nThus, Answer1 is superior in semantic quality and accuracy.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -2420,14 +2420,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
+                "Answer1",
                 "Answer2",
-                "Answer2",
-                "Answer2"
+                "Answer1"
             ],
             "extracted_answers": [
+                "gpt-4.1",
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2"
+                "gpt-4.1"
             ]
         }
     ],
@@ -2637,9 +2637,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1 is more structured, detailed, and professionally articulated. It provides specific, actionable food items organized by category (sandwiches, salads, soups, etc.), includes nutritional rationale (e.g., whole grains, lean proteins, vinaigrette on the side), and demonstrates a clear understanding of balanced meal composition. It also avoids slang or casual language, making it more appropriate for an educational or institutional context.\n\nAnswer2, while conveying similar ideas, uses informal, colloquial language (\u201ctryna,\u201d \u201cwhip up,\u201d \u201clayin\u2019 on the salt,\u201d \u201cpoppin\u2019\u201d) that undermines its credibility and professionalism. The ideas are valid, but they are presented in a disorganized, conversational manner without clear structure or specificity. It lacks concrete examples of meals and doesn\u2019t clearly outline implementation strategies beyond general suggestions.\n\nThe semantic quality \u2014 clarity, precision, coherence, and appropriateness for the context \u2014 is significantly higher in Answer1.\n\nAnswer1",
                 "Answer1",
-                "Answer1 is more structured, comprehensive, and clearly presents specific, actionable menu items with nutritional rationale (e.g., whole grain bread, lean proteins, vinaigrette on the side, quinoa, low-fat yogurt). It avoids colloquial language and maintains a professional tone appropriate for a school canteen planning context. The response also demonstrates thoughtful inclusion of diverse food groups and dietary considerations.\n\nAnswer2, while conveying similar ideas, uses informal, slang-heavy language (\u201ctryna,\u201d \u201cwhip up,\u201d \u201clayin\u2019 on the salt,\u201d \u201cpoppin\u2019\u201d) and lacks precision. It contains incomplete sentences (\u201csals\u201d), undefined terms (\u201cstraight-up fruit juice\u201d \u2014 which may be high in sugar), and lacks the clarity and depth needed for an educational setting where standards and nutrition guidelines matter. Though it includes useful suggestions like student feedback and portion control, the presentation undermines its credibility.\n\nThe semantic quality \u2014 clarity, accuracy, detail, and appropriateness of tone \u2014 is significantly higher in Answer1.\n\nAnswer1"
+                "Answer1",
+                "Answer1\n\nAnswer1 provides a clearly structured, detailed, and professional list of menu items with specific examples of nutritious ingredients (e.g., whole grain bread, quinoa, vinaigrette on the side, low-fat dairy). It emphasizes balanced nutrition, variety, and food preparation methods that support health, while maintaining clarity and coherence. \n\nAnswer2, while enthusiastic and somewhat practical, uses informal language (\u201ctryna,\u201d \u201cwhip up,\u201d \u201clayin\u2019 on the salt,\u201d \u201cpopppin\u2019\u201d), lacks specificity in nutritional rationale, and omits key considerations like portion control, allergen awareness, or how to ensure meals meet dietary guidelines. The advice is generally sound but presented in a way that undermines its credibility and depth.\n\nAnswer1 is superior in semantic quality: it is accurate, comprehensive, well-organized, and appropriate for an educational context.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
@@ -2781,14 +2781,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2\n\nWhile both answers are creative and accurate in portraying ant behavior, Answer2 surpasses Answer1 in semantic quality by capturing the essence of ant life with richer sensory detail, authentic voice, and cultural texture. The use of dialect (\u201clil ant,\u201d \u201cdem tunnels,\u201d \u201ctappin\u2019\u201d) doesn\u2019t detract\u2014it immerses the reader in the ant\u2019s world with poetic realism, avoiding anthropomorphic over-explanation. The inclusion of tactile and olfactory experiences (smells of flowers and dirt, scent trails, cleaning antennae) aligns precisely with scientific understanding of ant communication and behavior. Additionally, the communal rhythm, interdependence, and quiet dignity of the colony are conveyed with emotional depth without resorting to humanized soliloquy. Answer1, while polished and clear, leans slightly into overly humanized internal monologue (\u201ctook pride in his role\u201d) which, though charming, risks sentimentalizing rather than illuminating. Answer2 respects the alien logic of the ant world and renders it with lyrical precision.\n\nAnswer2",
-                "Answer2",
-                "Answer2\n\nWhile both responses are creative and capture the essence of an ant\u2019s daily life, Answer2 stands out in semantic quality due to its richer sensory immersion, authentic voice, and deeper integration of ant behavior through naturalistic, almost poetic language. The use of dialect (\"lil ant,\" \"dem tunnels,\" \"tappin\u2019\") isn\u2019t just stylistic\u2014it reflects the tactile, communal, and chemically guided reality of ant communication (pheromone trails, antennal tapping). It conveys not just what ants do, but how they experience the world: through scent, touch, and collective purpose.\n\nAnswer1 is accurate and well-structured, but reads like a clinical anthropomorphism\u2014polished, tidy, and somewhat generic. Answer2, by contrast, feels lived-in. Phrases like \u201cpeep a crumb on the ground,\u201d \u201clayin\u2019 down a scent trail,\u201d and \u201csurrounded by all that family warmth\u201d imbue the narrative with emotional and biological truth, making the colony feel like a real, breathing society.\n\nAnswer2 earns higher semantic quality by merging factual entomology with evocative storytelling in a way that Answer1, despite its pleasant tone, does not.\n\nAnswer2"
+                "Answer2\n\nAnswer2 offers a more vivid, immersive, and linguistically rich portrayal of an ant\u2019s day, using dialect and sensory language to evoke authentic ant behavior and colony dynamics. It conveys the colony\u2019s social structure, communication through pheromones (\u201cscent trail\u201d), tactile interactions (\u201ctappin\u2019\u201d), and the sheer effort of foraging with poetic precision. The voice is distinctive and culturally textured, enhancing emotional resonance without sacrificing biological accuracy. While Answer1 is well-written and logically structured, it reads like a sanitized, anthropomorphized textbook entry. Answer2, by contrast, feels alive\u2014authentic to the ant\u2019s perspective and deeply grounded in entomological truth, wrapped in a compelling narrative voice. The stylistic choice to use vernacular enhances, rather than diminishes, its quality: it makes the ant\u2019s experience more intimate and memorable.\n\nAnswer2",
+                "Answer2\n\nAnswer2 offers a richer, more immersive, and linguistically distinctive portrayal of an ant\u2019s day. It employs vivid, poetic dialect and sensory details\u2014smells, tactile movements, scent trails, and colony dynamics\u2014that ground the narrative in the ant\u2019s experiential reality. The use of colloquial language (\u201clil ant,\u201d \u201cdem tunnels,\u201d \u201cchillin\u2019\u201d) isn\u2019t just stylistic; it phonetically and rhythmically mimics the collective, rhythmic pulse of an ant colony, enhancing authenticity. It conveys complex social behavior (pheromone trails, cooperative labor, communal care) with emotional texture and cultural resonance, without sacrificing accuracy.\n\nAnswer1 is well-written and accurate, but it reads like a polished, anthropomorphic children\u2019s story\u2014polite, orderly, and safely anthropocentric. While elegant, it lacks the distinctive voice and immersive, almost mythic intimacy that Answer2 achieves. Answer2 feels *lived-in*; it doesn\u2019t just describe ant life\u2014it evokes it through language that mirrors the ant\u2019s own world.\n\nThe semantic quality of Answer2 is superior: it communicates deeper ecological and social truth through stylistic innovation, not just factual description.\n\nAnswer2",
+                "Answer1 presents a clear, coherent, and poetically grounded narrative with rich detail about an ant's daily life\u2014grooming, tending larvae, construction, foraging, and resting\u2014all grounded in realistic ant behavior. The tone is thoughtful and lyrical without sacrificing scientific plausibility. The ant, Archie, is given a personality and emotional depth that enhances the storytelling without anthropomorphizing unrealistically.\n\nAnswer2 uses dialect and informal syntax (\u201clil ant,\u201d \u201cdem tunnels,\u201d \u201cchillin\u2019\u201d) to evoke voice and cultural flavor, which could be compelling in a different context\u2014perhaps a folk tale or regional storytelling style. However, the frequent use of phonetic spellings and nonstandard grammar undermines clarity and precision, making the narrative harder to follow and diminishing its semantic quality. While it includes accurate behaviors (scent trails, antennae tapping, tunnel repair), the stylistic choices often obscure meaning rather than enhance it.\n\nThe goal of the prompt is to write a story about an ant\u2019s day\u2014a request that implies narrative quality grounded in accuracy and readability. Answer1 achieves this with elegance and fidelity to biology. Answer2, while creative, sacrifices clarity and semantic precision for stylistic flair.\n\n**Answer1** is superior in quality, accuracy, and effectiveness as a story.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Mistral-7B-Instruct-v0.2"
             ]
         },
         {
@@ -2973,7 +2973,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2",
+                "Answer2\n\nAnswer2 demonstrates greater lyrical richness, emotional authenticity, and poetic economy. It uses vivid, grounded imagery (\u201csky turn gray,\u201d \u201cmountains standin\u2019 tall,\u201d \u201cstorms might rage\u201d) and conversational rhythm that feels personal and resonant. The language is evocative without being clich\u00e9d, and the structure flows naturally with a strong internal rhyme and cadence\u2014reminiscent of folk or soul-inspired storytelling. Phrases like \u201clight a fire in my heart\u201d and \u201chope as my fire, courage by my side\u201d carry deep emotional weight without over-explaining.\n\nAnswer1, while well-intentioned and structurally sound, leans heavily on predictable Inspirational-Pop clich\u00e9s (\u201crise above,\u201d \u201cseize the day,\u201d \u201cturn the page\u201d) and feels formulaic, almost like a template. It also cuts off mid-chorus, which suggests incompleteness or lack of polish.\n\nAnswer2\u2019s voice is more distinctive, its metaphors more original, and its emotional impact more authentic \u2014 making it the superior lyric.\n\nAnswer2",
                 "Answer2",
                 "Answer2"
             ],
@@ -2997,8 +2997,8 @@
             },
             "result": [
                 "Answer1",
-                "Answer1 is superior in quality and completeness. It presents a fully developed, emotionally resonant set of lyrics with consistent imagery, strong rhythm, and a clear narrative arc of resilience. The language feels authentic and poetic, with intentional use of dialect and repetition (\u201cI\u2019ma,\u201d \u201cgon\u2019\u201d) that adds character without sacrificing meaning. The structure is coherent from start to finish, culminating in a satisfying, empowering conclusion.\n\nAnswer2, while containing strong lines and good intent, is incomplete\u2014it cuts off mid-chorus in the second verse, leaving the piece unrealized. This significantly undermines its effectiveness as a final lyric. Even beyond the incompleteness, Answer1 delivers a more cohesive, immersive, and artistically compelling experience.\n\nAnswer1",
-                "Answer1\n\nAnswer1 delivers a complete, emotionally resonant, and poetically cohesive set of lyrics that vividly depict personal resilience. The language is grounded in authentic imagery (\"sky turn gray,\" \"mountains standin\u2019 tall,\" \"walk through them shadows\"), uses consistent vernacular rhythm, and builds a strong narrative arc from struggle to triumph. The repetition of \"I\u2019ma\" and \"gon\u2019\" adds character and authenticity, while the final lines tie the theme together powerfully with \"Hope as my fire, courage by my side.\" It\u2019s fully realized.\n\nAnswer2, while containing good phrasing and a solid chorus structure, is noticeably incomplete\u2014its second chorus is cut off mid-sentence (\"Through the struggle,\"), which breaks the flow and suggests an unfinished draft. Even if the intent was to continue, a complete response is expected, and its abrupt ending undermines its quality. Additionally, the shift from \u201cI\u201d to \u201cwe\u201d lacks the personal rawness that makes overcoming challenges compelling.\n\nSemantic quality, completeness, and emotional impact favor Answer1.\n\nAnswer1"
+                "Answer1",
+                "Answer1  \n\nAnswer1 delivers a cohesive, emotionally resonant set of lyrics with strong imagery, consistent rhythm, and a clear arc of personal resilience. The language is authentic and grounded in lived struggle (\u201cEvery stumble, every scar I got,\u201d \u201cI\u2019ma walk through them shadows\u201d), and the poetic devices\u2014repetition, metaphor (\u201cHope as my fire\u201d), and internal rhyme\u2014enhance its musicality without feeling forced. The structure is complete, with four well-developed verses and a satisfying closure.\n\nAnswer2, while also thematically strong, is incomplete (the final chorus is cut off mid-line), which fundamentally undermines its integrity as a finished piece. Even if we overlook the truncation, its language is more generic (\u201cwe\u2019ll rise above,\u201d \u201cseize the day\u201d) and relies on clich\u00e9s that lack the vivid specificity of Answer1. Its pluralized \u201cwe\u201d also dilutes the personal, intimate tone that makes overcoming challenges feel real and earned.\n\nThe completeness, originality, emotional depth, and poetic craft of Answer1 clearly surpass Answer2.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -3140,13 +3140,13 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                "Answer1",
-                "Answer1",
+                "Answer2",
+                "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "gpt-4.1",
+                "Mistral-7B-Instruct-v0.2",
+                "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
         }
@@ -3886,13 +3886,13 @@
             },
             "result": [
                 "Answer1",
-                "Answer2",
-                "Answer2"
+                "Answer1",
+                "Answer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "gpt-4.1",
-                "gpt-4.1"
+                "Mistral-7B-Instruct-v0.2",
+                "Mistral-7B-Instruct-v0.2"
             ]
         },
         {
@@ -3908,9 +3908,9 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                "Answer1\n\nWhile both responses highlight key adaptations of camels to desert environments, Answer1 is superior in semantic quality due to its richer, more accurate, and vivid elaboration. It correctly explains that the hump stores fat (not water, which Answer2 misstates), and it includes nuanced physiological details such as variable body temperature tolerance, closed nostrils, long lashes, wide feet, and dietary adaptability\u2014all of which are scientifically accurate and enhance the argument. Answer2 contains a critical error (\u201cstore large amounts of water in their hump\u201d), which undermines its credibility. Answer1\u2019s colloquial tone doesn\u2019t detract from its factual accuracy; instead, it conveys the information in a memorable and comprehensive way. Thus, Answer1 provides a more correct, detailed, and compelling explanation. \n\nAnswer1",
+                "Answer1\n\nWhile both answers correctly identify key adaptations of camels to desert environments, Answer1 is superior in semantic quality due to its richer, more accurate, and vividly detailed explanations. It correctly states that the hump stores *fat* (not water, a common misconception), and elaborates on nuanced adaptations like temperature tolerance, closed nostrils, wide feet, and dietary flexibility\u2014all described with scientifically accurate language embedded in an engaging tone. Answer2 contains a factual error by saying camels store water in their hump, which is a widespread myth. While it lists several correct adaptations, the misinformation undermines its reliability. Answer1 avoids this error and provides deeper, more precise insight into camel physiology and behavior, making it the clearly superior response. \n\nAnswer1",
                 "Answer1",
-                "Answer1"
+                "Answer1\n\nWhile both answers identify key camel adaptations for desert survival, Answer1 is superior in semantic quality. It provides richer, more vivid, and biologically accurate descriptions of camel adaptations \u2014 such as losing up to a quarter of body weight in water, hump fat being metabolized into energy and water, closing nostrils during sandstorms, variable body temperature to reduce sweating, and eating harsh vegetation. It also includes nuanced behavioral and physiological details absent in Answer2 (which erroneously claims the hump stores water \u2014 a common misconception). Answer1\u2019s conversational tone doesn\u2019t diminish its accuracy; in fact, it conveys the information with greater depth and authenticity. Answer2 is factually incomplete and contains a significant error (hump stores water), reducing its reliability.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -4436,12 +4436,12 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                "Answer1  \n\nAnswer1 provides a comprehensive, detailed, and practically grounded evaluation of car safety standards, incorporating real-world testing bodies (NHTSA, Euro NCAP), specific safety technologies (ABS, stability control, AEB, blind spot monitoring), ergonomic considerations (seatbelt reminders, headrests, child seat compatibility), pedestrian protection, rollover tests, and recall checking\u2014all presented in a clear, conversational yet accurate tone. It covers both passive and active safety systems, as well as maintenance and recall awareness, which are critical for real-world safety assessment.\n\nAnswer2 is also well-structured and lists important criteria, but it is incomplete (ends mid-sentence on \u201cThese ratings provide\u201d) and lacks the depth and specificity of Answer1. For instance, it mentions \u201ca high driving position\u201d as part of visibility, which is subjective and not a universally accepted safety standard; it also treats \u201cmaintenance\u201d as a standard to judge the car itself, when in fact maintenance is a user responsibility, not an inherent design standard. Additionally, it omits key elements like pedestrian protection, rollover resistance, and specific crash test organizations beyond naming them.\n\nAnswer1 is superior in semantic quality: more complete, accurate, nuanced, and practical.  \n\nAnswer1",
-                "Answer2 is superior because it presents a clear, structured, and comprehensive list of objective safety standards with precise terminology and logical organization. It covers essential aspects\u2014crashworthiness, visibility, braking, electrical systems, active safety features, maintenance, recalls, and ratings\u2014without unnecessary informal language or grammatical errors. While Answer1 conveys similar information, its colloquial tone (\u201ctryna,\u201d \u201cpeepin,\u201d \u201cgon\u2019,\u201d \u201cthem driver-assist things\u201d) and lack of structure reduce its clarity and professionalism, diminishing its effectiveness as a authoritative reference. Answer2 also cuts off mid-sentence, but even incomplete, it maintains high semantic quality and accuracy, whereas Answer1\u2019s style compromises its formality and reliability.\n\nAnswer2",
+                "Answer2",
+                "Answer2\n\nAnswer2 presents a more structured, comprehensive, and semantically precise evaluation of car safety standards. It clearly organizes the criteria into distinct, logically grouped points, uses formal and accurate terminology, and avoids colloquialisms. It also correctly references authoritative safety rating bodies (NHTSA and IIHS) and covers key aspects such as structural integrity, visibility, braking, electrical systems, maintenance, and recalls\u2014many of which are missing or underdeveloped in Answer1.\n\nWhile Answer1 is informative and conversational, it is disorganized, relies heavily on informal language (\u201cgon\u2019,\u201d \u201cpeepin,\u201d \u201cthem driver-assist things\u201d), and lacks the completeness and clarity of Answer2, which even though cut off mid-sentence, still covers more essential and properly articulated safety criteria.\n\nAnswer2 demonstrates superior semantic quality: accuracy, organization, completeness, and appropriateness of language for an evaluative standard.\n\nAnswer2",
                 "Answer2"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
@@ -4869,13 +4869,13 @@
             },
             "result": [
                 "Answer1",
-                "Answer1",
-                "Answer1"
+                "Answer2",
+                "Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
-                "gpt-4.1"
+                "Mistral-7B-Instruct-v0.2",
+                "Mistral-7B-Instruct-v0.2"
             ]
         }
     ],
@@ -5615,12 +5615,12 @@
             "result": [
                 "Answer2",
                 "Answer2",
-                "Answer2"
+                "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Mistral-7B-Instruct-v0.2"
             ]
         },
         {
@@ -5638,7 +5638,7 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1"
+                "Answer1 provides a complete and accurate list of all eight lunar phases in the correct sequence, along with a concise, correct explanation of why the phases occur. While it uses informal language (\u201cbe goin\u2019 \u2018round\u201d), the semantic content is fully correct and comprehensive.\n\nAnswer2 correctly describes the first five phases with accurate details, but it omits the final three phases: waning gibbous, last quarter, and waning crescent. This makes the answer incomplete.\n\nSince the question asks to \u201cname the phases of the moon,\u201d completeness is essential. Answer1 is superior because it provides the full set of phases, even though its tone is less formal.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -5662,7 +5662,7 @@
             },
             "result": [
                 "Answer2",
-                "Answer2 is superior because it not only acknowledges the common cultural association of the lion as the \u201cking of the jungle,\u201d but also adds nuance by correctly pointing out that lions don't actually live in jungles\u2014they inhabit grasslands and savannas. This demonstrates a better understanding of both popular belief and biological fact. Additionally, Answer2 uses vivid, culturally grounded language that enhances comprehension and engagement without sacrificing accuracy.\n\nAnswer1, while factually correct in listing possible candidates, is overly cautious and vague, offering no clear conclusion and failing to address why the lion is traditionally called the \u201cking of the jungle\u201d\u2014a key part of the question\u2019s cultural context.\n\nAnswer2 provides richer context, corrects a common misconception, and answers the spirit of the question more thoughtfully.\n\nAnswer2",
+                "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
@@ -5685,7 +5685,7 @@
             },
             "result": [
                 "Answer1",
-                "Answer1\n\nAnswer1 provides a culturally rich, nuanced, and accurate response. It correctly identifies the lion as the animal commonly referred to as the \"king of the jungle,\" while also tactfully correcting the misconception that lions live in jungles\u2014they actually inhabit grasslands and savannas. The response combines factual accuracy with colloquial charm, showing an understanding of both common usage and biological reality. It explains why the metaphor persists despite inaccuracy, which adds depth and context.\n\nAnswer2, while technically correct in saying there's no single animal that holds the title, undermines the cultural and linguistic reality of the phrase. It lists multiple animals as possibilities, which dilutes the well-established symbolic meaning. In common English usage, \"king of the jungle\" unambiguously refers to the lion, regardless of ecological inaccuracy. Answer2 overcomplicates the question by treating it as if it were a scientific classification, rather than a metaphorical expression.\n\nThus, Answer1 is superior because it respects the cultural meaning of the phrase while still providing accurate ecological context\u2014making it more informative and eloquent.\n\nAnswer1",
+                "Answer1\n\nThe first answer is superior because it provides a culturally nuanced, informative, and contextually rich explanation. It acknowledges the common saying (\"king of the jungle\"), correctly clarifies the factual inaccuracy (lions don\u2019t live in jungles), and explains why the nickname persists \u2014 tying together appearance, behavior, and cultural perception. It\u2019s engaging, accurate, and adds depth beyond a sterile definition.\n\nAnswer2, while factually correct in parts, is too vague and indecisive. It implies there\u2019s no clear answer and lists multiple animals without offering any reasoning or cultural context. It fails to resolve the common misconception or explain why \u201clion\u201d is the traditional answer \u2014 making it less useful as an explanation.\n\nAnswer1 wins on semantic quality: it\u2019s precise, thoughtful, and educates the reader on both myth and reality.\n\nAnswer1",
                 "Answer1"
             ],
             "extracted_answers": [
@@ -5757,7 +5757,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2\n\nThe second row of a QWERTY keyboard, from left to right, is indeed \"A S D F G H J K L\" \u2014 so the first four letters are A, S, D, F. Answer2 correctly identifies this and even provides helpful context about the \u201chome row,\u201d which is standard terminology in typing. \n\nAnswer1 is wrong: \"WTAS\" is not correct \u2014 W and T are in the top row, and A and S are in the second row, but mixing them up like that shows a fundamental misunderstanding. \u201cWTAS\u201d is not a sequence on any row of a QWERTY keyboard.\n\nThus, Answer2 is clearly superior in accuracy and understanding.\n\nAnswer2",
+                "Answer2",
                 "Answer2",
                 "Answer2"
             ],
@@ -5782,7 +5782,7 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1\n\nThe first answer correctly identifies the second row of a QWERTY keyboard as A, S, D, F \u2014 which is accurate. This is the standard \u201chome row\u201d for touch typing, and the order from left to right is indeed A-S-D-F.\n\nThe second answer is incorrect: it claims the second row starts with \"WTAS,\" but \"W\" and \"T\" are on the top row (QWERTY), not the second row. The second row begins with A, not W or T. The answer demonstrates a fundamental misunderstanding of keyboard layout.\n\nTherefore, Answer1 is superior in accuracy and clarity.\n\nAnswer1"
+                "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -5997,7 +5997,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2\n\n**Reasoning:**  \nAnswer2 correctly explains the Pythagorean theorem in an accurate, clear, and pedagogically sound way. It emphasizes the essential precondition\u2014that the triangle must be a right triangle\u2014and correctly distinguishes between finding a leg vs. the hypotenuse. It uses appropriate terminology (\"hypotenuse,\" \"legs\") and correctly states the two forms of the theorem:  \n- To find the hypotenuse: $ c^2 = a^2 + b^2 $  \n- To find a leg: $ a^2 = c^2 - b^2 $  \n\nWhile Answer1 arrives at the correct numerical example, it contains a **critical error** in step 2:  \n> \u201cSubtract the square of the smaller side length from the square of the larger side length: (a\u00b2) - (b\u00b2).\u201d  \n\nThis is **wrong**. The Pythagorean theorem requires **addition**, not subtraction, when finding the hypotenuse. The subtraction step only applies when solving for a leg, but Answer1 never clarifies this distinction and incorrectly implies subtraction is the general rule. The example then mysteriously switches to correct addition ($3^2 + 4^2$), contradicting the stated method\u2014this inconsistency undermines the credibility of Answer1.\n\nAnswer2, despite its informal tone (\"tryna\", \"dealin\u2019 wit\"), **semantically** is accurate, complete, and avoids mathematical missteps. The goal is semantic quality\u2014not formality\u2014and Answer2 meets that standard without error.\n\nThus, **Answer2 is superior**.\n\nAnswer2",
+                "Answer2\n\n**Reasoning:**  \nAnswer2 correctly and clearly explains the Pythagorean theorem, emphasizing the critical condition that the triangle must be a right triangle, correctly identifies the hypotenuse as the side opposite the right angle, and accurately presents both scenarios: finding the hypotenuse (c = \u221a(a\u00b2 + b\u00b2)) and finding a leg (a = \u221a(c\u00b2 - b\u00b2)). It uses accessible language while maintaining mathematical accuracy.\n\nAnswer1 contains a **critical error**: in step 2, it says to \u201csubtract the square of the smaller side from the square of the larger side,\u201d which is incorrect. The Pythagorean theorem requires **adding** the squares of the two legs to find the square of the hypotenuse \u2014 not subtracting. Although the example correctly shows a\u00b2 + b\u00b2 = c\u00b2, the general procedure described in steps 1\u20133 is misleading and mathematically wrong. This undermines the reliability of the entire explanation.\n\nTherefore, despite Answer1\u2019s attempt at structure, the flawed instruction disqualifies it. Answer2 is semantically superior \u2014 accurate, complete, and contextually correct.\n\nAnswer2",
                 "Answer2",
                 "Answer2"
             ],
@@ -6021,8 +6021,8 @@
             },
             "result": [
                 "Answer1",
-                "Answer1\n\nAnswer1 provides a clear, accurate, and comprehensive explanation of how to use the Pythagorean theorem. It correctly identifies the requirement of a right triangle, defines the hypotenuse, explains both cases (finding a leg or the hypotenuse), and correctly describes taking the square root at the end. The informal tone does not detract from the accuracy or completeness of the mathematical reasoning.\n\nAnswer2, however, contains a critical mathematical error: step 2 says to \u201csubtract the square of the smaller side from the square of the larger side,\u201d implying c\u00b2 = a\u00b2 - b\u00b2 regardless of which side is the hypotenuse. This is wrong \u2014 the Pythagorean theorem is a\u00b2 + b\u00b2 = c\u00b2, and you only subtract when solving for a leg (i.e., when c is known as the hypotenuse). The example given accidentally works because 3 and 4 are legs and 5 is the hypotenuse, but the general method described in step 2 is misleading and incorrect. This could lead to serious errors when applied to problems where the unknown is a leg.\n\nTherefore, Answer1 is superior due to its accuracy and clarity, while Answer2 contains a fundamental conceptual error in its procedure.\n\nAnswer1",
-                "Answer1\n\nAnswer1 correctly explains the Pythagorean theorem with appropriate context and clarification: it emphasizes the necessity of a right triangle, distinguishes between finding a leg versus the hypotenuse, and correctly describes the operations (squaring, adding/subtracting, and taking square roots). It also uses accessible language while maintaining mathematical accuracy.\n\nAnswer2 is fundamentally flawed in Step 2. It says to \u201csubtract the square of the smaller side from the square of the larger side,\u201d which is incorrect. The Pythagorean theorem requires *adding* the squares of the two legs to find the hypotenuse \u2014 not subtracting. The example given accidentally uses the correct formula (a\u00b2 + b\u00b2), but the general step listed is wrong and would lead to incorrect results in many cases (e.g., if you're solving for a leg, you subtract, but you must subtract the *other leg\u2019s* square from the hypotenuse\u2019s, not just \u201csmaller from larger\u201d).\n\nThus, Answer1 is superior because it is accurate and comprehensive, while Answer2 contains a critical procedural error that misrepresents the theorem.\n\nAnswer1"
+                "Answer1",
+                "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -6116,9 +6116,9 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                "Answer1\n\nAnswer1 correctly describes the standard method for converting a fraction to a decimal: dividing the numerator by the denominator. It accurately explains both terminating and repeating decimals, gives clear examples (like 3/8 and 2/3), and correctly mentions using long division or a calculator, adding zeros for precision, and using a bar to denote repeating patterns. The language is informal but the mathematical content is sound.\n\nAnswer2 is fundamentally incorrect. Step 4 misleadingly suggests that the decimal is formed by \u201crepeating the numerator as many times as there are 9s in the denominator,\u201d which is not a valid general method. The example (3/4 = 0.75) gets the right answer, but only by accident\u2014because 3 \u00f7 4 = 0.75, not because of any mechanism involving 9s. The entire algorithm involving GCF and 9s is a misrepresentation and would fail for most fractions. This is a serious conceptual error.\n\nTherefore, Answer1 is superior due to its accuracy, clarity, and correct mathematical reasoning.\n\nAnswer1",
-                "Answer1\n\nThe first answer correctly explains the standard method of converting a fraction to a decimal: dividing the numerator by the denominator. It accurately describes both terminating and repeating decimals, gives clear examples (3/8, 1/4, 2/3), and mentions practical tools like long division and calculators. The explanation is intuitive, correct, and pedagogically sound.\n\nThe second answer is fundamentally *wrong*. It incorrectly suggests that reducing a fraction using the GCF and then using the number of 9s in the denominator determines the decimal \u2014 which is not a valid method. While step 4 absurdly tries to apply a rule from converting repeating decimals to fractions (e.g., 0.333... = 1/3, where denominator is 9), it misapplies it completely. The example (3/4 = 0.75) happens to be right, but the reasoning provided to get there is false and misleading. There is *no requirement* to divide by the GCF or count 9s in the denominator to convert a fraction to a decimal.\n\nThus, Answer1 is vastly superior in accuracy and clarity.\n\nAnswer1",
-                "Answer1"
+                "Answer1\n\nAnswer1 correctly explains the standard method for converting a fraction to a decimal: dividing the numerator by the denominator. It includes practical examples (3/8, 1/4, 2/3), clarifies handling of terminating and repeating decimals, and mentions tools like long division or calculators\u2014in line with standard mathematical practice.\n\nAnswer2 is fundamentally incorrect. It introduces a misleading and non-existent method involving the greatest common factor (GCF) and a fabricated rule about \u201crepeating the numerator as many times as there are 9s in the denominator.\u201d While it correctly calculates 3/4 = 0.75, it does so by accidentally using the proper division method\u2014not the steps it claims. The algorithm described in Answer2 does not generalize and misrepresents the actual mathematical procedure. For example, the claim about \u201c9s in the denominator\u201d is confused with the method for converting repeating decimals to fractions (e.g., 0.333... = 1/3, where 3/9 = 1/3), which is the reverse process.\n\nTherefore, Answer1 is superior because it accurately and clearly describes the correct method.\n\nAnswer1",
+                "Answer1\n\nAnswer1 correctly explains the standard method for converting a fraction to a decimal: dividing the numerator by the denominator. It accurately describes both terminating and repeating decimals, gives clear examples (3/8, 1/4, 2/3), and appropriately mentions long division, calculators, and the use of a bar for repeating patterns. The explanation is practical, accurate, and accessible.\n\nAnswer2 is fundamentally incorrect. It misrepresents the process by introducing an unnecessary and invalid step involving the greatest common factor (GCF) and falsely claims that the decimal is formed by \"repeating the numerator as many times as there are 9s in the denominator\"\u2014a rule that does not exist. Although it correctly computes 3/4 = 0.75, the reasoning is misleading and could confuse someone learning the correct method. The GCF is irrelevant to decimal conversion (it\u2019s used for simplifying fractions, not converting to decimals), and the entire step 4 is nonsensical.\n\nThus, Answer1 is clearly superior in accuracy and pedagogical quality.\n\nAnswer1",
+                "Answer1\n\nAnswer1 correctly explains the standard method for converting a fraction to a decimal: dividing the numerator by the denominator. It accurately describes long division, the use of decimal points, handling remainders, terminating decimals, and repeating decimals with proper notation (e.g., bar over repeating digits). It also includes a clear example (3/8, 1/4, 2/3), making the explanation practical and accessible.\n\nAnswer2, however, is fundamentally incorrect. Step 4 misleadingly suggests that the decimal is formed by \u201crepeating the numerator as many times as there are 9s in the denominator,\u201d which is a misinterpretation of a very specific and unrelated technique (used in converting recurring decimals to fractions, not the other way around). The method presented does not work in general \u2014 for example, it falsely implies that the GCF plays a role in decimal conversion, when it does not (GCF is used for simplifying fractions, not converting them to decimals). The example given (3/4 \u2192 0.75) happens to be correct, but the method described to get there is wrong.\n\nTherefore, Answer1 is clearly superior in quality, accuracy, and usefulness.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -6190,7 +6190,7 @@
             },
             "result": [
                 "Answer1",
-                "Answer1",
+                "Answer1 provides a more structured, precise, and mathematically grounded approach to budgeting for a party. It uses percentages, allocation strategies, step-by-step calculations, and clear reasoning\u2014demonstrating explicit application of math skills such as division, proportion, and budget balancing. The response is logical, methodical, and avoids informal language, making it clearly focused on the mathematical planning process.\n\nAnswer2, while practical and relatable, is couched in colloquial language (\u201cI\u2019mma,\u201d \u201cgon\u2019,\u201d \u201cblowing too much money\u201d) and lacks the formal mathematical reasoning expected in a response to this question. Although it mentions budget allocation and cost comparison, it does so in a loose, anecdotal way without showing the actual math\u2014in other words, it describes the process rather than demonstrating the application of math skills.\n\nSince the question specifically asks how you\u2019d use your *math skills*, Answer1 is superior in demonstrating accurate, structured, and explicit mathematical reasoning.\n\nAnswer1",
                 "Answer1"
             ],
             "extracted_answers": [
@@ -6212,14 +6212,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                "Answer1",
                 "Answer2",
-                "Answer2"
+                "Answer2",
+                "Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2"
+                "Mistral-7B-Instruct-v0.2",
+                "gpt-4.1"
             ]
         }
     ],
@@ -6429,12 +6429,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2",
-                "Answer1 provides a detailed, structured, and specific meal plan for a full week, with precise food items, cooking methods, and nutrient-dense combinations that reflect a strong understanding of nutritional principles. Each meal is intentionally balanced across macronutrients and includes a variety of vegetables, whole grains, lean proteins, and healthy fats\u2014demonstrating practical application of nutrition science.\n\nAnswer2 conveys a general, conversational understanding of healthy eating principles\u2014mentioning food groups, cooking methods, and avoiding processed foods\u2014but lacks concrete examples, structure, or daily planning. While it offers correct advice, it lacks the specificity and actionable detail that would allow someone to actually implement the plan.\n\nThe quality of Answer1 is significantly higher because it translates nutritional knowledge into a realistic, daily menu with clear nutritional completeness. Answer2 is informative but too vague to serve as a usable meal plan.\n\nAnswer1",
+                "Answer1 provides a detailed, structured, and specific daily meal plan that clearly demonstrates an understanding of balanced nutrition through the inclusion of macronutrients, micronutrients, and diverse food sources (e.g., salmon for omega-3s, quinoa for complete protein, varied vegetables, healthy fats like avocado and nuts). Each meal is thoughtfully composed with whole, minimally processed foods and reflects evidence-based nutritional principles.\n\nAnswer2 conveys a general, conversational understanding of healthy eating principles \u2014 mentioning food groups, cooking methods, hydration, and avoiding processed foods \u2014 but lacks specificity, structure, and measurable components. While it\u2019s accurate in its broad recommendations, it doesn\u2019t provide a concrete plan or demonstrate how those principles translate into actual meals.\n\nThe quality of Answer1 is significantly higher because it shows applied knowledge with precision, whereas Answer2 remains abstract and lacks actionable detail.\n\nAnswer1",
+                "Answer1",
                 "Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
@@ -6452,12 +6452,12 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
+                "Answer2\n\nAnswer2 provides a structured, detailed, and nutritionally sound weekly menu with specific, balanced meals that clearly incorporate all key food groups and nutrients. It demonstrates practical application of nutritional principles by specifying portions, cooking methods, and nutrient-dense combinations (e.g., salmon with omega-3s, quinoa for complete protein, colorful vegetables for micronutrients). The plan is measurable, varied, and evidence-based.\n\nAnswer1, while accurate in its general principles (whole grains, lean protein, colorful produce, limiting processed foods), is conversational, vague, and lacks concrete examples or structure. It communicates intent well but does not show actionable planning.\n\nAnswer2\u2019s completeness and specificity make it superior in demonstrating how to *use* nutritional understanding to *plan* a menu \u2014 not just describe it.\n\nAnswer2",
                 "Answer1",
-                "Answer1\n\nAnswer1 provides a complete, coherent, and practical explanation of how to plan a healthy weekly menu using nutritional principles. It covers all essential food groups, emphasizes variety, cooking methods, portion control, hydration, and avoidance of processed foods\u2014all key pillars of nutritional planning. It\u2019s thorough, easy to follow, and applies nutrition science in an accessible, real-world way.\n\nAnswer2, while starting strong with a clear framework and specific examples, is cut off mid-sentence (\u201csmoothie with spinach, banana, al\u2026\u201d), rendering it incomplete and unusable as a full plan. Even if the intention was good, the incompleteness undermines its usefulness and shows a lack of finalization or attention to detail.\n\nSince the evaluation focuses solely on the **quality of the answer provided**, and Answer2 is incomplete, Answer1 is clearly superior.\n\nAnswer1",
-                "Answer1"
+                "Answer1\n\nAnswer1 provides a complete, coherent, and practical explanation of how to plan a healthy weekly menu using nutrition principles. It covers all essential food groups, meal distribution, cooking methods, hydration, portion control, and variety\u2014all key components of nutritional planning. The response is well-structured, uses accessible language, and avoids abrupt interruptions.\n\nIn contrast, Answer2 starts strongly but is abruptly cut off mid-sentence (\u201cSmoothie with spinach, banana, al...\u201d), making it incomplete and unable to convey a full weekly plan. While the examples provided are nutritionally sound, the incompleteness undermines its usefulness and credibility as a comprehensive answer.\n\nSince semantic quality includes completeness and clarity in conveying the full scope of the question, Answer1 is clearly superior.\n\nAnswer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Mistral-7B-Instruct-v0.2",
                 "gpt-4.1",
                 "gpt-4.1"
             ]

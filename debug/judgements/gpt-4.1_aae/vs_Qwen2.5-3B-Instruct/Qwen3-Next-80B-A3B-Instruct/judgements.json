@@ -526,12 +526,12 @@
             },
             "result": [
                 "Answer1",
-                "Answer1",
+                "Answer2",
                 "Answer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct",
+                "gpt-4.1",
                 "Qwen2.5-3B-Instruct"
             ]
         },
@@ -2061,7 +2061,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2 is superior because it provides a more detailed, nuanced, and accurate explanation. It correctly identifies the inner planets as terrestrial and notes their lack of moons, while also appropriately distinguishing that Uranus and Neptune are \u201cice giants\u201d rather than gas giants \u2014 a key refinement often omitted in simplified explanations. It also adds important details like planetary rings and the absence of solid surfaces in the outer planets. Although Answer2 uses informal language, the *semantic quality* \u2014 the depth, accuracy, and completeness of the information \u2014 is significantly higher than Answer1\u2019s more basic, generalized description. \n\nAnswer1 is factually correct but superficial. Answer2, despite its colloquial tone, conveys richer, more precise scientific understanding.\n\nAnswer2",
+                "Answer2",
                 "Answer2",
                 "Answer2"
             ],
@@ -2541,12 +2541,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1 provides a clear, concise, and well-structured plan for an eco-friendly birthday party using formal, precise language that accurately conveys sustainable practices. It covers key areas\u2014venue, decorations, invitations, food, and charitable alternatives\u2014without unnecessary colloquialisms, making it accessible and professional.\n\nAnswer2, while enthusiastic and rich in practical, real-world suggestions (e.g., DIYs, labeled recycling bins, carpooling, composting leftovers), uses nonstandard grammar, slang, and dialect (\"ain\u2019t,\" \"y\u2019all,\" \"gon\u2019,\" \"chill on that carbon footprint\") that, though culturally authentic and engaging, reduce its clarity and formality. Despite this, its content is comprehensive, creative, and deeply grounded in actionable sustainability\u2014more detailed than Answer1 in areas like party favors, transportation, and post-party waste management.\n\nHowever, the prompt asks for evaluation based **strictly on semantic quality**\u2014meaning accuracy, completeness, and clarity of meaning\u2014not on tone, formality, or style. Semantically, Answer2 provides more thorough, nuanced, and practical guidance across a wider range of eco-friendly actions, without sacrificing accuracy. It doesn\u2019t contain factual errors and conveys the same core ideas as Answer1, but expands them with richer implementation\u7ec6\u8282.\n\nThus, although Answer1 is more polished, Answer2 is semantically superior due to greater depth, completeness, and actionable detail\u2014all while remaining factually correct.\n\nAnswer2",
+                "Answer2",
                 "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
-                "Unknown",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -2782,7 +2782,7 @@
             },
             "result": [
                 "Answer2",
-                "Answer2\n\nAnswer2 is superior because it immerses the reader in the ant\u2019s perspective with rich sensory detail, authentic ant behavior (scent trails, antennae tapping, grooming), and a unique, vivid voice that blends poetic rhythm with biological accuracy. The use of dialect and intimate first-person narration humanizes the ant without anthropomorphizing her in a forced way\u2014she feels like a real member of a complex society. The story conveys the collective nature of ant life while centered on an individual\u2019s experience, making it emotionally resonant and memorable.\n\nAnswer1, while accurate and well-written, is more clinical and generalized\u2014it reads like a factual summary rather than a story. It lacks the texture, voice, and emotional depth that make a narrative compelling.\n\nThus, Answer2\u2019s qualitative depth, voice, and immersive storytelling make it the better response.\n\nAnswer2",
+                "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
@@ -2804,9 +2804,9 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
+                "Answer1\n\nAnswer1 offers a rich, immersive, and emotionally resonant portrayal of an ant\u2019s daily life, told from a first-person, anthropomorphized perspective that feels authentic to the insect\u2019s behavior without over-humanizing it. It uses vivid sensory details\u2014smells, tactile movements like antennae twitching and taping, scent trails, cleaning behavior\u2014and accurately reflects real ant biology (pheromone trails, division of labor, colony structure, nest maintenance). The language is poetic and grounded in observed ant behavior, blending lyrical storytelling with biological accuracy.\n\nAnswer2, while factually correct and clean, is generic and impersonal\u2014it reads like a textbook summary. It lists ant roles without evoking a sense of experience, emotion, or individuality. It lacks the texture, rhythm, and intimate perspective that would make a \u201cday in the life\u201d compelling as a story.\n\nAnswer1 wins because it delivers *story*\u2014not just facts\u2014making the ant\u2019s experience feel real, meaningful, and alive.\n\nAnswer1",
                 "Answer1",
-                "Answer1",
-                "Answer1\n\nAnswer1 offers a richly immersive, sensory-driven narrative that breathes life into the perspective of a single ant. It uses vivid, poetic language (\u201cwiggle through dem tunnels,\u201d \u201cantennae twitchin\u2019,\u201d \u201cscent trail for everybody else\u201d) and intimate, character-centered storytelling to convey the ant\u2019s daily experience with emotional texture and cultural authenticity. The use of dialect and rhythm gives the ant a distinct voice, making her feel real and relatable. It captures not just the tasks but the social bonds, rhythms, and quiet moments within the colony\u2014turning biology into poetry.\n\nAnswer2, while factually accurate and concise, reads like a textbook summary. It lists roles and behaviors without emotional depth or narrative voice. There\u2019s no protagonist, no internal experience, no sense of wonder or world-building. It tells us what ants do, but Answer1 makes us feel what it\u2019s like to be one.\n\nThe difference is between observation and immersion\u2014and Answer1 wins on semantic quality by far.\n\nAnswer1"
+                "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -2925,8 +2925,8 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                "Answer2\n\nAnswer2 provides a more nuanced, age-appropriate, and practical description of a middle school uniform that reflects the real needs of adolescents. It emphasizes comfort, fit, and functionality while still maintaining professionalism\u2014acknowledging weather conditions (e.g., shorts in hot weather), proper fit (\u201cain\u2019t s\u2019posed to be too tight or hangin\u2019 off you\u201d), and safety (closed-toe shoes). It also integrates school identity (logo), reasonable accessory guidelines, and layering options (sweaters, cardigans), making it more realistic and student-centered.\n\nAnswer1, while coherent and professional-sounding, is more rigid and outdated in its gendered assumptions (\u201cblazer for boys or a dress for girls\u201d) and less attuned to the practical daily realities of middle schoolers. It also lacks detail on appropriate fit, weather adaptability, and student comfort.\n\nAnswer2\u2019s tone is informal, but its content is richer, more inclusive, and better aligned with modern school uniform best practices. The semantic quality\u2014accuracy, completeness, and relevance\u2014is superior.\n\nAnswer2",
                 "Answer2",
-                "Answer2 is superior because it provides a more nuanced, age-appropriate, and practical perspective tailored to middle school students. It emphasizes comfort, fit, and functionality\u2014key considerations for adolescents\u2014while still maintaining professionalism and school unity. The language, though informal, accurately reflects real-world student needs (e.g., weather-appropriate shorts, modest jewelry, proper fit). It also includes thoughtful details like school logos, layering options (sweaters/cardigans), and safety considerations (closed-toe shoes), making it more comprehensive and student-centered.\n\nAnswer1, while well-structured, is overly formal and rigid (e.g., mandating blazers for boys and dresses for girls), which may not reflect modern, inclusive, or practical school uniform policies. It lacks consideration for gender neutrality, climate adaptability, or student comfort beyond aesthetics.\n\nAnswer2 better balances policy goals with the lived reality of middle schoolers.\n\nAnswer2",
                 "Answer2"
             ],
             "extracted_answers": [
@@ -2948,9 +2948,9 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                "Answer1 is superior. It provides a practical, detailed, and age-appropriate description tailored to middle school students, emphasizing comfort, functionality, inclusivity (e.g., shorts for hot weather, fit guidelines), and safety (closed-toe shoes). It also reflects real-world school uniform practices with specific color options and layering suggestions (sweaters, cardigans), while maintaining a respectful and tidy standard. The tone is accessible without sacrificing clarity.\n\nAnswer2 is more rigid, outdated in its gendered assumptions (separating boys and girls into pants/skirts vs. dresses), lacks detail on fabric, fit, or weather adaptability, and oversimplifies the purpose without addressing student comfort or practicality. It reads like a generic corporate dress code rather than one designed for adolescents in a school environment.\n\nAnswer1 better responds to the needs of middle schoolers and offers a well-rounded, thoughtful framework.\n\nAnswer1",
-                "Answer1",
-                "Answer1\n\nAnswer1 provides a more detailed, practical, and age-appropriate description of a middle school uniform that reflects real-world considerations: comfort, weather adaptability (shorts for hot days), fit guidelines, shoe safety, and restrained accessories. It uses inclusive language and acknowledges variability in clothing options without reinforcing gender binaries (e.g., pants or skirts for all, not boys/girls). The tone is conversational but accurate, and the reasoning is grounded in functionality and student well-being.\n\nAnswer2 is more rigid and outdated in its gendered assumptions (\u201cdress for girls\u201d), overly formal (\u201cblazer for boys or a dress for girls\u201d), and lacks practical details about fabric, length, or adaptability for daily school activities. It also doesn\u2019t address common concerns like comfort, safety, or weather \u2014 which are crucial for middle school students.\n\nAnswer1 is superior in quality, nuance, and real-world applicability.\n\nAnswer1"
+                "Answer1 is superior because it provides a more comprehensive, practical, and age-appropriate description tailored to middle school students. It includes specific details about fabric comfort, acceptable lengths for pants/skirts, permissible variations for weather (shorts, sweaters), shoe safety requirements, and sensible limits on accessories\u2014all grounded in real-world school policies. The tone is conversational but informative, and it emphasizes functionality and inclusivity (e.g., options for boys and girls, weather adaptations). \n\nAnswer2, while not incorrect, is overly rigid and outdated in its assumptions (e.g., requiring dresses for girls and blazers for boys), lacks practical nuance (e.g., no mention of shorts, weather flexibility), and sounds more like a formal corporate dress code than a middle school uniform policy. It also misses key elements like comfort, fit, and safety considerations important for active adolescents.\n\nAnswer1 better reflects modern, child-centered school uniform design principles.\n\nAnswer1",
+                "Answer1\n\nThis response provides a more detailed, realistic, and student-centered description of a middle school uniform. It considers practical aspects like comfort, weather-appropriate options (shorts in hot weather), proper fit, footwear safety, and minimal accessories\u2014all grounded in actual school policies and the developmental needs of early adolescents. The language is conversational but informative, and it avoids gendered assumptions (unlike Answer2, which unnecessarily separates clothing by gender). It also explains the *reasoning* behind choices (e.g., closed-toe shoes for safety), making it more thoughtful and comprehensive.\n\nAnswer2 is overly simplistic, outdated in its gendered assumptions, and lacks specificity about fabrics, lengths, or practical concerns. It mentions \"a dress for girls\" as a mandatory component, which is not representative of modern, equitable uniform policies. It also fails to address key elements like acceptable colors for bottoms, layers for cold weather, or shoe types beyond \u201cblack.\u201d\n\nThus, Answer1 is superior in semantic quality, accuracy, inclusivity, and practicality.\n\nAnswer1",
+                "Answer1\n\nAnswer1 provides a more detailed, practical, and age-appropriate description of a middle school uniform that reflects real-world considerations like comfort, weather adaptability (shorts for hot days), fit, safety (closed-toe shoes), and modesty (knee-length skirts/pants). It uses accessible language while maintaining clarity and rationale for each component, such as limiting accessories and specifying permissible colors and footwear types. It treats students as individuals with needs, not abstract norms.\n\nAnswer2, while well-structured, is overly rigid and outdated in its gendered assumptions (e.g., \u201cblazer for boys or a dress for girls\u201d), lacks practicality (no mention of shorts, weather, or comfort), and offers minimal justification for its suggestions. It reads more like a stereotypical corporate or private school uniform guideline rather than one suited for the physical, developmental, and social needs of early adolescents.\n\nAnswer1\u2019s nuanced, student-centered approach makes it clearly superior in semantic quality and real-world relevance.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -3908,12 +3908,12 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                "Answer2",
+                "Answer1",
                 "Answer1",
                 "Answer1"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -4533,12 +4533,12 @@
             },
             "result": [
                 "Answer1",
-                "Answer2",
+                "Answer1",
                 "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "Qwen2.5-3B-Instruct",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -4580,13 +4580,13 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                "Answer2",
-                "Answer2",
+                "Answer1",
+                "Answer1",
                 "Answer2"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct",
+                "gpt-4.1",
+                "gpt-4.1",
                 "Qwen2.5-3B-Instruct"
             ]
         }
@@ -4653,14 +4653,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2",
-                "Answer2",
-                "Answer1\n\nAnswer1 provides a clear, accurate, and concise explanation of the primary colors in the context of pigment (subtractive color mixing), which is the most commonly referenced meaning in art and education. It correctly identifies red, blue, and yellow as primary colors and explains their role in creating other colors through mixing.\n\nAnswer2, while containing some correct information (mentioning both pigment and light primaries), is informally worded, contains grammatical errors (\u201cmain colors is\u201d, \u201ccallin\u2019\u201d, \u201cmixin\u2019\u201d), and introduces confusion by blending two different systems (RYB for paint and RGB for light) without clearly distinguishing them. This could mislead someone unfamiliar with the distinction.\n\nSince the question simply asks \u201cWhat are the primary colors?\u201d without context, the conventional answer in general education is RYB \u2014 and Answer1 delivers that cleanly and correctly. Answer2\u2019s informality and lack of clarity reduce its quality, even if some of its content is accurate.\n\nThus, Answer1 is superior in semantic quality, accuracy, and clarity.\n\nAnswer1"
+                "Answer1 is more precise, grammatically correct, and clearly explains the concept of primary colors in a standard, educational tone. It correctly identifies the traditional subtractive primary colors (red, blue, yellow) used in pigments and art.\n\nAnswer2 is informally worded with grammatical errors (\u201cmain colors is\u201d, \u201cmixin\u2019\u201d), though it correctly notes the distinction between pigment (RYB) and light (RGB) primary colors\u2014which Answer1 omits. However, this additional information, while more complete, is not presented in a polished or clear way and risks confusing a novice due to its colloquial tone and errors.\n\nSince the question asks simply \u201cWhat are the primary colors?\u201d without context, Answer1 provides the most appropriate and widely accepted answer for general purposes (especially in art education), and does so with clarity and correctness. Answer2\u2019s inclusion of RGB is technically valuable but not well-expressed, and undermines its reliability due to its informal and ungrammatical delivery.\n\nSemantic quality favors Answer1.\n\nAnswer1",
+                "Answer1 is more precise, grammatically correct, and clearly explains the concept of primary colors in the context of pigment (RYB model), which is the most commonly taught in art and education. While Answer2 contains accurate information (noting both RYB for pigments and RGB for light), it is informal in tone, contains grammatical errors (\u201cmain colors is,\u201d \u201cthey called primary \u2018cause,\u201d \u201cmixin\u2019\u201d), and lacks clarity in structure, potentially confusing the reader about which model applies in which context.\n\nAnswer1 delivers the same core information with superior clarity, correctness, and professionalism.\n\nAnswer1",
+                "Answer2"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "gpt-4.1",
-                "Qwen2.5-3B-Instruct"
+                "Qwen2.5-3B-Instruct",
+                "Qwen2.5-3B-Instruct",
+                "gpt-4.1"
             ]
         },
         {
@@ -4845,13 +4845,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1",
-                "Answer1",
+                "Answer2",
+                "Answer2",
                 "Answer1"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct",
+                "gpt-4.1",
+                "gpt-4.1",
                 "Qwen2.5-3B-Instruct"
             ]
         },
@@ -4870,12 +4870,12 @@
             "result": [
                 "Answer2",
                 "Answer2",
-                "Answer2"
+                "Answer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct"
+                "gpt-4.1"
             ]
         }
     ],
@@ -5327,12 +5327,12 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1"
+                "Answer2"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct"
+                "gpt-4.1"
             ]
         },
         {
@@ -5374,13 +5374,13 @@
             },
             "result": [
                 "Answer1",
-                "Answer2",
-                "Answer2"
+                "Answer1",
+                "Answer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "gpt-4.1",
-                "gpt-4.1"
+                "Qwen2.5-3B-Instruct",
+                "Qwen2.5-3B-Instruct"
             ]
         },
         {
@@ -5421,7 +5421,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2\n\nWhile both answers correctly acknowledge that Indigenous peoples were present long before European arrival and mention Leif Erikson\u2019s earlier expedition, Answer2 provides a more complete and nuanced historical context. It includes the important point about Leif Erikson\u2019s Norse settlement circa 1000 AD, which Answer1 omits. Additionally, Answer2\u2019s conversational tone does not detract from its factual accuracy\u2014it enhances accessibility without sacrificing content. Answer1 is accurate but incomplete; Answer2 is both accurate and more informative.\n\nTherefore, Answer2 is superior in semantic quality and depth of historical understanding.\n\nAnswer2",
+                "Answer2\n\nThe second answer provides a more comprehensive and nuanced perspective by acknowledging not only that Indigenous peoples inhabited the Americas long before Columbus, but also by mentioning Leif Erikson\u2019s earlier Norse presence in North America around 1000 AD. It avoids the simplistic narrative of \u201cdiscovery\u201d while still addressing the common historical reference to Columbus. The tone is colloquial but factually accurate and more educative than Answer1, which only mentions Indigenous inhabitants without acknowledging Erikson\u2019s earlier arrival. Both answers are morally and historically sound in rejecting the Eurocentric \"discovery\" myth, but Answer2 offers greater depth and context.\n\nAnswer2",
                 "Answer2",
                 "Answer2"
             ],
@@ -5757,7 +5757,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2\n\nAnswer2 correctly identifies the second row of the QWERTY keyboard as the home row (A, S, D, F), which is the standard and accurate interpretation. The phrasing is slightly informal but semantically correct and includes clarifying context (\"home row\") that confirms the understanding of keyboard layout. \n\nAnswer1 incorrectly lists S, T, R, D \u2014 which are not the first four letters of the second row. In fact, S, T, R are in the second row, but D is the fourth, not third; the correct sequence is A-S-D-F, and Answer1 gets the order and composition wrong.\n\nThus, Answer2 is superior in accuracy and context.\n\nAnswer2",
+                "Answer2",
                 "Answer2",
                 "Answer2"
             ],
@@ -6310,12 +6310,12 @@
             "result": [
                 "Answer2",
                 "Answer2",
-                "Answer1"
+                "Answer2"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct",
-                "gpt-4.1"
+                "Qwen2.5-3B-Instruct"
             ]
         }
     ],
@@ -6575,7 +6575,7 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1"
+                "Answer1 provides a more accurate, scientifically precise, and clearly structured explanation of why fatigue occurs after physical exercise. It correctly identifies key physiological mechanisms \u2014 glycogen depletion, ATP reduction, lactic acid accumulation, and increased cardiovascular demand \u2014 using appropriate terminology and logical flow. The explanation is concise, free of colloquialisms, and adheres to standard scientific communication.\n\nAnswer2, while capably conveying the general ideas and even including additional relevant points like dehydration and neural fatigue, relies heavily on informal, nonstandard grammar and slang (\u201cbe gettin\u2019\u201d, \u201cyo muscles\u201d, \u201cgotta\u201d, \u201cchill and recover\u201d), which undermines its clarity and professionalism. Although the content is largely correct, the delivery detracts from its reliability and academic quality.\n\nSince the question asks for an explanation based on knowledge of the human body \u2014 which implies a scientific or educational context \u2014 the **quality of the answer** must reflect precision, clarity, and proper scientific language.\n\nTherefore, Answer1 is superior.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
@@ -6814,12 +6814,12 @@
             },
             "result": [
                 "Answer1",
-                "Answer1",
+                "Answer2",
                 "Answer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct",
+                "gpt-4.1",
                 "Qwen2.5-3B-Instruct"
             ]
         },

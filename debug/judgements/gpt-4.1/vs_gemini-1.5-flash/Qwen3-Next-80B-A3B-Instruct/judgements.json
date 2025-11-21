@@ -93,13 +93,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1\n\nBoth answers are accurate and well-structured, but Answer1 provides slightly deeper insight into *how* the parts interact\u2014specifically by explicitly explaining that evidence is supported by analysis, that counterarguments enhance credibility through nuanced understanding, and that the conclusion leaves a \"lasting impact.\" These nuances demonstrate a more sophisticated grasp of rhetorical function and logical flow. Answer2 is clear and correct but remains more descriptive than analytical in explaining interactions. Answer1\u2019s emphasis on *analysis of evidence* and the *purpose* of counterarguments (credibility, not just inclusion) elevates its quality.",
                 "Answer1  \nAnswer2  \nTie",
+                "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
                 "Unknown",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         },
@@ -212,9 +212,9 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
+                "Answer1 and Answer2 are both accurate and comprehensive, covering the sequence of organs, their functions, and the importance of each in the digestive process. However, Answer1 provides slightly more detail on the *connection* between organs (\u201cAll are connected by a continuous muscular tube, ensuring food flows in the correct direction\u201d) and explicitly names the roles of the pancreas and liver as part of the connected system, not just accessory organs. It also better explains *why* each is important in terms of the overall process of digestion and nutrient uptake.\n\nAnswer2 is concise and correct, mentioning the subdivisions of the small intestine and including the gallbladder, but it is slightly less explicit about how the organs are physically and functionally integrated into a cohesive, connected system.\n\nThus, Answer1 offers a more complete and nuanced explanation of both the connectivity and the functional importance of each organ.\n\nAnswer1",
                 "Answer1",
-                "Answer1 provides a more detailed and clear explanation of how the organs are anatomically and functionally connected, explicitly mentioning the muscular tube that connects them and the directional flow of food. It also succinctly summarizes the importance of each organ in a cohesive manner, including the roles of the pancreas and liver as contributors to the small intestine\u2019s function. While Answer2 is accurate and well-structured, it omits explicit mention of the continuous muscular conduit and the integration of accessory organs into the main pathway\u2014making its explanation slightly less holistic in terms of system connectivity.\n\nAnswer1 better fulfills the question\u2019s dual focus: **how organs are connected** and **why each is important**\u2014with greater clarity and completeness.\n\nAnswer1",
-                "Answer1"
+                "Answer1 and Answer2 are both accurate, clear, and comprehensive in explaining the connections between digestive organs and the importance of each. However, Answer1 provides slightly more detail about the *functional roles* of each organ and explicitly mentions the *continuous muscular tube* as the structural link, enhancing understanding of the system\u2019s coordinated mechanics. It also more clearly integrates the roles of the pancreas and liver as part of the connected system, not just as accessory organs.\n\nAnswer2 is excellent and slightly more structured in naming segments of the small intestine (duodenum, jejunum, ileum), but it is marginally less explicit about how the organs work together as a system and omits the key point about the muscular tube enabling directional flow \u2014 a fundamental anatomical and physiological concept.\n\nThus, Answer1 offers a marginally superior explanation of both connection and functional importance.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -260,9 +260,9 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                "Answer1 provides a more comprehensive and nuanced analysis of the forces acting on a stationary car. It explicitly mentions upthrust from air (even if minor), clarifies the role of static friction in preventing the initiation of motion, and explicitly notes air resistance as negligible but present \u2014 showing deeper attention to detail. It also concisely summarizes the condition of equilibrium, reinforcing the physics principle that no net force implies no acceleration.\n\nAnswer2 is accurate and well-structured, particularly in addressing the slope scenario, which adds valuable context. However, it omits mention of air resistance entirely (even as negligible) and does not elaborate on the nature of static friction beyond \"preventing lateral movement,\" which is incomplete \u2014 static friction also prevents forward/backward slipping, not just lateral. Also, while it mentions air pressure, calling it \u201cminimal\u201d without comparing it to other forces like upthrust (which Answer1 does) makes the analysis slightly less thorough.\n\nAnswer1 demonstrates greater depth and precision in covering all relevant forces, even the minor ones, and better explains their roles in maintaining equilibrium.\n\nAnswer1",
-                "Answer1",
-                "Answer1 provides a more comprehensive and detailed analysis of the forces acting on a stationary car. It explicitly mentions upthrust (even if minor), clearly explains the role of static friction in preventing motion, and appropriately notes the negligible but present nature of air resistance. It also explicitly states that the forces are balanced, leading to no net force \u2014 which is central to understanding why the car remains stationary.\n\nAnswer2 is accurate and well-structured, but it omits explicit mention of air resistance and upthrust, and while it mentions slope conditions, it does not address the general case as thoroughly. Its explanation of air pressure is less precise than Answer1\u2019s treatment of air resistance.\n\nAnswer1\u2019s greater depth, inclusion of typically overlooked forces, and clearer articulation of equilibrium make it the superior response.\n\nAnswer1"
+                "Answer1 provides a more comprehensive and nuanced analysis of the forces acting on a stationary car. It explicitly mentions upthrust from air beneath the car\u2014a subtle but physically valid point often overlooked\u2014and clarifies the role of static friction in preventing *any* initiation of motion, not just lateral movement. It also correctly notes that air resistance is negligible but still present, showing attention to detail. While both answers cover gravity, normal force, and friction accurately, Answer1\u2019s inclusion of upthrust and its explicit statement about *all forces being balanced* to ensure no movement demonstrates deeper physical insight.\n\nAnswer2 is accurate and well-structured, especially in its treatment of inclined planes, but it omits mention of upthrust and handles air resistance more vaguely as \u201cair pressure,\u201d which is less precise than distinguishing air resistance (drag) from buoyant upthrust.\n\nThus, Answer1 is superior in semantic quality due to its greater thoroughness and precision.\n\nAnswer1",
+                "Answer1 provides a more comprehensive and nuanced analysis of the forces involved. It explicitly mentions upthrust (though correctly notes its insignificance), clearly explains static friction\u2019s role in preventing motion initiation, and accurately describes air resistance as negligible but still present. It also concludes with a clear statement about balance leading to no movement and how unbalance can cause motion.\n\nAnswer2 is accurate and concise, covering gravity, normal force, friction (including the slope scenario), and air pressure. However, it lacks mention of air resistance as a minimal force acting on the car (instead saying \"air pressure,\" which is not the same thing), and omits any discussion of upthrust or the full role of static friction beyond lateral movement. While sufficient, it is less thorough.\n\nAnswer1 demonstrates deeper physical insight and broader coverage of relevant forces with appropriate clarifications, even for minor ones.\n\nAnswer1",
+                "Answer1 provides a more comprehensive and nuanced explanation of the forces acting on a stationary car. It explicitly mentions upthrust from air beneath the car (even if minor), which adds depth, and clearly distinguishes the role of static friction in preventing *initiation of motion*, not just lateral movement. It also explicitly states that air resistance is negligible *but still present*, showing a more precise understanding of real-world conditions. Additionally, Answer1 concludes by emphasizing the *consequence* of imbalance, linking the forces to potential motion \u2014 enhancing the analytical quality.\n\nAnswer2 is accurate and well-structured, but it omits mention of air resistance entirely (only discussing air pressure minimally), and whereas it mentions slope conditions, it does not explicitly frame static friction as preventing *any* motion initiation \u2014 limiting its generality. The explanation is sound but slightly less thorough.\n\nThus, Answer1 demonstrates superior depth, precision, and analytical completeness.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -382,13 +382,13 @@
             },
             "result": [
                 "Answer2",
-                "Answer1 and Answer2 are both accurate, well-structured, and cover the key relationships and differences among elements in the Periodic Table. Both correctly mention atomic number as the organizing principle, the significance of groups and periods, valence electrons, and trends such as reactivity, metallic character, and physical properties.\n\nHowever, Answer1 is slightly more precise in its explanation of periodic trends\u2014explicitly naming electronegativity, ionization energy, and atomic size as key differing properties\u2014and it clearly contrasts metals and nonmetals in terms of electron behavior. Answer2 is also strong, adding useful context like mentions of transition metals, halogens, noble gases, and physical properties such as color and density, but it doesn\u2019t define the *mechanistic reasons* behind the differences as clearly as Answer1 does.\n\nAnswer1 provides a more direct, technically grounded explanation of *why* elements differ (electron configuration \u2192 property trends), making it slightly superior in semantic quality and accuracy.\n\nAnswer1",
-                "Answer2"
+                "Answer2",
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gemini-1.5-flash",
-                "gpt-4.1"
+                "gpt-4.1",
+                "Unknown"
             ]
         },
         {
@@ -478,8 +478,8 @@
             },
             "result": [
                 "Answer1  \nAnswer2  \nTie\n\nTie",
-                "Answer1  \nAnswer2  \nTie\n\nTie",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie\n\nTie"
             ],
             "extracted_answers": [
                 "Unknown",
@@ -500,9 +500,9 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie\n\nTie",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie\n\nTie"
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie  \n\nTie"
             ],
             "extracted_answers": [
                 "Unknown",
@@ -598,12 +598,12 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1"
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Unknown"
             ]
         }
     ],
@@ -622,12 +622,12 @@
             },
             "result": [
                 "Answer1",
-                "Answer1",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
-                "gemini-1.5-flash",
+                "Unknown",
                 "Unknown"
             ]
         },
@@ -645,12 +645,12 @@
             },
             "result": [
                 "Answer1",
-                "Answer1",
+                "Answer2",
                 "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
+                "gemini-1.5-flash",
                 "gpt-4.1"
             ]
         }
@@ -670,12 +670,12 @@
             },
             "result": [
                 "Answer1",
-                "Answer1  \nAnswer2  \nTie",
-                "Answer1\n\nBoth answers are accurate and well-structured, but Answer1 has a slight edge in clarity, precision, and flow. It more explicitly emphasizes the *interdependence* of the stages by using stronger causal language (\u201cdirectly dependent on the previous one,\u201d \u201cwithout successful completion of each stage, the next cannot occur\u201d) and provides a more concise, thematic summary that ties the biological function of each stage directly to the necessity of the next. The phrasing \u201cthe pupa is a transformative stage where the larval tissues are broken down and reorganized\u201d is also more scientifically precise than Answer2\u2019s slightly vaguer \u201cbody is reorganized.\u201d Answer1\u2019s conclusion reinforces the concept of interdependence more effectively, making it superior in semantic quality."
+                "Answer1",
+                "Answer1"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
-                "Unknown",
+                "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
         },
@@ -813,14 +813,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie\n\nAnswer1 and Answer2 are both accurate, well-structured, and comprehensive in explaining the water cycle and the importance of each stage. Both correctly identify the key processes (evaporation, transpiration, condensation, precipitation, collection) and clearly articulate their interconnections and ecological significance. Answer1 offers a slightly more concise phrasing, while Answer2 adds nuance by mentioning groundwater infiltration and human needs, giving it a marginally broader scope. However, neither response contains an error or omission of significant consequence, and both achieve the same level of clarity and scientific accuracy.\n\nTherefore, the quality is effectively equal.\n\nTie",
-                "Answer2"
+                "Answer2",
+                "Answer2",
+                "Answer1  \nAnswer2  \nTie\n\nTie"
             ],
             "extracted_answers": [
-                "Unknown",
-                "Unknown",
-                "gpt-4.1"
+                "gpt-4.1",
+                "gpt-4.1",
+                "Unknown"
             ]
         },
         {
@@ -958,13 +958,13 @@
             },
             "result": [
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer1 offers a more vivid, nuanced, and literarily rich explanation, using metaphor (\u201cinterwoven threads creating a story's fabric\u201d) and concrete examples (\u201cdesolate wasteland might drive characters to desperation\u201d) to illustrate the interdependence of plot, setting, and characters. It also elevates the discussion by suggesting the setting can \u201cbe a character,\u201d a sophisticated literary concept that adds depth. The prose is tighter, more evocative, and demonstrates a deeper command of narrative theory. While Answer2 is accurate and clear, it is more generic and formulaic, restating standard points without the same level of insight or stylistic flair. Answer1 achieves greater semantic quality through precision, originality, and resonance.  \nTie",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer1  \nAnswer2  \nTie",
+                "Tie"
             ],
             "extracted_answers": [
                 "Unknown",
                 "Unknown",
-                "Unknown"
+                "TIE"
             ]
         },
         {
@@ -1076,14 +1076,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie\n\nTie",
-                "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a more comprehensive and nuanced explanation of the principle of supply and demand. It clearly outlines multiple scenarios\u2014rising demand, increasing supply, falling demand, and decreasing supply\u2014and explains the resulting price effects in each case. It also explicitly mentions market equilibrium and the dynamic nature of price adjustments due to continuous shifts, offering a fuller conceptual picture. \n\nAnswer2 is also accurate and well-structured, covering the same core ideas: shortages and surpluses, equilibrium, and factors causing shifts. However, it is slightly more concise and omits some of the detailed cause-effect relationships that Answer1 includes (e.g., sellers lowering prices to attract buyers when demand falls).\n\nBoth are correct, but Answer1 demonstrates slightly greater depth, clarity, and explanatory richness.\n\nAnswer1"
+                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a more comprehensive and nuanced explanation of the principle of supply and demand. It not only covers the basic dynamic of price changes in response to shifts in supply and demand but also explicitly mentions market equilibrium and the consequences of disruptions to it. It includes additional scenarios (e.g., demand decreasing with steady supply, supply falling with unchanged demand) that enhance clarity and depth. The language is coherent and pedagogically effective, making the mechanism of price adjustment clear to a broader audience.\n\nAnswer2 is accurate and well-structured, covering the core concepts with precision. However, it is slightly more condensed and omits some of the everyday examples or contextual phrasing that make Answer1 feel more intuitive (e.g., \u201csellers may lower prices to attract buyers\u201d). While Answer2 mentions factors like consumer preferences and technology, it does so in a list-like fashion without elaborating on their impact, whereas Answer1 weaves the mechanism more fluidly into a complete narrative.\n\nBoth are correct, but Answer1 demonstrates superior depth, clarity, and explanatory quality.\n\nAnswer1",
+                "Answer1",
+                "Answer1  \nAnswer2  \nTie\n\nTie"
             ],
             "extracted_answers": [
                 "Unknown",
-                "Unknown",
-                "gpt-4.1"
+                "gpt-4.1",
+                "Unknown"
             ]
         }
     ],
@@ -1150,13 +1150,13 @@
             },
             "result": [
                 "Answer2",
-                "Answer1 and Answer2 are both highly accurate, well-structured, and comprehensive in explaining the ecological impacts of deforestation in the Amazon. They both correctly identify key consequences: biodiversity loss, reduced carbon sequestration leading to climate change, soil erosion, disruption of water cycles, and impacts on indigenous communities.\n\nHowever, **Answer1** provides slightly more depth in explaining the *mechanisms* and *cascading effects*, particularly by explicitly mentioning *evapotranspiration* and its role in altering regional weather patterns across South America \u2014 a nuanced point that enhances the scientific rigor of the response. It also emphasizes the \"interconnectedness\" of the ecosystem and the \"largely irreversible\" nature of the damage, adding a layer of urgency and systemic understanding.\n\nAnswer2 is excellent and includes the important human dimension (indigenous communities), which Answer1 omits. But Answer1\u2019s greater emphasis on biophysical feedback loops (evapotranspiration, regional climate impacts) gives it a slight edge in **semantic quality and ecological depth**.\n\n**Answer1** is superior in its precise, scientifically grounded explanation of ecosystem dynamics.\n\nAnswer1",
-                "Answer2"
+                "Answer1 and Answer2 are both highly accurate, well-structured, and comprehensive in explaining the ecological impacts of deforestation in the Amazon. They both cover key points: biodiversity loss, carbon sequestration reduction, soil erosion, water cycle disruption, and global climate implications. \n\nAnswer1 provides slightly more detail on evapotranspiration and its effect on regional weather patterns, which adds a nuanced layer to the explanation of climate impacts. Answer2 extends the discussion to include the impact on Indigenous communities, which, while sociocultural, is an important dimension of ecosystem impact, especially in the Amazon context.\n\nHowever, since the question specifically asks for an explanation based on *ecosystems*, the inclusion of Indigenous communities \u2014 while valid and important \u2014 leans slightly toward socio-political impact, which is outside the strict ecological focus. Answer1 stays more tightly aligned with biophysical ecosystem processes, making its explanation marginally more focused and scientifically precise.\n\nTherefore, **Answer1** edges out slightly in semantic quality and alignment with the question\u2019s ecological focus.\n\nAnswer1",
+                "Answer1\n\nBoth responses are accurate and well-structured, but Answer1 provides a more detailed and scientifically nuanced explanation of the ecological impacts. It explicitly mentions key processes such as evapotranspiration and its effect on regional weather patterns, which is a critical and often overlooked aspect of Amazonian deforestation. It also emphasizes the cascading and irreversible nature of the impacts with greater clarity, while maintaining a strong focus on ecosystem interconnectedness. Answer2 is thorough and includes important social dimensions (indigenous communities), but Answer1's stronger emphasis on the biophysical mechanisms and global climatic consequences gives it a slight edge in semantic quality and depth of ecological understanding."
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gemini-1.5-flash",
-                "gpt-4.1"
+                "gemini-1.5-flash"
             ]
         },
         {
@@ -1220,12 +1220,12 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                "Answer2",
+                "Answer1",
                 "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
+                "gpt-4.1",
                 "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
@@ -1246,13 +1246,13 @@
             },
             "result": [
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie\n\nBoth answers are factually accurate and convey the same core definition: an isosceles triangle has at least two equal sides, the angles opposite those sides are equal, and the equal sides are called legs with the third being the base. Both also correctly note that an equilateral triangle is a special case (Answer1 explicitly says so, Answer2 implies it by saying \u201call three sides the same length\u201d is possible).\n\nAnswer1 is slightly more structured and explicitly states that equilateral triangles are a special case, which adds clarity. Answer2 is equally correct but phrased a bit more redundantly (\u201ccan have either exactly two\u2026 or all three\u2026\u201d), which doesn\u2019t add new information but isn\u2019t incorrect.\n\nHowever, since both are semantically accurate, complete, and clear \u2014 with only minor stylistic differences \u2014 the quality is effectively identical.\n\n**Tie**"
+                "Answer1  \nAnswer2  \nTie\n\nBoth Answer1 and Answer2 are semantically accurate and contain the same core information: an isosceles triangle has at least two equal sides, the angles opposite those sides are equal, the equal sides are called legs, and the third side is the base. Both also correctly note that equilateral triangles are a special case.\n\nHowever, Answer1 is slightly more precise in its phrasing: \"Equilateral triangles, where all three sides are equal, are a special case of isosceles triangles\" \u2014 this is a clean, direct statement that reinforces the inclusive definition. Answer2 says essentially the same thing but phrases it less smoothly: \"can have either exactly two sides the same length or all three sides the same length\" \u2014 this is correct but less formally worded.\n\nAdditionally, Answer1 flows more naturally and is slightly more comprehensive in structure.\n\nThus, Answer1 is superior in quality and clarity.\n\nAnswer1",
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "Unknown",
                 "Unknown",
-                "gemini-1.5-flash"
+                "Unknown"
             ]
         },
         {
@@ -1294,12 +1294,12 @@
             },
             "result": [
                 "Answer2",
-                "Answer1  \nAnswer2  \n\nBoth answers are accurate, clear, and cover the key scientific points: the role of chlorophyll breakdown, the presence of carotenoids and anthocyanins, the influence of shorter days and cooler temperatures, and the tree\u2019s preparation for winter.  \n\nAnswer1 is slightly more concise and structured, with a logical flow that ends with the practical outcome (leaves die and fall off).  \n\nAnswer2 is more fluid and includes the phrase \u201cbeautiful fall colors we see,\u201d which adds a subtle descriptive touch without sacrificing scientific rigor. It also slightly better emphasizes the *conservation of resources* as a driving factor.  \n\nBoth are excellent. Neither contains inaccuracies or omissions.  \n\n**Tie**",
+                "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gemini-1.5-flash",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         },
@@ -1316,14 +1316,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie\n\nTie",
-                "Answer1 and Answer2 are both scientifically accurate and closely aligned in content. Both correctly explain the breakdown of chlorophyll, the revelation of carotenoids and anthocyanins, the role of shrinking daylight and cooler temperatures, and the tree\u2019s preparation for winter dormancy. \n\nThe only subtle difference is that Answer1 phrases the process slightly more fluidly and includes the phrase \u201cconserves resources,\u201d which adds a touch of ecological context, while Answer2 is more concise and includes the detail about the tree \u201csealing off the leaves at the stem\u201d \u2014 a precise physiological detail (abscission layer formation) that Answer1 omits.\n\nHowever, Answer1\u2019s slightly more descriptive language and smoother flow may make it more accessible to a general audience without sacrificing accuracy. Answer2 is equally valid and even slightly more precise in one technical aspect.\n\nSince both are factually correct, comprehensive, and only differ minimally in style and one minor detail, the quality is effectively equal.\n\nTie",
-                "Answer1 and Answer2 are both highly accurate and clearly explain the biological process behind autumn leaf color change. Both correctly identify the breakdown of chlorophyll, the revelation of carotenoids and anthocyanins, and the role of environmental triggers (shorter days, cooler temperatures) and the tree\u2019s preparation for winter. \n\nAnswer1 slightly elaborates on *why* the tree conserves resources and mentions the \"combination of pigment changes and environmental factors,\" which adds a touch of contextual richness. Answer2 is equally correct and more concise, with a precise mention of the tree \"sealing off the leaves at the stem\" \u2014 a detail slightly more specific to the abscission process.\n\nNeither contains errors, and both convey the core science accurately. The difference is minimal: Answer1 offers slightly more descriptive phrasing; Answer2 is more technically precise in one area (abscission). \n\nGiven the equivalence in accuracy and clarity, this is a tie.\n\nTie"
+                "Answer1  \nAnswer2  \nTie\n\nBoth Answer1 and Answer2 provide accurate, clear, and scientifically sound explanations for why leaves change color in the fall. They both correctly identify the breakdown of chlorophyll due to shorter days and cooler temperatures, and both mention the roles of carotenoids and anthocyanins in producing yellow, orange, red, and purple colors. They also both note the tree\u2019s preparation for winter, including resource conservation and the sealing off of leaves.\n\nAnswer1 slightly elaborates on the \u201cwhy\u201d behind the process \u2014 mentioning energy conservation and the combination of pigment changes and environmental factors leading to the visual effect. Answer2 is more concise but includes the detail about the tree sealing off the leaves at the stem, which adds precision.\n\nNeither response contains inaccuracies, and both are well-structured. The difference in quality is minimal. Therefore, the superior answer cannot be definitively chosen.\n\nTie",
+                "Answer1 and Answer2 are both scientifically accurate and clearly explain the process of leaf color change in the fall. Both mention the breakdown of chlorophyll, the role of carotenoids and anthocyanins, and the connection to seasonal changes and tree preparation for winter. \n\nAnswer1 slightly elaborates on the \u201cwhy\u201d behind the process\u2014mentioning resource conservation and the combination of pigment changes and environmental factors\u2014while Answer2 is more concise but equally complete. Neither contains errors, and both use precise, appropriate terminology.\n\nThe differences are stylistic: Answer1 is a bit more expansive, Answer2 is tighter. Neither is semantically superior to the other.\n\n**Tie**",
+                "Answer1 and Answer2 are both accurate and well-explained. They correctly identify the breakdown of chlorophyll, the roles of carotenoids and anthocyanins, and the connection to seasonal changes and tree preparation for winter. \n\nAnswer1 slightly elaborates on the *reason* behind the process (\u201ctrees conserve resources and get ready to shed its leaves\u201d), while Answer2 adds a detail about the tree \u201csealing off the leaves at the stem,\u201d which is a precise physiological detail (the formation of the abscission layer). \n\nBoth are scientifically sound, clear, and complete. Answer2\u2019s mention of the abscission layer gives it a marginal edge in biological precision, but Answer1\u2019s phrasing is slightly more fluid and comprehensive in connecting cause and effect.\n\nHowever, since the difference is very minor and both answers are of equal semantic quality \u2014 covering all key points accurately \u2014 neither is clearly superior.\n\n**Tie**"
             ],
             "extracted_answers": [
                 "Unknown",
-                "Unknown",
-                "Unknown"
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -1341,13 +1341,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1 and Answer2 are both accurate, well-structured, and capture the essential causes and outcomes of the American Civil War. Both correctly identify slavery as the central issue, mention states\u2019 rights and economic differences (Answer1) or frame states\u2019 rights in relation to slavery (Answer2), and note the Union victory, abolition of slavery, and preservation of the nation.\n\nAnswer1 provides slightly more detail on the economic reliance of the South on enslaved labor and mentions Lincoln\u2019s election as a catalyst, which adds useful context. Answer2 is more concise and clearly links states\u2019 rights to the defense of slavery, avoiding potential ambiguity.\n\nHowever, both responses are semantically equivalent in accuracy, depth, and clarity. Neither contains factual errors or omissions of major significance. The difference is stylistic, not substantive.\n\nThus, the superior response cannot be determined on semantic grounds alone.\n\nTie",
-                "Answer1 and Answer2 are both accurate, well-structured, and convey the essential historical facts about the American Civil War. Both correctly identify slavery as the central issue, mention secession, the roles of the Union and Confederacy, and note the outcomes: abolition of slavery and preservation of the Union. They also both reference states\u2019 rights and economic differences as underlying factors.\n\nThe differences are minor:  \n- Answer1 slightly emphasizes the economic dependence of the South on slavery and mentions \u201cimmense casualties.\u201d  \n- Answer2 is more concise and equally precise, with slightly clearer phrasing about the North\u2019s opposition to the *expansion* of slavery, which is an important nuance.\n\nNeither contains inaccuracies. Both are semantically strong, comprehensive, and appropriate for a brief description.\n\n**Verdict: Tie**",
-                "Answer1 and Answer2 are both accurate, well-structured, and capture the essential causes and outcomes of the Civil War: slavery as the central issue, states\u2019 rights as a contributing factor, sectional economic differences, the secession of the South, the Union\u2019s victory, the abolition of slavery, and national reunification.\n\nAnswer1 slightly emphasizes the economic dependence of the South on slavery and explicitly mentions Lincoln\u2019s election as the catalyst for secession, adding a bit more context. Answer2 is more concise and equally precise, with parallel phrasing that clearly contrasts the positions of North and South.\n\nNeither response contains factual errors, and both convey the necessary historical nuance without oversimplification. The differences are minor and stylistic\u2014not substantive.\n\nThus, both are of equal quality.\n\nTie"
+                "Answer2",
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
+                "gpt-4.1",
                 "Unknown",
-                "gemini-1.5-flash",
                 "Unknown"
             ]
         },
@@ -1364,12 +1364,12 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                "Answer1  \nAnswer2  \n\nTie",
+                "Answer1",
                 "Answer1",
                 "Answer1"
             ],
             "extracted_answers": [
-                "Unknown",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -1414,12 +1414,12 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "Unknown"
+                "gpt-4.1"
             ]
         }
     ],
@@ -1535,7 +1535,7 @@
             "result": [
                 "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie\n\nTie"
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "Unknown",
@@ -1725,13 +1725,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                "Answer1  \nAnswer2  \nTie\n\nThe two answers are nearly identical in content, accuracy, and clarity. Both correctly explain that Earth's orbital period is approximately 365.25 days, that a quarter-day accumulates each year, and that adding a leap day every four years prevents seasonal drift. The phrasing differs slightly\u2014but not in a way that affects the quality, completeness, or correctness of the explanation. Neither answer contains errors or omits key details.\n\nTherefore, both are equally strong.\n\nTie",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1 and Answer2 are both accurate and clearly explain the reason for leap years: the Earth\u2019s orbit takes about 365.25 days, so adding a day every four years corrects the cumulative quarter-day discrepancy and prevents seasonal drift.\n\nAnswer1 mentions February 29th explicitly and emphasizes the consequence of *not* having leap years (\u201csignificant seasonal discrepancies over time\u201d).  \nAnswer2 is slightly more concise and uses slightly more precise phrasing (\u201cEarth's position in its orbit\u201d) but omits the specific date (Feb 29).\n\nBoth are semantically equivalent in accuracy and clarity. Neither contains errors, and both convey the core concept effectively.\n\n**Tie**",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "Unknown",
-                "gemini-1.5-flash",
+                "Unknown",
                 "Unknown"
             ]
         },
@@ -1869,14 +1869,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                "Answer1  \nAnswer2  \nTie",
                 "Answer2",
-                "Answer1 and Answer2 are both accurate and clearly explain the optical physics behind rainbow formation: refraction, internal reflection, and dispersion of light in water droplets. Both mention the separation of white light into its color spectrum and the arced shape due to the geometry of light exit angles.\n\nHowever, **Answer1** provides slightly more precise technical detail by emphasizing that different wavelengths bend at *slightly different angles*, explicitly linking dispersion to color separation. It also clarifies that the arc shape arises from the *curved surface of the raindrops*, which adds nuance to the geometric explanation.\n\n**Answer2** is also correct and adds useful context about the sun being low in the sky and lingering raindrops \u2014 helpful for understanding visibility conditions \u2014 but it doesn\u2019t deepen the physical mechanism as clearly as Answer1.\n\nThus, Answer1 offers marginally superior **semantic quality** in explaining the cause with greater precision.\n\nAnswer1",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer1 and Answer2 are both accurate and clearly explain the physical process behind rainbow formation: refraction, internal reflection, and dispersion of light in raindrops. Both mention the splitting of white light into its component colors and the arc-shaped appearance.\n\nHowever, **Answer1** provides a slightly more detailed and precise sequence: it explicitly notes that sunlight *slows down* upon entering the droplet (a key part of refraction), and emphasizes that *different wavelengths bend at slightly different angles*, which directly explains color separation. It also clearly states that the observer sees the rainbow when the separated colors reach their eyes\u2014tying perception to the mechanism.\n\n**Answer2** is also correct and adds useful context about the sun\u2019s position (\"low in the sky\") and the presence of lingering raindrops, which is a good observational note. But it doesn\u2019t elaborate as clearly on *why* the colors separate or the role of wavelength dependence in refraction.\n\nThus, **Answer1** offers marginally superior explanatory depth and clarity on the core physics.\n\nAnswer1"
             ],
             "extracted_answers": [
+                "Unknown",
                 "gpt-4.1",
-                "gemini-1.5-flash",
-                "Unknown"
+                "gemini-1.5-flash"
             ]
         },
         {
@@ -1892,12 +1892,12 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie  \n\n**Evaluation:**  \nBoth Answer1 and Answer2 accurately describe the physics of rainbow formation: refraction, internal reflection, and dispersion of light in raindrops. Both correctly mention that white light separates into its component colors due to differing wavelengths bending at different angles. Both also note the arc shape and the conditions (sunlight and raindrops post-rain).\n\nAnswer1 slightly elaborates on the geometry\u2014mentioning the sun being low in the sky and the \u201ccircular arc\u201d with \u201clingering raindrops,\u201d which adds useful contextual detail. Answer2 is more concise but equally precise, with clear phrasing about \u201cwavelengths\u201d and \u201ccurved surface of the raindrops,\u201d though the latter phrase is slightly misleading (the arc is due to the angle of observation, not the shape of the drops).\n\nHowever, the differences are minor. Both answers are scientifically accurate, well-structured, and complete. Neither contains errors or omissions of significance.\n\n**Final Decision: Tie**",
+                "Answer1 and Answer2 are both highly accurate and clearly explain the optical physics behind rainbow formation. They both correctly describe refraction, internal reflection, and dispersion of light due to varying wavelengths. \n\nThe only subtle difference is that **Answer1** adds contextual detail about the sun being low in the sky and lingering raindrops\u2014this improves the real-world applicability and completeness of the explanation. **Answer2** is slightly more concise and technically precise in describing the sequence and role of wavelength differentiation, but omits the observational context.\n\nHowever, since the question only asks for an explanation of *what causes* a rainbow\u2014not for contextual or observational details\u2014the *core scientific explanation* in both is of equal quality. Answer2 is marginally more precise with \"wavelengths of light\" and emphasizes the curved surface of raindrops contributing to the arc, while Answer1\u2019s extra context, though helpful, is not essential to the causal mechanism.\n\nGiven this, both responses are semantically excellent. The differences are stylistic and contextual, not substantive.\n\n**Tie**",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie\n\nTie"
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "TIE",
                 "Unknown",
                 "Unknown"
             ]
@@ -2206,12 +2206,12 @@
             },
             "result": [
                 "Answer2",
-                "Answer1  \nAnswer2  \nTie",
+                "Answer1 and Answer2 both accurately describe the process of photosynthesis, covering the key components: sunlight, carbon dioxide, water, chlorophyll, glucose production, and oxygen release. However, Answer1 provides a slightly more detailed and structured explanation by explicitly mentioning the **Calvin cycle** and the **splitting of water molecules**, which adds scientific depth and clarity to the mechanism. Answer2 is correct and clear but remains more general, sticking to the overall equation and broad strokes without delving into the biochemical steps.\n\nSince the question asks to *explain* the process \u2014 implying a desire for mechanistic understanding \u2014 Answer1\u2019s inclusion of the Calvin cycle and the role of water splitting enhances its quality and educational value.\n\n**Answer1**",
                 "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "Unknown",
+                "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
         },
@@ -2276,14 +2276,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                "Tie",
                 "Answer1",
-                "Answer1"
+                "Answer1",
+                "Tie"
             ],
             "extracted_answers": [
-                "TIE",
                 "gpt-4.1",
-                "gpt-4.1"
+                "gpt-4.1",
+                "TIE"
             ]
         }
     ],
@@ -2302,13 +2302,13 @@
             },
             "result": [
                 "Answer2",
-                "Answer2",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer1  \nAnswer2  \nTie",
+                "Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
-                "Unknown"
+                "Unknown",
+                "gpt-4.1"
             ]
         },
         {
@@ -2351,12 +2351,12 @@
             "result": [
                 "Answer2",
                 "Answer2",
-                "Answer1 provides a clear, structured, and universally applicable outline for a heroic animal story, emphasizing narrative structure (introduction, rising action, climax, falling action, resolution) with thematic depth and flexibility. It focuses on universal storytelling elements that can be adapted to any animal protagonist and any type of threat, making it broadly useful for writers or creators.\n\nAnswer2, while vivid and emotionally engaging, is a complete short story rather than an outline. It lacks the generality and structural framework that the question asks for \u2014 \u201chow would you outline\u201d implies a template or model, not a specific narrative. Answer2 is excellent as a finished draft but fails to meet the demand for a scalable, structural outline.\n\nTherefore, Answer1 is superior because it directly and correctly answers the question with a versatile, well-organized framework.\n\nAnswer1"
+                "Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gemini-1.5-flash"
+                "gpt-4.1"
             ]
         },
         {
@@ -2397,12 +2397,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2",
+                "Both Answer1 and Answer2 present well-reasoned, thoughtful inventions that address real-world health concerns with practical, tech-enhanced solutions. \n\nAnswer1 focuses on air quality\u2014\u4e00\u4e2a often underestimated but critical factor in daily health\u2014by combining real-time monitoring with localized purification and data tracking. It\u2019s innovative in its wearable form factor and emphasizes prevention, which is valuable for urban populations and those with respiratory conditions.\n\nAnswer2 takes a broader health approach, integrating multiple physiological metrics into a single, portable device with AI-driven recommendations and telemedicine integration. It tackles early detection of health issues and accessibility to care, particularly for underserved populations, which amplifies its societal impact.\n\nBoth responses are equally strong in terms of clarity, creativity, relevance, and potential for real-world benefit. Neither has a decisive advantage in semantic quality, accuracy, or depth. \n\nTie",
                 "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -2493,13 +2493,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1\n\nAnswer1 is a complete, cohesive poem that embodies the emotional depth and poetic artistry expected in a composition about friendship. It uses rich imagery, consistent meter, and meaningful rhyme to convey the enduring, subtle, and powerful nature of true friendship. The verses are evocative, emotionally resonant, and structurally refined, fulfilling the request to \u201ccompose a poetry about friendship\u201d by delivering an actual poem.\n\nAnswer2, while thorough and instructive, does not compose a poem\u2014it gives advice on how to write one. Although the guidance is sound and well-structured, it avoids fulfilling the core request: to produce poetry. The question asks for a composition, not a tutorial.\n\nThus, Answer1 is superior because it directly and beautifully answers the question with poetic artistry, while Answer2 sidesteps the request entirely.\n\nAnswer1",
-                "Answer1 provides a fully realized, emotionally resonant poem that embodies the artistry of poetry through rich imagery, consistent meter, rhyming structure, and thematic depth. It doesn\u2019t just describe friendship\u2014it evokes it, using metaphors (\u201csteady flame, our guiding lights,\u201d \u201ctapestry woven, thread by thread\u201d) and rhythmic flow to create a heartfelt, memorable piece.\n\nAnswer2, while thoughtful and instructive, is not a poem at all\u2014it is a set of procedural guidelines for writing one. The question asks \u201cHow would you compose a poetry about friendship?\u201d which invites a poetic response, not a meta-commentary on composition techniques. Answer2 fails to deliver the requested artwork, even if its advice is sound.\n\nThe quality of a response to this question hinges on presenting poetry, not instruction about it. Answer1 fulfills the intent of the question with artistic excellence; Answer2 does not.\n\nAnswer1",
+                "Answer1",
+                "Answer2",
                 "Answer1"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
-                "gemini-1.5-flash",
+                "gpt-4.1",
                 "gemini-1.5-flash"
             ]
         },
@@ -2543,12 +2543,12 @@
             "result": [
                 "Answer2",
                 "Answer2",
-                "Answer2"
+                "Answer1 and Answer2 are both highly detailed, accurate, and offer nearly identical eco-friendly strategies for planning a birthday party: digital invitations, reusable/compostable tableware, local/seasonal food, nature-based activities, eco-friendly favors, carpooling, composting, and minimizing waste.\n\nThe core content overlaps significantly\u2014both emphasize sustainability through material reduction, energy conservation, waste management, and experiential alternatives to consumerism. Answer2 adds a minor detail about \u201cupcycled DIY activities\u201d and \u201cdonating leftover food,\u201d while Answer1 mentions \u201cplanting a tree\u201d and explicitly says \u201cprioritize experiences over material gifts,\u201d which is a strong philosophical touch.\n\nNeither response contains inaccuracies. Both are well-structured, comprehensive, and practical. Answer1 is slightly more concise; Answer2 is a bit more expansive with a few extra nuances. But the depth, accuracy, and quality are equivalent.\n\nTherefore, the superior choice cannot be definitively made.\n\n**Tie**"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "TIE"
             ]
         },
         {
@@ -2660,12 +2660,12 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie",
                 "Answer1",
-                "Answer1 provides a comprehensive, strategic framework for designing a nutritious and tasty school canteen menu, covering key principles such as food groups, preparation methods, student engagement, education, dietary accommodations, and sustainability. It explains the *why* and *how* behind each decision, making it adaptable and scalable.\n\nAnswer2 is well-structured and specific with a clear weekly menu, which is practical and appealing. It touches on important elements like ingredient quality, portion control, and feedback\u2014but it lacks the broader educational, cultural, and operational context that makes a menu sustainable long-term.\n\nWhile Answer2 is concrete and actionable, Answer1 offers a more complete, thoughtful, and holistic approach that ensures not only nutritional quality and taste but also student buy-in, inclusivity, and long-term success.\n\nThus, Answer1 is superior in semantic quality and depth.\n\nAnswer1"
+                "Answer1",
+                "Answer1"
             ],
             "extracted_answers": [
-                "Unknown",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -2734,13 +2734,13 @@
             },
             "result": [
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie",
-                "Both Answer1 and Answer2 present comprehensive, well-structured plans for a community garden, with clear phases or steps covering key aspects: land acquisition, layout design, community organization, resource gathering, maintenance, education, and sustainability.\n\nAnswer1 is slightly more detailed in its sequencing\u2014particularly in the progression from securing land to implementing a watering system and establishing governance rules\u2014making it feel more like a step-by-step project management plan. It also explicitly mentions accessibility (raised beds) and diverse planting zones, which demonstrates thoughtful inclusivity and ecological consideration.\n\nAnswer2 is concise and equally thorough, with standout emphasis on sustainability practices (crop rotation, biodiversity, composting) and communication infrastructure (bulletin board, chat group), which are critical for long-term success. Its structure is clean and slightly more modern in tone.\n\nThat said, neither response contains inaccuracies, and both cover all essential components. Answer1 has a more methodical, phased approach that may be easier for a community to follow sequentially, while Answer2 integrates sustainability and communication more explicitly.\n\nGiven that semantic quality\u2014accuracy, completeness, clarity, and thoughtfulness\u2014is the only criterion, and both responses are equally strong in all respects, the best judgment is:\n\n**Tie**"
+                "Both Answer1 and Answer2 present well-structured, comprehensive, and practical plans for establishing a community garden. They cover all essential phases: site selection, layout design, community organization, resource acquisition, maintenance systems, education, and sustainability.\n\nAnswer1 is slightly more detailed in its chronological sequencing (\u201cPhase 1\u201d through \u201cPhase 9\u201d) and explicitly mentions accessibility considerations (raised beds), drip irrigation, and adaptive feedback loops, which adds a layer of thoughtful planning for inclusivity and long-term success.\n\nAnswer2 is equally thorough but organizes information thematically (e.g., \u201cMembership,\u201d \u201cSustainability,\u201d \u201cCommunication\u201d) rather than procedurally. It explicitly emphasizes organic practices, biodiversity, and communication tools like chat groups, which are modern, community-centered touches.\n\nBoth answers are accurate, practical, and user-focused. The differences are stylistic\u2014Answer1 leans toward step-by-step execution, while Answer2 emphasizes systemic sustainability and community engagement tools.\n\nGiven that both are of exceptionally high quality and cover the same core components with only minor organizational differences, neither is clearly superior.\n\n**Tie**",
+                "Answer1 and Answer2 are both well-structured, comprehensive, and practical plans for establishing a community garden. They cover nearly identical core components: site selection, layout design, volunteer organization, resource acquisition, watering systems, maintenance schedules, education, community engagement, and sustainability.\n\nHowever, **Answer1** provides slightly more detail in key operational areas \u2014 such as explicitly mentioning **permits**, **fencing**, **drip irrigation**, and the **step-by-step sequence** of implementation (Phases 1\u20139), which gives the plan a clearer chronological and logistical flow. It also emphasizes **accessibility** (raised beds) and **adaptive feedback**, which adds depth to long-term planning.\n\n**Answer2** is very strong too, and its numbered list is clean and easy to follow. It includes useful touches like \u201cpollinator plants\u201d and \u201cchat group,\u201d but it lacks the explicit progression and risk-mitigation details (e.g., permits, fencing, irrigation system specification) that make Answer1 more robust for real-world implementation.\n\nTherefore, **Answer1** offers a more thorough, actionable, and professionally nuanced plan.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "Unknown",
-                "Unknown",
-                "Unknown"
+                "TIE",
+                "gemini-1.5-flash"
             ]
         },
         {
@@ -2781,9 +2781,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1\n\nAnswer1 offers a more vivid, character-driven narrative with a distinct personality (\u201cPip\u201d), emotional resonance, and poetic touches (\u201cthe hum of the colony a lullaby,\u201d \u201ctwice his size, a momentous find\u201d). It crafts a mini-epic around a single ant\u2019s experience, blending biological accuracy with storytelling charm, giving the reader a personal, almost cinematic journey. Answer2 is also well-written and accurate, but it reads more like an informative description of ant behavior, lacking the intimate, singular perspective that makes Answer1 feel alive and emotionally engaging. The use of \u201cshe\u201d in Answer2 is fine, but the uniformity of tone and absence of a named protagonist makes it feel more generic.\n\nAnswer1\u2019s strength lies in transforming biological facts into a compelling, immersive story \u2014 precisely what the prompt asked for.\n\nAnswer1",
-                "Answer1\n\nThe two answers are both well-written and rich in detail, but Answer1 edges ahead in **semantic quality** due to its stronger narrative voice, more vivid character development, and tighter emotional arc. By naming the ant \u201cPip\u201d and giving him a personal perspective\u2014his exhaustion, his satisfaction, his lullaby of the colony\u2014it transforms the story from a generalized account into a compelling, intimate fable. The imagery (\"crumb, twice his size,\" \"lullaby\") is more evocative and poetic, and the structure feels like a complete micro-story with a beginning, middle, and end. Answer2 is accurate and atmospheric but reads more like a descriptive paragraph than a story with emotional resonance. Answer1 succeeds in making the reader *feel* the ant\u2019s experience, not just understand it.\n\nAnswer1",
-                "Answer1\n\nBoth answers are vivid and well-written, capturing the ant\u2019s perspective with rich sensory detail and emotional resonance. However, Answer1 has a slight edge in quality due to its stronger narrative voice and character-driven storytelling. By naming the ant \u201cPip,\u201d it creates a more intimate, story-like experience, allowing the reader to emotionally invest in a single individual\u2019s journey. The phrasing\u2014\u201ca thrill\u00ading trek,\u201d \u201ca momentous find,\u201d \u201ca shared treasure\u201d\u2014adds lyrical charm and dramatic weight to ordinary ant behaviors, making the micro-world feel epic. The closing line, \u201cthe hum of the colony a lullaby,\u201d is particularly poetic and memorable.\n\nAnswer2 is also excellent\u2014accurate, precise, and rich in biological detail\u2014but it reads more like a descriptive essay than a story. It lacks the singular protagonist that gives Answer1 its narrative heart. While both are semantically sound, Answer1\u2019s superior storytelling craft makes it the more compelling and artistically realized response.\n\nAnswer1"
+                "Answer1",
+                "Answer1\n\nBoth answers are well-written and evocative, but Answer1 stands out for its stronger narrative voice, vivid sensory details, and emotional resonance. The use of a named ant, \"Pip,\" lends personality and immediacy, making the story feel more intimate and character-driven. Phrases like \u201ca crumb, twice his size, was a momentous find\u201d and \u201cthe hum of the colony a lullaby\u201d infuse the ant\u2019s world with poetic weight and relatable emotion, capturing the grandeur of a tiny life without anthropomorphizing excessively. The pacing is tighter, the imagery more crystalline, and the ending more poignant.\n\nAnswer2 is also strong \u2014 accurate and rich in biological detail \u2014 but it reads more like an informative, slightly impersonal vignette. It lacks the personal character arc and emotional punch of Answer1.\n\nSemantic quality \u2014 depth of expression, emotional truth, and narrative cohesion \u2014 favors Answer1.\n\nAnswer1",
+                "Answer1  \n\nBoth responses are richly detailed and evocative, but Answer1 edges ahead in **semantic quality** due to its stronger narrative voice, vivid sensory details, and emotional resonance. The use of the ant\u2019s name, \u201cPip,\u201d personalizes the experience without anthropomorphizing excessively, and the phrasing \u2014 \u201ctiny legs flexing,\u201d \u201cendless tiny mandibles to feed,\u201d \u201ca crumb, twice his size, was a momentous find\u201d \u2014 conveys the ant\u2019s world with poetic precision and scale. The tone balances wonder with realism, and the closing line \u2014 \u201cthe hum of the colony a lullaby\u201d \u2014 beautifully encapsulates the ant\u2019s integrated existence within the collective. Answer2 is also excellent, but it reads slightly more like a factual description wrapped in narrative, lacking the same emotional punch and lyrical cohesion. Answer1 feels like a story; Answer2 feels like an informative vignette.  \n\nAnswer1"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -2925,13 +2925,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2",
                 "Answer1  \nAnswer2  \nTie",
+                "Answer2",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "Unknown",
+                "gpt-4.1",
                 "Unknown"
             ]
         },
@@ -2974,12 +2974,12 @@
             },
             "result": [
                 "Answer1",
-                "Answer1  \nAnswer2  \nTie",
+                "Answer1",
                 "Answer1"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
-                "Unknown",
+                "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
         },
@@ -3092,7 +3092,7 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                "Answer1",
+                "Answer1\n\nAnswer1 provides a more comprehensive, polished, and professional job description with richer context and better flow. It not only lists responsibilities and requirements but also integrates desirable qualities like \u201cpassion for innovative technology\u201d and \u201cdynamic environment,\u201d which help attract culturally aligned candidates. Additionally, it uses natural, cohesive language and subtly emphasizes soft skills and team dynamics without being vague. \n\nAnswer2, while structurally clean and concise, relies on placeholders like [list specific languages/technologies] and [Optional: Add experience level], making it appear incomplete or templated rather than a finalized, ready-to-use description. The lack of developed detail reduces its effectiveness as an actual job posting.\n\nThus, Answer1 is superior in semantic quality, depth, and practical usability.\n\nAnswer1",
                 "Answer1",
                 "Answer1"
             ],
@@ -3213,13 +3213,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie",
                 "Answer2",
+                "Answer1 provides a more comprehensive and pedagogically rich plan, emphasizing educational alignment, pre- and post-trip learning activities, and evaluation of the trip\u2019s success\u2014key components for meaningful educational experiences. While Answer2 is practical and covers logistical essentials (permissions, chaperones, safety, weather), it treats the trip more as an event than a learning opportunity. Answer1 integrates curriculum goals and cognitive reinforcement, making it superior in educational quality.\n\nAnswer1",
                 "Answer2"
             ],
             "extracted_answers": [
-                "Unknown",
                 "gpt-4.1",
+                "gemini-1.5-flash",
                 "gpt-4.1"
             ]
         },
@@ -3261,14 +3261,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie\n\nBoth answers are clear, accurate, and provide appropriate definitions and examples of metaphors. They correctly emphasize that metaphors are direct comparisons (without \"like\" or \"as\") that create vivid imagery by equating two unlike things. Both use strong, relatable examples (\u201cThe world is a stage,\u201d \u201cHe has a heart of gold\u201d in Answer1; \u201cTime is a thief,\u201d \u201cThe classroom was a zoo\u201d in Answer2) and explain the purpose of metaphors in enhancing understanding and language.\n\nAnswer1 is slightly more concise, while Answer2 adds a useful clarification by contrasting metaphors with similes \u2014 a helpful distinction for someone confused about figurative language. However, Answer1\u2019s examples are arguably more universally recognizable and emotionally resonant.\n\nUltimately, both responses are of very high semantic quality, covering the core concept, function, and examples accurately and effectively. Neither has a decisive advantage in clarity, accuracy, or completeness.\n\nTie",
-                "Answer1  \nAnswer2  \nTie\n\n**Evaluation:**\n\nBoth Answer1 and Answer2 are accurate, clear, and well-structured explanations of metaphors. They correctly define metaphors as comparisons that say one thing *is* another (without \u201clike\u201d or \u201cas\u201d), provide appropriate examples (\"The world is a stage,\" \"He has a heart of gold\" in Answer1; \"Time is a thief,\" \"The classroom was a zoo\" in Answer2), and explain their purpose in enhancing understanding and vividness.\n\nAnswer1 is slightly more concise and organized with a clean flow. It introduces the concept, gives two strong examples, and concludes with the functional purpose of metaphors.\n\nAnswer2 adds a helpful distinction between metaphors and similes (\u201cThey are different from similes...\u201d), which is not present in Answer1. This extra context enhances understanding for someone unfamiliar with literary terms.\n\nBoth responses are semantically excellent \u2014 neither contains errors, both fully address the question, and both use clear, accessible language for someone who doesn\u2019t understand metaphors.\n\nBecause Answer2 provides a *slight* additional insight (contrasting metaphor with simile) without overcomplicating the explanation, it offers marginally more depth.\n\n**Final Decision: Answer2**"
+                "Answer2",
+                "Answer2",
+                "Answer1  \nAnswer2  \nTie\n\nBoth Answer1 and Answer2 provide clear, accurate, and well-structured explanations of metaphors. They both correctly define metaphors as comparisons that equate one thing to another without using \u201clike\u201d or \u201cas,\u201d and they both provide strong, relevant examples (\u201cThe world is a stage\u201d / \u201cHe has a heart of gold\u201d in Answer1; \u201cTime is a thief\u201d / \u201cThe classroom was a zoo\u201d in Answer2). Each explains the purpose of metaphors\u2014enhancing understanding, creating vivid imagery, and adding creativity to language.\n\nAnswer1 is slightly more concise and flows naturally with a gentle pedagogical tone. Answer2 adds a helpful clarification distinguishing metaphors from similes, which may aid a beginner in avoiding confusion.\n\nHowever, since both answers are semantically complete, accurate, and equally effective in explaining the concept to someone unfamiliar with metaphors, neither has a decisive advantage.\n\n**Tie**"
             ],
             "extracted_answers": [
-                "Unknown",
-                "Unknown",
-                "gemini-1.5-flash"
+                "gpt-4.1",
+                "gpt-4.1",
+                "Unknown"
             ]
         },
         {
@@ -3357,14 +3357,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                "Answer1 and Answer2 are both highly detailed, accurate, and well-structured responses that cover the essential criteria for evaluating a singer in a competition: vocal technique, musicality, interpretation, stage presence, song choice, and originality. Both emphasize a holistic, balanced approach and include nearly identical key elements with only minor lexical and structural variations.\n\nAnswer1 is slightly more concise and flows with a natural, authoritative tone, while Answer2 adds a mention of \"song choice\" and \"originality\" explicitly and ends with a note on constructive feedback\u2014adding a practical, evaluative dimension.\n\nHowever, Answer2\u2019s inclusion of song choice and originality, along with its emphasis on giving feedback, makes it marginally more comprehensive in the context of a *competition* setting, where arranging and personalizing a song can be distinguishing factors.\n\nThus, while both are excellent, Answer2 provides a slightly fuller evaluation framework.\n\nAnswer2",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer2",
-                "Tie"
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
-                "Unknown",
                 "gpt-4.1",
-                "TIE"
+                "Unknown",
+                "Unknown"
             ]
         },
         {
@@ -3405,14 +3405,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer1  \nAnswer2  \nTie\n\nTie",
+                "Tie",
+                "Tie"
             ],
             "extracted_answers": [
                 "Unknown",
-                "Unknown",
-                "Unknown"
+                "TIE",
+                "TIE"
             ]
         },
         {
@@ -3621,13 +3621,13 @@
             },
             "result": [
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1",
-                "Tie"
+                "Tie",
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "Unknown",
-                "gpt-4.1",
-                "TIE"
+                "TIE",
+                "Unknown"
             ]
         }
     ],
@@ -3693,12 +3693,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Unknown",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -3741,13 +3741,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie",
                 "Answer1",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
-                "Unknown",
                 "gemini-1.5-flash",
+                "Unknown",
                 "Unknown"
             ]
         },
@@ -3861,7 +3861,7 @@
             },
             "result": [
                 "Answer1",
-                "Answer1",
+                "Answer1\n\nAnswer1 provides a more comprehensive, methodical, and evidence-based assessment of how to evaluate celebrity influence. It outlines specific research methods\u2014surveys, focus groups, social media analytics, case studies, behavioral tracking, and qualitative observations from parents and educators\u2014making it grounded in empirical and practical evaluation frameworks. This approach demonstrates a clear understanding of how to measure influence objectively and holistically.\n\nAnswer2, while accurate and insightful in describing the nature and mechanisms of influence (e.g., parasocial relationships, social media amplification, positive/negative modeling), is more interpretive and qualitative without detailing how one would *assess* the influence. It describes influence but doesn\u2019t answer the question of *how to assess* it\u2014an important distinction.\n\nSince the question specifically asks \u201cHow would you assess...,\u201d Answer1 directly and thoroughly addresses the methodology, making it superior in terms of relevance and depth of response.\n\nAnswer1",
                 "Answer1"
             ],
             "extracted_answers": [
@@ -4006,12 +4006,12 @@
             "result": [
                 "Answer2",
                 "Answer2",
-                "Answer1"
+                "Answer2"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
                 "gemini-1.5-flash",
-                "gpt-4.1"
+                "gemini-1.5-flash"
             ]
         }
     ],
@@ -4269,14 +4269,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Tie",
-                "Tie",
-                "Tie"
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
-                "TIE"
+                "Unknown",
+                "Unknown",
+                "Unknown"
             ]
         },
         {
@@ -4318,12 +4318,12 @@
             },
             "result": [
                 "Tie",
-                "Tie",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "TIE",
-                "TIE",
+                "Unknown",
                 "Unknown"
             ]
         },
@@ -4366,12 +4366,12 @@
             },
             "result": [
                 "Answer1",
-                "Answer1  \nAnswer2  \nTie",
+                "Answer1",
                 "Answer1"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
-                "Unknown",
+                "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
         },
@@ -4415,12 +4415,12 @@
             "result": [
                 "Answer2",
                 "Answer2",
-                "Both Answer1 and Answer2 provide comprehensive, accurate, and well-structured evaluations of car safety standards. They both cover key domains: crashworthiness, active and passive safety features, regulatory compliance, and advanced driver-assistance systems (ADAS). \n\nAnswer1 organizes the information into clear categories (crashworthiness, active safety, passive safety, stability/handling, manufacturing quality), offering a conceptual framework. It\u2019s concise yet thorough, with precise terminology and logical flow.\n\nAnswer2 is more granular, listing specific technologies and standards (e.g., Euro NCAP, child seat compatibility, head restraints, recall history), which adds practical detail for real-world evaluation. It also includes important but often overlooked points like pedestrian protection and recall history, enhancing its completeness.\n\nBoth responses are semantically excellent \u2014 neither contains inaccuracies, and both demonstrate deep understanding. Answer1 is slightly more structured; Answer2 is slightly more detailed. Since the question asks for \u201cstandards,\u201d which implies both conceptual and measurable benchmarks, Answer2\u2019s inclusion of specific agencies (NHTSA, Euro NCAP) and tangible metrics (recall frequency, child seat compatibility) gives it a marginal edge in practical applicability and completeness.\n\n**Answer2**"
+                "Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "Unknown"
+                "gpt-4.1"
             ]
         },
         {
@@ -4463,12 +4463,12 @@
             "result": [
                 "Tie",
                 "Tie",
-                "Answer1  \nAnswer2  \nTie"
+                "Both Answer1 and Answer2 are highly accurate, comprehensive, and well-structured. They both correctly identify the core significance of biodiversity: ecosystem stability, resilience, productivity, nutrient cycling, ecosystem services, and the consequences of its loss. They overlap significantly in content, using comparable terminology and logical flow.\n\nAnswer1 emphasizes resource utilization efficiency and explicitly links biodiversity to \u201cecological and societal systems,\u201d while Answer2 adds nuance by mentioning genetic resources, adaptation, evolution, and prevention of species domination\u2014slightly expanding the conceptual scope.\n\nHowever, neither response contains inaccuracies, and both convey the full scope of biodiversity's ecological and human relevance with equal clarity and depth. The differences are minor and stylistic rather than substantive.\n\nTherefore, the quality of both responses is equivalent.\n\nTie"
             ],
             "extracted_answers": [
                 "TIE",
                 "TIE",
-                "Unknown"
+                "TIE"
             ]
         },
         {
@@ -4557,13 +4557,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie",
                 "Answer2",
+                "Answer1  \nAnswer2  \nTie\n\nTie",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
-                "Unknown",
                 "gpt-4.1",
+                "Unknown",
                 "Unknown"
             ]
         },
@@ -4868,14 +4868,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
+                "Answer1",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer1"
             ],
             "extracted_answers": [
+                "gpt-4.1",
                 "Unknown",
-                "Unknown",
-                "Unknown"
+                "gpt-4.1"
             ]
         }
     ],
@@ -4942,8 +4942,8 @@
             },
             "result": [
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie\n\nTie",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie\n\nTie"
             ],
             "extracted_answers": [
                 "Unknown",
@@ -5037,14 +5037,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie\n\nBoth answers correctly list the seven commonly accepted continents: Africa, Antarctica, Asia, Australia, Europe, North America, and South America. The order differs slightly, but that is inconsequential. Both provide accurate and concise explanations, noting that these are large landmasses separated by oceans. Answer1 briefly mentions that \"different models exist,\" which adds a nuanced touch, while Answer2 adds a sentence about geography, culture, and biodiversity \u2014 this is factually true but not directly relevant to the question, which only asks for the names of the continents. \n\nHowever, since the question is simply \u201cName the continents of the world,\u201d and both answers fulfill that request accurately and without error, with only minor stylistic differences, the semantic quality is essentially equal.\n\nTie",
-                "Tie",
-                "Answer1  \nAnswer2  \nTie\n\nBoth answers correctly list the seven commonly accepted continents: Africa, Antarctica, Asia, Australia, Europe, North America, and South America. The order differs slightly, but that is irrelevant to semantic quality. Both provide accurate definitions, noting that continents are large landmasses separated by oceans. Both acknowledge the existence of alternative models without overcomplicating the response. Neither contains factual errors, and both are clear, concise, and informative.\n\nThe only subtle difference is that Answer1 says \u201cAustralia\u201d while Answer2 says \u201cAustralia\u201d \u2014 same name \u2014 and Answer2 adds a brief note about geography, culture, and biodiversity, which is true but not necessary for answering the simple question \u201cName the continents.\u201d Answer1's mention of \u201cmost common\u201d model adds a slight edge in precision, but Answer2 is equally correct and just as well-phrased.\n\nTherefore, both are equally excellent.\n\nTie"
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie\n\nBoth answers correctly list the seven commonly accepted continents: Africa, Antarctica, Asia, Australia, Europe, North America, and South America. The order differs, but that is irrelevant to semantic quality. Both provide accurate, concise, and complete information with minor contextual elaboration about continents being large landmasses separated by oceans. Neither contains errors, and both are equally clear, factual, and well-phrased.  \n\nTherefore, they are of equal quality.\n\nTie",
+                "Tie"
             ],
             "extracted_answers": [
                 "Unknown",
-                "TIE",
-                "Unknown"
+                "Unknown",
+                "TIE"
             ]
         },
         {
@@ -5252,7 +5252,7 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie\n\nThe two answers are semantically identical in content and accuracy. Both correctly identify the three states of matter\u2014solid, liquid, and gas\u2014and provide equivalent descriptions of their properties, using only slightly different phrasing (e.g., \u201cfixed\u201d vs. \u201cdefinite,\u201d which are synonyms in this context). Neither contains errors, and both are clear, complete, and scientifically accurate. Therefore, there is no appreciable difference in quality.\n\nTie",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie"
             ],
@@ -5348,12 +5348,12 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                "Answer2",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
+                "Unknown",
                 "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
@@ -5470,7 +5470,7 @@
             },
             "result": [
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie  \n\nTie",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
@@ -5518,13 +5518,13 @@
             },
             "result": [
                 "Answer2",
-                "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer2",
+                "Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "Unknown",
-                "Unknown"
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         },
         {
@@ -5588,12 +5588,12 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie\n\nThe two answers are nearly identical in content, accuracy, and clarity. Both correctly identify the heart as the organ that pumps blood and accurately describe its function in circulating blood to deliver oxygen and nutrients while removing waste. Answer1 uses slightly more formal phrasing (\u201cworks as a muscular organ that contracts\u201d), while Answer2 is more concise and mentions the specific types of blood vessels (\u201carteries, veins, capillaries\u201d), adding a minor detail. However, neither answer contains an error, and both are equally informative and scientifically accurate.\n\nGiven the parity in quality, the best choice is:\n\n**Tie**",
                 "Answer1  \nAnswer2  \nTie\n\nTie",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Unknown",
                 "Unknown",
                 "Unknown"
             ]
@@ -5661,13 +5661,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                "Answer1  \nAnswer2  \nTie\n\nAnswer1 and Answer2 are nearly identical in content, accuracy, and quality. Both correctly identify the lion as the \"king of the jungle,\" accurately note the mismatch between the term \"jungle\" and the lion\u2019s actual habitat (savannas/grasslands), and explain the symbolic reasons for the title (strength, dominance, cultural imagery). The phrasing differs slightly, but neither response is semantically superior to the other.\n\n**Tie**",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie  \n\nThe two responses are nearly identical in content, accuracy, and tone. Both correctly identify the lion as the \u201cking of the jungle,\u201d acknowledge the inaccuracy of the term \u201cjungle\u201d (noting lions live in savannas or grasslands), and explain the symbolic reasons for the title (strength, dominance, cultural depiction). Answer1 mentions \u201cpride\u201d explicitly, while Answer2 adds \u201cmajestic appearance\u201d \u2014 both are valid and complementary. Neither contains errors, and neither is substantially more detailed, clear, or insightful than the other.\n\n**Tie**",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "Unknown",
-                "gemini-1.5-flash",
+                "Unknown",
                 "Unknown"
             ]
         },
@@ -5758,13 +5758,13 @@
             },
             "result": [
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \n\nBoth answers are factually correct and identify the first four letters of the second row of a QWERTY keyboard as A, S, D, and F. \n\nHowever, Answer2 adds useful contextual information by mentioning that this row is the \"home row,\" which enhances understanding for someone unfamiliar with keyboard terminology. Answer1 is correct but more minimal, stating only the basic fact without elaboration.\n\nSince the question asks for identification and Answer2 provides the same accuracy with added relevant context (without introducing errors), it offers superior **semantic quality** by improving clarity and depth.\n\n**Answer2**"
+                "Answer2",
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "Unknown",
-                "Unknown",
-                "gemini-1.5-flash"
+                "gpt-4.1",
+                "Unknown"
             ]
         },
         {
@@ -5903,12 +5903,12 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1"
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
                 "gemini-1.5-flash",
-                "gemini-1.5-flash"
+                "Unknown"
             ]
         },
         {
@@ -5972,14 +5972,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                "Answer1",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1"
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "Unknown",
-                "gpt-4.1"
+                "Unknown",
+                "Unknown"
             ]
         }
     ],
@@ -6020,9 +6020,9 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie\n\nTie",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a clear, correct, and slightly more detailed explanation of how to apply the Pythagorean theorem, including explicit formulas for both finding a leg and finding the hypotenuse, and emphasizes taking the square root at the end. It also correctly qualifies the requirement that the triangle must be a right triangle.\n\nAnswer2 is also accurate and well-structured, with a step-by-step approach and good clarification of terminology (e.g., \u201clegs or cathetus\u201d). It is concise and logically organized.\n\nBoth answers are semantically correct, complete, and free of errors. Answer1 adds a tiny bit more phrasing clarity (e.g., \u201cplug their values into the formula\u201d), while Answer2 improves readability with bullet points. Neither has a significant advantage in semantic quality.\n\nThus, the quality is effectively equal.\n\nTie",
+                "Answer1  \nAnswer2  \nTie\n\nTie"
             ],
             "extracted_answers": [
                 "Unknown",
@@ -6093,9 +6093,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a clear, concise, and accurate explanation of converting a fraction to a decimal using long division. It correctly identifies the roles of numerator and denominator, gives appropriate examples (1/4 \u2192 0.25 and 1/3 \u2192 0.3\u0304), and properly uses notation for repeating decimals (the bar over the 3). The explanation is technically precise and pedagogically sound.\n\nAnswer2 is also correct and thorough. It mentions using either long division or a calculator (which is practical), explains adding zeros and identifying terminating vs. repeating decimals, and gives correct examples (3/8, 1/4, 2/3). However, it writes \"0.666 (repeating)\" without using the standard notation of a bar over the repeating digit, which is a minor but notable imprecision compared to Answer1\u2019s use of \u201c0.3\u201d with an implied bar (though it does mention the bar earlier).\n\nStill, both answers are fundamentally accurate and complete. Answer1 is slightly more polished in its mathematical notation, but Answer2 adds useful context about calculators and the process of adding zeros, which enhances practical understanding.\n\nGiven that both responses are semantically high-quality, accurate, and cover the necessary concepts, the difference is marginal. \n\nTie",
                 "Answer1  \nAnswer2  \nTie\n\nTie",
-                "Answer1  \nAnswer2  \nTie  \n\nTie",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer1  \nAnswer2  \nTie\n\nTie"
             ],
             "extracted_answers": [
                 "Unknown",
@@ -6381,8 +6381,8 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                "Answer1  \nAnswer2  \nTie\n\nAnswer1 and Answer2 are both accurate, clear, and correctly explain how to calculate the area of a rectangular room using multiplication. Both provide a conceptual explanation, mention the importance of consistent units, give a concrete example, and correctly note that the result is in square units. Answer1 is slightly more formal and explicitly emphasizes why the units are squared, while Answer2 offers a more step-by-step procedural tone. However, neither has a significant advantage in semantic quality\u2014both are equally correct, complete, and well-explained.\n\nTie",
                 "Answer1  \nAnswer2  \nTie\n\nTie",
-                "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie\n\nTie"
             ],
             "extracted_answers": [
@@ -6404,12 +6404,12 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
+                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a more thorough and pedagogical explanation, walking through the step-by-step process\u2014measuring length and width, emphasizing unit consistency, and illustrating with a clear example. It also adds contextual understanding by explaining *why* the result is in square units (\u201chow many squares of the chosen unit would fit into the room\u201d), which enhances conceptual comprehension.\n\nAnswer2 is also correct and concise, with a good example and a clear note about squared units. However, it lacks the explanatory depth and step-by-step guidance found in Answer1.\n\nThus, Answer1 is superior in quality due to its richer explanation and better scaffolding of understanding.\n\nAnswer1",
                 "Answer1",
-                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a more thorough explanation, including step-by-step instructions (measure length, measure width, use same units, multiply, interpret result), and explicitly connects multiplication to the conceptual idea of \"how many squares fit into the room.\" It also includes a concrete numerical example with clear units.\n\nAnswer2 is accurate and concise\u2014it correctly states the formula, gives an example, and explains why the unit is squared. However, it lacks the explanatory depth and conceptual bridging found in Answer1.\n\nWhile both are correct, Answer1 demonstrates a deeper understanding and better pedagogical clarity, making it superior in quality.\n\nAnswer1",
                 "Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Unknown",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -6452,9 +6452,9 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
+                "Answer1 provides a comprehensive, principle-based approach to planning a healthy weekly menu, explaining the underlying nutritional logic\u2014such as the importance of balancing food groups, choosing healthy cooking methods, managing portion sizes, limiting processed ingredients, and ensuring variety and hydration. It offers a flexible framework applicable beyond just seven days and educates the reader on *why* these choices are healthy.\n\nAnswer2 gives a specific, well-constructed meal plan that is practical and visually appealing, with clear examples of balanced meals. It touches on key nutritional elements like lean protein, whole grains, and fiber\u2014but does so more superficially, without the explanatory depth of Answer1. It assumes the reader understands the rationale behind the choices.\n\nWhile Answer2 is concrete and actionable, Answer1 is superior because it demonstrates a deeper understanding of nutrition science and empowers the reader to apply the principles independently, rather than just following a fixed list.\n\n**Answer1**",
                 "Answer1",
-                "Answer1 provides a comprehensive, principle-based approach to planning a healthy weekly menu, explaining the rationale behind food group balance, cooking methods, hydration, portion control, and variety. It offers a flexible framework applicable to any individual\u2019s needs, emphasizing nutritional science and long-term health habits.\n\nAnswer2 presents a concrete, well-structured 7-day meal plan that is practical and nutritious, but it lacks explanation of the underlying nutritional principles. While it demonstrates application, it assumes knowledge of why these choices are healthy without articulating the \"why\"\u2014such as the benefits of fiber, omega-3s, or low saturated fat\u2014that would help someone replicate or adapt the plan independently.\n\nSince the question asks *how* you would use your understanding of nutrition to plan a menu, the emphasis is on demonstrating knowledge and reasoning\u2014not just listing meals. Answer1 excels in explaining the *nutrition science behind the plan*, making it more informative and educative.\n\n**Answer1**",
-                "Answer1"
+                "Answer1 provides a comprehensive, principle-based approach to planning a healthy weekly menu, emphasizing the foundational elements of nutrition: balance of food groups, nutrient density, cooking methods, hydration, portion control, and variety. It explains the *why* behind each choice, making it educational and universally applicable.\n\nAnswer2 offers a concrete, day-by-day meal plan, which is practical and visually helpful, but it lacks detailed reasoning about nutritional rationale. While it mentions lean protein, whole grains, and vegetables, it doesn\u2019t elaborate on *how* these choices satisfy nutritional needs (e.g., fiber for satiety, omega-3s from salmon, iron from beans), nor does it address limitations like sodium, sugar, or diversity of fruits/vegetables beyond the examples given.\n\nAnswer1 demonstrates deeper understanding and broader application of nutrition science, while Answer2 is a good example but more surface-level.\n\n**Answer1** is superior in quality, accuracy, and educational value.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -6477,14 +6477,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie\n\nBoth answers are highly detailed, accurate, and demonstrate a solid understanding of circuit troubleshooting principles. They both follow a logical, step-by-step approach: starting with safety (removing batteries), checking the most common failure points (batteries, contacts, bulb/LED), then moving to components like the switch and wiring, and finally using a multimeter for continuity testing.\n\nAnswer1 provides slightly more context on bulb voltage matching, which is a nuanced detail that can be critical in real-world scenarios. Answer2 is more comprehensive in addressing solder joints and short/open circuits, and explicitly mentions LED alternatives and safety.\n\nNeither response has a significant flaw, and both cover the essential aspects thoroughly. The differences are minor and stylistic rather than substantive.\n\n**Tie**",
+                "Answer1 and Answer2 are both highly thorough, accurate, and logically structured. Both correctly apply fundamental circuit principles: checking power source (batteries), verifying continuity, inspecting connections, testing components (bulb/LED, switch), and using a multimeter for diagnostics. Both emphasize safety and step-by-step troubleshooting.\n\n**Answer1** excels slightly in specifying the importance of *voltage rating matching* between bulb and battery \u2014 a crucial but often overlooked detail that prevents repeat failure. It also explicitly mentions \u201cinternal circuit fault\u201d as a possible root cause, which adds depth.\n\n**Answer2** is more comprehensive in describing *solder joints* and *short/open circuit* analysis, and explicitly recommends testing the bulb in another torch \u2014 a practical, real-world tip.\n\nBoth answers are excellent. However, **Answer2** covers a slightly broader range of potential fault locations (solder joints, wiring continuity, shorts), and includes a clearer workflow from disassembly to retest. It also better integrates diagnostics with practical repair techniques.\n\nThus, while the difference is minimal, **Answer2** edges ahead in completeness and practical detail.\n\nAnswer2",
                 "Answer2",
-                "Answer2"
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
                 "gpt-4.1",
-                "gpt-4.1"
+                "gpt-4.1",
+                "Unknown"
             ]
         },
         {
@@ -6573,12 +6573,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1",
-                "Answer1 and Answer2 are both highly accurate, comprehensive, and well-structured explanations of why fatigue occurs after physical exercise. They cover the same core physiological mechanisms: ATP depletion, glycolysis and lactic acid buildup, glycogen depletion, electrolyte/fluid loss, oxygen debt, and cardiovascular/nervous system strain.\n\nHowever, **Answer1** provides slightly more precise terminology and depth:\n\n- It explicitly names *glycogen* as the stored form of glucose in muscles and liver, linking depletion directly to central fatigue signaling.\n- It mentions *electrolyte imbalances from sweating* affecting *nerve and muscle function*, which adds a nuanced physiological link.\n- It explicitly refers to *oxygen debt* and *increased carbon dioxide levels* as signals to the brain \u2014 connecting biochemical changes directly to central fatigue perception.\n\nAnswer2 is excellent and more conversational, but slightly less specific in certain areas (e.g., \u201closs of fluids and minerals\u201d vs. \u201celectrolyte imbalances impacting nerve and muscle function\u201d).\n\nThe additional precision, clarity, and integration of physiological signaling in **Answer1** give it a marginal edge in semantic quality and scientific rigor.\n\nAnswer1",
-                "Answer1 and Answer2 are both highly accurate and comprehensive in explaining the physiological reasons for fatigue after exercise. Both correctly identify key mechanisms: ATP depletion, lactic acid buildup, glycogen depletion, electrolyte imbalance, dehydration, oxygen debt, cardiovascular strain, and nervous system fatigue.\n\nHowever, **Answer1** provides slightly more specific details\u2014such as naming glycogen as the stored form of glucose in muscles and liver, explicitly linking low glycogen to brain signaling for tiredness, and mentioning the role of carbon dioxide levels\u2014in a more structured and precise manner. It also uses more technically accurate phrasing throughout (e.g., \u201calternative energy pathways like glycolysis\u201d vs. \u201canaerobic respiration,\u201d which is less precise as glycolysis is just the first step).\n\n**Answer2** is also excellent and entirely correct but relies slightly more on general terms and lacks the nuanced specificity of Answer1.\n\nThus, **Answer1** has a marginal edge in depth, precision, and scientific clarity.\n\nAnswer1"
+                "Answer1\n\nBoth responses are scientifically accurate and well-structured, but Answer1 provides a more detailed and nuanced explanation of the physiological mechanisms behind fatigue. It specifically names key processes like glycolysis, glycogen depletion, electrolyte imbalances, and oxygen debt, and explicitly links each to the sensation of tiredness. It also mentions the brain\u2019s role in interpreting these signals\u2014a subtle but important point about central fatigue that Answer2 only alludes to vaguely with \u201csignal your body to rest.\u201d Answer1\u2019s flow is more precise, with clearer causal links between metabolic events and the subjective experience of fatigue. Answer2 is good, but slightly more general and less methodical in its biological specificity.\n\nAnswer1  \nAnswer2  \nTie",
+                "Answer1 and Answer2 are both highly accurate, comprehensive, and well-structured explanations of why fatigue occurs after physical exercise. They cover the same core physiological mechanisms: ATP depletion, glycolysis/lactic acid buildup, glycogen depletion, electrolyte/fluid loss, oxygen debt, and cardiovascular/nervous system strain.\n\nHowever, **Answer1** provides slightly more precise terminology and details\u2014such as specifying that glycogen is stored in muscles *and liver*, explicitly mentioning that low glycogen levels *signal the brain* to initiate tiredness, and noting that electrolyte imbalances impact *nerve and muscle function*. These nuances demonstrate a deeper integration of physiological systems and clearer causal links to the sensation of fatigue.\n\nAnswer2 is excellent and very close, but lacks some of these fine-grained distinctions and slightly generalizes certain points (e.g., \u201cnervous system fatigue plays a role too\u201d without elaborating on how).\n\nTherefore, **Answer1** demonstrates superior semantic quality in terms of depth, precision, and integration of physiological concepts.\n\nAnswer1",
+                "Answer1 and Answer2 are both highly accurate, comprehensive, and well-structured explanations of why fatigue occurs after physical exercise. They cover the same key physiological mechanisms: ATP depletion, glycogen usage, lactic acid buildup, electrolyte imbalances, oxygen debt, cardiovascular strain, and nervous system fatigue.\n\nHowever, **Answer1** has a slight edge in **semantic quality** due to its more precise terminology and slightly deeper integration of biochemical pathways\u2014such as explicitly naming glycogen as the stored form of glucose in muscles *and* liver, and clearly linking low glycogen levels to brain signaling for tiredness. It also more explicitly connects electrolyte imbalance to nerve and muscle function, and uses more formal scientific phrasing throughout (e.g., \u201coxygen debt and increased carbon dioxide levels\u201d).\n\nAnswer2 is excellent and very close, but some phrases like \u201ccausing fatigue\u201d or \u201ccan make you feel weak\u201d are slightly less precise than Answer1\u2019s phrasing, which consistently links physiological changes directly to systemic consequences with greater clarity.\n\nThus, **Answer1** demonstrates marginally superior semantic precision and scientific rigor.\n\nAnswer1"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
+                "Unknown",
                 "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
@@ -6718,13 +6718,13 @@
             },
             "result": [
                 "Answer1",
-                "Answer1 and Answer2 both provide accurate, well-structured, and nutritionally sound guidance for planning a balanced meal. They align with established dietary guidelines (e.g., USDA MyPlate), properly emphasize food groups, portion distribution, and the importance of macronutrients and micronutrients.\n\nHowever, **Answer1** offers slightly more precise detail: it specifies approximate portion sizes (e.g., 4\u20136 ounces of protein, \u00bd\u20131 cup of grains), names specific vegetables and whole grains, and explicitly mentions the role of healthy fats in nutrient absorption. It also notes that portion sizes should be individualized, which reflects a nuanced understanding of personalized nutrition.\n\n**Answer2** is also excellent and more conversational, but lacks the quantitative specificity found in Answer1. While it mentions the \u201chalf plate, quarter protein, quarter grains\u201d rule \u2014 which is useful \u2014 it doesn't go as deeply into measurable recommendations.\n\n**Quality distinction:** Answer1 demonstrates a higher level of detail, precision, and scientific grounding without being overly technical, making it slightly superior in terms of **semantic quality**.\n\nAnswer1",
-                "Answer1  \nAnswer2  \nTie  \n\nAnswer1 provides slightly more specific details on portion sizes (e.g., \"4-6 ounces,\" \"1/2-1 cup cooked,\" \"a tablespoon of olive oil\") and explicitly mentions the role of healthy fats in nutrient absorption, which demonstrates deeper nutritional insight. It also clearly links each food component to its physiological benefit (e.g., complex carbs for sustained energy, fiber from vegetables).  \n\nAnswer2 is also accurate and well-structured, referencing the \u201cplate method\u201d (half vegetables/fruit, quarter protein, quarter grains), which is a widely accepted visual guide, and mentions limiting processed foods and sugary drinks \u2014 important practical considerations. However, it lacks the precise quantitative guidance found in Answer1.\n\nBoth are high-quality, but Answer1\u2019s specificity and deeper explanation of nutrient functions give it a slight edge in semantic quality and nutritional depth.\n\nAnswer1"
+                "Answer1",
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
                 "gemini-1.5-flash",
-                "gemini-1.5-flash"
+                "Unknown"
             ]
         },
         {
@@ -6740,14 +6740,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie",
                 "Answer2",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer2",
+                "Answer2"
             ],
             "extracted_answers": [
-                "Unknown",
                 "gemini-1.5-flash",
-                "Unknown"
+                "gemini-1.5-flash",
+                "gemini-1.5-flash"
             ]
         }
     ],
@@ -6765,12 +6765,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Unknown",
                 "Unknown",
                 "Unknown"
             ]
@@ -6814,13 +6814,13 @@
             },
             "result": [
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie\n\nBoth Answer1 and Answer2 provide highly accurate, clear, and scientifically sound explanations of why a cold glass becomes wet on the outside on a hot day. Both correctly identify the role of the dew point, condensation of water vapor from the air, and the connection to the water cycle. They both emphasize that the moisture originates from the air, not the drink inside \u2014 a critical point often misunderstood.\n\nAnswer1 is slightly more formal and explicitly mentions \u201csaturation\u201d and the phase change from gas to liquid, offering a touch more technical precision. Answer2 is equally correct and adds the useful clarification that the water is not coming from inside the glass, which reinforces the concept for potentially less experienced readers.\n\nThe semantic quality \u2014 accuracy, clarity, completeness, and relevance \u2014 is nearly identical. Neither contains errors, omissions, or misleading information.\n\n**Tie**",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1 and Answer2 are both highly accurate, clear, and well-explained. They correctly identify the role of dew point, condensation, and the connection to the water cycle. Both emphasize that the moisture comes from the air (not the drink), and both link the phenomenon to the condensation phase of the water cycle.\n\nHowever, **Answer1** has a slight edge in precision and flow. It explicitly mentions that the glass\u2019s surface temperature is *lower than the dew point*, which is the critical threshold for condensation, and it frames the phenomenon as \u201cmimicking the condensation phase of the water cycle on a smaller scale,\u201d which directly and elegantly ties the observation to the broader water cycle concept as requested.\n\nAnswer2 is also excellent, but slightly repeats ideas (\"air contains water vapor\" is stated twice) and uses a vague phrase \u201ccondensed water cycle\u201d \u2014 which is not a standard term (likely meant to be \u201cwater cycle\u201d); Answer1 avoids this minor terminology issue and uses more precise scientific phrasing.\n\n**Answer1** is therefore slightly superior in accuracy, clarity, and adherence to scientific terminology.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "Unknown",
-                "gemini-1.5-flash",
-                "Unknown"
+                "Unknown",
+                "gemini-1.5-flash"
             ]
         },
         {

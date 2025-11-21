@@ -95,12 +95,12 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1 and Answer2 are both accurate, well-structured, and clearly explain the necessary parts of an argumentative essay and how they interact. Both correctly identify the introduction, thesis statement, body paragraphs with evidence, counterargument with rebuttal, and conclusion. Both also explain the functional interaction between these parts \u2014 how each builds on the last to create a persuasive, logical whole.\n\nThe differences are minor:\n- Answer1 uses slightly more formal and concise language and emphasizes \u201crobustness\u201d and \u201clogical progression,\u201d which adds depth.\n- Answer2 is slightly more detailed in describing the counterargument reply and ends with a mention of \u201ca suggestion for action,\u201d which is a useful but not strictly necessary addition.\n\nNeither contains factual errors. Both effectively convey the required information with clarity and coherence.\n\nGiven the high quality of both and the negligible difference in substance, the most fair judgment is:\n\n**Tie**"
+                "Answer2"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct"
+                "gpt-4.1"
             ]
         },
         {
@@ -189,9 +189,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1 is superior.\n\nIt provides a more accurate, structured, and comprehensive explanation of how the digestive organs are connected and their specific roles. It correctly identifies the sequence of organs (mouth \u2192 esophagus \u2192 stomach \u2192 small intestine \u2192 large intestine \u2192 anus) and describes their physiological functions with precise terminology (e.g., \u201cperistaltic contractions,\u201d \u201cabsorbs nutrients and water,\u201d \u201cforms waste\u201d).\n\nAnswer2, while generally correct, contains notable inaccuracies and imprecisions: it incorrectly lists the pancreas and liver as \u201corgans in the digestive system\u201d that are directly part of the connected tube, when in fact they are accessory organs that secrete into the small intestine via ducts\u2014they are not physically part of the alimentary canal. Additionally, the phrase \u201cyellow liquid from the liver\u201d is vague and unscientific (it refers to bile, which is greenish-yellow, but this casual phrasing undermines precision). It also slightly misrepresents the anatomical connection by implying the pancreas and liver are directly part of the \u201clong muscular tube,\u201d which they are not.\n\nAnswer1 avoids these errors and delivers a clearer, more scientifically rigorous explanation.\n\nAnswer1",
-                "Answer1 is superior because it provides a clearer, more structured, and scientifically accurate overview of the digestive system. It correctly identifies all the major organs in sequence and accurately describes their specific roles without introducing external organs (like the pancreas and liver) as primary parts of the digestive tract\u2014they are accessory organs, not part of the main digestive tube. Answer1 also uses precise terminology (e.g., \u201cperistaltic contractions\u201d) and maintains a cohesive explanation of how organs are connected functionally and anatomically.\n\nAnswer2, while understandable, contains minor inaccuracies: it refers to the pancreas and liver as organs \"in\" the digestive tract (they are accessory; they secrete into the small intestine but aren't part of the continuous tube), and it incorrectly calls bile \u201ca yellow liquid\u201d without naming it, which reduces scientific rigor. It also lacks clear articulation of how the organs are physically connected via the gastrointestinal tract.\n\nAnswer1 delivers a more accurate, concise, and educationally sound explanation.\n\nAnswer1",
-                "Answer1 is superior because it provides a clearer, more organized, and comprehensive explanation of how each organ is connected and why it is important. It explicitly names all the major organs in sequence (mouth \u2192 esophagus \u2192 stomach \u2192 small intestine \u2192 large intestine \u2192 anus), describes their specific physiological functions with accurate terminology (e.g., peristalsis, nutrient absorption, waste formation), and concisely ties their roles together into a coherent system.\n\nAnswer2 is informative but less precise: it incorrectly implies the pancreas and liver are *organs of the digestive tract* when they are accessory organs; it uses vague terms like \u201cyellow liquid from the liver\u201d instead of \u201cbile\u201d; and its phrasing is slightly less formal and structured. While it does convey the basic flow, it lacks the clarity and accuracy of Answer1.\n\nAnswer1 demonstrates better scientific accuracy, clarity, and completeness.\n\nAnswer1"
+                "Answer1 is superior.\n\nReasoning: Answer1 provides a clearer, more structured, and accurate overview of the digestive system. It correctly identifies each organ in sequence and explicitly describes its specific function with appropriate physiological terminology (e.g., peristaltic contractions, nutrient absorption, waste formation). It also properly groups the anus and rectum as part of the waste elimination pathway without overextending into non-organ structures (like the pancreas and liver, which are accessory organs, not part of the alimentary canal itself). \n\nAnswer2, while mostly correct, blurs the distinction between the main digestive tract organs and accessory organs (pancreas and liver), presenting them as if they are direct segments of the connected pathway. It also phrases \u201ca yellow liquid from the liver\u201d as bile without naming it, reducing precision. Additionally, it slightly misrepresents anatomical relationships by implying the pancreas and liver are directly \u201cin\u201d the pathway rather than secreting into it. \n\nAnswer1\u2019s clarity, accuracy, and proper categorization make it the better response.\n\nAnswer1",
+                "Answer1 is superior because it provides a more accurate, concise, and comprehensive overview of the digestive system. It correctly identifies all major organs and their specific roles without introducing inaccuracies. It clearly explains the function of each organ in sequence and emphasizes the importance of each in the overall process.\n\nAnswer2 contains several problematic inaccuracies. It incorrectly lists the pancreas and liver as \u201corgans in the digestive system\u201d in the same way as the stomach or intestines \u2014 while they are accessory organs, they are not part of the continuous muscular tube (the gastrointestinal tract). It also refers to \u201ca yellow liquid from the liver\u201d (likely meaning bile), which is imprecise and overly simplistic. Additionally, Answer2 lacks clarity in describing how the organs are connected \u2014 it mentions a \u201clong muscular tube\u201d but doesn\u2019t name the esophagus, small intestine, etc., as components of it. It also doesn\u2019t clearly include the anus/rectum in waste elimination.\n\nAnswer1 gives a scientifically sound, structured, and balanced explanation appropriate for a general audience.\n\nAnswer1",
+                "Answer1 is superior because it provides a more accurate, concise, and comprehensive overview of the digestive system\u2019s anatomy and function. It correctly identifies all major organs involved and clearly explains their roles in sequence, using precise terminology like \u201cperistaltic contractions\u201d and specifying that nutrient absorption occurs in the small intestine and water absorption in the large intestine. It also correctly lists the anus and rectum as the terminal structures for waste elimination.\n\nAnswer2 contains several inaccuracies and oversimplifications. For example, it incorrectly implies that the pancreas and liver are *organs of the digestive tract* rather than *accessory organs*\u2014they are not part of the continuous tube but contribute secretions. It also refers to a \u201cyellow liquid from the liver\u201d (likely meant to be bile), which is imprecise and unscientific in tone. Additionally, it lists the pancreas and liver as if they are direct parts of the connected tube, which misrepresents their anatomical relationship.\n\nAnswer1 maintains scientific accuracy, clarity, and proper structure, making it the better response.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
@@ -237,9 +237,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1 is superior. \n\nIt provides a more accurate and nuanced explanation of the forces involved. Specifically, it correctly distinguishes between static friction (which prevents sliding) and rolling friction (which opposes motion when rolling occurs), though in a truly stationary car, rolling friction is negligible unless there is tire deformation or micro-motions. Importantly, Answer1 correctly notes that air resistance is negligible when stationary \u2014 which is accurate \u2014 whereas Answer2 incorrectly suggests air resistance \u201cstill exists a little,\u201d which, while technically true, misleads by implying it\u2019s a relevant factor in static equilibrium. \n\nAdditionally, Answer2 introduces \u201cupthrust\u201d from air under the car \u2014 a misleading term typically reserved for buoyant forces in fluids (like water or air in buoyancy contexts). While air does exert pressure on the car, the net vertical force from air pressure is negligible and not meaningfully captured as \u201cupthrust,\u201d especially compared to the normal force. This introduces confusion and inaccuracies.\n\nAnswer1 also better integrates Newton\u2019s First Law, concluding with the concept of unbalanced forces causing motion, which reinforces the physics principle at play.\n\nThus, Answer1 demonstrates greater precision, clarity, and scientific accuracy.\n\nAnswer1",
-                "Answer1 provides a more detailed, accurate, and physically precise analysis of the forces acting on a stationary car. It correctly distinguishes between static and rolling friction (noting that rolling friction is minimal when stationary, but still conceptually relevant), and explicitly references Newton\u2019s third law with \u201capplied force\u2026 balanced by an equal and opposite reaction force,\u201d which adds depth. It also correctly notes air resistance is negligible at rest, which is important for precision.\n\nAnswer2 introduces \u201cupthrust\u201d from air under the car \u2014 a misleading and non-standard term in this context. While buoyant forces from air do technically exist, they are utterly negligible (on the order of millinewtons for a car) and not meaningfully relevant to the static equilibrium of a car. Including it as a distinct, comparable force confuses the physics and introduces a distraction rather than clarification.\n\nAdditionally, Answer1 better organizes the concepts and speaks more precisely about the role of static friction in preventing sliding, which is essential for a stationary vehicle.\n\nThus, Answer1 is superior in accuracy, clarity, and scientific rigor.\n\nAnswer1",
-                "Answer1"
+                "Answer1 is superior because it provides a more precise, nuanced, and technically accurate explanation of the forces at play. It correctly distinguishes between static and rolling friction in the context of a stationary vehicle \u2014 noting that static friction prevents sliding, while rolling friction is present but typically negligible when stationary. It also appropriately mentions Newton\u2019s third law with respect to applied forces and reaction forces, reinforcing the concept of equilibrium. Additionally, it correctly states that air resistance is negligible for a stationary car without overcomplicating it with irrelevant forces.\n\nAnswer2 introduces \u201cupthrust\u201d from air under the car \u2014 a misleading and inaccurate term in this context. Upthrust (or buoyant force) is relevant in fluids like water or air for objects less dense than the medium, but for a car, this force is immeasurably small and not meaningfully distinguishable from atmospheric pressure distribution. Including it as a separate force gives a false impression of significance. Furthermore, while Answer2 is generally correct, it lacks the depth and precision of Answer1 in explaining the roles of different types of friction and the nature of balanced forces.\n\nThe superior answer demonstrates stronger conceptual understanding and scientific accuracy.\n\nAnswer1",
+                "Answer1 is superior because it provides a more precise and nuanced analysis of the forces involved. Specifically:\n\n- It correctly distinguishes between **static friction** (which prevents initial sliding) and **rolling friction** (which acts during motion, not when stationary). While rolling friction is negligible for a truly stationary car, acknowledging its role in context shows deeper understanding. Answer2 oversimplifies by just saying \u201cfrictional force\u201d without this distinction.\n- It correctly identifies that **applied forces** (e.g., someone pushing) must be balanced by reaction forces to maintain equilibrium \u2014 a key point from Newton\u2019s Third Law that Answer2 omits.\n- It explicitly ties the situation to **Newton\u2019s First Law** (\u201cremain at rest until an external unbalanced force acts\u201d), which provides a conceptual framework for understanding the equilibrium.\n- It avoids introducing an incorrect or misleading force: **upthrust from air** (mentioned in Answer2) is not a standard or meaningful term in this context. While air pressure exists, it is not typically categorized as \"upthrust\" for a stationary car \u2014 this introduces confusion and lacks physical precision.\n\nAnswer2 is not wrong per se, but it lacks depth, precision, and conceptual clarity compared to Answer1.\n\nAnswer1",
+                "Answer1\n\nAnswer1 provides a more precise, technically accurate, and comprehensive analysis of the forces acting on a stationary car. It correctly identifies static friction as the key force preventing sliding and distinguishes between static and rolling friction, clarifying that rolling friction is minimal when stationary but present. It also correctly frames Newton\u2019s third law with \u201capplied force must be balanced by an equal and opposite reaction force,\u201d which reinforces the concept of equilibrium. Furthermore, it avoids introducing incorrect or misleading concepts like \u201cupthrust\u201d from air, which is not a standard or meaningful force in this context (Answer2 incorrectly includes it, conflating buoyancy with negligible aerodynamic effects).\n\nAnswer2, while generally accessible, introduces an erroneous concept \u2014 \u201cupthrust\u201d from air \u2014 which is not a meaningful force in this scenario. Buoyant force from air on a car is negligible and not typically considered in classical mechanics problems involving cars at rest. Additionally, Answer2\u2019s phrasing is less precise (e.g., \u201cfriction keeps the car from moving until another force is applied\u201d lacks specificity about static friction as the primary agent), and its explanation of air resistance is vague and misleadingly implies it\u2019s non-negligible even at rest.\n\nAnswer1 demonstrates stronger scientific rigor, clarity, and conceptual accuracy.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
@@ -260,9 +260,9 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                "Answer1 provides a more comprehensive and accurate breakdown of the forces acting on a stationary car. It clearly identifies gravitational force, normal force, frictional force, air resistance, and even mentions upthrust from air beneath the car\u2014acknowledging minor forces that are often overlooked. It correctly states that all forces are balanced in static equilibrium and explains the consequence of imbalance. While upthrust from air is extremely small, its mention shows attention to detail and a deeper understanding of fluid mechanics.\n\nAnswer2 is also correct and well-structured, but it vaguely references \u201crolling friction\u201d in the context of a *stationary* car\u2014which is technically misleading. Rolling friction arises when an object is rolling; a truly stationary car (not rolling) experiences *static friction*, not rolling friction. Also, the mention of \u201capplied force\u201d and \u201creaction force\u201d introduces Newton\u2019s Third Law in a slightly confusing way\u2014applied forces like a push are external, and the reaction force acts on the *pusher*, not the car, so it does not directly keep the car stationary. This could lead to conceptual misunderstanding.\n\nAnswer1 avoids these pitfalls and gives a clearer, more precise, and educationally superior explanation.\n\nAnswer1",
-                "Answer1 provides a more comprehensive and detailed analysis of the forces acting on a stationary car. It explicitly identifies and explains each relevant force \u2014 gravitational, normal, frictional, air resistance, and even upthrust \u2014 and clarifies their magnitudes and roles. It also correctly states that the net force is zero when the car is stationary, and explains the condition for motion (unbalanced forces). The inclusion of upthrust from air, while small, demonstrates a thoughtful consideration of all possible physical interactions, even minor ones.\n\nAnswer2 is accurate and concise, correctly identifying gravity, normal force, friction (static and rolling), and air resistance. However, it introduces an ambiguous point: \u201cany applied force... must be balanced by an equal and opposite reaction force.\u201d This misattributes Newton\u2019s Third Law (action-reaction pairs) as a mechanism for maintaining equilibrium, which is misleading. Reaction forces act on different bodies; for example, if you push the car, the car pushes back on you \u2014 but that doesn\u2019t prevent the car from moving. What keeps the car stationary is the balance of forces *on the car*, not Newton\u2019s Third Law pairs. This conceptual error reduces the accuracy of Answer2.\n\nThus, Answer1 is superior in both completeness and conceptual accuracy.\n\nAnswer1",
-                "Answer1 provides a more comprehensive and physically accurate breakdown of the forces acting on a stationary car. It correctly identifies gravity, normal force, friction, air resistance, and even mentions upthrust from air beneath the car\u2014an often-overlooked point that, while small, is technically valid in biomechanical and fluid dynamics contexts. It clearly explains the concept of force balance and the condition for remaining stationary, which is fundamental to Newton\u2019s First Law.\n\nAnswer2 is also correct and concise but omits the upthrust (buoyant force from air), which is a minor omission but still a real, albeit negligible, force. More importantly, it incorrectly conflates *rolling friction* with a force acting on a *stationary* car. Rolling friction only becomes relevant when the car is rolling; for a truly stationary car, only *static friction* applies. This is a subtle but important error in physics terminology.\n\nAdditionally, Answer2 mentions \u201capplied force... balanced by an equal and opposite reaction force,\u201d which misrepresents Newton\u2019s Third Law. Reaction forces act on different bodies, not as balances to keep an object stationary\u2014net force equilibrium is a separate concept (Newton\u2019s First Law). This introduces conceptual inaccuracy.\n\nAnswer1 avoids this mistake, correctly frames all forces as acting on the car and emphasizes force *balance*, which is the key to understanding why the car remains stationary.\n\nThus, Answer1 is superior in accuracy, depth, and conceptual clarity.\n\nAnswer1"
+                "Answer1 provides a more detailed and accurate breakdown of the forces acting on a stationary car. It explicitly identifies gravitational force, normal force, frictional force, air resistance, and even mentions upthrust from air beneath the car\u2014acknowledging even minor contributors. While upthrust (buoyant force) in air is indeed negligible for a car, its inclusion shows thoroughness and awareness of all possible forces, even if small. It correctly emphasizes that all forces are balanced in static equilibrium and explains the consequence of imbalance.\n\nAnswer2 is also correct and concise, mentioning gravity, normal force, static and rolling friction, air resistance, and applied forces. However, it incorrectly groups \u201crolling friction\u201d as acting on a *stationary* car. Rolling friction typically arises when an object is rolling\u2014when there is motion. For a truly stationary car (not rolling), the relevant friction is *static* friction only; rolling friction does not apply when the car is at rest. This is a conceptual error.\n\nAdditionally, Answer2\u2019s mention of \u201cany applied force\u2026 must be balanced by an equal and opposite reaction force\u201d misuses Newton\u2019s third law. Reaction forces are not what keep the car stationary; it\u2019s the net force being zero (Newton\u2019s first law). Applying a push and having a balancing frictional force does not mean the push and friction are a Newton\u2019s third law pair\u2014they act on the same object.\n\nThus, Answer1 avoids such misconceptions and provides a clearer, more precise, and pedagogically superior explanation.\n\nAnswer1",
+                "Answer1 provides a more comprehensive and nuanced breakdown of the forces acting on a stationary car. It clearly identifies gravitational force, normal force, frictional force, air resistance, and even mentions upthrust from air beneath the car \u2014 which, while small, is a legitimate consideration and demonstrates deeper physical insight. It also correctly emphasizes that all forces are balanced in the stationary state and explains what would happen if they became unbalanced.\n\nAnswer2 is also accurate and concise, covering gravity, normal force, static and rolling friction, air resistance, and Newton\u2019s third law (reaction forces). However, it contains a minor conceptual inaccuracy: **rolling friction** does not act on a truly stationary car \u2014 rolling friction arises when there is rolling motion. Static friction is the relevant force preventing motion from starting, but \u201crolling friction\u201d is misleading in this context. Additionally, while mentioning \"applied force\" and \"reaction force\" is good, it slightly confuses Newton\u2019s third law (action-reaction pairs act on different bodies) with the condition of equilibrium (net force = 0).\n\nAnswer1 avoids this confusion and provides a more physically precise and complete analysis without introducing inaccuracies.\n\n**Answer1** is superior in semantic quality, accuracy, and depth.\n\nAnswer1",
+                "Answer1 provides a clearer, more detailed, and scientifically accurate breakdown of the forces acting on a stationary car. It correctly identifies gravitational force, normal force, frictional force, air resistance, and even mentions upthrust from air (though small, it\u2019s a valid contribution). It explicitly states that the forces are balanced in a stationary scenario, which is central to understanding Newton\u2019s first law. The explanation is pedagogically sound, easy to follow, and avoids overgeneralizations.\n\nAnswer2 is also largely correct but less thorough. It mentions static and rolling friction, but rolling friction is typically negligible or non-existent for a *stationary* car\u2014rolling friction arises when there is rolling motion, so including it here is misleading. Additionally, it introduces \"applied force\" and \"reaction force\" without clarifying that these are only relevant if someone or something is actively pushing the car (which would imply the car is not truly stationary unless balanced). This could confuse the reader by implying external pushes are always present.\n\nAnswer1 avoids these inaccuracies and gives a more complete, precise, and nuanced description suitable for educational understanding.\n\n**Answer1**"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -381,14 +381,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1 is more precise, structured, and scientifically accurate in explaining the relationships and differences among elements in the Periodic Table. It clearly describes the significance of atomic number, the meaning of periods and groups, and provides specific trends (atomic radius, ionization energy, electronegativity) with a concrete example (alkali metals). The explanation is concise yet comprehensive, emphasizing electron configuration as the key factor underlying chemical similarity.\n\nAnswer2 is also correct and covers many important points, including groups, periods, classification into metals/nonmetals/metalloids, and the role of electron arrangement. However, it is more general and less precise\u2014some statements are repetitive, and it lacks the depth of trend explanation (e.g., no mention of how ionization energy or electronegativity changes systematically). It also introduces concepts like color and density without linking them meaningfully to periodic trends.\n\nAnswer1 demonstrates superior semantic quality: it is more accurate, logically organized, and educatively robust.\n\nAnswer1",
-                "Answer1  \nAnswer2  \nTie",
-                "Answer1 provides a more precise, structured, and scientifically accurate explanation of how elements relate and differ in the Periodic Table. It clearly articulates key concepts such as atomic number, periods and groups, electronic configuration, and periodic trends (atomic radius, ionization energy, electronegativity), with a concrete example (alkali metals). The language is concise and technically robust, demonstrating a deeper understanding of the underlying principles.\n\nAnswer2 is also correct and comprehensive, covering groups, periods, physical/chemical properties, and classification into metals/nonmetals/metalloids. However, it is slightly less precise in its phrasing (e.g., \u201catomic numbers that go up by one\u201d is trivially true but not as insightful as mentioning the systematic increase in protons and electrons), and while it mentions electron arrangement, it doesn\u2019t explicitly connect it to periodic trends or outer shell configurations as clearly as Answer1 does. Additionally, Answer1 better emphasizes the *why* behind similarities and differences through electron configuration, which is central to understanding the Periodic Table.\n\nThus, Answer1 is superior in terms of depth, clarity, and scientific rigor.\n\nAnswer1"
+                "Answer1",
+                "Answer1 is more precise, structured, and scientifically accurate in explaining the relationships and differences among elements in the Periodic Table. It clearly links atomic number to arrangement, accurately describes periods and groups, and explicitly connects electron configuration (especially valence electrons) to chemical behavior. It includes specific trends (atomic radius, ionization energy, electronegativity) with directional changes across periods, and provides a concrete example (alkali metals) to illustrate group similarities.\n\nAnswer2 is also correct and comprehensive, but it is more general and slightly less precise. It mentions key concepts like valence electrons, periods, groups, and classifications (metals/nonmetals/metalloids), but lacks the depth of detail on periodic trends and the direct causal link between electron configuration and properties that Answer1 provides. It also uses more vague phrasing like \u201coften change gradually\u201d and \u201cspecial qualities,\u201d which reduces its explanatory power.\n\nAnswer1 demonstrates a superior understanding of the underlying principles and presents the information with greater clarity and scientific rigor.\n\nAnswer1",
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "Unknown",
-                "Qwen2.5-3B-Instruct"
+                "Qwen2.5-3B-Instruct",
+                "Unknown"
             ]
         },
         {
@@ -429,9 +429,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                "Answer1 and Answer2 are both accurate, comprehensive, and clearly explain the roles of key cellular components in contributing to the cell\u2019s overall function. Both mention the nucleus, cell membrane, cytoplasm, mitochondria, endoplasmic reticulum, lysosomes, and chloroplasts (noting their plant-specific presence). Both also correctly describe the functions of these organelles using appropriate scientific terminology.\n\nHowever, **Answer2** includes two additional key organelles\u2014**ribosomes** and the **Golgi apparatus**\u2014that are essential to cellular function and are not mentioned in Answer1. Ribosomes are critical for protein synthesis, and the Golgi apparatus plays a central role in modifying, sorting, and packaging proteins for transport. Including these gives Answer2 a more complete and nuanced picture of eukaryotic cell organization and function.\n\nAlso, Answer2 subtly clarifies that the cell wall is specific to plant cells, whereas Answer1 mentions chloroplasts in plant cells but omits the cell wall entirely.\n\nWhile Answer1 is well-written, Answer2 is more thorough in covering the full range of organelles and their roles, making it superior in terms of **completeness and depth**.\n\nAnswer2",
                 "Answer2",
-                "Answer2",
-                "Answer2"
+                "Answer1 and Answer2 are both highly accurate and comprehensive in explaining how different parts of a cell contribute to its overall function. Both correctly identify key organelles and their roles, including the nucleus, cell membrane, mitochondria, endoplasmic reticulum, lysosomes, and chloroplasts. \n\nHowever, **Answer2** includes the **Golgi apparatus** and **ribosomes**, which are essential organelles often central to cellular function (protein synthesis and modification/transport), and it also mentions the **cell wall** in plant cells \u2014 a structural feature not mentioned in Answer1. Additionally, Answer2 provides slightly more precise language about functional roles (e.g., \u201cchanges, sorts, and packs proteins\u201d for the Golgi), enhancing its educational depth.\n\nAnswer1 is thorough but omits ribosomes and the Golgi apparatus entirely, which are fundamental to the cell\u2019s functional architecture. While Answer1 is clear and correct, Answer2 is more complete and nuanced.\n\nThus, Answer2 provides a superior, more comprehensive explanation of cellular components and their contributions.\n\nAnswer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -765,8 +765,8 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1 and Answer2 both provide accurate and comprehensive analyses of the causes and effects of deforestation on local ecosystems. However, Answer1 is slightly superior in terms of **semantic quality** because it presents the information in a more structured, concise, and scientifically precise manner. It clearly links each effect (soil erosion, biodiversity loss, altered water cycles, increased CO2, climate impacts) directly to the removal of trees, with tighter cause-effect reasoning and more formal terminology (e.g., \u201cdisruption of water cycles,\u201d \u201catmospheric CO2 levels,\u201d \u201cenvironmental degradation\u201d).\n\nAnswer2 is also correct and accessible, but it is slightly more conversational and less precise\u2014e.g., \u201cthe soil becomes worse\u201d instead of \u201csoil degradation due to loss of root structure,\u201d or \u201cmakes climate change worse\u201d instead of \u201ccontributes to global climate change via increased greenhouse gases.\u201d While this makes Answer2 more reader-friendly, Answer1 demonstrates a higher level of analytical depth and accuracy in scientific communication.\n\nThus, Answer1 is the superior response in terms of semantic quality.\n\nAnswer1",
-                "Answer1",
+                "Answer1 provides a more structured, scientifically precise, and comprehensive analysis of the causes and effects of deforestation on local ecosystems. It clearly links tree removal to physiological and ecological processes\u2014such as oxygen-carbon dioxide balance, water cycle disruption, and climate regulation\u2014and explicitly connects habitat loss to biodiversity decline and extinction. The language is formal and accurate, avoiding vague or conversational phrasing.\n\nAnswer2 is also accurate and covers many key points, but it is less precise in its scientific terminology (e.g., \u201cthe soil becomes worse,\u201d \u201cmakes climate change worse\u201d) and slightly more anecdotal in tone. It mentions human impacts, which adds context, but lacks the depth and clarity in explaining the ecological mechanisms (e.g., how exactly water cycles are disrupted or how carbon sequestration works).\n\nAnswer1 demonstrates superior semantic quality: it is more coherent, technically accurate, and effectively communicates cause-effect relationships with greater depth and nuance.\n\nAnswer1",
+                "Answer1 provides a more structured, scientifically precise, and comprehensive analysis of the causes and effects of deforestation on local ecosystems. It clearly links tree removal to specific ecological consequences\u2014soil erosion, biodiversity loss, disrupted water cycles, increased CO2, altered climate patterns, and species extinction\u2014with accurate cause-effect relationships. The language is formal and concise, emphasizing ecological mechanisms without unnecessary tangents.\n\nAnswer2 is also accurate and covers many key points, but it is less precise in its terminology (e.g., \u201csoil becomes worse,\u201d \u201cmakes climate change worse\u201d) and slightly more colloquial. While it adds a social dimension (\u201cpeople who live near forests...\u201d), this shifts focus slightly from the primary question, which asks for analysis of the *local ecosystem*, not human socioeconomic impacts.\n\nAnswer1 maintains better focus on ecological processes and delivers a more rigorous, coherent, and academically sound response.\n\nAnswer1",
                 "Answer1"
             ],
             "extracted_answers": [
@@ -789,7 +789,7 @@
             },
             "result": [
                 "Answer1",
-                "Answer1",
+                "Answer1\n\nAnswer1 provides a more detailed, concrete, and cause-effect oriented analysis of deforestation\u2019s impact on the local ecosystem. It explicitly links human activities (cutting trees for wood, farming, urban development) to specific ecological consequences (soil erosion, disrupted water cycles, increased CO2, impacts on local communities). The answer also explains *how* trees function in the ecosystem (e.g., roots holding soil, forests regulating rain and groundwater), which adds depth and clarity. While Answer2 is accurate and concise, it is more general and lists effects without elaborating on the mechanisms or root causes to the same extent. Answer1\u2019s richer causal chain and local context make it superior in semantic quality and analytical depth. \n\nAnswer1",
                 "Answer1"
             ],
             "extracted_answers": [
@@ -813,9 +813,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1 provides a more comprehensive and technically precise explanation of the water cycle, including all five key stages (evaporation, condensation, precipitation, infiltration, and runoff), and explicitly describes the role of each stage in maintaining Earth\u2019s water balance. It also correctly includes infiltration and runoff as distinct stages, which are critical for understanding groundwater recharge and surface water distribution. The language is clear, accurate, and scientifically robust.\n\nAnswer2 is also accurate and well-structured, but it omits \u201cinfiltration\u201d and \u201crunoff\u201d as distinct processes, grouping them under \u201ccollection.\u201d While \u201ccollection\u201d is a common simplification, it lacks the nuance needed to fully explain how water is redistributed and stored. Additionally, Answer2 introduces transpiration\u2014a valid and important component\u2014but does so without integrating it into the broader interconnected system as effectively as Answer1 does. Answer1 implicitly includes transpiration under evaporation (as is standard in scientific representations), maintaining precision without overcomplicating.\n\nBoth answers are good, but Answer1 demonstrates superior depth, accuracy, and clarity in explaining the *interconnectedness* and *importance of each stage* in a scientifically rigorous way.\n\nAnswer1",
-                "Answer1",
-                "Answer1 provides a more detailed and scientifically precise explanation of the water cycle, explicitly naming and defining all five key stages (evaporation, condensation, precipitation, infiltration, and runoff), and clearly articulating the functional importance of each. It also integrates the concept of groundwater replenishment and surface runoff in a way that reflects a deeper understanding of hydrological processes.\n\nAnswer2 is clear and accurate but omits \"infiltration\" as a distinct stage, lumping it under \"collection,\" and simplifies the process by not explicitly mentioning runoff. It also includes transpiration\u2014which is correct and valuable\u2014but fails to integrate it as part of evapotranspiration, a scientifically recognized term. While Answer2 is accessible and emphasizes the life-sustaining role of the cycle, it lacks the nuance and completeness of Answer1.\n\nThe semantic quality\u2014depth of explanation, accuracy, and coverage of scientific concepts\u2014is superior in Answer1.\n\nAnswer1"
+                "Answer1 provides a more detailed, scientifically precise explanation of the water cycle, explicitly naming five key stages (including infiltration and runoff) and clearly explaining the ecological and functional importance of each. It uses accurate terminology and emphasizes how the interconnection of all stages sustains life on Earth.\n\nAnswer2 is also accurate and clear, and it correctly includes transpiration and collection, which adds valuable context. However, it is less detailed in explaining the roles of infiltration and runoff, and its language is slightly more simplistic. While it conveys the essential ideas well, it lacks the depth and nuance in describing how each stage contributes to systemic balance.\n\nAnswer1 offers superior semantic quality through greater accuracy, completeness, and explanatory depth.\n\nAnswer1",
+                "Answer1 provides a more detailed, scientifically precise explanation of the water cycle, explicitly naming all five core stages (including infiltration and runoff) and clearly explaining the function and importance of each. It also uses more accurate terminology (e.g., \u201chydrological cycle,\u201d \u201creplenishing groundwater\u201d) and offers a more nuanced explanation of how each stage supports ecosystems and human needs.\n\nAnswer2 is clear and accessible, correctly identifying the main stages and emphasizing interdependence, and it includes transpiration\u2014adding value. However, it simplifies the process somewhat and omits key components like runoff and infiltration as distinct, critical processes, instead bundling them into \u201ccollection.\u201d While its language is easier for general audiences, its scientific completeness is slightly less rigorous.\n\nGiven the emphasis on **semantic quality**\u2014accuracy, depth, and thoroughness\u2014Answer1 offers a superior, more comprehensive explanation.\n\nAnswer1",
+                "Answer1 provides a more detailed, technically accurate, and comprehensive explanation of the water cycle. It explicitly names all five major stages (evaporation, condensation, precipitation, infiltration, and runoff), defines each with precision, and connects their roles in sustaining ecosystems and human needs. It also correctly includes infiltration and runoff as distinct, essential components, which are sometimes omitted in simplified versions.\n\nAnswer2 is clear and accurate but less thorough\u2014it combines infiltration and runoff into a vague \u201ccollection\u201d stage and mentions transpiration as an add-on without integrating it as a core sub-process of evaporation (which it technically is, as evapotranspiration). While it correctly emphasizes interconnection and importance, it lacks the depth and specificity of Answer1.\n\nThe superior answer is **Answer1** for its completeness, accuracy, and clarity in explaining the interdependence of each stage.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
@@ -884,14 +884,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                "Answer1",
                 "Answer2",
-                "Answer1\n\nBoth answers are well-written and accurate, but Answer1 provides a more detailed and nuanced breakdown of each position, including specific types of defenders (center backs, fullbacks), midfielder variations (center, side, defensive/attacking), and the dual responsibilities of wingers. It also explicitly links how each role contributes to team cohesion\u2014mentioning communication, positioning, and balance between defense and attack\u2014making the explanation more holistic and vivid. Answer2 is clear and structured but slightly more generic and less rich in detail about positional subtleties.\n\nAnswer1\u2019s depth and clarity in connecting individual roles to team dynamics give it a slight edge in semantic quality. \n\nAnswer1"
+                "Answer1 and Answer2 are both accurate, well-structured, and clearly explain the roles of soccer players and how they contribute to team cohesion. However, Answer1 provides slightly more detail on the specific types of defenders (center backs, fullbacks), midfielders (central, wide, defensive/attacking roles), and wingers, offering a richer, more nuanced understanding of positional variability. It also explicitly links how each role contributes to both defense and attack in a more cohesive narrative.\n\nAnswer2 is concise and correct but more general\u2014it omits distinctions like wingers as a separate category (grouping them with forwards), and doesn\u2019t elaborate on how positioning or team dynamics enhance cohesion beyond basic communication and role understanding.\n\nThus, Answer1 demonstrates superior semantic depth and clarity in explaining the interplay of roles.\n\nAnswer1",
+                "Answer2"
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "Qwen2.5-3B-Instruct",
-                "gpt-4.1"
+                "gpt-4.1",
+                "Qwen2.5-3B-Instruct"
             ]
         }
     ],
@@ -1102,13 +1102,13 @@
             },
             "result": [
                 "Answer1",
-                "Answer1",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1 is more comprehensive, precise, and scientifically robust in its explanation of the factors influencing regional weather patterns. It uses accurate terminology (e.g., \u201catmospheric pressure systems,\u201d \u201cocean currents,\u201d \u201crain shadows,\u201d \u201ctopography\u201d) and clearly explains the mechanisms by which each factor affects weather, with concrete examples. The structure is logical and cohesive, reflecting a deeper understanding of climatology.\n\nAnswer2 is also correct and covers many of the same factors but is more superficial, uses less technical language, and includes less precise explanations. For example, it mentions human activities and El Ni\u00f1o/La Ni\u00f1a, which are relevant, but does not contextualize them as deeply or integrate them as seamlessly into the broader framework of regional weather dynamics. It reads more like a simplified summary than a thorough analysis.\n\nAnswer1\u2019s superior clarity, depth, and scientific accuracy make it the better response.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct",
-                "Unknown"
+                "Unknown",
+                "Qwen2.5-3B-Instruct"
             ]
         },
         {
@@ -1365,7 +1365,7 @@
             },
             "result": [
                 "Answer1",
-                "Answer1",
+                "Answer1 is more comprehensive in explaining the root causes of the Civil War\u2014clearly linking slavery and states\u2019 rights as central issues\u2014and provides a fuller narrative of the outcome, including the abolition of slavery and preservation of the Union. While Answer2 is accurate and concise, it presents the causes more generically (\u201ceconomic differences\u201d) without elaborating on their connection to slavery, and omits the critical outcome that slavery was abolished as a direct result of the war.\n\nAnswer1 provides deeper context and a more complete understanding of the war\u2019s significance.\n\nAnswer1",
                 "Answer1"
             ],
             "extracted_answers": [
@@ -1414,12 +1414,12 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1"
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Unknown"
             ]
         }
     ],
@@ -1437,12 +1437,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2",
-                "Answer1 and Answer2 are both accurate and clearly explain the cause of Earth's seasons, emphasizing the 23.5-degree axial tilt and its effect on sunlight distribution throughout the year. Both mention the hemispheric opposition of seasons and the role of direct sunlight in temperature variation.\n\nAnswer1 is slightly more concise and formally worded, with precise phrasing like \"orbital plane\" and \"varying amounts of sunlight.\" Answer2 is more conversational and adds a bit of explanatory detail, such as mentioning \"amount of daylight,\" which reinforces the concept.\n\nHowever, in terms of **semantic quality** \u2014 clarity, accuracy, completeness, and precision \u2014 both answers are essentially equivalent. Answer1 may have a slight edge in formality and brevity, but Answer2 does not sacrifice accuracy and even expands slightly on the effects (daylight and temperature), which enhances understanding.\n\nSince neither contains a factual error and both convey the correct explanation with equal rigor, the difference is stylistic, not substantive.\n\n**Tie**",
+                "Answer1\n\nBoth answers are accurate and convey the correct scientific explanation for the seasons: Earth\u2019s 23.5-degree axial tilt and its orbit around the Sun causing varying sunlight distribution. However, Answer1 is slightly superior in quality because it is more concise, uses precise terminology (\u201corbital plane,\u201d \u201cdirect sunlight\u201d), and clearly explains the relationship between hemisphere orientation and seasonal change without redundancy. Answer2, while correct, is more conversational and repeats ideas (e.g., \u201cthey switch\u201d and \u201cthis tilt changes\u2026\u201d) that don\u2019t add new information. Answer1 communicates the same core concepts with greater clarity and economy of language, making it the better response in terms of semantic quality.\n\nAnswer1",
+                "Answer1 and Answer2 are both accurate and clearly explain the cause of Earth\u2019s seasons: the 23.5-degree axial tilt and its effect on sunlight distribution during Earth\u2019s orbit. \n\nAnswer1 is slightly more concise and formal, using precise phrasing like \u201corbital plane\u201d and \u201cdirect sunlight,\u201d and effectively contrasts the hemispheres\u2019 experiences. \n\nAnswer2 is equally correct but adds a bit more everyday language (\u201ctop half,\u201d \u201cbottom half\u201d), which may enhance accessibility for a general audience, and explicitly mentions \u201ctemperature and the amount of daylight,\u201d which adds a useful effect-oriented detail.\n\nBoth answers contain the same core scientific facts, with Answer2 offering marginally more contextual detail without introducing errors. However, Answer1\u2019s clarity and technical precision give it a slight edge in quality.\n\n**Answer1**",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct",
                 "Unknown"
             ]
@@ -1460,14 +1460,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a clear, detailed, and accessible explanation of the seasonal cycle, including directional references (Northern and Southern Hemispheres), the effect on sunlight and temperature, and the switching pattern between hemispheres. It uses plain language suitable for a general audience and effectively conveys the mechanism of seasonal change.\n\nAnswer2 is also accurate and concise, correctly identifying axial tilt, orbit, and the relationship between tilt direction and sunlight intensity. However, it is slightly more abstract and omits explicit mention of the \u201cswitching\u201d between hemispheres, which Answer1 includes for clarity.\n\nBoth answers are scientifically correct, but Answer1\u2019s added contextual details (e.g., \u201ctop half,\u201d \u201cbottom half,\u201d \u201cswitch\u201d) make the explanation more intuitive and complete for someone seeking to understand why seasons occur. Thus, Answer1 has a slight edge in communicative quality.\n\nAnswer1",
-                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a clear, accessible explanation with concrete examples (Northern and Southern Hemispheres switching seasons) and includes details about daylight and temperature changes, making it more intuitive for a general audience. Answer2 is also accurate and concise but is slightly more abstract and lacks the illustrative examples that help solidify understanding.\n\nBoth are factually correct and well-structured, but Answer1\u2019s added context (e.g., \u201ctop half,\u201d \u201cbottom half,\u201d \u201camount of daylight\u201d) makes it more pedagogically effective. Therefore, it edges out Answer2 in terms of quality and explanatory depth.\n\nAnswer1"
+                "Answer1  \nAnswer2  \nTie\n\nAnswer1 and Answer2 are both accurate, clear, and scientifically correct in explaining the cause of Earth\u2019s seasons due to the 23.5-degree axial tilt and the resulting variation in sunlight exposure over the year. \n\nAnswer1 is slightly more conversational and includes a helpful visualization by referring to the \"top half\" and \"bottom half\" of the Earth (Northern and Southern Hemispheres), which may aid understanding for a general audience. Answer2 is more concise and uses slightly more precise language such as \u201corbital plane\u201d and \u201cdirect sunlight,\u201d which may appeal to a more technically inclined reader.\n\nBoth responses convey the essential information with equal fidelity. Neither contains errors, omissions, or misleading statements. The difference is stylistic, not substantive.\n\nThus, the quality of both answers is equivalent.\n\nTie",
+                "Answer1",
+                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a clear, accessible explanation with examples (Northern and Southern Hemispheres switching seasons) and connects the tilt to temperature and daylight changes, making it easier for a general audience to understand. Answer2 is also accurate and concise but slightly more technical and lacks the illustrative examples that enhance comprehension.\n\nBoth answers are factually correct and cover the essential points\u2014axial tilt, orbit, varying sunlight, and season reversal between hemispheres. However, Answer1\u2019s added clarification about daylight and temperature makes it marginally more complete and pedagogically effective.\n\n**Answer1**"
             ],
             "extracted_answers": [
                 "Unknown",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Unknown"
             ]
         }
     ],
@@ -1556,12 +1556,12 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie\n\nAnswer2 is more concise and uses precise terminology (\"rotates on its axis\") without unnecessary repetition, while still conveying the complete scientific explanation. Answer1 is also correct and more elaborated, but includes redundant phrasing such as \u201cthe Earth turns around\u201d (vague) and \u201cthis turning makes the pattern of day and night that we see,\u201d which adds no new information. Answer2 is clearer, more efficient, and scientifically more accurate in its wording.\n\nAnswer2"
+                "Answer1",
+                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a clear, detailed, and accessible explanation suitable for a general audience. It breaks down the concept step by step\u2014emphasizing the rotation, the orientation toward/away from the Sun, and the 24-hour cycle. It also explicitly connects the mechanism to the experience we observe (\"every place on Earth has both day and night every day\"), which enhances understanding.\n\nAnswer2 is more concise and equally accurate. It uses precise scientific terminology (\"rotates on its axis\") and captures the essential mechanism without redundancy. While shorter, it contains no inaccuracies and is scientifically sound.\n\nBoth answers are factually correct and communicate the same core idea effectively. Answer1 is slightly more explanatory for beginners; Answer2 is more elegant and compact. Since the question asks for the \"quality of the answer\" and not length or style preference, and both are semantically accurate and clear, the difference is marginal.\n\nThus, the best judgment is:\n\nTie",
+                "Answer1  \nAnswer2  \nTie  \n\n(Tie)  \n\nBoth answers are factually accurate and clearly explain the cause of day and night through Earth\u2019s rotation. Answer1 provides a slightly more detailed explanation\u2014mentioning the 24-hour cycle and emphasizing that every place experiences both day and night\u2014which may aid understanding for younger or less experienced readers. Answer2 is more concise but equally correct and scientifically precise. Since both are semantically correct, clear, and complete, neither is clearly superior to the other.  \n\nTie"
             ],
             "extracted_answers": [
-                "Unknown",
+                "gpt-4.1",
                 "Unknown",
                 "Unknown"
             ]
@@ -1725,12 +1725,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1  \nAnswer2  \n\nBoth answers accurately explain the reason for leap years: the Earth\u2019s orbit takes approximately 365.25 days, and adding a day every four years compensates for the fractional day to keep the calendar aligned with the seasons.  \n\nAnswer1 is slightly more precise in terminology \u2014 it refers to \u201csynchronize the calendar year with the solar year,\u201d which is the technical phrasing used in astronomy and calendar science. It also explicitly mentions February 29, adding useful detail.  \n\nAnswer2 is clear and correct but slightly less formal and omits the specific date (February 29). It also says \u201cthe seasons do not change over time,\u201d which is slightly misleading \u2014 the seasons don't *change* in the sense of disappearing, but they *shift* relative to the calendar without the adjustment.  \n\nDespite these minor differences, both are factually sound and clearly written. However, Answer1 provides a more complete and technically accurate explanation.  \n\nAnswer1",
+                "Answer1 is superior because it provides a more precise and nuanced explanation. It correctly states that the Earth's orbital period is approximately 365.25 days and explicitly links the addition of February 29 to the goal of aligning the calendar with the solar year. It also uses more formal and accurate phrasing (\u201csynchronize the calendar year with the solar year\u201d), which enhances clarity and scientific rigor.\n\nAnswer2 is mostly correct but is slightly less precise\u2014it simplifies the reasoning by saying \u201cevery four years we add an extra day,\u201d without acknowledging that there are exceptions to the leap year rule (e.g., years divisible by 100 but not by 400 are not leap years). While this-level of detail isn't strictly necessary for a basic explanation, Answer1\u2019s phrasing is more complete and semantically stronger.\n\nVote: Answer1",
                 "Answer1",
                 "Answer1"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
+                "Unknown",
                 "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct"
             ]
@@ -1990,7 +1990,7 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1"
+                "Answer1 is superior because it provides a more comprehensive and accurate explanation of evaporation, including the molecular mechanism (molecules gaining energy to escape as vapor), and offers a wider variety of clear, relatable everyday examples (wet clothes drying, puddles disappearing, sweating, spilled alcohol, etc.). It also correctly distinguishes evaporation from boiling by implicitly focusing on processes occurring below boiling point (e.g., puddles, clothes drying), even without explicitly stating the difference in those terms.\n\nAnswer2 is correct but significantly more brief and lacks depth. It mentions only two examples and omits key everyday phenomena like sweating or alcohol evaporation, which are important for building a full understanding. It also doesn't explain the underlying mechanism, making it less educational.\n\nThe quality, completeness, and clarity of Answer1 make it the better response.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -2111,7 +2111,7 @@
             "result": [
                 "Answer2",
                 "Answer2",
-                "Answer2 is superior because it provides a more complete, nuanced, and engaging narrative that captures the emotional and thematic elements of the story with greater clarity and flow. It includes key contextual details \u2014 such as Harry's orphan status and abusive living conditions with the Dursleys \u2014 which establish his backstory and character motivation. It also clearly connects Voldemort\u2019s motive (to return through immortality) to the death of Harry\u2019s parents, reinforcing the central conflict. The phrasing \u201cBy working together and being brave, they stop Voldemort from coming back\u201d subtly but effectively underscores the story\u2019s themes of friendship and courage, which are central to the\u54c8\u5229\u6ce2\u7279 series.\n\nWhile Answer1 is accurate and concise, it lacks the emotional depth and narrative cohesion of Answer2. Answer2 reads more like a compelling summary suitable for someone unfamiliar with the story, making it more effective overall.\n\nAnswer2"
+                "Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -2302,7 +2302,7 @@
             },
             "result": [
                 "Answer1",
-                "Answer1 and Answer2 are both well-structured, practical, and comprehensive in their approach to designing a recycling campaign. They share many similar elements: educational materials (posters, labels), recycling bins, class competitions, guest speakers/workshops, and efforts to foster community engagement and long-term behavioral change.\n\nHowever, **Answer1** has a slight edge in quality due to its inclusion of **social media as a tool for peer-to-peer learning and broader visibility**, which adds a modern, scalable, and psychologically effective dimension to the campaign. Social media engagement can extend the campaign\u2019s impact beyond the school walls and encourage sustained participation through digital accountability and peer influence. Additionally, the phrasing in Answer1 is slightly more polished and cohesive, with clearer transitions between ideas.\n\nAnswer2 is also strong \u2014 particularly in its emphasis on regular monthly reporting, which fosters transparency and motivation \u2014 but lacks the innovative digital component that gives Answer1 a more contemporary and holistic outreach strategy.\n\nThus, Answer1 is superior in overall quality and strategic depth.\n\nAnswer1",
+                "Answer1",
                 "Answer1"
             ],
             "extracted_answers": [
@@ -2518,7 +2518,7 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1 provides a comprehensive, practical, and thoughtful guide on how to compose a poem about friendship. It offers clear structural advice\u2014choosing themes, mood, form, imagery, and revision techniques\u2014and emphasizes emotional authenticity, which is essential in poetry. It\u2019s instructive, accessible, and empowers the reader to create their own meaningful work.\n\nAnswer2, while beautifully written and poetically lyrical, is itself a poem\u2014not an answer to the question \u201cHow would you compose\u2026\u201d The question asks for guidance on the *process* of composing, not an example of one. As such, Answer2 fails to address the prompt directly, despite its aesthetic merit.\n\nThe quality of an answer is judged by how well it fulfills the request. Answer1 does so thoroughly; Answer2 does not.\n\nAnswer1"
+                "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -2804,7 +2804,7 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                "Answer1",
+                "Answer1\n\nAnswer1 provides a rich, immersive, and emotionally resonant narrative from the perspective of a single ant, offering vivid sensory details (smells of flowers and soil, cleaning antennae, scent trails), clear behavioral accuracy (pheromone trails, division of labor, helping injured comrades), and a cohesive story arc from dawn to dusk. It humanizes the ant without anthropomorphizing unrealistically, staying grounded in real ant biology while crafting a compelling personal journey.\n\nAnswer2 is accurate in general facts but reads like a dry, encyclopedic summary\u2014it lacks narrative depth, perspective, and emotional texture. It mentions roles in the colony but fails to portray a \u201cday in the life\u201d from an individual\u2019s point of view, making it feel generic and impersonal.\n\nThe question asks for a *story*, which demands character, journey, and atmosphere\u2014qualities present in Answer1 but absent in Answer2.\n\nAnswer1",
                 "Answer1",
                 "Answer1"
             ],
@@ -3406,12 +3406,12 @@
             },
             "result": [
                 "Answer1",
-                "Answer1",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct",
+                "Unknown",
                 "Qwen2.5-3B-Instruct"
             ]
         },
@@ -3549,14 +3549,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2",
                 "Answer1",
-                "Answer1\n\nWhile both answers present thoughtful selections, Answer1 is superior in quality because it provides a more balanced and globally impactful ranking by including **antibiotics** \u2014 a medical breakthrough that saved tens of millions of lives and fundamentally altered human demography and public health. This choice reflects a broader understanding of \u201csignificance,\u201d encompassing not just technological or communicative progress, but also human survival and well-being.\n\nAnswer2, while accurate in its description of the transistor and airplane, omits critical non-technological inventions with profound humanitarian consequences. The transistor is unquestionably foundational to the digital age, but its significance is largely absorbed into the internet and personal computer \u2014 which are already covered in Answer1. However, by replacing antibiotics (a life-saving medical invention) with the airplane (a transformative but less universally life-preserving invention), Answer2 skews toward technological progress at the expense of human health, which arguably had a more profound and immediate global impact in the 20th century.\n\nAnswer1\u2019s ranking better reflects a holistic view of \u201csignificance,\u201d incorporating health, information access, and personal empowerment \u2014 making it more comprehensive and nuanced.\n\nAnswer1"
+                "Answer2",
+                "Answer2"
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct"
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         },
         {
@@ -3572,7 +3572,7 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                "Answer2\n\nWhile Answer1 correctly identifies important inventions (internet, transistor, airplane), it overlooks one of the most transformative and life-saving innovations of the 20th century: antibiotics. Answer2 includes antibiotics, which had a profound, measurable impact on human survival and public health\u2014far exceeding the societal impact of the airplane in terms of lives saved and global health outcomes. Additionally, Answer2 replaces the transistor with the personal computer, which is a more tangible, widely experienced technological milestone for the general public, even if the transistor is its foundational component. Answer2 also acknowledges the subjectivity of ranking and presents a more balanced, evidence-based argument grounded in global impact across health, communication, and technology. The inclusion of antibiotics elevates Answer2 significantly in terms of completeness and historical significance.",
+                "Answer2",
                 "Answer2",
                 "Answer2"
             ],
@@ -3791,12 +3791,12 @@
             "result": [
                 "Answer1  \nAnswer2  \nTie",
                 "Answer1",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer1"
             ],
             "extracted_answers": [
                 "Unknown",
                 "Qwen2.5-3B-Instruct",
-                "Unknown"
+                "Qwen2.5-3B-Instruct"
             ]
         },
         {
@@ -3837,12 +3837,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1 provides a more thoughtful, nuanced, and theoretically grounded assessment of celebrity influence. It acknowledges the dual nature of influence (positive and negative), emphasizes the importance of critical thinking and media literacy, and offers a constructive framework for understanding how young people can navigate these influences\u2014without relying on methodological tools or data collection techniques.\n\nAnswer2, while detailed in its proposed methods of measurement (surveys, social media metrics, observations), focuses heavily on *how to measure* influence rather than *assessing* it. The question asks for an assessment\u2014i.e., an evaluation or analysis of the nature and significance of the influence\u2014not a research methodology. As such, Answer2 misses the core intent of the question by shifting the focus to empirical detection rather than qualitative understanding.\n\nTherefore, Answer1 is superior in semantic quality, depth, and alignment with the question.\n\nAnswer1",
+                "Answer2",
                 "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -4221,12 +4221,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2",
+                "Answer1",
                 "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Qwen2.5-3B-Instruct",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -5229,14 +5229,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie  \n\nTie",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer1  \nAnswer2  \nTie\n\nAnswer1 and Answer2 are both accurate and clearly explain the three states of matter\u2014solid, liquid, and gas\u2014with appropriate descriptive details about particle behavior and physical properties. Answer1 emphasizes particle arrangement and motion, which is scientifically precise, while Answer2 focuses on macroscopic properties like shape and volume, which is also correct and accessible.\n\nNeither response has a significant advantage in semantic quality, accuracy, or clarity. Both are equally effective for a general audience.\n\nTie",
+                "Answer1 and Answer2 both correctly identify the three states of matter: solid, liquid, and gas. \n\nAnswer1 provides a slightly more scientifically precise explanation by describing the behavior of particles in each state (closely packed, can flow, move freely), which reflects a deeper understanding of the microscopic nature of matter.\n\nAnswer2 describes macroscopic behaviors (shape and size) accurately and clearly, but does not reference particle behavior, making it somewhat less comprehensive from a scientific standpoint.\n\nWhile both answers are correct, Answer1 offers a more complete and conceptually richer explanation.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "Unknown",
                 "Unknown",
-                "Unknown"
+                "Qwen2.5-3B-Instruct"
             ]
         },
         {
@@ -5541,13 +5541,13 @@
             },
             "result": [
                 "Answer2",
-                "Answer2",
-                "Answer1"
+                "Answer1",
+                "Answer2"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct",
-                "gpt-4.1"
+                "gpt-4.1",
+                "Qwen2.5-3B-Instruct"
             ]
         }
     ],
@@ -5613,14 +5613,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie  \n\nThe two answers are nearly identical in content and accuracy. Both correctly list all eight lunar phases, albeit with slight variations in capitalization (\u201cNew Moon\u201d vs. \u201cnew moon\u201d) and terminology (\u201cThird Quarter\u201d vs. \u201cLast Quarter\u201d\u2014both are acceptable, though \u201cLast Quarter\u201d is more commonly used today). Both also provide a correct, concise explanation of why the phases occur (due to the Moon\u2019s orbit and changing visibility of sunlit portions).  \n\nThe only substantive difference is stylistic: Answer1 uses \u201cThird Quarter,\u201d which is technically correct but less common in modern usage; Answer2 uses \u201cLast Quarter,\u201d which is more widely used in educational contexts today. Neither answer contains a factual error, and both are clear and accurate.  \n\nThus, they are equivalent in quality.  \n\nTie",
-                "Answer1  \nAnswer2  \nTie",
-                "Answer1"
+                "Answer1",
+                "Answer1",
+                "Answer1  \nAnswer2  \nTie  \n\nAnswer1 and Answer2 are nearly identical in content and accuracy. Both list all eight standard lunar phases correctly. Answer1 uses \"Third Quarter,\" while Answer2 uses \"Last Quarter\"\u2014both terms are commonly accepted, though \"Last Quarter\" is more frequently used in modern astronomy; however, \"Third Quarter\" is not incorrect. Answer1 capitalizes the phase names, while Answer2 uses lowercase\u2014this is a stylistic difference, not a semantic one. Both explain the cause of the phases accurately: the Moon\u2019s orbit around Earth and the changing portion of its sunlit side visible from Earth.\n\nThere is no meaningful difference in semantic quality, accuracy, or completeness.\n\nTie"
             ],
             "extracted_answers": [
-                "Unknown",
-                "Unknown",
-                "Qwen2.5-3B-Instruct"
+                "Qwen2.5-3B-Instruct",
+                "Qwen2.5-3B-Instruct",
+                "Unknown"
             ]
         },
         {
@@ -5636,13 +5636,13 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                "Answer2\n\nWhile both answers are largely correct, Answer2 is superior because it uses the more accurate term \"Third Quarter\" instead of \"Last Quarter.\" Although \"Last Quarter\" is commonly used interchangeably, \"Third Quarter\" is the technically correct term in astronomical contexts, as it refers to the third of four primary phases in the lunar cycle. Additionally, Answer2 maintains consistent capitalization and provides a clearer, more precise explanation by correctly stating that the illuminated side faces the Sun (which explains why we see different phases). Answer1\u2019s phrasing \u201cwe see different amounts of sunlight on the moon\u201d is slightly imprecise \u2014 it\u2019s not that the sunlight on the moon changes, but rather our viewing angle of the sunlit portion changes.\n\nThus, Answer2 is semantically more accurate and precise. \n\nAnswer2",
-                "Answer1\n\nBoth answers are largely accurate, but Answer1 is superior because it correctly uses \u201cLast Quarter\u201d instead of \u201cThird Quarter.\u201d While \u201cThird Quarter\u201d is sometimes used colloquially, the standard astronomical term is \u201cLast Quarter.\u201d Answer1 also provides a slightly clearer and more complete explanation of why the phases occur (\u201cwe see different amounts of sunlight on the moon\u201d), which enhances understanding. Answer2\u2019s phrasing \u201cits illuminated side facing the Sun\u201d is technically correct but less precise\u2014since the entire illuminated hemisphere always faces the Sun, the phases arise from our changing viewing angle, not from the side facing the Sun changing.\n\nThus, Answer1 demonstrates greater accuracy and clarity.\n\nAnswer1",
+                "Answer2",
+                "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "gpt-4.1",
+                "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct"
             ]
         }
@@ -5806,12 +5806,12 @@
             },
             "result": [
                 "Answer1  \nAnswer2  \nTie",
-                "Tie",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer1"
             ],
             "extracted_answers": [
                 "Unknown",
-                "TIE",
+                "Unknown",
                 "Qwen2.5-3B-Instruct"
             ]
         },
@@ -5901,14 +5901,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie\n\nThe two answers are both strong, clear, and accurately apply democratic principles\u2014emphasizing open dialogue, equal participation, structured decision-making, and majority voting. Answer1 adds a slight nuance by mentioning the formation of a committee to investigate, which adds depth to the process. Answer2 is more streamlined and emphasizes respect, time equity, and clarity in solution-listing, which enhances inclusivity.\n\nBoth are semantically accurate, well-reasoned, and equally effective in applying democratic norms to a school council conflict. Neither contains factual errors or logical gaps. The differences are stylistic, not substantive.\n\n**Tie**",
-                "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer2",
+                "Answer1",
+                "Answer1 and Answer2 both present strong, thoughtful applications of democratic principles to resolve a student council conflict. They emphasize key democratic values: open expression, equal participation, fair voting, and respect for majority decision-making.\n\nHowever, **Answer1** provides a slightly more nuanced and structured approach by introducing the step of forming a committee to investigate the issue and present findings before voting. This adds a layer of deliberative democracy\u2014ensuring decisions are informed by evidence and diverse input, not just instantaneous opinion. It also explicitly mentions achieving unity and fairness as goals, enhancing the ethical dimension.\n\n**Answer2** is clear, practical, and well-organized, but it is somewhat more simplistic, treating the process as a straightforward discussion followed by a vote, without the intermediate step of investigation or analysis.\n\nThe added depth and procedural sophistication in **Answer1** make it superior in quality.\n\nAnswer1"
             ],
             "extracted_answers": [
+                "gpt-4.1",
                 "Qwen2.5-3B-Instruct",
-                "Unknown",
-                "Unknown"
+                "Qwen2.5-3B-Instruct"
             ]
         },
         {
@@ -5998,12 +5998,12 @@
             },
             "result": [
                 "Answer1",
-                "Answer1",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct",
+                "Unknown",
                 "Qwen2.5-3B-Instruct"
             ]
         },
@@ -6020,14 +6020,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie",
                 "Answer1",
-                "Answer1"
+                "Answer1  \nAnswer2  \nTie\n\nTie",
+                "Answer1  \nAnswer2  \nTie  \n\nAnswer1 provides a clear, step-by-step explanation that includes important contextual details such as the necessity of a right angle, the definition of the hypotenuse, and how to rearrange the formula depending on which side is unknown. It explicitly gives both forms of the rearranged equations (a\u00b2 = c\u00b2 \u2212 b\u00b2 and c\u00b2 = a\u00b2 + b\u00b2), which enhances clarity for a beginner.  \n\nAnswer2 is also correct and concise, with proper mathematical notation and logical structure. However, it omits the explicit mention of taking the square root at the end in the general method (though it implies it in the examples), and does not reiterate the condition that the triangle must be right-angled as clearly as Answer1 does.\n\nBoth answers are accurate, but Answer1 is slightly more thorough in ensuring the user understands the prerequisites and all possible cases. Therefore, the higher quality answer is:\n\nAnswer1"
             ],
             "extracted_answers": [
-                "Unknown",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Unknown",
+                "Unknown"
             ]
         }
     ],
@@ -6356,13 +6356,13 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                "Answer2 is superior because it provides a more rigorous and scientifically grounded explanation rooted in aerodynamic principles. It correctly emphasizes lift, drag, angle of attack, and the importance of optimization based on wind conditions\u2014concepts central to geometry and physics in flight design. It also highlights the iterative process of testing and refinement, showing deeper understanding. While Answer1 contains practical advice (e.g., 5:4 ratio, tail length, materials), it lacks the conceptual depth and precise technical language. Answer2 more accurately connects geometry to functional flight performance and demonstrates greater conceptual mastery.\n\nAnswer2",
                 "Answer1",
+                "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
                 "gpt-4.1",
+                "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct"
             ]
         }
@@ -6502,7 +6502,7 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1\n\nAnswer1 provides a clear, step-by-step, practical guide grounded in hands-on circuit troubleshooting. It systematically addresses all major failure points in a torch: batteries, contacts, bulb/LED, wiring, switch, and potential short/open circuits\u2014while also mentioning tools (multimeter, soldering iron) and safety. The answer is comprehensive, logically ordered, and reflects real-world repair methodology.\n\nAnswer2 is accurate and covers similar concepts but is significantly more abstract and lacks actionable detail. It mentions checking components but omits critical repair steps like cleaning contacts, replacing parts, soldering, or testing continuity. It reads more like a preliminary diagnosis list than a repair procedure.\n\nThe superior response is the one that not only identifies problems but explains how to fix them\u2014Answer1 does this effectively.\n\nAnswer1"
+                "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -6596,7 +6596,7 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                "Answer1",
+                "Answer1 is superior because it provides a more comprehensive, accurate, and nuanced explanation of why one feels tired after physical exercise. It correctly identifies multiple physiological factors \u2014 ATP depletion, anaerobic respiration leading to lactic acid buildup, dehydration and electrolyte loss, nervous system fatigue, and increased demand on the cardiovascular and respiratory systems \u2014 and explains how each contributes to fatigue. The explanation is well-structured and connects each mechanism logically to the final sensation of tiredness.\n\nAnswer2 is accurate in mentioning glycogen depletion, ATP, lactic acid, and cardiovascular strain, but it misses key points like dehydration, electrolyte imbalance, and nervous system fatigue. Additionally, the final sentence \u2014 \u201cthe body also adapts to the stress of exercise, which can make it feel more tired as it becomes accustomed to the demands placed on it\u201d \u2014 is misleading. Adaptation generally reduces fatigue over time (e.g., increased mitochondrial density, better oxygen delivery), not increases it. This inaccuracy diminishes the overall quality of Answer2.\n\nThus, Answer1 is more complete, precise, and scientifically sound.\n\nAnswer1",
                 "Answer1",
                 "Answer1"
             ],
