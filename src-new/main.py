@@ -201,7 +201,7 @@ def main() -> None:
     judgement_files_directory = config["judgement_files_directory"]
     excel_output_directory = config["excel_output_directory"]
 
-    timeout_handler = TimeBasedTimeoutHandler(threshold=400, logger=logger)
+    timeout_handler = TimeBasedTimeoutHandler(threshold=400)
 
     prompt, prompt_template = get_prompt(
         tasks["prompting_parameters"]["prompt_file"],
