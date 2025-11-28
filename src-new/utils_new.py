@@ -113,7 +113,7 @@ def prepare_question_with_intro(
             + str(question)
         )
     else:
-        print(f"Unknown style '{style}' for question. No introductory text added.")
+        logging.error(f"Unknown style '{style}' for question. No introductory text added.")
         return question
 
 

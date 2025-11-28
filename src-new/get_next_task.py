@@ -2,43 +2,49 @@ import json
 import os
 import sys
 from typing import Dict, List, Tuple, Optional
+import logging
+
+logger = logging.getLogger(__name__)
+
 
 def check_if_all_data_processed(input_dir, data_1_path):
     """
     Check if all data has been processed by comparing the last index in the newest JSON file
     with the expected length from the reference file.
-    
+
     Args:
         input_dir (str, optional): Input directory path. If None, uses parsed args.
         data_1_path (str, optional): Path to reference data file. If None, uses parsed args.
-    
+
     Returns:
         bool: True if all data is processed, False otherwise.
         int: The last index found in the newest JSON file.
     """
-    files = [f for f in os.listdir(input_dir) if f.endswith('.json')]
-    newest_file = max(
-        files,
-        key=lambda f: os.path.getmtime(os.path.join(input_dir, f))
-    )
+    files = [f for f in os.listdir(input_dir) if f.endswith(".json")]
+    newest_file = max(files, key=lambda f: os.path.getmtime(os.path.join(input_dir, f)))
 
-    print(f"Newest file found: {os.path.join(input_dir, newest_file)}", file=sys.stderr)
+    logger.info(f"Newest file found: {os.path.join(input_dir, newest_file)}")
 
-    with open(os.path.join(input_dir, newest_file), 'r') as f:
+    with open(os.path.join(input_dir, newest_file), "r") as f:
         data = json.load(f)
 
     indices = [int(indice) for indice in data.keys() if indice != "metadata"]
     max_index = max(indices)
 
-    with open(data_1_path, 'r') as f:
+    with open(data_1_path, "r") as f:
         length_reference_file = len(f.readlines()) - 1  # index starts at 0
 
     if max_index == length_reference_file:
-        print(f"Data processed completely. Last index in judge file: {max_index}, expected: {length_reference_file}", file=sys.stderr)
+        logger.info(
+            f"Data processed completely. Last index in judge file: {max_index}, expected: {length_reference_file}"
+        )
         return True, max_index
     else:
-        print(f"Data not processed completely. Last index in judge file: {max_index}, expected: {length_reference_file}", file=sys.stderr)
+        logger.info(
+            f"Data not processed completely. Last index in judge file: {max_index}, expected: {length_reference_file}"
+        )
         return False, max_index
+
 
 def load_available_answer_files() -> List[str]:
     """Load list of available answer files from the generated_answers directory."""
@@ -66,12 +72,15 @@ def validate_base_data_exists(
         raise FileNotFoundError(
             f"Base data file {base_data_file_name}.json not found in data/generated_answers/"
         )
-    
+
+
 def get_base_data(base_data: str, base_data_variant: str) -> str:
     """Get the full base data file name."""
     available_answer_files = load_available_answer_files()
     validate_base_data_exists(base_data, base_data_variant, available_answer_files)
-    with open(generate_base_data_file_name(base_data, base_data_variant) + ".json", "r") as f:
+    with open(
+        generate_base_data_file_name(base_data, base_data_variant) + ".json", "r"
+    ) as f:
         return json.load(f)
 
 
@@ -104,9 +113,8 @@ def mark_task(
     tasks: Dict, model_name: str, task: Dict, message: str, index: Optional[int] = None
 ) -> None:
     """Mark a task with a specific message and save to tasks.json."""
-    print(
-        f"Base data for {task['compare_against']} not found, marking task as {message}",
-        file=sys.stderr,
+    logger.info(
+        f"Base data for {task['compare_against']} not found, marking task as {message}"
     )
 
     # Update task in-place at the same index
@@ -133,10 +141,9 @@ def get_next_valid_task(
         # Check if the required comparison data exists
         if normalize_compare_against(task["compare_against"]) not in available_files:
             mark_task(tasks, model_name, task, "MISSING_BASE_DATA")
-            print(f"Available files: {available_files}", file=sys.stderr)
-            print(
-                f"Required file {normalize_compare_against(task['compare_against'])}.json not found.",
-                file=sys.stderr,
+            logger.info(f"Available files: {available_files}")
+            logger.info(
+                f"Required file {normalize_compare_against(task['compare_against'])}.json not found."
             )
             continue
 
@@ -157,16 +164,14 @@ def get_next_valid_task(
                 judgement_dir, data_1_path
             )
             if all_data_processed:
-                print(
-                    f"Judgements already exist in {judgement_dir}, marking task as FINISHED",
-                    file=sys.stderr,
+                logger.info(
+                    f"Judgements already exist in {judgement_dir}, marking task as FINISHED"
                 )
                 mark_task(tasks, model_name, task, "FINISHED")
                 continue
             else:
-                print(
-                    f"Judgements in {judgement_dir} are incomplete, proceeding with task",
-                    file=sys.stderr,
+                logger.info(
+                    f"Judgements in {judgement_dir} are incomplete, proceeding with task"
                 )
                 mark_task(tasks, model_name, task, "IN_PROGRESS", index=last_index)
 
@@ -198,9 +203,7 @@ def main(tasks_file) -> Dict[str, str]:
 
     validate_base_data_exists(base_data, base_data_variant, available_files)
 
-    model_name, task = get_next_valid_task(
-        tasks, base_data, base_data_variant
-    )
+    model_name, task = get_next_valid_task(tasks, base_data, base_data_variant)
 
     # Prepare output variables
     answer_file1 = create_json_file_name(base_data, base_data_variant)
@@ -213,7 +216,6 @@ def main(tasks_file) -> Dict[str, str]:
     }
 
 
-# Execute main logic
 if __name__ == "__main__":
     # Load configuration and available files
     assert len(sys.argv) == 2, "Usage: python get_next_task.py <tasks_file>"

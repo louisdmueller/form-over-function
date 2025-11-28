@@ -1,7 +1,9 @@
 import json
 import os
 from typing import Any
+import logging
 
+logger = logging.getLogger(__name__)
 
 def load_tasks_file(tasks_file_path: str) -> dict:
     with open(tasks_file_path, "r") as file:
@@ -106,11 +108,11 @@ if __name__ == "__main__":
     tasks_file_path = "tasks.json"
     tasks = load_tasks_file(tasks_file_path)
     next_not_finished_task = get_next_not_finished_task_with_base_data_variant(tasks)
-    print("Next not finished task:", next_not_finished_task)
+    logger.info(f"Next not finished task: {next_not_finished_task}")
 
     mark_variant_as_done(
         next_not_finished_task,
         next_not_finished_task["base_data_variant"],
         tasks_file_path,
     )
-    print("Marked variant as done for the first task.")
+    logger.info("Marked variant as done for the first task.")
