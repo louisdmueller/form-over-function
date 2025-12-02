@@ -2,7 +2,6 @@ import json
 
 import yaml
 
-from calculate_readability_metrics import load_onestopqa
 from model import get_model
 from prompts import (
     aave_prompt,
@@ -100,6 +99,7 @@ def rewrite_onestopqa(
     prompt_type: str = "simple",
     outfile: str = "data/readability_metrics/onestopqa_test_data/simple_prompt.json",
 ) -> None:
+    from calculate_readability_metrics import load_onestopqa
     with open("config.yml", "r") as file:
         config = yaml.safe_load(file)
 
