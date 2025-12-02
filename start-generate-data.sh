@@ -47,6 +47,12 @@ else
     source venv/bin/activate
 fi
 
+if [ ! -d "data/chen-et-al" ]; then
+    mkdir -p ./data/chen-et-al
+    cd ./data/chen-et-al
+    curl -O https://raw.githubusercontent.com/FreedomIntelligence/Humans_LLMs_Judgement_Bias/refs/heads/main/data/raw.json
+fi
+
 answer_generation_model="gemini-1.5-flash"
 
 if [[ $# -ge 1 ]]; then
