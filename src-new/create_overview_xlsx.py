@@ -12,12 +12,14 @@ from collections import defaultdict
 import os
 from typing import Dict, List, Tuple
 import pandas as pd
+import logging
 
 from analyze_results import (
     load_json_file,
     run_analysis_on_judgements,
 )
 
+logger = logging.getLogger(__name__)
 
 JUDGEMENTS_DIR = "data/judgements"
 
@@ -92,11 +94,11 @@ def process_pair_results(
         exp_file_exists = os.path.exists(experiment_file)
         base_file_exists = os.path.exists(base_file)
         if not (exp_file_exists and base_file_exists):
-            print("Skipping pair - missing files: ")
+            logger.info("Skipping pair - missing files: ")
             if not exp_file_exists:
-                print(f"- {experiment_file}")
+                logger.info(f"- {experiment_file}")
             if not base_file_exists:
-                print(f"- {base_file}")
+                logger.info(f"- {base_file}")
             continue
 
         # Run analysis and extract results

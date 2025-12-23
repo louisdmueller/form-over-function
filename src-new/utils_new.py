@@ -113,7 +113,7 @@ def prepare_question_with_intro(
             + str(question)
         )
     else:
-        print(f"Unknown style '{style}' for question. No introductory text added.")
+        logging.error(f"Unknown style '{style}' for question. No introductory text added.")
         return question
 
 
@@ -159,7 +159,7 @@ class TimeBasedTimeoutHandler:
     """
 
     # TODO: passing the logger as argument is a bit clunky, refactor this
-    def __init__(self, threshold: int = 300, logger=logging.getLogger(__name__)):
+    def __init__(self, threshold: int = 300):
         """
         Initialize the TimeBasedTimeoutHandler.
 
@@ -167,7 +167,7 @@ class TimeBasedTimeoutHandler:
             end_time (int): The end time as a unix timestamp.
             threshold (int): The threshold in seconds to consider the timeout imminent. Default is 300 seconds (5 minutes).
         """
-        self.logger = logger
+        self.logger = logging.getLogger()
         self.logger.info("Initializing TimeBasedTimeoutHandler.")
 
         job_start_time = os.getenv("SLURM_JOB_START_TIME")
