@@ -1,7 +1,8 @@
 #!/bin/bash
 #SBATCH --partition="cpu"
-#SBATCH --job-name="Reasoning analysis"
-#SBATCH --output=%j-%x.out
+#SBATCH --job-name="reasoning-analysis"
+#SBATCH --output=outputs/slurm/%x/%j.out
+#SBATCH --error=outputs/slurm/%x/%j.err
 #SBATCH --time=2:30:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
@@ -12,7 +13,9 @@
 set -e # exit on error
 set -u # treat unset variables as an error
 
-# export HF_HOME=/pfs/work9/workspace/scratch/hd_dg324-models
+SCRIPT_DIR=$(dirname "$(realpath "$0")")
+MAIN_DIR=$(dirname "$SCRIPT_DIR")
+cd "$MAIN_DIR"
 
 echo "Time is $(date +"%H:%M %d-%m-%y") ($(date +%s))"
 echo "Endtime is $(date -d "@${SLURM_JOB_END_TIME}" '+%H:%M %d-%m-%y') (${SLURM_JOB_END_TIME})"
@@ -32,4 +35,4 @@ else
     source venv/bin/activate
 fi
 
-python src/analyze_reasonings.py
+python src/evaluation/analyze_reasonings.py

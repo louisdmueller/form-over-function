@@ -3,7 +3,7 @@ import os
 import sys
 
 # -> export PYTHONPATH=src/
-from utils import parse_args
+from utils.utils import parse_args
 
 
 def check_if_all_data_processed(input_dir=None, data_1_path=None):

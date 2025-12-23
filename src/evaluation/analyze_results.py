@@ -1,17 +1,15 @@
-from collections import defaultdict
+import argparse
 import json
 import os
 import statistics
-import argparse
+from collections import defaultdict
 from typing import Dict, Optional, Tuple
-
-from pandas import DataFrame
 
 # from analyze_reasonings import analyze_reasonings_topic_model
 import pandas as pd
+from pandas import DataFrame
 
-from utils_new import remove_organization_from_hf_model_name
-
+from utils.utils import remove_organization_from_hf_model_name
 
 perturbations = ["default", "simple", "aae"]
 
@@ -358,6 +356,7 @@ def run_analysis_on_judgements(
         "v1": outcomes["better_model_wins_file1"],
         "v2": outcomes["worse_model_wins_file1"],
         "ties": outcomes["ties_file1"],
+        "smp": outcomes["better_model_wins_file1"] / (outcomes["better_model_wins_file1"] + outcomes["worse_model_wins_file1"])
     }
     pd.DataFrame([result]).to_excel(
         os.path.join(
@@ -376,13 +375,13 @@ def main():
     )
     parser.add_argument(
         "--file1",
-        default="/home/hd/hd_hd/hd_go226/projects/research-project/data/judgements/GPT4.1-vs-gemini-1.5-flash/Llama-3.3-70B-Instruct/merged_data.json",
+        default="/data/judgements/GPT4.1-vs-gemini-1.5-flash/Llama-3.3-70B-Instruct/merged_data.json",
         type=str,
         help="Path to the first JSON results file",
     )
     parser.add_argument(
         "--file2",
-        default="/home/hd/hd_hd/hd_go226/projects/research-project/data/judgements/Llama-3.3-70B-Instruct---gpt-4.1_basic-vs-gemini-1.5-flash/merged_data.json",
+        default="/data/judgements/Llama-3.3-70B-Instruct---gpt-4.1_basic-vs-gemini-1.5-flash/merged_data.json",
         type=str,
         help="Path to the second JSON results file",
     )
@@ -400,13 +399,6 @@ def main():
     )
 
     parser.add_argument(
-        "--analyze_reasonings",
-        action="store_true",
-        help="If set, analyze reasonings using topic modeling",
-        default=False,
-    )
-
-    parser.add_argument(
         "--output_directory",
         type=str,
         default="data/analysis_results",
@@ -419,13 +411,6 @@ def main():
     file1_data = load_json_file(args.file1)
     file2_data = load_json_file(args.file2)
 
-    # if args.analyze_reasonings:
-    #     analyze_reasonings_topic_model(
-    #         file2_data,
-    #         args.better_model_name,
-    #         args.worse_model_name,
-    #         args.output_directory,
-    #     )
     run_analysis_on_judgements(
         file1_data,
         file2_data,

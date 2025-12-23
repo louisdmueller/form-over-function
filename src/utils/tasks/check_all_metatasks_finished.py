@@ -10,13 +10,12 @@ It then submits a new SLURM job array for the next meta level task that is not y
 If no meta level tasks are left, it exits.
 """
 from get_next_task_new import (
-    is_all_meta_tasks_finished,
     get_next_meta_task_filepath,
-    load_tasks_file,
+    is_all_meta_tasks_finished,
     is_all_subtasks_finished,
+    load_tasks_file,
     mark_meta_task_as_finished,
 )
-
 from utils_new import parse_args
 
 if __name__ == "__main__":

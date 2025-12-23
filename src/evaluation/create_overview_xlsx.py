@@ -8,13 +8,14 @@ Model columns are sorted by the strength of the model.
 The output file is saved as "overview_{experiment_name}.xlsx" in the "data/judgements" directory.
 """
 
-from collections import defaultdict
-import os
-from typing import Dict, List, Tuple
-import pandas as pd
 import logging
+import os
+from collections import defaultdict
+from typing import Dict, List, Tuple
 
-from analyze_results import (
+import pandas as pd
+
+from src.evaluation.analyze_results import (
     load_json_file,
     run_analysis_on_judgements,
 )
@@ -87,7 +88,7 @@ def process_pair_results(
     results = defaultdict(dict)
 
     for experiment_folder, base_folder in pairs:
-        filename = "judgements.json" #"merged_data.json"
+        filename = "judgements.json"
         experiment_file = os.path.join(experiment_folder, filename)
         base_file = os.path.join(base_folder, filename)
 

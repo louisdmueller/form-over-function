@@ -1,6 +1,6 @@
 from rouge_score import rouge_scorer
 
-from utils import read_file
+from utils.utils import read_file
 
 original_answers = read_file("data/generated_answers/gpt-4.1-answers.json")
 error_answers = read_file("data/generated_answers/gpt-4.1_errors-answers.json")

@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH --partition=dev_gpu_h100
-#SBATCH --job-name=GPT4.1-vs-Qwen2-0.5B-Instruct
-#SBATCH --output=%j-%x.out
-#SBATCH --error=%j-%x.err
+#SBATCH --job-name=JudgeAnswers-AAVE
+#SBATCH --output=outputs/slurm/%x/%j.out
+#SBATCH --error=outputs/slurm/%x/%j.err
 #SBATCH --time=00:30:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
@@ -14,8 +14,6 @@
 set -e
 
 echo Time is `date +"%H:%M %d-%m-%y"`
-
-export PYTHONPATH=${PWD}/src/
 
 ## we have to decide which cuda version to use
 # module load devel/cuda/11.7
@@ -39,31 +37,22 @@ output_dir="data/${SLURM_JOB_NAME}/Qwen2.5-72B-Instruct"
 data_1_path="data/Qwen2-0.5B-Instruct-answers.json"
 mkdir -p "$output_dir"
 
-
 # judge_model_name="meta-llama/Llama-3.3-70B-Instruct"
 judge_model_name="Qwen/Qwen2.5-72B-Instruct"
 # judge_model_name="mistralai/Mistral-7B-Instruct-v0.2"
 # judge_model_name="RandomAnswer"
 
-### Compare answers from the worse model to the answers from the better model
-python src/compare_model_answers_batched.py \
-    --judge_model_name_or_path "$judge_model_name" \
-    --data_1_path "$data_1_path" \
-    --data_2_path "data/gpt-4.1-answers_aae.json" \
-    --output_path "$output_dir" \
-    --start_index "auto" \
-    --step_size 142 # optional, default is 32
-    # --question_switching # uncomment to switch questions between e.g. AAE and SAE style (depends if questions in files differ)
-    # --introductionary_beginning # uncomment to add an introductionary beginning to the prompt e.g. "Hi there, I am kind of stuck on this question..."
-    # --prompt_switching # TODO
-
+### Compare answers using the main.py script
+cd src
+python -u main.py \
+    --config_path "../config.yml" \
+    --tasks_file "../tasks_files/tasks_gpt-oss-120b.json"
+cd ..
 
 # This checks whether all answers have been generated
 # If script returns 0, we will continue with merging the results
-if python src/check_if_all_data_processed.py --data_1_path "$data_1_path" --input_dir "$output_dir/"; then
-    echo "All answers have been generated. Proceeding to merge results."
-    python src/merge_json_files.py \
-        --merge_path "$output_dir"
+if python src/utils/slurm_helper_scripts/check_if_all_data_processed.py --data_1_path "$data_1_path" --input_dir "$output_dir/"; then
+    echo "All answers have been generated. Judgements processing complete."
 else
     echo "Not all answers have been generated. Launching new job."
     sbatch start-generate-judgements_aae.sh

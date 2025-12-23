@@ -11,7 +11,7 @@ from datasets import load_dataset
 from easse.sari import corpus_sari  # type: ignore
 from spacy.matcher import Matcher
 
-from utils import read_file, write_file
+from utils.utils import read_file, write_file
 
 
 def calculate_readability_metrics(texts: List[str] | str, verbose: bool = True) -> dict:

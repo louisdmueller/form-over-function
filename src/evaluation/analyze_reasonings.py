@@ -12,7 +12,7 @@ from pandas import DataFrame
 from wordcloud import WordCloud
 
 from prompts import cluster_descriptions_prompt, extract_reasons_prompt
-from utils import load_config
+from utils.utils import load_config
 
 nltk.download("punkt")
 nltk.download("stopwords")
@@ -192,11 +192,11 @@ def analyze_reasonings_topic_model(
     
     
 if __name__ == "__main__":
-    with open("/home/hd/hd_hd/hd_go226/projects/research-project/debug/judgements/gpt-4.1/vs_Llama-3.1-8B-Instruct/phi-4/judgements.json", "r") as f:
+    with open("/debug/judgements/gpt-4.1/vs_Llama-3.1-8B-Instruct/phi-4/judgements.json", "r") as f:
         file_data_baseline = json.load(f)
-    analyze_reasonings_topic_model(file_data_baseline, "wordclouds/baseline", "gpt-4.1", "Llama-3.1-8B-Instruct", "output/baseline/extracted_strengths_weaknesses_baseline.json"
+    analyze_reasonings_topic_model(file_data_baseline, "outputs/figures/wordclouds/baseline", "gpt-4.1", "Llama-3.1-8B-Instruct", "outputs/figures/wordclouds/baseline/extracted_strengths_weaknesses_baseline.json"
     )
-    with open("/home/hd/hd_hd/hd_go226/projects/research-project/debug/judgements/gpt-4.1_aae/vs_Llama-3.1-8B-Instruct/phi-4/judgements.json", "r") as f:
+    with open("/debug/judgements/gpt-4.1_aae/vs_Llama-3.1-8B-Instruct/phi-4/judgements.json", "r") as f:
         file_data_aae = json.load(f)
-    analyze_reasonings_topic_model(file_data_aae, "wordclouds/aae", "gpt-4.1", "Llama-3.1-8B-Instruct", "output/aae/extracted_strengths_weaknesses_aae.json"
+    analyze_reasonings_topic_model(file_data_aae, "outputs/figures/wordclouds/aae", "gpt-4.1", "Llama-3.1-8B-Instruct", "outputs/figures/wordclouds/aae/extracted_strengths_weaknesses_aae.json"
     )

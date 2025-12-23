@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH --partition=dev_gpu_h100
 #SBATCH --job-name="JudgeAnswers-SimpleLanguage"
-#SBATCH --output=%j-%x.out
-#SBATCH --error=%j-%x.err
+#SBATCH --output=outputs/slurm/%x/%j.out
+#SBATCH --error=outputs/slurm/%x/%j.err
 #SBATCH --time=00:30:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
@@ -14,8 +14,6 @@
 set -e
 
 echo Time is `date +"%H:%M %d-%m-%y"`
-
-export PYTHONPATH=${PWD}/src/
 
 ## we have to decide which cuda version to use
 # module load devel/cuda/11.7
@@ -62,17 +60,12 @@ experiment_name="simple_language-$(basename "${judge_model_name}")---$model_1-vs
 output_dir="${judgments_path}${experiment_name}"
 mkdir -p "$output_dir"
 
-### Compare answers from the worse model to the answers from the better model
-python src/compare_model_answers_batched.py \
-    --judge_model_name_or_path "$judge_model_name" \
-    --data_1_path "${data_path}${model_1_file}" \
-    --data_2_path "${data_path}${model_2_file}" \
-    --output_path "$output_dir" \
-    --start_index "auto" \
-    --step_size 142 # optional, default is 64
-    # --question_switching # uncomment to switch questions between e.g. AAE and SAE style (depends if questions in files differ)
-    # --introductionary_beginning # uncomment to add an introductionary beginning to the prompt e.g. "Hi there, I am kind of stuck on this question..."
-    # --prompt_switching # TODO
+### Compare answers using the main.py script
+cd src
+python -u main.py \
+    --config_path "../config.yml" \
+    --tasks_file "../tasks_files/tasks_gpt-oss-120b.json"
+cd ..
 
 #############################################################################################################
 #############################################################################################################

@@ -2,10 +2,14 @@ import argparse
 import json
 import logging
 import os
+import random
+import string
 import time
-from typing import Dict, List
+from typing import Any, Dict, List
 
+import pandas as pd
 import yaml
+from gguf import Optional
 
 
 def parse_args() -> argparse.Namespace:
@@ -15,6 +19,21 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Argument parser for our research project."
     )
+    
+    parser.add_argument(
+        "--prompt_model_name_or_path",
+        type=str,
+        default="gpt-4.1",
+        help="Path to the prompt model.",
+    )
+
+    parser.add_argument(
+        "--answer_generation_model_name_or_path",
+        type=str,
+        default="gemini-1.5-flash",
+        help="Path to the answer generation model.",
+    )
+
 
     parser.add_argument(
         "--config_path",
@@ -40,6 +59,25 @@ def parse_args() -> argparse.Namespace:
         default="tasks_files/meta_tasks.json",
         help="Path to the meta tasks JSON file.",
     )
+    
+    parser.add_argument(
+        "--data_path",
+        type=str,
+        default="data/chen-et-al/raw_data.json",
+        help="Path to the raw data.",
+    )
+
+    parser.add_argument(
+        "--output_path", type=str, default=None, help="Path to the output file."
+    )
+
+    parser.add_argument(
+        "--comment",
+        type=str,
+        default="",
+        help="Comment to add to the output file metadata.",
+    )
+
 
     args = parser.parse_args()
     return args
@@ -56,6 +94,10 @@ def get_prompt(prompt_file: str, prompt_key: str) -> tuple[str, str]:
         prompts = json.load(f)
     return prompts[prompt_key]["system"], prompts[prompt_key]["template"]
 
+def random_id(length=8):
+    chars = string.ascii_letters + string.digits
+    return "".join(random.choices(chars, k=length))
+
 
 def load_available_answer_files() -> set:
     import os
@@ -71,7 +113,7 @@ def load_available_answer_files() -> set:
     return answer_files
 
 
-def get_full_model_variant(data_name: str, data_variant: str) -> str:
+def get_full_model_variant(data_name: str, data_variant: Optional[str]) -> str:
     if not data_variant:
         return data_name
     return f"{data_name}_{data_variant}"
@@ -89,6 +131,34 @@ def read_data_file(file_path: str) -> List[Dict]:
     with open(file_path, "r") as f:
         data = [json.loads(line) for line in f]
     return data
+
+def write_file(file_path: str, data: List[Dict[str, Any]]) -> None:
+    """
+    Write a list of dicts to a Jsonl file.
+    """
+    with open(file_path, "w") as f:
+        for entry in data:
+            f.write(json.dumps(entry) + "\n")
+            
+
+def sanitize_output_path(output_path: str, model_name: str) -> str:
+    """
+    If the model name contains a slash and is part of the output path,
+    replace the model name in the output path with a sanitized version
+    that has the slash removed.
+
+    Args:
+        output_path (str): The original output path.
+        model_name (str): The model name that may contain a slash.
+
+    Returns:
+        str: The sanitized output path.
+    """
+    if "/" in model_name and model_name in output_path:
+        sanitized_model_name = remove_organization_from_hf_model_name(model_name)
+        output_path = output_path.replace(model_name, sanitized_model_name)
+    return output_path
+
 
 
 def prepare_question_with_intro(

@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH --partition="gpu_h100"
 #SBATCH --job-name="JudgeAnswers"
-#SBATCH --output=%j-%x.out
-#SBATCH --error=%j-%x.err
+#SBATCH --output=outputs/slurm/%x/%j.out
+#SBATCH --error=outputs/slurm/%x/%j.err
 #SBATCH --time=00:30:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
@@ -95,36 +95,21 @@ mkdir -p "$output_dir"
 echo "Experiment name: $experiment_name"
 echo "Output directory: $output_dir"
 
-### Compare answers from the worse model to the answers from the better model
-python -u src/compare_model_answers_batched.py \
-    --judge_model_name_or_path "$judge_model" \
-    --data_1_path "${data_path}${answer_file1}" \
-    --data_2_path "${data_path}${answer_file2}" \
-    --output_path "$output_dir" \
-    --start_index "auto" \
-    --end_time "$end_time" \
-    --data_fraction 1 # process all data, for testing you can set e.g. 0.1 to only process 10% of the data
-    # --question_switching # uncomment to switch questions between e.g. AAE and SAE style (depends if questions in files differ)
-    # --introductionary_beginning # uncomment to add an introductionary beginning to the prompt e.g. "Hi there, I am kind of stuck on this question..."
-    # --prompt_switching # TODO
+### Compare answers using the main.py script
+cd src
+python -u main.py \
+    --config_path "../config.yml" \
+    --tasks_file "../tasks_files/tasks_gpt-oss-120b.json"
+cd ..
 
 echo ""
 
-# This checks whether all answers have been generated
-# If script returns 0, we will continue with merging the results
-# data_1_path is just used to compare how many answers there should be
-if python src/slurm_helper_scripts/check_if_all_data_processed.py --data_1_path "${data_path}${answer_file1}" --input_dir "$output_dir/"; then
-    python src/slurm_helper_scripts/set_task_finished.py "$judge_model" "$model_2"
-    echo "All answers have been generated. Proceeding to merge results."
-    python src/merge_json_files.py \
-        --merge_path "$output_dir"
-    
-    echo "Converting merged JSON to XLSX..."
-    python src/export_to_xlsx.py \
-        --json_path "$output_dir/merged_data.json" \
-        --xlsx_path "$output_dir/$experiment_name.xlsx"
-
-    echo Starting next job to generate more judgements.
+# The main.py script automatically creates merged data and xlsx files
+# Check if the tasks are complete
+if python src/utils/slurm_helper_scripts/check_if_all_data_processed.py --data_1_path "${data_path}${answer_file1}" --input_dir "$output_dir/"; then
+    echo "All answers have been generated. Judgements processing complete."
+    python src/utils/slurm_helper_scripts/set_task_finished.py "$judge_model" "$model_2"
+    echo "Starting next job to generate more judgements."
 else
     echo "Not all answers have been generated. Launching new job."
 fi

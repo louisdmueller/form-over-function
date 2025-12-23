@@ -1,17 +1,13 @@
-from abc import ABC, abstractmethod
+import os
 import re
+from abc import ABC, abstractmethod
 from string import ascii_letters, digits
-import sys
-from typing import Any, List, Dict
-from openai import OpenAI
+from typing import Dict, List, Optional
+
 from google import genai
 from google.genai.types import GenerateContentConfig
-from tqdm import tqdm
-from transformers import AutoModelForCausalLM, AutoTokenizer  # type: ignore
-from transformers.pipelines import pipeline
-import torch
-from torch.utils.data import Dataset
 from huggingface_hub import repo_exists
+from openai import OpenAI
 
 MAX_OUTPUT_TOKENS = 512
 
@@ -26,8 +22,6 @@ class Model(ABC):
         self,
         system_prompts: List[str],
         input_texts: List[str],
-        num_generations: int = 1,
-        **kwargs,
     ) -> List[List[str]]:
         """
         Input is a list of system prompts and a list of input texts.
@@ -38,15 +32,23 @@ class Model(ABC):
         """
         pass
 
-    def create_batches(self, input_list: List[str], batch_size: int) -> List[List[str]]:
+    def apply_chat_template(
+        self,
+        input_text: str,
+        system_prompt: str = "",
+    ) -> List[Dict[str, str]]:
         """
-        Splits the input list into batches of the specified size.
+        OpenAI uses this template directly.
+        HuggingFace models have a method .apply_chat_template() themselves,
+        that takes the output of this method and applies it to the model.
+        Gemini models need to override this method to apply the chat template,
+        since they can not be passed a role-based chat template like OpenAI or HuggingFace.
         """
-        batched_inputs = [
-            input_list[i : i + batch_size]
-            for i in range(0, len(input_list), batch_size)
-        ]
-        return batched_inputs
+        input_texts = []
+        if system_prompt:
+            input_texts.append({"role": "system", "content": system_prompt})
+        input_texts.append({"role": "user", "content": input_text})
+        return input_texts
 
     def get_response_data(
         self,
@@ -81,24 +83,6 @@ class Model(ABC):
             "extracted_answers": all_extracted_answers,
         }
 
-    def apply_chat_template(
-        self,
-        input_text: str,
-        system_prompt: str = "",
-    ) -> List[Dict[str, str]]:
-        """
-        OpenAI uses this template directly.
-        HuggingFace models have a method .apply_chat_template() themselves,
-        that takes the output of this method and applies it to the model.
-        Gemini models need to override this method to apply the chat template,
-        since they can not be passed a role-based chat template like OpenAI or HuggingFace.
-        """
-        input_texts = []
-        if system_prompt:
-            input_texts.append({"role": "system", "content": system_prompt})
-        input_texts.append({"role": "user", "content": input_text})
-        return input_texts
-
     def extract_answer(self, text: str) -> str | None:
         """
         Given a text, extract the answer from it.
@@ -106,226 +90,134 @@ class Model(ABC):
         If the answer is ambiguous (e.g. both "Answer1" and "Answer2" are present), return None.
         If no answer is found, return None.
         """
-        # Try to match at the start of the text
-        match_start = re.match(
-            r"^\s*(Answer1|Answer2|Tie)\s*",
-            text.strip().split("\n")[0],
-            flags=re.IGNORECASE,
-        )
-        # Try to match at the end of the text
-        match_end = re.match(
-            r"\s*(Answer1|Answer2|Tie)\s*$",
-            text.strip().split("\n")[-1],
-            flags=re.IGNORECASE,
-        )
 
-        # when gpt-oss uses "thinking" in the answer the answer will be at the very end but prepended "assistantfinal"
-        # e.g. "assistantfinalAnswer1"
-        # we simply just look at the last word and see whether it matches
-        match_thinking = re.search(
-            r"(Answer1|Answer2|Tie)\s*$",
-            text.strip().split("\n")[-1],
-            flags=re.IGNORECASE,
-        )
-
-        # If both start and end match but are different, return None (ambiguous answer)
-        if (
-            match_start
-            and match_end
-            and match_start.group(1).lower() != match_end.group(1).lower()
-        ):
+        if not text:
             return None
-        if match_start:
-            return match_start.group(1).lower()
-        if match_end:
-            return match_end.group(1).lower()
-        if match_thinking:
-            return match_thinking.group(1).lower()
-        # If neither matches, return None (no answer found)
-        return None
-
-    def apply_chat_template_batched(
-        self,
-        batch_input_texts: List[str],
-        batch_system_prompts: List[str],
-        kwargs: Dict[str, Any],
-    ):
-        if self.has_chat_template:
-            messages_batch = [
-                self.apply_chat_template(input_text, sys_prompt)
-                for input_text, sys_prompt in zip(
-                    batch_input_texts, batch_system_prompts
-                )
-            ]
-            formatted_inputs = [
-                self.tokenizer.apply_chat_template(
-                    msgs,
-                    return_tensors="pt",
-                    tokenize=False,
-                    add_generation_prompt=True,
-                    max_length=kwargs.get(
-                        "judge_tokenizer_max_length",
-                        self.tokenizer.model_max_length,
-                    ),  # 4096 # if OverflowError e.g. for gpt-neox
-                )
-                for msgs in messages_batch
-            ]
-        else:
-            # If no chat template is available, just concatenate the system prompt and input text
-            formatted_inputs = [
-                (sys_prompt + "\n" if sys_prompt else "") + input_text
-                for input_text, sys_prompt in zip(
-                    batch_input_texts, batch_system_prompts
-                )
-            ]
-        return formatted_inputs
+        pattern = r"^\s*\S*(Answer1|Answer2|Tie)\S*\s*$"
+        matches = []
+        for line in text.split("\n"):
+            match = re.match(pattern, line, flags=re.IGNORECASE)
+            if match:
+                matches.append(match.group(1).lower())
+        if not matches:
+            return None
+        unique_answers = set(matches)
+        if len(unique_answers) > 1:
+            return None
+        return matches[-1]
 
 
-class HuggingfaceModel(Model):
-    def __init__(self, model_name_or_path: str, **kwargs):
+class vLLMModel(Model):
+    def __init__(self, model_name_or_path: str, config: dict, tasks: Optional[dict]=None):
+        from vllm import LLM, SamplingParams
+
+        # from vllm.sampling_params import BeamSearchParams
+        # from torch.cuda import device_count
+
         super().__init__(model_name_or_path)
-        self.model = AutoModelForCausalLM.from_pretrained(
-            pretrained_model_name_or_path=model_name_or_path,
-            # torch_dtype=torch.float16,
-            torch_dtype=torch.bfloat16,
-            device_map="auto",
-            # max_memory=kwargs.get("max_memory", {0: "92GB", 1: "92GB"}),
-            cache_dir=kwargs.get("cache_dir", None),
-            force_download=kwargs.get("force_download", False),
-        )
-        self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
-        self.tokenizer.pad_token = self.tokenizer.eos_token
-        self.tokenizer.padding_side = "left"
-        self.model.generation_config.pad_token_id = self.tokenizer.pad_token_id
 
-        # Newer models are optimized for chat-based interactions and have a chat template
-        self.has_chat_template = (
-            hasattr(self.tokenizer, "chat_template")
-            and self.tokenizer.chat_template is not None
+        if config.get("model_zipped"):
+            # unzip the model to TMPDIR if it is zipped
+            import zipfile
+
+            with zipfile.ZipFile(model_name_or_path, "r") as zip_ref:
+                tmpdir = os.environ.get("TMPDIR")
+                if tmpdir is None:
+                    raise ValueError("TMPDIR environment variable not set.")
+                unzip_path = os.path.join(
+                    tmpdir, os.path.basename(model_name_or_path) + "_unzipped"
+                )
+                zip_ref.extractall(unzip_path)
+                model_name_or_path = unzip_path
+
+        config_mode = "mistral" if "mistral" in model_name_or_path else "auto"
+
+        # Provide default values if tasks is not provided
+        if tasks is None:
+            tasks = {
+                "vllm_parameters": {"tensor_parallel_size": 2},
+                "model_parameters": {"dtype": "bfloat16", "num_generations": 1, "max_output_tokens": MAX_OUTPUT_TOKENS},
+                "sampling_parameters": {}
+            }
+
+        self.llm = LLM(
+            model=model_name_or_path,
+            tensor_parallel_size=tasks["vllm_parameters"].get(
+                "tensor_parallel_size", 2
+            ),  # device_count()
+            dtype=tasks["model_parameters"].get("dtype", "bfloat16"),
+            max_model_len=4096,
+            download_dir=config.get("cache_dir", None),
+            tokenizer_mode=config_mode,
+            load_format=config_mode,
+            config_format=config_mode,
+            limit_mm_per_prompt={"image": 0},  # disable multimodal for this project
         )
 
-        self.model.eval()
+        # Clean up sampling parameters by removing None values
+        sampling_params = tasks.get("sampling_parameters", {})
+        for key, item in list(sampling_params.items()):
+            if item is None:
+                del sampling_params[key]
+
+        # Decide whether to use sampling or beam search
+        self.has_sampling_param = any(
+            k in sampling_params for k in ("temperature", "top_p", "min_p", "top_k")
+        )
+
+        # if self.has_sampling_param:
+        # Use SamplingParams when any sampling parameter is set
+        self.sampling_params = SamplingParams(
+            # TODO: (also see in generate method) Decide whether we want to continue using our own sampling params
+            # or just use the sampling params recommended by the model creators, which get loaded automatically if we don't set them here
+            # temperature=sampling_params.get("temperature", 0.0),
+            # top_p=sampling_params.get("top_p", 1.0),
+            # min_p=sampling_params.get("min_p", 0.0),
+            # top_k=sampling_params.get("top_k", -1),
+            n=tasks["model_parameters"].get("num_generations", 3),
+            max_tokens=tasks["model_parameters"].get(
+                "max_output_tokens", MAX_OUTPUT_TOKENS
+            ),
+        )
+        # else:
+        #     self.beam_search_params = BeamSearchParams(
+        #         beam_width=tasks["model_parameters"].get("num_generations", 3),
+        #         max_tokens=tasks["model_parameters"].get(
+        #             "max_output_tokens", MAX_OUTPUT_TOKENS
+        #         ),
+        #     )
 
     def format_inputs(
-        self, input_texts: List[str], system_prompts: List[str], **kwargs
-    ) -> List[str]:
-        if self.has_chat_template:
-            messages_batch = [
-                self.apply_chat_template(input_text, sys_prompt)
-                for input_text, sys_prompt in zip(input_texts, system_prompts)
-            ]
-            formatted_inputs = [
-                self.tokenizer.apply_chat_template(
-                    msgs,
-                    return_tensors="pt",
-                    tokenize=False,
-                    add_generation_prompt=True,
-                    max_length=kwargs.get(
-                        "judge_tokenizer_max_length",
-                        self.tokenizer.model_max_length,
-                    ),  # 4096 # if OverflowError e.g. for gpt-neox
-                )
-                for msgs in messages_batch
-            ]
-        else:
-            # If no chat template is available, just concatenate the system prompt and input text
-            formatted_inputs = [
-                (sys_prompt + "\n" if sys_prompt else "") + input_text
-                for input_text, sys_prompt in zip(input_texts, system_prompts)
-            ]
-        return formatted_inputs
+        self,
+        input_texts: List[str],
+        system_prompts: List[str],
+    ) -> list[List[Dict[str, str]]]:
+        messages_batch = [
+            self.apply_chat_template(input_text, sys_prompt)
+            for input_text, sys_prompt in zip(input_texts, system_prompts)
+        ]
+        return messages_batch
 
     def generate(
         self,
         system_prompts: List[str],
         input_texts: List[str],
-        num_generations: int = 1,
-        timeout_handler=None,
-        **kwargs,
     ) -> List[List[str]]:
-        """
-        Batched inference for HuggingfaceModel.
-        """
-        # Not all models support batched inference and max_output_tokens, so it is not passed as an argument.
-        batch_size = kwargs.get("batch_size", 12)
-        max_output_tokens = kwargs.get("max_output_tokens", MAX_OUTPUT_TOKENS)
+        inputs = self.format_inputs(input_texts, system_prompts)
+        # if self.has_sampling_param:
+        outputs = self.llm.chat(inputs, sampling_params=self.sampling_params)
+        # outputs has this format: outputs[j].output.outputs[i].text
+        outputs = [
+            [output.text for output in generation.outputs] for generation in outputs
+        ]
+        # else:
+        # TODO: Decide whether we want to continue using beam search or just use the sampling params recommended by the model creators
+        # beam_inputs = [{"prompt": text} for text in inputs]
+        # outputs = self.llm.beam_search(beam_inputs, self.beam_search_params)
+        # # outputs has this format: outputs[j].output.outputs[i].text
+        # outputs = [[output.text for output in generation.outputs] for generation in outputs]
 
-        print(f"Processing {len(input_texts)} examples")
-        print(f"Batch size: {batch_size}")
-        print(f"Number of generations: {num_generations}")
-        print(f"Max output tokens: {max_output_tokens}")
-
-        all_outputs = []
-
-        batched_system_prompts = self.create_batches(system_prompts, batch_size)
-        batched_input_texts = self.create_batches(input_texts, batch_size)
-
-        print(f"Created {len(batched_input_texts)} batches")
-
-        for batch_system_prompts, batch_input_texts in tqdm(
-            zip(batched_system_prompts, batched_input_texts),
-            total=len(batched_input_texts),
-            desc="Processing batches",
-            unit="batch",
-            disable=False,
-            file=sys.stdout,
-        ):
-            print("Inside loop")
-            formatted_inputs = self.format_inputs(
-                batch_input_texts, batch_system_prompts, **kwargs
-            )
-
-            tokenized_inputs = self.tokenizer(
-                formatted_inputs,
-                return_tensors="pt",
-                padding=True,
-                truncation=True,
-                max_length=kwargs.get(
-                    "judge_tokenizer_max_length", self.tokenizer.model_max_length
-                ),  # 4096 # if OverflowError e.g. for gpt-neox
-            )
-            print("Tokenized inputs")
-
-            tokenized_inputs = tokenized_inputs.to(self.model.device)
-            input_length = tokenized_inputs["input_ids"].shape[1]
-
-            with torch.no_grad(), torch.autocast("cuda", dtype=torch.bfloat16):
-                output = self.model.generate(
-                    **tokenized_inputs,
-                    max_new_tokens=max_output_tokens,
-                    num_beams=num_generations,
-                    num_return_sequences=num_generations,
-                    do_sample=kwargs.get("do_sample", False),
-                    top_p=kwargs.get("top_p", None),
-                    min_p=kwargs.get("min_p", None),
-                    top_k=kwargs.get("top_k", None),
-                    temperature=kwargs.get("temperature", None),
-                    return_dict_in_generate=True,
-                )
-
-            print("Generated output")
-
-            sequences = output.sequences
-            # Remove the input part from the generated sequences
-            generated_sequences = sequences[:, input_length:]
-            decoded_sequences = self.tokenizer.batch_decode(
-                generated_sequences, skip_special_tokens=True
-            )
-            responses_flattened = [seq.strip() for seq in decoded_sequences]
-
-            grouped_responses = [
-                responses_flattened[i : i + num_generations]
-                for i in range(0, len(responses_flattened), num_generations)
-            ]
-            all_outputs.extend(grouped_responses)
-
-            print("Processed batch")
-            if timeout_handler and timeout_handler.is_timeout_imminent():
-                print("Timeout imminent, stopping generation.")
-                break
-
-        return all_outputs
-
+        return outputs
 
 class OpenAIModel(Model):
     def __init__(self, model_name_or_path: str, api_key: str):
@@ -345,11 +237,7 @@ class OpenAIModel(Model):
             )
         else:
             responses = []
-            for input_text, system_prompt in tqdm(
-                zip(input_texts, system_prompts),
-                total=len(input_texts),
-                desc="Generating model responses",
-            ):
+            for input_text, system_prompt in zip(input_texts, system_prompts):
                 message = self.apply_chat_template(input_text, system_prompt)
                 response_batch = []
                 for _ in range(num_generations):
@@ -366,8 +254,7 @@ class OpenAIModel(Model):
                 self.temperature = response.temperature
             
             return responses
-
-
+        
 class GeminiModel(Model):
     def __init__(self, model_name_or_path: str, api_key: str):
         super().__init__(model_name_or_path)
@@ -405,8 +292,7 @@ class GeminiModel(Model):
             responses.append(response_batch)
 
         return responses
-
-
+    
 class ClaudeModel(Model):
     def __init__(self, model_name_or_path: str, api_key: str):
         super().__init__(model_name_or_path)
@@ -427,11 +313,7 @@ class ClaudeModel(Model):
             )
         else:
             responses = []
-            for input_text, system_prompt in tqdm(
-                zip(input_texts, system_prompts),
-                total=len(input_texts),
-                desc="Processing Claude inputs",
-            ):
+            for input_text, system_prompt in zip(input_texts, system_prompts):
                 message = self.apply_chat_template(input_text)
                 response_batch = []
                 for _ in range(num_generations):
@@ -477,87 +359,7 @@ class RandomAnswer(Model):
             responses.append(response_batch)
         return responses
 
-
-class HuggingfacePipelineDataset(Dataset):
-    def __init__(self, formatted_inputs: List[Dict[str, str]]):
-        self.data = formatted_inputs
-
-    def __len__(self):
-        return len(self.data)
-
-    def __getitem__(self, idx):
-        return self.data[idx]
-
-
-class HuggingfacePipelineModel(Model):
-    def __init__(self, model_name_or_path: str, **kwargs):
-        # super().__init__(model_name_or_path, **kwargs)
-        self.pipe = pipeline(
-            "text-generation",
-            model=model_name_or_path,
-            torch_dtype=kwargs.get("torch_dtype", "auto"),
-            device_map="auto",
-        )
-        self.tokenizer = self.pipe.tokenizer
-
-        self.has_chat_template = (
-            hasattr(self.tokenizer, "chat_template")
-            and self.tokenizer.chat_template is not None
-        )
-
-    def generate(
-        self,
-        system_prompts: List[str],
-        input_texts: List[str],
-        num_generations: int = 1,
-        **kwargs,
-    ) -> List[List[str]]:
-        """
-        Batched inference for HuggingFace's Pipelined models.
-
-        Attention:
-        This class is not optimized and is only for reference.
-        In the future one should implement a dataset and dataloader for better performance.
-        Also the outputs are not extracted properly yet.
-        """
-        max_output_tokens = kwargs.get("max_output_tokens", MAX_OUTPUT_TOKENS)
-        batch_size = kwargs.get("batch_size", 12)
-
-        formatted_inputs = self.apply_chat_template_batched(
-            input_texts, system_prompts, kwargs
-        )
-        formatted_inputs = formatted_inputs[:5]
-        # dataset = HuggingfacePipelineDataset(formatted_inputs)
-
-        # The pipeline returns a flat list of outputs, each with num_return_sequences
-        outputs = self.pipe(
-            formatted_inputs,
-            batch_size=batch_size,
-            max_new_tokens=max_output_tokens,
-            num_beams=num_generations,
-            num_return_sequences=num_generations,
-            do_sample=kwargs.get("do_sample", False),
-            top_p=kwargs.get("top_p", None),
-            min_p=kwargs.get("min_p", None),
-            top_k=kwargs.get("top_k", None),
-            temperature=kwargs.get("temperature", None),
-            return_dict_in_generate=False,
-        )
-
-        print(outputs)
-
-        # Flatten and group outputs per input
-        # Each output is a dict with 'generated_text'
-        responses_flattened = [o["generated_text"].strip() for o in outputs]
-        grouped_responses = [
-            responses_flattened[i : i + num_generations]
-            for i in range(0, len(responses_flattened), num_generations)
-        ]
-
-        return grouped_responses
-
-
-def get_model(model_name_or_path: str, config: dict) -> Model:
+def get_model(model_name_or_path: str, config: dict, tasks: Optional[dict]=None) -> Model:
     if repo_exists(
         model_name_or_path, repo_type="model", token=config.get("huggingface_hub_token")
     ):
@@ -570,11 +372,7 @@ def get_model(model_name_or_path: str, config: dict) -> Model:
             )
         login(token)
 
-        return HuggingfaceModel(model_name_or_path, **config)
-        # Originally I used Huggingface's pipeline for gpt-oss but normal .generate() works fine too
-        # so I am leaving the class here for future reference
-        # return HuggingfacePipelineModel(model_name_or_path, **config)
-
+        return vLLMModel(model_name_or_path, config, tasks)
     elif "gpt" in model_name_or_path:
         if not (api_key := config.get("openai_key")):
             raise ValueError("API key is required for OpenAI models.")
