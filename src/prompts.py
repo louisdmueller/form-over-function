@@ -60,3 +60,48 @@ error_prompt = lambda question, answer: (
     f"Your question is: '{question}'\n"
     f"Rewrite and introduce a mistake for the following answer: '{answer}'"
 )
+
+extract_reasons_prompt = lambda judge_reasoning, winner, loser: (f"""Analyze this judge's reasoning and extract specific strengths and weaknesses mentioned.
+
+        Judge's reasoning:
+        '{judge_reasoning}'
+
+        Winner: '{winner}'
+        Loser: '{loser}'
+
+        Extract and list:
+        1. Specific strengths mentioned about the WINNER (be concise, one short phrase per strength)
+        2. Specific weaknesses mentioned about the LOSER (be concise, one short phrase per weakness)
+        
+        Do NOT include information that could lead to identifying the question. The strengths and weaknesses should be general and applicable to various contexts.
+        
+        Good example output:
+        
+        {{
+        "strengths": ["comprehensive and detailed explanation", "provides additional context", ...],
+        "weaknesses": ["less comprehensive", "lacks detail", "does not delve as deeply"...]
+        }}
+        
+        Bad example output:
+        
+        {{
+        "strengths": ["provides insights on accessibility of safety", "mentions importance of variety and balance", ...],
+        "weaknesses": ["doesn't mention loose wires and broken solder joint", "fails to address user safety directly", "does not delve as deeply into historians' interpretations"...]
+        }}
+
+        Format your response as JSON:
+        {{
+        "strengths": ["strength 1", "strength 2", ...],
+        "weaknesses": ["weakness 1", "weakness 2", ...]
+        }}
+
+        Only include explicitly mentioned qualities. Be specific and concise.""")
+
+cluster_descriptions_prompt = """
+        I have a cluster of descriptions of a model answer: \n[DOCUMENTS]
+        The cluster is described by the following keywords: [KEYWORDS]
+
+        Based on the above information, can you give one short concise description (1-3 words) that summarizes the main idea of this cluster.
+        It should also make clear whether the description is a strength or a weakness of the model answer, but do not explicitly mention it, i.e. the words "strength" or "weakness" should not be in the description directly.
+        Provide only the concise description without any additional explanation.
+"""
