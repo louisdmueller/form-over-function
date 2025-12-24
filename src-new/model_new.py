@@ -1,11 +1,21 @@
+import json
+import logging
 import os
 import re
 from abc import ABC, abstractmethod
+from pathlib import Path
 from typing import Dict, List
 
 from huggingface_hub import repo_exists
 
 MAX_OUTPUT_TOKENS = 512
+
+try:  # Anthropics SDK is optional for local-only runs
+    import anthropic
+except ImportError:  # pragma: no cover - handled at runtime
+    anthropic = None
+
+logger = logging.getLogger(__name__)
 
 
 class Model(ABC):
@@ -101,7 +111,6 @@ class Model(ABC):
         if len(unique_answers) > 1:
             return None
         return matches[-1]
-
 
 class vLLMModel(Model):
     def __init__(self, model_name_or_path: str, config: dict, tasks: dict):
@@ -208,6 +217,220 @@ class vLLMModel(Model):
         return outputs
 
 
+class AnthropicBatchModel(Model):
+    def __init__(self, model_name_or_path: str, config: dict, tasks: dict):
+        super().__init__(model_name_or_path)
+        if anthropic is None:
+            raise ImportError(
+                "Anthropic SDK is required but not installed. Please `pip install anthropic`."
+            )
+
+        self.client = anthropic.Anthropic(api_key=self._resolve_api_key(config))
+        self.tasks = tasks
+        self.mode = os.getenv("ANTHROPIC_MODE", "submit").lower()
+        if self.mode not in {"submit", "retrieve"}:
+            raise ValueError("ANTHROPIC_MODE must be either 'submit' or 'retrieve'.")
+
+        self.num_generations = max(1, tasks.get("model_parameters", {}).get("num_generations", 1))
+        self.max_tokens = tasks.get("model_parameters", {}).get(
+            "max_output_tokens", MAX_OUTPUT_TOKENS
+        )
+        self.sampling_parameters = tasks.get("sampling_parameters", {})
+        self.state_path = self._resolve_state_path(config)
+        self.results_path = self._resolve_results_path(config)
+
+    def generate(
+        self,
+        system_prompts: List[str],
+        input_texts: List[str],
+    ) -> List[List[str]]:
+        if self.mode == "submit":
+            self._submit_batch(system_prompts, input_texts)
+            raise SystemExit(
+                "Anthropic batch submitted. Re-run with ANTHROPIC_MODE=retrieve once processing completes."
+            )
+        return self._retrieve_batch()
+
+    def format_inputs(
+        self,
+        input_texts: List[str],
+        system_prompts: List[str],
+    ) -> List[List[Dict[str, str]]]:
+        return [
+            self.apply_chat_template(input_text, sys_prompt)
+            for input_text, sys_prompt in zip(input_texts, system_prompts)
+        ]
+
+    def _submit_batch(self, system_prompts: List[str], input_texts: List[str]) -> None:
+        requests, request_metadata = self._build_requests(system_prompts, input_texts)
+        if not requests:
+            raise ValueError("No requests to submit to Anthropic.")
+
+        batch = self.client.beta.messages.batches.create(requests=requests)
+        state_payload = {
+            "batch_id": batch.id,
+            "requests": request_metadata,
+            "num_inputs": len(input_texts),
+            "num_generations": self.num_generations,
+            "results_path": str(self.results_path),
+        }
+        self._write_state(state_payload)
+        logger.info("Submitted Anthropic batch %s with %d requests.", batch.id, len(requests))
+
+    def _retrieve_batch(self) -> List[List[str]]:
+        state = self._load_state()
+        batch_id = state["batch_id"]
+
+        try:
+            decoder = self.client.beta.messages.batches.results(message_batch_id=batch_id)
+        except anthropic.AnthropicError as exc:  # batch not ready yet
+            raise RuntimeError(
+                f"Batch {batch_id} is not ready yet or retrieval failed: {exc}"
+            ) from exc
+
+        responses = {item.custom_id: item for item in decoder}
+        outputs: List[List[str]] = [[] for _ in range(state["num_inputs"])]
+
+        for request_info in state["requests"]:
+            custom_id = request_info["custom_id"]
+            result_wrapper = responses.get(custom_id)
+            if result_wrapper is None:
+                raise RuntimeError(f"Missing result for request {custom_id} in batch {batch_id}.")
+
+            result = result_wrapper.result
+            if getattr(result, "type", None) != "succeeded":
+                raise RuntimeError(
+                    f"Request {custom_id} in batch {batch_id} did not succeed: {getattr(result, 'type', None)}"
+                )
+
+            outputs[request_info["input_index"]].append(
+                self._extract_text_from_message(result.message)
+            )
+
+        self._write_results_file(batch_id, outputs)
+        return outputs
+
+    def _build_requests(
+        self,
+        system_prompts: List[str],
+        input_texts: List[str],
+    ) -> tuple[List[Dict[str, object]], List[Dict[str, int | str]]]:
+        messages_batch = self.format_inputs(input_texts, system_prompts)
+        requests = []
+        request_metadata = []
+
+        for input_index, messages in enumerate(messages_batch):
+            for generation_index in range(self.num_generations):
+                custom_id = f"{input_index}-{generation_index}"
+                params = self._convert_messages_to_params(messages)
+                requests.append({"custom_id": custom_id, "params": params})
+                request_metadata.append(
+                    {
+                        "custom_id": custom_id,
+                        "input_index": input_index,
+                        "generation_index": generation_index,
+                    }
+                )
+
+        return requests, request_metadata
+
+    def _convert_messages_to_params(self, messages: List[Dict[str, str]]) -> Dict[str, object]:
+        system_segments: List[str] = []
+        conversation: List[Dict[str, object]] = []
+
+        for message in messages:
+            role = message.get("role", "")
+            content = message.get("content", "") or ""
+            if role == "system":
+                if content:
+                    system_segments.append(content)
+                continue
+
+            conversation.append(
+                {
+                    "role": role,
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": content,
+                        }
+                    ],
+                }
+            )
+
+        if not conversation:
+            raise ValueError("Anthropic requests require at least one non-system message.")
+
+        params: Dict[str, object] = {
+            "model": self.model_name_or_path,
+            "max_tokens": self.max_tokens,
+            "messages": conversation,
+        }
+
+        if system_segments:
+            params["system"] = "\n\n".join(segment for segment in system_segments if segment)
+
+        params.update(self._filtered_sampling_parameters())
+        return params
+
+    def _filtered_sampling_parameters(self) -> Dict[str, float]:
+        allowed = {"temperature", "top_p"}
+        return {
+            key: value
+            for key, value in self.sampling_parameters.items()
+            if key in allowed and value is not None
+        }
+
+    def _write_state(self, payload: Dict[str, object]) -> None:
+        with self.state_path.open("w", encoding="utf-8") as file:
+            json.dump(payload, file, indent=2)
+
+    def _load_state(self) -> Dict[str, object]:
+        if not self.state_path.exists():
+            raise FileNotFoundError(
+                f"Anthropic batch state file not found at {self.state_path}. Submit a batch first."
+            )
+        with self.state_path.open("r", encoding="utf-8") as file:
+            return json.load(file)
+
+    def _write_results_file(self, batch_id: str, outputs: List[List[str]]) -> None:
+        self.results_path.parent.mkdir(parents=True, exist_ok=True)
+        payload = {"batch_id": batch_id, "outputs": outputs}
+        with self.results_path.open("w", encoding="utf-8") as file:
+            json.dump(payload, file, indent=2)
+        logger.info("Saved Anthropic batch %s results to %s", batch_id, self.results_path)
+
+    def _resolve_api_key(self, config: dict) -> str:
+        api_key = os.getenv("ANTHROPIC_API_KEY") or config.get("anthropic_api_key")
+        if not api_key:
+            raise ValueError("Anthropic API key missing. Set ANTHROPIC_API_KEY or config['anthropic_api_key'].")
+        return api_key
+
+    def _resolve_state_path(self, config: dict) -> Path:
+        path = os.getenv("ANTHROPIC_BATCH_STATE_PATH") or config.get("anthropic_batch_state_path")
+        if not path:
+            path = os.path.join("debug", "anthropic_batches", "batch_state.json")
+        state_path = Path(path)
+        state_path.parent.mkdir(parents=True, exist_ok=True)
+        return state_path
+
+    def _resolve_results_path(self, config: dict) -> Path:
+        path = os.getenv("ANTHROPIC_BATCH_RESULTS_PATH") or config.get("anthropic_batch_results_path")
+        if not path:
+            path = self.state_path.with_suffix(".results.json")
+        return Path(path)
+
+    def _extract_text_from_message(self, message: object) -> str:
+        content = getattr(message, "content", [])
+        text_blocks = []
+        for block in content:
+            block_type = getattr(block, "type", None)
+            if block_type == "text":
+                text_blocks.append(getattr(block, "text", ""))
+        combined = "\n".join(filter(None, text_blocks)).strip()
+        return combined
+
+
 def get_model(model_name_or_path: str, config: dict, tasks: dict) -> Model:
     if repo_exists(
         model_name_or_path, repo_type="model", token=config.get("huggingface_hub_token")
@@ -222,5 +445,6 @@ def get_model(model_name_or_path: str, config: dict, tasks: dict) -> Model:
         login(token)
 
         return vLLMModel(model_name_or_path, config, tasks)
-    else:
-        raise ValueError(f"Model {model_name_or_path} not supported.")
+    if os.getenv("ANTHROPIC_API_KEY") or config.get("anthropic_api_key"):
+        return AnthropicBatchModel(model_name_or_path, config, tasks)
+    raise ValueError(f"Model {model_name_or_path} not supported.")

@@ -118,6 +118,8 @@ def prepare_judgement_inputs(
     data_2: list,
     data_1_model_name: str,
     data_2_model_name: str,
+    data_1_style: str,
+    data_2_style: str,
     prompt_template: str,
     question_style_switching: bool,
     introductory_beginning: bool,
@@ -136,20 +138,21 @@ def prepare_judgement_inputs(
         # name_1, name_2 = item_1["model_name"], item_2["model_name"]
         name_1, name_2 = data_1_model_name, data_2_model_name
 
+
+        if introductory_beginning:
+            question_1 = prepare_question_with_intro(
+                question_1, data_1_style
+            )
+            question_2 = prepare_question_with_intro(
+                question_2, data_2_style
+            )
+
         questions_to_use = (
             [(question_1, name_1), (question_2, name_2)]
             if question_1 != question_2 and question_style_switching
             else [(question_1, name_1)]
         )
-
-        if introductory_beginning:
-            question_1 = prepare_question_with_intro(
-                question_1, item_1["answers"]["answer1"]["style"]
-            )
-            question_2 = prepare_question_with_intro(
-                question_2, item_2["answers"]["answer1"]["style"]
-            )
-
+        
         answer_dict = create_position_bias_mitigation_dict(
             answer_1, answer_2, name_1, name_2
         )
@@ -226,7 +229,8 @@ def main() -> None:
         # This data is the data that is compared against
         # Since we only permutate the base data, we always load the unpermutated variant '""' here
         comp_data_model = task["compare_against"]
-        comp_data_path = get_file_path(comp_data_model, "")
+        comp_data_variant = ""
+        comp_data_path = get_file_path(comp_data_model, comp_data_variant)
         comp_data = read_data_file(comp_data_path)
 
         logger.info(
@@ -238,6 +242,8 @@ def main() -> None:
             base_data,
             comp_data_model,
             base_data_model,
+            comp_data_variant,
+            base_data_variant,
             prompt_template,
             tasks["prompting_parameters"].get("question_style_switching", False),
             tasks["prompting_parameters"].get("introductory_beginning", False),
