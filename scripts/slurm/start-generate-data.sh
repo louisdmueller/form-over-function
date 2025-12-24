@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH --partition=dev_gpu_h100
 #SBATCH --job-name=create-data
-#SBATCH --output=outputs/slurm/%x/%j.out
-#SBATCH --error=outputs/slurm/%x/%j.err
+#SBATCH --output=outputs/slurm/job-%x/%j.out
+#SBATCH --error=outputs/slurm/job-%x/%j.err
 #SBATCH --time=00:30:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
@@ -29,10 +29,6 @@ Arguments:
 Notes: 
     The optional command line argument will overwrite the value specified in the script.
 '
-
-SCRIPT_DIR=$(dirname "$(realpath "$0")")
-MAIN_DIR=$(dirname "$SCRIPT_DIR")
-cd "$MAIN_DIR"
 
 echo Time is `date +"%H:%M %d-%m-%y"`
 
@@ -65,8 +61,6 @@ fi
 
 echo "Running generation of answers."
 echo "Chosen answer generation model: $answer_generation_model"
-cd src
 srun python -u src/generate_answers.py \
     --answer_generation_model_name_or_path $answer_generation_model \
-    --output_path "/data/generated_answers/$answer_generation_model-answers.json"
-cd ..
+    --output_path "data/generated_answers/$answer_generation_model-answers.json"

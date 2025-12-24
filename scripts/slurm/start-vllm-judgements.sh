@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH --partition="dev_gpu_h100"
 #SBATCH --job-name="vllm-judgements"
-#SBATCH --output=outputs/slurm/%x/%j.out
-#SBATCH --error=outputs/slurm/%x/%j.err
+#SBATCH --output=outputs/slurm/job-%x/%j.out
+#SBATCH --error=outputs/slurm/job-%x/%j.err
 #SBATCH --time=00:30:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
@@ -18,11 +18,6 @@ set -u # treat unset variables as an error
 
 echo "Time is $(date +"%H:%M %d-%m-%y") ($(date +%s))"
 echo "Endtime is $(date -d "@${SLURM_JOB_END_TIME}" '+%H:%M %d-%m-%y') (${SLURM_JOB_END_TIME})"
-
-SCRIPT_DIR=$(dirname "$(realpath "$0")")
-MAIN_DIR=$(dirname "$SCRIPT_DIR")
-cd "$MAIN_DIR"
-
 
 
 module load devel/cuda/12.8

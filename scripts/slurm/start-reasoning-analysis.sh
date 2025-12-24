@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH --partition="cpu"
 #SBATCH --job-name="reasoning-analysis"
-#SBATCH --output=outputs/slurm/%x/%j.out
-#SBATCH --error=outputs/slurm/%x/%j.err
+#SBATCH --output=outputs/slurm/job-%x/%j.out
+#SBATCH --error=outputs/slurm/job-%x/%j.err
 #SBATCH --time=2:30:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
@@ -13,10 +13,6 @@
 set -e # exit on error
 set -u # treat unset variables as an error
 
-SCRIPT_DIR=$(dirname "$(realpath "$0")")
-MAIN_DIR=$(dirname "$SCRIPT_DIR")
-cd "$MAIN_DIR"
-
 echo "Time is $(date +"%H:%M %d-%m-%y") ($(date +%s))"
 echo "Endtime is $(date -d "@${SLURM_JOB_END_TIME}" '+%H:%M %d-%m-%y') (${SLURM_JOB_END_TIME})"
 
@@ -26,13 +22,15 @@ module load devel/cuda/12.8
 # currently we use python 3.12.x
 module load devel/python/3.12.3-gnu-11.4
 
-if [ ! -d "venv" ]; then
-    echo "Creating virtual environment..."
-    python -m venv venv
-    source venv/bin/activate
-    pip install -r requirements.txt
+VENV_DIR="$MAIN_DIR/venv"
+
+if [ ! -d "$VENV_DIR" ]; then
+    echo "Creating virtual environment at $VENV_DIR"
+    python -m venv "$VENV_DIR"
+    source "$VENV_DIR/bin/activate"
+    pip install -r "$MAIN_DIR/requirements.txt"
 else
-    source venv/bin/activate
+    source "$VENV_DIR/bin/activate"
 fi
 
 python src/evaluation/analyze_reasonings.py
