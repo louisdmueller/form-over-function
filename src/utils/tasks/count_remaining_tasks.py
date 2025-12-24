@@ -2,10 +2,11 @@
 This script goes through the meta-tasks file, finds the standard tasks and then goes through these individually to count how many tasks there are remaining to be done.
 """
 
-from utils_new import load_config, parse_args
 import json
-import os
 import logging
+import os
+
+from utils.utils import load_config, parse_args
 
 logger = logging.getLogger(__name__)
 

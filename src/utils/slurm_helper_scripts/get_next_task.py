@@ -1,9 +1,12 @@
 import json
 import os
 import sys
-from typing import Dict, List, Tuple, Optional
+from typing import Dict, List, Optional, Tuple
 
-from check_if_all_data_processed import check_if_all_data_processed
+from utils.slurm_helper_scripts.check_if_all_data_processed import (
+    check_if_all_data_processed,
+)
+
 
 def load_available_answer_files() -> List[str]:
     """Load list of available answer files from the generated_answers directory."""

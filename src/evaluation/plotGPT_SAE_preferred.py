@@ -1,4 +1,5 @@
 import math
+
 import plotly.graph_objects as go
 
 categories = ['Mistral-7B-Instruct-v0.2', 'Qwen2.5-72B-Instruct', 'Qwen3-32B', 'phi-4', 'Llama-3.3-70B-Instruct']

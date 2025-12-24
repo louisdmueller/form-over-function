@@ -8,10 +8,12 @@ import spacy
 import textstat as ts
 from bert_score import score
 from datasets import load_dataset
-from easse.sari import corpus_sari  # type: ignore
+
+# from easse.sari import corpus_sari  # type: ignore
+# easse package is not available on PyPI
 from spacy.matcher import Matcher
 
-from utils.utils import read_file, write_file
+from utils.utils import read_data_file, write_file
 
 
 def calculate_readability_metrics(texts: List[str] | str, verbose: bool = True) -> dict:
@@ -28,7 +30,7 @@ def calculate_readability_metrics(texts: List[str] | str, verbose: bool = True) 
     """
     # if a file path is provided, read the file and extract texts
     if isinstance(texts, str):
-        sae_dicts = read_file(texts)
+        sae_dicts = read_data_file(texts)
         texts = [entry["answers"]["answer1"]["answer"] for entry in sae_dicts] + [
             entry["answers"]["answer2"]["answer"] for entry in sae_dicts
         ]
@@ -182,25 +184,28 @@ def calculate_sari_onestopQA(
     Returns:
       float: SARI score of the system output.
     """
-    original_articles = load_onestopqa(reference=False)
-    reference_articles = load_onestopqa(reference=True)
-    original_articles_truncated = [
-        " ".join(paragraph[:paragraph_count]) for paragraph in original_articles
-    ]
-    # reference articles need to be list of lists
-    reference_articles_truncated = [
-        [" ".join(paragraph[:paragraph_count]) for paragraph in reference_articles]
-    ]
-    with open(path_to_system_output, "r") as file:
-        generated_articles = json.load(file)
-
-    corpus_sari_sae = corpus_sari(
-        orig_sents=original_articles_truncated,
-        sys_sents=generated_articles,
-        refs_sents=reference_articles_truncated,
-    )
-
-    return corpus_sari_sae
+    # easse package is not available, so this function is stubbed
+    # original_articles = load_onestopqa(reference=False)
+    # reference_articles = load_onestopqa(reference=True)
+    # original_articles_truncated = [
+    #     " ".join(paragraph[:paragraph_count]) for paragraph in original_articles
+    # ]
+    # # reference articles need to be list of lists
+    # reference_articles_truncated = [
+    #     [" ".join(paragraph[:paragraph_count]) for paragraph in reference_articles]
+    # ]
+    # with open(path_to_system_output, "r") as file:
+    #     generated_articles = json.load(file)
+    #
+    # corpus_sari_sae = corpus_sari(
+    #     orig_sents=original_articles_truncated,
+    #     sys_sents=generated_articles,
+    #     refs_sents=reference_articles_truncated,
+    # )
+    #
+    # return corpus_sari_sae
+    raise NotImplementedError("EASSE package is not available on PyPI. "
+                            "This function requires manual installation from source.")
 
 
 def compute_bertscore(

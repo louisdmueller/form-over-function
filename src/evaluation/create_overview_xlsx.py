@@ -15,7 +15,7 @@ from typing import Dict, List, Tuple
 
 import pandas as pd
 
-from src.evaluation.analyze_results import (
+from evaluation.analyze_results import (
     load_json_file,
     run_analysis_on_judgements,
 )
