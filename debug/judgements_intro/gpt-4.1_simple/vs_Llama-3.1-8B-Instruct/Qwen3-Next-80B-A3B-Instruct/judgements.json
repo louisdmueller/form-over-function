@@ -118,12 +118,12 @@
             "result": [
                 "Answer2",
                 "Answer2",
-                "Answer1"
+                "Answer2"
             ],
             "extracted_answers": [
                 "Llama-3.1-8B-Instruct",
                 "Llama-3.1-8B-Instruct",
-                "gpt-4.1"
+                "Llama-3.1-8B-Instruct"
             ]
         }
     ],
@@ -260,9 +260,9 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
-                "Answer1",
-                "Answer1\n\nAnswer1 provides a clear, accurate, and contextually appropriate analysis of the forces acting on a stationary car. It correctly identifies gravitational force, normal force, frictional force, and air resistance, and appropriately qualifies air resistance as negligible when the car is stationary. It also correctly notes that these forces are balanced, resulting in no motion \u2014 a key point in understanding static equilibrium.\n\nThe inclusion of \u201cupthrust\u201d from air (though minor) is reasonable as a nod to buoyancy in air, and the explanation emphasizes balance and conditions for motion, which directly answers the question.\n\nAnswer2, while partially correct, introduces two questionable elements:\n- \u201cTension (T)\u201d as a force acting on the car: Tension is not an external force acting *on* the car as a whole from its environment; it\u2019s an internal force within the suspension system. Including it misrepresents the nature of forces in static equilibrium analysis.\n- \u201cBuoyancy (B)\u201d as relevant unless the car is submerged \u2014 the mention of water is misleading in the context of a typical stationary car on dry land and introduces an irrelevant and confusing element.\n\nThus, Answer1 is superior in accuracy, relevance, clarity, and pedagogical soundness.\n\nAnswer1",
-                "Answer1 is superior.\n\nReasoning: Answer1 provides a clear, accurate, and contextually appropriate analysis of the forces acting on a stationary car. It correctly identifies the four main forces relevant in this scenario\u2014gravity, normal force, friction, and minimal air resistance\u2014and correctly explains that the car is in equilibrium due to balanced forces. It avoids introducing irrelevant or misleading forces (e.g., upthrust from air is mentioned but correctly downplayed, which is appropriate). The language is accessible and the explanation is logically structured.\n\nAnswer2 introduces two misleading or inappropriate forces:\n- **Tension (T)**: While tension exists internally in suspension systems, it is not an external force acting *on the car as a whole* in the context of stationary equilibrium analysis. Including it confuses the scope\u2014this is a Newtonian force analysis of the car in contact with the ground, not an internal structural analysis.\n- **Buoyancy (B)**: Buoyancy is negligible unless the car is submerged in a fluid like water. Mentioning it as a general force acting on a stationary car on land is misleading and misleadingly overcomplicates the scenario.\n\nThe inclusion of these irrelevant forces reduces Answer2's accuracy and clarity. Answer1, by contrast, stays focused on the physically meaningful forces in the given context and correctly explains equilibrium.\n\nAnswer1 wins on semantic quality: accuracy, relevance, and clarity.\n\nAnswer1"
+                "Answer1\n\nAnswer1 provides a clearer, more accurate, and pedagogically sound explanation of the forces acting on a stationary car. It correctly identifies gravitational force, normal force, friction, and air resistance \u2014 all relevant and physically meaningful in this context \u2014 and appropriately notes that air resistance and upthrust are negligible when the car is stationary. It also correctly emphasizes that the forces are balanced, which is the key reason the car remains stationary (Newton\u2019s First Law).\n\nAnswer2 introduces two problematic elements: tension as a direct force acting on the car as a whole and buoyancy. Tension is an internal force within the car\u2019s structure (e.g., in suspension springs or cables), not an external force acting *on* the car system \u2014 so it should not be listed among the external forces affecting the car\u2019s state of rest. Buoyancy is only relevant if the car is submerged in a fluid like water, which is not implied or indicated in the question. Including these distracts from the core physics and introduces inaccuracies.\n\nAnswer1 stays grounded in realistic, textbook-level analysis appropriate for a stationary vehicle on dry land \u2014 making it superior in both accuracy and clarity.\n\nAnswer1",
+                "Answer1 is superior.\n\nReasoning:  \nAnswer1 provides a clear, accurate, and physically sound analysis of the forces acting on a stationary car. It correctly identifies gravitational force, normal force, friction, and air resistance as relevant, and appropriately notes that air resistance and upthrust (a layperson\u2019s term for buoyant force in air) are negligible but still present. It emphasizes the key concept of equilibrium \u2014 that all forces are balanced, which is the core reason the car remains stationary. The explanation is pedagogically effective, using accessible language while maintaining scientific accuracy.\n\nAnswer2 contains two significant inaccuracies:  \n- It introduces **tension (T)** as a force acting on the car in a static context, which is misleading. While tension exists within the suspension system, it is an *internal* force, not an external force acting on the car as a whole. Internal forces do not affect the car\u2019s overall equilibrium.\n- It includes **buoyancy (B)** due to air or water, suggesting the car could be \u201cpartially submerged,\u201d which is irrelevant to a typical stationary car on dry ground. Buoyancy in air is negligible and almost never discussed in this context, and bringing up water submersion introduces a non-standard, potentially confusing scenario.\n\nAnswer1 avoids these misconceptions and stays focused on the relevant, realistic external forces, making it more accurate and educationally valuable.\n\nAnswer1",
+                "Answer1 is superior.\n\nReasoning: Answer1 accurately identifies and explains the key forces acting on a stationary car\u2014gravity (weight), normal force, friction, and minimal air resistance\u2014with clear, correct physical reasoning. It correctly states that the forces are balanced in static equilibrium, which is the core concept being asked. It also responsibly notes the negligible role of air resistance and upthrust (buoyancy from air) without overstating their significance.\n\nAnswer2, while technically listing some correct forces, introduces incorrect or misleading elements:\n- \"Tension (T)\" is not a relevant external force acting *on* the stationary car as a whole; tension exists internally in the suspension system, but it\u2019s not an external force affecting the car\u2019s equilibrium in the way weight and normal force are.\n- \"Buoyancy (B)\" is misapplied: unless the car is submerged in a fluid (like water), buoyancy from air is negligible and is better described as a minor component of air pressure, not a meaningful force to list alongside others. Including it as a separate force with \u201csignificant\u201d role misleadingly implies it\u2019s relevant in normal conditions.\n- Answer2 also vaguely claims these forces \u201caffect the car\u2019s stability and equilibrium\u201d without clearly explaining *how* they are balanced, which is the main intent of the question.\n\nAnswer1 provides clearer, more precise, and physically accurate explanations tailored to a stationary vehicle on dry land, while Answer2 overcomplicates and misrepresents some concepts.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -404,7 +404,7 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
-                "Answer1  \n\n**Reasoning:**  \nAnswer1 provides a more comprehensive, nuanced, and accurate explanation of how elements in the Periodic Table relate and differ. It correctly explains atomic number, groups, periods, valence electrons, and the gradual change in properties across periods. It also elaborates on the classification into metals, nonmetals, and metalloids, and mentions important subgroups like transition metals, halogens, and noble gases\u2014with context about their behavioral and practical significance. Importantly, it correctly links electron configuration to chemical and physical behavior, which is central to understanding periodic trends.\n\nIn contrast, Answer2 contains factual errors. For example, it claims:  \n> \u201cAs you move from left to right across a period, the elements become more metallic and less reactive.\u201d  \nThis is **incorrect**. Actually, elements become *less* metallic and *more* nonmetallic from left to right across a period. Reactivity varies depending on the group (e.g., alkali metals are highly reactive on the left, halogens on the right), but saying they become \u201cless reactive\u201d overall is misleading and inaccurate.\n\nAdditionally, Answer2 claims:  \n> \u201cAs you move down a group, the elements become less metallic and more reactive.\u201d  \nThis is only partially true\u2014for nonmetals (e.g., halogens), reactivity *decreases* down the group. For metals (e.g., alkali metals), reactivity *increases* down the group, and they become *more* metallic. Answer2 oversimplifies and misstates this critical trend.\n\nBecause Answer1 is accurate, thorough, and free from misleading claims\u2014while Answer2 contains significant scientific inaccuracies\u2014Answer1 is clearly superior.\n\nAnswer1",
+                "Answer1",
                 "Answer1",
                 "Answer1"
             ],
@@ -527,12 +527,12 @@
             "result": [
                 "Answer2",
                 "Answer2",
-                "Answer2"
+                "Answer1 and Answer2 both provide clear, accurate, and well-structured explanations of how each ingredient contributes to the flavor of a burger. However, **Answer1** is slightly superior because:\n\n- It organizes the information in a more systematic and detailed manner, listing each ingredient with its specific sensory contribution (flavor, texture, role).\n- It adds nuance by mentioning types of beef (chuck, brisket, wagyu) and types of cheese (cheddar, mozzarella, blue cheese), which demonstrates deeper culinary knowledge.\n- It explicitly mentions *seasonings* as a category, which Answer2 only implies through salt and pepper.\n\nAnswer2 is also very good \u2014 concise, vivid, and effective at conveying flavor layers \u2014 but it lacks the same level of specificity and structure. It also omits some common ingredients (like bacon or different cheeses) and doesn\u2019t categorize as thoughtfully.\n\nThus, **Answer1** offers a more comprehensive, educational, and nuanced breakdown.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Llama-3.1-8B-Instruct"
             ]
         },
         {
@@ -597,8 +597,8 @@
             },
             "result": [
                 "Answer1",
-                "Answer1 is superior.\n\nWhile Answer2 provides a structured list of components, it contains a significant inaccuracy: it treats the object as a *necessary* component of every complete sentence. This is incorrect \u2014 many complete sentences do not have objects (e.g., \"She runs,\" \"The bird sings\"). Objects are optional and only appear in transitive verb constructions. Answer1 correctly identifies the *essential* components \u2014 subject and predicate \u2014 and accurately explains that the predicate includes the verb and can optionally include objects, adverbs, or other modifiers. It also correctly notes that sentence punctuation (capitalization and end marks) are conventional features, not core grammatical components, which is appropriate context.\n\nAnswer1\u2019s explanation is more precise, pedagogically sound, and avoids misleading generalizations. It clearly distinguishes between necessary and optional elements, making it more accurate and useful for understanding sentence structure.\n\nAnswer2, despite its clarity and organization, overcomplicates the definition by implying that objects and complements are universally required \u2014 which distorts the fundamental definition of a complete sentence.\n\nThus, Answer1 is the better response.\n\nAnswer1",
-                "Answer1\n\nAnswer1 provides a clearer, more accurate, and pedagogically sound explanation of the key components of a complete sentence. It correctly identifies the subject and predicate as the two indispensable components, with the predicate centered on the verb \u2014 which is the core requirement for a complete sentence. It appropriately notes that not all sentences require an object (e.g., \"The cat sleeps\"), which is crucial for avoiding the common misconception that every sentence needs a direct object. It also includes practical examples and mentions punctuation, which adds contextual completeness without overcomplicating the core concept.\n\nAnswer2, while organized and detailed, incorrectly elevates the object to the status of a required component. This is inaccurate \u2014 intransitive verbs (e.g., \"She laughed,\" \"He slept\") do not take objects, yet the sentences are complete. Including \"object\" as a key component misleads the reader into thinking it\u2019s necessary, which undermines grammatical accuracy. Additionally, the inclusion of \"complement\" and \"modifier\" as distinct required components overcomplicates the foundational definition and may confuse learners who are trying to grasp the minimal structure of a sentence.\n\nThe quality of Answer1 lies in its precision and adherence to the minimal requirement for a complete sentence: subject + predicate (with verb). Answer2, despite its structure, introduces errors in grammatical theory.\n\nAnswer1"
+                "Answer1",
+                "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -788,13 +788,13 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
-                "Answer1",
                 "Answer2",
-                "Answer1"
+                "Answer1",
+                "Answer1 provides a more thorough, cohesive, and nuanced explanation that connects causes to effects in a flowing, descriptive manner. It explains not only *what* happens but *how* and *why*\u2014for example, linking tree roots to soil stability, forests to water regulation, and deforestation to climate change and human impacts. The language is accessible yet precise, and it conveys a clear understanding of ecological interdependence.\n\nAnswer2 is well-structured and accurate, with clear bullet points that list causes and effects. However, it lacks depth and explanatory power. It states facts without elaborating on mechanisms or consequences. For instance, saying \u201closs of biodiversity\u201d is true, but Answer1 explains that species lose habitats and may disappear forever\u2014which is more informative.\n\nThe question asks to *analyze* causes and effects, which requires more than listing; it demands explanation and synthesis. Answer1 does this effectively; Answer2 does not.\n\n**Answer1** is superior in semantic quality.\n\nAnswer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "Llama-3.1-8B-Instruct",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -909,8 +909,8 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1  \nThe answer is more precise, uses correct scientific terminology consistently, and provides a more comprehensive and accurate account of plant cell organelles and their functions. It correctly identifies peroxisomes and lysosomes (though lysosomes are less prominent in plant cells, they are still functionally present in vacuoles), and clearly ties each structure to its role in maintaining homeostasis and supporting cellular function. It also organizes the information logically, with clear cause-effect relationships among structures.\n\nAnswer2 is generally accurate and accessible, but it lacks some precision\u2014for example, it describes the nucleus as \u201clike the control center\u201d (analogical rather than scientific), omits peroxisomes entirely, and oversimplifies lysosome function (in plants, lytic functions are primarily vacuolar). Also, it does not explicitly mention the cytoskeleton or detailed interorganelle communication, but even without those, Answer1\u2019s depth and accuracy are superior.\n\nThus, Answer1 demonstrates higher semantic quality, accuracy, and completeness.\n\nAnswer1",
                 "Answer1",
+                "Answer1\n\nBoth answers are accurate and cover the key organelles and their functions in a plant cell. However, Answer1 demonstrates superior semantic quality through greater precision, completeness, and scientific rigor. It correctly identifies peroxisomes and lysosomes (which are often omitted in simplified explanations), and explicitly states their roles in breaking down fatty acids/amino acids and recycling waste, respectively \u2014 adding depth not found in Answer2. Additionally, Answer1 uses more formal and precise terminology (e.g., \"regulates cell growth and division,\" \"maintain cellular homeostasis\"), which enhances clarity and academic integrity.\n\nAnswer2 is clear and well-structured but omits some organelles (peroxisomes, lysosomes) and shrinks the explanation of interactions into a more general list, lacking the cohesive synthesis seen in Answer1. It also uses slightly informal phrasing like \u201clike the control center\u201d and \u201cjelly-like fluid,\u201d which, while helpful for beginners, reduce the precision expected in a thorough explanation.\n\nThus, Answer1 provides a more comprehensive, accurate, and nuanced account of how plant cell structures function together.\n\nAnswer1",
                 "Answer1"
             ],
             "extracted_answers": [
@@ -932,9 +932,9 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
+                "Answer1\n\nWhile both answers are informative and largely accurate, Answer1 provides a more comprehensive, cohesive, and pedagogically clear explanation of how each structure contributes to the plant cell\u2019s function. It explicitly connects each organelle to its role and then synthesizes the information by summarizing how all parts \u201cwork together\u201d to enable growth, energy production, storage, and communication \u2014 directly addressing the question\u2019s emphasis on collaboration among structures.\n\nAnswer2 is also solid but contains two notable issues:\n1. It inaccurately includes **lysosomes** as a standard feature of plant cells \u2014 lysosomes are primarily animal cell organelles; plant cells typically use the vacuole for degradation, not dedicated lysosomes.\n2. It mentions **peroxisomes**, which, while technically present in plant cells, are not typically emphasized at a foundational level in basic cell biology discussions about plant cell structure-function relationships.\n\nAdditionally, Answer1\u2019s language is more accessible and flows better for explaining synergies between organelles (e.g., linking ribosomes to nucleus instructions, vacuole to turgor pressure). Answer2 is more concise but less precise in its biological accuracy for plant cells.\n\nTherefore, Answer1 is superior in quality, accuracy, and completeness for this educational context.\n\nAnswer1",
                 "Answer1",
-                "Answer1",
-                "Answer1\n\nBoth answers are generally accurate, but Answer1 provides a more complete, coherent, and pedagogically effective explanation of how plant cell structures *work together* to support cellular function. It clearly links each organelle\u2019s role to the broader needs of the cell (growth, energy production, storage, communication), and it correctly omits inaccuracies present in Answer2.\n\nNotably, Answer2 contains an error: it mentions **lysosomes** in plant cells. While lysosomes exist in animal cells, plant cells typically use the **vacuole** for degradation and recycling functions \u2014 lysosomes are not a standard feature of plant cells. This is a significant biological inaccuracy that diminishes Answer2\u2019s reliability.\n\nAdditionally, Answer1 includes ribosomes explicitly and connects them to genetic instructions from the nucleus, which strengthens the narrative of functional integration \u2014 something Answer2 overlooks. Answer1 also mentions the cytoplasm\u2019s role in facilitating movement, adding depth.\n\nThus, Answer1 is superior in accuracy, completeness, and clarity.\n\nAnswer1"
+                "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -982,12 +982,12 @@
             "result": [
                 "Answer2",
                 "Answer2",
-                "Answer1"
+                "Answer2"
             ],
             "extracted_answers": [
                 "Llama-3.1-8B-Instruct",
                 "Llama-3.1-8B-Instruct",
-                "gpt-4.1"
+                "Llama-3.1-8B-Instruct"
             ]
         }
     ],
@@ -1006,12 +1006,12 @@
             },
             "result": [
                 "Answer1",
-                "Answer1  \nAnswer2  \nTie  \n\nAnswer1 provides a more detailed and technically accurate explanation of ratios and portions, clearly defining ratios as comparisons between ingredient quantities and portions as the actual measured amounts. It includes a concrete example (2:1 flour-to-sugar) and explains the implications for scalability and culinary outcomes with greater precision.\n\nAnswer2 is also correct and clear, especially in its practical emphasis on servings and consistency in taste and texture. However, it somewhat conflates \u201cportion\u201d with \u201cservings\u201d without fully distinguishing it from the *quantity of ingredients*, which Answer1 handles more rigorously. Answer2 also lacks the explicit mention of ratios as mathematical relationships (fractions/decimals) and doesn\u2019t articulate as clearly that ratios govern ingredient balance independently of total volume.\n\nWhile both are strong, Answer1 demonstrates superior semantic quality through greater precision, depth, and clarity in conceptual distinction.\n\nAnswer1",
-                "Answer1"
+                "Answer1",
+                "Answer1 and Answer2 both provide clear, accurate, and relevant explanations of the relationship between portions and ratios in recipes. However, Answer1 offers a slightly more detailed and nuanced explanation. It defines ratios not just as comparisons but also as expressions in fractions or decimals, and it explicitly highlights the broader implications for flexibility, scalability, and consistency in flavor and texture \u2014 adding deeper culinary context. Answer2 is more concise and accessible, but Answer1 demonstrates stronger semantic depth and precision without sacrificing clarity.\n\nThus, Answer1 is superior in quality.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "Llama-3.1-8B-Instruct",
-                "Unknown",
+                "Llama-3.1-8B-Instruct",
                 "Llama-3.1-8B-Instruct"
             ]
         },
@@ -1103,7 +1103,7 @@
             "result": [
                 "Answer2",
                 "Answer2",
-                "Answer2\n\nReasoning: While both answers cover key factors influencing weather patterns, Answer2 provides a more coherent, nuanced, and contextually rich explanation. It weaves the factors into natural, flowing prose that better reflects real-world interactions (e.g., explaining the rain shadow effect, modulating effects of oceans, and the impact of ENSO phenomena like El Ni\u00f1o and La Ni\u00f1a). It also avoids the list-like, robotic tone of Answer1, which, while factually accurate, reads like a bullet-pointed textbook entry without synthesis.\n\nAnswer2 also includes important overlooked elements like \"El Ni\u00f1o and La Ni\u00f1a,\" which are critical for understanding interannual variability in weather patterns \u2014 a level of depth absent in Answer1. Additionally, it explains cause-effect relationships more clearly (e.g., \u201cmountains can stop clouds and rain, making one side wet and the other dry\u201d), enhancing conceptual understanding.\n\nAnswer1 is technically complete but lacks flow, context, and explanatory depth. Answer2 is superior in semantic quality: it is more informative, engaging, and scientifically thoughtful without sacrificing accuracy.\n\nAnswer2"
+                "Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -1199,12 +1199,12 @@
             "result": [
                 "Answer1",
                 "Answer2",
-                "Answer2"
+                "Answer1"
             ],
             "extracted_answers": [
                 "Llama-3.1-8B-Instruct",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Llama-3.1-8B-Instruct"
             ]
         },
         {
@@ -1245,9 +1245,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2\n\nExplanation: While both answers contain accurate information, Answer2 is superior in terms of semantic clarity and precision. It correctly notes that an isosceles triangle has *at least* two equal sides \u2014 which includes the special case of an equilateral triangle (all three sides equal), conforming to the modern mathematical definition. Answer1 contains a critical error by stating that an isosceles triangle \u201ccan also be scalene,\u201d which is false \u2014 a scalene triangle has no equal sides, so it cannot be isosceles. Additionally, Answer1 incorrectly suggests isosceles triangles can be equilateral *as a separate category*, when in fact equilateral triangles are a subset of isosceles triangles under the inclusive definition. Answer2 avoids these misleading claims and presents the concept more accurately and concisely.\n\nAnswer2",
-                "Answer2\n\nExplanation: While both answers contain mostly accurate information, Answer1 contains a critical error: it states that an isosceles triangle \u201ccan also be scalene\u201d or \u201cequilateral,\u201d which is incorrect. A scalene triangle, by definition, has all sides of different lengths \u2014 so an isosceles triangle cannot be scalene. An equilateral triangle is a special case of an isosceles triangle (since it has at least two equal sides), but saying an isosceles triangle \u201ccan be scalene\u201d is mathematically wrong and misleading.\n\nAnswer2 correctly identifies that an isosceles triangle has at least two equal sides, correctly defines legs and base, and acknowledges that an equilateral triangle (all three sides equal) is included under the broader definition of isosceles \u2014 which is consistent with modern geometric conventions.\n\nTherefore, Answer2 is superior in accuracy and clarity.\n\nAnswer2",
-                "Answer2\n\nAnswer2 is superior because it provides a clear, concise, and mathematically accurate definition of an isosceles triangle without introducing contradictions. It correctly states that an isosceles triangle has *at least* two equal sides \u2014 which includes the special case of an equilateral triangle (all three sides equal), consistent with modern geometric conventions. It accurately notes that the base angles are equal and correctly identifies the legs and base.\n\nAnswer1 contains a critical error: it claims that an isosceles triangle \u201ccan also be scalene,\u201d which is impossible \u2014 a scalene triangle has *no* equal sides, while an isosceles triangle requires *at least* two. This contradiction undermines the reliability of Answer1. Additionally, it incorrectly suggests isosceles and equilateral are mutually exclusive categories, when in fact equilateral triangles are a subset of isosceles triangles under the broader definition.\n\nAnswer2 avoids this error and is both accurate and clearly worded. Therefore, Answer2 is the better response.\n\nAnswer2"
+                "Answer2 is superior.\n\nReason: Answer2 correctly and concisely defines an isosceles triangle as having *at least two* equal sides (which includes the special case of equilateral triangles), and accurately states that the angles opposite the equal sides are equal. It also correctly identifies the legs and the base. Importantly, it avoids the major error in Answer1, which falsely claims that an isosceles triangle \u201ccan be scalene\u201d \u2014 this is impossible, since a scalene triangle by definition has *no* equal sides. Additionally, Answer1 incorrectly implies that isosceles and equilateral are mutually exclusive categories, whereas in modern mathematical usage, an equilateral triangle is considered a special case of an isosceles triangle. Answer2 avoids these conceptual errors and presents the definition with greater clarity and accuracy.\n\nAnswer2",
+                "Answer2",
+                "Answer2 is superior.\n\nReason: While both answers correctly define an isosceles triangle as having two equal sides and equal base angles, Answer1 contains a significant factual error: it states that an isosceles triangle \u201ccan also be scalene,\u201d which is impossible \u2014 a scalene triangle has all sides of different lengths, contradicting the definition of isosceles. It also incorrectly claims an isosceles triangle \u201ccan be equilateral,\u201d which, though sometimes considered a special case in some definitions, is misleading without clarification. Many modern definitions (including those in standardized curricula) state that an isosceles triangle has *at least* two equal sides, which includes equilateral as a subset \u2014 but Answer1's phrasing blurs the distinction and introduces confusion by listing it alongside scalene, a mutually exclusive category.\n\nAnswer2 avoids this error. It correctly notes that an isosceles triangle has \u201cat least two sides\u201d the same length, and explicitly allows for the possibility of all three being equal (i.e., encompassing equilateral), which is mathematically precise and consistent with modern definitions. It also clearly identifies legs and base without introducing contradictions.\n\nThus, Answer2 is more accurate, concise, and free of misleading information.\n\nAnswer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -1268,9 +1268,9 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
-                "Answer1\n\nReasoning:  \nAnswer1 provides a clear, accurate, and concise definition of an isosceles triangle, correctly explaining that it has at least two equal sides, that the base angles are equal, and that the equal sides are called legs. It also correctly notes that an isosceles triangle *can* have all three sides equal \u2014 which is true (an equilateral triangle is a special case of an isosceles triangle under the \u201cat least two sides equal\u201d definition). Importantly, it avoids any factual errors.\n\nAnswer2 contains a critical error: it states, \u201cThey can also be scalene, meaning all sides are of different lengths, or equilateral, meaning all sides are equal.\u201d This is misleading. An isosceles triangle *cannot* be scalene \u2014 by definition, scalene means *no* sides are equal, which contradicts the requirement of at least two equal sides in an isosceles triangle. While it\u2019s true that an equilateral triangle is a special case of isosceles, it's incorrect to say an isosceles triangle \u201ccan also be scalene.\u201d This confuses categories and introduces a factual inaccuracy.\n\nTherefore, Answer1 is superior due to its accuracy and clarity, while Answer2 contains a significant conceptual error.\n\nAnswer1",
-                "Answer1 is more accurate and clearer in its explanation. It correctly defines an isosceles triangle as having *at least* two equal sides (which includes the equilateral case), correctly identifies the legs and base, and notes the equality of base angles. It avoids any misleading statements.\n\nAnswer2 contains a critical error: it says \u201cThey can also be scalene, meaning all sides are of different lengths,\u201d which contradicts the definition of an isosceles triangle. A triangle cannot be both isosceles and scalene \u2014 those are mutually exclusive categories. It also unnecessarily and incorrectly suggests an isosceles triangle can be equilateral in the same breath as scalene, creating confusion. While the rest of Answer2 is factually correct (e.g., angle sum, types by angles), this fundamental contradiction undermines its reliability.\n\nTherefore, Answer1 is superior.\n\nAnswer1",
-                "Answer1"
+                "Answer1\n\nExplanation: Answer1 is more accurate and clearly structured. It correctly defines an isosceles triangle as having at least two equal sides, correctly notes that equilateral triangles (all three sides equal) are a special case of isosceles triangles, and properly identifies the legs and base. It also correctly states that the base angles are equal.\n\nAnswer2 contains a critical error: it says \u201cThey can also be scalene, meaning all sides are of different lengths, or equilateral, meaning all sides are equal.\u201d This is misleading \u2014 an isosceles triangle cannot be scalene by definition (scalene means no equal sides). While it\u2019s true that an equilateral triangle is a special case of isosceles, presenting it alongside scalene as if those are mutually exclusive categories within isosceles triangles is incorrect and confusing. The statement undermines the logical consistency of the definition.\n\nThus, Answer1 is superior in accuracy and clarity. \n\nAnswer1",
+                "Answer1\n\nReasoning:  \nAnswer1 provides a clear, accurate, and concise definition of an isosceles triangle, correctly stating that it has at least two equal sides, that the base angles are equal, and correctly identifies legs and base. It also accurately notes that an isosceles triangle *can* have all three sides equal (i.e., it includes equilateral triangles as a special case), which is mathematically correct under the modern inclusive definition.\n\nAnswer2 contains a critical error: it states, \u201cThey can also be scalene, meaning all sides are of different lengths.\u201d This is false \u2014 a triangle cannot be both isosceles and scalene. By definition, a scalene triangle has no equal sides, while an isosceles triangle has at least two. These are mutually exclusive categories. While it correctly describes legs, base, and angle properties, this fundamental contradiction undermines its reliability.\n\nTherefore, Answer1 is superior due to its accuracy and lack of misleading information.\n\nAnswer1",
+                "Answer1\n\nExplanation: While Answer2 contains mostly accurate information, it contains a critical error: it states that an isosceles triangle \"can also be scalene, meaning all sides are of different lengths.\" This is incorrect \u2014 a scalene triangle, by definition, has no equal sides, and therefore cannot be isosceles. This contradiction undermines the accuracy of Answer2.\n\nAnswer1 correctly defines an isosceles triangle as having at least two equal sides, correctly identifies legs and base, clarifies that the base angles are equal, and accurately notes that an equilateral triangle (all sides equal) is a special case of an isosceles triangle \u2014 which is mathematically correct under the inclusive definition.\n\nAnswer1 is clear, precise, and mathematically accurate throughout, while Answer2 contains a factual error that disqualifies it as fully reliable.\n\nThus, Answer1 is superior.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -1390,12 +1390,12 @@
             },
             "result": [
                 "Answer2",
-                "Answer2",
-                "Answer1 and Answer2 are both accurate and well-reasoned, but they differ slightly in tone and emphasis.\n\nAnswer1 presents the idea that a theory can be considered \u201cproven\u201d in a practical, scientific sense \u2014 while clarifying that this doesn\u2019t mean absolute certainty. It effectively communicates that \"proven\" in science implies overwhelming evidence and community acceptance, without implying permanence. It\u2019s nuanced and educational.\n\nAnswer2 takes a firmer stance: it asserts that in science, a theory is *never* completely proven, and frames the word \u201cproven\u201d as a misused colloquialism. It correctly emphasizes the tentativeness of scientific knowledge and the possibility of revision, which is a core tenet of the philosophy of science.\n\nBoth answers are factually correct, but **Answer2** is slightly more precise in its clarification of scientific terminology. It directly addresses the common misconception that science \u201cproves\u201d things in the absolute sense, and instead reinforces the appropriate language (\u201cwell-supported,\u201d \u201cwidely accepted\u201d) \u2014 which is exactly what a scientifically literate answer should do.\n\nIn science communication, it\u2019s more accurate to avoid saying theories are \u201cproven,\u201d because proof implies deductive certainty (like in math), whereas science works inductively. Answer2 captures this distinction more cleanly.\n\n**Answer2** is superior in terms of semantic quality and accuracy in context.\n\nAnswer2"
+                "Answer1",
+                "Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
+                "Llama-3.1-8B-Instruct",
                 "gpt-4.1"
             ]
         },
@@ -1437,14 +1437,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie\n\nTie",
-                "Answer1 and Answer2 are both accurate and clearly explain the cause of Earth\u2019s seasons, emphasizing the 23.5-degree axial tilt and how it leads to varying sunlight distribution throughout the year. Both correctly note the opposite seasons in the Northern and Southern Hemispheres and link sunlight exposure to temperature and daylight changes.\n\nThe only subtle difference is in clarity and slight precision:  \n- **Answer1** uses slightly more formal language and explicitly mentions \u201corbit around the Sun\u201d and \u201csix months out of phase,\u201d which adds a touch of completeness.  \n- **Answer2** is equally accurate but uses more conversational phrasing (\u201ctop half,\u201d \u201cbottom half\u201d) which, while understandable, is less scientifically precise than \u201cNorthern Hemisphere\u201d and \u201cSouthern Hemisphere.\u201d\n\nHowever, both are factually correct, well-structured, and convey the necessary science. The difference in wording does not affect the *semantic quality*\u2014both answer the question fully and accurately.\n\n**Tie**",
-                "Answer1"
+                "Answer1",
+                "Answer1",
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
-                "Unknown",
-                "TIE",
-                "Llama-3.1-8B-Instruct"
+                "Llama-3.1-8B-Instruct",
+                "Llama-3.1-8B-Instruct",
+                "Unknown"
             ]
         },
         {
@@ -1462,7 +1462,7 @@
             "result": [
                 "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie\n\nTie"
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "Unknown",
@@ -1844,12 +1844,12 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
+                "Answer2",
                 "Answer1",
-                "Answer1",
-                "Answer1\n\nBoth responses are accurate and well-written, but Answer1 provides a more comprehensive and nuanced summary. It contextualizes the speech within the broader promise of the Declaration of Independence, emphasizes the moral appeal to America\u2019s founding principles, and explicitly mentions the call for peaceful protest and hope\u2014all of which are central to the speech\u2019s rhetorical and historical significance. Answer2 is also correct and includes key imagery (lunch counters, water fountains), but it lacks the deeper framing of the speech as a fulfillment of America\u2019s unkept promises, which is essential to understanding its power and legacy. Therefore, Answer1 is superior in semantic depth and accuracy."
+                "Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Llama-3.1-8B-Instruct",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -2062,12 +2062,12 @@
             },
             "result": [
                 "Answer2",
-                "Answer2",
+                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a clear, accurate, and well-structured explanation of the difference between inner and outer planets, covering key points: classification by distance, composition (rocky vs. gas giants), surface type, orbital distance, and orbital periods. It is concise and technically correct.\n\nAnswer2 adds valuable additional details\u2014mentioning \u201cterrestrial planets,\u201d the distinction between gas giants and ice giants, the presence of rings, and number of moons\u2014which enhances the depth of the answer. While slightly less streamlined, it is also factually accurate and offers a more comprehensive overview.\n\nBoth responses are accurate and informative. Answer2 includes more nuanced information (e.g., ice giants, rings, moons), making it slightly richer in content without sacrificing clarity. However, Answer1 is equally correct and more compact.\n\nSince both are high-quality and the additional details in Answer2 don\u2019t introduce any errors but genuinely improve understanding, **Answer2 has a slight edge in depth and completeness**.\n\nAnswer2",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
+                "Unknown",
                 "Unknown"
             ]
         },
@@ -2157,14 +2157,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2",
-                "Answer1\n\nBoth answers are accurate and well-structured, but Answer1 is slightly superior in terms of semantic quality. It presents the information in a more concise, formal, and scientifically precise manner, using stronger terminology such as \u201cgradual increase in the overall temperature\u201d and \u201ctrap heat from the sun,\u201d which clearly explains the greenhouse effect. It also organizes causes and effects more distinctly, enhancing clarity and educational value. Answer2, while also correct and clear, includes a mild prescriptive tone (\u201cWe need to quickly reduce pollution...\u201d) which, although reasonable, introduces a slightly subjective recommendation rather than staying purely explanatory. Since the question only asks for a definition and explanation \u2014 not a call to action \u2014 Answer1\u2019s more neutral, informative tone makes it the better response.\n\nAnswer1",
-                "Answer1"
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1",
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Unknown",
                 "Llama-3.1-8B-Instruct",
-                "Llama-3.1-8B-Instruct"
+                "Unknown"
             ]
         },
         {
@@ -2303,12 +2303,12 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1"
+                "Answer2"
             ],
             "extracted_answers": [
                 "Llama-3.1-8B-Instruct",
                 "Llama-3.1-8B-Instruct",
-                "Llama-3.1-8B-Instruct"
+                "gpt-4.1"
             ]
         },
         {
@@ -2398,12 +2398,12 @@
             },
             "result": [
                 "Answer2",
-                "Answer2",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
+                "Unknown",
                 "gpt-4.1"
             ]
         },
@@ -2516,9 +2516,9 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
+                "Answer1 provides a thoughtful, practical, and pedagogical guide on how to compose a poem about friendship. It offers clear steps\u2014choosing themes, mood, structure, using imagery and figurative language, revising aloud\u2014and emphasizes authenticity and emotional honesty. It empowers the reader to create their own original work, which is especially valuable for someone \"stuck\" on how to begin.\n\nAnswer2 is a polished, rhyming poem about friendship, but it does not answer the question \u201cHow would you compose a poem about friendship?\u201d\u2014it merely *is* a poem. While it is well-written and emotionally resonant, it fails to address the instructional nature of the query. The user is seeking guidance on *how to write*, not an example.\n\nTherefore, Answer1 is superior because it directly and effectively responds to the question asked.\n\nAnswer1",
                 "Answer1",
-                "Answer1 provides a thoughtful, practical guide on how to compose a poem about friendship. It offers clear, actionable steps\u2014such as choosing themes, mood, structure, and using figurative language\u2014and emphasizes authenticity and emotional honesty, which are central to meaningful poetry. It educates the reader on the process of writing, making it valuable for someone seeking to create their own poem.\n\nAnswer2 is a complete, well-crafted poem about friendship, with consistent rhyme, rhythm, and sentiment. While it is aesthetically pleasing and emotionally resonant, it does not answer the question \u201cHow would you compose a poetry about friendship?\u201d\u2014it merely *is* a poem, rather than explaining how to write one.\n\nThe question asks for guidance on composition, not an example. Therefore, Answer1 directly and effectively fulfills the request, while Answer2, though beautiful, misses the instructional intent.\n\nAnswer1",
-                "Answer1"
+                "Answer1 provides a thoughtful, practical, and instructive guide on how to compose a poem about friendship. It offers clear steps\u2014choosing themes, mood, form, imagery, structure, and revision techniques\u2014while emphasizing emotional authenticity. It\u2019s educational, applicable, and empowers the reader to create their own poem.\n\nAnswer2 is a finished poem, well-written and emotionally resonant, using rhyme, rhythm, and conventional poetic devices. However, it does not answer the question \u201cHow would you compose a poetry about friendship?\u201d\u2014it simply *is* a poem, not a guide to creating one.\n\nSince the question asks for *how to compose*, the superior response is the one that teaches the process, not the one that exemplifies the product.\n\nAnswer1 is clearly the better response to the given question.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -2637,14 +2637,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1 provides a detailed, well-structured, and specific menu with clear meal categories (breakfast, lunch, snack, dessert) and concrete food examples that are both nutritious and appealing. Each item is thoughtfully chosen to balance taste, nutrition, and dietary inclusivity, and the response conveys a strong sense of practical implementation.\n\nAnswer2, while comprehensive in its general principles, lacks the tangible, itemized menu structure that makes the solution actionable and vivid. It offers good advice\u2014such as using seasonal produce, involving student feedback, and limiting sugary drinks\u2014but remains abstract and less concrete in terms of actual menu design.\n\nThe quality of Answer1 lies in its clarity, specificity, and practicality as a complete menu plan, making it demonstrably superior for the given question.\n\nAnswer1",
-                "Answer1 provides a detailed, well-structured, and visually organized menu with specific, appetizing, and nutritionally sound dish examples across all meal categories\u2014breakfast, lunch, snacks, and dessert. Each item is thoughtfully chosen to balance taste and nutrition, incorporating whole grains, lean proteins, healthy fats, and fresh produce. The suggestions are practical, culturally inclusive, and consider dietary preferences (e.g., vegetarian options, no processed sugars).\n\nAnswer2 is also strong\u2014it offers comprehensive, evidence-based strategies for designing a healthy canteen menu and includes important operational considerations like seasonal ingredients, student feedback, portion control, and education. However, it lacks concrete examples of actual menu items. While it gives the \u201chow,\u201d it doesn\u2019t show the \u201cwhat,\u201d making it less tangible and actionable for someone directly tasked with creating the menu.\n\nSince the question asks *how to devise a new menu*, having specific examples (as in Answer1) is critical to demonstrating feasibility and appeal. Answer2 excels in theory but falters in implementation details.\n\nThus, Answer1 is superior in quality for delivering a complete, actionable, and enticing solution.\n\nAnswer1",
-                "Answer1"
+                "Answer1 provides a detailed, structured, and well-organized menu with specific, realistic, and appetizing food items categorized by meal type (breakfast, lunch, snack, dessert). Each item is thoughtfully selected to balance nutrition (whole grains, lean proteins, healthy fats, fruits, vegetables) with taste and appeal to students. It demonstrates practical implementation and attention to dietary variety and preferences.\n\nAnswer2 is also strong\u2014it offers practical principles and strategies (seasonal ingredients, student feedback, portion control, hydration, labeling) that are essential for a successful canteen redesign. However, it lacks concrete menu examples. While it tells you *how* to design the menu, it doesn\u2019t show *what* the menu actually looks like.\n\nThe question asks: *\u201cHow would you devise a new menu\u2026\u201d* \u2014 implying a desire for both the process *and* the output. Answer1 delivers both: a clear methodology (implied through thoughtful item selection) and a tangible, vivid menu. Answer2 focuses almost entirely on the process without concrete examples.\n\nThus, Answer1 is superior because it more fully answers the question by providing an actionable, complete menu plan.\n\nAnswer1",
+                "Answer2",
+                "Answer2"
             ],
             "extracted_answers": [
                 "Llama-3.1-8B-Instruct",
-                "Llama-3.1-8B-Instruct",
-                "Llama-3.1-8B-Instruct"
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         },
         {
@@ -2662,7 +2662,7 @@
             "result": [
                 "Answer2",
                 "Answer2",
-                "Answer2"
+                "Answer2\n\nAnswer2 provides a more structured, detailed, and actionable menu plan with clearly categorized meal sections (Breakfast, Lunch, Snack, Dessert), specific dish examples, and thoughtful combinations that balance nutrition and appeal. It demonstrates a deeper understanding of meal composition, dietary variety, and student appeal through creative yet healthy options (e.g., quinoa bowls, energy balls, dark chocolate-dipped fruit). While Answer1 covers important principles, it remains more general and lacks the concrete, ready-to-implement structure that Answer2 offers. Answer2\u2019s specific menu items are more likely to engage students and meet nutritional goals effectively, making it superior in quality and practicality."
             ],
             "extracted_answers": [
                 "Llama-3.1-8B-Instruct",
@@ -2948,7 +2948,7 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
-                "Answer1 is superior because it provides a more comprehensive, balanced, and age-appropriate description of a middle school uniform. It covers not only clothing items but also considerations like fit, weather-appropriate options (shorts), layering (sweaters, blazers), and safety (closed-toe shoes). It emphasizes practicality and respect without being overly prescriptive or rigid\u2014especially regarding accessories and personal presentation\u2014making it more realistic and student-centered.\n\nAnswer2, while detailed, is overly prescriptive and introduces unnecessary rules (e.g., \u201cno hats, hoodies, or sunglasses,\u201d \u201chair should be neat,\u201d \u201cironed every day\u201d) that extend beyond typical uniform policies and risk infringing on student autonomy or personal expression in ways not directly related to clothing functionality. Additionally, some items like \u201ca simple belt\u201d and \u201cwedding band\u201d seem oddly specific or contextually mismatched for middle schoolers.\n\nAnswer1 strikes a better balance between structure and flexibility, reflecting a deeper understanding of the needs of young adolescents in a school environment.\n\nAnswer1",
+                "Answer1 is superior because it provides a more comprehensive, thoughtful, and age-appropriate overview of a middle school uniform policy. It addresses a wider range of practical considerations\u2014such as seasonal variations (shorts in warm weather), fit (not too tight or too loose), outerwear options (sweaters, cardigans, blazers), and safety guidelines (closed shoes, simple accessories)\u2014all tailored to the developmental needs of middle school students. It also emphasizes the intent behind the uniform (clean, practical, respectful), making it more holistic and educational in tone.\n\nAnswer2 is more restrictive and rigid, introducing somewhat arbitrary rules (e.g., \u201cno hats, hoodies, or sunglasses,\u201d \u201chair should be neat,\u201d \u201cironed every day\u201d) that go beyond clothing design and venture into personal grooming and maintenance expectations, which are less relevant to the core question of what a uniform *should look like*. It also lacks the warmth and inclusiveness of Answer1, sounding more like a disciplinary code than a student-centered policy.\n\nThus, Answer1 offers a richer, more balanced, and pedagogically sound response.\n\nAnswer1",
                 "Answer1",
                 "Answer1"
             ],
@@ -2973,9 +2973,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                "Answer1  \n\nBoth responses are emotionally resonant and thematically appropriate, but Answer1 demonstrates superior lyrical quality through its consistent structure, rhythmic flow, and use of poetic devices such as parallelism, metaphor, and refrain. The verses build momentum effectively, culminating in a powerful, chant-like conclusion (\u201cWe're the warriors, we're the brave / We're the ones who rise\u201d) that feels anthemic and memorable\u2014ideal for songwriting. Answer2 is heartfelt and sincere, but its phrasing is more prosaic, with less rhythmic cohesion and fewer lyrical embellishments. Answer1\u2019s language is more elevated and crafted for musicality, giving it a clearer edge in quality as *lyrics*.",
                 "Answer1",
-                "Answer1 delivers a more polished, emotionally resonant, and structurally cohesive set of lyrics. It employs consistent rhyme, rhythm, and imagery (fire, rain, storm, wings, warriors) that build powerfully toward a triumphant conclusion. The repetition and parallelism (\"We've been... but we're...\") create a chant-like quality ideal for a song, reinforcing the theme of resilience with memorable phrasing. The closing lines amplify the anthem-like tone, giving it a sense of closure and empowerment.\n\nAnswer2 is thoughtful and sincere, with some beautiful lines (\u201cWith hope as my light and courage as my guide\u201d), but it lacks the rhythmic consistency and lyrical polish of Answer1. Its structure is looser, with uneven line lengths and varying meter, which makes it feel more like prose with line breaks than a song lyric. While emotionally genuine, it doesn\u2019t elevate as effectively into a universal, singable anthem.\n\nAnswer1 is the superior lyric in both form and emotional impact.\n\nAnswer1",
-                "Answer1\n\nBoth answers are well-crafted and convey themes of resilience and overcoming challenges, but Answer1 stands out for its stronger lyrical structure, rhythmic consistency, and emotional punch. It uses more vivid imagery (\"fire and the rain,\" \"stormy sea,\" \"spreading our wings\") and employs a consistent rhyme scheme and meter that make it feel more like a finished song \u2014 built for melody and repetition. The repetition of \"We've been...\" builds momentum, and the chorus-like refrain (\"We're rising up, we're standing tall\") gives it a triumphant, anthemic quality often found in popular motivational songs.\n\nAnswer2 is heartfelt and poetic, with lovely lines like \"hope as my light and courage as my guide,\" but it reads more like prose with occasional rhyme rather than a cohesive, singable lyric. It lacks the structural momentum and musicality that make lyrics memorable and impactful.\n\nTherefore, Answer1 is superior in terms of semantic quality as a set of lyrics.\n\nAnswer1"
+                "Answer1  \n\nAnswer1 presents a more polished, rhythmic, and emotionally resonant set of lyrics with a clear structural arc\u2014built around repetition, parallelism, and escalating intensity. It employs vivid imagery (\u201cfire and the rain,\u201d \u201cstormy sea,\u201d \u201cspreading our wings\u201d) and a strong, anthemic tone that feels tailor-made for a song, especially in a pop or rock genre. The use of affirmative declarations (\u201cwe\u2019re still standing,\u201d \u201cwe\u2019re stronger, we\u2019re renewed,\u201d \u201cwe\u2019re soaring high\u201d) gives it a rallying, inspirational quality, while the consistent rhyme scheme and meter enhance musicality.\n\nAnswer2 is heartfelt and sincere, with genuine emotional depth and thoughtful metaphors (\u201cmountains are high,\u201d \u201chope as my light\u201d). However, it lacks the structural cohesion and lyrical punch of Answer1. Its lines are more prose-like, with inconsistent rhythm and rhyme, making it feel more like a reflective poem than song lyrics. While touching, it doesn\u2019t carry the same memorable, singable quality.\n\nThe superior response is Answer1 for its artistic craftsmanship and suitability as lyrics.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "Llama-3.1-8B-Instruct",
@@ -2998,12 +2998,12 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "Unknown"
+                "gpt-4.1"
             ]
         }
     ],
@@ -3117,12 +3117,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1",
+                "Answer2",
                 "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
-                "Llama-3.1-8B-Instruct",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -3261,8 +3261,8 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie\n\nTie",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
@@ -3429,12 +3429,12 @@
             },
             "result": [
                 "Answer2",
-                "Answer2",
+                "Tie",
                 "Answer2"
             ],
             "extracted_answers": [
                 "Llama-3.1-8B-Instruct",
-                "Llama-3.1-8B-Instruct",
+                "TIE",
                 "Llama-3.1-8B-Instruct"
             ]
         }
@@ -3476,9 +3476,9 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
-                "Answer1\n\nAnswer1 provides a comprehensive, coherent, and nuanced assessment of book quality that covers both fiction and nonfiction, addresses emotional and intellectual impact, and balances structural, stylistic, and thematic elements. It also integrates reader response\u2014the idea that a book should \u201cdo what it is meant to do\u201d\u2014which adds a functional and context-sensitive dimension to the evaluation. While Answer2 begins well with a numbered list, it is cut off mid-sentence (\u201cAuthor's voice\u201d) and lacks completion, making it structurally and semantically incomplete. Without the final point and no closing synthesis, Answer2 fails to deliver a full answer, even though its listed points are valid. Answer1, by contrast, is fully formed and thoughtful.\n\nAnswer1",
+                "Answer1\n\nAnswer1 provides a comprehensive, coherent, and nuanced assessment of book quality that applies well to both fiction and nonfiction. It discusses key elements like originality, clarity, coherence, emotional impact, thematic depth, and purpose \u2014 all grounded in thoughtful explanations. It also acknowledges the different goals of books (to inform, entertain, provoke thought) and ties quality to fulfillment of those goals. The writing is fluent and insightful.\n\nAnswer2, while structured as a bullet-point list and initially helpful, is abruptly cut off mid-sentence (\u201cAuthor's voice\u201d), which undermines its completeness and professionalism. Even if the intention was to continue, the truncation makes it semantically incomplete and unreliable as a final answer. The content before the break is valid, but the lack of closure significantly reduces its quality as a response.\n\nTherefore, Answer1 is superior due to its completeness, depth, and thoughtful integration of criteria without structural flaws.\n\nAnswer1",
                 "Answer1",
-                "Answer1\n\nAnswer1 provides a complete, thoughtful, and coherent evaluation of book quality that covers both fiction and nonfiction, addresses emotional and intellectual impact, and includes considerations of style, structure, accuracy, and purpose. It flows naturally and concludes with a strong, holistic summary.\n\nAnswer2, while structured and initially comprehensive, is cut off mid-sentence at the end (\u201cAuthor's voice...\u201d), leaving the list incomplete and unresolved. This undermines its reliability and completeness, even though the points listed are valid. A final incomplete item suggests the answer was not fully delivered or reviewed.\n\nQuality of answer is judged on completeness, coherence, and semantic integrity \u2014 and Answer1 fulfills these fully, while Answer2 does not.\n\nAnswer1"
+                "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -4293,13 +4293,13 @@
             },
             "result": [
                 "Tie",
-                "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie"
+                "Tie",
+                "Tie"
             ],
             "extracted_answers": [
                 "TIE",
-                "Unknown",
-                "Unknown"
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -4484,12 +4484,12 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
-                "Answer1",
-                "Answer1\n\nBoth answers are accurate and well-structured, but Answer1 provides a more comprehensive, cohesive, and conceptually rich explanation. It not only lists the benefits of biodiversity but also explains *why* they matter\u2014emphasizing stability, resilience, interdependence, and the cascading consequences of biodiversity loss. It connects ecological functions to human welfare in a natural, flowing narrative, making the significance more tangible and urgent.\n\nAnswer2, while well-organized and informative, reads more like a bullet-pointed checklist. It lacks the explanatory depth and narrative flow that make the *significance* feel compelling and integrated. It tells *what* the benefits are, but Answer1 explains *how* and *why* they are essential to ecosystem health and human survival.\n\nThus, Answer1 is superior in semantic quality due to its depth, synthesis, and contextual richness.\n\nAnswer1",
+                "Answer2",
+                "Answer1\n\nBoth responses are accurate and well-structured, but Answer1 edges ahead in semantic quality because it provides a more cohesive, narrative explanation that not only lists benefits but also connects them logically to ecosystem function and human dependence. It emphasizes systemic stability, recovery from disturbances, genetic adaptability, and the cascading consequences of biodiversity loss\u2014offering a deeper conceptual understanding. Answer2, while comprehensive and organized as a bullet-point list, is more fragmented and checklist-like, lacking the integrative synthesis that makes Answer1 more insightful and persuasive. The strength of Answer1 lies in its ability to convey why biodiversity matters in a way that feels unified and meaningful, rather than merely enumerating points.\n\nAnswer1",
                 "Answer2"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Llama-3.1-8B-Instruct",
                 "gpt-4.1",
                 "Llama-3.1-8B-Instruct"
             ]
@@ -4534,12 +4534,12 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "Unknown"
+                "gpt-4.1"
             ]
         }
     ],
@@ -4893,14 +4893,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie",
                 "Answer1",
-                "Answer1"
+                "Answer1",
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
-                "Unknown",
                 "Llama-3.1-8B-Instruct",
-                "Llama-3.1-8B-Instruct"
+                "Llama-3.1-8B-Instruct",
+                "Unknown"
             ]
         },
         {
@@ -4917,12 +4917,12 @@
             },
             "result": [
                 "Answer2",
-                "Answer2",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer2"
             ],
             "extracted_answers": [
                 "Llama-3.1-8B-Instruct",
-                "Llama-3.1-8B-Instruct",
+                "Unknown",
                 "Llama-3.1-8B-Instruct"
             ]
         }
@@ -4964,14 +4964,14 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
-                "Answer2",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer1  \nAnswer2  \nTie",
+                "Answer2"
             ],
             "extracted_answers": [
-                "Llama-3.1-8B-Instruct",
                 "Unknown",
-                "Unknown"
+                "Unknown",
+                "Llama-3.1-8B-Instruct"
             ]
         }
     ],
@@ -5108,13 +5108,13 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie\n\nTie",
                 "Answer2",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer2"
             ],
             "extracted_answers": [
-                "Unknown",
                 "Llama-3.1-8B-Instruct",
+                "Unknown",
                 "Llama-3.1-8B-Instruct"
             ]
         }
@@ -5277,13 +5277,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie\n\nTie",
-                "Answer1  \nAnswer2  \nTie\n\nTie",
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "Unknown",
-                "Unknown",
+                "Llama-3.1-8B-Instruct",
                 "Unknown"
             ]
         },
@@ -5397,12 +5397,12 @@
             },
             "result": [
                 "Answer2",
-                "Tie",
+                "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
                 "Llama-3.1-8B-Instruct",
-                "TIE",
+                "Llama-3.1-8B-Instruct",
                 "Llama-3.1-8B-Instruct"
             ]
         }
@@ -5830,7 +5830,7 @@
             "result": [
                 "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer1  \nAnswer2  \nTie\n\nTie"
             ],
             "extracted_answers": [
                 "Unknown",
@@ -6141,13 +6141,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1 and Answer2 both accurately explain the role of sunlight in photosynthesis and why plants need it. However, Answer1 is slightly more precise, cohesive, and scientifically robust in its phrasing. It clearly links sunlight to the energy transformation process, emphasizes the consequences of its absence with logical progression, and uses more formal scientific terminology (e.g., \u201cchemical energy,\u201d \u201cmetabolic processes,\u201d \u201cgrowth, development, and reproduction\u201d) without sacrificing clarity.\n\nAnswer2 is also correct and accessible, even slightly more conversational, but it includes a minor imprecision \u2014 saying chlorophyll \u201ctakes in energy\u201d rather than \u201cabsorbs\u201d or \u201ccaptures\u201d light energy \u2014 and is slightly less structured in its explanation of cause and effect.\n\nGiven the focus on semantic quality \u2014 accuracy, depth, clarity, and scientific rigor \u2014 Answer1 edges ahead.\n\nAnswer1",
-                "Answer1  \nAnswer2  \n\nTie",
+                "Answer1 and Answer2 are both accurate and clearly explain the role of sunlight in photosynthesis. However, Answer1 is slightly superior in quality because it uses more precise scientific language (e.g., \u201cchemical energy in the form of glucose,\u201d \u201cfuel the plant\u2019s metabolic processes,\u201d \u201cgrowth, development, and reproduction\u201d) and provides a more cohesive and structured explanation that emphasizes the causal relationship between sunlight and plant survival at a deeper biological level.\n\nAnswer2 is also correct and more accessible, especially for younger audiences, but it lacks some of the depth and terminology that enhances scientific rigor. Neither contains factual errors, but Answer1 demonstrates a higher level of semantic clarity and conceptual completeness.\n\nAnswer1",
+                "Answer1",
                 "Answer1"
             ],
             "extracted_answers": [
                 "Llama-3.1-8B-Instruct",
-                "Unknown",
+                "Llama-3.1-8B-Instruct",
                 "Llama-3.1-8B-Instruct"
             ]
         },
@@ -6164,14 +6164,14 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
-                "Answer2",
-                "Answer2",
-                "Answer2"
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie\n\nAnswer1 and Answer2 are both accurate, clear, and complete in explaining how photosynthesis requires sunlight and why plants depend on it. \n\nAnswer1 provides a slightly more descriptive and accessible breakdown \u2014 mentioning chloroplasts and chlorophyll, which adds useful biological context for a learner. It also explicitly connects glucose to growth and reproduction, making the implications of lacking sunlight more tangible.\n\nAnswer2 is more concise and scientifically precise, using terms like \u201cchemical energy\u201d and \u201cmetabolic processes,\u201d which may appeal to a more advanced audience. It effectively summarizes the core logic without unnecessary detail.\n\nBoth answers correctly convey the essential relationship between sunlight and photosynthesis, and neither contains errors or omissions. The difference lies in style and audience tone, not in quality or accuracy.\n\nTherefore, they are equally good.\n\nTie"
             ],
             "extracted_answers": [
-                "Llama-3.1-8B-Instruct",
-                "Llama-3.1-8B-Instruct",
-                "Llama-3.1-8B-Instruct"
+                "Unknown",
+                "Unknown",
+                "Unknown"
             ]
         }
     ],
@@ -6260,7 +6260,7 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
-                "Answer1",
+                "Answer1\n\nAnswer1 provides a more practical, realistic, and user-centered explanation of how to use a map (both physical and digital) to find the fastest route. It correctly acknowledges real-world factors such as traffic lights, one-way streets, live traffic updates, roadworks, and the usefulness of map apps\u2014all of which are critical to determining the *fastest* route, not just the shortest. It also guides the user through decision-making based on actual navigational constraints.\n\nAnswer2, while methodical, is overly theoretical and misleading in key parts. For example, step 3 instructs drawing a \"straight line,\" which ignores real-world road networks and is only relevant for Euclidean distance\u2014not actual travel time or feasibility. Items like using a ruler or measuring distance with a straightedge are irrelevant to finding the *fastest* route in practical navigation, especially in urban environments. It also fails to mention digital tools or real-time data, which are standard today.\n\nThe quality of Answer1 is significantly higher because it aligns with real-world usage and provides accurate, actionable guidance.\n\nAnswer1",
                 "Answer1",
                 "Answer1"
             ],
@@ -6429,14 +6429,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1",
-                "Answer1",
-                "Answer1"
+                "Answer2",
+                "Answer2",
+                "Answer2"
             ],
             "extracted_answers": [
-                "Llama-3.1-8B-Instruct",
-                "Llama-3.1-8B-Instruct",
-                "Llama-3.1-8B-Instruct"
+                "gpt-4.1",
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         },
         {
@@ -6765,14 +6765,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2",
                 "Answer1",
-                "Answer1"
+                "Answer1\n\nBoth answers are accurate and provide valuable insights, but Answer1 is superior in quality because it offers a more comprehensive, structured, and clinically relevant approach. It lists specific, actionable steps a pharmacist would follow in practice \u2014 including verifying packaging integrity, using FIFO principles, and employing inventory management systems \u2014 which reflect real-world pharmacy operations. It also emphasizes patient safety as an overarching goal, aligning with professional standards.\n\nAnswer2 is also correct and includes important nuances like Beyond-Use Dates (BUD) and USP guidelines, which are critical in compounding settings. However, it lacks the breadth of practical workflow details provided in Answer1 and reads more like a simplified explanation than a professional procedure.\n\nAnswer1 better demonstrates a holistic understanding of pharmaceutical practice, making it the stronger response.\n\nAnswer1",
+                "Answer2"
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "Llama-3.1-8B-Instruct",
-                "Llama-3.1-8B-Instruct"
+                "Llama-3.1-8B-Instruct",
+                "gpt-4.1"
             ]
         },
         {

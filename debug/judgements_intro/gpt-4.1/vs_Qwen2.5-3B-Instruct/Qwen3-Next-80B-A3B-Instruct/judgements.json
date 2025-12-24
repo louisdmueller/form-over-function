@@ -260,7 +260,7 @@
             },
             "result": [
                 "Answer1",
-                "Answer1 is superior because it provides a more precise, accurate, and comprehensive analysis of the forces acting on a stationary car. It correctly identifies gravitational force, normal force, static friction, and even notes the negligible presence of air resistance and upthrust \u2014 the latter being a detail often overlooked but technically correct in a high-quality physics analysis. It clearly states that the forces are *balanced*, which is central to the state of equilibrium, and explicitly links force balance to the absence of motion.\n\nAnswer2 contains some inaccuracies and omissions. Most notably, it mentions \"rolling friction,\" which does *not* act on a fully stationary car \u2014 rolling friction arises only when there is rolling motion. This is a significant conceptual error. It also vaguely references \"any applied force\" and \"reaction force\" without clarifying that these are not inherent forces acting on the car but external interactions \u2014 potentially misleading. While Answer2 is generally understandable, its inclusion of rolling friction and imprecise language reduces its scientific accuracy.\n\nAnswer1 demonstrates stronger conceptual understanding and technical precision.\n\nAnswer1",
+                "Answer1 is superior because it provides a more detailed, accurate, and scientifically precise analysis of the forces acting on a stationary car. It correctly identifies gravitational force, normal force, static friction, and even mentions minor forces like air resistance and upthrust with appropriate context about their significance. It explicitly states that the forces are *balanced*, which is key to understanding why the car remains stationary, and it clearly links force balance to the absence of acceleration (Newton\u2019s First Law). \n\nAnswer2 contains some inaccuracies: it conflates *rolling friction* with static friction, but rolling friction is not a significant factor in a *stationary* car\u2014it only becomes relevant when the car is rolling. Also, mentioning \u201capplied force\u201d and \u201creaction force\u201d in a general sense without specifying their source (e.g., a person pushing) is vague and potentially misleading. It doesn\u2019t clarify whether the applied force is external or internal, nor does it properly frame Newton\u2019s Third Law in context.\n\nAnswer1\u2019s clarity, precision, and avoidance of misconceptions make it the better response.\n\nAnswer1",
                 "Answer1"
             ],
             "extracted_answers": [
@@ -284,12 +284,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2",
+                "Answer1",
                 "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Qwen2.5-3B-Instruct",
                 "Unknown",
                 "Unknown"
             ]
@@ -381,12 +381,12 @@
             },
             "result": [
                 "Answer2",
-                "Answer1 and Answer2 are both accurate, well-structured, and cover the key points about how elements relate and differ in the Periodic Table. Both correctly mention atomic number as the organizing principle, the significance of groups and periods, valence electrons, and trends in properties.\n\nHowever, **Answer1** provides a slightly more precise and detailed explanation of periodic trends\u2014specifically naming atomic radius, ionization energy, and electronegativity\u2014and gives a concrete example (alkali metals) to illustrate chemical similarity in groups. It is more focused on the *mechanism* behind the relationships and differences (e.g., electronic configuration driving behavior), making it more scientifically robust and instructive.\n\n**Answer2** is also strong and includes useful categories like metals/nonmetals/metalloids and mentions specific families (halogens, noble gases), but it is slightly more general in its explanation of trends and lacks the specific examples and directional descriptions of periodic trends found in Answer1.\n\nThus, **Answer1** offers superior depth, clarity, and scientific precision.\n\nAnswer1",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer1 and Answer2 are both accurate, clear, and comprehensive in explaining how elements in the Periodic Table relate and differ. \n\nAnswer1 provides a concise and technically precise explanation, emphasizing atomic number, periods and groups, electron configurations, and trends like atomic radius and ionization energy\u2014with a concrete example (Group 1 alkali metals). It is well-structured and focused on core periodic trends.\n\nAnswer2 expands slightly on the diversity of elements by explicitly mentioning metals, nonmetals, metalloids, and specific families like halogens and noble gases, and adds details about physical properties (color, density, melting point). It subtly reinforces the link between electron arrangement and behavior.\n\nBoth answers are semantically strong, with no factual errors. Answer1 is slightly more focused on periodic trends and structure, while Answer2 adds richer categorization and real-world context. However, neither exceeds the other significantly in quality or depth.\n\nGiven the high quality of both and the subtle difference in emphasis\u2014rather than superiority\u2014this is best resolved as a tie.\n\nTie",
+                "Answer1  \nAnswer2  \nTie\n\nAnswer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "Qwen2.5-3B-Instruct",
+                "TIE",
                 "Unknown"
             ]
         },
@@ -453,7 +453,7 @@
             "result": [
                 "Answer1  \nAnswer2  \nTie",
                 "Answer1",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a clear, comprehensive, and accurate overview of each major cellular component and its function, including both animal and plant cell structures (e.g., cell wall and chloroplasts). It is well-organized and factually precise.\n\nAnswer2 is also accurate and detailed, with slight additions like vacuoles and the mention of \u201cplasma membrane\u201d and \u201cgene expression,\u201d which enhance specificity. It\u540c\u6837 covers all essential organelles and their roles.\n\nBoth answers are scientifically sound, thorough, and clearly written. The difference between them is minimal \u2014 Answer1 includes the Golgi apparatus explicitly, while Answer2 mentions vacuoles, which Answer1 omits. Neither misses critical components, and both emphasize the integrated nature of cellular functions.\n\nBecause both responses are of equally high quality \u2014 accurate, complete, and well-explained \u2014 neither is objectively superior.\n\nTie"
             ],
             "extracted_answers": [
                 "Unknown",
@@ -670,12 +670,12 @@
             "result": [
                 "Answer2",
                 "Answer2",
-                "Answer2"
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Unknown"
             ]
         },
         {
@@ -812,12 +812,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1 and Answer2 are both accurate, well-structured, and clearly explain the interconnected nature of the water cycle and the importance of each stage. However, Answer1 provides a slightly more comprehensive and technically precise description by explicitly naming all five major stages \u2014 evaporation, condensation, precipitation, infiltration, and runoff \u2014 and elaborating on the role of each with clearer cause-effect relationships (e.g., infiltration replenishing groundwater, runoff directing water to bodies of water). It also uses more formal and complete phrasing that enhances clarity and depth.\n\nAnswer2 is also excellent and includes transpiration and collection, which adds value, but \u201ccollection\u201d is a less precise term than \u201crunoff\u201d and \u201cinfiltration\u201d in scientific contexts. It omits explicit mention of runoff and infiltration as distinct processes, which are critical to understanding how water is distributed and stored.\n\nThus, Answer1 offers a more thorough and scientifically nuanced explanation of the interconnections and the importance of each stage.\n\nAnswer1",
-                "Answer1 and Answer2 are both highly accurate and well-structured explanations of the water cycle and the importance of its stages. \n\nAnswer1 provides a clear, sequential description of the five main stages (evaporation, condensation, precipitation, infiltration, runoff), with precise definitions and explicit connections to ecological and human importance. It emphasizes the *interconnection* of the stages and the role each plays in sustaining Earth\u2019s systems.\n\nAnswer2 is also correct and includes *transpiration* as an important component (which Answer1 omits), offering a slightly more biologically complete picture. It also clearly links each stage to its functional impact on life and water renewal.\n\nThe key difference is that Answer1 is slightly more formal and comprehensive in defining each process, while Answer2 adds transpiration (an important detail) and succinctly ties the cycle to systemic balance.\n\nBoth are semantically strong. However, Answer2\u2019s inclusion of transpiration \u2014 a major component of the water cycle often overlooked \u2014 gives it a marginal edge in completeness without sacrificing clarity.\n\n**Answer2**",
+                "Answer2",
+                "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -835,12 +835,12 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                "Answer2",
+                "Answer1 and Answer2 are both highly accurate, clearly explained, and comprehensive in describing the water cycle and the importance of each stage. Both correctly identify the core processes (evaporation, condensation, precipitation, collection/runoff/infiltration) and explain their roles in sustaining life.\n\nHowever, **Answer1** has a slight edge in *semantic quality* because it more explicitly connects the interdependence of the stages (\"Without any stage, ecosystems would not receive balanced supplies of water, affecting all living things\") and emphasizes the *self-renewing* and *continuous* nature of the cycle in a way that directly answers the \u201cinterconnected\u201d part of the question. It also includes transpiration \u2014 an important biological component often overlooked \u2014 enhancing its ecological accuracy.\n\n**Answer2** is also excellent and more technically precise with terms like \u201cinfiltration\u201d and \u201crunoff,\u201d but it doesn\u2019t emphasize the *interconnection* as vividly as Answer1 does. It lists the stages well but leaves the reader to infer the interdependence, whereas Answer1 makes it explicit.\n\nThus, Answer1 provides a more coherent, integrated explanation of *why* the stages are interconnected and *why* each is important \u2014 directly addressing the full intent of the question.\n\nAnswer1",
                 "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
+                "gpt-4.1",
                 "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct"
             ]
@@ -1148,12 +1148,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
+                "Unknown",
                 "Unknown",
                 "Unknown"
             ]
@@ -1171,7 +1171,7 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                "Answer1",
+                "Answer1\n\nBoth answers are highly accurate and well-structured, covering the key ecological impacts of deforestation: biodiversity loss, carbon release, soil erosion, disruption of water cycles, and effects on Indigenous communities. However, Answer1 provides slightly more specific and nuanced details\u2014such as mentioning rivers becoming \"silted\" (a concrete mechanism affecting aquatic life) and explicitly stating that the Amazon \"acts as a carbon sink,\" which adds scientific precision. It also frames the consequences more vividly by stating \"possible extinction of unique organisms\" and explicitly linking local impacts to \"global ecological stability.\" These subtle additions enhance clarity and depth without redundancy. Answer2 is excellent but slightly more generalized in phrasing (e.g., \"exacerbates environmental degradation\" is vaguer than Answer1\u2019s concrete cause-effect chain).\n\nThus, Answer1 edges ahead in semantic quality due to its precision and richer explanatory detail.\n\nAnswer1",
                 "Answer1",
                 "Answer1"
             ],
@@ -1292,12 +1292,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2",
+                "Answer1  \nAnswer2  \nTie\n\nTie",
                 "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Unknown",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -1315,14 +1315,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
+                "Answer1 and Answer2 are both highly accurate and well-explained. They correctly identify the key factors: the breakdown of chlorophyll due to shorter days and cooler temperatures, the revelation of carotenoids and anthocyanins, and the tree\u2019s preparation for winter. \n\nThe only subtle difference is that Answer1 includes a slightly more detailed phrasing about \u201cconserving resources and getting ready to shed its leaves,\u201d which adds a touch more contextual completeness. However, Answer2 is equally precise, concise, and scientifically sound\u2014without any loss of accuracy.\n\nBoth answers are semantically equivalent in quality, accuracy, and clarity. Neither contains errors or omissions. \n\nTie",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie\n\nAnswer1 and Answer2 are both accurate, clear, and scientifically sound. They explain the same key mechanisms: the breakdown of chlorophyll due to shorter days and cooler temperatures, and the unmasking of carotenoids and anthocyanins. Both mention nutrient redirection and the purpose of preparing for winter.\n\nThe only subtle difference is that Answer1 includes a slightly more expansive sentence about \u201cthe combination of pigment changes and environmental factors,\u201d which adds a touch more context, while Answer2 is slightly more concise but equally complete. Neither contains errors or omissions, and both convey the information with equal clarity and depth.\n\nTherefore, they are effectively equivalent in quality.\n\nTie",
-                "Answer1 and Answer2 are both highly accurate and clearly explain the scientific reasoning behind why leaves change color in the fall. They both correctly identify the roles of chlorophyll breakdown, carotenoids, and anthocyanins, as well as the environmental triggers (shorter days, cooler temperatures) and the tree\u2019s physiological response (resource conservation).\n\nThe only subtle difference is that **Answer1** includes a slightly more complete explanation by explicitly mentioning that the tree \u201csheds its leaves\u201d and uses the phrase \u201cthe combination of pigment changes and environmental factors,\u201d which adds a bit more context to the overall process. **Answer2** is slightly more concise but doesn\u2019t miss any critical points.\n\nGiven that both are scientifically accurate and well-phrased, and the difference is minimal in semantic quality, neither clearly surpasses the other in depth or clarity.\n\n**Tie**"
+                "Answer1"
             ],
             "extracted_answers": [
+                "TIE",
                 "Unknown",
-                "Unknown",
-                "TIE"
+                "gpt-4.1"
             ]
         }
     ],
@@ -1436,8 +1436,8 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                "Answer1  \nAnswer2  \nTie  \n\nTie",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie\n\nBoth Answer1 and Answer2 provide accurate, clear, and scientifically correct explanations of why the Earth has different seasons. They both correctly mention the 23.5-degree axial tilt, the Earth\u2019s orbit around the Sun, and the resulting variation in sunlight distribution between hemispheres. \n\nAnswer1 is slightly more formal and explicitly mentions \u201corbital plane,\u201d which adds a touch of technical precision. Answer2 is more concise and flows naturally, explicitly linking the angle of sunlight to changes in temperature and daylight \u2014 which helps with real-world understanding.\n\nHowever, neither answer contains an error, and both fully address the question with appropriate depth. The differences are negligible in terms of semantic quality: one is marginally more technical, the other slightly more explanatory, but neither is definitively superior.\n\nTherefore, the best judgment is:\n\nTie",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
@@ -1460,7 +1460,7 @@
             },
             "result": [
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie\n\nTie",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
@@ -1507,9 +1507,9 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                "Answer1",
+                "Answer1\n\nBoth answers are accurate and well-structured, but Answer1 provides a more comprehensive and accessible overview of the heart\u2019s role. It explains not only the circulation process in a simplified, cohesive way but also emphasizes the heart\u2019s importance in supplying oxygen/nutrients, removing waste, supporting organ function, and sustaining life \u2014 all of which directly address the broader question, \u201cWhat is the role of the heart?\u201d \n\nAnswer2 is technically detailed and correct, focusing on specific chambers and pathways. However, it omits critical functional context \u2014 such as the purpose of oxygenation and waste removal, and the heart\u2019s role in sustaining overall bodily function \u2014 which makes it slightly less complete as a general explanation of the heart\u2019s \"role.\"\n\nAnswer1 thus delivers a superior balance of accuracy, completeness, and clarity for a general audience.",
                 "Answer2",
-                "Answer1"
+                "Answer1 provides a clear, comprehensive, and accessible explanation of the heart\u2019s role, emphasizing its function in oxygen and nutrient delivery, waste removal, circulation, and overall survival. It is well-structured for a general audience and covers key physiological roles without overwhelming detail.\n\nAnswer2 is also accurate and adds specific anatomical detail (atria, ventricles, pulmonary and systemic circulation), which is valuable. However, while technically precise, it omits mention of the heart\u2019s role in delivering nutrients and removing waste\u2014a fundamental part of its physiological function. Additionally, the claim about \u201celectrolyte balance\u201d is misleading; while the heart is affected by electrolytes, it does not regulate them\u2014this is primarily the role of the kidneys and endocrine system.\n\nTherefore, Answer1 is more complete, accurate, and balanced in its explanation of the heart\u2019s primary roles in the human body.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -1726,7 +1726,7 @@
             "result": [
                 "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie\n\nBoth Answer1 and Answer2 are accurate, clear, and provide essentially the same correct explanation: the Earth\u2019s orbital period is ~365.25 days, so an extra day is added every four years to prevent seasonal drift. Answer1 mentions \u201cFebruary 29\u201d explicitly, while Answer2 emphasizes the consequence of \u201cseasons drifting,\u201d but neither contains a factual error, and both convey the core concept with equal precision and clarity. The difference is minor and stylistic.\n\nThus, both are equally strong.\n\nTie"
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "Unknown",
@@ -3596,12 +3596,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Tie",
+                "Answer1 and Answer2 are both highly accurate, well-structured, and comprehensive in their explanations. They cover the key roles of constellations \u2014 navigation, calendrical functions, cultural and mythological significance, and contributions to early science \u2014 with strong semantic clarity and depth.\n\nAnswer1 leans slightly more formal and emphasizes the foundational, almost existential role of constellations in ancient cosmology (\u201ctheir importance cannot be overstated,\u201d \u201cfoundational to many ancient cultures' understanding of the universe\u201d). It uses slightly more elevated phrasing and synthesizes the points in a cohesive, broader philosophical frame.\n\nAnswer2 is equally correct but slightly more grounded in practical outcomes (\u201cimprove their chances of survival,\u201d \u201cpass down traditions\u201d) and explicitly mentions the development of astronomy and mathematics, which Answer1 omits. This adds a subtle layer of intellectual and scientific context.\n\nBoth are excellent. However, Answer2 includes *one additional meaningful point* \u2014 the development of early astronomy and mathematics \u2014 which subtly broadens the scope of the answer without redundancy. It also maintains clarity and flow.\n\nThus, while they are extremely close, Answer2 has a slight edge in depth and completeness.\n\nAnswer2",
                 "Answer1  \nAnswer2  \nTie",
                 "Answer1"
             ],
             "extracted_answers": [
-                "TIE",
+                "gpt-4.1",
                 "Unknown",
                 "Qwen2.5-3B-Instruct"
             ]
@@ -5228,14 +5228,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie  \n\nThe two answers are both accurate and provide clear, correct information about the three states of matter. Answer1 explains the behavior of particles in each state, while Answer2 focuses on macroscopic properties like shape and volume. Both are semantically excellent and complementary in their explanations\u2014neither is superior in quality to the other.  \n\nTie",
-                "Answer1  \nAnswer2  \nTie",
-                "Answer2"
+                "Answer2",
+                "Answer2",
+                "Answer1  \nAnswer2  \nTie\n\nBoth answers correctly identify the three states of matter: solid, liquid, and gas. \n\nAnswer1 provides a clear explanation of particle behavior in each state\u2014closely packed and fixed in solids, close but flowable in liquids, and far apart and free-moving in gases. This focuses on the microscopic perspective.\n\nAnswer2 emphasizes macroscopic properties: fixed shape and volume for solids, fixed volume but variable shape for liquids, and neither fixed shape nor volume for gases. This is also accurate and useful, especially for introductory science contexts.\n\nBoth responses are factually correct, concise, and informative\u2014but they emphasize different aspects (microscopic vs. macroscopic). Neither is superior in quality; they\u2019re simply different approaches to explaining the same concept.\n\nTie"
             ],
             "extracted_answers": [
-                "Unknown",
-                "Unknown",
-                "gpt-4.1"
+                "gpt-4.1",
+                "gpt-4.1",
+                "Unknown"
             ]
         },
         {
@@ -5251,12 +5251,12 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                "Answer1",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie\n\nTie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Unknown",
                 "Unknown",
                 "Unknown"
             ]
@@ -5635,8 +5635,8 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                "Answer1\n\nBoth answers are largely correct and list the eight primary phases of the Moon. However, Answer1 uses the more accurate term \u201clast quarter\u201d instead of \u201cthird quarter,\u201d which is the standard term used in astronomy. While \u201cthird quarter\u201d is sometimes used informally, \u201clast quarter\u201d is the formally accepted term and better reflects the Moon\u2019s position in its cycle (i.e., the third phase is First Quarter, the fourth is Last Quarter). Additionally, Answer1 provides a slightly more natural and complete explanation with \u201cchanging how much of its sunlit side is visible to us,\u201d which is more precise than Answer2\u2019s slightly redundant phrasing (\u201cits illuminated side facing the Sun\u201d \u2014 which is always true regardless of phase).\n\nThus, Answer1 is superior in accuracy and clarity.\n\nAnswer1",
-                "Answer1\n\nBoth answers correctly list the eight phases of the moon, with only minor differences in wording (\u201cLast Quarter\u201d vs. \u201cThird Quarter\u201d \u2014 \u201cLast Quarter\u201d is the more commonly used and accurate term in standard astronomy education). Answer1 also includes a slightly better explanation by noting that the phases result from \u201chow much of its sunlit side is visible to us,\u201d which is more precise than Answer2\u2019s statement that \u201cits illuminated side facing the Sun\u201d \u2014 which is technically always true (the Sun always illuminates half the Moon), but doesn\u2019t explain the changing visibility from Earth.\n\nAnswer1\u2019s phrasing is clearer, more accurate, and pedagogically stronger. Therefore, Answer1 is superior.\n\nAnswer1",
+                "Answer1 is superior because it correctly identifies the phase as \"Last Quarter\" rather than \"Third Quarter,\" which is the more commonly accepted and scientifically standard term in astronomy. While \"Third Quarter\" is sometimes used colloquially, \"Last Quarter\" is the accurate term used in educational and scientific contexts to denote the phase following the full moon and preceding the new moon. Additionally, both answers are otherwise accurate and clear, but Answer1\u2019s use of the correct terminology gives it a slight edge in precision and quality.\n\nAnswer1",
+                "Answer1\n\nBoth answers are essentially correct in listing the eight lunar phases. However, Answer1 uses \u201clast quarter,\u201d which is the more commonly accepted and precise term in astronomy, while Answer2 uses \u201cThird Quarter,\u201d which is less standard\u2014though sometimes used interchangeably, \u201clast quarter\u201d is the preferred terminology in most educational and scientific contexts.\n\nAdditionally, Answer1 provides a slightly clearer and more seamless explanation: \u201cchanging how much of its sunlit side is visible to us\u201d is more directly tied to the observer\u2019s perspective on Earth. Answer2\u2019s phrasing, \u201cwith its illuminated side facing the Sun,\u201d is factually true but less precise in explaining *why* we see different phases\u2014it doesn't emphasize the changing visibility from Earth\u2019s viewpoint as clearly.\n\nThus, Answer1 is superior in both terminology and explanatory clarity.\n\nAnswer1",
                 "Answer1"
             ],
             "extracted_answers": [
@@ -5900,12 +5900,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Unknown",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -5997,7 +5997,7 @@
             },
             "result": [
                 "Answer1",
-                "Answer1",
+                "Answer1\n\nBoth answers are accurate and clearly explain the Pythagorean theorem and its application. However, Answer1 is slightly superior because it provides a more explicit and structured breakdown of the two scenarios: finding the hypotenuse when given the two legs, and finding a leg when given the hypotenuse and the other leg. It includes the rearranged formulas in symbolic form with square roots, making the computational steps clearer and more mathematically precise. Answer2 is also correct but is phrased in a slightly more general and less mathematically formal way (e.g., \u201cuse a^2 = c^2 - b^2\u201d without explicitly showing the square root step as clearly).\n\nThe additional clarity in Answer1\u2019s explanation of the rearranged formulas gives it a slight edge in semantic quality and instructional precision.\n\nAnswer1",
                 "Answer1"
             ],
             "extracted_answers": [
@@ -6019,8 +6019,8 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie\n\nTie",
-                "Answer1  \nAnswer2  \nTie\n\nTie",
+                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a clear, complete, and accurate explanation of how to use the Pythagorean theorem. It correctly emphasizes the necessity of a right triangle, defines the roles of a, b, and c, and gives practical instructions for solving for either a leg or the hypotenuse, including the rearranged formulas and the final step of taking a square root. The explanation is thorough and educational.\n\nAnswer2 is also correct and concise. It clearly presents the theorem, explains the variables, and shows how to solve for each unknown side with the appropriate formulas. It even includes the square root notation properly formatted with LaTeX, which adds clarity. However, it omits the explicit mention of checking whether the triangle is right-angled\u2014a small but important prerequisite that Answer1 includes.\n\nWhile both answers are semantically accurate and high-quality, Answer1 is slightly superior because it explicitly reminds the user of the critical condition: the triangle must be a right triangle. This detail prevents potential misuse of the theorem and enhances understanding.\n\nAnswer1",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie\n\nTie"
             ],
             "extracted_answers": [
@@ -6428,14 +6428,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1",
-                "Answer1  \nAnswer2  \nTie",
-                "Answer1 and Answer2 are both high-quality responses that accurately convey a nutrition-informed approach to meal planning. They both emphasize whole foods, balance of macronutrients, inclusion of fruits, vegetables, lean proteins, whole grains, and healthy fats. Both mention hydration, limiting processed foods, and using healthy cooking methods.\n\nHowever, **Answer1** provides more concrete, specific meal examples (e.g., \u201coatmeal with berries and nuts,\u201d \u201cbaked salmon with quinoa and broccoli\u201d), which makes the plan feel more tangible and actionable. This level of detail enhances its practicality and demonstrates a deeper application of nutritional principles in real-world meal contexts.\n\n**Answer2** is more general and structural \u2014 it lists categories and principles well but lacks the specific meal examples that make the advice easier to implement.\n\nBecause **semantic quality** includes clarity, specificity, and applicability \u2014 and Answer1 delivers more of that \u2014 it is superior in this context.\n\nAnswer1"
+                "Answer2",
+                "Answer2",
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
-                "Unknown",
-                "Qwen2.5-3B-Instruct"
+                "gpt-4.1",
+                "gpt-4.1",
+                "Unknown"
             ]
         },
         {
@@ -6597,7 +6597,7 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1 is superior because it provides a more comprehensive, accurate, and nuanced explanation of why one gets tired after physical exercise. It correctly identifies multiple physiological mechanisms \u2014 ATP depletion, oxygen deficit leading to anaerobic respiration and lactic acid buildup, dehydration and electrolyte loss, nervous system fatigue, and increased cardiovascular/respiratory demand \u2014 all of which contribute to post-exercise fatigue. The answer integrates systems biology (muscular, metabolic, cardiovascular, nervous) in a coherent way.\n\nAnswer2 is partially correct but incomplete and contains a misleading statement: \u201cthe body also adapts to the stress of exercise, which can make it feel more tired as it becomes accustomed to the demands placed on it.\u201d This is inaccurate \u2014 adaptation to exercise typically *reduces* perceived fatigue over time (e.g., improved endurance), not increases it. This error undermines the scientific reliability of Answer2.\n\nThus, Answer1 is more complete, accurate, and scientifically sound.\n\nAnswer1"
+                "Answer1 is superior because it provides a more comprehensive, accurate, and nuanced explanation of why fatigue occurs after physical exercise. It covers multiple physiological systems\u2014including ATP depletion, anaerobic respiration and lactic acid buildup, dehydration and electrolyte imbalance, nervous system fatigue, and increased cardiovascular and respiratory workload\u2014all of which contribute to post-exercise tiredness. \n\nAnswer2 touches on key points like glycogen depletion, ATP, and lactic acid, but it is less detailed and includes a misleading statement: \u201cthe body also adapts to the stress of exercise, which can make it feel more tired as it becomes accustomed to the demands placed on it.\u201d This is incorrect\u2014adaptation (e.g., through training) typically reduces fatigue over time, not increases it. This error undermines the accuracy of Answer2.\n\nAnswer1 maintains scientific precision and avoids erroneous claims, making it the better response.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -6668,9 +6668,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie\n\nTie",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie\n\nTie"
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "Unknown",

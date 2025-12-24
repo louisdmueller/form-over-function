@@ -189,14 +189,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                "Answer2 is superior because it provides more detailed and accurate physiological insights. It correctly identifies the roles of accessory organs (pancreas and liver), which Answer1 omits entirely. Answer2 also clarifies the mechanism of peristalsis (\"connected by a long muscular tube, which helps food move in the right direction\"), giving a clearer understanding of how organs are physically and functionally linked. Additionally, the explanation of bile (\u201cyellow liquid from the liver\u201d) is simplistically accurate for a general audience without overcomplicating, while still enhancing understanding. Answer1 is correct but superficial, listing organs and functions without explaining the interconnectivity or the role of key accessory organs. Answer2 offers a more complete, nuanced, and educationally valuable explanation.\n\nAnswer2",
                 "Answer2",
-                "Answer2",
-                "Answer1 is superior.\n\nReason: Answer1 provides a clearer, more structured, and accurate overview of the digestive system. It correctly lists all major organs in order and explains their specific roles with precise physiological details (e.g., \u201csaliva that contains enzymes,\u201d \u201cabsorbs water and electrolytes\u201d). It avoids over-attributing functions to organs not directly involved (like the pancreas and liver, which are accessory organs, not part of the main alimentary canal). It also emphasizes the integration of the system holistically, reinforcing why each organ is indispensable.\n\nAnswer2, while mostly accurate, contains minor inaccuracies: it refers to \u201ca yellow liquid from the liver\u201d (bile is not described as \u201cyellow liquid\u201d in standard scientific contexts, and this phrasing is imprecise), and it incorrectly lists the pancreas and liver as if they are part of the main connected tube \u2014 they are accessory organs that secrete into the small intestine but are not structurally part of the continuous digestive tract. Also, Answer2 lacks the same level of clarity and cohesion as Answer1.\n\nTherefore, Answer1 demonstrates higher semantic quality, accuracy, and scientific precision.\n\nAnswer1"
+                "Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "Llama-2-7b-chat-hf"
+                "gpt-4.1"
             ]
         },
         {
@@ -598,7 +598,7 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1 is superior because it provides a more comprehensive and nuanced explanation of the key components of a complete sentence. It clearly defines both subject and predicate, elaborates on how the predicate can include more than just a verb (e.g., objects, adverbs), and gives concrete examples to illustrate each point. It also correctly notes sentence punctuation conventions, which, while not grammatical components, are important for functional written communication. Furthermore, it addresses the relational aspect of the components\u2014how subject and predicate work together to convey a complete idea\u2014directly answering the \u201chow do they relate to one another\u201d part of the question.\n\nAnswer2 is accurate but incomplete. While it mentions subject, verb, and object, it incorrectly implies that an object is always required, which is not true (e.g., \u201cShe runs\u201d is a complete sentence without an object). It also fails to define the predicate as a unit (which includes the verb and all its modifiers), and it omits the relational explanation entirely. Moreover, it misses the punctuation note and does not explain why the components are essential for completeness.\n\nThus, Answer1 is more thorough, accurate, and responsive to the full scope of the question.\n\nAnswer1"
+                "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -740,8 +740,8 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                "Answer1 is superior.\n\nWhile both answers contain accurate information, Answer1 provides a clearer, more comprehensive, and better-structured explanation of the relationships among the Sun, Earth, and Moon. It explicitly clarifies that the Moon orbits the Earth, not the Sun directly \u2014 a critical point that Answer2 incorrectly implies by stating \u201cthe Earth and moon orbit around [the sun]\u201d without sufficient clarification. Answer1 correctly separates the two orbital systems: Earth around the Sun, Moon around the Earth. Additionally, Answer1 elaborates on the observable consequences of these relationships (day and night, lunar phases, eclipses, tides), making the explanation more insightful and educational. Answer2 contains a minor but significant inaccuracy and is less detailed in explaining the causal effects of the relationships.\n\nAnswer1 better fulfills the question's intent by explaining not just the motions, but also the functional and systemic interrelationships.\n\nAnswer1",
-                "Answer1 is superior.\n\nWhile both answers contain accurate information, Answer1 provides a more complete, coherent, and pedagogically useful explanation. It clearly distinguishes the roles of each body: the sun as the central star providing light and heat, Earth orbiting the sun annually due to gravity, and the moon orbiting Earth monthly due to Earth\u2019s gravity. It also explicitly connects their motion to observable phenomena\u2014day and night, lunar phases, eclipses, and tides\u2014which Answer2 only partially covers (mentioning tides and climate but omitting day/night and lunar phases). Additionally, Answer1 emphasizes the *relationship* between all three bodies in a way that synthesizes their interactions, making it more holistic and informative for someone \u201cstuck on the question.\u201d\n\nAnswer2 contains a significant error: it says \u201cthe Earth and moon orbit around [the sun],\u201d which is ambiguous and misleading. While both Earth and moon do orbit the sun collectively, the moon primarily orbits Earth, and Earth is the dominant gravitational influence on the moon. Answer1 correctly clarifies this hierarchical relationship: moon \u2192 Earth \u2192 sun.\n\nThis accuracy and clarity make Answer1 the better response.\n\nAnswer1",
+                "Answer1",
+                "Answer1",
                 "Answer1"
             ],
             "extracted_answers": [
@@ -765,14 +765,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1 and Answer2 both provide accurate, comprehensive, and well-structured analyses of the causes and effects of deforestation on local ecosystems. \n\nAnswer1 is slightly more formal and concise, correctly identifying key causes (agriculture, urbanization, logging) and effects (biodiversity loss, soil erosion, climate change, carbon sink reduction, water cycle disruption). It efficiently connects deforestation to broader environmental consequences like climate change and human health.\n\nAnswer2 is more conversational and detailed in its explanations\u2014for instance, it explicitly mentions road construction, nutrient loss, food webs, and impacts on local human communities. It also uses accessible language that enhances understanding, and it elaborates on the interconnectedness of ecosystem components.\n\nBoth answers are factually correct and cover the essential points. However, Answer2 offers slightly richer detail on ecosystem dynamics (e.g., food webs, nutrient loss, human dependency) and provides a more holistic view of the local ecological impact, without sacrificing clarity.\n\nThus, Answer2 has a marginal edge in depth and contextual richness, while maintaining accuracy and clarity.\n\nAnswer2",
-                "Answer2",
-                "Answer1 and Answer2 both provide accurate, well-structured explanations of the causes and effects of deforestation on local ecosystems. They cover key points such as human causes (agriculture, urbanization, logging), ecological effects (habitat loss, soil erosion, disrupted water cycle, climate change), and impacts on biodiversity and human communities.\n\nHowever, **Answer1** is slightly superior due to its more concise, precise, and scientifically framed language. It explicitly mentions \u201closs of biodiversity,\u201d \u201ccarbon sinks,\u201d and \u201cclimate patterns,\u201d which are key ecological terms that ground the explanation in academic rigor. While Answer2 is clear and accessible, it is somewhat more conversational and repetitive (e.g., \u201cmakes it harder for them to survive and sometimes causing them to disappear forever\u201d vs. the more direct \u201closs of biodiversity\u201d in Answer1).\n\nAnswer1 better balances depth with clarity and uses more formal terminology appropriate for an analytical response, without sacrificing understanding.\n\n**Answer1**"
+                "Answer1\n\nBoth answers are accurate and cover the key causes and effects of deforestation on local ecosystems. However, Answer1 is superior in semantic quality because it presents the information in a more structured, concise, and scientifically precise manner. It uses more formal and exact terminology (e.g., \u201closs of biodiversity,\u201d \u201ccarbon sinks,\u201d \u201cchanges in climate patterns\u201d) and effectively connects causes to broader environmental consequences without redundancy. Answer2, while clear and accessible, is slightly more colloquial and repetitive (e.g., \u201cmakes climate change worse\u201d vs. \u201ccontributes to climate change by releasing stored carbon\u201d), and lacks the same level of precision and flow. Answer1 better demonstrates a deeper understanding of ecosystem dynamics and terminology, making it the higher-quality response.",
+                "Answer1 and Answer2 both provide accurate, comprehensive, and well-structured analyses of the causes and effects of deforestation on local ecosystems. \n\nAnswer1 is slightly more concise and uses precise terminology such as \u201ccarbon sinks,\u201d \u201cbiodiversity,\u201d and \u201cclimate patterns,\u201d giving it a more formal, academic tone. It efficiently covers key points without redundancy.\n\nAnswer2 is more conversational and elaborates slightly more on human impacts (\u201cpeople who live near forests...\u201d) and ecological ripple effects (\u201cfood webs,\u201d \u201cnatural balance\u201d), which adds helpful context, especially for a broader audience. It also connects causes and effects in a very intuitive, cause-and-effect manner.\n\nBoth answers are factually correct, thorough, and free of errors. The difference is stylistic rather than substantive: Answer1 leans academic, Answer2 leans accessible. Neither is superior in *semantic quality*\u2014both equally fulfill the request to analyze causes and effects.\n\n**Tie**",
+                "Answer2"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "gpt-4.1",
-                "Llama-2-7b-chat-hf"
+                "Llama-2-7b-chat-hf",
+                "TIE",
+                "gpt-4.1"
             ]
         },
         {
@@ -836,9 +836,9 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                "Answer1\n\nAnswer1 provides a clear, accurate, and comprehensive explanation of the water cycle, correctly identifying the four main stages (evaporation, condensation, precipitation, collection) and elaborating on how each contributes to sustaining life. It also includes transpiration\u2014often overlooked but scientifically important\u2014and explains the functional importance of each stage in a way that\u2019s accessible and logically connected. The answer emphasizes the necessity of the entire cycle for ecosystems and human survival, reinforcing interconnection effectively.\n\nAnswer2, while mostly accurate, contains a significant error: it introduces \u201cintrusion\u201d as a stage of the water cycle and defines it as saltwater moving into freshwater aquifers. This is not a standard or primary stage of the water cycle\u2014it\u2019s a specific environmental issue (saltwater intrusion), not a universal component of the natural cycling process. Including it as if it\u2019s a core stage misrepresents the cycle and introduces confusion. Additionally, Answer2 omits transpiration and doesn\u2019t explain the importance of each stage as thoroughly as Answer1 does.\n\nTherefore, Answer1 is superior in accuracy, completeness, and clarity.\n\nAnswer1",
                 "Answer1",
-                "Answer1\n\nAnswer1 provides a clearer, more accurate, and comprehensive explanation of the water cycle and the importance of each stage. It correctly identifies the core stages\u2014evaporation, transpiration, condensation, precipitation, and collection\u2014and explains each in simple, precise language that links them logically. It also emphasizes why each stage matters for sustaining life, which directly answers the \u201cwhy is each stage important\u201d part of the question.\n\nAnswer2, while partly correct, contains a significant error: it mentions \u201cintrusion\u201d as a stage of the water cycle, specifically defining it as \u201csaltwater moves into freshwater aquifers.\u201d This is not a standard or primary stage of the water cycle; it is a contamination or geological issue (saltwater intrusion), not a natural, uniform phase like evaporation or infiltration. Including it as part of the core cycle misrepresents the model and introduces misleading information. Additionally, Answer2 is less thorough in explaining the importance of each stage for life and ecosystems.\n\nTherefore, Answer1 is superior in accuracy, completeness, and clarity.\n\nAnswer1"
+                "Answer1",
+                "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -934,7 +934,7 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1"
+                "Answer1\n\nAnswer1 provides a more comprehensive, detailed, and accurate explanation of how each organelle in the plant cell contributes to overall cellular function. It clearly describes the roles of the nucleus, chloroplasts, mitochondria, vacuole, endoplasmic reticulum, Golgi apparatus, ribosomes, and cytoplasm \u2014 including specific processes like photosynthesis and protein synthesis \u2014 and explains how they interrelate to support growth, energy production, storage, and communication.\n\nAnswer2 is also correct but lacks key details: it omits the nucleus and ribosomes entirely, which are essential to the cell\u2019s control and protein production. It also incorrectly includes lysosomes \u2014 which are rare or absent in most plant cells (plant cells typically use vacuoles for degradation). Furthermore, Answer2\u2019s description is more superficial and less integrated in explaining how structures \"work together.\"\n\nAnswer1\u2019s depth, accuracy, and integration of functions make it superior.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -1053,14 +1053,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2",
                 "Answer1",
-                "Answer2"
+                "Answer2",
+                "Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "Llama-2-7b-chat-hf",
-                "gpt-4.1"
+                "gpt-4.1",
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -1150,12 +1150,12 @@
             },
             "result": [
                 "Answer2",
-                "Answer2",
+                "Answer1",
                 "Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
+                "Llama-2-7b-chat-hf",
                 "gpt-4.1"
             ]
         },
@@ -1172,12 +1172,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                "Answer2",
+                "Answer1",
                 "Answer1",
                 "Answer1"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -1412,13 +1412,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                "Answer1",
                 "Answer2",
+                "Answer1",
                 "Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "Llama-2-7b-chat-hf",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -1581,14 +1581,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1",
-                "Answer1",
-                "Answer1"
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "Unknown",
+                "Unknown",
+                "Unknown"
             ]
         },
         {
@@ -2084,9 +2084,9 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                "Answer1 is superior because it provides a more comprehensive, accurate, and nuanced explanation of the differences between inner and outer planets. It correctly identifies the inner planets as terrestrial, notes their rocky composition and limited moons, and accurately distinguishes between gas giants and ice giants among the outer planets. It also properly mentions planetary rings (present in all four outer planets) and clarifies that outer planets lack a solid surface \u2014 important distinctions that Answer2 omits or misstates.\n\nAnswer2 contains significant inaccuracies: it claims inner planets have \u201cdenser atmospheres,\u201d which is false (Venus has a dense atmosphere, but Mercury\u2019s is practically nonexistent, and Mars\u2019s is very thin \u2014 overall, outer planets have much more massive atmospheres). It also incorrectly states that outer planets have \u201cless dense atmospheres,\u201d when in fact their atmospheres are vastly thicker and more massive. Additionally, it misses key details like moons and rings, and oversimplifies composition by ignoring the distinction between gas giants and ice giants.\n\nThus, Answer1 is clearly more accurate, detailed, and educationally valuable.\n\nAnswer1",
-                "Answer1\n\nAnswer1 provides a more comprehensive, accurate, and nuanced explanation. It correctly identifies the inner planets as terrestrial and the outer planets as gas and ice giants, correctly noting that Uranus and Neptune are ice giants \u2014 a detail Answer2 omits. It also accurately describes key features like the presence of rings (especially for Saturn, though implied for all outer planets), number of moons, and the absence of a solid surface in outer planets \u2014 all of which are important distinguishing characteristics. Additionally, Answer1 clarifies that inner planets have \"few or no moons\" and \"hard surfaces,\" which adds valuable context.\n\nAnswer2, while not incorrect, is overly simplified and contains a factual error: it claims inner planets have \"denser atmospheres,\" which is false. Mercury has almost no atmosphere, Venus has an extremely dense one, Earth has a moderate one, and Mars has a thin one \u2014 so \"denser atmospheres\" as a generalization for all inner planets is misleading. Furthermore, it inaccurately states outer planets have \"less dense atmospheres\" \u2014 their atmospheres are massive in total mass but less dense at the cloud tops compared to Earth's surface. The phrasing is imprecise and lacks vital details like rings and moons.\n\nThus, Answer1 is superior in terms of accuracy, completeness, and clarity.\n\nAnswer1",
-                "Answer1 is superior because it provides a more comprehensive and accurate explanation of the differences between inner and outer planets. It correctly identifies the inner planets as terrestrial, notes their rocky composition, minimal moons, and solid surfaces. It also accurately categorizes the outer planets as gas giants and ice giants (with proper distinction for Uranus and Neptune), mentions their numerous moons, and importantly includes the fact that they have ring systems \u2014 a key distinguishing feature omitted in Answer2.\n\nAdditionally, Answer2 contains an inaccuracy: it claims inner planets have \u201cdenser atmospheres,\u201d which is incorrect. Earth and Venus have relatively dense atmospheres compared to Mercury and Mars, but the outer planets (especially Jupiter and Saturn) have *much* denser and thicker atmospheres overall. Saying outer planets have \u201cless dense atmospheres\u201d is misleading and scientifically inaccurate.\n\nThus, Answer1 is more complete, nuanced, and factually correct.\n\nAnswer1"
+                "Answer1",
+                "Answer1",
+                "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -2303,7 +2303,7 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1 and Answer2 are both well-structured, thoughtful, and practical responses that cover key elements of a successful recycling campaign: education, infrastructure, engagement, and sustainability. \n\nAnswer1 is slightly stronger in its methodological rigor\u2014it begins with a *waste audit*, which is a data-driven, professional approach that informs targeted interventions. It also proposes a *student-led recycling club*, which fosters long-term ownership and institutionalization of the campaign. The inclusion of a \"Recycling Fair\" adds depth by connecting the school community to broader external resources.\n\nAnswer2 is equally engaging and highlights strong community-building elements\u2014weekly announcements, class competitions, expert visits, and monthly recycling reports. It\u2019s very accessible and student-centered, with a focus on motivation through rewards and visibility. However, it lacks the initial diagnostic step (like a waste audit) and doesn't explicitly mention proper sorting education beyond labeling bins.\n\nBoth are excellent, but Answer1 demonstrates a more comprehensive, systematic approach rooted in assessment and sustainability planning, which is crucial for long-term success.\n\n**Answer1**"
+                "Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
@@ -2518,7 +2518,7 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1"
+                "Answer1\n\nAnswer1 provides a thoughtful, structured, and educational guide on how to compose poetry about friendship. It offers practical advice\u2014choosing themes, selecting a form, using imagery and figurative language, revising aloud, and crafting strong openings and closings. It emphasizes authenticity and emotional truth, which are central to meaningful poetry. Importantly, it empowers the reader with a framework to create their own poem rather than simply providing one.\n\nAnswer2, while neatly rhymed and thematically appropriate, is just a single poem. It doesn\u2019t instruct or explain how to write poetry\u2014it merely demonstrates one example. For a question asking \u201chow would you compose,\u201d the user clearly seeks guidance on process and technique, not a finished product.\n\nTherefore, Answer1 is superior in quality, depth, and relevance to the question\u2019s intent.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -3405,14 +3405,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                "Answer1  \nAnswer2  \nTie",
                 "Answer2",
-                "Answer2",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer2"
             ],
             "extracted_answers": [
+                "Unknown",
                 "gpt-4.1",
-                "gpt-4.1",
-                "Unknown"
+                "gpt-4.1"
             ]
         },
         {
@@ -3478,7 +3478,7 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1 is superior because it provides a richer, more nuanced, and context-sensitive evaluation of book quality. It differentiates between fiction and nonfiction criteria, incorporates emotional and intellectual impact (\"makes the reader feel something or think about the message\"), and addresses stylistic elements like pacing and tone\u2014factors that are crucial to real-world reading experiences. While Answer2 is well-structured and comprehensive, it reads more like a bullet-point checklist without deeper explanation or synthesis. Answer1 demonstrates thoughtful analysis and connects criteria to reader experience, making it more insightful and practically useful.\n\nAnswer1"
+                "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -4078,7 +4078,7 @@
             },
             "result": [
                 "Answer1",
-                "Answer1",
+                "Answer1\n\nAnswer1 provides a structured, comprehensive, and nuanced evaluation of leadership effectiveness, with clearly defined, distinct factors supported by specific criteria (e.g., \u201cdevelop and implement a strategy,\u201d \u201cmanage their own emotions and the emotions of their team\u201d). It uses professional language appropriate for leadership assessment and demonstrates depth in each point. While it is cut off mid-sentence at the end, the quality and completeness of the prior points are significantly higher than Answer2.\n\nAnswer2 is coherent and touches on many relevant ideas, but it is less systematic, uses more informal language (\u201chow good a leader is,\u201d \u201chow much their team trusts\u201d), and lacks the precision and granularity found in Answer1. It conflates several concepts without clearly delineating them, and while it mentions both qualitative and quantitative outcomes, it does so in a less rigorous and less analytical manner.\n\nThus, Answer1 is superior in semantic quality\u2014offering greater clarity, depth, organization, and professional rigor.\n\nAnswer1",
                 "Answer1"
             ],
             "extracted_answers": [
@@ -4484,12 +4484,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                "Answer2",
+                "Answer1",
                 "Answer1",
                 "Answer2"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
+                "gpt-4.1",
                 "gpt-4.1",
                 "Llama-2-7b-chat-hf"
             ]
@@ -4605,13 +4605,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1",
-                "Answer1",
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie\n\nTie",
                 "Answer1"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
+                "Unknown",
+                "Unknown",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -4628,12 +4628,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                "Answer2",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
+                "Unknown",
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
@@ -4724,14 +4724,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
+                "Answer1",
                 "Answer2",
-                "Answer2",
-                "Answer2"
+                "Answer1  \nAnswer2  \nTie\n\nTie"
             ],
             "extracted_answers": [
+                "gpt-4.1",
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "Unknown"
             ]
         }
     ],
@@ -5229,12 +5229,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie",
+                "Answer1",
+                "Answer1  \nAnswer2  \nTie\n\nBoth answers correctly identify the three states of matter: solid, liquid, and gas. They both provide accurate and clear descriptions of the properties of each state. \n\n- Answer1 says solids have a fixed shape and volume, liquids take the shape of their container, and gases expand to fill their container.  \n- Answer2 says solids keep shape and size, liquids keep size but change shape, and gases have no fixed shape or size and spread out.\n\nBoth are semantically correct. Answer1 uses more precise scientific terminology (\u201cvolume\u201d), while Answer2 uses slightly more intuitive phrasing (\u201csize\u201d instead of \u201cvolume\u201d), but the meaning remains accurate in a basic context. Neither contains errors, and both fulfill the question fully.\n\nTherefore, the quality is equivalent.\n\nTie",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
-                "Unknown",
+                "Llama-2-7b-chat-hf",
                 "Unknown",
                 "Unknown"
             ]
@@ -5348,14 +5348,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                "Answer1",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer1",
+                "Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "Unknown",
-                "Unknown"
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         }
     ],
@@ -5589,12 +5589,12 @@
             },
             "result": [
                 "Answer2",
-                "Answer2",
+                "Answer1  \nAnswer2  \nTie\n\nAnswer2",
                 "Answer2"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
+                "Unknown",
                 "Llama-2-7b-chat-hf"
             ]
         }
@@ -5972,7 +5972,7 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                "Answer1 is superior.\n\nWhile both answers accurately describe key components of the water cycle within a terrarium, Answer1 provides a more coherent, narrative-driven explanation that connects each step in a natural, flowing sequence. It clearly links the physical observations (water vapor forming drops on the lid, droplets falling back to soil) to the scientific terms (evaporation, condensation, precipitation), making it more intuitive for a learner. It also importantly highlights the cyclical and self-sustaining nature of the system\u2014emphasizing that the same water is reused, mirroring Earth\u2019s global water cycle\u2014which adds conceptual depth.\n\nAnswer2, while technically correct and well-structured as a list, includes problematic or misleading elements. \u201cRunoff\u201d and \u201cinfiltration\u201d as presented are not the dominant or observable processes in a typical closed terrarium. In a sealed terrarium, water doesn\u2019t \u201crun off\u201d the lid in the way it does on a slope or in nature\u2014it drips due to gravity from condensation. \u201cInfiltration\u201d as a distinct step is also misleading in this context, since the terrarium lacks distinct soil layers or groundwater systems like those in nature. Moreover, introducing \u201cevapotranspiration\u201d as a separate numbered step without clearly connecting it to the prior steps feels redundant and slightly overcomplicates a simple model meant for demonstration.\n\nAnswer1\u2019s explanation is more accurate in context, more pedagogically effective, and avoids overstating processes that don't meaningfully occur in a typical terrarium setup.\n\nAnswer1",
+                "Answer1",
                 "Answer1",
                 "Answer1"
             ],
@@ -6068,8 +6068,8 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                "Answer1\n\nAnswer1 provides a scientifically accurate and well-explained demonstration of gravity using the classic feather-and-ball-in-vacuum experiment, originally popularized by Galileo and famously demonstrated on the Moon by Apollo 15 astronaut David Scott. It correctly distinguishes between gravity and air resistance, clarifying a common misconception. The explanation is clear, grounded in physical principles, and effectively illustrates that gravity accelerates all masses equally in the absence of other forces.\n\nAnswer2 is fundamentally incorrect. Gravity between two balls on a flat surface is far too weak to cause observable motion\u2014any rolling of a small ball toward a large one is due to imperfections in the surface, residual momentum, or anthropogenic nudges, not gravitational attraction. The gravitational force between everyday-sized objects is negligible compared to friction and other forces. This misrepresentation conflates observation with theory and misleads the learner about the nature of gravitational forces.\n\nThus, Answer1 is vastly superior in accuracy, clarity, and educational value.\n\nAnswer1",
-                "Answer1\n\nAnswer1 provides a clear, accurate, and scientifically sound illustration of gravity using a well-known experiment (the feather and ball drop), correctly explaining the role of air resistance versus gravitational acceleration. It correctly emphasizes that in the absence of air resistance, all objects fall at the same rate regardless of mass \u2014 a fundamental principle of gravity first demonstrated by Galileo and confirmed in vacuum chamber experiments (e.g., Apollo 15 on the Moon). The explanation is educational, precise, and addresses a common misconception.\n\nAnswer2 is scientifically incorrect.Gravity between two small objects like balls on a table is far too weak to cause observable motion in a normal environment \u2014 the gravitational attraction is negligible compared to friction, air currents, and other forces. The small ball will not \"roll towards the large ball due to gravity\" in any observable way on Earth. This misrepresents gravity and could lead to a fundamental misunderstanding. Demonstrating gravity with everyday objects requires large masses (like planets) or very sensitive instruments \u2014 not billiard balls on a table.\n\nTherefore, Answer1 is vastly superior in quality and accuracy.\n\nAnswer1",
+                "Answer1",
+                "Answer1",
                 "Answer1"
             ],
             "extracted_answers": [

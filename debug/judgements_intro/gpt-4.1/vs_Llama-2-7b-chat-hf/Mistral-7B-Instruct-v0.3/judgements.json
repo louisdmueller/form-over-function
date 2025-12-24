@@ -45,14 +45,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
                 " 'Answer1'",
-                " 'Answer1' - The provided answer in Answer1 is more concise, straightforward, and easier to understand for someone who might be approaching the topic for the first time. It clearly outlines the steps in the process of historical analysis, using a specific example (the Montgomery Bus Boycott) to illustrate each step. In contrast, Answer2 presents a slightly more complex and detailed answer, which might confuse someone who is new to the topic. Although Answer2 provides valuable details about primary sources, context, and interpretations, it is less approachable for beginners who are seeking a simple, straightforward explanation of the process of historical analysis. However, both answers are informative and can be useful for different learning purposes, depending on the audience's familiarity with historical analysis. If pressed to make a decision, I would select 'Answer1' as the superior response for its clarity, conciseness, and ease of understanding, making it more accessible for learners who are new to historical analysis. Nevertheless, I acknowledge that both answers provide valuable insights and are reasonably good answers to the question."
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
                 "Llama-2-7b-chat-hf",
-                "Unknown"
+                "Llama-2-7b-chat-hf",
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -68,7 +68,7 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -93,12 +93,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
+                " Tie. Both responses provide clear, comprehensive explanations about the parts necessary in an argumentative essay and their interactions. Both answers identify the main sections of an argumentative essay and discuss their roles in establishing context, presenting an argument, and persuading the reader. However, the minor differences in the details, such as the presence of a final thought or call to action in one response and the inclusion of counterarguments with rebuttals in the other, do not significantly impact the overall quality of the answers.",
                 " Answer2",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "TIE",
+                "Unknown",
                 "gpt-4.1",
                 "Llama-2-7b-chat-hf"
             ]
@@ -141,14 +141,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Tie",
-                " Tie"
+                " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "TIE",
-                "TIE"
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -165,13 +165,13 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " Tie"
+                " 'Answer1'",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "TIE"
+                "gpt-4.1"
             ]
         }
     ],
@@ -189,13 +189,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie. Both answers provide a detailed and accurate explanation of the role of each organ in the digestive system and how they are connected. While Answer1 offers a more concise answer, Answer2 also includes important details about the functions of the pancreas and liver. Both answers are clear, informative, and demonstrate knowledge of the digestive system.",
-                " Tie",
+                " Answer1",
+                " Answer2",
                 " 'Answer1'"
             ],
             "extracted_answers": [
-                "Unknown",
-                "TIE",
+                "Llama-2-7b-chat-hf",
+                "gpt-4.1",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -212,13 +212,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " Answer1"
+                " Tie",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1"
             ]
         }
@@ -238,13 +238,13 @@
             },
             "result": [
                 " Answer1",
-                " Tie. Both answers are providing accurate and detailed explanations of the forces acting on a stationary car, and discussing how each affects the vehicle. However, while Answer1 also provides a broader discussion on the impact of these forces on the car's performance and safety, Answer2 goes into more detail about the specific definitions of each force. Depending on the context or the specific requested information, either answer could be considered more appropriate.",
-                " Answer1"
+                " 'Answer1'",
+                " Tie"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Unknown",
-                "Llama-2-7b-chat-hf"
+                "Llama-2-7b-chat-hf",
+                "TIE"
             ]
         },
         {
@@ -260,14 +260,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
                 " Answer1",
-                " Tie. Both responses offer a comprehensive understanding of the various forces acting on a stationary car and how each force affects the vehicle. Response 1 is overtly detailed and provides a balanced analysis by detailing each force and its specific impact. In contrast, Response 2 demonstrates an understanding of how the forces each affect the car's performance, safety, stability, and handling. Therefore, both answers accurately answer the question and offer equal value."
+                " Answer1",
+                " Tie"
             ],
             "extracted_answers": [
-                "TIE",
                 "gpt-4.1",
-                "Unknown"
+                "gpt-4.1",
+                "TIE"
             ]
         }
     ],
@@ -285,9 +285,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " 'Answer1'"
+                " 'Answer1'",
+                " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
@@ -309,13 +309,13 @@
             },
             "result": [
                 " 'Answer1'",
-                " 'Answer1'",
-                " Tie"
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "TIE"
+                "gpt-4.1"
             ]
         }
     ],
@@ -333,13 +333,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer2'",
-                " Tie",
+                " Answer2",
+                " Tie. Both answers provide a comprehensive and accurate description of the key features of a democratic government and how they function together. However, Answer2 expands upon the topics and shows a better structure and flow of information, making it slightly more superior. However, the difference is minimal and the responses can be considered equally good.",
                 " Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "TIE",
+                "Unknown",
                 "gpt-4.1"
             ]
         },
@@ -357,12 +357,12 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " Tie. Both responses offer a comprehensive and clear explanation of the key features of a democratic government and how they function together. Both answers provide sufficient information with suitable detail and use similar structures to make their responses clear and easy to understand. However, Answer1 includes an extra feature (maintaining social balance) compared to Answer2, which could be considered a slight advantage. On the other hand, Answer2 is slightly more concise, making it easier to quickly grasp the main points. Therefore, a tie is appropriate in this case since both answers are of equal quality and do not surpass each other in a significant way.",
                 " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
+                "Unknown",
                 "gpt-4.1"
             ]
         }
@@ -382,7 +382,7 @@
             },
             "result": [
                 " Answer2",
-                " 'Answer2'",
+                " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
@@ -404,7 +404,7 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -430,12 +430,12 @@
             },
             "result": [
                 " Tie",
-                " Tie",
+                " 'Answer1'",
                 " Tie"
             ],
             "extracted_answers": [
                 "TIE",
-                "TIE",
+                "Llama-2-7b-chat-hf",
                 "TIE"
             ]
         },
@@ -452,12 +452,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1'",
-                " 'Answer1'",
+                " Tie",
+                " Answer1",
                 " Tie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1",
                 "TIE"
             ]
@@ -525,13 +525,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Answer2",
                 " Tie",
-                " 'Answer2'",
                 " Answer2"
             ],
             "extracted_answers": [
-                "TIE",
                 "gpt-4.1",
+                "TIE",
                 "gpt-4.1"
             ]
         },
@@ -548,8 +548,8 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1'",
-                " 'Answer1'",
+                " Answer1",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -575,12 +575,12 @@
             "result": [
                 " Answer2",
                 " Answer2",
-                " Tie"
+                " Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "TIE"
+                "gpt-4.1"
             ]
         },
         {
@@ -621,9 +621,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer2'",
-                " 'Answer2'",
-                " 'Answer2'"
+                " Answer2",
+                " Answer2",
+                " Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -670,12 +670,12 @@
             },
             "result": [
                 " Answer1",
-                " Tie",
-                " Tie. Both answers provide comprehensive, well-structured, and high-quality explanations of the dependence of each stage in a butterfly's life cycle on its subsequent stages. The differences in the answers' wording and organization do not impact significantly the quality of the information offered."
+                " Answer1",
+                " Tie. Both answers are well-explained and convey the same information, emphasizing the importance of each life cycle stage and their interdependence. However, Answer2 is more eloquent in its phrasing, making it slightly more engaging to read. Regardless, both answers serve the purpose of providing an accurate and detailed response to the question."
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "TIE",
+                "Llama-2-7b-chat-hf",
                 "Unknown"
             ]
         },
@@ -694,12 +694,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1. This answer provides a comprehensive and clear explanation about how each stage in a butterfly's life cycle is dependent on the previous one, along with why each stage is necessary for the overall development and survival of the butterfly. While Answer 2 is also accurate, it lacks the level of detail and explanation that makes Answer 1 superior."
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "Unknown"
+                "gpt-4.1"
             ]
         }
     ],
@@ -717,13 +717,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
-                " 'Answer1'",
+                " Tie",
+                " Tie",
                 " Answer1"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
+                "TIE",
+                "TIE",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -742,12 +742,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "TIE"
             ]
         }
     ],
@@ -765,14 +765,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie. Both answers provide a clear and comprehensive response to the question, and they both accurately outline the causes and effects of deforestation on local ecosystems. However, Answer2 slightly edges out Answer1 due to its focus on the importance of forests in maintaining water cycles and impact on local communities.",
-                " Answer1",
-                " Answer1"
+                " 'Answer1'",
+                " 'Answer1'",
+                " Tie. Both answers provide a well-structured and accurate analysis of the causes and effects of deforestation on local ecosystems. They convey a similar level of detail and adequately address the question."
             ],
             "extracted_answers": [
-                "Unknown",
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "Llama-2-7b-chat-hf",
+                "Unknown"
             ]
         },
         {
@@ -788,12 +788,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer1",
+                " 'Answer1' (The response provides a more comprehensive explanation of the causes and effects of deforestation, including the role of forest in maintaining rainfall and groundwater levels, changes in food chains, and the natural balance of the environment.)",
                 " Answer1",
                 " 'Answer1'"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Unknown",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -813,14 +813,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
-                " 'Answer1'",
-                " 'Answer1' provides a more comprehensive answer, including the stages of runoff and infiltration. It also focuses on the importance of the water cycle for managing water resources and ensuring their sustainability. While both answers provide accurate information, 'Answer1' offers a more detailed explanation of the water cycle, making it the superior choice."
+                " Tie. Both answers are detailed, accurate, and provide a clear understanding of the water cycle and the importance of each stage. However, they have slightly different ways of expressing the steps and their significance. It is not possible to definitively say which response is superior based solely on the quality of the answers.",
+                " 'Answer1' is a better answer because it provides a more detailed and accurate explanation of the water cycle's stages, their interconnections, and their importance in maintaining water resources. It also mentions the process of infiltration, which is not included in Answer2. However, both answers are insightful and clarify the water cycle's significance for supporting life and managing water resources.",
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "TIE",
-                "Llama-2-7b-chat-hf",
-                "Unknown"
+                "Unknown",
+                "Unknown",
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -838,12 +838,12 @@
             "result": [
                 " Answer1",
                 " Tie",
-                " Answer1"
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "TIE",
-                "gpt-4.1"
+                "TIE"
             ]
         }
     ],
@@ -861,14 +861,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer2",
                 " Tie",
-                " Tie"
+                " Answer2",
+                " Tie. Both responses provide a comprehensive and accurate description of the roles of each player in a soccer team. They both also highlight the importance of teamwork and communication to form a cohesive team. The second response, however, adds a slight touch of technical depth by mentioning sub-categories within midfield and striker positions, which could make it slightly more detailed. However, the difference is minimal, and I would consider both answers equally good."
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "TIE",
-                "TIE"
+                "gpt-4.1",
+                "Unknown"
             ]
         },
         {
@@ -885,12 +885,12 @@
             },
             "result": [
                 " Answer1",
-                " Answer1, the first response provides a more detailed explanation of the roles each player takes, as well as the importance of each role in maintaining a cohesive team. The response also explains how communication, positioning, and teamwork are essential for a soccer team to succeed. The second response is concise and accurate, but does not provide the same depth or richness of details as the first response.",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "Unknown",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -909,13 +909,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1' is the superior answer. It provides a more comprehensive and detailed explanation of how the various structures in a plant cell work together, including mentioning the role of the endoplasmic reticulum and Golgi apparatus, lysosomes, and the specific function of each structure such as the role of mitochondria in producing energy, and the function of vacuoles in storing water, nutrients, and waste products. Answer2 provides a correct overview but lacks the level of detail and accuracy found in Answer1.",
-                " Tie",
+                " Tie. Both answers provide comprehensive and mostly accurate information about the role of various structures in a plant cell. However, Answer1 provides a more detailed and structured explanation while Answer2 presents the information in a more concise and organized manner. In a situation where a clear winner needs to be determined, Answer1 could be slightly preferred for its comprehensive nature. Yet, both remain equally good due to their informative content and relative length.",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
                 "Unknown",
-                "TIE",
+                "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -933,13 +933,13 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " Answer1 (The first answer provides a more comprehensive and accurate explanation of the roles and interactions of various structures in a plant cell, including the cytoplasm and ribosomes, which were not mentioned in the second answer.)"
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
-                "Unknown"
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -958,13 +958,13 @@
             },
             "result": [
                 " Answer2",
-                " Answer2",
-                " Answer2"
+                " 'Answer2'",
+                " Tie. Both answers provide detailed and well-structured explanations of how the plot, setting, and characters interact to create a cohesive narrative. Answer2 offers a slightly more dynamic and engaging depiction, but Answer1 is succinct, accurate, and equally thorough. As the primary focus should be on the semantic quality of the answer, a tie is appropriate in this case."
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Unknown"
             ]
         },
         {
@@ -982,12 +982,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Tie"
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "TIE"
+                "gpt-4.1"
             ]
         }
     ],
@@ -1006,12 +1006,12 @@
             },
             "result": [
                 " Answer1",
-                " Tie\n\nBoth answers provide a clear, comprehensive, and accurate explanation of the relationship between portions and ratios in a recipe. They both clarify the difference between portions and ratios, highlight the importance of each respective term, and provide relevant examples to illustrate their points. Ultimately, the selection between the two answers is subjective, and there are merits in both responses. The quality of the answers is comparable, warranting a 'Tie' evaluation.",
+                " Answer1 (The first response provides a more comprehensive and easy-to-understand explanation of the relationship between portions and ratios in a recipe, clearly explaining what portions and ratios are, their significance in a recipe, and how they contribute to the dish's final taste, consistency, and texture.)",
                 " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "TIE",
+                "Unknown",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -1028,14 +1028,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
+                " Tie",
                 " Answer1",
-                " Answer1",
-                " Tie"
+                " Answer1"
             ],
             "extracted_answers": [
+                "TIE",
                 "gpt-4.1",
-                "gpt-4.1",
-                "TIE"
+                "gpt-4.1"
             ]
         }
     ],
@@ -1053,7 +1053,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -1078,7 +1078,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -1102,12 +1102,12 @@
             },
             "result": [
                 " Answer2",
-                " Answer2",
+                " Tie. Both answers provide detailed explanations of the factors that contribute to weather patterns, with Answer1 emphasizing factors such as temperature, humidity, wind, atmospheric pressure, topography, and human activities, and Answer2 focusing on latitude, altitude, proximity to large bodies of water, ocean currents, prevailing winds, mountains, human activities, seasonal changes, and global phenomena like El Nino and La Nina. Both answers are accurate, comprehensive, and provide a clear and concise explanation of the topic.",
                 " 'Answer2'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
+                "Unknown",
                 "gpt-4.1"
             ]
         },
@@ -1149,14 +1149,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " Tie",
                 " Answer2",
-                " Answer2"
+                " Answer1"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
+                "TIE",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -1197,14 +1197,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer2'",
-                " 'Answer1'",
-                " Answer1"
+                " Answer1, as it provides a more comprehensive and academically sound explanation of the roots of racism, explaining the role of historical, cultural, and socio-economic factors, and suggesting specific strategies such as dismantling systemic discrimination and promoting equity and inclusion.",
+                " Answer1",
+                " Answer2"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Unknown",
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "gpt-4.1"
             ]
         },
         {
@@ -1220,14 +1220,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "TIE"
             ]
         }
     ],
@@ -1245,14 +1245,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " 'Answer2'",
                 " Answer2",
-                " Answer2",
-                " Answer2"
+                " Tie. Both answers are correct and sufficiently informative, but Answer2 provides slightly more detail specifically mentioning the angles and the possibility of all three sides being equal. However, the question did not ask for information about the angles or the possibility of all equal sides, so Answer1 could also be considered appropriate."
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Unknown"
             ]
         },
         {
@@ -1268,12 +1268,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie. Both answers are accurate and complete in their presentation of the definition of an isosceles triangle, but Answer 1 provides a bit more detail and specifies that the angles opposite the equal sides are also equal, which is a defining characteristic of isosceles triangles that is not mentioned in Answer 2. However, given that the question did not specifically ask for information about the angles, Answer 2 may be considered equally accurate and concise for the purpose of answering the question.",
-                " 'Answer1'",
+                " Answer1",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "Unknown",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -1316,12 +1316,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1' is the superior answer. It provides a more comprehensive explanation of the process, including why other pigments become visible after chlorophyll breaks down, and the reason for the change - preparation for winter and conservation of resources. While Answer2 also explains the basics of why leaves change color, it lacks the additional details provided in Answer1.",
                 " Answer1",
-                " Answer1"
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "Unknown",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -1342,12 +1342,12 @@
             },
             "result": [
                 " Answer1",
-                " Tie",
-                " Tie. Both responses were accurate and comprehensively answered the question regarding the topic of the Civil War and its outcome. However, the second response placed slightly more emphasis on the points of disagreement: slavery and states' rights. This provided a slightly clearer account, but both responses offer equally informative answers."
+                " 'Answer1'",
+                " Tie. Both responses provide a brief, accurate, and concise description of what the American Civil War was about, focusing on the central issues of slavery and states' rights, as well as the outcomes of the conflict. The language used in both responses is clear and easy to understand. Additionally, the wording in both answers is slightly different, which adds to the variety in the responses and does not significantly impact the quality of the answers. As a result, a tie is the optimal choice for this evaluation."
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "TIE",
+                "Llama-2-7b-chat-hf",
                 "Unknown"
             ]
         },
@@ -1364,12 +1364,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
                 " Answer1",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -1389,13 +1389,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
-                " Answer1",
+                " 'Answer1'",
+                " Tie",
                 " Tie"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
+                "TIE",
                 "TIE"
             ]
         },
@@ -1412,9 +1412,9 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
+                " Answer1",
                 " 'Answer1'",
-                " 'Answer1'",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -1437,14 +1437,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer2",
-                " Tie. Both answers are accurate, well-structured, and provide sufficient explanations for why the Earth has different seasons. They offer comparable levels of quality and accuracy.",
-                " Answer2"
+                " 'Answer1'",
+                " 'Answer2'",
+                " Tie"
             ],
             "extracted_answers": [
+                "Llama-2-7b-chat-hf",
                 "gpt-4.1",
-                "Unknown",
-                "gpt-4.1"
+                "TIE"
             ]
         },
         {
@@ -1461,8 +1461,8 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
-                " 'Answer1'"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -1487,12 +1487,12 @@
             "result": [
                 " Answer2",
                 " Answer2",
-                " Answer2"
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "TIE"
             ]
         },
         {
@@ -1534,8 +1534,8 @@
             },
             "result": [
                 " Answer2",
-                " Answer2",
-                " 'Answer2'"
+                " 'Answer2'",
+                " Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -1556,14 +1556,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
                 " 'Answer1'",
-                " Tie"
+                " 'Answer1'",
+                " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
                 "gpt-4.1",
-                "TIE"
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         }
     ],
@@ -1583,12 +1583,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Tie"
+                " Tie. Both answers accurately explain the concept of gravity and provide similar information, making it difficult to determine which one is superior."
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
-                "TIE"
+                "Unknown"
             ]
         },
         {
@@ -1630,13 +1630,13 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " Tie. Both answers are clear, concise, and accurately explain the four stages of a butterfly's metamorphosis. The sequence of events and the terminology used are consistent. However, the order of the second stages differs slightly (caterpillar feeding then growing vs. eating and growing). This difference does not significantly impact the overall understanding and quality of the answers."
+                " Tie. Both answers are accurate and comprehensive in explaining the process of metamorphosis for a butterfly. However, the sequence of events in Answer1 follows a more precise order, strictly adhering to the life stages of a butterfly. Answer2, on the other hand, could be considered more friendly and conversational, using terms like \"butterfly\" rather than \"larva\" when referring to the initial life stage, but this does not significantly affect the quality of the response. Overall, both answers are good and provide similar information, making a tie the best choice.",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
-                "Unknown"
+                "Unknown",
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -1652,14 +1652,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer1",
                 " Tie",
-                " Tie"
+                " Tie (Both answers are clear and accurately explain the process of metamorphosis for a butterfly.)",
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "TIE",
-                "TIE"
+                "Unknown",
+                "gpt-4.1"
             ]
         }
     ],
@@ -1677,7 +1677,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " 'Answer1'",
                 " Answer1"
             ],
@@ -1701,12 +1701,12 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " Tie",
                 " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1"
             ]
         }
@@ -1725,13 +1725,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer2'",
-                " Tie",
+                " Answer2",
+                " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "TIE",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         },
@@ -1749,13 +1749,13 @@
             },
             "result": [
                 " Answer1",
-                " Tie",
-                " Tie"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "TIE",
-                "TIE"
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         }
     ],
@@ -1774,12 +1774,12 @@
             },
             "result": [
                 " Answer1",
-                " Tie",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "TIE",
+                "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -1796,14 +1796,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
-                " Tie",
-                " Tie"
+                " 'Answer1'",
+                " Answer1",
+                " Tie. Both answers provide a comprehensive and accurate explanation of the food chain, focusing on trophic levels, energy transfer, and the roles of producers, consumers, and decomposers. However, they differ slightly in language and emphasis, with Answer1 providing slightly more detail on energy loss at each level and the cycle of life and death, while Answer2 places more emphasis on the interconnections and vital roles of each species in ecosystem functioning."
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
-                "TIE"
+                "gpt-4.1",
+                "gpt-4.1",
+                "Unknown"
             ]
         }
     ],
@@ -1821,14 +1821,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Answer1\n\n*The question asks the interpreter to summarize Martin Luther King Jr.'s \"I have a dream\" speech. Both answer 1 and answer 2 provide a concise and accurate summary of the speech, addressing the themes of equality, unity, and peaceful protest. However, answer 1 does a better job of emphasizing King's vision for a future where people of all races can live together in harmony and the importance of striving for this goal.*\n\n*Answer 1 wins.*",
                 " Answer1",
-                " Answer1",
-                " Tie"
+                " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
-                "TIE"
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -1845,13 +1845,13 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " Tie"
+                " 'Answer1'",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "TIE"
+                "gpt-4.1"
             ]
         }
     ],
@@ -1870,13 +1870,13 @@
             },
             "result": [
                 " Answer1",
-                " Tie. Both Answer1 and Answer2 provide accurate information about the formation of a rainbow due to the refraction and reflection of sunlight through water droplets in the atmosphere, creating a spectrum of colors. They differ slightly in their description of the specific events that occur when light passes through each raindrop, but both answers offer a clear and concise explanation of the rainbow's causation.",
-                " Answer1 (This answer is more concise while still providing a clear and accurate explanation of the cause of a rainbow's appearance.)"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Unknown",
-                "Unknown"
+                "Llama-2-7b-chat-hf",
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -1894,12 +1894,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "TIE"
             ]
         }
     ],
@@ -1918,8 +1918,8 @@
             },
             "result": [
                 " Answer2",
-                " 'Answer2'",
-                " Answer2"
+                " Answer2",
+                " 'Answer2'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -1990,7 +1990,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -2013,14 +2013,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
-                " Answer2",
-                " Answer1"
+                " Tie. Both answers provide accurate, comprehensive explanations about the role of the Sun in our solar system, focusing on the Sun's central role, its source of energy, and its gravity that maintains the planets' orbits. In a close evaluation, it is difficult to discern which answer is superior based on the quality of the answer.",
+                " 'Answer1'",
+                " Tie"
             ],
             "extracted_answers": [
+                "Unknown",
                 "Llama-2-7b-chat-hf",
-                "gpt-4.1",
-                "Llama-2-7b-chat-hf"
+                "TIE"
             ]
         },
         {
@@ -2037,8 +2037,8 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
-                " Answer1"
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -2086,12 +2086,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Tie"
+                " 'Answer1' is the superior answer. It more accurately describes the distinguishing features of both inner and outer planets, including their differences in size, composition, presence of a solid surface, and proximity to the Sun, as well as their unique characteristics such as rings and moons for outer planets. Answer2 misses out on mentioning these aspects."
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "TIE"
+                "Unknown"
             ]
         }
     ],
@@ -2109,14 +2109,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer2'",
                 " Tie",
-                " Tie"
+                " Answer2",
+                " Answer2"
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "TIE",
-                "TIE"
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         },
         {
@@ -2159,12 +2159,12 @@
             "result": [
                 " Answer2",
                 " 'Answer2'",
-                " Tie\n\nBoth answers are comprehensive, accurate, and well-structured. However, the differences are minor, and neither significantly outperforms the other in terms of the quality of the answer."
+                " 'Answer2'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "TIE"
+                "gpt-4.1"
             ]
         },
         {
@@ -2182,7 +2182,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -2205,13 +2205,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer2",
-                " Answer2",
+                " Tie",
+                " Tie",
                 " Answer2"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "gpt-4.1",
+                "TIE",
+                "TIE",
                 "gpt-4.1"
             ]
         },
@@ -2253,14 +2253,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
                 " 'Answer1'",
-                " Tie"
+                " Tie. Both Answer1 and Answer2 provide accurate and comprehensive responses, explaining the area of study for a botanist as well as the various topics within the field. Both answers also furnish examples of where the knowledge of botanists is applied, such as agriculture, conservation, and pharmaceuticals.",
+                " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
-                "TIE"
+                "Unknown",
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -2277,13 +2277,13 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
-                " Answer1"
+                " Answer1",
+                " 'Answer1' (The first answer provides a more comprehensive explanation about the various aspects of botany, including structure, growth, reproduction, metabolism, etc., and its applications in agriculture, conservation, medicine, and environmental protection. It also mentions specific types of plants such as flowering plants, algae, or fungi. The second answer, while correct, does not offer as detailed an explanation.)"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Unknown"
             ]
         }
     ],
@@ -2301,14 +2301,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " Tie. Both responses show clear thought and a comprehensive approach to designing a recycling campaign with a focus on education, promotion, and encouragement. They both propose competitions and educational events as methods of engagement, and emphasize the importance of proper recycling. There aren't significant differences that suggest one response as superior to the other in terms of semantic quality."
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
-                "Unknown"
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -2325,7 +2325,7 @@
             },
             "result": [
                 " 'Answer1'",
-                " Answer1",
+                " 'Answer1'",
                 " Tie"
             ],
             "extracted_answers": [
@@ -2349,9 +2349,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
-                " Answer1",
-                " Answer1"
+                " 'Answer1'",
+                " 'Answer1'",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
@@ -2372,13 +2372,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer1",
-                " Tie",
+                " 'Answer1' The Answer1 provides a more detailed and well-structured outline for a story about a heroic animal, including an introduction, challenge, journey, rescue, and conclusion. It also specifies characters and themes, making it more complete. While Answer2 is also good, it is less comprehensive as it only provides a setting, plot idea, characters, and themes, without a detailed outline structure. However, both responses are of high quality. If pressed to choose, I would lean towards 'Answer1' because of its completeness and clear progression of events. But a 'Tie' would also be a reasonable choice, as both responses are quite strong.",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
+                "Unknown",
                 "gpt-4.1",
-                "TIE",
                 "gpt-4.1"
             ]
         }
@@ -2397,14 +2397,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
-                " Tie",
-                " Tie"
+                " 'Answer2'",
+                " Tie. Both answers present innovative gadget ideas with clear benefits to the user, providing compelling reasons for their invention. 'Emotify' offers a unique emotional expression medium, while the portable health scanner promotes early and convenient health monitoring and management. The choice between the two would likely depend on personal preferences, needs, or the individual's area of interest.",
+                " Answer2"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
-                "TIE"
+                "gpt-4.1",
+                "Unknown",
+                "gpt-4.1"
             ]
         },
         {
@@ -2420,14 +2420,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1' (This answer provides a well-thought-out invention that addresses a practical and universal health issue. It also explains the benefits, target audience, and potential impact of the proposed gadget.)",
-                " 'Answer1'",
-                " Tie. Both answers provide creative and thoughtful responses to the question. However, Answer1 focuses on a practical everyday use and potential health benefits, while Answer2 presents a unique and thought-provoking concept that could be beneficial for emotional well-being. The choice between the two would depend on the evaluator's personal preference or focus (health or emotional wellness). Both answers are impressive and demonstrate good understanding and creativity."
+                " Tie",
+                " Tie\n\nBoth answers provide creative and well-thought-out responses to the question. Answer1 offers a practical and potentially life-saving invention aimed at improving and monitoring personal health. Answer2 presents a unique concept that could revolutionize the way we express and manage emotions. It's challenging to choose between the two since both answers demonstrate inventiveness and the potential to significantly impact people's lives in different but meaningful ways.",
+                " Tie\n\nAnswer1 provides a well-thought-out, practical and potentially life-saving gadget, focusing on health monitoring and early detection of issues. On the other hand, Answer2 offers an intriguing innovative concept addressing emotional expression, which could have significant benefits for those dealing with emotional difficulties. Both answers demonstrate creativity in their respective ideas. Ultimately, it depends on the evaluator's personal preference and the context as to which answer is considered superior, but both are compelling in their own ways."
             ],
             "extracted_answers": [
-                "Unknown",
-                "gpt-4.1",
-                "Unknown"
+                "TIE",
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -2445,13 +2445,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
-                " Answer1",
-                " 'Answer1'"
+                " Answer2",
+                " Answer2",
+                " Answer1"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
+                "gpt-4.1",
+                "gpt-4.1",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -2469,7 +2469,7 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -2493,13 +2493,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
                 " 'Answer1'",
+                " Tie",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
                 "Llama-2-7b-chat-hf",
+                "TIE",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -2518,12 +2518,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " 'Answer1'"
+                " Answer1. The first answer provides a more detailed and comprehensive guide on how to write a poem about friendship. It encourages thoughtful reflection, emphasizes central themes, suggests a poetic structure, discusses the use of imagery, and recommends revising the poem for clarity and flow. The second answer, while a good poem in its own right, does not provide the same level of detailed guidance on the process of writing a poem about friendship. The first answer considers the question more broadly and offers a helpful, step-by-step approach for creating a poem."
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Unknown"
             ]
         }
     ],
@@ -2565,12 +2565,12 @@
             },
             "result": [
                 " Answer1",
-                " Answer1. The first response provides a more comprehensive and detailed plan for an eco-friendly birthday party. It offers various strategies for reducing paper use, minimizing energy consumption, utilizing reusable or compostable tableware, and encouraging sustainable food choices. The response also includes suggestions for alternative activities, such as DIY crafts and walking or biking to the event, as well as post-party considerations like donating leftovers or saving decorations. The second response, while providing valid suggestions, is less extensive in its coverage of eco-friendly strategies for the entire party planning process. Therefore, the first response is the superior answer, as it provides a more complete and thoughtful approach.",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "Unknown",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -2589,14 +2589,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
-                " Answer1",
-                " Answer2"
+                " Answer2",
+                " Answer2",
+                " Answer1, as it provides a more comprehensive answer that covers different aspects of the process such as creativity, safety, usability testing, and marketing, making it more holistic in its approach. Answer2 covers the main steps but in a more concise and linear manner, lacking the explore and refine layer. However, both responses offer valuable insights."
             ],
             "extracted_answers": [
-                "TIE",
-                "Llama-2-7b-chat-hf",
-                "gpt-4.1"
+                "gpt-4.1",
+                "gpt-4.1",
+                "Unknown"
             ]
         },
         {
@@ -2612,14 +2612,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1' (The first answer provides a more detailed and sequential plan for creating a new sport, outlining 10 steps to be followed, starting from identifying the goals of the sport, studying other sports for inspiration, defining the basics, setting objectives, creating rules, developing a prototype, seeking feedback, refining and improving, documenting everything, and promoting and sharing.)",
-                " Answer1",
-                " Answer1"
+                " Tie",
+                " 'Answer1'",
+                " Tie"
             ],
             "extracted_answers": [
-                "Unknown",
+                "TIE",
                 "gpt-4.1",
-                "gpt-4.1"
+                "TIE"
             ]
         }
     ],
@@ -2637,8 +2637,8 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
+                " 'Answer1'",
                 " Tie"
             ],
             "extracted_answers": [
@@ -2662,7 +2662,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -2685,14 +2685,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Answer2",
                 " Tie",
-                " Answer1 is the superior response. It provides a more comprehensive list of features that the app could include, including homework tracking, a resource library, personalized guidance, collaboration tools, and a focus on the user interface. Additionally, Answer1's mention of AI-powered algorithms indicates that the app would be able to tailor its guidance to the individual needs of the student, making it more effective for students of different strengths and learning styles. Answer2's mention of a simple, user-friendly interface is also important, but Answer1 goes beyond that by providing a more detailed and exhaustive list of features that the app could offer.",
-                " Tie"
+                " Answer1"
             ],
             "extracted_answers": [
+                "gpt-4.1",
                 "TIE",
-                "Unknown",
-                "TIE"
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -2709,8 +2709,8 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " 'Answer1'",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -2733,13 +2733,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
-                " Tie\n\nBoth responses provide a comprehensive plan for a community garden, offering almost identical steps with some minor differences in phrasing and word choice. Both contain valuable ideas such as securing a suitable location, forming a committee, engaging the community, and providing educational resources. They both also address essential elements like water and waste management. As a result, neither response stands out significantly as the superior plan when focusing on semantic quality and the quality and accuracy of the answers, so a tie is the optimal choice.",
+                " Answer1",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
+                "Llama-2-7b-chat-hf",
+                "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -2757,12 +2757,12 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " Tie. Both answers provide a comprehensive plan for a community garden, with similar steps for location selection, layout, membership, supplies, water management, education, community involvement, sustainability, and communication. The slight differences between the two plans do not significantly impact the overall quality or accuracy of the responses.",
                 " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
+                "Unknown",
                 "gpt-4.1"
             ]
         }
@@ -2782,12 +2782,12 @@
             },
             "result": [
                 " 'Answer2'",
-                " 'Answer2'",
+                " Tie. Both responses are well-written and provide vivid, engaging stories that capture the life of an ant. However, it's hard to declare one superior as they offer slightly different perspectives on the life of an ant, focusing on different aspects such as ant friendship and colony dynamics.",
                 " 'Answer2'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
+                "Unknown",
                 "gpt-4.1"
             ]
         },
@@ -2829,14 +2829,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1' is the superior answer because it provides a more detailed and comprehensive outline for drafting a law to protect endangered species. While 'Answer2' offers the key elements as well, Answer1 also includes points like ongoing monitoring and assessment, international cooperation, and education and outreach programs, which are essential aspects of effective conservation efforts. Additionally, Answer1 discusses the prohibition of activities that threaten endangered species in more detail, making it a more thorough response overall.",
+                " Tie\n\nBoth responses provide comprehensive outlines for a law to protect endangered species, focusing on key elements such as listings, prohibitions, habitat protection, penalties, monitoring, and international cooperation. The main difference lies in the structure and format: Answer 2 is presented in a more legislative format, while Answer 1 is presented in a more descriptive and bullet-point style. While Answer 1 might be easier to understand and apply concepts, Answer 2 offers a clear structure that can more easily be converted into actual legislation. Given that both responses provide an adequate and comprehensive answer, a tie is appropriate.",
                 " Answer1",
-                " 'Answer1' - This answer offers a more comprehensive and detailed explanation of how to draft a law for endangered species protection. It covers seven key aspects, providing a broad perspective on various elements that should be considered in such a law, including (but not limited to) a solid list of endangered species and habitats, prohibition of activities that harm or threaten them, conservation and management of habitats, penalties for violations, education and outreach programs, international cooperation, and ongoing monitoring and assessment. While 'Answer2' also provides a good outline, it misses some crucial components and, in parts, relies on vague, less-specific terms such as 'conservation purposes.'"
+                " Answer1"
             ],
             "extracted_answers": [
-                "Unknown",
+                "TIE",
                 "Llama-2-7b-chat-hf",
-                "Unknown"
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -2852,8 +2852,8 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -2877,14 +2877,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " 'Tie'",
                 " Tie",
-                " 'Tie' (Both answers are clear and creative in their approach to explaining relativity to a primary school student, offering unique perspectives that cater to different learning styles. However, neither answer explicitly addresses the train-throwing ball example mentioned in the original question.)"
+                " 'Answer2'"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
                 "TIE",
-                "Unknown"
+                "TIE",
+                "gpt-4.1"
             ]
         },
         {
@@ -2900,14 +2900,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " Tie. Both responses successfully simplify the concept of relativity and use engaging scenarios to explain it, making it more accessible to primary school students. However, Answer1 goes a bit further with more elaborate examples and a conclusion about the perspective-dependence of time, adding a bit more explanatory value. On the other hand, Answer2 does a better job at maintaining a simple, easy-to-understand tone, which primary school students might find more appealing. The minor differences in style and content don't clearly point towards either answer being superior. Thus, I would consider it a tie."
+                " 'Answer1'",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "Unknown"
+                "gpt-4.1"
             ]
         }
     ],
@@ -2925,12 +2925,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Answer2",
                 " Tie",
-                " Tie",
-                " 'Answer2'"
+                " Answer2"
             ],
             "extracted_answers": [
-                "TIE",
+                "gpt-4.1",
                 "TIE",
                 "gpt-4.1"
             ]
@@ -2948,14 +2948,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
+                " Answer1, as it is more detailed, specifies the colors for different parts of the uniform, includes various clothing options for warmth and comfort, and emphasizes teenagers' specific need for safety and bodily appropriate clothing.",
                 " Answer1",
-                " Answer1"
+                " Tie"
             ],
             "extracted_answers": [
-                "TIE",
+                "Unknown",
                 "gpt-4.1",
-                "gpt-4.1"
+                "TIE"
             ]
         }
     ],
@@ -2973,8 +2973,8 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Answer2",
                 " 'Answer2'",
-                " Answer2\n\nThe second answer provides a more detailed and poetic approach to the subject of overcoming challenges. It paints a vivid picture using imagery, metaphors, and rhyme. The feelings of resilience, determination, and hope are more clearly conveyed, making it a superior response.\n\nIn this instance, the quality difference between the two answers is discernible. Therefore, the better choice would be: Answer2.",
                 " 'Answer2'"
             ],
             "extracted_answers": [
@@ -2996,9 +2996,9 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer1",
                 " 'Answer1'",
-                " Answer1"
+                " 'Answer1'",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -3045,12 +3045,12 @@
             },
             "result": [
                 " Answer1",
-                " Tie",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "TIE",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -3069,12 +3069,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Tie",
                 " Answer2",
-                " 'Answer2'",
                 " 'Answer2'"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -3092,13 +3092,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " 'Answer1' (The first answer provides more comprehensive details about the job requirements, expected skills and qualifications, and additional preferences which could help in the screening process. It also mentions specific programming languages, frameworks, and databases, whereas the second answer is more concise but less detailed in these aspects.)",
                 " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "Unknown",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -3117,13 +3117,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer2'",
-                " Tie",
+                " Answer2",
+                " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "TIE",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         },
@@ -3140,14 +3140,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie. Both responses provide clear and specific ideas for designing a new logo, focusing on elements like team values, colors, and mascot. However, Answer1 offers a more comprehensive approach, considering versatility, balance, and visual impact, while Answer2 offers a more direct and distinctive approach, focusing on the team's history and unique imagery. The choice between the two may depend on the specific goals and style desired for the new logo.",
-                " Tie",
-                " Tie\n\nBoth answers demonstrate a clear understanding of how to approach designing a logo, emphasizing the importance of considering core values, colors, and the team's identity. However, while the first answer provides a more detailed plan and mentions specific design elements, such as the use of a circular or shield shape, the inclusion of motion in the design, and the integration of local symbols for a sense of place, the second answer focuses specifically on the Boston Red Sox and presents a simpler yet recognizable design concept with the stylized \"B\" and baseball bat. Given that neither answer provides a definitive advantage in terms of quality or accuracy, I would find it suitable to declare a tie."
+                " 'Answer1'",
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
-                "Unknown",
-                "TIE",
-                "TIE"
+                "gpt-4.1",
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         }
     ],
@@ -3165,14 +3165,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1, Answer2 (Tie)",
                 " Tie",
-                " Tie. Both responses show a deep understanding of the potential gravity of the situation and suggest focusing on cherished relationships and finding peace. They also both emphasize the importance of sharing stories, laughter, and appreciation for life. The answers could be tied for quality and accuracy."
+                " Answer2",
+                " Tie"
             ],
             "extracted_answers": [
-                "Unknown",
                 "TIE",
-                "Unknown"
+                "gpt-4.1",
+                "TIE"
             ]
         },
         {
@@ -3188,13 +3188,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
+                " 'Answer1' (This response provides a more detailed and thoughtful answer, mentioning specific actions like reaching out to others, finding peace, and encouraging love and gratitude, making it a superior response.)",
                 " Answer1",
-                " Tie",
                 " Tie"
             ],
             "extracted_answers": [
+                "Unknown",
                 "gpt-4.1",
-                "TIE",
                 "TIE"
             ]
         }
@@ -3215,12 +3215,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Tie"
+                " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
-                "TIE"
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -3236,12 +3236,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1'",
+                " 'Answer1' - This answer provides a more comprehensive guide for planning a field trip to a museum. It includes steps for arranging transportation, obtaining permission slips, preparing a schedule, assigning chaperones, and provisions for safety, weather, and feedback. While Answer2 does cover some of the same points, it doesn't offer the same level of detail, particularly in regard to administrative tasks and safety considerations.",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Unknown",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -3261,13 +3261,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer2'",
                 " Answer2",
+                " Answer2 provides a more detailed explanation, including the difference between metaphors and similes, and also provides two clear examples. The explanation in Answer1 is understandable but lacks the clarity and precision found in Answer2. Therefore, Answer2 is the superior answer in this case.",
                 " Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
+                "Unknown",
                 "gpt-4.1"
             ]
         },
@@ -3284,7 +3284,7 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -3310,12 +3310,12 @@
             },
             "result": [
                 " Tie",
-                " Answer1",
+                " 'Answer2'",
                 " Answer2"
             ],
             "extracted_answers": [
                 "TIE",
-                "Llama-2-7b-chat-hf",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         },
@@ -3334,7 +3334,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -3357,12 +3357,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1 (The response provides a concise and well-structured set of criteria for evaluating a singer's performance in a competition, including their vocal technique, tone, pitch, stage presence, audience connection, and ability to handle challenges. It also empahsizes emotional conveyance, which is crucial in musical performances.)\n\nAnswer2 (While this response also covers many important aspects, it is slightly more detailed and includes factors like musicality, interpretation, and originality. However, it does not seem to clarify why these elements are important in the context of a singing competition, and it provides specific criteria for calculating a score, which may not always be necessary or applicable in all instances of evaluation.)\n\nBecause both responses cover important elements of a singer's performance, a tie might be the most appropriate response. Both responses could serve as useful guides for evaluating a singer in a competition, depending on the context and specific needs of the evaluation.",
+                " Answer2",
                 " 'Answer1'",
                 " Answer2"
             ],
             "extracted_answers": [
-                "Unknown",
+                "gpt-4.1",
                 "Llama-2-7b-chat-hf",
                 "gpt-4.1"
             ]
@@ -3380,13 +3380,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie. Both responses adequately cover the main aspects for evaluating a singer's performance in a competition, including vocal technique, musicality, interpretation, stage presence, and song choice. Each provides a balanced and fair evaluation approach. The slight difference in detail between the responses does not significantly impact the overall quality of the answers.",
-                " 'Answer1' is a more comprehensive evaluation as it covers a wider range of criteria in greater detail, including phrasing, rhythm, use of dynamics, interpretation, song choice, originality, and constructive feedback. It also offers guidance on how to assign points to each criterion for a calculated overall score. While Answer2 covers the basics of vocal technique, tone, pitch, and stage presence, it fails to provide the same level of thoroughness and detail. Therefore, 'Answer1' is the superior response.",
-                " 'Answer1'"
+                " Answer1",
+                " 'Answer1'",
+                " Answer1"
             ],
             "extracted_answers": [
-                "Unknown",
-                "Unknown",
+                "gpt-4.1",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -3406,12 +3406,12 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " Answer1 (Tie)\n\nBoth answers provide comprehensive and accurate information about the importance of recycling for the environment. However, the second response contains a slight redundancy in the sentence \"decreasing the need for raw material extraction,\" which has been discussed earlier in the passage. This redundancy makes the second response slightly less concise and clear in comparison to the first response. For that reason, I would vote for Answer1 in this case. However, the difference is very minor, and either answer would still be considered a good response.",
                 " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
+                "Unknown",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -3428,7 +3428,7 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -3453,14 +3453,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " Tie. Both responses are thorough and cover many important factors when assessing the quality of a book. They both discuss originality, coherence, clarity, character development, world-building, accuracy, and emotional impact. However, answer 1 provides a more comprehensive list while answer 2 offers more insight into the specific aspects of the issues it raises (such as the importance of the organization and structure of the content, the quality of writing, and the depth of the author's knowledge and expertise). In this case, the slight difference in depth and focus is not sufficient to determine a clear winner, so the evaluation is a tie."
+                " 'Answer1'",
+                " Tie"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
-                "Unknown"
+                "TIE"
             ]
         },
         {
@@ -3476,12 +3476,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
+                " 'Answer1'",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -3501,14 +3501,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer2'",
-                " 'Answer2'",
-                " Answer2"
+                " Answer2",
+                " Answer2",
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "TIE"
             ]
         },
         {
@@ -3549,14 +3549,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer2'",
-                " 'Answer2'",
-                " Tie"
+                " Answer2",
+                " Answer2",
+                " Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "TIE"
+                "gpt-4.1"
             ]
         },
         {
@@ -3572,8 +3572,8 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer1",
                 " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -3597,14 +3597,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Tie",
                 " Answer1",
-                " 'Answer1'",
-                " 'Answer1'"
+                " Tie"
             ],
             "extracted_answers": [
+                "TIE",
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "TIE"
             ]
         },
         {
@@ -3620,13 +3620,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " Tie",
                 " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "TIE",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -3645,14 +3645,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Tie",
                 " Answer1",
-                " Tie. Both answers provide comprehensive and accurate considerations for evaluating the health of a forest ecosystem. Answer1 is more concise and presents points in a clear, numbered list. Answer2 offers additional insights on factors such as biodiversity, structure of the forest, carbon storage, and air quality, providing a slightly more detailed answer. However, both answers are thorough and equally helpful, so a tie is suitable in this case.",
-                " Answer1 (This response is more comprehensive, listing a wider array of factors that encompass the physical, biological, and human dimensions affecting forest ecosystem health. It also includes the role of indigenous knowledge, which is an essential aspect to consider in any holistic evaluation of a forest ecosystem.)"
+                " Tie"
             ],
             "extracted_answers": [
+                "TIE",
                 "Llama-2-7b-chat-hf",
-                "Unknown",
-                "Unknown"
+                "TIE"
             ]
         },
         {
@@ -3670,12 +3670,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Tie"
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "TIE"
+                "gpt-4.1"
             ]
         }
     ],
@@ -3693,8 +3693,8 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer2'",
                 " Answer2",
+                " 'Answer2'",
                 " Answer2"
             ],
             "extracted_answers": [
@@ -3718,7 +3718,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -3742,13 +3742,13 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " Answer1 is the superior response. It provides a more detailed and systematic approach to assessing the moral or lesson of a short story, focusing on the analysis of plot, characters, themes, and imagery. Additionally, it acknowledges the subjective nature of interpretation. Answer2, while also valid, lacks the explicit focus on characters' actions, consequences, and the author's perspective that Answer1 offers. However, both answers are equally good in terms of providing a valuable method for evaluating the moral or lesson of a short story. Therefore, a tie could also be a reasonable choice."
+                " 'Answer1'",
+                " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
-                "Unknown"
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -3764,14 +3764,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer1",
-                " Answer1",
-                " Tie"
+                " Tie",
+                " Tie. Both responses offer a comprehensive and well-articulated approach to identifying the moral or lesson in a short story. Both also emphasize the importance of analyzing the plot, characters, and themes along with the consequences and symbolism. The difference between the answers is marginal and does not significantly affect the quality of the response.",
+                " Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "gpt-4.1",
-                "TIE"
+                "TIE",
+                "Unknown",
+                "gpt-4.1"
             ]
         }
     ],
@@ -3789,9 +3789,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer2",
+                " 'Answer2'",
                 " Tie",
-                " 'Answer2'"
+                " Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -3814,12 +3814,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " 'Answer1' offers a more comprehensive, nuanced, and detailed analysis of the impact of the Internet on society by touching upon various aspects (communication, information access, commerce, education, social interaction, privacy concerns, digital divides, misinformation, cybercrime, remote education, work, mental health concerns, opportunities, and new responsibilities). Therefore, I would evaluate Answer1 as the superior response in terms of semantic quality and accuracy."
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "Unknown"
+                "gpt-4.1"
             ]
         }
     ],
@@ -3837,14 +3837,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer2",
-                " Answer2",
-                " Answer2"
+                " 'Answer2'",
+                " Tie",
+                " Answer2. The second response provides a more comprehensive and detailed explanation that covers a broader range of factors and methods for assessing the influence of celebrities on young people's behavior. It also includes a wider variety of data collection methods, such as surveys, focus groups, social media analytics, case studies, and qualitative feedback from parents and educators. This makes it a more thorough and comprehensive answer."
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
-                "gpt-4.1"
+                "TIE",
+                "Unknown"
             ]
         },
         {
@@ -3860,7 +3860,7 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -3887,7 +3887,7 @@
             "result": [
                 " Answer2",
                 " Answer2",
-                " Answer2"
+                " 'Answer2'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -3933,14 +3933,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
-                " Tie",
-                " Answer1 is a superior answer. While both responses offer compelling arguments, Answer1 provides a more comprehensive analysis, elaborating on the benefits of clean energy on reducing greenhouse gas emissions, enhancing air quality, promoting job opportunities, improving energy security, and boosting economic growth. The response also touch on the essential aspects of clean energy, such as energy independence, development, and sustainability, which Answer2 does not address as effectively. However, both answers score high on quality, making it a close competition."
+                " 'Answer2'",
+                " Answer2",
+                " Answer2"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
-                "Unknown"
+                "gpt-4.1",
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         },
         {
@@ -3957,8 +3957,8 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " 'Answer1'",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -3981,12 +3981,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie\n\nBoth responses provide thoughtful and comprehensive evaluations of the fairness of game rules, focusing on important factors such as consistency, transparency, balance, flexibility, and the role of skill versus luck. However, they approach the question slightly differently, with the first response focusing more on specific factors to consider, and the second response providing a more process-oriented approach with a focus on playtesting and feedback. Both answers are equally valuable in providing a comprehensive evaluation of game rule fairness. If one were to choose between the two, it might come down to personal preference or the context of the game being evaluated.",
+                " Tie. Both Answer1 and Answer2 provide well-structured evaluations of fairness in a game's rules, addressing crucial factors such as consistency, transparency, balance, and skill vs luck elements. However, the detail and specific examples in Answer2 make it slightly more comprehensive. If a Simplified evaluation for a quicker decision is needed, Answer1 would be a good choice due to its concise and easy-to-understand points.",
                 " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
-                "TIE",
+                "Unknown",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -4005,8 +4005,8 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " 'Answer1'",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -4029,13 +4029,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
-                " Tie. Both responses provide a comprehensive list of factors to consider when judging the quality of a website. However, they are presented slightly differently which may lead to slight variations in emphasis. Essentially, they provide equivalent information regarding the criteria for evaluating the quality of a website.",
+                " Tie",
+                " Tie\n\nBoth responses have a strong focus on the evaluative criteria for a website's quality and adequately cover factors such as user experience, content quality, design, load time, mobile responsiveness, SEO, security, accessibility, and functionality. There is minimal difference in the level of detail between the two responses, making it challenging to determine a superior answer.",
                 " Tie"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
-                "Unknown",
+                "TIE",
+                "TIE",
                 "TIE"
             ]
         },
@@ -4077,13 +4077,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie. Both answers provide a comprehensive list of factors to consider when evaluating a leader's effectiveness, covering aspects such as vision, communication, decision-making, emotional intelligence, team building, adaptability, integrity, and achieving results. Both answers also touch on the importance of qualitative and quantitative measures in evaluating a leader. However, Answer2 includes some additional factors like creating an inclusive and positive work environment, developing others, managing conflict constructively, and improving productivity and retention rates. These additional factors are important and could potentially give it an edge. In the absence of substantial differences in depth or thoroughness, a tie seems appropriate.",
-                " 'Answer1'\n\nAll the factors mentioned in Answer1 are indeed crucial when evaluating a leader's effectiveness. However, Answer2 further complements these factors by pointing out the need for a leader to create an inclusive and positive work environment, with an emphasis on conflict management, team development, and morale as well. While Answer1 is comprehensive, Answer2 provides a more holistic evaluation of leadership effectiveness by incorporating these additional aspects. Thus, Answer2 offers a slightly more nuanced and complete analysis of the topic.",
+                " 'Answer1'",
+                " Tie",
                 " 'Answer1'"
             ],
             "extracted_answers": [
-                "Unknown",
                 "Llama-2-7b-chat-hf",
+                "TIE",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -4101,8 +4101,8 @@
             },
             "result": [
                 " 'Answer1'",
-                " 'Answer1'",
-                " Answer1"
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -4126,13 +4126,13 @@
             },
             "result": [
                 " Answer1",
-                " Tie",
-                " Tie"
+                " 'Answer1'",
+                " Tie (Both answers provide a clear explanation for the relevance of learning algebra in daily life, and they cover similar examples and points.)"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "TIE",
-                "TIE"
+                "Llama-2-7b-chat-hf",
+                "Unknown"
             ]
         },
         {
@@ -4148,12 +4148,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
+                " Tie. Both responses articulate the relevance of learning algebra by emphasizing its role in developing problem-solving skills, analyzing data, and applying concepts in various fields. They also highlight the connection between algebraic learning and making informed decisions in daily life. The slight difference in word choice or emphasis does not significantly affect the clarity or accuracy of the answer.",
                 " Tie",
-                " Tie",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "TIE",
+                "Unknown",
                 "TIE",
                 "gpt-4.1"
             ]
@@ -4221,14 +4221,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
                 " 'Answer1'",
-                " Tie"
+                " Tie",
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "TIE",
                 "Llama-2-7b-chat-hf",
-                "TIE"
+                "TIE",
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -4246,12 +4246,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " Answers1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Unknown"
             ]
         }
     ],
@@ -4270,12 +4270,12 @@
             },
             "result": [
                 " Tie",
-                " Answer2",
-                " 'Answer2'"
+                " Tie",
+                " Answer2"
             ],
             "extracted_answers": [
                 "TIE",
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1"
             ]
         },
@@ -4317,14 +4317,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer2'",
+                " Answer2",
                 " Tie",
-                " 'Answer2' The second answer provides a more comprehensive evaluation of the impact of technology on communication, acknowledging both the benefits and the challenges. It also discusses the importance of adapting to the negative impacts that come with increased digital dependency, which the first answer does not touch upon. The first answer mentions that excessive use of technology can lead to a decline in face-to-face communication and social isolation, but it does not delve deeper into this issue. Therefore, the second answer provides a more insightful and balanced evaluation."
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "TIE",
-                "Unknown"
+                "TIE"
             ]
         },
         {
@@ -4340,13 +4340,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer1",
                 " Tie",
-                " Answer1"
+                " 'Answer1'",
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "TIE",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -4365,14 +4365,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer2' is a more comprehensive response. It not only highlights the collaborative benefits of teamwork on achieving a goal but also explains how teamwork increases efficiency, minimizes mistakes, encourages creative problem-solving, and fosters trust and a sense of community. It also addresses the aspect of dividing tasks based on strengths and the importance of good communication for minimizing misunderstandings. Overall, it provides a more holistic perspective on the importance of teamwork.",
-                " Answer2. The response is more comprehensive and covers multiple points that further explain the importance of teamwork in achieving a goal. It discusses the benefits of combining skills and knowledge, encourages creative problem-solving, provides support and motivation, and emphasizes the development of trust and a positive work environment. The response also indicates the necessity of teamwork for accomplishing complex or demanding goals, which was not explicitly stated in the other response.",
-                " Tie. Both responses provide comprehensive, accurate, and concise explanations on the importance of teamwork in achieving a goal. Both acknowledge the benefits of collaboration, task division, and shared accountability. Both also highlight the role of teamwork in fostering creativity, building trust, and enhancing the overall work environment. However, the second answer adds a slight emphasis on combining skills, knowledge, and experiences, and the reality of facing complex or demanding goals that require teamwork. Despite this, I would consider both answers of equal quality."
+                " 'Answer2'",
+                " 'Answer2' is the superior response because it not only emphasizes the importance of teamwork for collaboration, shared responsibility, and camaraderie (as Address1 does), but also adds a more detailed explanation for why teamwork is crucial in combining skills, knowledge, and experiences, increased efficiency and reduced mistakes, better creative problem-solving, support, motivation, accountability, better solutions, positive work environment, and trust building. Furthermore, it addresses the fact that achieving complex or demanding goals is difficult without effective teamwork, which the first response does not mention. Hence, Address2 is more comprehensive and thus superior in the semantic quality of the answer.",
+                " Answer2"
             ],
             "extracted_answers": [
+                "gpt-4.1",
                 "Unknown",
-                "Unknown",
-                "Unknown"
+                "gpt-4.1"
             ]
         },
         {
@@ -4413,14 +4413,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer2'",
+                " Tie. Both Answer1 and Answer2 provide comprehensive and well-structured lists of standards that can be used to judge the safety of a car. However, Answer2 delves deeper into specific safety features, vehicle structures, and regulatory bodies, providing a slightly more detailed response. At the same time, Answer1's description is concise and easy to comprehend, making it an equally suitable choice. Therefore, a tie is appropriate for this case, as neither answer is definitively superior to the other in terms of semantic quality.",
                 " Answer2",
-                " 'Answer2'"
+                " Tie. Both responses provide a comprehensive and detailed overview of the standards used to judge the safety of a car. However, Response2 provides a slightly more comprehensive list of safety features and factors, including some less commonly mentioned aspects like reliability of advanced driver-assistance systems (ADAS) and frequency of recalls. Response1, on the other hand, provides a step-by-step list that is easy to understand, making it easier for someone with less knowledge to grasp the important aspects. Both responses are equally informative and accurate, but Response2 offers a more comprehensive guide for a more detailed examination of the safety of a car."
             ],
             "extracted_answers": [
+                "Unknown",
                 "gpt-4.1",
-                "gpt-4.1",
-                "gpt-4.1"
+                "Unknown"
             ]
         },
         {
@@ -4437,7 +4437,7 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -4461,14 +4461,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
-                " 'Answer1' is the superior response as it provides a more comprehensive and organized explanation of the significance of biodiversity, covering ecological, economic, social, and scientific benefits. Additionally, it presents these benefits in a bullet-point format, making the information easily digestible. While Answer2 provides an equally valid explanation, it is less structured and does not include the same level of detail or variety of benefits as Answer1.",
-                " Answer2"
+                " Tie. Both responses offer comprehensive and accurate explanations for the significance of biodiversity in an ecosystem, highlighting its ecological, economic, social, and cultural importance. They also discuss biodiversity's role in maintaining stability, resilience, and productivity, as well as its contribution to human well-being. While there are subtle differences in the way they present their points, the information provided is essentially equivalent.",
+                " Answer1",
+                " Tie\n\nBoth responses provide comprehensive and accurate evaluations of the significance of biodiversity in an ecosystem. They both offer relevant ecological, economic, social, and scientific benefits of biodiversity, as well as its importance for maintaining the health and resilience of ecosystems, supporting human well-being, and advancing scientific knowledge. They also highlight the role of biodiversity in enhancing ecosystem resilience, promoting adaptation, maintaining ecological functions, and supporting food webs and ecosystem functioning. In this case, the quality of the answers is equivalent, making a tie the most appropriate choice."
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
                 "Unknown",
-                "gpt-4.1"
+                "Llama-2-7b-chat-hf",
+                "TIE"
             ]
         },
         {
@@ -4486,12 +4486,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "TIE"
             ]
         }
     ],
@@ -4509,9 +4509,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer2",
-                " Answer2",
-                " 'Answer2'"
+                " 'Answer2'",
+                " 'Answer2'",
+                " Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -4534,7 +4534,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -4557,14 +4557,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer2'",
                 " Answer2",
-                " Tie"
+                " 'Answer2'",
+                " Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "TIE"
+                "gpt-4.1"
             ]
         },
         {
@@ -4580,9 +4580,9 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -4605,14 +4605,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
-                " Tie. Both answers are correct and provide comparable information about the capital of France, Paris, and its status as a significant city in France.",
-                " Tie"
+                " Tie",
+                " Tie",
+                " Answer1"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
-                "Unknown",
-                "TIE"
+                "TIE",
+                "TIE",
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -4629,13 +4629,13 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
-                "gpt-4.1"
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -4654,7 +4654,7 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -4676,14 +4676,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer1 (tie)\n\nBoth responses are equally accurate and provide information that correctly identifies the primary colors as red, blue, and yellow, or red, green, and blue, depending on the context. In the case of painting and everyday speech, the traditional primary colors are red, blue, and yellow. However, in the context of light and digital media, the primary colors are red, green, and blue. Therefore, either answer can be considered correct, depending on the scenario.",
+                " Tie",
                 " Answer1",
-                " 'Answer1'"
+                " Tie"
             ],
             "extracted_answers": [
-                "Unknown",
+                "TIE",
                 "gpt-4.1",
-                "gpt-4.1"
+                "TIE"
             ]
         }
     ],
@@ -4701,12 +4701,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer2'",
+                " Tie. Both answers are correct, informative, and well-structured. They both contain the name of the first U.S. President, the years he served, and some additional relevant information.",
                 " Answer2",
-                " Answer2"
+                " 'Answer2'"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Unknown",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -4724,14 +4724,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie. Both answers provide correct and accurate information about the first President of the United States, George Washington, and the timeframes of his presidency. However, Answer1 goes one step further by giving a brief summary of Washington's important role in setting precedents for the office of the President, making it slightly more informative. Nevertheless, Answer2 still demonstrates a good level of knowledge and accuracy.",
-                " Answer1 (George Washington served from 1789 to 1797, which is a more comprehensive answer stating that he served unanimously and set many important precedents for the office of the President)",
-                " Answer1"
+                " Tie. Both answers are accurate and include similar information. However, Answer1 provides a bit more context by mentioning the years Washington served and the fact that he was unanimously elected. Answer2 is more concise in its delivery. Both responses are equally good.",
+                " Answer1",
+                " Tie. Both answers accurately and succinctly answer the question and provide factual information about the first president of the United States. Answer 1 provides a bit more context about Washington's service and the importance of his tenure, while Answer 2 provides slightly more detail about the timeframes of Washington's service. In this case, both answers are of similar quality, so a tie is appropriate."
             ],
             "extracted_answers": [
                 "Unknown",
-                "Unknown",
-                "gpt-4.1"
+                "gpt-4.1",
+                "Unknown"
             ]
         }
     ],
@@ -4749,9 +4749,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer2'",
                 " Answer2",
-                " 'Answer2'"
+                " Answer2",
+                " Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -4772,7 +4772,7 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " 'Answer1'"
             ],
@@ -4799,12 +4799,12 @@
             "result": [
                 " 'Answer1'",
                 " Tie",
-                " Tie. Both answers are correct and provide the same information, but Answer2 adds some additional context about the novel and its themes, which could be helpful to some readers, but not necessary for answering the initial question about the author's identity."
+                " Tie"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "TIE",
-                "Unknown"
+                "TIE"
             ]
         },
         {
@@ -4820,14 +4820,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1'",
+                " Tie",
                 " Answer1",
-                " 'Answer1'"
+                " Tie"
             ],
             "extracted_answers": [
+                "TIE",
                 "gpt-4.1",
-                "gpt-4.1",
-                "gpt-4.1"
+                "TIE"
             ]
         }
     ],
@@ -4845,14 +4845,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
                 " Tie",
-                " Tie"
+                " 'Answer1'",
+                " Tie. Both answers are equally accurate and clear in their explanation. However, Answer2 provides a bit more context about the etymology of the term \"pentagon,\" which is not necessary for the question at hand. The primary focus should be on the quality and accuracy of the answer, and both answers are equally good in this regard. Therefore, a tie is justified."
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
                 "TIE",
-                "TIE"
+                "Llama-2-7b-chat-hf",
+                "Unknown"
             ]
         },
         {
@@ -4869,12 +4869,12 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1' - In this case, the first answer provided a brief explanation of the origins of the term \"penta-\" and its relation to the pentagon, making the answer more informative and thus superior.",
-                " 'Answer1'"
+                " 'Answer1'",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "Unknown",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -4893,13 +4893,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " 'Answer2' is the superior response because it not only provides the correct answer but also includes additional information about the element, such as its classification, essential role in life, and atomic number. This makes the answer more complete and educational. Answer1, while correct, does not provide any additional context or details. However, if the context requires only a short, direct response, Answer1 may also suffice. In this case, a tie is not appropriate because Answer2 provides a more comprehensive answer.",
                 " 'Answer2'",
-                " Tie (Both answers are equally good and accurate.)",
                 " 'Answer2'"
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "Unknown",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         },
@@ -4918,7 +4918,7 @@
             "result": [
                 " 'Answer1'",
                 " 'Answer1'",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -4964,13 +4964,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer1",
                 " 'Answer1'",
+                " Tie",
                 " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1"
             ]
         }
@@ -4991,12 +4991,12 @@
             "result": [
                 " Answer2",
                 " Answer2",
-                " Answer2"
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "TIE"
             ]
         },
         {
@@ -5012,7 +5012,7 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -5037,14 +5037,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Answer1",
                 " Tie",
-                " Tie",
-                " Answer1"
+                " Tie"
             ],
             "extracted_answers": [
+                "Llama-2-7b-chat-hf",
                 "TIE",
-                "TIE",
-                "Llama-2-7b-chat-hf"
+                "TIE"
             ]
         },
         {
@@ -5085,12 +5085,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Tie",
                 " Answer2",
-                " 'Answer2'",
                 " Tie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1",
                 "TIE"
             ]
@@ -5108,8 +5108,8 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -5133,14 +5133,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer2",
+                " 'Answer2'",
                 " Tie",
-                " Tie, both answers are accurate and provide complete information, but Answer2 adds some extra detail without being unnecessary, making it slightly more informative."
+                " Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "TIE",
-                "Unknown"
+                "gpt-4.1"
             ]
         },
         {
@@ -5157,7 +5157,7 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -5181,14 +5181,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
-                " Answer2",
-                " Answer2"
+                " Answer1",
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
-                "gpt-4.1",
-                "gpt-4.1"
+                "Llama-2-7b-chat-hf",
+                "Llama-2-7b-chat-hf",
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -5206,7 +5206,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -5253,8 +5253,8 @@
             },
             "result": [
                 " Tie",
-                " 'Answer1'",
-                " 'Answer1'"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "TIE",
@@ -5277,14 +5277,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
-                " Tie",
-                " 'Tie'"
+                " 'Answer1'",
+                " 'Answer1'",
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
-                "TIE"
+                "Llama-2-7b-chat-hf",
+                "Llama-2-7b-chat-hf",
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -5300,7 +5300,7 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -5325,12 +5325,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " Tie",
                 " 'Answer1'",
                 " Tie"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
+                "TIE",
                 "Llama-2-7b-chat-hf",
                 "TIE"
             ]
@@ -5348,13 +5348,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
-                " Tie",
+                " The responses are identical in content, semantic quality, and accuracy, so this question results in a 'Tie'. Both answers provide a correct and clear explanation of the chemical formula of water.",
+                " 'Answer1'",
                 " Tie"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
+                "Unknown",
+                "gpt-4.1",
                 "TIE"
             ]
         }
@@ -5373,14 +5373,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie. Both responses provide an accurate and quality answer to the question. They both mention that Mars is known as the Red Planet, explain that the red color is caused by iron oxide, and highlight that the red color can be seen from Earth with the naked eye. The only minor difference is the wording, but both are acceptable and clear.",
                 " Answer1",
-                " Answer1"
+                " Answer1",
+                " Tie"
             ],
             "extracted_answers": [
-                "Unknown",
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "Llama-2-7b-chat-hf",
+                "TIE"
             ]
         },
         {
@@ -5396,7 +5396,7 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer1",
+                " 'Answer1'",
                 " Answer1",
                 " Answer1"
             ],
@@ -5423,12 +5423,12 @@
             "result": [
                 " Tie",
                 " Tie",
-                " Tie"
+                " Answer2"
             ],
             "extracted_answers": [
                 "TIE",
                 "TIE",
-                "TIE"
+                "gpt-4.1"
             ]
         },
         {
@@ -5444,14 +5444,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1'",
+                " Tie. Both responses are accurate and provide valuable insights, but they approach the question from slightly different perspectives. The first response primarily focuses on the European explorer who is commonly associated with the discovery of America, while the second response emphasizes the complexity of defining discovery in the context of indigenous communities that existed long before European arrival.",
                 " Tie",
-                " Answer1"
+                " Tie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Unknown",
                 "TIE",
-                "gpt-4.1"
+                "TIE"
             ]
         }
     ],
@@ -5471,12 +5471,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Tie. Both responses accurately do name the four main layers of the Earth (crust, mantle, outer core, and inner core) and briefly describe their characteristics. However, Answer1 provides a bit more detailed explanation on the composition of the mantle and core, but the information in Answer2 is sufficient for a basic understanding. Both answers are on the same level of quality and accuracy, so a tie is appropriate."
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
-                "Unknown"
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -5492,12 +5492,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
+                " Tie",
                 " Answer1",
-                " 'Answer1'",
                 " Tie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1",
                 "TIE"
             ]
@@ -5518,13 +5518,13 @@
             },
             "result": [
                 " 'Answer1'",
-                " Answer1",
-                " Tie"
+                " Tie",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
-                "TIE"
+                "TIE",
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -5540,13 +5540,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
-                " Tie",
+                " Answer1",
+                " 'Answer1'",
                 " Tie"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
+                "gpt-4.1",
+                "gpt-4.1",
                 "TIE"
             ]
         }
@@ -5566,12 +5566,12 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " Tie. Both answers are equally accurate and comprehensive in their explanations. They both correctly identify the heart as the organ responsible for pumping blood in the body and provide valuable additional information about the heart's role in supplying oxygen and nutrients to tissues and removing waste products. However, neither answer adds any unique insight or detail to further distinguish themselves as superior, which is why I am selecting a tie.",
                 " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
+                "Unknown",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -5588,7 +5588,7 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -5613,9 +5613,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " 'Answer2'",
                 " Answer2",
-                " Answer2",
-                " 'Answer2'"
+                " Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -5661,14 +5661,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer2'",
                 " Answer2",
-                " Answer2"
+                " Answer2",
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "TIE"
             ]
         },
         {
@@ -5684,7 +5684,7 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -5711,12 +5711,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " Tie. Both answers provide a correct and detailed response about the animal that Charles Darwin famously studied. They both mention the Galapagos Islands and finches, while highlighting the importance of his observations in developing his theory of natural selection. However, Answer1 provides a slightly more specific detail about the duration of Darwin's voyage. It's a negligible difference and both answers are equally good."
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "Unknown"
             ]
         },
         {
@@ -5732,12 +5732,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -5757,13 +5757,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie. Both responses are incorrect. The second line from the left on a QWERTY keyboard consists of the letters \"O-P-A-S\", not \"W-E-R-T\" or \"A-S-D-F\". The misunderstanding may have arisen from the question's reference to the \"second line,\" which can be interpreted in different ways. The home row commonly used in beginner tutorials consists of the keys A-S-D-F, but in a strict sense, the second line from the left would be the row with the keys O-P-A-S.",
-                " Tie",
+                " Tie. Both answers are incorrect. The first four letters from left to right on the second line of a QWERTY keyboard are 'A-S-D-F'. However, the question asked for the first four letters in the second line, meaning the row right underneath the first row ('Q-W-E-R-T'). So, neither 'W-E-R-T' nor 'A-S-D-F' is the correct answer to the given question.",
+                " 'Answer1'",
                 " Tie"
             ],
             "extracted_answers": [
                 "Unknown",
-                "TIE",
+                "Llama-2-7b-chat-hf",
                 "TIE"
             ]
         },
@@ -5780,13 +5780,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1' (The first four letters in the second line on a QWERTY keyboard, from left to right, are A, S, D, and F.) is the superior answer. It is accurate and clearly explains that the letters in the second line (which is the home row) are the ones being asked for, whereas Answer2 is incorrect and provides the first four letters in the first row instead.",
-                " 'Answer1'",
-                " Answer1"
+                " Tie. Both responses are incorrect because the question asks for the second line, not the home row, which includes the first row of keys above the home row. The correct answer is \"O-P-A-S\").",
+                " Tie. Both answers are incorrect. The second line on a QWERTY keyboard from left to right contains the letters \"O-P-A-L\".",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Unknown",
-                "gpt-4.1",
+                "Unknown",
                 "gpt-4.1"
             ]
         }
@@ -5805,14 +5805,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Answer1",
                 " 'Answer1'",
-                " Answer1 or Tie (Both answers are equally good and correct, providing the solution in an understandable and concise manner.)",
-                " Answer1, both responses demonstrate the correct method to solve the equation, but Answer1 is more concise and efficiently communicates the solution. For that reason, Answer1 is the superior answer."
+                " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Unknown",
-                "Unknown"
+                "Llama-2-7b-chat-hf",
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -5828,12 +5828,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
+                " 'Answer1'",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -5853,14 +5853,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
                 " 'Answer1'",
-                " Tie"
+                " 'Answer1'",
+                " Tie. Both answers provide clear and concise explanations of the scientific method for testing a hypothesis. Answer1 is more concise, dividing the process into six distinct steps for easy understanding, while Answer2 provides slightly more detail, emphasizing the importance of transparency in documentation. Both responses are well-structured, easy to follow, and accurate, making it difficult to decide which answer is superior."
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
-                "TIE"
+                "Unknown"
             ]
         },
         {
@@ -5876,12 +5876,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer1",
+                " 'Answer1' (This response provides a more comprehensive answer, including details on controlling variables, recording and analyzing data, and its importance to allow others to replicate the process.)",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Unknown",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -5901,13 +5901,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
-                " Answer1",
+                " 'Answer1'",
+                " Tie\n\nBoth responses provide good and similarly structured answers that follow the principles of democracy in solving a conflict in a school's student council. Both answers emphasize the importance of open communication, fairness, inclusivity, respect, and a transparent process in resolving conflicts. It is difficult to determine a clear winner due to the similar quality of the responses.",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
                 "Llama-2-7b-chat-hf",
+                "TIE",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -5925,12 +5925,12 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " Tie",
                 " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1"
             ]
         }
@@ -5949,14 +5949,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
-                " 'Answer1'",
-                " Answer1"
+                " Answer2",
+                " Answer1",
+                " Tie"
             ],
             "extracted_answers": [
-                "TIE",
+                "gpt-4.1",
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "TIE"
             ]
         },
         {
@@ -5972,14 +5972,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
+                " Tie",
                 " Answer1",
-                " Answer1",
-                " Tie\n\nBoth answers provide a comprehensive explanation of how the water cycle works in a terrarium, and they both highlight crucial aspects like evaporation, condensation, and runoff. However, Answer1 offers a more descriptive account, tying in the mini-ecosystem of a terrarium, placing it in context with Earth's water cycle, and discussing transpiration as an additional process. On the other hand, Answer2 provides a step-by-step breakdown of each stage in the water cycle, offering a well-structured explanation. Ideally, these two answers could be combined to produce a response that captures the main aspects emphasized in both responses."
+                " 'Answer1' is the superior response because it not only explains the stages of the water cycle in a clear and concise manner but also provides a more vivid and descriptive image of the water cycle happening in a terrarium - using visual cues like water dripping and plants using water - which aids understanding. While 'Answer2' is accurate and thorough in detailing the water cycle's stages, 'Answer1' provides a more cohesive and engaging explanation that makes the concept easier to visualize."
             ],
             "extracted_answers": [
+                "TIE",
                 "gpt-4.1",
-                "gpt-4.1",
-                "TIE"
+                "Unknown"
             ]
         }
     ],
@@ -5997,7 +5997,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -6020,9 +6020,9 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " Answer1",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -6045,14 +6045,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer2'",
-                " 'Answer2'",
-                " Answer2"
+                " Answer2",
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
-                "gpt-4.1"
+                "TIE",
+                "TIE"
             ]
         },
         {
@@ -6068,13 +6068,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1' is a superior response because it provides a more accurate and complete explanation of gravity. The answer describes the impact of air resistance in everyday scenarios, the single experiment to be performed (dropping two objects of different weights simultaneously), and the results observed in a vacuum which highlights the consistency of gravity's effect on all objects. Additionally, the explanation of gravitational force and its dependence on mass and distance further clarifies the concept. While Answer2 provides a valid experiment, it doesn't mention the issue of air resistance or the idea of placing the experiment in a vacuum, which is a crucial factor in demonstrating the fixed rate of gravity's effect. Therefore, 'Answer1' is the more complete and accurate response.",
-                " 'Answer1' (explains the concept with a detailed and precise explanation, including a vacuum scenario to demonstrate canceling effects of air resistance and showing the consistent effect of gravity on all objects)",
-                " Answer1"
+                " Answer1",
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "Unknown",
-                "Unknown",
+                "gpt-4.1",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -6093,14 +6093,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " 'Answer1'",
                 " Answer2",
-                " Answer2",
-                " 'Answer2'"
+                " Tie (Both answers provide similar and accurate information, with the second answer offering slightly more detailed explanation for long division cases.)"
             ],
             "extracted_answers": [
+                "Llama-2-7b-chat-hf",
                 "gpt-4.1",
-                "gpt-4.1",
-                "gpt-4.1"
+                "Unknown"
             ]
         },
         {
@@ -6116,7 +6116,7 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer1",
+                " 'Answer1'",
                 " Answer1",
                 " Answer1"
             ],
@@ -6189,12 +6189,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Tie",
                 " Answer1",
-                " Answer1",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
+                "TIE",
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
@@ -6212,13 +6212,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1' is a more detailed and comprehensive answer, providing specific steps to plan a small party while staying within budget. It also offers practical examples and a suggested budget allocation strategy. Therefore, 'Answer1' is the superior response.",
-                " 'Answer1'",
+                " Tie",
+                " 'Answer1' is a more detailed and structured response, providing a step-by-step process on how to allocate the budget while keeping the party engaging, while also considering ways to reduce costs where possible. Therefore, 'Answer1' is the better response.",
                 " Answer1"
             ],
             "extracted_answers": [
+                "TIE",
                 "Unknown",
-                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -6238,13 +6238,13 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " Answer2"
+                " 'Answer1'",
+                " Tie. Both answers provide good and detailed descriptions of how to use a map to plot the fastest route from one's house to a nearby park. Both responses consider factors such as distance, obstacles, and potential delays due to traffic and road conditions. However, Answer2 is slightly more explicit in suggesting the use of a digital map or app with real-time traffic updates, making it perhaps more practical for some users. Therefore, the difference in quality is minimal and could be subjective."
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
-                "gpt-4.1"
+                "Unknown"
             ]
         },
         {
@@ -6261,8 +6261,8 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
-                " Answer1"
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -6285,13 +6285,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
-                " 'Answer1'",
+                " Answer1",
+                " Tie",
                 " Tie"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
+                "TIE",
                 "TIE"
             ]
         },
@@ -6308,12 +6308,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie. Both answers are well-written, address the question, and provide convincing arguments for having longer lunch breaks. However, neither answer provides specific statistical or research-based evidence to support their claims. A superior response could have incorporated relevant studies or data to further strengthen its case.",
+                " Tie",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "Unknown",
+                "TIE",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -6333,7 +6333,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer2",
+                " 'Answer2'",
                 " Answer2",
                 " Answer2"
             ],
@@ -6357,8 +6357,8 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " 'Answer1'"
+                " 'Answer1'",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -6381,14 +6381,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer2",
-                " Tie. Both answers are correct and clearly explain how to calculate the area of a rectangular room by multiplying length and width. However, Answer2 provides slightly more detail about the units involved and the reason behind the multiplication. But that is a minor difference, and the core information is presented in both answers equally well.",
-                " Tie. Both answers are clear, concise, and correct in explaining how to calculate the area of a rectangular room using multiplication of length and width. The second answer might be slightly more detailed, but the first one is just as accurate and offers a practical example."
+                " Tie",
+                " 'Answer1'",
+                " 'Answer2'"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "Unknown",
-                "Unknown"
+                "TIE",
+                "Llama-2-7b-chat-hf",
+                "gpt-4.1"
             ]
         },
         {
@@ -6404,14 +6404,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer1",
                 " 'Answer1'",
-                " Tie. Both answers provide a correct and clear explanation of how to calculate the area of a rectangular room by multiplying the length and width and give an example demonstrating the process. However, Answer1 goes into more detail by explaining the meaning of squaring units, which provides additional context for understanding the calculation."
+                " 'Answer1'",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "Unknown"
+                "gpt-4.1"
             ]
         }
     ],
@@ -6429,14 +6429,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
-                " Answer2",
-                " Tie. Both answers provide comprehensive and informative plans for a healthy week's menu, taking into account a variety of food groups, the importance of balanced meals, and the need to limit processed foods and unhealthy fats. They both also emphasize the importance of hydration and portion control. However, they offer slightly different approaches, with Answer1 focusing more on considering dietary needs and preferences, variety of colors on the plate, and the glycemic index, while Answer2 emphasizes the structure of meals throughout the day and the method of cooking. While one is not necessarily superior to the other, each offers valuable insight for planning a healthy menu."
+                " Tie. Both answers provide a balanced and comprehensive plan for a healthy week's menu, offering a variety of nutritious foods, including whole grains, lean proteins, fruits, vegetables, and healthy fats. They also suggest limiting processed foods, added sugars, saturated fats, and sodium. However, Answer2 offers a bit more specificity in terms of meal timing and cooking methods. Ultimately, both answers are equally effective in answering the question.",
+                " 'Answer1'",
+                " Tie"
             ],
             "extracted_answers": [
-                "TIE",
-                "gpt-4.1",
-                "Unknown"
+                "Unknown",
+                "Llama-2-7b-chat-hf",
+                "TIE"
             ]
         },
         {
@@ -6454,7 +6454,7 @@
             "result": [
                 " 'Answer1'",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -6477,12 +6477,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer2",
-                " Answer2",
-                " 'Answer2'"
+                " Tie\n\nBoth answers provide detailed steps for addressing a variety of potential issues with a broken torch light, but they do not provide the same level of detail in some areas. For example, Answer1 mentions checking and cleaning contacts, securing loose connections, replacing switches or sockets, and testing the torch, but does not provide specific instructions on how to do these tasks. On the other hand, Answer2 provides more detailed instructions for checking and cleaning battery terminals, testing continuity, and re-soldering connections, but does not explicitly mention some steps such as replacing the bulb or securing loose connections. As a result, both answers are equally good at providing a general overview of the process for fixing a broken torch light, but lack the necessary specificity to be considered definitive solutions. Therefore, I will mark this as a tie.",
+                " 'Answer2'",
+                " Answer2"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -6502,12 +6502,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Tie\n\nBoth responses provide a reasonable and generally useful set of steps that could potentially help in fixing a broken torch light. They both cover the possibility of checking and replacing the bulb, looking for loose connections, and testing the final product. However, the responses do not provide significant detail and precision that would significantly differentiate between the quality of the answers. Therefore, it's not possible to definitively declare that one response is superior."
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "TIE"
+                "gpt-4.1"
             ]
         }
     ],
@@ -6525,14 +6525,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
-                " Answer2",
-                " Answer1"
+                " Tie. Both Answer1 and Answer2 provide a clear and accurate description of the order of operations for mathematical expressions, with similar steps enumerated albeit in slightly different order. They offer valuable insights for those seeking to simplify complex mathematical expressions. The main difference lies in the use of the acronym PEMDAS in Answer2, while Answer1 simply lists the steps in sequential order. This minor difference does not affect the overall quality or helpfulness of the answers.",
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
-                "gpt-4.1",
-                "Llama-2-7b-chat-hf"
+                "Unknown",
+                "TIE",
+                "TIE"
             ]
         },
         {
@@ -6549,13 +6549,13 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
-                " Answer1"
+                " Answer1",
+                " Answer1 (Response 1 provides a more detailed explanation, including the acronym PEMDAS and a specific example to illustrate the steps.)"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Unknown"
             ]
         }
     ],
@@ -6575,12 +6575,12 @@
             "result": [
                 " 'Answer2'",
                 " Answer2",
-                " Answer2"
+                " Tie. Both answers provide elaborate and accurate explanations of why the body gets tired after physical exercise, covering topics such as ATP depletion, lactic acid production, dehydration, and nervous system fatigue. However, Answer2 goes one step further by discussing the role of the heart and lungs in energy use, which is indeed relevant to the question. Nevertheless, the additional detail does not significantly improve the overall quality of the explanation compared to Answer1, making a tie an appropriate choice."
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Unknown"
             ]
         },
         {
@@ -6596,12 +6596,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1' (tie is acceptable, but Answer1 provides a more comprehensive and detailed explanation of the processes that occur in the body during and after physical exercise, including the role of other systems such as the nervous system, cardiovascular system, and the impact of fluid and mineral loss.)",
                 " Answer1",
-                " 'Answer1'"
+                " 'Answer1'",
+                " Answer1"
             ],
             "extracted_answers": [
-                "Unknown",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -6622,7 +6622,7 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -6669,12 +6669,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
                 " Answer1",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
+                "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
@@ -6693,13 +6693,13 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
-                " Answer1 (The Answer1 provides a more detailed explanation, specifically referencing the first law of motion and how seat belts apply to it in the context of car safety.)"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "Unknown"
+                "gpt-4.1"
             ]
         }
     ],
@@ -6717,13 +6717,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " The two responses are very similar, but Answer2 is more detailed in its instructions for planning a well-balanced meal by providing specific examples of food choices and recommending a specific proportion for each food group. Answer1, while clear and concise, does not offer a visual representation of a balanced meal or specific portion sizes. So, 'Answer2' is the superior response.",
-                " Tie",
-                " 'Answer2'"
+                " Answer2",
+                " Answer2",
+                " Answer2"
             ],
             "extracted_answers": [
-                "Unknown",
-                "TIE",
+                "gpt-4.1",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         },
@@ -6740,8 +6740,8 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer1",
                 " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -6765,12 +6765,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer2'",
+                " Tie",
                 " Answer2",
-                " 'Answer2'"
+                " Answer2"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -6789,12 +6789,12 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " 'Answer1' (The first response provides a more comprehensive answer, discussing both the manufacturer's printed expiration date and the use of beyond-use dates (BUD) when needed, as well as considering storage conditions and following established protocols. The second response, while accurate, does not delve as deeply into the topic.)",
                 " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
+                "Unknown",
                 "gpt-4.1"
             ]
         }
@@ -6836,9 +6836,9 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie. Both answer1 and answer2 provide an accurate and well-structured explanation. However, they focus on different processes in the water cycle: answer1 focuses on condensation, while answer2 focuses on a combination of evaporation and condensation. It would be beneficial for the user to understand both perspectives to have a comprehensive understanding of the scenario.",
+                " Tie. Both answers provide a valid and detailed explanation for the given question, but they approach the question from slightly different perspectives. The first answer explains the condensation process that occurs when the cold glass surface cools the air around it below its dew point, causing water vapor to condense. The second answer correctly identifies that the process is related to evaporation from the cold drink and the rising of warmer air, but attributes the condensation to it as well, which is not entirely accurate. Both answers demonstrate a good understanding of the concepts involved in the question. If further clarification was required, a follow-up question could be asked to determine the level of detail and accuracy that each answer provides.",
                 " 'Answer1'",
-                " Answer1\n\nExplanation: The response is accurate and explains the concept of the water cycle, dew point, and condensation. It is also more precise and clear in its explanation, clearly stating that the issue is due to condensation, not evaporation, and correctly states that the cool surface of the glass drops the temperature below the dew point of the surrounding air. Answer2 is less accurate and seems to be more focused on the concept of evaporation rather than condensation. It also suggests that the warm air rises because it becomes less dense, which is not accurate, as warm air rises because it is less dense at the same pressure."
+                " Answer1"
             ],
             "extracted_answers": [
                 "Unknown",

@@ -46,12 +46,12 @@
             },
             "result": [
                 " Answer1",
-                " Tie",
+                " Answer1",
                 " 'Answer1'"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
-                "TIE",
+                "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
         },
@@ -68,13 +68,13 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " 'Answer2'",
-                " Tie",
+                " Tie\n\nBoth responses provide a clear, coherent, and detailed explanation of the historical analysis process using specific historical events (Berlin Wall and assassination of Archduke Franz Ferdinand). They also both emphasize the importance of using multiple sources, putting events in context, considering perspectives, and examining different layers of causation. However, they use different stylistic approaches (Answer1 being more conversational and informal, and Answer2 being more academic and formal), which may make them more or less suitable depending on the intended audience. In a strictly semantic analysis, both answers demonstrate a high level of quality and accuracy.",
+                " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
                 "TIE",
+                "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
         }
@@ -117,7 +117,7 @@
             },
             "result": [
                 " Answer2",
-                " 'Answer2'",
+                " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
@@ -141,14 +141,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Tie\n\nBoth responses (Answer1 and Answer2) provide clear and concise information about the components of a healthy balanced meal and their interactions. Answer1 focuses on technical terms and scientific explanations, while Answer2 uses more conversational language and relatable examples. Ultimately, the information is presented in a way that is easily understandable for the reader, and both responses meet the criterion of providing quality and accurate answers.",
                 " Answer1",
-                " Tie",
-                " Tie"
+                " Answer1"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
                 "TIE",
-                "TIE"
+                "gemini-1.5-flash",
+                "gemini-1.5-flash"
             ]
         },
         {
@@ -164,14 +164,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
+                " Tie\n\nBoth answers provide a comprehensive and accurate explanation of the components of a healthy balanced meal and how they interact to provide proper nutrition. However, Answer2 is slightly more concise and structured, making it slightly easier to understand. On the other hand, Answer1 provides a more detailed and colloquial explanation, which some readers might find more engaging. Overall, both answers are of high quality, but if pressed to choose, I would lean slightly towards Answer2 due to its clarity and structure.",
                 " Answer2",
-                " Answer2",
-                " Answer2"
+                " Tie"
             ],
             "extracted_answers": [
+                "TIE",
                 "gemini-1.5-flash",
-                "gemini-1.5-flash",
-                "gemini-1.5-flash"
+                "TIE"
             ]
         }
     ],
@@ -213,12 +213,12 @@
             },
             "result": [
                 " Answer2",
-                " Tie",
+                " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
-                "TIE",
+                "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
         }
@@ -239,7 +239,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -260,14 +260,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Answer2",
-                " Answer1",
-                " Answer1 (The first answer is more engaging and easier to understand as it uses simple, everyday language to explain complex concepts. However, Answer2 is also accurate and informative, but it's written in a more formal and technical style, making it less accessible for those unfamiliar with scientific terms.)"
+                " Tie",
+                " Tie. Both answers provide a clear and coherent discussion of the forces acting on a stationary car. However, Answer1 has a casual and conversational tone, which might be more appealing to some readers for its accessibility, while Answer2 is more formal and systematic, which might be preferred by others for its precision and academic style. The answers are equally good in terms of quality and accuracy.",
+                " Tie"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
-                "gpt-4.1",
-                "Unknown"
+                "TIE",
+                "Unknown",
+                "TIE"
             ]
         }
     ],
@@ -358,7 +358,7 @@
             "result": [
                 " Answer2",
                 " Answer2",
-                " 'Answer2'"
+                " Answer2"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -404,14 +404,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
+                " Answer2",
                 " 'Answer1'",
-                " 'Answer1'",
-                " Tie"
+                " Answer2"
             ],
             "extracted_answers": [
+                "gemini-1.5-flash",
                 "gpt-4.1",
-                "gpt-4.1",
-                "TIE"
+                "gemini-1.5-flash"
             ]
         }
     ],
@@ -431,12 +431,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " Tie"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
                 "gemini-1.5-flash",
-                "gemini-1.5-flash"
+                "TIE"
             ]
         },
         {
@@ -454,12 +454,12 @@
             "result": [
                 " Tie",
                 " Tie",
-                " Tie"
+                " Answer2"
             ],
             "extracted_answers": [
                 "TIE",
                 "TIE",
-                "TIE"
+                "gemini-1.5-flash"
             ]
         }
     ],
@@ -479,7 +479,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -500,12 +500,12 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
+                " The superior answer is Answer2. It provides a more concise, accurate, and scientifically-supported account of the reasons behind the increase in global temperatures in the past century. The language of Answer1 is informal and lacks some of the scientific terminology and citations used in Answer2, which makes it less effective at providing a comprehensive and precise explanation. However, both answers give a similar overall understanding of the reasons behind the increase in global temperatures and that human activities are the primary drivers. So, the tie could also be considered as an appropriate choice if the focus is exclusively on quality and accuracy of answers, without considering the level of formality or scientific language used.",
                 " Answer2",
-                " Answer2",
-                " Answer2"
+                " 'Answer2'"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
+                "Unknown",
                 "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
@@ -575,7 +575,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -596,13 +596,13 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Answer1",
-                " Answer1",
-                " 'Answer1'"
+                " Answer2",
+                " Answer2",
+                " Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "gpt-4.1",
+                "gemini-1.5-flash",
+                "gemini-1.5-flash",
                 "gpt-4.1"
             ]
         }
@@ -622,8 +622,8 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " 'Answer1'"
+                " 'Answer1'",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -644,14 +644,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Answer2",
                 " Tie",
-                " 'Answer2'"
+                " Tie",
+                " Tie\n\nBoth answers provide accurate and comprehensive information about the differences between renewable and non-renewable energy sources in terms of their environmental impact. The first response is more colloquial, while the second is more formal and academic. However, the core information and presentation of the differences between the two types of energy sources are equally clear and informative in both responses. Therefore, it is a tie."
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
                 "TIE",
-                "gemini-1.5-flash"
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -692,12 +692,12 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Tie",
+                " Answer2",
                 " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
-                "TIE",
+                "gemini-1.5-flash",
                 "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
@@ -718,7 +718,7 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -788,14 +788,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
+                " 'Answer2'",
                 " Answer2",
-                " Tie",
-                " Tie"
+                " Answer2"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
-                "TIE",
-                "TIE"
+                "gemini-1.5-flash",
+                "gemini-1.5-flash"
             ]
         }
     ],
@@ -815,7 +815,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -836,7 +836,7 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " 'Answer2'",
+                " Answer2",
                 " Tie",
                 " Answer2"
             ],
@@ -861,14 +861,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
-                " Answer1",
-                " Answer1"
+                " 'Answer1'",
+                " 'Answer1'",
+                " 'Answer1' (The first answer provides a more detailed and accurate explanation of the roles of each player in a soccer team and demonstrates a better understanding of their interactions to form a cohesive team.)"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
                 "gemini-1.5-flash",
-                "gemini-1.5-flash"
+                "Unknown"
             ]
         },
         {
@@ -884,12 +884,12 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " 'Answer2'",
+                " Tie",
                 " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
+                "TIE",
                 "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
@@ -934,12 +934,12 @@
             "result": [
                 " Tie",
                 " Answer2",
-                " Tie"
+                " Answer2"
             ],
             "extracted_answers": [
                 "TIE",
                 "gemini-1.5-flash",
-                "TIE"
+                "gemini-1.5-flash"
             ]
         }
     ],
@@ -957,7 +957,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " 'Answer1'",
                 " 'Answer1'",
                 " Answer1"
             ],
@@ -980,14 +980,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Tie",
                 " 'Answer2'",
-                " Tie"
+                " 'Answer2'",
+                " Answer2"
             ],
             "extracted_answers": [
-                "TIE",
                 "gemini-1.5-flash",
-                "TIE"
+                "gemini-1.5-flash",
+                "gemini-1.5-flash"
             ]
         }
     ],
@@ -1055,7 +1055,7 @@
             "result": [
                 " Answer1",
                 " 'Answer1'",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -1077,12 +1077,12 @@
             },
             "result": [
                 " Answer2",
-                " Answer2",
+                " Tie\n\nBoth Answer1 and Answer2 provide acceptable and understandable explanations for how the principle of supply and demand explains price changes in a marketplace. However, Answer1's language is more colloquial and simplified, which might be more accessible to some readers not familiar with economic terminology. On the other hand, Answer2 uses more formal economic language, presenting a clear and concise explanation of the concept. Ultimately, neither response significantly outperforms the other in terms of quality and accuracy.",
                 " Tie"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
-                "gemini-1.5-flash",
+                "TIE",
                 "TIE"
             ]
         }
@@ -1103,7 +1103,7 @@
             "result": [
                 " 'Answer1'",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -1124,14 +1124,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Answer2",
-                " Answer2",
-                " Answer2"
+                " Tie",
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
-                "gemini-1.5-flash",
-                "gemini-1.5-flash"
+                "TIE",
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -1172,8 +1172,8 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " 'Answer2'",
                 " Answer2",
+                " 'Answer2'",
                 " Answer2"
             ],
             "extracted_answers": [
@@ -1198,13 +1198,13 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " 'Answer1'"
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
-                "gemini-1.5-flash",
-                "gemini-1.5-flash"
+                "TIE",
+                "TIE"
             ]
         },
         {
@@ -1220,12 +1220,12 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Tie",
                 " 'Answer2'",
+                " Answer2",
                 " 'Answer2'"
             ],
             "extracted_answers": [
-                "TIE",
+                "gemini-1.5-flash",
                 "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
@@ -1246,12 +1246,12 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1' This answer provides a more clear, concise, and comprehensive explanation, using more formal and technical terms. It also correctly emphasizes that equilateral triangles are a special case of isosceles triangles. The answer is well-structured and easy to understand. While Answer2 provides correct information, it is less clear, and the structure could be improved. Therefore, Answer1 is the superior response.",
-                " 'Answer1'"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
-                "Unknown",
+                "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
         },
@@ -1269,12 +1269,12 @@
             },
             "result": [
                 " Answer2",
-                " Tie",
+                " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
-                "TIE",
+                "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
         }
@@ -1293,9 +1293,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " Answer1",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -1316,12 +1316,12 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " 'Answer2'",
-                " 'Answer1'",
+                " Answer1",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -1341,7 +1341,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " 'Answer1'",
                 " Answer1",
                 " 'Answer1'"
             ],
@@ -1389,7 +1389,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -1414,7 +1414,7 @@
             "result": [
                 " Answer2",
                 " Answer2",
-                " Answer2"
+                " 'Answer2'"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -1437,7 +1437,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " 'Answer1'",
                 " Answer1",
                 " Answer1"
             ],
@@ -1653,8 +1653,8 @@
             },
             "result": [
                 " Answer2",
-                " Answer2",
-                " 'Answer2'"
+                " 'Answer2'",
+                " Answer2"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -1701,12 +1701,12 @@
             },
             "result": [
                 " Answer2",
-                " Answer2. While both answers provide correct information, Answer2 is more concise, accurate, and uses formal language. It also provides a clearer definition and list of reasons as to why recycling is important.",
-                " 'Answer2'"
+                " 'Answer2'",
+                " Answer2"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
-                "Unknown",
+                "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
         }
@@ -1726,7 +1726,7 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -1748,14 +1748,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
+                " 'Answer2'",
                 " Answer2",
-                " Answer2",
-                " 'Answer2' (The second answer provides a more precise explanation with scientific terms while maintaining the same clarity and concision.)"
+                " Answer2"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
                 "gemini-1.5-flash",
-                "Unknown"
+                "gemini-1.5-flash"
             ]
         }
     ],
@@ -1773,7 +1773,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -1797,7 +1797,7 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -1845,7 +1845,7 @@
             },
             "result": [
                 " Answer2",
-                " Answer2",
+                " 'Answer2'",
                 " Answer2"
             ],
             "extracted_answers": [
@@ -1893,7 +1893,7 @@
             },
             "result": [
                 " Answer2",
-                " Answer2",
+                " 'Answer2'",
                 " Answer2"
             ],
             "extracted_answers": [
@@ -1918,13 +1918,13 @@
             },
             "result": [
                 " Answer1",
-                " Answer1 (The answer is clearer, more concise, and more accurate. It also adheres to the requested standard of using formal language.)",
-                " Answer1"
+                " Answer1",
+                " 'Answer1' (This response is more accurate, clear, and maintains the original tone and structure of the story, while the second response contains several colloquialisms and simplifications that aren't aligned with the original narrative.)"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
-                "Unknown",
-                "gemini-1.5-flash"
+                "gemini-1.5-flash",
+                "Unknown"
             ]
         },
         {
@@ -1966,7 +1966,7 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -1989,13 +1989,13 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
-                " 'Answer1'"
+                " Answer2",
+                " Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
-                "gpt-4.1"
+                "gemini-1.5-flash",
+                "gemini-1.5-flash"
             ]
         }
     ],
@@ -2038,12 +2038,12 @@
             "result": [
                 " Tie",
                 " Tie",
-                " Answer2"
+                " Tie"
             ],
             "extracted_answers": [
                 "TIE",
                 "TIE",
-                "gemini-1.5-flash"
+                "TIE"
             ]
         }
     ],
@@ -2063,7 +2063,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -2084,12 +2084,12 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Answer2",
+                " Tie",
                 " Answer2",
                 " Tie"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
+                "TIE",
                 "gemini-1.5-flash",
                 "TIE"
             ]
@@ -2134,7 +2134,7 @@
             "result": [
                 " Answer2",
                 " Answer2",
-                " 'Answer2'"
+                " Answer2"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -2181,12 +2181,12 @@
             },
             "result": [
                 " Answer2",
-                " Tie. Both answers provide a clear and accurate explanation of what global warming means, however, Answer 2 is more precise with the terminology and slightly more academically formal. The language used in Answer1 is more conversational and easier to understand, which might be preferred in a non-academic setting. However, the accuracy and quality of both responses are similar.",
+                " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
-                "Unknown",
+                "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
         }
@@ -2278,12 +2278,12 @@
             "result": [
                 " Answer2",
                 " Answer2",
-                " Tie"
+                " Answer2"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
                 "gemini-1.5-flash",
-                "TIE"
+                "gemini-1.5-flash"
             ]
         }
     ],
@@ -2301,7 +2301,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -2324,14 +2324,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " 'Answer2'",
-                " 'Answer2'",
-                " Tie\n\nBoth responses demonstrate a clear understanding of the essential components of a recycling campaign, including education, incentives, and environmental awareness. However, the answers display varying levels of conversational language, and one provides more specific details about the practical steps of the campaign. If evaluating solely based on the semantic quality of the answer, it could be argued that neither response is inherently superior. Instead, a 'Tie' is the most appropriate choice in this instance."
+                " Answer2",
+                " Answer2",
+                " 'Answer2'"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
                 "gemini-1.5-flash",
-                "TIE"
+                "gemini-1.5-flash"
             ]
         }
     ],
@@ -2349,12 +2349,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " 'Answer1' The given outline provides a systematic, clear, and cohesive structure for the story, making it easier to follow and engage with. It caters to a broader audience with a universal storytelling format, while 'Answer2' presents the story in a poetic narrative style more suited to a particular literary genre (e.g., folklore or a style similar to a Dr. Seuss book). Although 'Answer2' is engaging and creative, 'Answer1' covers the requirements of outlining a story about a heroic animal more effectively and efficiently.",
                 " 'Answer1'",
-                " 'Answer1'",
-                " 'Answer1'\n\nBoth responses provide a well-structured outline for a story about a heroic animal, but Answer1 offers a more traditional and organized structure which is clearer and easier to follow. Additionally, Answer1 is more general, allowing the story to be adapted to various settings, animals, and narratives, whereas Answer2 is more specific to a certain character (Shadow), setting (a little town), and dialect. For these reasons, I would evaluate Answer1 as the superior response."
+                " Answer1"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
+                "Unknown",
                 "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
@@ -2372,12 +2372,12 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Tie",
                 " Answer1",
-                " 'Answer1'"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -2420,14 +2420,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Answer1",
-                " 'Answer1'",
-                " Tie"
+                " 'Answer2'",
+                " 'Answer2'",
+                " Answer2"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "gpt-4.1",
-                "TIE"
+                "gemini-1.5-flash",
+                "gemini-1.5-flash",
+                "gemini-1.5-flash"
             ]
         }
     ],
@@ -2468,14 +2468,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " 'Answer1'",
-                " 'Answer1'",
-                " Tie"
+                " Answer2",
+                " Tie",
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "gpt-4.1",
-                "TIE"
+                "gemini-1.5-flash",
+                "TIE",
+                "gpt-4.1"
             ]
         }
     ],
@@ -2493,14 +2493,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie. Both Answer1 and Answer2 provide unique and compelling perspectives on composing a poem about friendship, focusing on different aspects and styles. Answer1 offers a more traditional, metaphorical approach, while Answer2 presents a fresh, conversational style that encourages authenticity and personalization. Each response offers valuable insights for someone attempting to write a poem about friendship.",
+                " Answer1",
                 " 'Answer1'",
-                " Answer1"
+                " Tie. Both responses provide meaningful and engaging insights about friendship, but they employ different styles. The first answer is a more traditional, structured poem with rhyming verses and imagery, while the second answer is more informal, conversational, and provides practical advice on composing a friendship poem. Each approach could be effective depending on the desired tone and audience."
             ],
             "extracted_answers": [
-                "Unknown",
                 "gemini-1.5-flash",
-                "gemini-1.5-flash"
+                "gemini-1.5-flash",
+                "Unknown"
             ]
         },
         {
@@ -2516,13 +2516,13 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Tie",
-                " Tie",
+                " Answer1",
+                " Answer1",
                 " Tie"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
+                "gpt-4.1",
+                "gpt-4.1",
                 "TIE"
             ]
         }
@@ -2564,8 +2564,8 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Answer1",
                 " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -2590,7 +2590,7 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -2612,14 +2612,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Answer2",
-                " Answer2",
-                " 'Answer1'"
+                " 'Answer1'",
+                " 'Answer1'",
+                " Answer2"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
-                "gemini-1.5-flash",
-                "gpt-4.1"
+                "gpt-4.1",
+                "gpt-4.1",
+                "gemini-1.5-flash"
             ]
         }
     ],
@@ -2637,7 +2637,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " 'Answer1'",
                 " Answer1",
                 " Answer1"
             ],
@@ -2660,13 +2660,13 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Answer2",
-                " 'Answer1'",
-                " 'Answer2'"
+                " Tie\n\nBoth answers provide a well-balanced approach towards creating nutritious and tasty school canteen menus. While Answer1 offers a more conversational and detailed plan, Answer2 presents a structured and straight-forward daily menu with the necessary components. However, in terms of semantic quality, both answers share a similar level of effectiveness and accuracy in addressing the question.",
+                " 'Answer2'",
+                " Answer2"
             ],
             "extracted_answers": [
+                "TIE",
                 "gemini-1.5-flash",
-                "gpt-4.1",
                 "gemini-1.5-flash"
             ]
         }
@@ -2686,7 +2686,7 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -2708,9 +2708,9 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -2756,12 +2756,12 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Answer1",
+                " Answer2",
                 " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "gemini-1.5-flash",
                 "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
@@ -2781,14 +2781,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " 'Answer1' (The answer provides a more detailed and poetic narrative, using personification and descriptive language to bring the ant's day to life, whereas Answer2, while also detailed, uses more colloquial language and simpler sentence structure.)",
                 " 'Answer1'",
-                " This question seeks a descriptive narrative of a day in the life of an ant. Both responses provide detailed and imaginative descriptions, with vivid language that brings the lives of ants to life. However, Answer1 stands out for its precision and flow in sentence structure, more consistent use of punctuation, and a touch of poetry in its phrasing. It also presents a more masterful integration of scenic elements and the ant's daily tasks, making it more pleasant to read.\n\nTherefore, Answer1 is the superior response."
+                " Answer1"
             ],
             "extracted_answers": [
+                "Unknown",
                 "gemini-1.5-flash",
-                "gemini-1.5-flash",
-                "Unknown"
+                "gemini-1.5-flash"
             ]
         },
         {
@@ -2804,14 +2804,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " 'Answer2'",
-                " 'Answer2'",
-                " 'Answer2' The response provides a clear and detailed narrative that follows a logical progression of an ant's day, using precise and descriptive language, making it easier to visualize and understand the ant's day. However, both responses convey a similar idea and are well-written, making it a close call. Therefore, a tie wouldn't be entirely incorrect either."
+                " Answer1",
+                " Answer2",
+                " Answer2"
             ],
             "extracted_answers": [
+                "gpt-4.1",
                 "gemini-1.5-flash",
-                "gemini-1.5-flash",
-                "Unknown"
+                "gemini-1.5-flash"
             ]
         }
     ],
@@ -2831,7 +2831,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -2852,14 +2852,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Answer1 is more descriptive and easy to understand, using everyday language to explain complex concepts. However, Answer2 is more formal and closer to what a real-world law might look like. Both answers are good but Answer1 is more accessible to the general public, making it more user-friendly.\n\nAnswer1",
+                " Tie",
                 " 'Answer2'",
-                " 'Answer2'"
+                " Tie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "TIE",
                 "gemini-1.5-flash",
-                "gemini-1.5-flash"
+                "TIE"
             ]
         }
     ],
@@ -2877,9 +2877,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -2900,13 +2900,13 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Answer2",
-                " Answer1",
-                " 'Answer1'"
+                " 'Answer1'",
+                " Tie",
+                " Answer1"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
                 "gpt-4.1",
+                "TIE",
                 "gpt-4.1"
             ]
         }
@@ -2927,7 +2927,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -2948,14 +2948,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Tie",
-                " Tie",
-                " 'Answer2' This response presents a clear and concise description of the elements that should be included in a middle school uniform. It also discusses the importance of the uniform being practical, comfortable, and suitable for learning, which is relevant and aligns with the goals of a middle school. The response in Answer1, while providing some relevant details, includes more colloquial language and opinions, which maynot be as suitable for a formal assessment or evaluation. The response in Answer2 more accurately addresses the questions requirements by focusing on the qualities that make a uniform effective and appropriate for middle school students."
+                " Answer2",
+                " Answer1",
+                " Tie"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
-                "Unknown"
+                "gemini-1.5-flash",
+                "gpt-4.1",
+                "TIE"
             ]
         }
     ],
@@ -2973,14 +2973,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " 'Answer2'",
                 " Tie",
-                " 'Answer1'",
-                " Tie"
+                " 'Answer1'"
             ],
             "extracted_answers": [
+                "gpt-4.1",
                 "TIE",
-                "gemini-1.5-flash",
-                "TIE"
+                "gemini-1.5-flash"
             ]
         },
         {
@@ -2996,13 +2996,13 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " 'Answer1'",
-                " Answer1",
+                " Tie",
+                " Tie",
                 " Tie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "gpt-4.1",
+                "TIE",
+                "TIE",
                 "TIE"
             ]
         }
@@ -3022,12 +3022,12 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " 'Answer1'"
+                " Tie",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
-                "gemini-1.5-flash",
+                "TIE",
                 "gemini-1.5-flash"
             ]
         },
@@ -3044,7 +3044,7 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " 'Answer2'",
+                " Answer2",
                 " Answer2",
                 " Answer2"
             ],
@@ -3071,12 +3071,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " Tie"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
                 "gemini-1.5-flash",
-                "gemini-1.5-flash"
+                "TIE"
             ]
         },
         {
@@ -3092,14 +3092,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Tie",
-                " Tie",
-                " Tie"
+                " Answer2",
+                " Answer2",
+                " 'Answer2'"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
-                "TIE"
+                "gemini-1.5-flash",
+                "gemini-1.5-flash",
+                "gemini-1.5-flash"
             ]
         }
     ],
@@ -3117,8 +3117,8 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -3140,12 +3140,12 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
+                " Tie",
                 " Answer2",
-                " Answer2",
-                " 'Answer2'"
+                " Answer2"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
+                "TIE",
                 "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
@@ -3165,12 +3165,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1 (This response is more articulate, cohesive, and thoughtful, providing a detailed plan for spending the doomsday and expressing a poignant sentiment about finding peace and acceptance.)",
+                " 'Answer1'",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "Unknown",
+                "gemini-1.5-flash",
                 "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
@@ -3188,12 +3188,12 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Tie",
+                " 'Answer1'",
                 " Tie",
                 " 'Answer1'"
             ],
             "extracted_answers": [
-                "TIE",
+                "gpt-4.1",
                 "TIE",
                 "gpt-4.1"
             ]
@@ -3213,7 +3213,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -3261,7 +3261,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " 'Answer1'",
                 " 'Answer1'"
             ],
@@ -3284,14 +3284,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Answer1",
                 " 'Answer1'",
-                " Answer1"
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
-                "gpt-4.1"
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -3309,12 +3309,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
+                "gemini-1.5-flash",
                 "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
@@ -3332,9 +3332,9 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
+                " 'Answer2'",
                 " Answer2",
-                " Answer2",
-                " 'Answer2'"
+                " Answer2"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -3357,14 +3357,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1' - This answer provides a more detailed and structured approach to evaluating a singer's performance in a competition. It covers aspects such as vocal technique, musicality, stage presence, interpretation, and technical difficulty, and suggests a balanced scoring system. This response explains each point clearly and concisely, offering a comprehensive evaluation strategy. While Answer2 also offers valuable criteria, it is less structured and more colloquial in its language.",
                 " Answer1",
-                " Answer1"
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
-                "Unknown",
                 "gemini-1.5-flash",
-                "gemini-1.5-flash"
+                "TIE",
+                "TIE"
             ]
         },
         {
@@ -3405,7 +3405,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " 'Answer1'",
                 " Answer1",
                 " Answer1"
             ],
@@ -3429,8 +3429,8 @@
             },
             "result": [
                 " Answer2",
-                " Answer2\n\nOn the question about the importance of recycling on our environment, the response \"Recycling is critically important for environmental protection\" provided a more comprehensive and scientifically accurate explanation. It addressed the benefits of recycling in terms of resource conservation, energy savings, minimizing pollution, and decreasing habitat destruction. This response also discussed the role of recycling in climate change mitigation and sustainability. Furthermore, it acknowledged the variable impact of recycling and the need for improved participation and systems for maximal benefits. In comparison, the first response provided a more colloquial explanation, which while understandable, lacked specificity and detail, especially regarding energy conservation and climate change. As a result, the second answer is deemed superior in quality and accuracy.",
-                " 'Answer2'"
+                " Answer2",
+                " Answer2"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -3453,9 +3453,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
-                " 'Answer1'",
-                " Answer1"
+                " Answer1",
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -3477,7 +3477,7 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -3524,12 +3524,12 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Answer2",
-                " Answer2",
+                " Tie",
+                " 'Answer2'",
                 " Answer2"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
+                "TIE",
                 "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
@@ -3549,13 +3549,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " Answer1 (The first response provides a more detailed and nuanced explanation, citing specific examples and elaborating on the impact of each invention on society and science, as well as mentioning COVID-19 vaccines which are crucial to modern times)",
                 " Answer1"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
-                "Unknown",
+                "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
         },
@@ -3572,14 +3572,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " 'Answer2'",
-                " Tie",
-                " Tie"
+                " Answer2",
+                " Answer2",
+                " Answer1 and Answer2 are both well-reasoned and provide compelling arguments for their choices. Answer1 makes a persuasive case for the internet, transistor, and airplane and explains their significant impact on various aspects of society, such as communication, transportation, and technology.\n\nOn the other hand, Answer2 provides a justification for the transistor, internet, and vaccine and highlights the impact these inventions have had on electronics, global connectedness, and human health. Answer2 offers a more structured ranking and provides a historical context on the specific vaccines mentioned.\n\nUltimately, both responses are of equal quality and provide insightful explanations for why they rank certain inventions as most significant. Therefore, a tie is the most appropriate answer.\n\nIn future evaluations, remember to:\n1. Focus exclusively on the semantic quality of the answers.\n2. Evaluate the quality and accuracy of the answers.\n3. Opt for a tie when responses are of equal quality or when non-semantic factors are inconclusive."
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
-                "TIE",
-                "TIE"
+                "gemini-1.5-flash",
+                "Unknown"
             ]
         }
     ],
@@ -3598,12 +3598,12 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " 'Answer1' The first response provides a more comprehensive, nuanced, and accurate account of the importance of constellations to ancient civilizations. It cites various specific roles played by constellations in agriculture, navigation, religion, mythology, storytelling, and cultural transmission. The response also acknowledges the utility of constellations for early astronomy and mathematics. The use of precise terminology and a clear, organized structure further enhances the quality of this response. In contrast, the second answer is more colloquial and less structured. While it does touch on some of the points made in the first answer, it provides less detail and uses less formal language. Therefore, 'Answer1' is the superior response.",
                 " Answer1"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
-                "gemini-1.5-flash",
+                "Unknown",
                 "gemini-1.5-flash"
             ]
         },
@@ -3647,7 +3647,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " 'Answer1' (The response is more comprehensive and provides a detailed, scientifically accurate explanation of the factors involved in evaluating the health of a forest ecosystem. It also discusses the importance of assessing human impacts and climate change. The language used is clear and easy to understand.)"
+                " 'Answer1' (The response provides a comprehensive, well-organized, and accurate list of factors to consider when evaluating the health of a forest ecosystem. It uses technical terms, explains the importance of each factor, and mentions the impact of human activities and climate change. Overall, this response presents a more academic, detailed, and professional approach.)"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -3669,12 +3669,12 @@
             },
             "result": [
                 " Tie",
-                " 'Answer2'",
+                " Tie",
                 " Tie"
             ],
             "extracted_answers": [
                 "TIE",
-                "gemini-1.5-flash",
+                "TIE",
                 "TIE"
             ]
         }
@@ -3693,12 +3693,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " Answer1 (Quality of the answer is more comprehensive, provides a thorough discussion on multiple key metrics, and offers a balanced assessment of quantitative and qualitative success).",
                 " 'Answer1'",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
+                "Unknown",
                 "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
@@ -3716,13 +3716,13 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " 'Answer2'",
-                " Tie",
+                " Answer2",
+                " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
-                "TIE",
+                "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
         }
@@ -3764,14 +3764,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
+                " Answer1, Answer2, Tie (Both responses provide a well thought out and clear approach to evaluating a short story's moral or lesson. However, Answer2 seems to offer a more structured and precise method for analyzing the story, making it a slightly better answer.)",
                 " Answer2",
-                " Answer2",
-                " Tie"
+                " Answer2"
             ],
             "extracted_answers": [
+                "Unknown",
                 "gemini-1.5-flash",
-                "gemini-1.5-flash",
-                "TIE"
+                "gemini-1.5-flash"
             ]
         }
     ],
@@ -3789,12 +3789,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
-                " Tie\n\nBoth answers provide comprehensive responses that discuss the positive and negative impacts of the Internet on society, albeit with different styles and levels of formality. However, they both overlook or do not dwell sufficiently on some key aspects such as the impact of the Internet on various industries (e.g., healthcare, education, entertainment), its effect on political and social movements, and its role in advancing digital rights and privacy issues. So, while both responses offer thoughtful insights, they could be improved for a more complete evaluation of the impact of the Internet on society.",
+                " Tie. Both responses provide a well-rounded evaluation of the impact of the Internet on society, discussing its positive and negative effects in a comprehensive manner. However, Response 1 is more formal, while Response 2 incorporates colloquial language and expressions, offering a unique perspective that may resonate differently with different audiences. The choice between the two would depend on the context and the intended audience of the evaluation.",
+                " Tie",
                 " Answer1"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
+                "Unknown",
                 "TIE",
                 "gemini-1.5-flash"
             ]
@@ -3812,13 +3812,13 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Answer2",
-                " Tie",
+                " 'Answer2'",
+                " 'Answer2'",
                 " Tie"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
-                "TIE",
+                "gemini-1.5-flash",
                 "TIE"
             ]
         }
@@ -3860,12 +3860,12 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
+                " Tie",
                 " Answer2",
-                " 'Answer2'",
-                " 'Answer2'"
+                " Answer2"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
+                "TIE",
                 "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
@@ -3885,9 +3885,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -3910,7 +3910,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -3956,7 +3956,7 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Answer2",
+                " 'Answer2'",
                 " Answer2",
                 " 'Answer2'"
             ],
@@ -3981,14 +3981,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " Answer1"
+                " Tie",
+                " 'Answer1' The answer provides a detailed, well-structured explanation of the fairness of the rules in the game of chess. It discusses the starting positions, symmetrical piece movement, skill-based outcomes, and rule consistency. While the other answer also discusses fairness, it does so in a more informal, conversational style which may be less suitable for a formal evaluation. Furthermore, the first answer gives a clear argument and backing evidence that contributes to its semantic quality."
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
-                "gemini-1.5-flash",
-                "gemini-1.5-flash"
+                "TIE",
+                "Unknown"
             ]
         },
         {
@@ -4005,8 +4005,8 @@
             },
             "result": [
                 " Answer2",
-                " Answer2",
-                " Answer2"
+                " 'Answer2'",
+                " 'Answer2'"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -4101,12 +4101,12 @@
             },
             "result": [
                 " Answer2",
-                " Tie",
+                " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
-                "TIE",
+                "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
         }
@@ -4127,7 +4127,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -4148,8 +4148,8 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Answer2",
                 " 'Answer2'",
+                " Answer2",
                 " Tie"
             ],
             "extracted_answers": [
@@ -4174,7 +4174,7 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -4221,12 +4221,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " 'Answer1' (The response provides a more comprehensive and clear explanation, utilizing formal language and offering a structured approach to evaluating the success of a community fundraising event, focusing on multiple aspects.)",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
+                "Unknown",
                 "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
@@ -4245,7 +4245,7 @@
             },
             "result": [
                 " Answer2",
-                " 'Answer2'",
+                " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
@@ -4269,7 +4269,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " 'Answer1'",
                 " Answer1",
                 " Answer1"
             ],
@@ -4317,12 +4317,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Tie",
                 " Answer1",
-                " Answer1",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
+                "TIE",
                 "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
@@ -4341,7 +4341,7 @@
             },
             "result": [
                 " Answer2",
-                " Answer2",
+                " 'Answer2'",
                 " Answer2"
             ],
             "extracted_answers": [
@@ -4367,7 +4367,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -4388,7 +4388,7 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Answer2",
+                " 'Answer2'",
                 " Answer2",
                 " Answer2"
             ],
@@ -4436,12 +4436,12 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
+                " Tie",
                 " Answer2",
-                " Answer2",
-                " 'Answer2'"
+                " Answer2"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
+                "TIE",
                 "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
@@ -4510,13 +4510,13 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " 'Answer1'",
+                " Tie"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
                 "gemini-1.5-flash",
-                "gemini-1.5-flash"
+                "TIE"
             ]
         },
         {
@@ -4534,12 +4534,12 @@
             "result": [
                 " Tie",
                 " 'Answer2'",
-                " Tie"
+                " 'Answer2'"
             ],
             "extracted_answers": [
                 "TIE",
                 "gemini-1.5-flash",
-                "TIE"
+                "gemini-1.5-flash"
             ]
         }
     ],
@@ -4580,14 +4580,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Tie",
+                " 'Answer2'",
                 " Answer2",
-                " 'Answer2' - The answer provides a clear, concise and well-structured explanation of how to determine the effectiveness of a charity or nonprofit organization. The response outlines important factors to consider such as transparency, financial accountability, program outcomes, efficiency, and the use of reputable websites like Charity Navigator and GuideStar. The language used is formal and professional, making it easy for the reader to understand and apply the information. In comparison, while the first answer does touch on the same factors, it employs colloquial language and phrases, which can make it difficult for some readers to comprehend and follow. Therefore, the second answer is more superior in terms of providing a high-quality, accurate and easily understandable response."
+                " 'Answer2'"
             ],
             "extracted_answers": [
-                "TIE",
                 "gemini-1.5-flash",
-                "Unknown"
+                "gemini-1.5-flash",
+                "gemini-1.5-flash"
             ]
         }
     ],
@@ -4606,7 +4606,7 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -4676,7 +4676,7 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " 'Answer2'",
+                " Answer2",
                 " Answer2",
                 " Answer2"
             ],
@@ -4703,7 +4703,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -4725,7 +4725,7 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -4772,13 +4772,13 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Answer1, Jupiter the biggest planet in the solar system. It a gas giant, way more than 11 times wider than Earth and got more mass than all the other planets put together, so it the heaviest and biggest planet out here. The answer is clear, concise, and accurate while still providing some additional information about the size and mass of Jupiter compared to the other planets. The language used is easy to understand, making it easy for someone who may not be familiar with planetary terms to understand the answer.\n\nAnswer2, Jupiter is the largest planet in our solar system. Its mass is more than twice the mass of all the other planets combined. It's a gas giant, significantly larger than the terrestrial planets. While this answer is also accurate and informative, it may be considered less engaging and lacks the personal touch of the first answer. Additionally, the lack of specific details about the size of Jupiter when compared to Earth might make it less understandable for someone without prior knowledge of planetary scales.\n\nFor these reasons, I would select Answer1 as the superior answer.",
-                " Answer1 (tie)\nBoth answers are correct and offer information that accurately describes the size and mass of Jupiter as the largest planet in the solar system. They both also mention that it is a gas giant and larger than the terrestrial planets, but the first answer provides a more succinct comparison of Jupiter's size to Earth without going into specific numbers. If the goal was to condense the information into a shorter response, the first answer might be considered superior. However, the second answer more explicitly states the mass and offers a more refined comparison, making it equally valuable. Therefore, a tie is the best choice.",
-                " 'Answer1'"
+                " Answer1",
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
-                "Unknown",
-                "Unknown",
+                "gpt-4.1",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -4820,8 +4820,8 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " 'Answer2'",
                 " Answer2",
+                " 'Answer2'",
                 " Answer2"
             ],
             "extracted_answers": [
@@ -4845,9 +4845,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -4868,12 +4868,12 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Tie",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -4895,7 +4895,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -4916,9 +4916,9 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
+                " Answer1",
                 " 'Answer1'",
-                " 'Answer1'",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -4964,7 +4964,7 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Answer2",
+                " 'Answer2'",
                 " Answer2",
                 " Answer2"
             ],
@@ -5013,7 +5013,7 @@
             },
             "result": [
                 " Answer2",
-                " Answer2",
+                " 'Answer2'",
                 " Answer2"
             ],
             "extracted_answers": [
@@ -5039,12 +5039,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " 'Answer1'"
+                " Tie"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
                 "gemini-1.5-flash",
-                "gemini-1.5-flash"
+                "TIE"
             ]
         },
         {
@@ -5061,8 +5061,8 @@
             },
             "result": [
                 " Answer2",
-                " Answer2",
-                " Answer2"
+                " 'Answer2'",
+                " 'Answer2'"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -5085,7 +5085,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " 'Answer1'",
                 " Answer1",
                 " 'Answer1'"
             ],
@@ -5109,8 +5109,8 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
-                " Answer1"
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -5133,12 +5133,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Leonardo da Vinci painted the Mona Lisa.' Both responses are correct, but Answer1 provides additional information about the artist and the painting style (sfumato) in a more concise manner, making it more effective in answering the question. Therefore, the superior answer is 'Answer1'.",
+                " Tie",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "Unknown",
+                "TIE",
                 "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
@@ -5156,9 +5156,9 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -5182,8 +5182,8 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " 'Answer1'"
+                " 'Answer1'",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -5205,13 +5205,13 @@
             },
             "result": [
                 " Answer1",
-                " Answer1, Answer2 (Tie)",
-                " Answer1, Answer2 is a tie. Both responses provide an accurate answer to the question and convey additional information about the Titanic sinking, albeit with slightly different styles and levels of formality. However, neither has a significant advantage in terms of the quality and accuracy of the answer."
+                " Answer2",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "Unknown",
-                "Unknown"
+                "gemini-1.5-flash",
+                "gpt-4.1"
             ]
         }
     ],
@@ -5252,14 +5252,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
+                " 'Answer1'",
                 " Answer2",
-                " Answer1",
-                " Answer2"
+                " Answer1"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
                 "gpt-4.1",
-                "gemini-1.5-flash"
+                "gemini-1.5-flash",
+                "gpt-4.1"
             ]
         }
     ],
@@ -5300,12 +5300,12 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Answer1",
+                " Answer1, both answers are equally good and accurate. However, depending on the context, there might be a slight preference for Answer2 due to its slightly more formal and concise structure. But the difference is negligible and certainly does not affect the accuracy of the answers. Hence, the tie.",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Unknown",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -5325,12 +5325,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " Tie",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
+                "TIE",
                 "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
@@ -5349,12 +5349,12 @@
             },
             "result": [
                 " Answer2",
-                " Tie",
+                " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
-                "TIE",
+                "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
         }
@@ -5396,14 +5396,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Answer2",
-                " Answer2",
-                " Answer2"
+                " Answer1",
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
-                "gemini-1.5-flash",
-                "gemini-1.5-flash"
+                "gpt-4.1",
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         }
     ],
@@ -5421,12 +5421,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " Tie",
                 " Tie",
                 " Tie"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
+                "TIE",
                 "TIE",
                 "TIE"
             ]
@@ -5444,9 +5444,9 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Answer2",
-                " Answer2",
-                " 'Answer2'"
+                " 'Answer2'",
+                " 'Answer2'",
+                " Answer2"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -5471,7 +5471,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -5492,14 +5492,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
+                " Tie",
                 " Answer2",
-                " Answer2",
-                " Tie"
+                " Answer2"
             ],
             "extracted_answers": [
+                "TIE",
                 "gemini-1.5-flash",
-                "gemini-1.5-flash",
-                "TIE"
+                "gemini-1.5-flash"
             ]
         }
     ],
@@ -5566,7 +5566,7 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -5638,7 +5638,7 @@
             "result": [
                 " Answer2",
                 " Answer2",
-                " Answer2"
+                " 'Answer2'"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -5663,12 +5663,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " Tie"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
                 "gemini-1.5-flash",
-                "gemini-1.5-flash"
+                "TIE"
             ]
         },
         {
@@ -5684,7 +5684,7 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Answer2",
+                " 'Answer2'",
                 " Answer2",
                 " Answer2"
             ],
@@ -5709,12 +5709,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " Tie",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
+                "TIE",
                 "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
@@ -5732,13 +5732,13 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " 'Answer2'",
                 " Tie",
+                " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
                 "TIE",
+                "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
         }
@@ -5757,14 +5757,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
                 " 'Answer1'",
-                " Answer1"
+                " Answer1",
+                " Tie"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
                 "gemini-1.5-flash",
-                "gemini-1.5-flash"
+                "TIE"
             ]
         },
         {
@@ -5780,13 +5780,13 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " 'Answer2'",
-                " 'Answer1'",
+                " 'Answer2' (ASDF) provides a concise and accurate response to the query about the first four letters in the second line of a QWERTY keyboard, from left to right. The answer is presented in a straightforward format and does not contain unnecessary information. Therefore, it is considered the superior answer.",
+                " Answer1 is the superior answer. While both responses correctly identify the first four letters in the second row of a QWERTY keyboard, Answer1 provides a more comprehensive and accurate explanation, including the reasoning behind the positioning of the row in question (often referred to as the \"home row\"). Answer1 also uses more accessible language, making it easier for a wide audience to understand. Therefore, the evaluation would be 'Answer1'.",
                 " Answer1"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
-                "gpt-4.1",
+                "Unknown",
+                "Unknown",
                 "gpt-4.1"
             ]
         }
@@ -5805,12 +5805,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
-                " 'Answer1'",
-                " 'Answer1'"
+                " Answer1",
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
+                "gemini-1.5-flash",
                 "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
@@ -5901,12 +5901,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " 'Answer1' is the superior answer. It articulates a clear and concise process for solving a conflict in a student council using the principles of democracy. The language is formal, equipping the reader with the structures and procedures necessary for a democratic resolution. The answer explains that the process encourages understanding, compromise, fairness, and respect, thus upholding democratic values. The conversational tone in 'Answer2,' while engaging, presents a solution that could be confusing or limited to individuals unfamiliar with the student council context. The answer is entertaining but less detailed and formal than 'Answer1.'",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
+                "Unknown",
                 "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
@@ -5924,14 +5924,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Tie",
-                " 'Answer2'",
-                " Answer2"
+                " Answer2",
+                " 'Answer1'",
+                " Tie"
             ],
             "extracted_answers": [
-                "TIE",
                 "gemini-1.5-flash",
-                "gemini-1.5-flash"
+                "gpt-4.1",
+                "TIE"
             ]
         }
     ],
@@ -5951,7 +5951,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -5974,7 +5974,7 @@
             "result": [
                 " Answer2",
                 " Answer2",
-                " 'Answer2'"
+                " Answer2"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -6020,13 +6020,13 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Tie\n\nBoth answers provide a correct explanation and steps to apply the Pythagorean theorem to find the length of the third side of a triangle, but the style and wording are different. However, neither answer provides a clear advantage over the other in terms of quality or accuracy.",
                 " Answer2",
-                " Answer2"
+                " Answer2 (Tie)\n\nBoth answers provide a comprehensible and substantially similar explanation regarding the use of the Pythagorean theorem in finding the length of a third side of a right-angled triangle. However, answer 1 uses more colloquial language, while answer 2 offers a more formal and structured approach to the problem. Nonetheless, they both provide a suitable explanation for users who might need assistance in solving the problem.",
+                " 'Answer2'"
             ],
             "extracted_answers": [
-                "TIE",
                 "gemini-1.5-flash",
+                "Unknown",
                 "gemini-1.5-flash"
             ]
         }
@@ -6046,13 +6046,13 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " Tie. Both responses illustrate the concept of gravity using a simple experiment effectively. However, Answer1 provides a more detailed scientific explanation, while Answer2 conveys the same information using more colloquial language and including a thought experiment under certain circumstances (vacuum). Both answers present accurate information and are equally engaging."
+                " 'Answer1'",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
                 "gemini-1.5-flash",
-                "Unknown"
+                "gemini-1.5-flash"
             ]
         },
         {
@@ -6068,7 +6068,7 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -6095,12 +6095,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Tie"
+                " Answer1"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
                 "gemini-1.5-flash",
-                "TIE"
+                "gemini-1.5-flash"
             ]
         },
         {
@@ -6116,12 +6116,12 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Answer2",
+                " Tie. Both answers accurately describe the process of converting a fraction to a decimal using long division, but the language and examples provided in Answer1 are slightly more conversational and easy to understand for someone who is not already familiar with the concept, while Answer2 provides a more formal and precise explanation, including the term \"long division\" and the explanation of a repeating decimal. However, the overall quality of the answers is similar and could be improved by providing a more concise and well-organized explanation that is easy to follow.",
                 " 'Answer2'",
                 " Answer2"
             ],
             "extracted_answers": [
-                "gemini-1.5-flash",
+                "Unknown",
                 "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
@@ -6141,7 +6141,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " 'Answer1'",
                 " Answer1",
                 " Answer1"
             ],
@@ -6164,8 +6164,8 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Answer2",
                 " 'Answer2'",
+                " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
@@ -6189,8 +6189,8 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
-                " Answer1",
+                " 'Answer1'",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -6213,7 +6213,7 @@
             },
             "result": [
                 " Answer2",
-                " Answer2",
+                " 'Answer2'",
                 " Answer2"
             ],
             "extracted_answers": [
@@ -6261,7 +6261,7 @@
             },
             "result": [
                 " Answer2",
-                " Answer2",
+                " 'Answer2'",
                 " Answer2"
             ],
             "extracted_answers": [
@@ -6285,12 +6285,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
                 " 'Answer1'",
+                " Answer1",
                 " Tie"
             ],
             "extracted_answers": [
-                "TIE",
+                "gemini-1.5-flash",
                 "gemini-1.5-flash",
                 "TIE"
             ]
@@ -6308,12 +6308,12 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Tie",
-                " Answer2",
+                " 'Answer2'",
+                " 'Answer2'",
                 " 'Answer2'"
             ],
             "extracted_answers": [
-                "TIE",
+                "gemini-1.5-flash",
                 "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
@@ -6334,12 +6334,12 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
-                " Answer1"
+                " Answer1 (The first answer provides a more detailed and comprehensive explanation, discussing various factors like the shape of the kite, the role of angles, the importance of dihedral angle, the placement of the bridle, the use of a long tail for stability, and the choice of lightweight yet strong materials. The second answer, while providing some relevant information, does not discuss these factors as thoroughly and also contains some colloquial language, which may make it less useful for someone looking for a precise explanation.)",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
-                "gemini-1.5-flash",
+                "Unknown",
                 "gemini-1.5-flash"
             ]
         },
@@ -6381,12 +6381,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
+                "gemini-1.5-flash",
                 "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
@@ -6404,12 +6404,12 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Tie",
+                " Answer2",
                 " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
-                "TIE",
+                "gemini-1.5-flash",
                 "gemini-1.5-flash",
                 "gemini-1.5-flash"
             ]
@@ -6478,7 +6478,7 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -6500,14 +6500,14 @@
                 "label": "gemini-1.5-flash"
             },
             "result": [
-                " Answer1",
-                " Answer1",
-                " Answer2"
+                " Tie\nBoth responses provide useful and accurate steps for diagnosing and potentially fixing a broken torch light. Answer1 offers a more colloquial and informal approach that may be easier for some users to understand, while Answer2 adheres to a more formal and informative style, providing additional information about voltage ratings and switch testing.",
+                " 'Answer1'",
+                " Tie"
             ],
             "extracted_answers": [
+                "TIE",
                 "gpt-4.1",
-                "gpt-4.1",
-                "gemini-1.5-flash"
+                "TIE"
             ]
         }
     ],
@@ -6525,9 +6525,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " Answer1",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -6549,13 +6549,13 @@
             },
             "result": [
                 " Answer2",
-                " Answer1 (The answer provided in Answer1 is clear, concise, and easy to understand for a broad audience, while still providing accurate information. It uses a memorable acronym and adjusts the acronym to reflect the alteration in the precedence of multiplication and division. Answer2, while also accurate and informative, is more formal and may not be as easily understood by everyone, particularly those unfamiliar with mathematical terminology. Nevertheless, both answers are good in their own right and could potentially be used for different audiences or purposes, depending on desired style and level of formality.)",
-                " 'Answer2'"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
-                "Unknown",
-                "gemini-1.5-flash"
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         }
     ],
@@ -6573,7 +6573,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " 'Answer1'",
                 " Answer1",
                 " Answer1"
             ],
@@ -6598,7 +6598,7 @@
             "result": [
                 " Answer2",
                 " Answer2",
-                " 'Answer2'"
+                " Answer2"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -6621,8 +6621,8 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -6645,8 +6645,8 @@
             },
             "result": [
                 " Answer2",
-                " Answer2",
-                " 'Answer2'"
+                " 'Answer2'",
+                " Answer2"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -6671,7 +6671,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -6694,12 +6694,12 @@
             "result": [
                 " Answer2",
                 " Answer2",
-                " Tie"
+                " Answer2"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
                 "gemini-1.5-flash",
-                "TIE"
+                "gemini-1.5-flash"
             ]
         }
     ],
@@ -6718,8 +6718,8 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " 'Answer1'",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -6742,7 +6742,7 @@
             "result": [
                 " Answer2",
                 " Answer2",
-                " Tie"
+                " Tie\n\nBoth responses provide detailed plans for a well-balanced meal, focusing on protein, vegetables, grains, and healthy fats. Both stress the importance of maintaining a balanced diet for overall health while offering specific examples of food choices. The informal tone of the first answer makes it engaging and easy to understand for a casual audience, while the second answer offers more scientific language and specific nutritional information, which may be more useful for a nutrition-focused audience. Ultimately, both responses offer credible and helpful advice on meal planning, and the choice between them depends on the intended audience."
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
@@ -6766,7 +6766,7 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -6790,12 +6790,12 @@
             "result": [
                 " Answer2",
                 " Answer2",
-                " Tie"
+                " Answer2"
             ],
             "extracted_answers": [
                 "gemini-1.5-flash",
                 "gemini-1.5-flash",
-                "TIE"
+                "gemini-1.5-flash"
             ]
         }
     ],
@@ -6814,7 +6814,7 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
