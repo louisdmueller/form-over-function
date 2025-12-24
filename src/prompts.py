@@ -98,7 +98,7 @@ extract_reasons_prompt = lambda judge_reasoning, winner, loser: (f"""Analyze thi
         Only include explicitly mentioned qualities. Be specific and concise.""")
 
 cluster_descriptions_prompt = """
-        I have a cluster of descriptions of a model answer: \n[DOCUMENTS]
+        Here is a cluster of descriptions of a model answer: \n[DOCUMENTS]
         The cluster is described by the following keywords: [KEYWORDS]
 
         Based on the above information, can you give one short concise description (1-3 words) that summarizes the main idea of this cluster.
