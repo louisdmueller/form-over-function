@@ -2,11 +2,19 @@ import json
 import logging
 import os
 import re
+import time
 from abc import ABC, abstractmethod
 from pathlib import Path
-from typing import Dict, List
+from typing import Any, Dict, List
+
+import requests
 
 from huggingface_hub import repo_exists
+
+try:  # Optional dependency, required for Gemini batch I/O
+    from google.cloud import storage
+except ImportError:  # pragma: no cover - handled at runtime
+    storage = None
 
 MAX_OUTPUT_TOKENS = 512
 
@@ -14,6 +22,13 @@ try:  # Anthropics SDK is optional for local-only runs
     import anthropic
 except ImportError:  # pragma: no cover - handled at runtime
     anthropic = None
+
+try:  # Gemini SDK might not be installed when only using local models
+    from google import genai
+    from google.genai import types
+except ImportError:  # pragma: no cover - handled at runtime
+    genai = None
+    types = None
 
 logger = logging.getLogger(__name__)
 
@@ -215,6 +230,282 @@ class vLLMModel(Model):
         # outputs = [[output.text for output in generation.outputs] for generation in outputs]
 
         return outputs
+
+class GeminiBatchModel(Model):
+    def __init__(self, model_name_or_path: str, config: dict, tasks: dict):
+        super().__init__(model_name_or_path)
+        if genai is None or types is None:
+            raise ImportError(
+                "Google GenAI SDK is required but not installed. Please `pip install google-genai google-cloud-storage`."
+            )
+        if storage is None:
+            raise ImportError(
+                "google-cloud-storage is required for Gemini batch handling. Please `pip install google-cloud-storage`."
+            )
+
+        self.tasks = tasks
+        self.mode = os.getenv("GEMINI_MODE", "submit").lower()
+        if self.mode not in {"submit", "retrieve"}:
+            raise ValueError("GEMINI_MODE must be either 'submit' or 'retrieve'.")
+
+        self.num_generations = max(1, tasks.get("model_parameters", {}).get("num_generations", 1))
+        self.max_tokens = tasks.get("model_parameters", {}).get(
+            "max_output_tokens", MAX_OUTPUT_TOKENS
+        )
+        self.sampling_parameters = tasks.get("sampling_parameters", {})
+
+        self.project = self._resolve_project_id(config)
+        self.location = self._resolve_location(config)
+        self.input_bucket = self._resolve_bucket(config, "input")
+        self.output_bucket = self._resolve_bucket(config, "output", default=self.input_bucket)
+        self.request_prefix = self._resolve_prefix(config, "requests", default="gemini-batch-requests")
+        self.output_prefix = self._resolve_prefix(config, "output", default="gemini-batch-output")
+        self.max_requests_per_job = int(os.getenv("GEMINI_MAX_REQUESTS_PER_JOB", "150000"))
+
+        self.client = genai.Client(vertexai=True, project=self.project, location=self.location)
+        self.storage_client = storage.Client(project=self.project)
+
+        self.state_path = self._resolve_state_path(config)
+        self.results_path = self._resolve_results_path(config)
+        self.working_dir = self.state_path.parent
+        self.working_dir.mkdir(parents=True, exist_ok=True)
+
+    def generate(
+        self,
+        system_prompts: List[str],
+        input_texts: List[str],
+    ) -> List[List[str]]:
+        if self.mode == "submit":
+            self._submit_batch(system_prompts, input_texts)
+            raise SystemExit(
+                "Gemini batch submitted. Re-run with GEMINI_MODE=retrieve once processing completes."
+            )
+        return self._retrieve_batch()
+
+    def _submit_batch(self, system_prompts: List[str], input_texts: List[str]) -> None:
+        if len(system_prompts) != len(input_texts):
+            raise ValueError("system_prompts and input_texts must have the same length.")
+
+        requests_batch = self._build_requests(system_prompts, input_texts)
+        if not requests_batch:
+            raise ValueError("No requests to submit to Gemini batch API.")
+
+        timestamp = time.strftime("%Y%m%d_%H%M%S")
+        jobs: List[Dict[str, Any]] = []
+        start_index = 0
+
+        for shard_index, shard in enumerate(self._shard_requests(requests_batch)):
+            local_path = self._write_request_file(shard, timestamp, shard_index)
+            gcs_input_uri = self._upload_to_gcs(local_path, self.input_bucket, self.request_prefix)
+            gcs_output_prefix = f"gs://{self.output_bucket}/{self.output_prefix}/batch_{timestamp}_{shard_index}"
+
+            job = self.client.batches.create(
+                model=self.model_name_or_path,
+                src=gcs_input_uri,
+                config=types.CreateBatchJobConfig(dest=gcs_output_prefix),
+            )
+
+            jobs.append(
+                {
+                    "name": job.name,
+                    "src": gcs_input_uri,
+                    "dest": gcs_output_prefix,
+                    "start_index": start_index,
+                    "num_requests": len(shard),
+                }
+            )
+            start_index += len(shard)
+
+        state_payload = {
+            "jobs": jobs,
+            "num_inputs": len(input_texts),
+            "num_generations": self.num_generations,
+            "results_path": str(self.results_path),
+        }
+        self._write_state(state_payload)
+        logger.info("Submitted %d Gemini batch job(s).", len(jobs))
+
+    def _retrieve_batch(self) -> List[List[str]]:
+        state = self._load_state()
+        outputs: List[List[str]] = [[] for _ in range(state["num_inputs"])]
+
+        for job_meta in state["jobs"]:
+            job = self.client.batches.get(name=job_meta["name"])
+            if job.state in {"JOB_STATE_PENDING", "JOB_STATE_QUEUED", "JOB_STATE_RUNNING"}:
+                raise RuntimeError(f"Batch {job_meta['name']} is not ready yet. Current state: {job.state}")
+            if job.state != "JOB_STATE_SUCCEEDED":
+                raise RuntimeError(f"Batch {job_meta['name']} failed with error: {job.error}")
+
+            prediction_files = self._find_prediction_files(job_meta["dest"])
+            if not prediction_files:
+                raise RuntimeError(f"No prediction files found for job {job_meta['name']} at {job_meta['dest']}")
+
+            offset = job_meta["start_index"]
+            for uri in prediction_files:
+                records = self._read_jsonl_from_gcs(uri)
+                for line_idx, record in enumerate(records):
+                    global_index = offset + line_idx
+                    outputs[global_index] = self._extract_candidates(record)
+                offset += len(records)
+
+        self._write_results_file(state["jobs"], outputs)
+        return outputs
+
+    def _build_requests(self, system_prompts: List[str], input_texts: List[str]) -> List[Dict[str, Any]]:
+        requests_batch = []
+        for sys_prompt, input_text in zip(system_prompts, input_texts):
+            request = {
+                "contents": [
+                    {
+                        "role": "user",
+                        "parts": [{"text": input_text}],
+                    }
+                ]
+            }
+            if sys_prompt:
+                request["systemInstruction"] = {"parts": [{"text": sys_prompt}]}
+
+            generation_config = self._build_generation_config()
+            if generation_config:
+                request["generationConfig"] = generation_config
+
+            requests_batch.append({"request": request})
+
+        return requests_batch
+
+    def _build_generation_config(self) -> Dict[str, Any]:
+        config: Dict[str, Any] = {
+            "maxOutputTokens": self.max_tokens,
+            "candidateCount": self.num_generations,
+        }
+
+        temperature = self.sampling_parameters.get("temperature")
+        top_p = self.sampling_parameters.get("top_p")
+        top_k = self.sampling_parameters.get("top_k")
+
+        if temperature is not None:
+            config["temperature"] = temperature
+        if top_p is not None:
+            config["topP"] = top_p
+        if top_k is not None:
+            config["topK"] = top_k
+
+        return {k: v for k, v in config.items() if v is not None}
+
+    def _shard_requests(self, requests_batch: List[Dict[str, Any]]) -> List[List[Dict[str, Any]]]:
+        if self.max_requests_per_job <= 0:
+            return [requests_batch]
+        return [
+            requests_batch[i : i + self.max_requests_per_job]
+            for i in range(0, len(requests_batch), self.max_requests_per_job)
+        ]
+
+    def _write_request_file(self, shard: List[Dict[str, Any]], timestamp: str, shard_index: int) -> Path:
+        filename = f"gemini_batch_{timestamp}_{shard_index}.jsonl"
+        local_path = self.working_dir / filename
+        with local_path.open("w", encoding="utf-8") as file:
+            for record in shard:
+                file.write(json.dumps(record))
+                file.write("\n")
+        return local_path
+
+    def _upload_to_gcs(self, local_path: Path, bucket_name: str, prefix: str) -> str:
+        bucket = self.storage_client.bucket(bucket_name)
+        object_name = f"{prefix.rstrip('/')}/{local_path.name}"
+        blob = bucket.blob(object_name)
+        blob.upload_from_filename(str(local_path))
+        return f"gs://{bucket_name}/{object_name}"
+
+    def _find_prediction_files(self, dest_uri: str) -> List[str]:
+        bucket_name, prefix = self._split_gcs_uri(dest_uri)
+        bucket = self.storage_client.bucket(bucket_name)
+        blobs = bucket.list_blobs(prefix=prefix)
+        return [f"gs://{bucket_name}/{blob.name}" for blob in blobs if blob.name.endswith("predictions.jsonl")]
+
+    def _read_jsonl_from_gcs(self, uri: str) -> List[Dict[str, Any]]:
+        bucket_name, blob_name = self._split_gcs_uri(uri)
+        bucket = self.storage_client.bucket(bucket_name)
+        blob = bucket.blob(blob_name)
+        data = blob.download_as_text(encoding="utf-8")
+        return [json.loads(line) for line in data.splitlines() if line.strip()]
+
+    def _extract_candidates(self, record: Dict[str, Any]) -> List[str]:
+        response = record.get("response") or {}
+        candidates = response.get("candidates") or []
+        outputs: List[str] = []
+        for candidate in candidates:
+            content = candidate.get("content") or {}
+            parts = content.get("parts") or []
+            texts = [part.get("text", "") for part in parts if isinstance(part, dict)]
+            outputs.append("".join(texts).strip())
+        return outputs
+
+    def _write_state(self, payload: Dict[str, Any]) -> None:
+        self.state_path.parent.mkdir(parents=True, exist_ok=True)
+        with self.state_path.open("w", encoding="utf-8") as file:
+            json.dump(payload, file, indent=2)
+
+    def _load_state(self) -> Dict[str, Any]:
+        if not self.state_path.exists():
+            raise FileNotFoundError(
+                f"Gemini batch state file not found at {self.state_path}. Submit a batch first."
+            )
+        with self.state_path.open("r", encoding="utf-8") as file:
+            return json.load(file)
+
+    def _write_results_file(self, jobs: List[Dict[str, Any]], outputs: List[List[str]]) -> None:
+        self.results_path.parent.mkdir(parents=True, exist_ok=True)
+        payload = {"jobs": jobs, "outputs": outputs}
+        with self.results_path.open("w", encoding="utf-8") as file:
+            json.dump(payload, file, indent=2)
+        logger.info("Saved Gemini batch results to %s", self.results_path)
+
+    def _resolve_project_id(self, config: dict) -> str:
+        project = (
+            os.getenv("GEMINI_PROJECT")
+            or config.get("gemini_project_id")
+            or os.getenv("GOOGLE_CLOUD_PROJECT")
+        )
+        if not project:
+            raise ValueError("Gemini batch requires a GCP project ID. Set GEMINI_PROJECT or gemini_project_id in config.")
+        return project
+
+    def _resolve_location(self, config: dict) -> str:
+        return os.getenv("GEMINI_LOCATION") or config.get("gemini_location") or "us-central1"
+
+    def _resolve_bucket(self, config: dict, kind: str, default: str | None = None) -> str:
+        env_key = f"GEMINI_{kind.upper()}_BUCKET"
+        bucket = os.getenv(env_key) or config.get(f"gemini_{kind}_bucket") or default
+        if not bucket:
+            raise ValueError(f"Gemini batch requires a {kind} bucket. Set {env_key} or gemini_{kind}_bucket in config.")
+        return bucket.replace("gs://", "").strip("/")
+
+    def _resolve_prefix(self, config: dict, kind: str, default: str) -> str:
+        env_key = f"GEMINI_{kind.upper()}_PREFIX"
+        return (os.getenv(env_key) or config.get(f"gemini_{kind}_prefix") or default).strip("/")
+
+    def _resolve_state_path(self, config: dict) -> Path:
+        path = os.getenv("GEMINI_BATCH_STATE_PATH") or config.get("gemini_batch_state_path")
+        if not path:
+            path = os.path.join("debug", "gemini_batches", "batch_state.json")
+        state_path = Path(path)
+        state_path.parent.mkdir(parents=True, exist_ok=True)
+        return state_path
+
+    def _resolve_results_path(self, config: dict) -> Path:
+        path = os.getenv("GEMINI_BATCH_RESULTS_PATH") or config.get("gemini_batch_results_path")
+        if not path:
+            path = self._resolve_state_path(config).with_suffix(".results.json")
+        return Path(path)
+
+    def _split_gcs_uri(self, uri: str) -> tuple[str, str]:
+        if not uri.startswith("gs://"):
+            raise ValueError(f"Expected GCS URI, got {uri}")
+        without_scheme = uri[len("gs://") :]
+        parts = without_scheme.split("/", 1)
+        bucket = parts[0]
+        blob = parts[1] if len(parts) > 1 else ""
+        return bucket, blob
 
 
 class AnthropicBatchModel(Model):
@@ -445,6 +736,8 @@ def get_model(model_name_or_path: str, config: dict, tasks: dict) -> Model:
         login(token)
 
         return vLLMModel(model_name_or_path, config, tasks)
+    if "gemini" in model_name_or_path.lower():
+        return GeminiBatchModel(model_name_or_path, config, tasks)
     if os.getenv("ANTHROPIC_API_KEY") or config.get("anthropic_api_key"):
         return AnthropicBatchModel(model_name_or_path, config, tasks)
     raise ValueError(f"Model {model_name_or_path} not supported.")

@@ -287,6 +287,12 @@ def main() -> None:
 
         tasks = mark_variant_as_done(task, base_data_variant, task_filepath)
 
+        if os.getenv("ANTHROPIC_MODE") == "retrieve":
+            logger.info(
+                "ANTHROPIC_MODE is set to 'retrieve'. Stopping after a single task."
+            )
+            break
+
     create_excel_overview(
         judgement_files_directory=judgement_files_directory,
         excel_output_directory=excel_output_directory,
