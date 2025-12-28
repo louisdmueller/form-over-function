@@ -232,7 +232,13 @@ class vLLMModel(Model):
         return outputs
 
 class GeminiBatchModel(Model):
-    def __init__(self, model_name_or_path: str, config: dict, tasks: dict):
+    def __init__(
+        self,
+        model_name_or_path: str,
+        config: dict,
+        tasks: dict,
+        job_id: str | None = None,
+    ):
         super().__init__(model_name_or_path)
         if genai is None or types is None:
             raise ImportError(
@@ -265,8 +271,9 @@ class GeminiBatchModel(Model):
         self.client = genai.Client(vertexai=True, project=self.project, location=self.location)
         self.storage_client = storage.Client(project=self.project)
 
-        self.state_path = self._resolve_state_path(config)
-        self.results_path = self._resolve_results_path(config)
+        self.job_id = job_id or time.strftime("%Y%m%d_%H%M%S")
+        self.state_path = self._resolve_state_path(config, self.job_id)
+        self.results_path = self._resolve_results_path(config, self.job_id)
         self.working_dir = self.state_path.parent
         self.working_dir.mkdir(parents=True, exist_ok=True)
 
@@ -276,10 +283,14 @@ class GeminiBatchModel(Model):
         input_texts: List[str],
     ) -> List[List[str]]:
         if self.mode == "submit":
-            self._submit_batch(system_prompts, input_texts)
-            raise SystemExit(
-                "Gemini batch submitted. Re-run with GEMINI_MODE=retrieve once processing completes."
-            )
+            self.submit_batch(system_prompts, input_texts)
+            return []
+        return self.retrieve_batch()
+
+    def submit_batch(self, system_prompts: List[str], input_texts: List[str]) -> None:
+        self._submit_batch(system_prompts, input_texts)
+
+    def retrieve_batch(self) -> List[List[str]]:
         return self._retrieve_batch()
 
     def _submit_batch(self, system_prompts: List[str], input_texts: List[str]) -> None:
@@ -317,19 +328,26 @@ class GeminiBatchModel(Model):
             start_index += len(shard)
 
         state_payload = {
+            "job_id": self.job_id,
             "jobs": jobs,
             "num_inputs": len(input_texts),
             "num_generations": self.num_generations,
             "results_path": str(self.results_path),
+            "request_id_order": getattr(self, "request_id_order", []),
         }
         self._write_state(state_payload)
         logger.info("Submitted %d Gemini batch job(s).", len(jobs))
 
     def _retrieve_batch(self) -> List[List[str]]:
         state = self._load_state()
+        request_id_order: List[str] = state.get("request_id_order", [])
         outputs: List[List[str]] = [[] for _ in range(state["num_inputs"])]
 
-        for job_meta in state["jobs"]:
+        # If no custom ids are present, fall back to positional mapping with offset
+        use_custom_ids = bool(request_id_order)
+        next_positional_index = 0
+
+        for job_meta in sorted(state["jobs"], key=lambda j: j.get("start_index", 0)):
             job = self.client.batches.get(name=job_meta["name"])
             if job.state in {"JOB_STATE_PENDING", "JOB_STATE_QUEUED", "JOB_STATE_RUNNING"}:
                 raise RuntimeError(f"Batch {job_meta['name']} is not ready yet. Current state: {job.state}")
@@ -340,20 +358,34 @@ class GeminiBatchModel(Model):
             if not prediction_files:
                 raise RuntimeError(f"No prediction files found for job {job_meta['name']} at {job_meta['dest']}")
 
-            offset = job_meta["start_index"]
             for uri in prediction_files:
                 records = self._read_jsonl_from_gcs(uri)
-                for line_idx, record in enumerate(records):
-                    global_index = offset + line_idx
-                    outputs[global_index] = self._extract_candidates(record)
-                offset += len(records)
+                for record in records:
+                    custom_id = (
+                        record.get("customId")
+                        or record.get("custom_id")
+                        or record.get("id")
+                        or record.get("requestId")
+                    )
+                    if use_custom_ids and custom_id in request_id_order:
+                        target_index = request_id_order.index(custom_id)
+                    else:
+                        target_index = next_positional_index
+                        next_positional_index += 1
 
-        self._write_results_file(state["jobs"], outputs)
+                    if target_index >= len(outputs):
+                        raise RuntimeError(
+                            f"Target index {target_index} out of range for outputs of size {len(outputs)}"
+                        )
+                    outputs[target_index] = self._extract_candidates(record)
+
+        self._write_results_file(state.get("jobs", []), outputs)
         return outputs
 
     def _build_requests(self, system_prompts: List[str], input_texts: List[str]) -> List[Dict[str, Any]]:
         requests_batch = []
-        for sys_prompt, input_text in zip(system_prompts, input_texts):
+        self.request_id_order: List[str] = []
+        for idx, (sys_prompt, input_text) in enumerate(zip(system_prompts, input_texts)):
             request = {
                 "contents": [
                     {
@@ -369,7 +401,9 @@ class GeminiBatchModel(Model):
             if generation_config:
                 request["generationConfig"] = generation_config
 
-            requests_batch.append({"request": request})
+            custom_id = f"{self.job_id}-{idx}"
+            self.request_id_order.append(custom_id)
+            requests_batch.append({"customId": custom_id, "request": request})
 
         return requests_batch
 
@@ -419,8 +453,11 @@ class GeminiBatchModel(Model):
     def _find_prediction_files(self, dest_uri: str) -> List[str]:
         bucket_name, prefix = self._split_gcs_uri(dest_uri)
         bucket = self.storage_client.bucket(bucket_name)
-        blobs = bucket.list_blobs(prefix=prefix)
-        return [f"gs://{bucket_name}/{blob.name}" for blob in blobs if blob.name.endswith("predictions.jsonl")]
+        blobs = sorted(
+            (blob for blob in bucket.list_blobs(prefix=prefix) if blob.name.endswith("predictions.jsonl")),
+            key=lambda b: b.name,
+        )
+        return [f"gs://{bucket_name}/{blob.name}" for blob in blobs]
 
     def _read_jsonl_from_gcs(self, uri: str) -> List[Dict[str, Any]]:
         bucket_name, blob_name = self._split_gcs_uri(uri)
@@ -455,7 +492,11 @@ class GeminiBatchModel(Model):
 
     def _write_results_file(self, jobs: List[Dict[str, Any]], outputs: List[List[str]]) -> None:
         self.results_path.parent.mkdir(parents=True, exist_ok=True)
-        payload = {"jobs": jobs, "outputs": outputs}
+        payload = {
+            "jobs": jobs,
+            "outputs": outputs,
+            "request_id_order": getattr(self, "request_id_order", []),
+        }
         with self.results_path.open("w", encoding="utf-8") as file:
             json.dump(payload, file, indent=2)
         logger.info("Saved Gemini batch results to %s", self.results_path)
@@ -484,19 +525,30 @@ class GeminiBatchModel(Model):
         env_key = f"GEMINI_{kind.upper()}_PREFIX"
         return (os.getenv(env_key) or config.get(f"gemini_{kind}_prefix") or default).strip("/")
 
-    def _resolve_state_path(self, config: dict) -> Path:
+    def _resolve_state_path(self, config: dict, job_id: str) -> Path:
         path = os.getenv("GEMINI_BATCH_STATE_PATH") or config.get("gemini_batch_state_path")
         if not path:
-            path = os.path.join("debug", "gemini_batches", "batch_state.json")
-        state_path = Path(path)
+            path = os.path.join("debug", "gemini_batches", f"batch_state_{job_id}.json")
+            state_path = Path(path)
+        else:
+            state_path = Path(path)
+            if state_path.suffix:
+                state_path = state_path.with_name(state_path.stem + f"_{job_id}" + state_path.suffix)
+            else:
+                state_path = state_path / f"batch_state_{job_id}.json"
         state_path.parent.mkdir(parents=True, exist_ok=True)
         return state_path
 
-    def _resolve_results_path(self, config: dict) -> Path:
+    def _resolve_results_path(self, config: dict, job_id: str) -> Path:
         path = os.getenv("GEMINI_BATCH_RESULTS_PATH") or config.get("gemini_batch_results_path")
         if not path:
-            path = self._resolve_state_path(config).with_suffix(".results.json")
-        return Path(path)
+            return self._resolve_state_path(config, job_id).with_suffix(".results.json")
+        results_path = Path(path)
+        if results_path.suffix:
+            results_path = results_path.with_name(results_path.stem + f"_{job_id}" + results_path.suffix)
+        else:
+            results_path = results_path / f"batch_results_{job_id}.json"
+        return results_path
 
     def _split_gcs_uri(self, uri: str) -> tuple[str, str]:
         if not uri.startswith("gs://"):
@@ -509,7 +561,13 @@ class GeminiBatchModel(Model):
 
 
 class AnthropicBatchModel(Model):
-    def __init__(self, model_name_or_path: str, config: dict, tasks: dict):
+    def __init__(
+        self,
+        model_name_or_path: str,
+        config: dict,
+        tasks: dict,
+        job_id: str | None = None,
+    ):
         super().__init__(model_name_or_path)
         if anthropic is None:
             raise ImportError(
@@ -527,8 +585,9 @@ class AnthropicBatchModel(Model):
             "max_output_tokens", MAX_OUTPUT_TOKENS
         )
         self.sampling_parameters = tasks.get("sampling_parameters", {})
-        self.state_path = self._resolve_state_path(config)
-        self.results_path = self._resolve_results_path(config)
+        self.job_id = job_id or time.strftime("%Y%m%d_%H%M%S")
+        self.state_path = self._resolve_state_path(config, self.job_id)
+        self.results_path = self._resolve_results_path(config, self.job_id)
 
     def generate(
         self,
@@ -536,10 +595,14 @@ class AnthropicBatchModel(Model):
         input_texts: List[str],
     ) -> List[List[str]]:
         if self.mode == "submit":
-            self._submit_batch(system_prompts, input_texts)
-            raise SystemExit(
-                "Anthropic batch submitted. Re-run with ANTHROPIC_MODE=retrieve once processing completes."
-            )
+            self.submit_batch(system_prompts, input_texts)
+            return []
+        return self.retrieve_batch()
+
+    def submit_batch(self, system_prompts: List[str], input_texts: List[str]) -> None:
+        self._submit_batch(system_prompts, input_texts)
+
+    def retrieve_batch(self) -> List[List[str]]:
         return self._retrieve_batch()
 
     def format_inputs(
@@ -559,6 +622,7 @@ class AnthropicBatchModel(Model):
 
         batch = self.client.beta.messages.batches.create(requests=requests)
         state_payload = {
+            "job_id": self.job_id,
             "batch_id": batch.id,
             "requests": request_metadata,
             "num_inputs": len(input_texts),
@@ -697,19 +761,30 @@ class AnthropicBatchModel(Model):
             raise ValueError("Anthropic API key missing. Set ANTHROPIC_API_KEY or config['anthropic_api_key'].")
         return api_key
 
-    def _resolve_state_path(self, config: dict) -> Path:
+    def _resolve_state_path(self, config: dict, job_id: str) -> Path:
         path = os.getenv("ANTHROPIC_BATCH_STATE_PATH") or config.get("anthropic_batch_state_path")
         if not path:
-            path = os.path.join("debug", "anthropic_batches", "batch_state.json")
-        state_path = Path(path)
+            path = os.path.join("debug", "anthropic_batches", f"batch_state_{job_id}.json")
+            state_path = Path(path)
+        else:
+            state_path = Path(path)
+            if state_path.suffix:
+                state_path = state_path.with_name(state_path.stem + f"_{job_id}" + state_path.suffix)
+            else:
+                state_path = state_path / f"batch_state_{job_id}.json"
         state_path.parent.mkdir(parents=True, exist_ok=True)
         return state_path
 
-    def _resolve_results_path(self, config: dict) -> Path:
+    def _resolve_results_path(self, config: dict, job_id: str) -> Path:
         path = os.getenv("ANTHROPIC_BATCH_RESULTS_PATH") or config.get("anthropic_batch_results_path")
         if not path:
-            path = self.state_path.with_suffix(".results.json")
-        return Path(path)
+            return self._resolve_state_path(config, job_id).with_suffix(".results.json")
+        results_path = Path(path)
+        if results_path.suffix:
+            results_path = results_path.with_name(results_path.stem + f"_{job_id}" + results_path.suffix)
+        else:
+            results_path = results_path / f"batch_results_{job_id}.json"
+        return results_path
 
     def _extract_text_from_message(self, message: object) -> str:
         content = getattr(message, "content", [])
@@ -722,7 +797,7 @@ class AnthropicBatchModel(Model):
         return combined
 
 
-def get_model(model_name_or_path: str, config: dict, tasks: dict) -> Model:
+def get_model(model_name_or_path: str, config: dict, tasks: dict, job_id: str | None = None) -> Model:
     if repo_exists(
         model_name_or_path, repo_type="model", token=config.get("huggingface_hub_token")
     ):
@@ -737,7 +812,7 @@ def get_model(model_name_or_path: str, config: dict, tasks: dict) -> Model:
 
         return vLLMModel(model_name_or_path, config, tasks)
     if "gemini" in model_name_or_path.lower():
-        return GeminiBatchModel(model_name_or_path, config, tasks)
+        return GeminiBatchModel(model_name_or_path, config, tasks, job_id=job_id)
     if os.getenv("ANTHROPIC_API_KEY") or config.get("anthropic_api_key"):
-        return AnthropicBatchModel(model_name_or_path, config, tasks)
+        return AnthropicBatchModel(model_name_or_path, config, tasks, job_id=job_id)
     raise ValueError(f"Model {model_name_or_path} not supported.")

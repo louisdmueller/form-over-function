@@ -8,12 +8,14 @@ import json
 import logging
 import os
 from dataclasses import dataclass
+from pathlib import Path
 from typing import List, Tuple
 
 # from get_next_task import get_next_valid_task, mark_task
 from get_next_task_new import (
     get_next_meta_task_filepath,
     get_next_not_finished_task_with_base_data_variant,
+    mark_variant_as_submitted,
     mark_variant_as_done,
 )
 from model_new import get_model
@@ -45,6 +47,9 @@ if not logger.handlers:
     logger.addHandler(ch)
 
 logger.debug("Logger initialized.")
+
+BATCH_QUEUE_DIR = Path("debug") / "batch_queue"
+PROCESSED_QUEUE_DIR = BATCH_QUEUE_DIR / "processed"
 
 
 def load_data_lists(data_1_path: str, data_2_path: str) -> Tuple[list, list]:
@@ -188,6 +193,9 @@ def load_tasks_file(tasks_file: str) -> dict:
 def main() -> None:
     args = parse_args()
     config = load_config(args.config_path)
+
+    batch_mode = (os.getenv("ANTHROPIC_MODE") or os.getenv("GEMINI_MODE") or "").lower()
+
     if args.multi_tasks_mode:
         # Instead of providing a single task file we can also provide a file containing all the
         # individual task files to be processed
@@ -205,12 +213,22 @@ def main() -> None:
     excel_output_directory = config["excel_output_directory"]
 
     timeout_handler = TimeBasedTimeoutHandler(threshold=400)
+    produced_outputs = False
+
+    if batch_mode == "retrieve":
+        produced_outputs |= process_batch_queue(config)
+        if produced_outputs:
+            create_excel_overview(
+                judgement_files_directory=judgement_files_directory,
+                excel_output_directory=excel_output_directory,
+            )
+        log_job_info(tasks, config, timeout_handler)
+        return
 
     prompt, prompt_template = get_prompt(
         tasks["prompting_parameters"]["prompt_file"],
         tasks["prompting_parameters"]["prompt_key"],
     )
-    judge_model = get_model(tasks["judge_model_name"], config, tasks)
 
     while not timeout_handler.is_timeout_imminent():
         task = get_next_not_finished_task_with_base_data_variant(tasks)
@@ -218,16 +236,11 @@ def main() -> None:
             logger.info("All tasks are finished. Aborting.")
             break
 
-        # I call it base data since this data does not change throughout the tasks
-        # Its always compared against, doesn't matter in which form (aae, basic, errors)
         base_data_model = tasks["base_data_model"]
-        # Get the base data variant for the current task
         base_data_variant = task["base_data_variant"]
         base_data_filepath = get_file_path(base_data_model, base_data_variant)
         base_data = read_data_file(base_data_filepath)
 
-        # This data is the data that is compared against
-        # Since we only permutate the base data, we always load the unpermutated variant '""' here
         comp_data_model = task["compare_against"]
         comp_data_variant = ""
         comp_data_path = get_file_path(comp_data_model, comp_data_variant)
@@ -251,52 +264,49 @@ def main() -> None:
         input_texts = [item.input_text for item in judgement_inputs]
         system_prompts = [prompt] * len(input_texts)
 
+        job_id = f"{base_data_model}-{base_data_variant}-vs-{comp_data_model}-{int(timeout_handler.get_elapsed_time())}"
+        judge_model = get_model(tasks["judge_model_name"], config, tasks, job_id=job_id)
+
+        if getattr(judge_model, "mode", "") == "submit":
+            persist_queue_entry(
+                job_id=job_id,
+                task=task,
+                tasks_snapshot=tasks,
+                tasks_filepath=task_filepath,
+                base_data_model=base_data_model,
+                base_data_variant=base_data_variant,
+                comp_data_model=comp_data_model,
+                comp_data_path=comp_data_path,
+                base_data_filepath=base_data_filepath,
+                judgement_inputs=judgement_inputs,
+                judge_model_name=tasks["judge_model_name"],
+            )
+            judge_model.submit_batch(system_prompts, input_texts)
+            tasks = mark_variant_as_submitted(task, base_data_variant, task_filepath)
+            continue
+
         judgements = judge_model.generate(system_prompts, input_texts)
         extracted_answers = judge_model.get_response_data(judgements)
 
-        # Process and save results
-        file_content = {}
-        file_content["metadata"] = create_judgement_metadata(
-            tasks, base_data_filepath, comp_data_path
+        persist_and_write_judgements(
+            tasks,
+            base_data_filepath,
+            comp_data_path,
+            judgement_inputs,
+            extracted_answers,
+            judgement_files_directory,
+            base_data_variant,
+            comp_data_model,
         )
-        for i, judgement_input in enumerate(judgement_inputs):
-            if judgement_input.idx not in file_content:
-                file_content[judgement_input.idx] = []
-
-            answer_preferences = extract_answer_labels(
-                extracted_answers, i, judgement_input
-            )
-
-            file_content[judgement_input.idx].append(
-                create_judgement_record(
-                    extracted_answers, i, judgement_input, answer_preferences
-                )
-            )
-        output_filename = "judgements.json"
-        output_dir = get_judgements_path(
-            base_path=judgement_files_directory,
-            base_model=tasks["base_data_model"],
-            base_model_variant=base_data_variant,
-            comp_model=task["compare_against"],
-            judge_model=tasks["judge_model_name"],
-        )
-        output_file_path = os.path.join(output_dir, output_filename)
-        with open(output_file_path, "w") as f:
-            logger.info(f"Saving results to {output_file_path}")
-            f.write(json.dumps(file_content, indent=4))
+        produced_outputs = True
 
         tasks = mark_variant_as_done(task, base_data_variant, task_filepath)
 
-        if os.getenv("ANTHROPIC_MODE") == "retrieve":
-            logger.info(
-                "ANTHROPIC_MODE is set to 'retrieve'. Stopping after a single task."
-            )
-            break
-
-    create_excel_overview(
-        judgement_files_directory=judgement_files_directory,
-        excel_output_directory=excel_output_directory,
-    )
+    if produced_outputs:
+        create_excel_overview(
+            judgement_files_directory=judgement_files_directory,
+            excel_output_directory=excel_output_directory,
+        )
 
     log_job_info(tasks, config, timeout_handler)
 
@@ -367,6 +377,134 @@ def create_judgement_metadata(tasks, base_data_filepath, comp_data_path):
         "vllm_parameters": tasks.get("vllm_parameters", {}),
         "prompting_parameters": tasks.get("prompting_parameters", {}),
     }
+
+
+def persist_queue_entry(
+    *,
+    job_id: str,
+    task: dict,
+    tasks_snapshot: dict,
+    tasks_filepath: str,
+    base_data_model: str,
+    base_data_variant: str,
+    comp_data_model: str,
+    comp_data_path: str,
+    base_data_filepath: str,
+    judgement_inputs: List[JudgementInput],
+    judge_model_name: str,
+) -> None:
+    BATCH_QUEUE_DIR.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "job_id": job_id,
+        "task": task,
+        "tasks_snapshot": tasks_snapshot,
+        "tasks_filepath": tasks_filepath,
+        "base_data_model": base_data_model,
+        "base_data_variant": base_data_variant,
+        "comp_data_model": comp_data_model,
+        "comp_data_path": comp_data_path,
+        "base_data_filepath": base_data_filepath,
+        "judge_model_name": judge_model_name,
+        "judgement_inputs": [ji.__dict__ for ji in judgement_inputs],
+    }
+    queue_file = BATCH_QUEUE_DIR / f"{job_id}.json"
+    with queue_file.open("w", encoding="utf-8") as f:
+        json.dump(payload, f, indent=2)
+    logger.info("Queued batch job %s to %s", job_id, queue_file)
+
+
+def persist_and_write_judgements(
+    tasks: dict,
+    base_data_filepath: str,
+    comp_data_path: str,
+    judgement_inputs: List[JudgementInput],
+    extracted_answers: dict,
+    judgement_files_directory: str,
+    base_data_variant: str,
+    comp_data_model: str,
+) -> None:
+    file_content = {}
+    file_content["metadata"] = create_judgement_metadata(
+        tasks, base_data_filepath, comp_data_path
+    )
+    for i, judgement_input in enumerate(judgement_inputs):
+        if judgement_input.idx not in file_content:
+            file_content[judgement_input.idx] = []
+
+        answer_preferences = extract_answer_labels(
+            extracted_answers, i, judgement_input
+        )
+
+        file_content[judgement_input.idx].append(
+            create_judgement_record(
+                extracted_answers, i, judgement_input, answer_preferences
+            )
+        )
+    output_filename = "judgements.json"
+    output_dir = get_judgements_path(
+        base_path=judgement_files_directory,
+        base_model=tasks["base_data_model"],
+        base_model_variant=base_data_variant,
+        comp_model=comp_data_model,
+        judge_model=tasks["judge_model_name"],
+    )
+    output_file_path = os.path.join(output_dir, output_filename)
+    with open(output_file_path, "w") as f:
+        logger.info(f"Saving results to {output_file_path}")
+        f.write(json.dumps(file_content, indent=4))
+
+
+def process_batch_queue(config: dict) -> bool:
+    if not BATCH_QUEUE_DIR.exists():
+        logger.info("No batch queue directory found at %s", BATCH_QUEUE_DIR)
+        return False
+
+    queue_files = sorted(BATCH_QUEUE_DIR.glob("*.json"))
+    if not queue_files:
+        logger.info("No queued batch jobs found in %s", BATCH_QUEUE_DIR)
+        return False
+
+    PROCESSED_QUEUE_DIR.mkdir(parents=True, exist_ok=True)
+    produced_outputs = False
+
+    for queue_file in queue_files:
+        with queue_file.open("r", encoding="utf-8") as f:
+            entry = json.load(f)
+
+        job_id = entry["job_id"]
+        tasks_snapshot = entry["tasks_snapshot"]
+        task = entry["task"]
+        tasks_filepath = entry["tasks_filepath"]
+        base_data_variant = entry["base_data_variant"]
+        comp_data_model = entry["comp_data_model"]
+
+        judge_model = get_model(
+            entry["judge_model_name"], config, tasks_snapshot, job_id=job_id
+        )
+        outputs = judge_model.retrieve_batch()
+        extracted_answers = judge_model.get_response_data(outputs)
+
+        judgement_inputs = [JudgementInput(**item) for item in entry["judgement_inputs"]]
+
+        persist_and_write_judgements(
+            tasks_snapshot,
+            entry["base_data_filepath"],
+            entry["comp_data_path"],
+            judgement_inputs,
+            extracted_answers,
+            config["judgement_files_directory"],
+            base_data_variant,
+            comp_data_model,
+        )
+
+        mark_variant_as_done(task, base_data_variant, tasks_filepath)
+        produced_outputs = True
+
+        processed_path = PROCESSED_QUEUE_DIR / queue_file.name
+        queue_file.rename(processed_path)
+        logger.info("Processed batch job %s and archived to %s", job_id, processed_path)
+
+    return produced_outputs
 
 
 if __name__ == "__main__":
