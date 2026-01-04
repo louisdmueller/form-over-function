@@ -13,6 +13,7 @@ def load_tasks_file(tasks_file_path: str) -> dict:
 
 def get_next_not_finished_task(tasks) -> dict:
     for task in tasks["tasks"]:
+        task.setdefault("submitted", [])
         if task["status"] == "NOT_FINISHED" and set(task["done"]) != set(
             tasks["base_data_variants"]
         ):
@@ -29,8 +30,9 @@ def is_all_subtasks_finished(tasks) -> bool:
 def get_next_not_finished_task_with_base_data_variant(tasks) -> dict | None:
     task = get_next_not_finished_task(tasks)
     if task:
+        submitted = set(task.get("submitted", []))
         for base_data_variant in tasks["base_data_variants"]:
-            if base_data_variant not in task["done"]:
+            if base_data_variant not in task["done"] and base_data_variant not in submitted:
                 task = {**task, "base_data_variant": base_data_variant}
                 return task
     return None
@@ -51,13 +53,34 @@ def get_next_task_path(tasks: dict, data_dir="data/generated_answers") -> str:
 
 def mark_variant_as_done(task: dict, variant: str, tasks_filepath: str) -> dict:
     tasks = load_tasks_file(tasks_filepath)
-    task.pop("base_data_variant", None)  # Remove base_data_variant key if exists
+    target_compare = task.get("compare_against")
     for t in tasks["tasks"]:
-        if t == task:
+        if t.get("compare_against") != target_compare:
+            continue
+        submitted = set(t.get("submitted", []))
+        if variant in submitted:
+            submitted.discard(variant)
+            t["submitted"] = list(submitted)
+        if variant not in t["done"]:
             t["done"].append(variant)
-            if set(t["done"]) == set(tasks["base_data_variants"]):
-                t["status"] = "COMPLETED"
-            break
+        if set(t["done"]) == set(tasks["base_data_variants"]):
+            t["status"] = "COMPLETED"
+        break
+    with open(tasks_filepath, "w") as file:
+        json.dump(tasks, file, indent=4)
+    return load_tasks_file(tasks_filepath)
+
+
+def mark_variant_as_submitted(task: dict, variant: str, tasks_filepath: str) -> dict:
+    tasks = load_tasks_file(tasks_filepath)
+    target_compare = task.get("compare_against")
+    for t in tasks["tasks"]:
+        t.setdefault("submitted", [])
+        if t.get("compare_against") != target_compare:
+            continue
+        if variant not in t["submitted"] and variant not in t["done"]:
+            t["submitted"].append(variant)
+        break
     with open(tasks_filepath, "w") as file:
         json.dump(tasks, file, indent=4)
     return load_tasks_file(tasks_filepath)

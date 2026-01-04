@@ -45,14 +45,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                "Answer2",
                 "Answer1",
-                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a detailed, structured, and methodical breakdown of the historical analysis process, clearly listing nine steps with specific examples (e.g., Declaration of Independence, journals of the Continental Congress). It emphasizes source evaluation, synthesis, and communication\u2014core components of academic historical analysis. The answer is comprehensive and educational, functioning almost as a step-by-step guide.\n\nAnswer2 is also strong: it applies historical analysis to a clear event (fall of the Berlin Wall), integrates context, causes, outcomes, historiography, and long-term significance\u2014all key elements\u2014in a concise and coherent narrative. It avoids listing steps but still demonstrates the full analytical process fluidly.\n\nBoth answers are accurate, well-structured, and use appropriate examples. Answer1 is more explicit in its methodology, making it slightly more instructive for someone learning the process. Answer2 is more narrative and emphasizes interpretation and significance, which is equally valid.\n\nSince both demonstrate a high-quality understanding of historical analysis, with only a stylistic difference in presentation (list vs. prose) and no factual error in either, they are equally strong.\n\nTie",
-                "Answer1"
+                "Answer2"
             ],
             "extracted_answers": [
+                "gpt-4.1",
                 "Mistral-7B-Instruct-v0.2",
-                "Unknown",
-                "Mistral-7B-Instruct-v0.2"
+                "gpt-4.1"
             ]
         },
         {
@@ -239,7 +239,7 @@
             "result": [
                 "Answer2",
                 "Answer2",
-                "Answer2"
+                "Answer2 is superior.\n\nWhile Answer1 correctly identifies gravity, normal force, and friction, it contains a significant error regarding air resistance: it falsely claims that air resistance \"acts against the car's forward motion\" and that \"the air resistance force is equal in magnitude and opposite in direction to the force applied by the driver or any external force trying to move the car.\" This is incorrect. Air resistance (drag) is a reaction to relative motion between the car and air. When the car is stationary and there is no wind, air resistance is essentially zero. Even with a breeze, air resistance does not \"balance\" the driver's applied force \u2014 static friction does. This misstatement reflects a fundamental misunderstanding of how air resistance functions.\n\nAnswer2 correctly identifies gravity, normal force, and static friction, and accurately states that air resistance is negligible when stationary (without incorrectly attributing a balancing role), and even reasonably includes upthrust (though minor) as a note of completeness. It also correctly summarizes that the forces are balanced \u2014 a crucial insight missing from Answer1\u2019s more mechanical listing.\n\nAnswer2 provides a more accurate, concise, and physically coherent analysis without introducing misconceptions.\n\nAnswer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -260,9 +260,9 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                "Answer1 is superior.\n\nReasoning:\n- Answer1 correctly identifies and clearly explains all major forces acting on a stationary car: gravity, normal force, static friction, and even properly addresses air resistance and upthrust as negligible but present. It accurately states that the forces are balanced, which is essential to explaining why the car remains stationary.\n- It avoids misconceptions: for instance, it does not misapply air resistance as opposing \u201cthe force applied by the driver,\u201d which is a conceptual error in Answer2. Air resistance is a drag force that only arises due to relative motion between the car and air \u2014 when stationary, it\u2019s negligible and not actively opposing an \u201capplied force.\u201d Answer2 incorrectly implies air resistance is acting in dynamic equilibrium with applied forces, which is misleading.\n- Answer2 incorrectly includes \u201crolling friction\u201d as acting on a stationary car \u2014 rolling friction only exists when motion is occurring. That\u2019s a factual error.\n- Answer1 also correctly omits misleading or incorrect physics (like implying air resistance is significant or actively counteracting applied force), and its language is more precise and physically accurate overall.\n\nThus, Answer1 provides a more accurate, nuanced, and correct analysis.\n\nAnswer1",
-                "Answer1 is superior.\n\nIt provides a clear, accurate, and comprehensive analysis of the forces acting on a stationary car, correctly identifying gravitational force, normal force, static friction, and appropriately dismissing air resistance and upthrust as negligible\u2014without misleading the reader by overemphasizing them. The explanation of force balance is precise and aligns with Newton\u2019s first law.\n\nAnswer2 contains a critical error: it misrepresents air resistance. Air resistance (drag) is a force that opposes *relative motion between an object and the air*. When the car is stationary and there\u2019s no wind, air resistance is negligible\u2014not \u201cequal and opposite to the force applied by the driver\u201d \u2014 because no such force is being applied. This misstatement introduces false causality and misunderstands the nature of air resistance. Additionally, it incorrectly includes \u201crolling friction\u201d as acting on a stationary car, which is misleading\u2014rolling friction applies during motion, not when stationary.\n\nAnswer1 avoids such misconceptions and presents a more scientifically accurate and coherent explanation.\n\nAnswer1",
-                "Answer1 is superior.\n\nReasoning:\n- Answer1 provides a clear, accurate, and complete analysis of the forces acting on a stationary car, correctly identifying gravitational force, normal force, static friction, and briefly acknowledging air resistance and upthrust with appropriate context about their relative significance.\n- It correctly emphasizes that all forces are balanced when the car is stationary, leading to no net force and no motion \u2014 a key conceptual point in Newtonian mechanics.\n- The explanation of upthrust, while minor, is included with the proper caveat (\u201cusually insignificant\u201d), showing nuanced understanding.\n- Answer2 contains a significant error: it claims that \u201cair resistance \u2026 is equal in magnitude and opposite in direction to the force applied by the driver or any external force trying to move the car.\u201d This is incorrect. Air resistance does not oppose an *applied force* when the car is stationary \u2014 it only resists motion *through air*, which is negligible in a stationary object. More importantly, air resistance is not a reaction force to the driver\u2019s input; that\u2019s the role of static friction. This mischaracterization reflects a fundamental misunderstanding of how forces interact.\n- Answer2 also incorrectly mentions \u201crolling friction\u201d as acting on a stationary car \u2014 but rolling friction only acts when the wheels are rolling, i.e., during motion. A stationary car experiences only static friction, not rolling friction.\n\nThus, Answer1 is more accurate, coherent, and conceptually sound. Answer2 contains misleading/inaccurate physics that undermines its reliability.\n\nAnswer1"
+                "Answer1 is superior.\n\nReasoning:\n- Answer1 correctly identifies and explains the key forces acting on a stationary car: gravity, normal force, static friction, and acknowledges air resistance and upthrust as negligible but present. It emphasizes that the forces are *balanced*, which is the critical condition for an object to remain stationary (Newton\u2019s First Law), and explicitly ties the balance of forces to the lack of motion \u2014 a core physics principle.\n- It avoids conceptual errors: For instance, Answer2 incorrectly states that air resistance \u201cacts against the car\u2019s forward motion\u201d and implies it is reacting to \u201cthe force applied by the driver or any external force,\u201d which is misleading. When a car is stationary and no external force is applied, air resistance is negligible and not actively opposing a non-existent motion. Air resistance only becomes relevant when there is relative motion between the car and air \u2014 not in true static equilibrium.\n- Answer2 also incorrectly includes \u201crolling friction\u201d as acting on a stationary car. Rolling friction only manifests when the car is rolling \u2014 at rest, only static friction is present. This is a significant factual error.\n- Answer1 is more precise in its terminology, logically structured, and provides a clear, accurate summary consistent with foundational physics.\n\nThus, Answer1 is more accurate, complete, and conceptually sound.\n\nAnswer1",
+                "Answer1 is superior.\n\nReasoning:\n- Answer1 provides a clear, accurate, and complete analysis of the forces acting on a stationary car: gravity, normal force, static friction, and even appropriately addresses air resistance and upthrust with correct nuance (noting their negligible roles). It correctly emphasizes that the net force is zero when stationary, which is central to understanding equilibrium.\n- Answer2 contains a significant error: it claims that air resistance \u201cacts against the car's forward motion\u201d and is \u201cequal in magnitude and opposite in direction to the force applied by the driver or any external force.\u201d This is incorrect. Air resistance does not actively oppose non-existent motion in a stationary object; it is virtually zero when there\u2019s no relative motion between the car and the air. Attributing it a role in balancing applied forces misrepresents the physics \u2014 only static friction opposes applied horizontal forces, not air resistance.\n- Answer2 also incorrectly introduces \u201crolling friction\u201d as acting on a stationary car, which is false \u2014 rolling friction only manifests when there is rolling motion. Static friction is the only relevant friction type here.\n\nAnswer1 avoids these inaccuracies and maintains proper scientific precision throughout.\n\nAnswer1",
+                "Answer1 is superior.\n\nReasoning:\n\n- Answer1 provides a clear, accurate, and well-organized analysis of the forces on a stationary car: gravity, normal force, static friction, and correctly dismisses air resistance and upthrust as negligible (not misleadingly overemphasizing them).\n- It explicitly states that the forces are balanced in a stationary state, which is the key physics principle (Newton\u2019s first law), reinforcing the conceptual understanding.\n- Answer2 contains a significant error: it claims that air resistance \u201cacts against the car's forward motion\u201d and that it is \u201cequal in magnitude and opposite in direction to the force applied by the driver or any external force.\u201d This is incorrect. Air resistance is a drag force that only arises when there is relative motion between the car and the air. When the car is stationary and no external force is applied, air resistance is essentially zero (or negligible). Even if there\u2019s wind, the force isn\u2019t \u201cbalancing\u201d an applied force \u2014 that\u2019s a fundamental misunderstanding of how air resistance works. Also, mentioning \u201crolling friction\u201d in the context of a stationary car is misleading \u2014 rolling friction applies during motion, not when at rest.\n- Answer1 avoids such conceptual errors and is more precise in its use of terminology and physics principles.\n\nThus, Answer1 is more accurate, coherent, and pedagogically sound.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -285,13 +285,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie\n\nTie",
-                "Answer1 and Answer2 are both highly accurate, well-structured, and provide comprehensive explanations of how a character\u2019s actions contribute to the plot. They both correctly emphasize cause-and-effect, conflict, motivation, narrative movement, and thematic development.\n\nAnswer1 is slightly more concise and uses stronger phrasing like \u201cbackbone of a well-crafted plot,\u201d which reinforces the centrality of character actions. It also explicitly mentions the \u201cdynamic interplay\u201d between characters, adding nuance.\n\nAnswer2 includes a concrete example (\u201ca character\u2019s choice to trust someone may result in betrayal\u201d), which enhances clarity and engagement, and it explicitly ties character actions to theme and growth\u2014a subtle but important point.\n\nBoth answers are excellent, but **Answer2** edges ahead slightly by incorporating an illustrative example and explicitly connecting character actions to theme and character development, making its explanation more vivid and holistic.\n\nAnswer2",
-                "Answer1  \nAnswer2  \nTie\n\nTie"
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "Unknown",
-                "gpt-4.1",
+                "Unknown",
                 "Unknown"
             ]
         },
@@ -334,12 +334,12 @@
             },
             "result": [
                 "Answer2",
-                "Answer2",
+                "Answer1  \nAnswer2  \nTie\n\nTie",
                 "Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
+                "Unknown",
                 "gpt-4.1"
             ]
         },
@@ -381,7 +381,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie\n\nBoth answers are accurate, well-structured, and cover the key points about how elements in the Periodic Table relate and differ. They both correctly explain the role of atomic number, groups and periods, valence electrons, and trends like atomic size and ionization energy. They also mention categories of elements (metals, nonmetals, etc.) and link differences in properties to atomic structure.\n\nAnswer1 is slightly more detailed in explaining periodic trends (e.g., ionization energy increasing across a period, atomic size increasing down a group), and it emphasizes the \u201crelationship\u201d through atomic structure more explicitly.  \nAnswer2 is more comprehensive in listing examples of element categories (transition metals, halogens, noble gases) and adds concrete properties like color, density, and melting point, making the \"differences\" section richer.\n\nGiven that both answers are of high quality \u2014 one excels slightly in explaining trends, the other in categorizing differences \u2014 and neither contains inaccuracies or omissions of fundamental concepts, the best judgment is that they are equally strong.\n\nTie",
                 "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie"
             ],
@@ -477,14 +477,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                "Answer1  \nAnswer2  \n\nTie",
                 "Answer2",
-                "Answer2",
-                "Answer1  \nAnswer2  \nTie  \n\nAnswer2  \n\nBoth responses are accurate and well-structured, but Answer2 provides a more comprehensive and nuanced explanation. It explicitly names specific greenhouse gases (methane, nitrous oxide), includes additional human-driven factors like deforestation, urbanization, and industrial/agricultural emissions, and explicitly references the \"overwhelming scientific consensus,\" reinforcing the credibility and context of the conclusion. While Answer1 is clear and correct, Answer2 offers greater depth and detail without sacrificing clarity, making it the superior response in terms of semantic quality and completeness.\n\nAnswer2"
+                "Answer2"
             ],
             "extracted_answers": [
+                "Unknown",
                 "gpt-4.1",
-                "gpt-4.1",
-                "Unknown"
+                "gpt-4.1"
             ]
         },
         {
@@ -596,9 +596,9 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
+                "Answer1 is superior because it provides a clearer, more comprehensive, and accurate explanation of the key components of a complete sentence. It correctly identifies the subject and predicate as the two essential parts, explains their roles with helpful examples, and elaborates on how additional elements (objects, complements, adverbials) can enrich the predicate \u2014 all without overcomplicating the definition. It also correctly notes the importance of capitalization and end punctuation, which, while mechanical, are part of standard sentence structure conventions.\n\nAnswer2 introduces an unnecessary and misleading refinement by requiring \"a verb in its finite form\" as a separate component. In fact, the verb is part of the predicate \u2014 not a third independent component. This creates conceptual confusion. Furthermore, the statement that \"the verb usually appears at the end of the predicate\" is often incorrect (e.g., in \"She is running,\" the verb is at the beginning of the predicate). The description of sentence structure is less precise and risks misinforming the learner.\n\nAnswer1\u2019s explanation is more pedagogically sound, accurate, and aligned with standard grammatical teaching.\n\nAnswer1",
                 "Answer1",
-                "Answer1",
-                "Answer1 is superior.\n\nWhile both answers correctly identify the subject and predicate as essential components of a complete sentence, Answer1 provides a more comprehensive, accurate, and nuanced explanation. It correctly states that the predicate *contains* the verb and often includes additional elements like objects or complements, which aligns with standard grammatical definitions. It also correctly notes capitalization and punctuation conventions, adding practical context without overcomplicating the core concept.\n\nAnswer2 introduces a problematic claim: that a complete sentence requires \u201ca verb in its finite form\u201d as a separate component alongside subject and predicate. This misrepresents grammar \u2014 the verb is a part of the predicate, not a distinct third component. Furthermore, the statement that \u201cthe verb usually appears at the end of the predicate\u201d is inaccurate in English; in most declarative sentences, the verb comes early in the predicate (e.g., \u201cThe cat chased the mouse\u201d \u2014 \u201cchased\u201d is the first word of the predicate). This creates confusion rather than clarity.\n\nAnswer1 avoids these inaccuracies and explains the subject-predicate relationship more clearly and contextually.\n\nAnswer1"
+                "Answer1\n\nAnswer1 provides a clearer, more comprehensive, and accurate explanation of the key components of a complete sentence. It correctly identifies the subject and predicate as the two essential elements, explains their roles with illustrative examples, and appropriately notes that punctuation (capitalization and end marks) is a conventional feature\u2014not a structural component\u2014of a complete sentence. It also correctly includes the idea that predicates may contain objects, complements, or adverbials to complete meaning, which reflects real syntactic complexity.\n\nAnswer2 errs slightly by treating \u201ca verb in its finite form\u201d as a third distinct component, which is misleading. The verb is part of the predicate, not separate from it. This misrepresents standard grammatical analysis: the predicate includes the verb and everything that modifies or completes it. Furthermore, Answer2 incorrectly states that \u201cthe verb usually appears at the end of the predicate,\u201d which is not generally true in English (e.g., \u201cShe sings beautifully\u201d \u2014 the verb \u201csings\u201d is not at the end). This factual inaccuracy reduces its reliability.\n\nAnswer1 is more precise, pedagogically sound, and free of misleading claims. It better serves the question\u2019s intent.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -622,7 +622,7 @@
             },
             "result": [
                 "Answer2",
-                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie\n\nAnswer2",
                 "Answer2"
             ],
             "extracted_answers": [
@@ -1006,12 +1006,12 @@
             },
             "result": [
                 "Answer1  \nAnswer2  \nTie",
-                "Answer2",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a clear, concrete example with specific numerical values (2 parts flour, 1 part sugar, 1.5 parts water) to illustrate how ratios function in a recipe. It explicitly connects ratios to portion scaling, showing how multiplying portions maintains the original ratio \u2014 making the concept tangible and practical. It also emphasizes why ratios matter for consistency, which directly answers the question.\n\nAnswer2 is also accurate and well-structured. It distinguishes portions (servings) from ratios (ingredient proportions) clearly and correctly states that ratios must remain constant when scaling. The bread example (3:1 flour-to-water) reinforces the point. However, it doesn't offer as detailed an illustration of how the ratio translates into actual measurements or how scaling works step-by-step.\n\nWhile both answers are strong and correct, Answer1\u2019s use of a multi-ingredient example and explicit demonstration of scaling makes it slightly more pedagogically effective. It doesn\u2019t just describe the relationship \u2014 it shows it.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "Unknown",
-                "gpt-4.1",
+                "Unknown",
                 "Unknown"
             ]
         },
@@ -1198,13 +1198,13 @@
             },
             "result": [
                 "Answer1",
-                "Answer1",
-                "Answer1"
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1 and Answer2 are both well-reasoned, accurate, and comprehensive in addressing the root causes of racism and strategies to deal with it. They overlap significantly in content \u2014 both identify prejudice, ignorance, historical factors, and systemic issues as roots; both advocate for education, empathy, challenging stereotypes, and institutional reform.\n\nHowever, **Answer1** provides a slightly more structured and explicit list of actionable steps (e.g., \u201chold individuals accountable,\u201d \u201cfoster inclusive environments\u201d), making its practical guidance marginally clearer. **Answer2** is equally strong but worded more fluidly, with an emphasis on personal reflection and societal change without as much explicit enumeration.\n\nIn terms of **semantic quality** \u2014 clarity, depth, accuracy, and completeness \u2014 both are excellent. Neither contains inaccuracies, both are thoughtful and nuanced. The difference is minimal and stylistic.\n\nTherefore, the best judgment is:\n\n**Tie**"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2"
+                "Unknown",
+                "TIE"
             ]
         },
         {
@@ -1364,12 +1364,12 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                "Answer1 and Answer2 are both factually accurate and provide concise, clear descriptions of the Civil War. Both correctly identify the time frame, the sides involved (Union vs. Confederacy), the central role of slavery and states\u2019 rights, and the outcomes: abolition of slavery and preservation of the Union.\n\nThe only notable difference is that **Answer2** includes the additional detail about the death toll (over 600,000 soldiers and civilians), which adds context about the war\u2019s human cost \u2014 a significant historical point not mentioned in Answer1. However, this detail, while valuable, is not essential to the *core description* of what the Civil War was about.\n\nSince the question specifically asks for a *brief description of what the Civil War was about*, both answers fulfill that requirement equally well. The inclusion of casualty numbers in Answer2 is informative but slightly beyond the scope of the core question \u2014 which focuses on the *cause and nature* of the conflict, not its consequences in terms of mortality.\n\nThus, **semantically**, both are of equal quality in addressing the question asked.\n\n**Tie**",
-                "Answer1  \nAnswer2  \nTie\n\nTie",
-                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a clear, well-structured overview of the Civil War, identifying the Union and Confederacy, explaining the core issues (slavery and states\u2019 rights), and summarizing the outcome with precision. It correctly notes that the South sought to maintain slavery and viewed federal interference as a rights violation, while the North opposed slavery\u2019s expansion.\n\nAnswer2 also accurately summarizes the conflict, mentioning the timeframe, the central issue of slavery and states\u2019 rights, secession, and the outcomes. It adds the valuable detail about the death toll (over 600,000), which enhances contextual understanding but isn\u2019t essential to answering the core question about \u201cwhat the Civil War was about.\u201d\n\nBoth answers are factually correct and semantically strong. Answer1 slightly edges out in clarity and flow in explaining the motivations of both sides. Answer2 adds a meaningful statistic, but the question asks for a description of \u201cwhat it was about,\u201d not its human cost.\n\nThat said, the addition of casualty figures in Answer2 does not detract from accuracy or relevance\u2014it enhances historical context within the scope of a brief description. Neither response contains an error or omission that undermines its quality.\n\nTherefore, both are excellent. The differences are subtle and stylistic.\n\nTie"
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie  \n\nTie",
+                "Answer1  \nAnswer2  \nTie\n\nTie"
             ],
             "extracted_answers": [
-                "TIE",
+                "Unknown",
                 "Unknown",
                 "Unknown"
             ]
@@ -1437,12 +1437,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie\n\nTie",
+                "Answer1 and Answer2 are both accurate and clearly explain the cause of the seasons due to the Earth\u2019s 23.5-degree axial tilt and how it affects sunlight distribution throughout the year. Both mention the hemispheric contrast (Northern vs. Southern Hemisphere) and link the tilt to changes in sunlight angle, temperature, and daylight.\n\nThe only minor difference is that Answer1 includes the phrase \u201cas the Earth rotates and the tilted axis moves towards and away from the Sun,\u201d which is slightly misleading \u2014 it\u2019s the Earth\u2019s *revolution* (orbit), not its *rotation* (daily spin), that causes seasonal changes. This is a small but notable scientific inaccuracy.\n\nAnswer2 avoids this error and presents the explanation more precisely: \u201cas the Earth orbits the sun during the year,\u201d correctly identifying orbital motion as the key factor.\n\nAdditionally, Answer2 is slightly more concise and flows better without losing any key information.\n\nTherefore, Answer2 is superior in accuracy and clarity.\n\nAnswer2",
                 "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
-                "Unknown",
+                "gpt-4.1",
                 "Unknown",
                 "Unknown"
             ]
@@ -1604,14 +1604,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                "Answer1 is superior because it provides a more comprehensive and accessible explanation of gravity. It not only mentions the basic definition and the dependence on mass and distance, but also gives everyday examples (objects falling to the ground) and explicitly notes that gravity is one of the fundamental forces of nature \u2014 adding context that helps a beginner understand its broader significance. While Answer2 is accurate and includes Newton\u2019s law, it is slightly more technical and assumes prior familiarity with terms like \u201cpoint mass\u201d and \u201cuniversal gravitation,\u201d which may be less helpful to someone seeking a clear, intuitive explanation. Answer1 strikes a better balance between accuracy, clarity, and educational value.\n\nAnswer1",
+                "Answer1",
                 "Answer2",
-                "Answer2"
+                "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2"
+                "gpt-4.1"
             ]
         }
     ],
@@ -1678,12 +1678,12 @@
             },
             "result": [
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1 and Answer2 are both accurate, clear, and comprehensive in explaining what recycling means and why it is important. They cover the core ideas: converting waste into new products, conserving resources, saving energy, reducing landfill use, and mitigating pollution and environmental harm.\n\nAnswer1 is slightly more formal and includes the specific point about reducing greenhouse gas emissions, which adds a nuanced environmental benefit. Answer2 is more accessible and ends with a motivational note about individual action and future generations, which enhances its communicative impact.\n\nHowever, in terms of **semantic quality** \u2014 meaning accuracy, depth, completeness, and clarity \u2014 both answers are nearly equivalent. Neither contains factual errors, and both convey the same essential information with slightly different phrasing and emphasis.\n\nGiven that the semantic content is equally strong and neither has a decisive advantage in accuracy or completeness, the most fair evaluation is:\n\n**Tie**",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "Unknown",
-                "TIE",
+                "Unknown",
                 "Unknown"
             ]
         },
@@ -1700,14 +1700,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
+                "Tie",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1",
-                "Answer1  \nAnswer2  \nTie"
+                "Tie"
             ],
             "extracted_answers": [
+                "TIE",
                 "Unknown",
-                "gpt-4.1",
-                "Unknown"
+                "TIE"
             ]
         }
     ],
@@ -1725,7 +1725,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1 is more accurate and comprehensive. While Answer2 correctly identifies the general idea that Earth\u2019s orbit is ~365.25 days and that an extra day is added every four years, it oversimplifies the rule and misses the critical exceptions (divisible by 100 but not by 400). Answer1 correctly presents the full Gregorian calendar leap year rule, which is necessary to maintain long-term synchronization with the solar year (365.2425 days), not just 365.25. This precision is essential for understanding why leap years are structured the way they are.\n\nAnswer1 provides a technically superior explanation.\n\nAnswer1",
+                "Answer1 provides a more accurate and complete explanation by including the full leap year rule \u2014 divisible by 4, but not by 100 unless also divisible by 400 \u2014 which reflects the actual Gregorian calendar system. It also correctly states the precise length of the tropical year (365.2425 days), which is essential for understanding why the more complex rule exists beyond just adding a day every four years.\n\nAnswer2 simplifies the explanation by using 365.25 days (which is close but not exact) and omits the century and 400-year exceptions. While it conveys the basic idea correctly, it is scientifically incomplete and could lead to misconceptions (e.g., assuming 2100 is a leap year, when it is not).\n\nTherefore, Answer1 is superior in terms of semantic quality, accuracy, and depth.\n\nAnswer1",
                 "Answer1",
                 "Answer1"
             ],
@@ -1748,12 +1748,12 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                "Answer1 provides a clear, concise, and accessible explanation of why leap years exist, focusing on the core reason: the Earth\u2019s orbital period of ~365.25 days and the need to correct for the fractional day by adding an extra day every four years. It emphasizes the *purpose* of leap years \u2014 keeping calendar seasons aligned \u2014 in a way that is easy to understand.\n\nAnswer2, while technically accurate about the *rules* for determining leap years (divisible by 4, not by 100 unless by 400), focuses more on the algorithm than the *reason* behind the need for leap years. It mentions the orbital period (365.2425 days) but doesn\u2019t clearly explain *why* that number necessitates the complex rule \u2014 it assumes prior knowledge. The question asks \u201cwhy we experience a leap year,\u201d which is fundamentally about the *cause*, not the *calculation*.\n\nAnswer1 directly and effectively answers the \u201cwhy\u201d with better pedagogical clarity.\n\nAnswer1",
+                "Answer2",
                 "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
@@ -1796,14 +1796,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                "Answer1 and Answer2 are both highly accurate and clearly explain the food chain, covering key components: producers, consumers (with appropriate terminology), decomposers, energy transfer, trophic levels, and nutrient cycling. \n\nAnswer1 uses slightly more accessible language and adds a concise phrasing about \"the balance in nature,\" which adds contextual value. Answer2 is more precise in distinguishing primary, secondary, and tertiary consumers, using more technical terminology correctly.\n\nBoth are semantically strong. Answer2 provides a slightly more structured and scientifically precise breakdown of consumer levels, while Answer1 offers a touch of ecological context. Neither contains errors. \n\nGiven the high quality of both and the minimal difference in semantic depth\u2014where Answer2 edges slightly ahead in precision without losing clarity\u2014the better answer is:\n\n**Answer2**",
                 "Answer2",
-                "Answer2"
+                "Answer2",
+                "Answer1 and Answer2 are both accurate and clearly explain the food chain, including the roles of producers, consumers, and decomposers, as well as the loss of energy between trophic levels. \n\nAnswer1 uses slightly more conversational language and emphasizes the \"cycle of life and death\" and the ecological balance, which adds a helpful contextual layer. Answer2 is more structured and precise in its terminology (e.g., \u201cprimary,\u201d \u201csecondary,\u201d \u201ctertiary\u201d consumers), which enhances scientific rigor.\n\nBoth answers are semantically equivalent in accuracy and completeness. Neither contains errors or omissions. The difference lies only in stylistic preference \u2014 one is more narrative, the other more technical.\n\nTherefore, since quality is identical in content and accuracy, the choice is a tie.\n\nTie"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2"
+                "TIE"
             ]
         }
     ],
@@ -1893,13 +1893,13 @@
             },
             "result": [
                 "Answer1  \nAnswer2  \nTie",
-                "Answer2",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1 and Answer2 are both accurate and well-explained. They correctly describe the physics of rainbow formation: refraction, internal reflection, and dispersion of sunlight by raindrops. Both mention the role of raindrops as prisms, the splitting of white light into colors, and the circular arc appearance.\n\nHowever, **Answer1** provides a slightly more complete step-by-step description of the process (light enters, reflects inside, exits), and adds context about optimal viewing conditions (sun low in the sky, lingering raindrops), which enhances understanding. **Answer2** is also strong and mentions the color order (red outer, violet inner), which is a nice detail.\n\nStill, the additional contextual detail in Answer1 \u2014 about *when* and *how* the conditions are met for visibility \u2014 gives it a slight edge in clarity and completeness without sacrificing conciseness.\n\n**Answer1**"
             ],
             "extracted_answers": [
                 "Unknown",
-                "Mistral-7B-Instruct-v0.2",
-                "Unknown"
+                "Unknown",
+                "gpt-4.1"
             ]
         }
     ],
@@ -1988,9 +1988,9 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                "Answer1",
-                "Answer1 is superior because it provides a more accurate and nuanced explanation of evaporation. It correctly states that evaporation occurs at the surface of a liquid due to molecules gaining enough kinetic energy to escape as vapor \u2014 not necessarily at the boiling point, which is a misconception in Answer2. Answer2 incorrectly equates evaporation with boiling by saying it occurs \u201cwhen the temperature or heat of a liquid reaches its boiling point,\u201d which is factually wrong: evaporation happens below the boiling point.\n\nAdditionally, Answer1 offers a richer set of daily life examples (wet clothes drying, puddles disappearing, sweating, water in a bowl) and clarifies the cooling effect of sweat, enhancing practical understanding. Answer2\u2019s examples are correct but less detailed and lack the explanatory depth.\n\nThus, Answer1 demonstrates greater scientific accuracy and educational value.\n\nAnswer1",
-                "Answer1"
+                "Answer1 is superior.\n\nReasoning: Answer1 provides a more accurate and nuanced explanation of evaporation. It correctly identifies evaporation as a surface phenomenon that occurs at temperatures below the boiling point due to molecular energy differences, not requiring the liquid to reach its boiling point. This is a critical distinction that Answer2 misses by implying evaporation happens \"when the temperature reaches its boiling point,\" which conflates evaporation with boiling \u2014 two distinct processes. Additionally, Answer1 offers a richer set of relatable, everyday examples (wet clothes drying, puddles disappearing, sweating, water in a bowl) and includes more precise scientific context, enhancing both clarity and educational value.\n\nAnswer2 is partially correct but contains a significant scientific inaccuracy that undermines its reliability.\n\nAnswer1",
+                "Answer1 is superior.\n\nIt provides a more accurate and nuanced explanation of evaporation, correctly emphasizing that evaporation occurs at the surface of a liquid and does not require the liquid to reach its boiling point \u2014 a critical distinction that Answer2 incorrectly implies by saying \"when the temperature or heat of a liquid reaches its boiling point.\" This conflates evaporation with boiling, which are distinct processes.\n\nAdditionally, Answer1 offers a broader, more diverse set of everyday examples (wet clothes drying, puddles disappearing, sweating, water in a bowl, spilled alcohol), enhancing clarity and real-world relevance. It also explains the mechanism (molecules gaining energy to break free), which adds depth and educational value.\n\nAnswer2, while not entirely wrong, contains a significant scientific inaccuracy and is less comprehensive.\n\nAnswer1",
+                "Answer1 is superior because it provides a more accurate and nuanced explanation of evaporation. It correctly states that evaporation occurs at the surface of a liquid due to molecules gaining enough energy to escape as vapor \u2014 without incorrectly limiting it to the boiling point, as Answer2 does. Answer2 incorrectly implies that evaporation only happens at or near the boiling point, which is a misconception; evaporation occurs at any temperature below boiling. Additionally, Answer1 offers richer, more varied real-life examples (wet clothes, puddles, sweating, spilled alcohol, water in a bowl) and even explains the physiological benefit of sweating, enhancing understanding. Answer2 is correct in essence but contains a significant scientific error and is less comprehensive.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -2084,9 +2084,9 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                "Answer1 is superior because it provides more accurate and detailed information. Specifically, it correctly notes that Uranus and Neptune are \"ice giants\" (not simply gas giants), distinguishes the surface characteristics (solid vs. no true solid surface), and mentions planetary rings \u2014 details that enhance clarity. Additionally, it correctly states that inner planets have \"few or no moons,\" which is true (Mercury and Venus have none, Earth has one, Mars has two), whereas Answer2 incorrectly claims inner planets \"do not have significant atmospheres,\" which is false \u2014 Venus and Earth have very significant atmospheres (Venus\u2019s is extremely thick), and even Mercury has a trace exosphere. Answer2\u2019s inaccuracy about atmospheres undermines its reliability.\n\nAnswer1 avoids misleading generalizations and gives a more nuanced, scientifically accurate description.\n\nAnswer1",
-                "Answer1",
-                "Answer1\n\nAnswer1 provides a more accurate and detailed explanation. It correctly identifies the inner planets as Mercury, Venus, Earth, and Mars, and the outer planets as Jupiter, Saturn, Uranus, and Neptune. It also accurately distinguishes between gas giants and ice giants (noting that Uranus and Neptune are ice giants), mentions the presence of rings and moons, and correctly states that inner planets have solid surfaces while outer planets lack a true solid surface.\n\nAnswer2 contains several inaccuracies. Most notably, it claims that inner planets \u201cdo not have significant atmospheres,\u201d which is false\u2014Venus has an extremely thick and dense atmosphere, Earth has a substantial atmosphere, and even Mars has a thin but detectable atmosphere. Additionally, it oversimplifies the outer planets as just \u201cgaseous or icy,\u201d without correctly categorizing Uranus and Neptune as ice giants, and fails to mention the key structural distinction about solid surfaces.\n\nThe accuracy, clarity, and completeness of Answer1 make it superior.\n\nAnswer1"
+                "Answer1\n\nAnswer1 provides a more accurate and detailed explanation. It correctly identifies the inner planets as Mercury, Venus, Earth, and Mars, and the outer planets as Jupiter, Saturn, Uranus, and Neptune, with appropriate subgrouping (gas giants and ice giants). It also properly notes that inner planets have solid surfaces and few or no moons, while outer planets have many moons and ring systems \u2014 all scientifically accurate.\n\nAnswer2 contains a significant inaccuracy: it claims that inner planets \u201cdo not have significant atmospheres.\u201d This is false \u2014 Venus has an extremely thick and dense atmosphere, Earth has a substantial one, and Mars has a thin but measurable one. Only Mercury has a negligible atmosphere. Therefore, the blanket statement in Answer2 misrepresents the facts.\n\nAdditionally, Answer1 correctly notes that outer planets lack a true solid surface \u2014 an important distinction \u2014 while Answer2 oversimplifies by just saying \u201cgaseous or icy compositions\u201d without clarifying the implications.\n\nBecause Answer1 is more precise, nuanced, and factually correct, it is the superior response.\n\nAnswer1",
+                "Answer1\n\nAnswer1 provides a more accurate and comprehensive explanation. It correctly identifies the inner planets as Mercury, Venus, Earth, and Mars, and the outer planets as Jupiter, Saturn, Uranus, and Neptune, with appropriate sub-classifications (gas giants and ice giants). It also accurately describes key characteristics such as solid surfaces for inner planets, lack of solid surfaces for outer planets, presence of moons and rings, and distances from the Sun.\n\nAnswer2 contains a significant error: it claims that \u201cInner planets do not have significant atmospheres.\u201d This is false \u2014 Venus has an extremely thick and dense atmosphere, Earth has a substantial atmosphere, and Mars has a thin but measurable one. Even Mercury has an exosphere. This major inaccuracy undermines the reliability of Answer2.\n\nAnswer1 correctly avoids this error and provides a more nuanced, precise, and scientifically sound explanation.\n\nAnswer1",
+                "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -2133,8 +2133,8 @@
             },
             "result": [
                 "Answer1",
-                "Answer1\n\nAnswer1 provides a faithful, accurate, and well-structured summary of \"Harry Potter and the Philosopher\u2019s Stone.\" It correctly identifies key plot points: Harry\u2019s discovery of his wizarding heritage, his friendships with Ron and Hermione, the true threat being Voldemort (not Snape), and the collaborative effort to protect the Stone. It also rightly notes that Voldemort is seeking immortality and that Harry\u2019s actions prevent his return \u2014 all aligned with the original book.\n\nAnswer2 contains several serious inaccuracies: Snape does not steal the Stone nor is he the primary antagonist; he is trying to protect it. The Stone is not stolen from Snape\u2019s classroom but is protected by a series of magical challenges. Harry does not confront Snape directly in the final scene \u2014 he faces Quirrell, who is possessed by Voldemort. Also, Dumbledore\u2019s life is never in danger from the Stone\u2019s loss, and the Stone is destroyed to prevent Voldemort from using it \u2014 not to \u201csave Dumbledore\u2019s life.\u201d These errors fundamentally misrepresent the plot.\n\nTherefore, Answer1 is clearly superior in terms of semantic accuracy and quality.\n\nAnswer1",
-                "Answer1"
+                "Answer1\n\nAnswer1 provides a concise, accurate, and faithful summary of the plot of *Harry Potter and the Philosopher\u2019s Stone*. It correctly identifies key elements: Harry\u2019s discovery of his wizarding heritage, his attendance at Hogwarts, his friendship with Ron and Hermione, the true threat being Voldemort (not Snape), and the protection of the Philosopher\u2019s Stone to prevent Voldemort\u2019s return. It also accurately reflects the themes of courage, teamwork, and self-discovery.\n\nAnswer2 contains several factual errors:  \n- Professor Snape does **not** steal the Stone or intend to use it for evil \u2014 he is actually protecting it on Dumbledore\u2019s orders.  \n- The real antagonist attempting to obtain the Stone is Voldemort, who is possessing Quirrell, not Snape.  \n- Harry does not \u201cdestroy the Stone\u201d \u2014 it is removed and destroyed by Dumbledore after the events to prevent future misuse.  \n- Dumbledore is not in danger of dying, nor does the Stone \u201csave his life.\u201d  \n- The climax involves Harry confronting Quirrell, not Snape.\n\nThese inaccuracies significantly undermine the reliability of Answer2, even though it attempts to follow a narrative structure.\n\nThus, Answer1 is clearly superior in accuracy and semantic quality.\n\nAnswer1",
+                "Answer1 is superior.\n\nIt accurately summarizes the key plot points of *Harry Potter and the Philosopher\u2019s Stone*: Harry\u2019s discovery of his wizarding heritage, his friendships with Ron and Hermione, the protective enchantments around the Philosopher\u2019s Stone, and the fact that Voldemort is the true antagonist seeking to use the Stone for immortality. It correctly portrays the team effort in overcoming the challenges and emphasizes Harry\u2019s emotional journey.\n\nAnswer2 contains multiple factual errors: Snape does not steal the Stone nor is he the one attempting to use it for evil\u2014he is actually trying to protect it. The climax does not involve Harry confronting Snape in his classroom, nor does Harry destroy the Stone to \u201csave Dumbledore\u2019s life\u201d (Dumbledore is not in danger in that way). Also, the Stone is not \u201cthe Elixir of Life\u201d\u2014it *produces* the Elixir. The ending misrepresents Voldemort\u2019s goals and Harry\u2019s role in the resolution.\n\nAnswer1 is factually accurate, coherent, and faithful to the source material.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -2254,12 +2254,12 @@
             },
             "result": [
                 "Answer2",
-                "Answer2",
+                "Tie",
                 "Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1"
             ]
         },
@@ -2301,13 +2301,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1 provides a more comprehensive, structured, and detailed plan with eight distinct, actionable components that cover a wide range of engagement strategies\u2014from physical infrastructure (bins) to community involvement (parents, local authorities) and digital outreach (social media). It also emphasizes consistency through \u201cregular reminders\u201d and institutional collaboration, suggesting a well-thought-out, scalable, and sustainable campaign.\n\nAnswer2 is also strong and well-organized, with a clear narrative flow and focus on student-led initiative (eco-club), engagement through competitions, and transparency via monthly updates. However, it is slightly less detailed and omits key elements such as involving parents, leveraging social media, or formal collaboration with external waste management entities\u2014elements that can significantly amplify the campaign\u2019s reach and impact.\n\nWhile both answers are high-quality, Answer1\u2019s broader scope and inclusion of more strategic, external, and sustaining elements make it superior in terms of depth, thoroughness, and potential long-term effectiveness.\n\nAnswer1",
-                "Answer2",
-                "Answer1 provides a more comprehensive, structured, and detailed plan with eight distinct, well-articulated components that cover all key aspects of a successful recycling campaign: visual awareness (posters), infrastructure (bins), engagement (competitions), education (workshops), community involvement (parents), logistical support (local authorities), digital outreach (social media), and behavioral reinforcement (reminders). Each point is clear, actionable, and demonstrates a broad understanding of campaign design across multiple stakeholder levels.\n\nAnswer2 is also strong and well-written, with a cohesive narrative and practical ideas. It emphasizes teamwork, engagement, and sustainability, and includes effective elements like an eco-club, expert talks, and monthly progress tracking. However, it lacks the depth and breadth of Answer1 \u2014 notably missing explicit mention of social media, parental involvement, collaboration with local waste management, and the institutionalization of reminders as a sustained practice.\n\nAnswer1\u2019s approach is more systematic and likely more effective in achieving long-term behavioral change due to its multi-channel, multi-stakeholder strategy.\n\n**Answer1**"
+                "Answer1 provides a more comprehensive, structured, and detailed plan with eight distinct, actionable strategies that cover multiple facets of a school-wide campaign: physical infrastructure (bins), education (workshops), incentives (competitions), community engagement (parents, local authorities), and digital outreach (social media). The inclusion of collaboration with local authorities and consistent reminders adds depth and sustainability to the campaign that Answer2 lacks.\n\nAnswer2 is also strong\u2014it\u2019s concise, practical, and emphasizes student-led initiative (eco-club), which is valuable. However, it omits key elements like parent involvement, direct partnership with recycling centers, and the use of social media, which are critical for expanding impact beyond the school campus and ensuring long-term behavioral change.\n\nAnswer1\u2019s broader scope and inclusion of systemic and community-level strategies make it a more thorough and effective design.\n\nAnswer1",
+                "Answer1 provides a more comprehensive, structured, and detailed plan with eight distinct, well thought-out components that cover multiple angles of engagement \u2014 from physical infrastructure (bins), educational outreach (workshops), community involvement (parents, local authorities), to digital engagement (social media) and behavioral reinforcement (reminders). Each point is clear, actionable, and shows an understanding of systemic change.\n\nAnswer2 is also strong and well-written, with a cohesive narrative and practical ideas like forming an eco-club, weekly announcements, and monthly progress updates. However, it is less exhaustive \u2014 it misses key elements like involving parents, collaborating with external organizations, and leveraging social media, which are important for scalable, long-term impact.\n\nAnswer1 demonstrates deeper strategic thinking and a more robust campaign design.\n\nAnswer1",
+                "Answer1 provides a more comprehensive, structured, and detailed plan that covers a wider range of actionable strategies \u2014 including parent involvement, collaboration with local authorities, and social media outreach \u2014 which are critical for sustaining long-term community engagement. It also explicitly mentions regular reminders and education as key components, reinforcing behavioral change.\n\nAnswer2 is well-organized and concise, with strong elements like forming an eco-club, weekly announcements, and monthly recycling updates. However, it lacks some broader outreach components (e.g., engaging parents beyond implication, partnering with external organizations, or leveraging digital platforms beyond a vague mention of \u201csharing updates\u201d). Its scope is narrower and slightly more informal.\n\nWhile both answers are good, Answer1 demonstrates deeper planning, greater scalability, and a more holistic approach to institutional change, making it superior in terms of quality and thoroughness.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "gpt-4.1",
+                "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
         },
@@ -2516,9 +2516,9 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
+                "Answer1 is superior because it provides a clear, practical, and insightful guide on how to compose a poem about friendship. It outlines actionable steps\u2014choosing themes, tone, structure, imagery, and revision techniques\u2014while emphasizing sincerity and personal voice, which are essential to authentic poetry. It also includes a helpful structural outline, making it instructive and educational.\n\nAnswer2, while poetically lush and aesthetically pleasing, does not answer the question of *how to compose* a poem about friendship. It is itself a poem, not guidance on composition. The question asks for instruction, not an example.\n\nThus, Answer1 better fulfills the user\u2019s request.\n\nAnswer1",
                 "Answer1",
-                "Answer1",
-                "Answer1"
+                "Answer1 is superior because it provides a thoughtful, structured, and practical guide on how to compose a poem about friendship. It outlines clear steps\u2014reflecting on personal experience, selecting themes and tone, choosing a structure, using imagery, and revising for flow\u2014making it deeply useful for someone seeking to write poetry. It also includes a helpful conceptual outline and emphasizes sincerity, which is essential in poetic expression.\n\nAnswer2, while poetically well-crafted and emotionally evocative, is itself a poem\u2014not an answer to the question of *how* to compose one. It demonstrates skill but does not instruct. Since the question asks for guidance on composition, not an example, Answer2 fails to fulfill the request directly.\n\nThe quality of Answer1 lies in its pedagogical value, clarity, and relevance to the query.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -2996,9 +2996,9 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                "Answer1 is a complete, emotionally resonant, and well-crafted set of lyrics with a clear narrative arc\u2014building from personal struggle to triumph, using vivid imagery and consistent meter. It has a strong refrain-like structure, coherent themes of resilience, and a satisfying conclusion that ties back to the central idea of overcoming challenges.\n\nAnswer2, while initially promising, is abruptly cut off mid-chorus and lacks closure. The content is thematically aligned, but the incompleteness undermines its effectiveness as a final product. Additionally, the shift from singular (\u201cI\u201d) to plural (\u201cwe\u201d) mid-lyric creates tonal inconsistency without clear justification.\n\nSemantic quality\u2014coherence, completion, emotional impact, and craftsmanship\u2014clearly favors Answer1.\n\nAnswer1",
-                "Answer1 is superior. It presents a complete, cohesive, and emotionally resonant set of lyrics with consistent imagery, strong rhythm, and a satisfying arc\u2014from struggle to triumph. The language is poetic yet accessible, and the structure (verses with a clear progression and a resolved ending) creates a full artistic statement. \n\nAnswer2, while containing good lines and energy, is incomplete (the chorus cuts off mid-sentence) and feels less polished in its phrasing and rhythm. It also shifts to a collective \u201cwe\u201d without establishing a clear narrative perspective, making it feel slightly less personal and impactful compared to Answer1\u2019s first-person journey.\n\nThe completeness, emotional depth, and lyrical craftsmanship of Answer1 make it the stronger response.\n\nAnswer1",
-                "Answer1 is superior because it presents a complete, cohesive, and emotionally resonant lyric with consistent imagery, strong rhythmic flow, and a satisfying arc\u2014from struggle to triumph. The language is vivid and poetic without being overly verbose, and the final stanza provides a powerful closure that reinforces the theme of overcoming challenges.\n\nAnswer2, while showing promise, is cut off mid-chorus (\u201cThrough the struggle,\u201d), making it incomplete and structurally unsound. Even if the intent was to continue, the lack of full composition diminishes its effectiveness as a finished piece. It also relies more heavily on clich\u00e9s (\u201crise above,\u201d \u201cseize the day\u201d) without the same level of original imagery or emotional depth as Answer1.\n\nSemantic quality\u2014the depth, coherence, and artistic merit of the message\u2014clearly favors Answer1.\n\nAnswer1"
+                "Answer1",
+                "Answer1\n\nAnswer1 delivers a complete, cohesive, and emotionally resonant set of lyrics with consistent imagery, strong rhythm, and a clear arc of triumph over adversity. It uses vivid metaphors (\u201csky turns gray,\u201d \u201cmountain\u2019s tall,\u201d \u201cstorms may rage\u201d), maintains a steady rhyme scheme, and concludes with a powerful, uplifting resolution that ties back to the theme of personal growth and resilience.\n\nAnswer2, while containing good elements, is incomplete\u2014the second chorus is cut off mid-line (\u201cThrough the struggle,\u201d), which significantly undermines its impact and polish. Additionally, its language is slightly more generic (\u201cwe\u2019ll rise above,\u201d \u201cseize the day\u201d) and less distinctive in imagery compared to Answer1\u2019s more personal and evocative phrasing (\u201cLights a fire in my heart,\u201d \u201chope as my flame and courage my guide\u201d).\n\nThe completeness, lyrical craftsmanship, and emotional depth of Answer1 make it clearly superior.\n\nAnswer1",
+                "Answer1 is a complete, cohesive, and emotionally resonant set of lyrics with a clear narrative arc\u2014beginning with struggle, moving through resilience, and concluding with triumph and self-belief. The imagery is vivid (\"sky turns gray,\" \"fire in my heart,\" \"walk through the shadows and into the dawn\"), the rhythm flows naturally, and the rhyme scheme is consistent throughout. It feels polished and self-contained.\n\nAnswer2, while containing strong lines and good energy, is cut off mid-chorus (\u201cThrough the struggle,\u201d), making it incomplete and unfinished. It also shifts to a more collective \u201cwe\u201d perspective, which dilutes the personal, introspective tone that often makes overcoming-challenges lyrics more powerful. The incompleteness significantly undermines its impact and quality.\n\nThe completeness, emotional depth, and poetic cohesion of Answer1 make it clearly superior.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -3477,13 +3477,13 @@
             },
             "result": [
                 "Answer1",
-                "Answer1",
-                "Answer2"
+                "Answer2",
+                "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
-                "Mistral-7B-Instruct-v0.2"
+                "Mistral-7B-Instruct-v0.2",
+                "gpt-4.1"
             ]
         }
     ],
@@ -3647,7 +3647,7 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1"
+                "Both Answer1 and Answer2 provide comprehensive, accurate, and well-structured evaluations of the factors involved in assessing forest ecosystem health. \n\nAnswer1 is more systematic, listing nine distinct, clearly defined factors with specific examples (e.g., \u201cdiameter, height, and crown condition\u201d for tree health; \u201csoil nutrient levels, structure, and moisture content\u201d for soil health). This makes it more detailed and technically robust, suitable for a scientific or professional context.\n\nAnswer2 is also accurate and covers many of the same key points\u2014biodiversity, soil, water, invasive species, regeneration, human impact, carbon storage, habitat connectivity, and indicator species\u2014but presents them in a more flowing, prose-style format without bullet points. While it lacks the structured granularity of Answer1, it still captures all essential dimensions and even adds valuable nuances like microbial diversity and air quality.\n\nThe key difference lies in **depth and organization**. Answer1 provides a more thorough, actionable framework, making it superior for practical application or detailed analysis.\n\n**Answer1**"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
@@ -3694,12 +3694,12 @@
             },
             "result": [
                 "Answer2",
-                "Answer1 and Answer2 are both highly comprehensive and accurate in outlining the standards for evaluating a social media campaign. They cover overlapping KPIs such as reach, engagement, conversion rate, ROI, sentiment analysis, and follower growth, with strong alignment in content and depth.\n\nHowever, **Answer1** is slightly more structured and itemized, making it easier to digest and reference. It explicitly lists 10 distinct KPIs with clear definitions (e.g., distinguishing \u201cReach\u201d from \u201cTraffic\u201d and \u201cLead Generation\u201d from \u201cCustomer Engagement\u201d), which enhances precision and practical utility. While Answer2 is also thorough, it groups some concepts more broadly and redundantly (e.g., mentioning \u201cengagement metrics\u201d and then listing likes/shares/comments again later), and lacks the same clear separation of individual metrics.\n\nAnswer1\u2019s organized, checklist-style format makes it more actionable for practitioners, while maintaining full semantic accuracy.\n\n**Answer1**",
+                "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "Mistral-7B-Instruct-v0.2",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         },
@@ -3909,7 +3909,7 @@
             },
             "result": [
                 "Answer1",
-                "Answer1",
+                "Answer1\n\nAnswer1 provides a more comprehensive, accurate, and nuanced explanation of camel adaptations. It correctly clarifies that the hump stores fat (not water), which is a common misconception that Answer2 incorrectly states. Answer1 also includes additional relevant adaptations\u2014such as closable nostrils, small ears, long eyelashes, tolerance for wide body temperature fluctuations, and the ability to eat tough vegetation\u2014that enhance the argument for why camels are best suited for desert survival. It also contextualizes these traits in terms of survival outcomes (e.g., enduring sandstorms, traveling long distances), making the argument more persuasive and scientifically robust.\n\nAnswer2, while mostly correct, contains a factual error (stating that water is stored in the hump), and lacks the depth and breadth of details found in Answer1. This reduces its accuracy and overall quality.\n\nThus, Answer1 is superior in semantic quality, accuracy, and completeness.\n\nAnswer1",
                 "Answer1"
             ],
             "extracted_answers": [
@@ -3933,12 +3933,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie",
+                "Answer2",
                 "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
-                "Unknown",
+                "gpt-4.1",
                 "Unknown",
                 "Unknown"
             ]
@@ -4052,14 +4052,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
+                "Answer1",
                 "Answer2",
-                "Answer1 and Answer2 both provide comprehensive, accurate, and well-structured criteria for judging website quality. They cover the same core areas: usability, content, design, functionality, loading speed, mobile responsiveness, accessibility, SEO, and security.\n\nThe main difference is stylistic: Answer1 is written in flowing prose, while Answer2 uses a numbered list format. Both are semantically equivalent in terms of depth and correctness. However, Answer2 includes one additional point\u2014**social media integration**\u2014which, while not universally considered a core quality criterion (as it\u2019s more of a strategic feature than a fundamental measure of quality), still adds contextual value for modern websites.\n\nThat said, social media integration is not essential to judging the *intrinsic quality* of a website; a site can be high-quality without it. Answer1 avoids this potentially peripheral point and instead emphasizes *user feedback or testimonials* and *security features* in slightly more detail, giving it a marginal edge in practical relevance.\n\nStill, this is a very close call. The additional point in Answer2 is not incorrect, and the structured format may enhance clarity. Since the question asks for *quality of the answer*\u2014and both are technically accurate, comprehensive, and well-organized\u2014and the only difference is stylistic and one potentially optional criterion, **a tie is justified**.\n\nTie",
-                "Answer2"
+                "Answer1"
             ],
             "extracted_answers": [
+                "gpt-4.1",
                 "Mistral-7B-Instruct-v0.2",
-                "TIE",
-                "Mistral-7B-Instruct-v0.2"
+                "gpt-4.1"
             ]
         }
     ],
@@ -4125,7 +4125,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1 provides a more comprehensive, detailed, and clearly structured explanation of how algebra is relevant in daily life. It lists seven specific, concrete examples with real-world applications (budgeting, cooking, banking, engineering, technology, personal finance, science), each tied directly to algebraic concepts. The answer also emphasizes the broader cognitive benefits (logical reasoning, problem-solving) and concludes with a strong synthesis.\n\nAnswer2 is accurate and concise, but it is more general and less specific. While it mentions similar applications (budgeting, interest rates, cooking), it doesn\u2019t elaborate as deeply or provide as many distinct examples. It also slightly downplays the direct applicability by suggesting \u201cadvanced algebraic concepts may not appear daily,\u201d which, while true, risks minimizing algebra\u2019s practical role.\n\nAnswer1\u2019s depth, organization, and clarity make it superior in terms of semantic quality \u2014 it better fulfills the request to \u201cevaluate the relevance\u201d with richer, more compelling evidence.\n\nAnswer1",
+                "Answer1",
                 "Answer1",
                 "Answer1"
             ],
@@ -4148,13 +4148,13 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
+                "Answer1 and Answer2 are both strong responses that accurately convey the relevance of learning algebra in daily life. They overlap significantly in content\u2014both mention budgeting, finance, cooking, and problem-solving\u2014and both emphasize the transferable cognitive benefits of algebra.\n\nHowever, **Answer1** has a slight edge in **semantic quality** because it:\n\n- Provides more nuanced integration of ideas (e.g., \u201cmental discipline and analytical mindset\u201d as lifelong skills),\n- Uses more natural, flowing language that connects concepts holistically,\n- Acknowledges the nuanced point that while advanced algebra may not be used daily, the *thinking skills* are,\n- Avoids the list format that can feel mechanical (even though Answer2's list is accurate, it lacks the synthetic depth of Answer1).\n\nAnswer2 is thorough and well-organized, but its bullet-point style gives it a more textbook or checklist feel, reducing rhetorical cohesion. Answer1 reads more like a thoughtful, coherent argument\u2014better suited for explaining *why* algebra matters beyond rote application.\n\n**Answer1** is superior in semantic depth, fluency, and conceptual integration.\n\nAnswer1",
                 "Answer1",
-                "Answer1  \nAnswer2  \nTie\n\nAnswer1 and Answer2 are both strong, well-reasoned responses that accurately convey the relevance of algebra in daily life. They overlap significantly in content\u2014both mention budgeting, finance, cooking, and professional applications\u2014and both emphasize the development of logical thinking and problem-solving skills. \n\nHowever, Answer1 has a slight edge in **semantic quality** because it more effectively synthesizes the ideas into a cohesive narrative, avoids the robotic list format of Answer2, and adds nuanced examples (like home improvement and \"mental discipline\") that feel more grounded in lived experience. It also more explicitly addresses the point that while advanced algebra may not be used daily, the foundational thinking it cultivates is lifelong and transferable\u2014a subtle but important distinction.\n\nAnswer2 is thorough and well-structured, but its bullet-point format, while clear, makes it feel slightly mechanical and less fluent as a natural explanation.\n\nThus, Answer1 demonstrates superior semantic flow, depth of insight, and integration of ideas.\n\nAnswer1",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "Unknown",
+                "gpt-4.1",
                 "Unknown"
             ]
         }
@@ -4244,13 +4244,13 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                "Both Answer1 and Answer2 provide thorough, well-structured, and accurate assessments of how to judge the success of a community fundraising event. They overlap significantly in key metrics: funds raised, attendance, awareness, volunteer engagement, cost-effectiveness, and donor retention.\n\nHowever, **Answer2** has a slight edge in clarity and organization. It presents the criteria in a clear, numbered list, making it easier to digest and reference. Each point is concise yet comprehensive, and it includes a critical metric\u2014cost-effectiveness\u2014that is sometimes overlooked but vital for evaluating true efficiency. Additionally, it explicitly mentions *donor retention* and *participation rate*, adding nuance that enhances the practicality of the assessment.\n\nAnswer1 is also excellent and slightly more narrative in flow, but it lacks the structured format that makes Answer2 more immediately useful for someone needing to evaluate an event systematically.\n\nThus, Answer2 is superior in terms of clarity, organization, and practical utility.\n\nAnswer2",
                 "Answer2",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer2"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
+                "Unknown",
                 "Mistral-7B-Instruct-v0.2"
             ]
         }
@@ -4317,14 +4317,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer2"
+                "Answer1",
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "Unknown",
-                "gpt-4.1"
+                "Mistral-7B-Instruct-v0.2",
+                "Unknown"
             ]
         },
         {
@@ -4365,12 +4365,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1",
+                "Tie",
                 "Answer1",
                 "Answer1"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
+                "TIE",
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
@@ -4436,9 +4436,9 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                "Answer1",
-                "Answer1",
-                "Answer1\n\nAnswer1 provides a more comprehensive, detailed, and technically accurate overview of the standards used to judge car safety. It explicitly mentions key safety organizations (NHTSA, Euro NCAP), lists specific safety systems (ABS, stability control, ADAS features), and includes nuanced elements like pedestrian protection, head restraint effectiveness, rollover tests, and recall history \u2014 all of which are critical in a holistic safety assessment.\n\nAnswer2 is also solid and well-structured, but it is incomplete (cuts off mid-sentence at the end), lacks some key technical specifics (e.g., no mention of Euro NCAP, no reference to crash simulation data or child seat compatibility), and includes less relevant criteria like \u201celectrical system\u201d and \u201cmaintenance,\u201d which, while important for general vehicle reliability, are secondary to direct crash safety metrics when judging \u201csafety of a car\u201d in a technical sense. The omission of \u201cIIHS\u201d in the final sentence further reduces its completeness and authority.\n\nAnswer1 demonstrates superior depth, accuracy, and completeness, making it the higher-quality response.\n\nAnswer1"
+                "Answer1\n\nAnswer1 provides a more comprehensive, detailed, and well-structured evaluation of car safety standards. It covers not only fundamental elements like crash test ratings, airbags, and braking systems but also includes nuanced criteria such as pedestrian protection, child seat compatibility, rollover tests, ADAS reliability, seatbelt reminders, and safety recall history \u2014 all of which are critical to a holistic safety assessment. The response is thorough and demonstrates a clear understanding of both passive and active safety systems.\n\nAnswer2 is also good and lists relevant factors, but it is cut off mid-sentence (\u201cThese ratings provide...\u201d) and lacks the same depth and precision. It mentions maintenance \u2014 which, while important for ongoing safety, is more of a user responsibility than a design standard of the car itself \u2014 and includes electrical systems in a somewhat vague way that doesn\u2019t tie clearly to safety outcomes. Also, it doesn\u2019t mention key agencies like Euro NCAP or specific structural metrics.\n\nThus, Answer1 is superior in quality, completeness, and semantic accuracy.\n\nAnswer1",
+                "Answer1\n\nAnswer1 provides a more comprehensive, structured, and technically accurate overview of the standards used to judge car safety. It includes specific agencies (NHTSA, Euro NCAP), detailed safety systems (ABS, stability control, ADAS), structural and pedestrian safety considerations, and even mentions recall history and accessibility \u2014 all of which are critical components in a thorough safety evaluation. It avoids vague or tangential points (like maintenance, which is important but not a *standard for judging the car\u2019s inherent safety design*).\n\nAnswer2, while informative, is incomplete (it cuts off mid-sentence), includes items that are operational or maintenance-related (e.g., \u201cmaintenance,\u201d \u201celectrical system\u201d) rather than objective safety standards applied to vehicle design and testing, and lacks specificity in key areas (e.g., no mention of rollover resistance, child seat compatibility, or pedestrian protection).\n\nThus, Answer1 is superior in terms of semantic accuracy, depth, relevance, and completeness.\n\nAnswer1",
+                "Answer1\n\nAnswer1 provides a more comprehensive, detailed, and technically accurate assessment of car safety standards. It covers a wide array of critical factors \u2014 including crash test ratings from authoritative bodies (NHTSA, Euro NCAP), specific advanced driver-assistance systems (ADAS), structural integrity, pedestrian protection, child seat compatibility, rollover tests, and even the relevance of recall history. The response is well-structured, precise, and reflects a deep understanding of automotive safety engineering and regulatory frameworks.\n\nAnswer2, while reasonable and partially accurate, is incomplete \u2014 it cuts off mid-sentence at the end, and some points (like \"electrical system\") are too generic or improperly prioritized; the electrical system\u2019s role is important but not a direct standalone safety standard in the same way as crashworthiness or ADAS. Additionally, \"maintenance\" is an important practice but is a user responsibility rather than a vehicle design standard \u2014 its inclusion dilutes the focus on intrinsic vehicle safety attributes.\n\nAnswer1 outperforms Answer2 in depth, accuracy, completeness, and semantic quality.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -4463,12 +4463,12 @@
             "result": [
                 "Answer1  \nAnswer2  \nTie",
                 "Tie",
-                "Tie"
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "Unknown",
                 "TIE",
-                "TIE"
+                "Unknown"
             ]
         },
         {
@@ -4557,7 +4557,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a more structured and comprehensive breakdown of the five key factors (financial transparency, program outcomes, efficiency, sustainability, and accountability) with clear, specific examples for each. It offers a methodical framework that someone could systematically apply when evaluating a charity.\n\nAnswer2 is also strong \u2014 concise, clear, and includes important elements like outcome vs. activity reporting and mentions of reputable evaluators. However, it lacks the same level of organizational depth and does not explicitly cover sustainability or governance, which are critical components of long-term effectiveness.\n\nWhile both are accurate and well-written, Answer1\u2019s detailed, categorized approach gives it a slight edge in thoroughness and utility for someone seeking to make an informed, systematic decision.\n\n**Answer1**",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer1",
                 "Answer1"
             ],
@@ -4629,12 +4629,12 @@
             },
             "result": [
                 "Answer2",
-                "Answer2",
+                "Tie",
                 "Answer2"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
+                "TIE",
                 "Mistral-7B-Instruct-v0.2"
             ]
         }
@@ -4702,12 +4702,12 @@
             },
             "result": [
                 "Answer1",
-                "Answer1",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
+                "Unknown",
                 "Mistral-7B-Instruct-v0.2"
             ]
         },
@@ -4725,7 +4725,7 @@
             },
             "result": [
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie\n\nBoth responses are accurate and provide correct information: George Washington was the first President of the United States, served from 1789 to 1797, and was unanimously elected. Both also mention his historical significance. \n\nAnswer1 emphasizes his role in setting precedents for the presidency.  \nAnswer2 highlights his role in the American Revolution, which is also factually correct and adds valuable context.\n\nThe differences are minor and stylistic \u2014 neither response contains errors or omissions of critical fact. Both are clear, concise, and semantically strong.\n\n**Tie**",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
@@ -4772,9 +4772,9 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie\n\nTie"
+                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a clear, accurate statement that Jupiter is the largest planet, emphasizing both its diameter relative to Earth and its unique status as having more mass than all other planets combined. This adds valuable context about mass, which is an important dimension of \"largest.\"\n\nAnswer2 also correctly identifies Jupiter and gives precise numerical data (diameter in miles and kilometers), along with a brief explanation regarding its composition (hydrogen and helium). This offers factual specificity.\n\nBoth answers are factually correct, well-written, and informative. Answer1 includes a unique point about total mass (which Answer2 omits), while Answer2 provides exact numbers (which Answer1 does not). Neither has a significant semantic advantage over the other \u2014 they are equally accurate, complete, and well-expressed.\n\nTherefore, the best evaluation is:\n\nTie",
+                "Answer1  \nAnswer2  \nTie\n\nBoth answers are accurate and provide correct information about Jupiter being the largest planet in the solar system. Answer1 emphasizes Jupiter\u2019s mass relative to other planets, while Answer2 provides specific diameter measurements and mentions its composition. Both are concise, factually correct, and add useful context. Neither has a significant advantage in quality or clarity over the other.\n\nTie",
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "Unknown",
@@ -4799,12 +4799,12 @@
             "result": [
                 "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1"
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "Unknown",
                 "Unknown",
-                "Mistral-7B-Instruct-v0.2"
+                "Unknown"
             ]
         },
         {
@@ -4894,12 +4894,12 @@
             },
             "result": [
                 "Answer2",
-                "Answer2",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
+                "Unknown",
                 "gpt-4.1"
             ]
         },
@@ -5085,12 +5085,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
+                "Unknown",
                 "Unknown",
                 "Unknown"
             ]
@@ -5204,13 +5204,13 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie",
                 "Answer1",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
-                "Unknown",
                 "gpt-4.1",
+                "Unknown",
                 "Unknown"
             ]
         }
@@ -5348,14 +5348,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
+                "Answer1  \nAnswer2  \nTie",
                 "Answer1",
-                "Answer1",
-                "Answer1"
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
+                "Unknown",
                 "gpt-4.1",
-                "gpt-4.1",
-                "gpt-4.1"
+                "Unknown"
             ]
         }
     ],
@@ -5492,14 +5492,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
+                "Answer1  \nAnswer2  \n\nTie",
                 "Answer2",
-                "Answer2",
-                "Answer2"
+                "Answer1  \nAnswer2  \n\nTie"
             ],
             "extracted_answers": [
+                "Unknown",
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2"
+                "Unknown"
             ]
         }
     ],
@@ -5518,13 +5518,13 @@
             },
             "result": [
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer2",
+                "Answer2"
             ],
             "extracted_answers": [
                 "Unknown",
-                "Unknown",
-                "Unknown"
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         },
         {
@@ -5684,9 +5684,9 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                "Answer1",
-                "Answer1",
-                "Answer1\n\nWhile Answer2 offers a nuanced perspective, it ultimately undermines the clarity and conventional understanding of the question. The phrase \u201cking of the jungle\u201d is a widely recognized cultural idiom, and in virtually all educational, popular, and historical contexts, it refers to the lion\u2014even though lions don't live in jungles. Answer1 correctly acknowledges this cultural reference, explains its origin, and even addresses the common misconception about habitat (grasslands vs. jungle), making it both accurate and informative.\n\nAnswer2, while technically more precise in pointing out the metaphorical and variable nature of the term, fails to give a definitive answer to what is typically expected in such a question. It overcomplicates a straightforward cultural question and provides no clear guidance, which reduces its practical value.\n\nFor semantic quality\u2014clarity, accuracy, and appropriateness to common understanding\u2014Answer1 is superior.\n\nAnswer1"
+                "Answer1\n\nWhile Answer2 offers a more nuanced perspective, it undermines the cultural and widely accepted answer to this common question. The phrase \u201cking of the jungle\u201d is a well-established metaphor in popular culture, and the clear, intended answer is the lion \u2014 even if it\u2019s biologically inaccurate to call it a \u201cjungle\u201d dweller. Answer1 correctly identifies the lion as the traditional answer, acknowledges the inaccuracy of the term \u201cjungle,\u201d and provides a thoughtful explanation that balances fact and cultural context. Answer2, while technically more accurate about the variability of the term, fails to give a direct, useful answer to the question as it is commonly understood \u2014 it overcomplicates a straightforward cultural reference.\n\nThe question is not asking for a biological debate; it\u2019s asking for the animal typically referred to by this phrase. Answer1 answers that accurately and thoughtfully.\n\nAnswer1",
+                "Answer1\n\nThe first answer is more accurate and informative. It correctly identifies the lion as the animal traditionally referred to as the \"king of the jungle,\" while also acknowledging the factual inaccuracy of the term\u2014since lions don't live in jungles\u2014and explaining why the title persists culturally. It provides context, nuance, and clarity in a concise way.\n\nThe second answer, while true in suggesting that the phrase is metaphorical and that other animals might be considered powerful in different contexts, misleadingly implies there is no conventional answer. This undermines the well-established cultural and symbolic association between lions and the title \u201cking of the jungle.\u201d It overcomplicates a simple, widely recognized phrase without properly addressing its origin and usage.\n\nThus, Answer1 is superior in quality, accuracy, and clarity.\n\nAnswer1",
+                "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -5710,13 +5710,13 @@
             },
             "result": [
                 "Answer1",
-                "Answer1",
-                "Answer1"
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2"
+                "Unknown",
+                "Unknown"
             ]
         },
         {
@@ -5757,9 +5757,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2\n\nThe second row of a QWERTY keyboard, from left to right, is: A, S, D, F, G, H, J, K, L. This is commonly known as the \"home row\" in typing instruction.\n\nAnswer1 incorrectly lists \"WTAS\" as the first four letters of the second row. \"W\" and \"T\" are actually in the top row (QWERTY), not the second row. \"A\" and \"S\" are correct for the second row, but \"T\" is not in that row at all \u2014 it's above \"G\". So \"WTAS\" is factually wrong.\n\nAnswer2 correctly identifies the second row as the home row and accurately lists A, S, D, F \u2014 the first four letters from left to right.\n\nThus, Answer2 is superior in both accuracy and clarity.\n\nAnswer2",
-                "Answer2\n\nExplanation: Answer2 correctly identifies the second row of a QWERTY keyboard as the \u201chome row,\u201d which indeed starts with A, S, D, F \u2014 the first four letter keys from left to right on that row. Answer1 incorrectly claims the second row starts with W, T, A, S, which is inaccurate: W and T are in the top row (letters above the home row), and A and S are part of the home row. While Answer1 mentions \u201csecond row,\u201d it misidentifies the actual key positions. Answer2 correctly understands the layout and even provides context about the \u201chome row,\u201d demonstrating greater accuracy and understanding. \n\nAnswer2",
-                "Answer2"
+                "Answer2",
+                "Answer2",
+                "Answer2\n\nThe second row of a QWERTY keyboard, from left to right, is: A, S, D, F, G, H, J, K, L. This is commonly referred to as the \u201chome row\u201d in touch typing, and A, S, D, F are indeed the first four letters.\n\nAnswer1 incorrectly states the first four letters as \"WTAS.\" \"W\" and \"T\" are on the top row (QWERTY), and \"A\" and \"S\" are on the second row \u2014 so \"WTAS\" mixes keys from two different rows and is factually wrong.\n\nAnswer2 correctly identifies the second row and gives the accurate sequence: A, S, D, F. It also provides helpful context about the home row, reinforcing its correctness.\n\nTherefore, Answer2 is superior in both accuracy and clarity.\n\nAnswer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -5805,12 +5805,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer1",
                 "Answer1"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
+                "Unknown",
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
@@ -5830,12 +5830,12 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1"
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Unknown"
             ]
         }
     ],
@@ -5877,12 +5877,12 @@
             },
             "result": [
                 "Answer1",
-                "Answer1  \nAnswer2  \nTie",
+                "Answer1",
                 "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "Unknown",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -5997,8 +5997,8 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2\n\nExplanation:\nAnswer1 contains a critical error in Step 2: it suggests subtracting the square of the smaller side from the square of the larger side, implying c\u00b2 = a\u00b2 - b\u00b2. This is incorrect. The Pythagorean theorem always uses addition: c\u00b2 = a\u00b2 + b\u00b2 when solving for the hypotenuse. While the example at the end of Answer1 correctly shows c\u00b2 = a\u00b2 + b\u00b2, the preceding steps misrepresent the formula and could mislead a learner into thinking subtraction is the standard method \u2014 which is wrong and dangerous for understanding.\n\nAnswer2 correctly explains the theorem, distinguishes between finding a leg vs. the hypotenuse, specifies the requirement of a right triangle, and gives accurate formulas without contradictions. It is conceptually sound and pedagogically clear.\n\nThus, Answer2 is superior in accuracy and clarity.\n\nAnswer2",
-                "Answer2\n\nAnswer1 contains a critical error: it incorrectly states to \"subtract the square of the smaller side from the square of the larger side\" when applying the Pythagorean theorem. This is only valid if you're solving for one of the legs \u2014 but the instruction as written implies this subtraction is the general method for finding the third side, which misrepresents the theorem entirely. The Pythagorean theorem is always a\u00b2 + b\u00b2 = c\u00b2 for the hypotenuse, and rearranged only when solving for a leg. Answer1 then contradicts itself by correctly showing the addition (a\u00b2 + b\u00b2) in the example, undermining its own erroneous step.\n\nAnswer2 correctly explains the theorem, distinguishes between finding a leg vs. the hypotenuse, emphasizes the requirement of a right triangle, and gives accurate formulas without contradiction. It is both precise and comprehensive.\n\nTherefore, Answer2 is superior in accuracy and clarity. \n\nAnswer2",
+                "Answer2",
+                "Answer2\n\nAnswer1 contains a critical error: it incorrectly states that you subtract the squares of the sides (step 2: \u201c(a\u00b2) - (b\u00b2)\u201d), which misrepresents the Pythagorean theorem. The correct formula is a\u00b2 + b\u00b2 = c\u00b2 for finding the hypotenuse, or rearranged for a leg (e.g., a\u00b2 = c\u00b2 - b\u00b2). The example given in Answer1 accidentally uses the correct addition (c\u00b2 = a\u00b2 + b\u00b2), but the preceding steps contradict it \u2014 creating confusion and undermining the reliability of the answer.\n\nAnswer2 correctly explains the conditions (right triangle), clearly distinguishes between finding a leg versus the hypotenuse, and accurately presents the formula and method without contradiction. It also includes necessary context (identifying the hypotenuse) that is essential for proper application of the theorem.\n\nThus, Answer2 is superior in accuracy, clarity, and completeness.\n\nAnswer2",
                 "Answer2"
             ],
             "extracted_answers": [
@@ -6021,7 +6021,7 @@
             },
             "result": [
                 "Answer1",
-                "Answer1\n\nAnswer1 provides a clear, accurate, and comprehensive explanation of how to use the Pythagorean theorem. It correctly emphasizes that the triangle must be a right triangle, properly defines the roles of a, b, and c, and distinguishes between finding a leg versus the hypotenuse with the correct formulas. It also mentions taking the square root at the end, which is essential. The explanation is thorough and avoids misleading steps.\n\nAnswer2, while it includes a correct example, contains a critical error in step 2: it says to \u201csubtract the square of the smaller side from the square of the larger side.\u201d This is incorrect \u2014 the Pythagorean theorem requires *adding* the squares of the two legs to find the hypotenuse. Subtracting is only valid when solving for a leg, but Answer2 doesn\u2019t clarify that context. The example given accidentally works because 3 and 4 are legs and 5 is the hypotenuse (so addition was intended), but the general procedure described is flawed and could mislead someone into subtracting when they should be adding.\n\nTherefore, Answer1 is superior in accuracy, clarity, and completeness.\n\nAnswer1",
+                "Answer1",
                 "Answer1"
             ],
             "extracted_answers": [
@@ -6141,14 +6141,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1 and Answer2 both correctly explain how photosynthesis relies on sunlight and why plants need it. However, Answer1 provides a more detailed and scientifically precise explanation, including specific cellular structures (thylakoid membranes), molecules (ATP, NADPH), and biochemical processes (water splitting, Calvin cycle). This demonstrates a deeper understanding of the mechanism behind photosynthesis.\n\nAnswer2 is clear, accurate, and accessible, making it suitable for a general audience, but it lacks the technical depth and specificity of Answer1.\n\nSince the question asks for an explanation of the concept of photosynthesis applied to why plants need sunlight, and does not limit the level of detail, the more thorough and accurate response (Answer1) is superior in terms of semantic quality and scientific rigor.\n\nAnswer1",
-                "Answer1  \nAnswer2  \nTie  \n\nAnswer2  \n\nBoth answers are accurate and clearly explain how photosynthesis requires sunlight. However, Answer2 provides a more accessible, concise, and cohesive explanation that directly connects sunlight to the plant\u2019s need for survival \u2014 emphasizing the *consequence* of its absence (inability to grow, reproduce, or function) in a way that directly answers the question\u2019s intent. Answer1, while scientifically precise and detailed, leans toward a more technical lecture tone and doesn\u2019t explicitly tie the mechanism back to *why plants need sunlight* in simple, functional terms. Answer2 better fulfills the explanatory goal for a general audience asking \u201cwhy,\u201d making it superior in terms of clarity, relevance, and communicative effectiveness.  \n\nAnswer2",
-                "Answer1"
+                "Answer1  \nAnswer2  \nTie\n\nAnswer2",
+                "Answer1 provides a more detailed, scientifically precise explanation of the photosynthetic process, including specific cellular structures (thylakoid membranes), molecular components (ATP, NADPH), and biochemical steps (splitting water, Calvin cycle). It accurately describes the role of sunlight as a source of photons and its direct involvement in energy conversion.\n\nAnswer2 is also correct and clearly explains the fundamental concept in accessible language, making it more suitable for a general audience. However, it lacks the depth and specificity of Answer1, omitting key mechanistic details that are central to understanding *why* sunlight is necessary at the biochemical level.\n\nSince the question asks to \u201capply the concept of photosynthesis to explain why plants need sunlight,\u201d a high-quality response should go beyond a general summary and delve into the *mechanism*\u2014which Answer1 does effectively.\n\nTherefore, Answer1 is superior in terms of semantic quality, accuracy, and depth.\n\nAnswer1",
+                "Answer1  \nAnswer2  \n\nTie"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
                 "Unknown",
-                "Mistral-7B-Instruct-v0.2"
+                "Mistral-7B-Instruct-v0.2",
+                "Unknown"
             ]
         },
         {
@@ -6164,12 +6164,12 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                "Answer1",
+                "Answer2",
                 "Answer1",
                 "Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Mistral-7B-Instruct-v0.2",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -6189,7 +6189,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1",
+                "Answer1 provides a more structured, detailed, and methodical breakdown of how to use math skills in planning a party within a budget. It explicitly outlines step-by-step numerical allocations (e.g., 30\u201350% for food, 10\u201315% for decorations), emphasizes per-person cost calculations, and includes a clear process for adjustment based on totals\u2014demonstrating active application of arithmetic and proportional reasoning.\n\nAnswer2 is also correct and practical, but it is more general and lacks the precise mathematical framework. While it mentions percentages and addition, it doesn\u2019t illustrate how the math is used to compute or adjust values (e.g., no examples of actual calculations, no per-person cost analysis). It focuses more on prioritization and trimming costs rather than quantitatively planning with math.\n\nGiven the question specifically asks how to use **math skills**, Answer1 better fulfills that by embedding explicit quantitative reasoning throughout the process.\n\n**Answer1**",
                 "Answer1",
                 "Answer1"
             ],
@@ -6429,7 +6429,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2",
+                "Answer2 is superior because it provides a comprehensive, principles-based approach to planning a healthy weekly menu that emphasizes key nutritional concepts \u2014 balance of food groups, macronutrients, healthy fats, hydration, cooking methods, portion control, and variety \u2014 without relying on a partial or incomplete meal plan. While Answer1 starts with a detailed day-by-day meal schedule, it is cut off mid-sentence (\"Smoothie with spinach, banana, al...\"), making it incomplete and less usable as a full guide. Answer2, though less specific in meal examples, offers a coherent, evidence-based framework applicable to any individual\u2019s dietary needs, making it more thoughtful, practical, and educationally valuable.\n\nAnswer2",
                 "Answer2",
                 "Answer2"
             ],
@@ -6621,12 +6621,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1 and Answer2 both accurately explain the principles of supply and demand in relation to price increases. However, **Answer1** provides a more comprehensive and nuanced explanation. It not only describes the basic relationship between supply and demand but also elaborates on the mechanisms (buyers competing, sellers adjusting prices) and lists specific factors affecting demand (consumer preferences, income, population) and supply (production costs, natural disasters, regulations). This gives a deeper understanding of the economic model beyond just the basic cause-effect.\n\n**Answer2** is clear and uses helpful examples (smartphone, crop failure), which enhance comprehension, but it is more concise and lacks the same level of detail regarding underlying economic factors.\n\nGiven the emphasis on **semantic quality** \u2014 including depth, accuracy, and completeness \u2014 **Answer1** is superior.\n\nAnswer1",
-                "Answer1  \nAnswer2  \nTie\n\nAnswer2",
+                "Answer2",
+                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a comprehensive and technically precise explanation of supply and demand, including key economic concepts such as market equilibrium, factors influencing demand and supply (e.g., income levels, production costs, regulations), and a clear causal mechanism linking imbalance to price changes. It also maintains formal academic tone and completeness.\n\nAnswer2 is also accurate and adds concrete, relatable examples (new phone, crop failure), which enhance understanding for a general audience. It is concise and effectively communicates the core idea, though it lacks the depth and breadth of factors discussed in Answer1.\n\nBoth answers are factually correct and clearly explain why prices rise, but Answer1 offers greater depth, nuance, and completeness in explaining the economic model. For a question asking to \u201capply the principles,\u201d the richer theoretical grounding provided in Answer1 makes it superior.\n\nAnswer1",
                 "Answer2"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
+                "gpt-4.1",
                 "Unknown",
                 "gpt-4.1"
             ]
@@ -6644,14 +6644,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                "Answer2",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer1",
-                "Answer1"
+                "Answer2"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
+                "Unknown",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Mistral-7B-Instruct-v0.2"
             ]
         }
     ],

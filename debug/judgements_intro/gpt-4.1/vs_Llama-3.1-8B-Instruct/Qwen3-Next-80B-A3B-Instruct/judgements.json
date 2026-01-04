@@ -190,13 +190,13 @@
             },
             "result": [
                 "Answer1",
-                "Answer2",
-                "Answer2"
+                "Answer1",
+                "Answer1"
             ],
             "extracted_answers": [
                 "Llama-3.1-8B-Instruct",
-                "gpt-4.1",
-                "gpt-4.1"
+                "Llama-3.1-8B-Instruct",
+                "Llama-3.1-8B-Instruct"
             ]
         },
         {
@@ -260,9 +260,9 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
-                "Answer1 is superior.\n\nReasoning:\n- Answer1 accurately identifies the key forces acting on a stationary car: gravity (weight), normal force, static friction, and briefly mentions air resistance and upthrust with appropriate context about their insignificance in this scenario.\n- It correctly emphasizes that the forces are **balanced**, leading to no net force and no motion \u2014 which is the core principle of Newton\u2019s First Law applied to a stationary object.\n- It avoids introducing misleading or irrelevant forces. For instance, \u201cupthrust\u201d is inaccurately used for air (it\u2019s typically reserved for fluids like water, and even then negligible for cars), but Answer1 correctly labels it as \"minor\" and dismisses its significance appropriately.\n- Answer2 includes **inappropriate or misleading forces**:\n  - **Tension (T)**: Tension is not a force acting *on* the car from external sources in the context of static equilibrium on a road. Internal tension in suspension or cables doesn\u2019t count as an external force affecting the car\u2019s stationary state.\n  - **Buoyancy (B)**: Unless the car is submerged (e.g., in water), buoyancy is utterly negligible and irrelevant. Mentioning it as a factor in a typical scenario is misleading and unhelpful.\n- Answer1 provides a more physically accurate, contextually appropriate, and pedagogically sound explanation.\n\nTherefore, Answer1 is clearer, more precise, and better aligned with fundamental physics principles.\n\nAnswer1",
-                "Answer1 is superior.\n\nReasoning:  \nAnswer1 provides a clear, accurate, and physically precise analysis of the forces acting on a stationary car. It correctly identifies gravitational force, normal force, and static friction as the primary forces, and appropriately dismisses air resistance and upthrust as negligible \u2014 which is scientifically sound for a typical stationary car on dry land. It concludes with a coherent explanation that net force is zero, consistent with Newton\u2019s First Law.\n\nAnswer2 introduces two problematic elements:\n- **Tension (T)**: While internal forces like those in suspension exist, they are *internal* to the system and do not affect the car\u2019s overall equilibrium as an object. Including them as external forces acting *on the car* is misleading and incorrect in the context of a free-body diagram for translational equilibrium.\n- **Buoyancy (B)**: This is only relevant if the car is submerged in a fluid (like water), which is not stated or implied in the question. Including it introduces an irrelevant and potentially confusing concept without context.\n\nThus, Answer1 demonstrates better conceptual accuracy, relevance, and pedagogical clarity.\n\nAnswer1",
-                "Answer1 is superior.\n\nReasoning:\n- Answer1 provides a clear, accurate, and physically precise analysis of the forces acting on a stationary car.\n- It correctly identifies weight (gravitational force), normal force, and static friction as the primary forces \u2014 and appropriately notes that air resistance is negligible when stationary (a key insight).\n- It wisely omits misleading or irrelevant forces. For instance, \u201cupthrust\u201d from air is mentioned as insignificant (which is correct and appropriately contextualized), avoiding overstatement.\n- It correctly emphasizes that all forces are balanced \u2014 a crucial point for understanding static equilibrium.\n\nAnswer2 contains several errors and misleading inclusions:\n- It introduces **tension (T)** as a force acting on the car \u2014 but tension is an *internal* force within the suspension system, not an external force acting *on the car as a whole*. This is a fundamental misclassification in force analysis.\n- It introduces **buoyancy (B)**, which is only relevant if the car is partially submerged in a fluid like water. In the context of a typical stationary car on a road, buoyancy is utterly negligible and should not be listed as a meaningful force \u2014 doing so misleads the reader into thinking it's relevant.\n- Both answers mention air resistance, but Answer1 correctly qualifies it as negligible, while Answer2 does not, potentially implying it plays a significant role even when stationary.\n\nAnswer1 demonstrates better physical understanding, precision, and contextual awareness.\n\nAnswer1"
+                "Answer1\n\n**Reasoning**:  \nAnswer1 provides a clear, accurate, and physically precise analysis of the forces acting on a stationary car. It correctly identifies gravitational force, normal force, static friction, and negligible air resistance. It appropriately downplays upthrust (buoyancy from air) as insignificant \u2014 which is scientifically sound \u2014 since air buoyancy on a car is negligible and not meaningfully relevant in typical contexts.\n\nAnswer2, while also mentioning the correct major forces, introduces two questionable and misleading additions:  \n- **Tension (T)**: Tension is not an external force acting *on* the car as a whole; it\u2019s an internal force within the suspension and chassis. Including it as a force affecting the car\u2019s *stationary equilibrium* is misleading and inaccurate in this context.  \n- **Buoyancy (B)**: Buoyancy is only relevant if the car is submerged in a fluid (like water), which is not implied. Mentioning it as a general force acting on a stationary car on dry ground introduces an unrealistic and irrelevant concept, possibly confusing the student.\n\nAdditionally, Answer1 better explains the *balance* of forces and the consequence (no net force \u2192 no motion), which directly addresses the request to \u201canalyze\u201d and \u201cdiscuss how each affects the vehicle.\u201d Answer2\u2019s final sentence is vague and less insightful.\n\nThus, Answer1 is superior in accuracy, relevance, and clarity.  \nAnswer1",
+                "Answer1 is superior.\n\nReasoning:\n- Answer1 accurately identifies and correctly explains the key forces acting on a stationary car: gravitational force, normal force, static friction, and minimally acknowledges air resistance. It correctly states that these forces are balanced, resulting in no net force and no motion \u2014 which is the core of the question.\n- It correctly dismisses upthrust as negligible, showing appropriate scientific judgment for a typical terrestrial scenario.\n- Answer2 introduces two incorrect or misleading forces: \n  - Tension (T) is not a force acting *on the car as a whole* from external sources in this context; it\u2019s an internal force within the suspension system, and mentioning it as an external force affecting equilibrium is misleading.\n  - Buoyancy (B) is only relevant if the car is submerged in a fluid (like water), which is not implied in the question. Including it as a general force on a stationary car on land is scientifically inappropriate and introduces confusion.\n- Answer1 provides a cleaner, more accurate, and contextually appropriate analysis. Answer2, while seemingly detailed, includes irrelevant or incorrect forces that reduce its reliability and scientific quality.\n\nThus, Answer1 is the better response.\n\nAnswer1",
+                "Answer1\n\nReasoning:  \nAnswer1 provides a clear, accurate, and physically sound analysis of the forces acting on a stationary car. It correctly identifies gravitational force, normal force, static friction, and acknowledges negligible air resistance. It also rightly dismisses upthrust as insignificant, which is appropriate for a car on land (not submerged). The explanation concludes by emphasizing force balance and equilibrium\u2014key principles for understanding stationary objects.\n\nAnswer2 contains several inaccuracies. It introduces \u201ctension\u201d as a force acting on the car in general, which is misleading\u2014tension exists internally within the suspension or cables, not as an external force on the car as a whole. More seriously, it includes \u201cbuoyancy\u201d as a relevant force, implying the car might be in water, but the question is about a general stationary car\u2014typically assumed to be on solid ground. Including buoyancy without qualification is misleading and inappropriate in this context. \n\nThus, Answer1 is superior due to its accuracy, relevance, and conceptual clarity.  \n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -310,12 +310,12 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1"
+                "Answer1  \nAnswer2  \nTie  \n\nAnswer1 provides a clear, cohesive, and nuanced explanation that integrates cause-and-effect logic, thematic significance, and narrative purpose, all while flowing naturally as prose. It not only lists contributions but explains *how* and *why* character actions matter, using an illustrative example (the betrayal from trust) to ground its points.  \n\nAnswer2 is structured well with a numbered list that is comprehensive and accurate, covering key points like conflict, character revelation, ripple effects, and plot twists. However, it lacks depth in explanation\u2014each point is stated but not elaborated upon. It\u2019s informative but surface-level compared to Answer1\u2019s rich, analytical tone.  \n\nWhile both answers are correct, Answer1 demonstrates superior **semantic quality** through deeper insight, integration of ideas, and narrative awareness.  \n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Unknown"
             ]
         }
     ],
@@ -478,13 +478,13 @@
             },
             "result": [
                 "Answer2",
-                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a clear, well-structured breakdown of the primary causes of global temperature increase, supported by specific data (e.g., CO2 levels rising from 280 ppm to over 415 ppm, and a 1\u00b0C temperature rise since the late 19th century). It lists key contributors in a concise, numbered format, enhancing clarity and credibility.\n\nAnswer2 is also accurate and comprehensive, mentioning additional nuanced factors like urbanization\u2019s impact on albedo and briefly addressing natural factors (volcanic activity, solar variations) to contextualize human dominance in the trend. It correctly cites the scientific consensus.\n\nBoth answers are scientifically accurate, well-written, and thorough. Answer1 has a slight edge due to the inclusion of concrete numerical data, which strengthens its analytical rigor. However, Answer2\u2019s broader contextualization of minor natural factors and mention of albedo effects adds depth.\n\nGiven the high quality of both, and since neither contains errors or omissions of major significance, the most balanced judgment is:\n\nTie",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer2",
+                "Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "Unknown",
-                "Unknown"
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         },
         {
@@ -500,13 +500,13 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a clear, comprehensive, and scientifically accurate explanation of the causes of global temperature increase, covering fossil fuel combustion, deforestation, industrial and agricultural emissions, urbanization, and even briefly addressing natural factors like volcanic activity and solar variation to contextualize their minor role. It also concludes with a strong statement about the scientific consensus, reinforcing credibility.\n\nAnswer2 is also accurate and well-structured, offering specific data (CO2 levels rising from 280 ppm to 415 ppm, 1\u00b0C temperature rise), which adds quantitative rigor. It efficiently lists the main human contributors and correctly explains the greenhouse effect.\n\nBoth answers are factually correct, well-organized, and communicate the key points effectively. Answer1 has a slight edge in breadth (mentioning land-use changes and urbanization\u2019s albedo effect) and contextual framing of natural factors, while Answer2 has a slight edge in specificity with hard data. Since both are high quality and cover the core scientific consensus thoroughly, neither contains significant flaws or omissions.\n\nTherefore, the quality is very close, and the decision is balanced.\n\nTie",
-                "Answer1  \nAnswer2  \nTie\n\nAnswer2",
-                "Answer1  \nAnswer2  \nTie\n\nAnswer1 and Answer2 are both highly accurate, well-structured, and scientifically sound. They correctly identify human activities as the primary driver of global temperature increases, list key contributors (fossil fuel combustion, deforestation, industrial/agricultural emissions), and reference the greenhouse effect with appropriate detail.\n\nAnswer1 provides slightly broader context by mentioning urbanization and land-use changes affecting albedo (reflectivity), and explicitly notes the negligible role of natural factors like volcanic activity and solar variations \u2014 reinforcing the scientific consensus.\n\nAnswer2 adds concrete data points (280 ppm \u2192 415 ppm CO2, 1\u00b0C temperature rise), which strengthen its credibility and give measurable evidence.\n\nBoth responses are excellent. Answer1 offers more contextual depth on mechanisms beyond emissions, while Answer2 enhances persuasiveness with quantified trends. Neither has a significant flaw, and both fully satisfy the question's intent.\n\n**Tie**"
+                "Answer1  \nAnswer2  \nTie",
+                "Answer2",
+                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a comprehensive and well-structured explanation of the causes of global warming, clearly linking human activities (fossil fuel combustion, deforestation, industrial processes, agriculture, urbanization) to the mechanisms of the greenhouse effect. It also correctly contextualizes natural factors (volcanic activity, solar variations) as minor and short-term compared to anthropogenic drivers, and explicitly invokes the scientific consensus\u2014adding authority to the response.\n\nAnswer2 is also accurate and includes valuable quantitative data (CO2 levels rising from 280 ppm to 415+ ppm, 1\u00b0C temperature increase), which strengthens its credibility. It organizes the causes clearly in a numbered list and is scientifically sound. However, it omits explicit mention of other potent greenhouse gases like methane and nitrous oxide as being *emitted* by specific sources (e.g., agriculture, landfills) beyond just naming them, and doesn\u2019t address the comparison with natural factors, which Answer1 does.\n\nWhile Answer2 adds useful data, Answer1 provides a more complete and nuanced analysis by contextualizing the scale of human influence relative to natural variability and elaborating on secondary effects like urbanization and land-use changes. The inclusion of the scientific consensus also elevates its authority.\n\nThus, Answer1 is slightly superior in depth, context, and completeness.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "Unknown",
-                "Unknown",
+                "Llama-3.1-8B-Instruct",
                 "Unknown"
             ]
         }
@@ -596,7 +596,7 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
-                "Answer1\n\nWhile Answer2 provides a structured list of components, it contains a significant inaccuracy: it treats the object as a required component of every complete sentence. This is incorrect. Many complete sentences do not have objects\u2014e.g., \u201cShe runs.\u201d or \u201cThe sky is blue.\u201d These are perfectly complete sentences without direct objects. Answer1 correctly identifies the **subject** and **predicate** (which includes the verb and optionally objects or complements) as the minimum necessary components, and acknowledges that objects and other elements are *optional* additions that enrich the sentence but are not required for completeness. Answer1 also correctly explains the functional relationship between subject and predicate and includes proper punctuation rules, making it more accurate, nuanced, and pedagogically sound. \n\nAnswer2 overcomplicates and misleads by implying objects and modifiers are core requirements, which undermines its reliability.\n\nThus, Answer1 is superior in semantic quality and accuracy.  \nAnswer1",
+                "Answer1",
                 "Answer1",
                 "Answer1"
             ],
@@ -621,13 +621,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2",
-                "Answer2",
+                "Answer1",
+                "Answer1",
                 "Answer2"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "gpt-4.1",
+                "Llama-3.1-8B-Instruct",
+                "Llama-3.1-8B-Instruct",
                 "gpt-4.1"
             ]
         },
@@ -932,7 +932,7 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
-                "Answer1",
+                "Answer1\n\n**Reasoning:**  \nAnswer1 provides a more comprehensive, accurate, and well-organized explanation of how plant cell structures function together. It correctly identifies all major organelles and their roles in supporting cellular function, including the endoplasmic reticulum, Golgi apparatus, ribosomes, and cytoplasm \u2014 all of which are explicitly linked to their roles in synthesis, modification, transport, and metabolic support. It also correctly emphasizes the role of the vacuole in maintaining *turgor pressure*, a critical point for plant cell structure that Answer2 omits.\n\nAnswer2 contains a significant error: it mentions **lysosomes** as a standard component of plant cells. While lysosomes exist in animal cells, plant cells typically **do not have lysosomes**; instead, the **vacuole** performs lysosome-like functions (containing hydrolytic enzymes for degradation). This is a factual inaccuracy that undermines Answer2\u2019s reliability.\n\nAdditionally, Answer1 ends with a strong synthesizing statement tying all structures to key cellular processes \u2014 growth, energy production, metabolism, storage, and communication \u2014 which demonstrates deeper integration of concepts.\n\nThus, **Answer1** is superior in both accuracy and depth.  \n\nAnswer1",
                 "Answer1",
                 "Answer1"
             ],
@@ -959,12 +959,12 @@
             "result": [
                 "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie"
+                "Tie"
             ],
             "extracted_answers": [
                 "Unknown",
                 "Unknown",
-                "Unknown"
+                "TIE"
             ]
         },
         {
@@ -1077,7 +1077,7 @@
             },
             "result": [
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie\n\n**Evaluation:**  \nBoth Answer1 and Answer2 provide accurate, clear, and comprehensive explanations of the principle of supply and demand. They both correctly describe the inverse relationship between supply and price, the direct relationship between demand and price, and the concept of market equilibrium. Both also mention real-world factors influencing supply and demand (Answer2 more explicitly lists examples like consumer preferences and government policy; Answer1 focuses more on the mechanistic interactions of scarcity and competition).\n\nAnswer1 is slightly more detailed in explaining the *mechanisms*\u2014such as competition among buyers or sellers lowering prices to attract purchasers\u2014while Answer2 adds useful context about external factors and applications for businesses and policymakers.\n\nBut since the question asks *how* the principle explains price changes\u2014not for applications or extensions\u2014Answer1\u2019s tighter focus on the core mechanism gives it a marginal edge in direct relevance and depth of explanation. However, Answer2 is equally correct and well-structured, with no factual errors.\n\nGiven that both answers are semantically excellent and the differences are subtle (one slightly richer in mechanism, the other in context), the most appropriate evaluation is:\n\n**Tie**",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
@@ -1245,7 +1245,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2",
+                "Answer2\n\nExplanation:  \nAnswer1 contains a key error \u2014 it states that isosceles triangles \u201ccan also be scalene,\u201d which is impossible. A scalene triangle has no equal sides, while an isosceles triangle has at least two equal sides \u2014 these are mutually exclusive categories. It also incorrectly says isosceles triangles \u201ccan be equilateral,\u201d which, while technically true in the broadest definition (since an equilateral triangle is a special case of isosceles), is misleading in a basic explanation and should be clearly qualified. Furthermore, mixing \u201cscalene\u201d into the description of isosceles triangles creates confusion and inaccuracy.\n\nAnswer2, on the other hand, is precise, correct, and clear. It correctly defines an isosceles triangle as having *at least* two equal sides (acknowledging the inclusive definition that includes equilateral), correctly identifies the equal angles, and distinguishes legs and base without introducing any false or contradictory information.\n\nTherefore, Answer2 is superior in semantic quality and accuracy.\n\nAnswer2",
                 "Answer2",
                 "Answer2"
             ],
@@ -1268,9 +1268,9 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
-                "Answer1\n\nJustification:  \nAnswer1 provides a clear, accurate, and concise definition of an isosceles triangle, correctly stating that it has *at least two equal sides* (which includes the equilateral case as a special subset), correctly identifies legs and base, and notes the equality of base angles. It avoids any incorrect claims.\n\nAnswer2 contains a critical error: it says \u201cThey can also be scalene, meaning all sides are of different lengths, or equilateral, meaning all sides are equal.\u201d This is misleading and factually incorrect in context. An isosceles triangle *cannot* be scalene \u2014 by definition, scalene means *no* equal sides, which contradicts the definition of isosceles. While an isosceles triangle *can* be equilateral (if all three sides are equal), presenting them as if they are mutually exclusive or interchangeable categories within the same sentence is confusing and inaccurate. This error undermines the reliability of Answer2.\n\nTherefore, Answer1 is superior in accuracy and clarity.  \nAnswer1",
                 "Answer1",
-                "Answer1"
+                "Answer1",
+                "Answer1\n\nExplanation:  \nAnswer1 is accurate and clear. It correctly defines an isosceles triangle as having *at least two* equal sides (which includes the equilateral case as a special case), correctly identifies the legs and base, and notes that the base angles are equal. It avoids any incorrect statements.\n\nAnswer2 contains a critical error: it states, \u201cThey can also be scalene, meaning all sides are of different lengths...\u201d This is impossible \u2014 an isosceles triangle, by definition, has *at least two* equal sides, so it cannot be scalene. It also says \u201cor equilateral\u201d as if it's a separate category, but that\u2019s misleading phrasing: an equilateral triangle *is* a special case of isosceles, not a separate type that an isosceles triangle \u201ccan be.\u201d This creates conceptual confusion.\n\nTherefore, Answer1 is superior due to its precision and absence of misleading or incorrect information.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -1412,14 +1412,14 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
+                "Answer1  \nAnswer2  \nTie",
                 "Answer1",
-                "Answer1  \nAnswer2  \nTie\n\nTie",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "Unknown",
-                "Unknown"
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         }
     ],
@@ -1437,12 +1437,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1",
-                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a slightly more detailed explanation by explicitly mentioning that the seasons in the Southern Hemisphere are \u201csix months out of phase\u201d with those in the Northern Hemisphere, reinforcing the reciprocal relationship between the two hemispheres. It also clearly links \u201cmore sunlight\u201d to \u201csummer\u201d and \u201cless sunlight\u201d to \u201cwinter,\u201d making the causal chain very explicit.\n\nAnswer2 is also accurate and concise, correctly identifying the tilt, the variation in direct sunlight, and the inverse seasonal relationship between hemispheres. However, it uses slightly vaguer phrasing like \u201cchanges in temperature and daylight, creating the seasons,\u201d which doesn\u2019t explicitly tie the mechanism (tilt + orbit) to the direct effect (sunlight intensity) as clearly as Answer1 does.\n\nThe additional clarity and completeness in Answer1 give it a slight edge in semantic quality.\n\nAnswer1",
+                "Answer1  \nAnswer2  \nTie\n\nThe two answers are nearly identical in content, accuracy, and clarity. Both correctly explain that Earth\u2019s axial tilt (~23.5 degrees) and its orbit around the Sun cause seasonal variations by altering the amount and directness of sunlight received by each hemisphere at different times of the year. They both accurately note the inverse seasonal relationship between the Northern and Southern Hemispheres.\n\nThe only minor difference is stylistic: Answer1 uses slightly more detail in phrasing (\u201cvarying amounts of sunlight,\u201d \u201csix months out of phase\u201d), while Answer2 phrases it more concisely (\u201cangle of sunlight,\u201d \u201cchanges in temperature and daylight\u201d). Neither contains errors, and both are scientifically precise.\n\nGiven equal quality, the appropriate verdict is:\n\n**Tie**",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
-                "Llama-3.1-8B-Instruct",
+                "Unknown",
                 "Unknown",
                 "Unknown"
             ]
@@ -1460,12 +1460,12 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie\n\nTie",
-                "Answer1  \nAnswer2  \nTie\n\nThe two answers are extremely similar in content, accuracy, and clarity. Both correctly identify the 23.5-degree axial tilt as the primary cause of seasons, explain how the tilt leads to varying sunlight exposure throughout the year, and correctly describe the opposing seasonal patterns in the Northern and Southern Hemispheres. The wording differs slightly\u2014Answer1 says \"angle of sunlight cause changes in temperature and daylight,\" while Answer2 says \"receives more/less sunlight\"\u2014but both convey the same scientifically accurate mechanism.\n\nNeither answer contains errors or omissions; both are concise, complete, and pedagogically effective. There is no meaningful semantic advantage to one over the other.\n\nTie",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer2",
+                "Answer1  \nAnswer2  \nTie\n\nBoth Answer1 and Answer2 provide accurate, clear, and complete explanations of why Earth has seasons. They both correctly mention the 23.5-degree axial tilt, the Earth's orbit around the Sun, the variation in sunlight received by each hemisphere, and the inverse seasonal relationship between the Northern and Southern Hemispheres. The wording differs slightly, with Answer2 being a bit more concise and explicitly noting the six-month phase difference, while Answer1 slightly emphasizes the effect on temperature and daylight. However, neither contains inaccuracies, and both convey the core scientific concepts equally well.\n\nThus, the quality of both answers is equivalent.\n\nTie",
+                "Answer1  \nAnswer2  \nTie\n\nTie"
             ],
             "extracted_answers": [
-                "Unknown",
+                "Llama-3.1-8B-Instruct",
                 "Unknown",
                 "Unknown"
             ]
@@ -1533,13 +1533,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                "Answer1  \nAnswer2  \nTie\n\nTie",
                 "Answer1",
-                "Answer1  \nAnswer2  \nTie  \n\n**Evaluation:**  \nBoth Answer1 and Answer2 provide accurate, clear, and scientifically correct explanations for why we have night and day. Both correctly identify the Earth\u2019s rotation on its axis as the cause, explain that one side faces the Sun (day) while the other does not (night), and mention the approximate 24-hour cycle.  \n\nAnswer1 adds a slight elaboration by noting the direction of rotation (west to east) and the appearance of the sun rising in the east and setting in the west, which enhances the explanation slightly.  \n\nHowever, Answer2 is equally correct and concise, with no factual errors or omissions. The additional detail in Answer1 is not essential to understanding the core concept, and Answer2 communicates the phenomenon just as effectively.\n\nSince both responses are semantically equivalent in accuracy and clarity \u2014 one merely includes a minor supplementary detail \u2014 neither is *objectively superior* in quality.\n\n**Final verdict: Tie**  \nTie",
                 "Answer1"
             ],
             "extracted_answers": [
-                "Llama-3.1-8B-Instruct",
                 "Unknown",
+                "Llama-3.1-8B-Instruct",
                 "Llama-3.1-8B-Instruct"
             ]
         },
@@ -1701,12 +1701,12 @@
             },
             "result": [
                 "Answer2",
-                "Answer1  \nAnswer2  \nTie",
+                "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
                 "Llama-3.1-8B-Instruct",
-                "Unknown",
+                "Llama-3.1-8B-Instruct",
                 "Llama-3.1-8B-Instruct"
             ]
         }
@@ -1892,14 +1892,14 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a clear, accurate explanation of the optical process behind rainbows\u2014refraction, internal reflection, and dispersion\u2014while also including context about the viewing conditions (sun low in the sky, lingering raindrops). It is slightly more detailed in describing the physical path of light within the raindrop.\n\nAnswer2 is also scientifically accurate, correctly identifying refraction and dispersion, naming the color sequence, and mentioning observer position and sunlight angle. It is concise and well-structured.\n\nBoth answers are semantically excellent: they are factually correct, coherent, and complete. Answer1 adds a touch more mechanistic detail about internal reflection, while Answer2 adds the color order, which is a helpful mnemonic but not essential to the core explanation.\n\nSince both answers are of equally high quality\u2014just emphasizing slightly different aspects\u2014the most fair evaluation is a tie.\n\nTie",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1 and Answer2 are both highly accurate and well-explained. Both correctly identify refraction and dispersion as the key mechanisms, mention the role of raindrops and sunlight, and note the conditions under which rainbows appear (after rain, sun low in the sky). \n\nAnswer1 adds a slightly more detailed description of the internal reflection within the raindrop, which enhances the physical explanation. Answer2 provides the specific color sequence (ROYGBIV), which is a useful and memorable detail.\n\nBoth answers are semantically excellent \u2014 neither contains errors, and both communicate the science clearly and completely. The difference between them is minimal: Answer1 has a slight edge in describing the internal optics, while Answer2 includes the color order. But neither omission nor inclusion compromises the overall quality.\n\nTherefore, they are essentially equal in quality.\n\nTie"
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "Unknown",
                 "Unknown",
-                "TIE"
+                "Unknown"
             ]
         }
     ],
@@ -1966,13 +1966,13 @@
             },
             "result": [
                 "Answer1",
-                "Answer1  \nAnswer2  \nTie",
-                "Answer2"
+                "Answer1  \nAnswer2  \nTie\n\nThe two answers are very similar in accuracy and clarity, both correctly defining evaporation as the transition of liquid to vapor due to molecular energy gain, and both providing relevant, everyday examples. Answer1 includes a slightly more detailed mention of the water cycle and climate relevance, while Answer2 adds two additional examples (boiling water and alcohol evaporation) that are also valid. Neither answer contains inaccuracies, and both are well-structured and clear.\n\nSince both are of equally high semantic quality\u2014with minor differences in example selection but no superior depth or precision overall\u2014the most balanced judgment is:\n\n**Tie**",
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "Llama-3.1-8B-Instruct",
                 "Unknown",
-                "gpt-4.1"
+                "Unknown"
             ]
         },
         {
@@ -2036,14 +2036,14 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
-                "Both Answer1 and Answer2 are accurate, well-structured, and cover the essential roles of the Sun in the solar system: gravitational dominance, energy provision, and support for life. \n\nAnswer1 emphasizes the Sun\u2019s role in governing the motion of planets, comets, and asteroids, and mentions solar wind \u2014 a slightly more detailed astrophysical point.  \nAnswer2 highlights the Sun\u2019s mass percentage (99.8%) and connects its energy more explicitly to photosynthesis, the water cycle, and ocean currents \u2014 adding depth to the biological and Earth-system impacts.\n\nBoth are semantically strong. Answer1 has a slight edge in mentioning comets and asteroids and solar wind, expanding the scope beyond just planets. Answer2 includes the 99.8% mass statistic and more specific Earth-system processes, which also adds valuable detail.\n\nThe difference is marginal. Neither contains inaccuracies. Both answer the question fully and clearly.\n\n**Tie**",
                 "Answer2",
-                "Answer2\n\nBoth answers are accurate and well-written, but Answer2 provides a more comprehensive and nuanced explanation by including specific details such as the Sun\u2019s composition (\u201cmassive ball of hot, glowing gas\u201d), its mass\u5360\u6bd4 (\u201c99.8% of the solar system's mass\u201d), and the mechanism of energy production (\u201cnuclear reactions in its core\u201d). It also explicitly connects solar energy to key Earth systems like the water cycle and ocean currents, which adds depth beyond general statements. While Answer1 is solid, Answer2 demonstrates greater scientific precision and a broader coverage of the Sun\u2019s roles, making it the superior response.\n\nAnswer2"
+                "Answer2",
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
-                "TIE",
                 "Llama-3.1-8B-Instruct",
-                "Llama-3.1-8B-Instruct"
+                "Llama-3.1-8B-Instruct",
+                "Unknown"
             ]
         }
     ],
@@ -2110,12 +2110,12 @@
             },
             "result": [
                 "Answer2",
-                "Answer2",
+                "Answer1",
                 "Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
+                "Llama-3.1-8B-Instruct",
                 "gpt-4.1"
             ]
         },
@@ -2276,14 +2276,14 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
-                "Tie",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie"
+                "Tie",
+                "Answer1 and Answer2 are both highly accurate, comprehensive, and well-structured. They cover the core definition of a botanist's work \u2014 the study of plants \u2014 and expand appropriately on subfields (structure, growth, reproduction, evolution, ecology, etc.), applications (medicine, agriculture, conservation), and specializations.\n\nThe differences are minor:\n- Answer1 emphasizes \"metabolism, development, diseases, chemical properties, and evolutionary relationships\" and explicitly mentions fungi and algae.\n- Answer2 includes \"classification, distribution, anatomy, physiology, genetics, systematics\" and highlights \"physical characteristics\" like leaves and roots.\n\nBoth are scientifically precise and thorough. Neither contains inaccuracies, and both convey the same depth of information with slightly different organization and emphasis.\n\n**No clear superiority** can be established based on semantic quality alone.\n\nTie"
             ],
             "extracted_answers": [
-                "TIE",
                 "Unknown",
-                "Unknown"
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -2518,7 +2518,7 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1 provides a thoughtful, structured, and insightful guide on how to compose a poem about friendship. It offers practical advice on theme selection, tone, structure, imagery, and revision\u2014tools that empower the reader to create their own meaningful poetry. It emphasizes authenticity and emotional depth, which are essential to good poetry, and even includes an outline as a starting point. This answer is educational, comprehensive, and directly responsive to the question of *how* to compose such a poem.\n\nAnswer2, while well-written and emotionally pleasing, is itself a completed poem\u2014not an explanation of how to compose one. It fulfills the spirit of the request in a poetic form, but it does not answer the question, which is asking for a method or process, not an example.\n\nSince the question is \u201cHow would you compose a poetry about friendship?\u201d the superior response is the one that instructs on the *process* of creation\u2014not one that merely demonstrates it.\n\n**Answer1** is clearly the better answer in terms of semantic quality and direct relevance to the question.\n\nAnswer1"
+                "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -2638,12 +2638,12 @@
             },
             "result": [
                 "Answer1",
-                "Answer2\n\nWhile Answer1 provides a well-structured and appealing list of menu items, Answer2 offers a more comprehensive, strategic, and practical approach to designing the menu. It doesn\u2019t just list dishes\u2014it outlines a system for sustainability, student engagement, nutritional balance, cost-efficiency, and education. Answer2 addresses critical real-world factors like seasonal produce, student feedback, portion control, food waste, and marketing healthy choices through education\u2014all of which are essential for a successful, long-term canteen program. Answer1 is strong on content but lacks the operational and behavioral insight needed to implement such a menu effectively in a school setting. Therefore, Answer2 is superior in semantic quality and depth. \n\nAnswer2",
+                "Answer1 is superior because it provides a concrete, organized, and specific menu with clear meal categories (Breakfast, Lunch, Snack, Dessert) and detailed item descriptions that demonstrate a thoughtful application of nutritional principles (e.g., whole grains, lean proteins, healthy fats, fresh produce). It shows creativity and practicality in menu design with tangible examples that could be directly implemented. \n\nAnswer2, while comprehensive in its general principles and best practices, is more abstract and lacks specific menu items. It gives excellent advice on strategy\u2014like using seasonal produce, seeking feedback, and education\u2014but doesn\u2019t translate those ideas into an actual menu, making it less actionable for the question asked.\n\nThe question specifically asks how to \u201cdevise a new menu,\u201d which implies creating a concrete plan, not just listing general guidelines.\n\nAnswer1 directly fulfills the request with a usable, well-structured menu. Answer2 is informative but incomplete as a menu proposal.\n\nAnswer1",
                 "Answer1"
             ],
             "extracted_answers": [
                 "Llama-3.1-8B-Instruct",
-                "gpt-4.1",
+                "Llama-3.1-8B-Instruct",
                 "Llama-3.1-8B-Instruct"
             ]
         },
@@ -2901,12 +2901,12 @@
             },
             "result": [
                 "Answer2",
-                "Answer2",
+                "Answer1",
                 "Answer2"
             ],
             "extracted_answers": [
                 "Llama-3.1-8B-Instruct",
-                "Llama-3.1-8B-Instruct",
+                "gpt-4.1",
                 "Llama-3.1-8B-Instruct"
             ]
         }
@@ -2949,8 +2949,8 @@
             },
             "result": [
                 "Answer1",
-                "Answer1",
-                "Answer1 is superior because it provides a more comprehensive, nuanced, and age-appropriate explanation of a middle school uniform. It addresses a wider range of practical considerations \u2014 including seasonal variations (shorts in warm weather), layering options (sweaters, cardigans, blazers), fit guidelines, and safety concerns \u2014 while maintaining a balanced tone focused on student comfort and respect. It also wisely limits accessories to \u201cminimal and safe,\u201d without over-prescribing personal grooming details like hair or prohibiting everyday items like hoodies in a rigid way.\n\nAnswer2, while detailed, is overly prescriptive in areas that are not universally essential or appropriate for a general policy (e.g., mandating daily ironing, restricting hair styles, banning hoodies and sunglasses outright). These specifics may reflect personal or institutional preferences rather than universally applicable guidelines for a middle school uniform. It\u2019s also less flexible and could feel authoritarian compared to Answer1\u2019s more inclusive and practical approach.\n\nAnswer1 prioritizes function, safety, and student well-being, making it a more thoughtful and effective response.\n\nAnswer1"
+                "Answer1 is superior because it provides a more comprehensive and nuanced description of a middle school uniform, addressing not only clothing items but also fit, seasonal adaptations (e.g., shorts in warm weather), layering options (sweaters, blazers), and the rationale behind the guidelines (e.g., safety, practicality, respect). It also appropriately frames accessories and grooming in a balanced way without being overly prescriptive or rigid.\n\nAnswer2, while detailed, is more restrictive and includes some arbitrary or overly prescriptive rules (e.g., \u201cno hats, hoodies, or sunglasses,\u201d \u201chair should be neat,\u201d \u201cironed every day\u201d) that go beyond the scope of a uniform policy and venture into personal grooming enforcement \u2014 which is less relevant to the core question of what the uniform *should look like*. Additionally, it lacks the explanatory context that makes Answer1 more thoughtful and adaptable to real-world school environments.\n\nThus, Answer1 offers a higher-quality, more balanced, and educationally appropriate response.\n\nAnswer1",
+                "Answer1 is superior because it provides a more comprehensive, nuanced, and balanced description of a middle school uniform. It addresses not only clothing items but also fit, seasonal allowances (e.g., shorts in warm weather), outerwear options (sweaters, blazers), and the rationale behind the choices (e.g., safety, respect, practicality). It also wisely limits accessories to \u201cminimal and safe for active school days,\u201d which is more flexible and developmentally appropriate than Answer2\u2019s rigid rules (e.g., banning all hats or requiring daily ironing, which may be unrealistic).\n\nAnswer2, while detailed, includes overly prescriptive and potentially unreasonable expectations (e.g., \u201cno excessive logos,\u201d \u201cironed every day,\u201d \u201cwedding band\u201d as acceptable jewelry \u2014 a strange example for a middle schooler), which feel more like corporate dress code than age-appropriate school policy. It also includes personal grooming rules (hair, no hoodies) that stray beyond typical uniform guidelines and risk being unfairly restrictive or culturally insensitive.\n\nAnswer1 strikes a better balance between structure and flexibility, reflecting an understanding of adolescent needs and school environments.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -2973,13 +2973,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1 is a strong, structured set of lyrics with a clear narrative arc\u2014moving from suffering to triumph, using consistent imagery (fire, rain, storm, wings) and a rising, anthemic tone. The repetition of \u201cWe\u2019ve been through\u2026\u201d builds momentum, and the chorus-like refrain (\u201cWe\u2019re rising up, we\u2019re standing tall\u201d) provides emotional payoff. The closing line, though cut off, still lands with power.\n\nAnswer2 is also well-written, with vivid metaphors (\u201cmountain\u2019s tall,\u201d \u201cfire in my heart,\u201d \u201chope as my flame\u201d) and a more introspective, poetic tone. It feels personal and emotionally resonant, with a subtle shift from struggle to self-affirmation. The structure is more fluid and less repetitive, which gives it a lyrical elegance.\n\nBoth are high-quality. But Answer1 has greater cohesion as a song\u2014its repetitive structure and built-in chorus make it more memorable and singable, which is key for lyrics meant to overcome challenges (a rallying cry). Answer2 is lovely, but slightly more like a poem than a song.\n\n**Answer1 is superior in function and impact as lyrics.**\n\nAnswer1",
-                "Answer1  \nAnswer2  \nTie  \n\nAnswer1 delivers a powerful, rhythmic, and emotionally resonant set of lyrics with strong imagery (\"fire and the rain,\" \"stormy sea,\" \"breaking free,\" \"spreading our wings\"). It uses repetitive structure effectively for emphasis and builds toward a triumphant chorus-like refrain. The tone is uplifting and anthemic, fitting for a song about resilience.\n\nAnswer2 is equally compelling but more poetic and introspective. It employs nuanced metaphors (\"mountain\u2019s tall,\" \"lights a fire in my heart,\" \"hope as my flame\") and has a more lyrical, flowing cadence. It also adds emotional depth by connecting struggle to identity (\"dreamers and believers, fighters and the healers\") and ends with a quiet but firm resolve.\n\nBoth are well-crafted, emotionally authentic, and thematically aligned with overcoming challenges. Answer1 is more anthemic and suited for a pop or rock anthem; Answer2 feels more like a heartfelt ballad or spoken-word piece. Neither outshines the other in quality\u2014only in style.\n\nTie",
+                "Answer2",
+                "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
-                "Llama-3.1-8B-Instruct",
-                "Unknown",
+                "gpt-4.1",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         },
@@ -2996,7 +2996,7 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
-                "Answer1",
+                "Answer1 stands out for its richer imagery, more nuanced emotional progression, and tighter poetic structure. Each verse builds logically toward a powerful resolution, with vivid metaphors like \u201cmountain\u2019s tall,\u201d \u201cstorms may rage,\u201d and \u201chope as my flame\u201d that deepen the theme of resilience. The lyrics feel cohesive, deliberate, and artistically polished, with a strong sense of rhythm and rhyme without sounding forced.\n\nAnswer2 is earnest and has a motivational, anthem-like quality \u2014 suitable for group singalongs \u2014 but it relies heavily on repetition and somewhat generic phrases (\u201cfire and the rain,\u201d \u201cbroken and worn,\u201d \u201cstormy sea\u201d) that lack originality. The final lines feel abruptly cut off, leaving the song feeling unfinished. While emotionally stirring, it lacks the lyrical sophistication and earned emotional weight of Answer1.\n\nAnswer1 delivers a more complete, evocative, and artistically compelling portrayal of overcoming challenges.\n\nAnswer1",
                 "Answer1",
                 "Answer1"
             ],
@@ -3263,12 +3263,12 @@
             "result": [
                 "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer2"
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "Unknown",
                 "Unknown",
-                "gpt-4.1"
+                "Unknown"
             ]
         },
         {
@@ -3406,12 +3406,12 @@
             },
             "result": [
                 "Answer1  \nAnswer2  \nTie",
-                "Tie",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "Unknown",
-                "TIE",
+                "Unknown",
                 "Unknown"
             ]
         },
@@ -3477,7 +3477,7 @@
             },
             "result": [
                 "Answer1",
-                "Answer1\n\nAnswer1 provides a more comprehensive, cohesive, and nuanced evaluation of book quality, covering both fiction and nonfiction contexts, and integrating abstract qualities like emotional impact and purposeful engagement with the audience. It flows naturally as a unified paragraph, demonstrating thoughtful synthesis of criteria rather than a checklist. \n\nAnswer2, while well-structured and listing useful points, is incomplete (it cuts off mid-sentence at \"Author's voice\") and feels more like an outline than a fully developed answer. The lack of closure and the mechanical bullet-point format reduce its effectiveness as a reasoned response.\n\nSemantically, Answer1 is superior in depth, completeness, and articulation. \n\nAnswer1",
+                "Answer1",
                 "Answer1"
             ],
             "extracted_answers": [
@@ -3551,12 +3551,12 @@
             "result": [
                 "Answer2",
                 "Answer2",
-                "Answer2"
+                "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Llama-3.1-8B-Instruct"
             ]
         },
         {
@@ -3647,12 +3647,12 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer2"
+                "Answer1"
             ],
             "extracted_answers": [
                 "Llama-3.1-8B-Instruct",
                 "Llama-3.1-8B-Instruct",
-                "gpt-4.1"
+                "Llama-3.1-8B-Instruct"
             ]
         },
         {
@@ -3716,12 +3716,12 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
-                "Answer1",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer1",
                 "Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Unknown",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -3957,12 +3957,12 @@
             },
             "result": [
                 "Answer1",
-                "Tie",
+                "Answer1",
                 "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "TIE",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -4246,12 +4246,12 @@
             "result": [
                 "Answer1  \nAnswer2  \nTie",
                 "Answer2",
-                "Answer2"
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "Unknown",
                 "Llama-3.1-8B-Instruct",
-                "Llama-3.1-8B-Instruct"
+                "Unknown"
             ]
         }
     ],
@@ -4270,12 +4270,12 @@
             },
             "result": [
                 "Tie",
-                "Answer1  \nAnswer2  \nTie",
+                "Tie",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "TIE",
-                "Unknown",
+                "TIE",
                 "Unknown"
             ]
         },
@@ -4292,14 +4292,14 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie",
-                "Tie",
-                "Answer1"
+                "Answer1",
+                "Answer1",
+                "Tie"
             ],
             "extracted_answers": [
-                "Unknown",
-                "TIE",
-                "gpt-4.1"
+                "gpt-4.1",
+                "gpt-4.1",
+                "TIE"
             ]
         }
     ],
@@ -4319,12 +4319,12 @@
             "result": [
                 "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1"
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "Unknown",
                 "Unknown",
-                "Llama-3.1-8B-Instruct"
+                "Unknown"
             ]
         },
         {
@@ -4388,12 +4388,12 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie",
+                "Tie",
                 "Tie",
                 "Tie"
             ],
             "extracted_answers": [
-                "Unknown",
+                "TIE",
                 "TIE",
                 "TIE"
             ]
@@ -4462,12 +4462,12 @@
             },
             "result": [
                 "Answer2",
-                "Answer1 and Answer2 both provide accurate, comprehensive, and well-structured explanations of the significance of biodiversity in an ecosystem. They cover overlapping key points: resilience, nutrient cycling, pollination, climate regulation, human benefits (medicine, food, water), and consequences of loss.\n\nHowever, **Answer1** stands out slightly due to its **clearer organization** into enumerated, distinct points, making it more accessible and easier to digest. It also includes **specific examples** like \"ecotourism\" and \"seed dispersal,\" which add concrete context. While Answer2 is thorough and fluent, it is more dense and lacks the structured breakdown that enhances clarity and educational utility.\n\nThus, **Answer1** offers a slightly superior presentation of the same high-quality content.\n\nAnswer1",
+                "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "Llama-3.1-8B-Instruct",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         },
@@ -4725,13 +4725,13 @@
             },
             "result": [
                 "Answer1  \nAnswer2  \nTie",
-                "Tie",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer1  \nAnswer2  \nTie",
+                "Tie"
             ],
             "extracted_answers": [
                 "Unknown",
-                "TIE",
-                "Unknown"
+                "Unknown",
+                "TIE"
             ]
         }
     ],
@@ -4749,12 +4749,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1",
-                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a specific numerical value for Jupiter\u2019s diameter (142,984 kilometers) and mentions its composition (hydrogen and helium) and notable atmospheric feature (stormy atmosphere), adding a bit more scientific detail. Answer2 is also accurate and mentions Jupiter\u2019s mass relative to other planets, which Answer1 omits.\n\nBoth answers are factually correct, clear, and concise. Answer1 gives more quantitative detail about size, while Answer2 adds valuable context about mass. Since the question only asks for the largest planet (which could refer to size or mass), and both responses cover key relevant facts without error, they are of equal quality.\n\nTie",
-                "Answer1  \nAnswer2  \nTie\n\nBoth Answer1 and Answer2 are factually accurate and clearly convey that Jupiter is the largest planet in the solar system. Answer1 provides a specific diameter figure (142,984 km) and mentions its composition (hydrogen and helium) and stormy atmosphere, adding useful detail. Answer2 emphasizes Jupiter\u2019s mass relative to other planets and uses the terms \"most massive and voluminous,\" which is scientifically precise. \n\nWhile Answer1 offers slightly more concrete data, Answer2 concisely captures two key metrics (mass and volume) without redundancy. Both are equally strong in semantic quality, accuracy, and clarity.\n\nTie"
+                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a specific numerical value for Jupiter\u2019s diameter (142,984 kilometers), which adds precision and factual depth. It also mentions Jupiter\u2019s composition (hydrogen and helium) and its stormy atmosphere, offering additional context that enhances the answer's richness.\n\nAnswer2 is also accurate and concise, correctly stating that Jupiter is more than 11 times Earth\u2019s diameter and more massive than all other planets combined \u2014 a key point that Answer1 omits. However, it lacks the specific diameter figure and the detail about atmospheric characteristics.\n\nBoth answers are factually correct and clear. Answer1 has an edge in specificity, while Answer2 has an edge in highlighting mass comparison. Since the question only asks for the largest planet and does not specify what \"largest\" means (diameter vs. mass), both answers provide complementary strengths. However, **diameter is the conventional metric used when defining \"largest\" planet**, and Answer1\u2019s inclusion of that exact number gives it a slight advantage in precision and completeness.\n\nBut \u2014 Answer2 correctly notes that Jupiter has *more mass than all other planets combined*, which is a major, distinctive, and often-overlooked fact. That detail significantly enhances its value.\n\nGiven the **semantic quality**: both are excellent, with Answer1 offering exact measurements and Answer2 offering a uniquely insightful comparative fact. Neither contains errors. Neither is misleading.\n\nTherefore, **both are top-tier**.\n\nTie",
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides slightly more specific numerical detail (142,984 kilometers) and mentions the composition of Jupiter (hydrogen and helium) as well as its stormy atmosphere, which adds context beyond just size. Answer2 is also correct and concise, emphasizing Jupiter\u2019s mass relative to other planets, which is a valuable point. However, Answer1 offers marginally more informative detail without redundancy or error.\n\nWhile both are accurate and well-phrased, Answer1\u2019s inclusion of precise figures and atmospheric characteristics gives it a slight edge in depth and completeness.\n\nAnswer1"
             ],
             "extracted_answers": [
-                "Llama-3.1-8B-Instruct",
+                "Unknown",
                 "Unknown",
                 "Unknown"
             ]
@@ -4772,7 +4772,7 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie\n\nBoth answers are accurate, clear, and provide relevant details about Jupiter being the largest planet in the solar system. Answer1 emphasizes its mass relative to other planets, while Answer2 includes a specific diameter figure and mentions composition and atmosphere. Neither contains errors, and both are semantically high-quality. The differences are merely in emphasis\u2014not in correctness or clarity.\n\n**Tie**",
+                "Answer1  \nAnswer2  \nTie\n\nTie",
                 "Answer2",
                 "Answer2"
             ],
@@ -4870,12 +4870,12 @@
             "result": [
                 "Answer2",
                 "Answer2",
-                "Answer2"
+                "Answer1  \nAnswer2  \nTie  \n\nBoth answers are accurate, clear, and provide correct etymological information about the word \"pentagon.\" Answer1 correctly states that a pentagon has five sides and mentions the Greek origin of \"penta-\" meaning \"five,\" along with noting the five angles. Answer2 adds the detail about the suffix \"-gon\" meaning \"angle or corner,\" which enhances the explanation slightly\u2014but both are factually correct and semantically strong. Neither contains errors or deficiencies. Since both are of equal quality, the best choice is a tie.\n\nTie"
             ],
             "extracted_answers": [
                 "Llama-3.1-8B-Instruct",
                 "Llama-3.1-8B-Instruct",
-                "Llama-3.1-8B-Instruct"
+                "Unknown"
             ]
         }
     ],
@@ -4893,9 +4893,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie\n\nAnswer2 provides more precise scientific details \u2014 specifically mentioning that oxygen is a nonmetal, its atomic number (8), and correctly notes it as the most abundant element in the Earth\u2019s crust, which adds valuable context beyond basic description. Answer1 is accurate and informative but slightly less detailed in key scientific terms. Answer2 offers a more technically robust answer without unnecessary embellishment.\n\nAnswer2",
-                "Answer1  \nAnswer2  \nTie\n\nBoth answers are accurate and provide relevant, scientifically correct information about the element oxygen. Answer1 highlights its role in the atmosphere and in water/organic compounds, while Answer2 mentions its classification as a nonmetal, its role in respiration, and its atomic number. Both are concise, clear, and informative\u2014neither contains errors or omissions of major significance. The differences are stylistic and in emphasis, not in quality or accuracy.\n\nTie",
-                "Answer1  \nAnswer2  \nTie\n\nBoth answers are accurate and provide relevant, correct information about the element with the symbol 'O'. \n\n- Answer1 correctly identifies oxygen and adds useful context about its physical properties (colorless, odorless, tasteless), its abundance in the atmosphere (21%), and its role in water and organic compounds.\n- Answer2 also correctly identifies oxygen, notes it is a nonmetal gas, highlights its role in respiration, mentions its abundance in the Earth\u2019s crust, and includes its atomic number (8), which is a technical detail not provided in Answer1.\n\nBoth responses are semantically strong, informative, and error-free. Answer1 emphasizes atmospheric and biological relevance, while Answer2 adds geological and atomic context. Neither is superior in overall quality\u2014just different in emphasis.\n\nTherefore, the best choice is:\n\nTie"
+                "Answer1  \nAnswer2  \nTie\n\nBoth Answer1 and Answer2 are accurate and provide correct information about the element with the symbol 'O'. \n\n- Answer1 correctly identifies oxygen, describes its physical state, mentions its role in the atmosphere and in water/organic compounds, and is clear and accessible.\n- Answer2 also correctly identifies oxygen, adds its classification as a nonmetal, emphasizes its role in respiration, and includes its atomic number\u2014useful scientific detail.\n\nBoth answers are semantically strong, factually correct, and provide relevant context. Neither contains errors or omissions of consequence, and both are appropriately detailed for the question asked.\n\nThus, they are equally good.\n\nTie",
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie\n\nBoth answers are accurate and provide relevant, scientifically correct information about the element oxygen. Answer1 emphasizes its role in the atmosphere and its presence in water and organic compounds, while Answer2 highlights its classification as a nonmetal, its role in respiration, and its atomic number. Neither contains errors, and both add valuable context beyond the basic fact. The difference is stylistic and contextual, not in quality or accuracy.\n\nTie"
             ],
             "extracted_answers": [
                 "Unknown",
@@ -4916,8 +4916,8 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie\n\nTie",
                 "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie\n\nTie",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
@@ -4943,7 +4943,7 @@
             "result": [
                 "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer1  \nAnswer2  \nTie\n\n**Evaluation:**\n\nBoth Answer1 and Answer2 are accurate, clear, and provide the correct freezing point of water as 32 degrees Fahrenheit. Both correctly link this temperature to the phase change from liquid to solid and mention normal atmospheric pressure (Answer2 explicitly, Answer1 implicitly via \u201cstandard reference point\u201d). Answer1 adds the note about it being the melting point of ice, which is scientifically valid and enhances understanding. Answer2 emphasizes the historical design of the Fahrenheit scale, which adds useful context.\n\nThe difference between them is minimal: Answer1 slightly expands on equivalence with melting point; Answer2 slightly clarifies \u201cnormal atmospheric pressure.\u201d Neither contains errors, and both are concise and informative.\n\nThus, both answers are of equal quality in terms of accuracy, clarity, and completeness.\n\n**Tie**"
             ],
             "extracted_answers": [
                 "Unknown",
@@ -5060,14 +5060,14 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
+                "Answer1  \nAnswer2  \nTie",
                 "Answer1",
-                "Answer1",
-                "Answer1  \nAnswer2  \n\nTie"
+                "Answer2"
             ],
             "extracted_answers": [
+                "Unknown",
                 "gpt-4.1",
-                "gpt-4.1",
-                "Unknown"
+                "Llama-3.1-8B-Instruct"
             ]
         }
     ],
@@ -5085,12 +5085,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                "Answer1",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie\n\nBoth answers are accurate, clear, and concise. They correctly identify J.K. Rowling as the author and mention key details such as her nationality, the magical world of Harry Potter, and the seven-book series. Answer1 adds a bit more context by mentioning Hogwarts, while Answer2 notes the movie adaptations. Neither contains errors, and both provide equivalent semantic quality. The differences are minor and stylistic.\n\nTie"
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
-                "Unknown",
+                "Llama-3.1-8B-Instruct",
                 "Unknown",
                 "Unknown"
             ]
@@ -5181,7 +5181,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie\n\nBoth answers are factually accurate, concise, and provide relevant context about the Titanic\u2019s sinking in 1912, including the date, cause (iceberg), and the tragic loss of life. Answer1 mentions the ship\u2019s full designation (\u201cRMS Titanic\u201d) and departure details implied by \u201cBritish passenger liner,\u201d while Answer2 specifies the route (\u201cfrom Southampton to New York\u201d) and uses slightly more evocative phrasing (\u201cmost famous maritime tragedies\u201d). Neither has a significant advantage in semantic quality\u2014both are clear, correct, and complete.  \n\nTie",
                 "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie\n\nTie"
             ],
@@ -5206,12 +5206,12 @@
             "result": [
                 "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer2"
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "Unknown",
                 "Unknown",
-                "Llama-3.1-8B-Instruct"
+                "Unknown"
             ]
         }
     ],
@@ -5278,12 +5278,12 @@
             },
             "result": [
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie",
+                "Answer2",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "Unknown",
-                "Unknown",
+                "gpt-4.1",
                 "Unknown"
             ]
         },
@@ -5301,12 +5301,12 @@
             },
             "result": [
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie",
+                "Answer1",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "Unknown",
-                "Unknown",
+                "gpt-4.1",
                 "Unknown"
             ]
         }
@@ -5326,12 +5326,12 @@
             },
             "result": [
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie",
+                "Tie",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "Unknown",
-                "Unknown",
+                "TIE",
                 "Unknown"
             ]
         },
@@ -5397,12 +5397,12 @@
             },
             "result": [
                 "Answer2",
-                "Answer2",
+                "Tie",
                 "Answer2"
             ],
             "extracted_answers": [
                 "Llama-3.1-8B-Instruct",
-                "Llama-3.1-8B-Instruct",
+                "TIE",
                 "Llama-3.1-8B-Instruct"
             ]
         }
@@ -5711,12 +5711,12 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1  \nAnswer2  \nTie\n\nBoth answers are accurate and convey the same essential information: Charles Darwin studied finches on the Gal\u00e1pagos Islands, and observations of their beak variations contributed to his theory of natural selection. Answer1 provides slightly more context by mentioning the HMS Beagle and the collection of specimens, while Answer2 is more concise but equally correct. Neither contains errors, and both demonstrate strong semantic quality. Therefore, the difference is negligible.\n\nTie"
+                "Answer1"
             ],
             "extracted_answers": [
                 "Llama-3.1-8B-Instruct",
                 "Llama-3.1-8B-Instruct",
-                "Unknown"
+                "Llama-3.1-8B-Instruct"
             ]
         },
         {
@@ -5829,12 +5829,12 @@
             },
             "result": [
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie",
+                "Answer1",
                 "Answer1"
             ],
             "extracted_answers": [
                 "Unknown",
-                "Unknown",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -5853,13 +5853,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1",
-                "Answer1",
+                "Answer2",
+                "Answer2\n\nAnswer2 provides a more concise, accurate, and logically structured explanation of the scientific method as applied to hypothesis testing. It emphasizes critical elements such as identifying variables, using controls, revising hypotheses when needed, replication, and transparency\u2014key components often omitted or underemphasized in Answer1. While Answer1 lists steps correctly, it prematurely cuts off mid-example and lacks the depth of reasoning about iteration and scientific rigor present in Answer2. Answer2 better reflects the iterative and self-correcting nature of science, making it the superior response in terms of semantic quality and accuracy.",
                 "Answer2"
             ],
             "extracted_answers": [
-                "Llama-3.1-8B-Instruct",
-                "Llama-3.1-8B-Instruct",
+                "gpt-4.1",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         },
@@ -6141,7 +6141,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2",
+                "Answer1 and Answer2 are both accurate, clear, and provide a complete explanation of how photosynthesis relies on sunlight. Both correctly identify the role of sunlight as the energy source for converting CO\u2082 and water into glucose, and both explain the consequences of its absence.\n\nAnswer1 is slightly more formal and emphasizes the broader physiological impact on growth, development, and reproduction.  \nAnswer2 adds helpful detail about chloroplasts and chlorophyll, which gives a more mechanistic understanding of *how* sunlight is captured \u2014 this enhances the scientific depth without overcomplicating.\n\nThe inclusion of chlorophyll and chloroplasts in Answer2 makes it more informative and pedagogically stronger, as it explains the biological mechanism behind sunlight absorption, not just the functional outcome.\n\nTherefore, Answer2 provides a slightly more comprehensive and insightful explanation.\n\nAnswer2",
                 "Answer1  \nAnswer2  \nTie\n\nAnswer2",
                 "Answer1  \nAnswer2  \nTie\n\nAnswer2"
             ],
@@ -6164,7 +6164,7 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie\n\nTie",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie"
             ],
@@ -6453,7 +6453,7 @@
             },
             "result": [
                 "Answer1",
-                "Answer1 is superior because it offers a comprehensive, well-structured, and practical approach to planning a healthy weekly menu. It clearly explains how to balance food groups, emphasizes meal timing, cooking methods, hydration, portion control, and flavor variety\u2014all key components of nutritional planning. It also avoids being overly rigid or incomplete.\n\nAnswer2 starts well but is cut off mid-sentence in the Wednesday dinner entry, making it incomplete and unprofessional. Additionally, while it includes helpful steps and a sample menu, the abrupt ending undermines its usefulness. The first answer, in contrast, is fully developed and provides actionable guidance without relying on an unfinished example.\n\nQuality and completeness matter greatly in nutritional advice, and Answer1 delivers that consistently.\n\nAnswer1",
+                "Answer1",
                 "Answer1"
             ],
             "extracted_answers": [
@@ -6549,13 +6549,13 @@
             },
             "result": [
                 "Answer1",
-                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a clear, accurate explanation of PEMDAS with a detailed example that walks through each step methodically, including handling nested operations. It emphasizes the left-to-right rule for same-level operations and uses real arithmetic to illustrate the process.\n\nAnswer2 is also correct and well-structured, with a clean, step-by-step application to a concrete example. It uses proper notation and avoids ambiguity. However, it doesn't explicitly mention handling grouping symbols beyond parentheses or reinforce the left-to-right rule as clearly as Answer1 does.\n\nBoth are accurate, but Answer1 offers slightly more comprehensive context and reinforces key nuances (e.g., left-to-right for same-priority operations), making it more robust for a learner needing a full understanding.\n\nAnswer1",
-                "Answer2"
+                "Answer1",
+                "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "Unknown",
-                "Llama-3.1-8B-Instruct"
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         }
     ],
@@ -6621,12 +6621,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1",
+                "Answer2",
                 "Answer1",
                 "Answer1"
             ],
             "extracted_answers": [
-                "Llama-3.1-8B-Instruct",
+                "gpt-4.1",
                 "Llama-3.1-8B-Instruct",
                 "Llama-3.1-8B-Instruct"
             ]
@@ -6692,7 +6692,7 @@
                 "label": "Llama-3.1-8B-Instruct"
             },
             "result": [
-                "Answer1 is more focused and accurate in its explanation, sticking cleanly to Newton\u2019s first law (inertia) to explain why seat belts are necessary \u2014 which is the core and most direct physical principle at play. It clearly describes the scenario: the car stops, the passenger keeps moving, and the seat belt provides the external force to decelerate the passenger safely.\n\nAnswer2 introduces Newton\u2019s second law (F=ma) and discusses force distribution and reduced acceleration \u2014 which, while not incorrect, is a bit misleading in context. Seat belts don't reduce the *acceleration* (deceleration) of the body; they *increase the time* over which the deceleration occurs, thereby reducing the *force* (since F = \u0394p/\u0394t, or impulse). However, Answer2 phrases it as \u201creducing the acceleration,\u201d which is physically inaccurate \u2014 acceleration (deceleration) magnitude remains largely the same in a crash; it's the *duration* that changes. This misstatement weakens the scientific validity of Answer2.\n\nAnswer1 avoids this technical error, stays precise, and gives a clear, correct, and properly scoped explanation using the most relevant law of motion.\n\n**Answer1**",
+                "Answer1\n\nWhile both answers correctly reference Newton\u2019s first law (inertia) to explain why passengers continue moving forward during a sudden stop, Answer1 provides a clearer, more coherent, and more complete explanation that directly ties the function of the seat belt to the law of motion. It explicitly states that the seat belt provides the \u201cexternal force\u201d needed to stop the passenger \u2014 which is the core mechanistic link requested by the question.\n\nAnswer2 introduces Newton\u2019s second law (F=ma), which is not incorrect, but it does so in a somewhat vague and imprecise way. It says the seatbelt \u201creduces the acceleration\u201d \u2014 but actually, the acceleration (deceleration) of the passenger is determined by the crash dynamics; the seat belt doesn\u2019t change the acceleration, it increases the time over which deceleration occurs, which reduces the *force* (since F = \u0394p/\u0394t). Answer2 misrepresents the physics slightly by implying the seat belt reduces acceleration rather than increasing time to reduce force.\n\nAnswer1 avoids this potential misstatement, sticks closely to the first law, and gives a more accurate and pedagogically sound explanation tailored exactly to the question: \u201cexplain why seat belts are necessary using the laws of motion.\u201d It\u2019s simpler, more precise, and fully correct.\n\nTherefore, Answer1 is superior.\n\nAnswer1",
                 "Answer1",
                 "Answer1"
             ],

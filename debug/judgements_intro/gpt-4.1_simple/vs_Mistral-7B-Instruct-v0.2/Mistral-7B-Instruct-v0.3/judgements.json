@@ -68,9 +68,9 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
+                " 'Answer1'\n\nThe Answer1 provides a more relatable historical event (the fall of the Berlin Wall) and explains the process of historical analysis in an engaging and clear manner by using a step-by-step example. Additionally, it discusses the long-term effects and various perspectives of the event, making the example more relevant and informative.\n\nOn the other hand, Answer2 focuses mainly on the process and techniques of historical analysis, using the American Revolution as an example. However, it lacks the detailed explanation and the relatability factor that Answer1 offers. While the structure and steps are essential, the explanation in Answer2 can seem too formulaic and misses the engagement factor that Answer1 provides.\n\nIn conclusion, Answer1 provides a superior explanation of historical analysis by demonstrating the process using a relatable event and offering additional insights, making it a more engaging and informative response.",
                 " Answer1",
-                " 'Answer1'",
-                " 'Answer1'\n\nExplanation: Answer1 provides a more practical and straightforward explanation of historical analysis, using a recent historical event (the fall of the Berlin Wall) as an example. It effectively breaks down the process into clear and understandable steps that a reader can follow. Answer2, while providing a solid explanation of the process, is more abstract and less engaging for a reader not familiar with the American Revolution. It primarily focuses on the American Revolution as an example, making it less universally applicable. Answer1 is therefore a superior response in terms of quality and accessibility."
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -93,14 +93,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer2",
-                " 'Answer2'",
-                " Tie"
+                " 'Answer1'",
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "gpt-4.1",
-                "TIE"
+                "Mistral-7B-Instruct-v0.2",
+                "Mistral-7B-Instruct-v0.2",
+                "Mistral-7B-Instruct-v0.2"
             ]
         },
         {
@@ -164,14 +164,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer2",
                 " Tie",
-                " Tie. Both responses provide a comprehensive and accurate answer to the question, listing the components of a healthy balanced meal and explaining their roles in providing proper nutrition. They both offer clear explanations and provide examples of food sources for each component. The second answer offers a slightly more concise and structured response, while the first answer provides a more detailed explanation, including information about how each component helps various body functions. Ultimately, both provide equally high-quality answers."
+                " 'Answer2'",
+                " Answer2"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
                 "TIE",
-                "Unknown"
+                "Mistral-7B-Instruct-v0.2",
+                "Mistral-7B-Instruct-v0.2"
             ]
         }
     ],
@@ -189,12 +189,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie. Both answers provide a comprehensive and accurate explanation of the connection and importance of organs in a digestive system. However, Answer2 simplifies the explanation slightly more, making it more accessible to readers unfamiliar with the anatomy and function of the digestive system. Answer1 provides slightly more detail about the role of specific substances in breaking down food, which may be beneficial to readers seeking a more academic or detailed explanation. In terms of overall quality, both answers are excellent and equally suitable for answering the question.",
-                " Tie. Both answer1 and answer2 provide a comprehensive and accurate response to the question about the interconnected organs of the digestive system. However, answer2 might be slightly more concise and easier for a beginner to understand.",
+                " Tie",
+                " Tie. Both responses provide clear and accurate information about the function and connection of the organs in the digestive system, and they both could reasonably help the inquirer understand the question. Both responses emphasize the role of each organ and the overall process of digestion and nutrient absorption in the system.",
                 " Tie"
             ],
             "extracted_answers": [
-                "Unknown",
+                "TIE",
                 "Unknown",
                 "TIE"
             ]
@@ -212,14 +212,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer1 is the superior answer as it provides a more comprehensive and detailed response to the question. While Answer2 correctly lists the organs of the digestive system and their general roles, Answer1 provides a step-by-step process of how food moves through the digestive system and how each organ contributes to the process, including the important functions of the pancreas and liver, which are not mentioned in Answer2. Therefore, Answer1 is the better answer in terms of quality and accuracy.",
                 " Answer1",
-                " Answer1"
+                " Answer1",
+                " 'Answer1' (because it provides a more comprehensive and detailed explanation of the role and connection of each organ in the digestive system)."
             ],
             "extracted_answers": [
-                "Unknown",
                 "gpt-4.1",
-                "gpt-4.1"
+                "gpt-4.1",
+                "Unknown"
             ]
         }
     ],
@@ -237,14 +237,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
                 " Answer1",
-                " Tie"
+                " Tie",
+                " 'Answer1' (The first answer provides a more in-depth analysis, including two types of frictional forces (static and rolling) and a clearer explanation of air resistance and the normal force.)"
             ],
             "extracted_answers": [
-                "TIE",
                 "Mistral-7B-Instruct-v0.2",
-                "TIE"
+                "TIE",
+                "Unknown"
             ]
         },
         {
@@ -287,7 +287,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
@@ -308,9 +308,9 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer2",
-                " Answer2",
-                " Answer2"
+                " 'Answer2'",
+                " 'Answer2'",
+                " 'Answer2'"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
@@ -334,12 +334,12 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " Tie",
                 " Answer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
+                "TIE",
                 "Mistral-7B-Instruct-v0.2"
             ]
         },
@@ -357,13 +357,13 @@
             },
             "result": [
                 " 'Answer2'",
-                " Answer2",
-                " Tie"
+                " Tie",
+                " Answer2"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
-                "TIE"
+                "TIE",
+                "Mistral-7B-Instruct-v0.2"
             ]
         }
     ],
@@ -381,7 +381,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -404,13 +404,13 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
+                " 'Answer1'",
                 " Tie",
-                " Answer1",
-                " Tie, both responses offer comprehensive and accurate information. They both cover the arrangement of elements by atomic number, the role of valence electrons in the same group, and the changing properties across a period and down a group. Each offers slightly different but still correct insights, such as the impact of large energy levels on atomic size (Answer1) and the trend of ionization energy across a period (Answer2). Both responses provide equally good answers, and a tie is the appropriate choice in this case."
+                " 'Answer1' (The response is clearer, more comprehensive, and provides a more detailed explanation of how the elements are related and differ, including mention of the difference in physical properties such as form, color, density, and melting point, as well as divisions like metals, nonmetals, and metalloids.)"
             ],
             "extracted_answers": [
-                "TIE",
                 "gpt-4.1",
+                "TIE",
                 "Unknown"
             ]
         }
@@ -429,13 +429,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
-                " Answer1",
-                " Answer1"
+                " 'Answer1'",
+                " Tie",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
+                "TIE",
                 "Mistral-7B-Instruct-v0.2"
             ]
         },
@@ -452,14 +452,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer1",
                 " Tie",
-                " Tie"
+                " Tie",
+                " Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "TIE",
-                "TIE"
+                "TIE",
+                "gpt-4.1"
             ]
         }
     ],
@@ -479,12 +479,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1' (The response provides a comprehensive explanation of the causes of global temperature increase, including human activities, natural factors, and feedback loops, while also acknowledging the relative influence of each factor.)"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2"
+                "Unknown"
             ]
         },
         {
@@ -502,7 +502,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -525,12 +525,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer2'",
-                " 'Answer2'",
-                " Answer2"
+                " Tie",
+                " Answer2",
+                " 'Answer2'"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -549,12 +549,12 @@
             },
             "result": [
                 " Answer1",
-                " Answer1 (This response provides a more detailed explanation of how each ingredient contributes to the final flavor and texture of a burger, including the balance and contrast of various flavors and textures that contribute to the overall taste.)",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "Unknown",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -573,9 +573,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
@@ -596,14 +596,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
+                " Tie. Both answers provide a clear, concise, and accurate explanation of the key components of a complete sentence and their roles. Answer1 offers a more casual and comprehensive explanation, while Answer2 is more formal and provides the technical terminology (finite verb, subject-verb-object structure). The slight difference in these two responses does not yield a noticeable disparity in the quality of their explanations, making it hard to choose a superior answer.",
                 " Answer1",
-                " 'Answer1'",
-                " Answer1 (The first response provides a more comprehensive and accessible explanation, including additional information about objects and adverbs to make the meaning clear, and illustrating the explanation with examples.)"
+                " Answer1"
             ],
             "extracted_answers": [
+                "Unknown",
                 "gpt-4.1",
-                "gpt-4.1",
-                "Unknown"
+                "gpt-4.1"
             ]
         }
     ],
@@ -622,7 +622,7 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -644,12 +644,12 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Tie",
+                " 'Answer1'",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -671,7 +671,7 @@
             "result": [
                 " Answer1",
                 " 'Answer1'",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
@@ -692,12 +692,12 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Tie",
-                " 'Answer2'",
+                " Answer2",
+                " Answer2",
                 " Tie"
             ],
             "extracted_answers": [
-                "TIE",
+                "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
                 "TIE"
             ]
@@ -740,14 +740,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Tie",
                 " Answer1",
-                " Answer1"
+                " Answer1",
+                " Answer2"
             ],
             "extracted_answers": [
-                "TIE",
                 "gpt-4.1",
-                "gpt-4.1"
+                "gpt-4.1",
+                "Mistral-7B-Instruct-v0.2"
             ]
         }
     ],
@@ -766,12 +766,12 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " 'Answer1' (The answer is more comprehensive, detailed, and structured, providing a clear listing of the causes and effects of deforestation on the local ecosystem.)",
                 " Answer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
+                "Unknown",
                 "Mistral-7B-Instruct-v0.2"
             ]
         },
@@ -790,7 +790,7 @@
             "result": [
                 " Answer2",
                 " Answer2",
-                " Answer2"
+                " 'Answer2'"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
@@ -813,12 +813,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
-                " Answer1",
+                " Tie",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
+                "TIE",
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
@@ -836,14 +836,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer2",
-                " Answer2",
-                " Answer2"
+                " 'Answer2'",
+                " Tie. Both answers provide extensive and accurate explanations of the water cycle and its interconnected stages, and why each step is important. The first answer offers a more conversational style, while the second answer provides slightly more technical language and terminology, such as \"hydrologic cycle,\" \"evapotranspiration,\" and \"redistribution of heat and moisture around the planet.\" This is a good example of how different approaches can still result in equally valid and informative responses.",
+                " Answer2 is superior because it provides a more comprehensive and precise explanation of the water cycle stages and their roles in the overall process, incorporating scientific terminology such as \"hydrologic cycle\" and \"transpiration\". Additionally, it provides a concise summary of each stage's purpose in maintaining the Earth's water supply and regulating the climate. Overall, Answer2 offers a more informative and educative response.\n\nAnswer1 provides a good explanation of the water cycle, but it lacks the precise terminology and explanations provided in Answer2. For example, it incorrectly states that plants let out \"water vapor\" when what is being released is water, and the sun \"heats up water\" instead of \"water in oceans, lakes, and rivers.\" Additionally, Answer1 does not emphasize the importance of each stage as much as Answer2 does.\n\nTherefore, the superior answer is Answer2."
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2"
+                "Unknown",
+                "Unknown"
             ]
         }
     ],
@@ -861,13 +861,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1 is the superior answer. It more explicitly states the specific roles of each player (forwards, midfielders, defenders, and goalkeepers) and elucquently describes how these roles form a cohesive team by mentioning effective communication, teamwork, and positioning. The answer also touches upon the notion of adapting to the game situation, which is important for a soccer team. Answer2 provides a general description of the roles, but it is less detailed and doesn't refer to adaptation or unique aspects that make Answer1 a more well-rounded response.",
-                " Tie",
-                " 'Answer1'"
+                " Answer1",
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
-                "Unknown",
-                "TIE",
+                "Mistral-7B-Instruct-v0.2",
+                "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
         },
@@ -884,12 +884,12 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer1",
+                " Answer2",
                 " Answer1",
                 " Answer2"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Mistral-7B-Instruct-v0.2",
                 "gpt-4.1",
                 "Mistral-7B-Instruct-v0.2"
             ]
@@ -909,14 +909,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
-                " Answer1",
-                " Answer1"
+                " Tie",
+                " 'Answer1' (more detailed and accurate in answering the question by explaining the role and function of each structure in the plant cell and their collaboration towards supporting the cell's function)",
+                " Tie"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2"
+                "TIE",
+                "Unknown",
+                "TIE"
             ]
         },
         {
@@ -933,12 +933,12 @@
             },
             "result": [
                 " Answer2",
-                " Tie",
-                " Answer2"
+                " Answer2",
+                " 'Answer2'"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "TIE",
+                "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
         }
@@ -958,13 +958,13 @@
             },
             "result": [
                 " Answer1",
-                " Tie",
-                " Answer1"
+                " Answer1",
+                " Tie"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "TIE",
-                "Mistral-7B-Instruct-v0.2"
+                "Mistral-7B-Instruct-v0.2",
+                "TIE"
             ]
         },
         {
@@ -981,12 +981,12 @@
             },
             "result": [
                 " 'Answer1'",
-                " 'Answer1'",
+                " Tie",
                 " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
+                "TIE",
                 "TIE"
             ]
         }
@@ -1005,14 +1005,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
-                " Answer1",
-                " Answer1"
+                " 'Answer1'",
+                " Tie. Both answers provide accurate and complete explanations of the relationship between portions and ratios in a recipe, addressing the importance of consistency in cooking and baking by maintaining the same ratios regardless of serving size. However, the second answer centers more on the individual concept of a portion, which is not the primary focus of the question.",
+                " Tie"
             ],
             "extracted_answers": [
-                "TIE",
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2"
+                "Unknown",
+                "TIE"
             ]
         },
         {
@@ -1028,9 +1028,9 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " 'Answer2'",
-                " 'Answer2'",
-                " Answer2"
+                " Answer2",
+                " Answer2",
+                " 'Answer2'"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
@@ -1055,12 +1055,12 @@
             "result": [
                 " 'Answer1'",
                 " Answer1",
-                " Answer1"
+                " Tie"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2"
+                "TIE"
             ]
         },
         {
@@ -1076,13 +1076,13 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Tie",
-                " Tie",
+                " 'Answer2'",
+                " Answer2",
                 " Tie"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
+                "Mistral-7B-Instruct-v0.2",
+                "Mistral-7B-Instruct-v0.2",
                 "TIE"
             ]
         }
@@ -1101,8 +1101,8 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -1124,13 +1124,13 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
+                " 'Answer1'",
                 " Answer2",
-                " Answer1",
                 " Answer2"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
                 "gpt-4.1",
+                "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
         }
@@ -1150,12 +1150,12 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " 'Answer1' (The response provides a more comprehensive and detailed explanation of the impacts of deforestation, including references to nutrient cycles, water regulation, soil quality, water availability, climate change, erosion, landslides, and air quality. The language used is also more scientific, which may be appreciated by the questioner who is presumably studying or interested in the topic.)",
                 " Answer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
+                "Unknown",
                 "Mistral-7B-Instruct-v0.2"
             ]
         },
@@ -1172,7 +1172,7 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " 'Answer2'",
+                " Answer2",
                 " Answer2",
                 " Answer2"
             ],
@@ -1197,9 +1197,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " 'Answer1'"
+                " 'Answer1'",
+                " Answer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
@@ -1220,12 +1220,12 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
+                " Answer 2",
                 " Answer2",
-                " Answer2",
-                " 'Answer2'"
+                " Answer2"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
+                "Unknown",
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
@@ -1246,7 +1246,7 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -1270,12 +1270,12 @@
             "result": [
                 " Answer1",
                 " Tie",
-                " Tie"
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "TIE",
-                "TIE"
+                "gpt-4.1"
             ]
         }
     ],
@@ -1293,14 +1293,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
-                " 'Answer1'",
-                " Answer1"
+                " Answer1",
+                " Answer1",
+                " Tie"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2"
+                "TIE"
             ]
         },
         {
@@ -1316,14 +1316,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " Answer1"
+                " Answer1",
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "TIE"
             ]
         }
     ],
@@ -1365,12 +1365,12 @@
             },
             "result": [
                 " Answer2",
-                " Answer2",
+                " Tie",
                 " Answer2"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
+                "TIE",
                 "Mistral-7B-Instruct-v0.2"
             ]
         }
@@ -1390,12 +1390,12 @@
             },
             "result": [
                 " Tie",
-                " Tie",
+                " Answer1",
                 " Tie"
             ],
             "extracted_answers": [
                 "TIE",
-                "TIE",
+                "Mistral-7B-Instruct-v0.2",
                 "TIE"
             ]
         },
@@ -1412,13 +1412,13 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
+                " Answer1",
                 " Tie",
-                " 'Answer1'",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
                 "gpt-4.1",
+                "TIE",
                 "gpt-4.1"
             ]
         }
@@ -1438,12 +1438,12 @@
             },
             "result": [
                 " Answer1",
-                " Tie",
-                " 'Answer1'"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "TIE",
+                "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
         },
@@ -1461,13 +1461,13 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
-                " 'Answer1'"
+                " Answer1",
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "TIE"
             ]
         }
     ],
@@ -1485,12 +1485,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
+                " 'Answer1'",
                 " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
+                "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
@@ -1508,13 +1508,13 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer2",
-                " Answer2",
+                " Tie",
+                " Tie",
                 " Tie"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
+                "TIE",
+                "TIE",
                 "TIE"
             ]
         }
@@ -1533,12 +1533,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Tie",
                 " Answer1",
-                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
+                "TIE",
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
@@ -1557,13 +1557,13 @@
             },
             "result": [
                 " Answer2",
-                " Tie\n\nBoth Answer1 and Answer2 provide correct and detailed explanations for the question, but their approaches are slightly different. Answer1 delves into the Earth's rotation and its relation to light, whereas Answer2 discusses the tilt of Earth's axis relative to its orbit, causing the differences in the angle of sunlight at different locations and times. Ultimately, the two responses offer complementary perspectives, and both would help in understanding the concept of day and night.",
-                " Tie. Both answers are accurate and correctly describe the reason we have day and night, but they approach the explanation from different angles. Answer 1 provides a straightforward explanation, focusing on the Earth's rotation and the corresponding relationship between the Earth, Sun, and light. Answer 2 delves deeper into the cause of day and night, elaborating on the tilt of the Earth's axis of rotation and its impact on the Solar angle throughout the year. Both answers offer valuable insights into the topic, making it challenging to determine a clear winner."
+                " Answer2",
+                " Answer2"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "TIE",
-                "Unknown"
+                "Mistral-7B-Instruct-v0.2",
+                "Mistral-7B-Instruct-v0.2"
             ]
         }
     ],
@@ -1582,7 +1582,7 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -1605,12 +1605,12 @@
             },
             "result": [
                 " Answer1",
-                " Tie",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "TIE",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -1653,12 +1653,12 @@
             },
             "result": [
                 " Answer2",
-                " Answer2",
+                " Tie. Both answers accurately describe the metamorphosis process of a butterfly and provide a clear sequence of the stages, including egg, caterpillar, chrysalis, and adult butterfly. Both also mention the shedding of caterpillar's skin and transformation inside the chrysalis.",
                 " Answer2"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
+                "Unknown",
                 "Mistral-7B-Instruct-v0.2"
             ]
         }
@@ -1700,12 +1700,12 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Tie",
+                " Answer2",
                 " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
-                "TIE",
+                "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
@@ -1725,12 +1725,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Tie",
                 " Answer1",
-                " Answer1",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
+                "TIE",
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
@@ -1749,13 +1749,13 @@
             },
             "result": [
                 " Answer2",
-                " Answer2",
-                " Tie"
+                " 'Answer2'",
+                " Tie. Both answers accurately explain the concept of a leap year, explaining why we have a leap year and how it affects our calendar. However, Answer2 provides a more specific rule for determining whether a year is a leap year, including the exceptions for years divisible by 100 and 400. On the other hand, Answer1 provides a simpler explanation, discussing the reasons for a leap year in a more intuitive manner. As a tie, neither answer significantly surpasses the other in quality or accuracy."
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
-                "TIE"
+                "Unknown"
             ]
         }
     ],
@@ -1796,14 +1796,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Tie (Both responses provide an accurate explanation of how food chains work and use similar language to describe the trophic levels and the process of energy flow within the ecosystem.)",
-                " Tie. Both answers provide a clear and accurate explanation of the food chain, with similar structures and information. They both mention producers, primary, secondary, and tertiary consumers, and decomposers, and explain the concept of energy losses at each trophic level. However, Answer2 is more concise, while Answer1 offers an extra detail about the importance of nutrients cycling, little difference in quality or accuracy of information.",
-                " Answer1"
+                " Answer1",
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
-                "Unknown",
-                "Unknown",
-                "gpt-4.1"
+                "gpt-4.1",
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -1821,12 +1821,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " Tie",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
+                "TIE",
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
@@ -1844,9 +1844,9 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " 'Answer1'"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -1870,8 +1870,8 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " 'Answer1'"
+                " 'Answer1'",
+                " Answer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
@@ -1894,12 +1894,12 @@
             "result": [
                 " Answer2",
                 " Answer2",
-                " 'Answer1'"
+                " Answer2 is the superior answer as it provides a more accurate and scientific explanation of the phenomenon by mentioning the component parts of white light, the role of raindrops as prisms, and the fact that a rainbow appears as a circular arc with specific colors. Additionally, it briefly discusses the viewer's position relative to the sun and the raindrops. Answer1 also provides an accurate explanation, but the language and level of detail are less scientific, making Answer2 the superior answer.\n\nAnswer1: A rainbow appears after rain because sunlight goes through raindrops in the air. The light bends when it enters each raindrop, then bounces off the inside of the drop, and bends again when it comes out. This action separates the white sunlight into different colors. These colors make a band, or arc, in the sky. People see this arc as a rainbow. Rainbows usually happen after rain when the sun is low in the sky and there are still raindrops in the air.\n\nAnswer2: A rainbow is an optical and meteorological phenomenon that causes a spectrum of light to appear in the sky. It forms when sunlight is refracted, or bent, as it passes through and is dispersed by raindrops. The raindrops act as prisms, separating the white light into its component colors. The observer sees the rainbow as a circular arc, with red on the outer part and violet on the inner side. The angle of the arc depends on the viewer's position relative to the sun and the raindrops.\n\nTie: No, both answers are not equally good or bad. Answer2 is superior due to its scientific language, detailed explanation, and accurate mention of the colors and the circular shape of a rainbow, as well as the role of the observer's position relative to the sun and raindrops.\n\nAnswer: Answer2"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
-                "gpt-4.1"
+                "Unknown"
             ]
         }
     ],
@@ -1917,12 +1917,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
+                " Answer1",
                 " Answer1",
                 " 'Answer1'"
             ],
             "extracted_answers": [
-                "TIE",
+                "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
@@ -1940,7 +1940,7 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer1",
+                " 'Answer1'",
                 " Answer1",
                 " Answer1"
             ],
@@ -1967,12 +1967,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answers1"
+                " Answer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
-                "Unknown"
+                "Mistral-7B-Instruct-v0.2"
             ]
         },
         {
@@ -1989,13 +1989,13 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " 'Answer1'",
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "TIE"
             ]
         }
     ],
@@ -2036,9 +2036,9 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
+                " 'Answer2'",
                 " Answer2",
-                " Answer2",
-                " 'Answer2'"
+                " Answer2"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
@@ -2061,14 +2061,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie. Both answers provide accurate and comprehensive explanations of the difference between inner and outer planets. They both provide the correct terms such as terrestrial planets and Jovian planets, explain the sizes, compositions, orbital periods, and atmospheres of both groups of planets. They also mention that inner planets are rocky and closer to the sun while outer planets are gaseous or icy and farther from the sun. However, Answer1 provides a bit more detail about the characteristics of inner planets (e.g., they have dense compositions and lack significant atmospheres) and outer planets (e.g., they have thick atmospheres and prominent features like rings and moons). Answer2 provides more detail about the moons and sizes (gas giants, ice giants, and hard surfaces on inner planets), but it is less detailed about the specific characteristics of each type of planet. Overall, both answers are accurate and informative, but they differ slightly in the level of detail and specificity in their explanations.",
+                " 'Answer1'",
                 " Answer1",
-                " Answer1"
+                " Tie"
             ],
             "extracted_answers": [
-                "Unknown",
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2"
+                "Mistral-7B-Instruct-v0.2",
+                "TIE"
             ]
         },
         {
@@ -2084,14 +2084,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Tie",
-                " Tie",
-                " Answer1"
+                " Answer1",
+                " 'Answer1'",
+                " Answer2"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
-                "gpt-4.1"
+                "gpt-4.1",
+                "gpt-4.1",
+                "Mistral-7B-Instruct-v0.2"
             ]
         }
     ],
@@ -2132,14 +2132,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Tie",
                 " Answer1",
-                " Answer1"
+                " Tie\n\nBoth answers provide a summary of the story, but Answer1 provides a more comprehensive and detailed account of the characters, their relationships, and the events. Answer2, on the other hand, offers a more concise and action-oriented summary, focusing more on the climax and the aftermath. Both answers are coherent, well-structured, and provide a decent summary of the story, but neither stands out as being significantly superior or more accurate than the other.",
+                " Tie"
             ],
             "extracted_answers": [
-                "TIE",
                 "gpt-4.1",
-                "gpt-4.1"
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -2207,7 +2207,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
@@ -2229,13 +2229,13 @@
             },
             "result": [
                 " Answer2",
-                " Tie",
-                " Tie"
+                " Answer2",
+                " Answer2"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "TIE",
-                "TIE"
+                "Mistral-7B-Instruct-v0.2",
+                "Mistral-7B-Instruct-v0.2"
             ]
         }
     ],
@@ -2277,13 +2277,13 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1' (The first answer is more comprehensive and provides a clearer understanding of the various aspects a botanist might study, including practical applications of the field.)",
-                " Answer1. The first answer is more comprehensive, providing a clear and extensive explanation of the various domains of study within botany, with examples and practical applications. It also highlights the diverse roles that botanists can undertake in the real-world, contributing to agriculture, medicine, nature conservation, and environmental protection. Although the second answer adequately covers what a botanist studies, it lacks the explanatory depth and real-world applications found in Answer1."
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "Unknown",
-                "Unknown"
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         }
     ],
@@ -2302,12 +2302,12 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " 'Answer1'"
+                " Answer1. The response offers a comprehensive and detailed plan for a recycling campaign, including specific actions such as creating posters, placing recycling bins, organizing competitions, conducting educational workshops, involving parents, collaborating with local authorities, using social media, and regular reminders. It also emphasizes making recycling a habit. While both responses are good, the superiority of Answer1 lies in the clear and actionable steps outlined, making it more practical and easier to implement.",
+                " Answer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
+                "Unknown",
                 "Mistral-7B-Instruct-v0.2"
             ]
         },
@@ -2324,14 +2324,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " Answer1",
-                " 'Answer1' - The answer provides a comprehensive and well-thought-out plan, including various engaged activities, competitions, and educational components. It also addresses the importance of community building to make recycling a habit. The response demonstrates creativity and a strong focus on involving students and teachers in the campaign. While Answer2 also presents a structured approach, it leans more towards practical implementation and lacks the inspiring elements and personal touch found in Answer1."
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "Unknown"
+                "gpt-4.1"
             ]
         }
     ],
@@ -2350,13 +2350,13 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
-                " Answer1"
+                " Answer1",
+                " 'Answer1' (The Courageous Canine)"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2"
+                "Unknown"
             ]
         },
         {
@@ -2372,14 +2372,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Tie",
-                " Tie. Both answers provide a clear and engaging outline for a story about a heroic animal, with well-structured narratives and emotional elements. However, the tone and pacing differ slightly, which could potentially affect the reader's experience based on personal preference. Answer1 leans more towards a child-friendly, step-by-step narrative, while Answer2 employs a more dramatic and intense writing style. Both provide equally satisfactory outlines for a story about a heroic animal.",
-                " 'Tie' Both responses provide a well-structured outline for a story about a heroic animal. They both demonstrate creativity and a clear understanding of the character, plot, and resolution. However, Answer1 takes a more detailed approach, outline-wise, especially in section 3 (The Journey), providing more steps for the heroic animal's trip. On the other hand, Answer2 has a more poetic tone and emotional resonance, emphasizing the emotional journey of the animal in the story. So, it's hard to say one is better than the other, as they offer different perspectives on the storytelling style."
+                " 'Answer1'",
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "TIE",
-                "Unknown",
-                "Unknown"
+                "gpt-4.1",
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         }
     ],
@@ -2397,13 +2397,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie\n\nBoth answers are excellent and present creative, innovative, and beneficial gadget ideas. The EcoSphere offers an environmentally-friendly solution, addressing the growing issue of plastic pollution while providing a sustainable energy source. On the other hand, the health scanner addresses the importance of preventive health care and early disease diagnosis, which can save lives, particularly for those with limited access to regular medical care. Ultimately, both gadgets have strong potential to positively impact our society and environment, making it challenging to choose a clear winner.",
-                " 'Answer1' - The EcoSphere invention provides a solution to two significant issues: plastic pollution and the need for renewable energy. It's a unique and innovative concept that combines functionality and environmental consciousness in an appealing design. Additionally, it addresses the growing concern about plastic waste and energy shortage, making it a ready-for-market gadget with a wide potential user base.\n\n'Answer2' presents a valuable concept for a portable health scanner, providing important health metrics and advice. However, while this gadget could potentially help users keep track of their health, it does not offer a groundbreaking innovation. There are already a number of personal health monitoring devices on the market, albeit in varying degrees of complexity, which makes this invention somewhat less distinguishable compared to the EcoSphere.\n\nIn this case, I would evaluate 'Answer1' as the superior response for its innovative nature and multi-dimensional social and environmental impact.",
+                " Tie",
+                " Answer1",
                 " 'Answer1'"
             ],
             "extracted_answers": [
                 "TIE",
-                "Unknown",
+                "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
         },
@@ -2420,13 +2420,13 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer2, 'EcoSphere' is a more innovative and impactful idea as it addresses the pressing global issue of plastic pollution and energy consumption, offering a solution that benefits both the environment and individuals. The small health scanner proposed in Answer1 is a valuable device, but the advantages it provides are more personal and less global in scope compared to 'EcoSphere'. However, both answers demonstrate creativity and an understanding of current concerns, which can make a tie a suitable alternative. Furthermore, both responses focus on the well-being of individuals and the planet, emphasizing the prevalent desire for technologies that enhance our lives while preserving the environment.",
-                " 'Answer1'",
+                " Tie\n\nBoth responses offer creative and thoughtful ideas for new gadgets that address different yet important aspects of modern life: health and environmental issues. Both answers demonstrate in-depth understanding, articulate the benefits, and provide practical explanations for their respective inventions. Nevertheless, the question did not specify a preference for either health or environmental focus, leaving both responses equally applicable and relevant.",
+                " Tie",
                 " 'Answer1'"
             ],
             "extracted_answers": [
-                "Unknown",
-                "gpt-4.1",
+                "TIE",
+                "TIE",
                 "gpt-4.1"
             ]
         }
@@ -2445,7 +2445,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -2494,7 +2494,7 @@
             },
             "result": [
                 " 'Answer1'",
-                " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -2516,14 +2516,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer1",
-                " Answer1",
-                " 'Answer2'"
+                " Answer2",
+                " 'Answer2'",
+                " Tie\n\nIn this case, both answers provide nice and creative poetry about friendship. Answer1 did a good job explaining the process of writing a poem about friendship, which can be helpful for someone who needs guidance. Answer2 provided a well-written, moving poem about friendship that capture the essence of the bond. However, since the question asks for a poetry, both answers are equally good, and a tie is an appropriate choice."
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "gpt-4.1",
-                "Mistral-7B-Instruct-v0.2"
+                "Mistral-7B-Instruct-v0.2",
+                "Mistral-7B-Instruct-v0.2",
+                "TIE"
             ]
         }
     ],
@@ -2541,8 +2541,8 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
                 " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -2566,12 +2566,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " 'Answer1' (The first response provides a more comprehensive and detailed plan that covers all aspects of an eco-friendly birthday party: invitations, party venue, dishware and decorations, food, activities, guest gifts, transportation, and post-party cleanup.)"
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "Unknown"
+                "gpt-4.1"
             ]
         }
     ],
@@ -2589,7 +2589,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -2612,14 +2612,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
+                " 'Answer1' provides a step-by-step guide that is concise, easy to follow, and encourages experimentation and feedback throughout the process of inventing a new sport. The simple language makes the answer accessible to a wide audience.\n\nOn the other hand, 'Answer2' is more detailed, but it may be more challenging for the average person to completely understand and replicate without additional context or resources. The language used is a bit more technical and assumes a certain level of knowledge about sports and game development.\n\nConsidering the evaluation criteria, Answer1 appears to be a better response due to its clarity, simplicity, and practicality, making it more accessible for those interested in inventing a new sport. However, if a more detailed approach were required, Answer2 could also be a suitable answer.\n\nTie if there is a preference for a more detailed response (Answer2), or if the less technical language of Answer1 is not suitable for the target audience.",
                 " Answer1",
-                " 'Answer1'",
-                " 'Answer1' provides a more accessible and step-by-step guide for inventing a new sport, emphasizing clear and simple instructions for first-time inventors. Answer2 is more focused on professional-level sport development, which may not be necessary or relevant for a beginner. Therefore, 'Answer1' is the superior answer for this question."
+                " Tie\n\nBoth responses provide comprehensive steps for inventing a new sport, and both present clear, well-structured action plans. However, Response 1 provides a more concise and straightforward approach, while Response 2 dives deeper into research and testing, emphasizing the importance of planning and organization when developing a new sport. In terms of quality and accuracy, both responses are equally good and provide helpful advice for anyone looking to invent a new sport."
             ],
             "extracted_answers": [
+                "Unknown",
                 "gpt-4.1",
-                "gpt-4.1",
-                "Unknown"
+                "TIE"
             ]
         }
     ],
@@ -2638,8 +2638,8 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " 'Answer1'"
+                " 'Answer1'",
+                " Answer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
@@ -2660,9 +2660,9 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " Answer1"
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -2685,13 +2685,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " Tie",
                 " Tie"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "TIE",
+                "Mistral-7B-Instruct-v0.2",
                 "TIE"
             ]
         },
@@ -2709,13 +2709,13 @@
             },
             "result": [
                 " Answer1",
-                " Tie",
-                " 'Answer1'"
+                " Answer1",
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "TIE",
-                "gpt-4.1"
+                "gpt-4.1",
+                "TIE"
             ]
         }
     ],
@@ -2733,12 +2733,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
+                "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
@@ -2756,13 +2756,13 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Tie",
-                " Tie. Both responses provide a comprehensive community garden plan, covering location, layout, membership, supplies, water, scheduling, education, community, sustainability, and communication. They differ slightly in their presentation and sequence, but neither provides a superior or more accurate answer to the question.",
+                " Tie. Both answers provide clear, comprehensive, and similarly detailed plans for a community garden. Both include steps for location, design, infrastructure, member recruitment, rules, workshops, maintenance, and community engagement. Both also suggest the use of raised beds, composting, and water collection systems. If a decision needed to be made, minor factors like the order of steps or slight differences in certain suggestions might influence the choice, but both answers are equally good.",
+                " Tie\n\nBoth responses provide comprehensive and detailed plans for establishing a community garden. They both address key aspects such as location, layout, membership, supplies, water, scheduling, education, community involvement, sustainability, and communication. The organization and overall structure of both answers are well thought out. However, the minor differences in presentation, like the order of steps or the wording used, do not significantly impact the semantic quality of the answers. In this scenario, neither Answer1 nor Answer2 can be considered definitively superior.",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
                 "Unknown",
+                "TIE",
                 "gpt-4.1"
             ]
         }
@@ -2782,12 +2782,12 @@
             },
             "result": [
                 " Tie",
-                " Answer1",
+                " Tie",
                 " Tie"
             ],
             "extracted_answers": [
                 "TIE",
-                "Mistral-7B-Instruct-v0.2",
+                "TIE",
                 "TIE"
             ]
         },
@@ -2804,14 +2804,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer1",
-                " Answer1",
-                " 'Answer1'"
+                " Tie",
+                " 'Answer1'",
+                " Tie"
             ],
             "extracted_answers": [
+                "TIE",
                 "gpt-4.1",
-                "gpt-4.1",
-                "gpt-4.1"
+                "TIE"
             ]
         }
     ],
@@ -2829,7 +2829,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " 'Answer1'",
                 " Answer1",
                 " Answer1"
             ],
@@ -2853,8 +2853,8 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " 'Answer1'",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -2877,12 +2877,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Tie",
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
+                "TIE",
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
@@ -2900,14 +2900,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer1",
                 " Tie",
-                " Tie"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "TIE",
-                "TIE"
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         }
     ],
@@ -2926,12 +2926,12 @@
             },
             "result": [
                 " Answer1",
-                " Tie",
+                " `Answer1`",
                 " Answer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "TIE",
+                "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
         },
@@ -2950,12 +2950,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1' (The answer provides more detailed criteria, advises against too tight or too loose clothing, and suggests appropriate options for warm weather.)"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Unknown"
             ]
         }
     ],
@@ -2973,13 +2973,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1' (Tie) Both responses offer inspiring and empowering lyrics about overcoming challenges. The choice between them would depend more on personal taste and the context in which the lyrics are intended to be used. However, in terms of semantic quality, both are equally good.",
-                " Answer2",
+                " Tie",
+                " 'Answer1'",
                 " Tie"
             ],
             "extracted_answers": [
-                "Unknown",
-                "gpt-4.1",
+                "TIE",
+                "Mistral-7B-Instruct-v0.2",
                 "TIE"
             ]
         },
@@ -2996,13 +2996,13 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " 'Answer1'",
                 " Tie",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "TIE",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -3022,7 +3022,7 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -3069,7 +3069,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " 'Answer1'",
                 " Answer1",
                 " Answer1"
             ],
@@ -3092,14 +3092,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer1",
-                " Answer1",
-                " 'Answer2'"
+                " Tie",
+                " Tie",
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "gpt-4.1",
-                "Mistral-7B-Instruct-v0.2"
+                "TIE",
+                "TIE",
+                "gpt-4.1"
             ]
         }
     ],
@@ -3118,7 +3118,7 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -3142,12 +3142,12 @@
             "result": [
                 " Tie",
                 " Tie",
-                " Answer1"
+                " Tie"
             ],
             "extracted_answers": [
                 "TIE",
                 "TIE",
-                "gpt-4.1"
+                "TIE"
             ]
         }
     ],
@@ -3165,14 +3165,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer2'",
+                " 'Answer2' This answer provides a more emotional and personal response that emphasizes love, connection, and creating meaningful moments, which seems more superior in addressing the question about spending the doomsday. The first answer is more pragmatic and focuses on survival, which while important, does not speak to the emotional aspect of the question. However, both answers are thoughtful and introspective, and maintaining a positive attitude is a theme in both responses. This could be considered a tie if one prefers a more pragmatic answer over a more emotional one.",
                 " Tie",
-                " Tie"
+                " 'Answer2'"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Unknown",
                 "TIE",
-                "TIE"
+                "gpt-4.1"
             ]
         },
         {
@@ -3188,12 +3188,12 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " 'Answer1'",
+                " Tie. Both answers provide different perspectives on how to approach the hypothetical situation of Doomsday. The first answer focuses on prioritizing relationships, creating memories, and spreading love; while the second answer emphasizes preparation, safety, and self-preservation. Both answers have their merits and could be considered valid depending on one's personal values and priorities. However, it is important to note that a real-life crisis situation would likely require both elements - taking care of loved ones as well as ensuring physical safety.",
                 " Tie",
                 " Tie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Unknown",
                 "TIE",
                 "TIE"
             ]
@@ -3214,13 +3214,13 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " Answer1 (More comprehensive and structured)"
+                " 'Answer1' (The structure, detail, and organization of Answer1 make it more comprehensive and easier to follow, providing a more effective plan for a field trip to a museum.)",
+                " Answer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
-                "Unknown"
+                "Unknown",
+                "Mistral-7B-Instruct-v0.2"
             ]
         },
         {
@@ -3261,9 +3261,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " 'Answer1'"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
@@ -3284,13 +3284,13 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer1",
-                " Answer2",
+                " Tie",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
+                "TIE",
                 "gpt-4.1",
-                "Mistral-7B-Instruct-v0.2",
                 "gpt-4.1"
             ]
         }
@@ -3309,7 +3309,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -3332,7 +3332,7 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer1",
+                " 'Answer1'",
                 " Answer2",
                 " Answer1"
             ],
@@ -3357,12 +3357,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
+                " Tie. Both responses offer comprehensive evaluations of a singer's performance in a competition, addressing various aspects such as vocal technique, stage presence, interpretation, rhythm, enunciation, originality, and audience connection. They both provide valuable insights for a fair and complete review of a singer's performance.",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "TIE",
+                "Unknown",
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
@@ -3380,14 +3380,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
+                " Tie",
                 " 'Answer2'",
-                " 'Answer2'",
-                " 'Answer2'"
+                " Tie"
             ],
             "extracted_answers": [
+                "TIE",
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2"
+                "TIE"
             ]
         }
     ],
@@ -3405,7 +3405,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " 'Answer1'",
                 " Answer1",
                 " Answer1"
             ],
@@ -3428,12 +3428,12 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " 'Answer1'",
-                " 'Answer1'",
+                " Tie. Both answers provide comprehensive and accurate information regarding the importance of recycling in our environment, focusing on the implications on resource conservation, waste reduction, energy savings, and environmental protection.",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Unknown",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -3478,12 +3478,12 @@
             "result": [
                 " Answer2",
                 " Answer1",
-                " Tie. Both responses provide comprehensive and well-structured criteria for assessing the quality of a book. Answer1 focuses on the content and its ability to be original, coherent, clear, and engaging, while also considering the impact it has on the reader. Answer2, on the other hand, covers a broader range of criteria, including content accuracy, writing style, organization, design, editing, originality, relevance, accessibility, and impact. Both responses are equally informative and detailed, making the decision a tie."
+                " 'Answer2'"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
                 "gpt-4.1",
-                "Unknown"
+                "Mistral-7B-Instruct-v0.2"
             ]
         }
     ],
@@ -3524,14 +3524,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer2",
                 " Answer1",
-                " 'Answer1'"
+                " 'Answer2'",
+                " Tie"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Mistral-7B-Instruct-v0.2",
+                "TIE"
             ]
         }
     ],
@@ -3550,13 +3550,13 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
-                " Answer1"
+                " Answer1",
+                " Tie. Both answers provide a list of three inventions and articulate the impact of each on society. However, they differ in their specific choices. The first answer lists the internet, nuclear energy, and penicillin/antibiotics, while the second answer lists the internet, transistor, and airplane. These are all significant inventions, and it's possible that either list could be considered the most significant depending on the specific criteria used to evaluate the impact of each invention."
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2"
+                "Unknown"
             ]
         },
         {
@@ -3573,12 +3573,12 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1' is a more comprehensive answer that provides a more detailed explanation as to why each invention is significant. It also discusses the ongoing impact each has had and continues to have on society, technology, and daily life. The answer by 'Answer2' is concise and accurate, but it lacks the depth and elaboration present in 'Answer1'. However, both answers are good and could be deemed equally valuable in certain circumstances. Therefore, a 'Tie' would be a reasonable choice in this case.",
-                " 'Answer1'"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "Unknown",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -3598,8 +3598,8 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " 'Answer1'",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
@@ -3621,13 +3621,13 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
-                " Tie"
+                " Tie",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
-                "TIE"
+                "TIE",
+                "gpt-4.1"
             ]
         }
     ],
@@ -3668,14 +3668,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " 'Answer2'",
-                " 'Answer2'",
-                " Tie"
+                " Tie\n\nBoth answers provide excellent and comprehensive responses to the question about evaluating the health of a forest ecosystem. Answer1 offers a more conversational, comprehensive, and holistic explanation with examples, while Answer2 offers a more concise, structured, and scientifically based response that highlights specific factors to take into account. Both answers provide valuable insights and could be beneficial to different types of readers.",
+                " Tie",
+                " Tie. Both Answer1 and Answer2 provide a comprehensive list of factors to consider when evaluating the health of a forest ecosystem. However, Answer2's list is more concise and organized, focusing on specific aspects such as biodiversity, tree health, soil health, forest structure, productivity, water cycle, disturbances, resilience, and human impact. Answer1, on the other hand, provides a broader but less structured overview that also touches upon those factors. Both responses are clear, accurate, and provide valuable insights into forest health evaluation."
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
-                "TIE"
+                "TIE",
+                "TIE",
+                "Unknown"
             ]
         }
     ],
@@ -3694,8 +3694,8 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
-                " 'Answer1'"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
@@ -3718,7 +3718,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -3741,9 +3741,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " Answer1"
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
@@ -3764,14 +3764,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " Tie\n\nBoth responses provide a comprehensive and thoughtful analysis of how to assess the moral or lesson of a short story. They both highlight the importance of analyzing characters, their actions, and consequences, as well as considering the author's intent and the reader's interpretation. However, the differences in wording and emphasis of certain points are minimal, making it challenging to definitively determine which response is superior."
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "TIE"
+                "gpt-4.1"
             ]
         }
     ],
@@ -3789,9 +3789,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
-                " 'Answer1' is a more concise and direct response that presents the various impacts of the Internet on society thoroughly and in a well-structured manner. It considers the benefits as well as the challenges posed by the Internet, acknowledging their significance in shaping modern life. However, both responses offer similar insights, and the difference is subtle, making it a close call. Yet, based on the semantic quality and clarity, I would lean slightly towards 'Answer1'. Nevertheless, if evaluated based on exhaustiveness, \u2018Answer2' provides a slightly more comprehensive preview of the impacts of the Internet, including its influence on business, learning, private life, privacy, and social life. So, a tie is a reasonable choice considering the minor differences in quality and detail.",
-                " Answer1"
+                " 'Answer1'",
+                " Tie. Both answers provide thorough, well-structured, and insightful responses, covering various aspects of the impact of the Internet on society. However, Answer 2 slightly edge in terms of providing a more comprehensive view by mentioning the potential impact on mental health and responsibilities in using the Internet wisely. However, the difference is marginal, and both answers could be considered equally good.",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
@@ -3813,12 +3813,12 @@
             },
             "result": [
                 " Tie",
-                " 'Answer1'",
+                " Tie",
                 " Tie"
             ],
             "extracted_answers": [
                 "TIE",
-                "gpt-4.1",
+                "TIE",
                 "TIE"
             ]
         }
@@ -3837,13 +3837,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
-                " 'Answer1'",
-                " 'Answer1'"
+                " Tie",
+                " Tie",
+                " Answer1"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
+                "TIE",
+                "TIE",
                 "Mistral-7B-Instruct-v0.2"
             ]
         },
@@ -3862,12 +3862,12 @@
             "result": [
                 " Answer2",
                 " Answer2",
-                " Answer2"
+                " Tie"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2"
+                "TIE"
             ]
         }
     ],
@@ -3887,7 +3887,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
@@ -3933,14 +3933,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " Tie",
                 " Answer1",
-                " 'Answer1'"
+                " Answer1. Both responses offer valuable insights on the importance of clean energy, but Answer1 provides a more comprehensive analysis, addressing energy security, cost-competitiveness, and sustainable economic growth in addition to the environmental benefits. Although Answer2 offers a concise articulation of the benefits of clean energy, it lacks the depth and detail found in Answer1."
             ],
             "extracted_answers": [
+                "TIE",
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2"
+                "Unknown"
             ]
         },
         {
@@ -3956,13 +3956,13 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer2",
-                " 'Answer1'",
+                " The superior answer is Answer2. While both answers provide valid points, Answer2 presents a more comprehensive evaluation of the importance of clean energy to our future by addressing multiple factors such as climate change, energy security, cost competitiveness, and sustainable economic growth. Furthermore, Answer2 places more emphasis on the economic and geopolitical implications of clean energy, which are crucial for a complete understanding of the topic. However, Answer1 provides a convincing argument on the environmental benefits of clean energy and its impact on health, which makes it a strong contender. Since Answer2's answer is more holistic and encompasses several key aspects of the importance of clean energy, it is considered superior.",
+                " Tie",
                 " Tie"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
-                "gpt-4.1",
+                "Unknown",
+                "TIE",
                 "TIE"
             ]
         }
@@ -3981,14 +3981,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
-                " 'Answer1'",
-                " 'Answer1' is a superior response as it provides a comprehensive and well-structured evaluation of the fairness of the rules in a game. It explains that the rules are applied equally, communicated clearly, and modified with the consent of all players. It also mentions the role of random elements and their impartiality, and emphasizes that fairness promotes an enjoyable and competitive experience. On the other hand, 'Answer2' presents a more fragmented argument, although it correctly identifies the key factors contributing to fairness. However, 'Answer2' could be clearer and more organized in its presentation, which makes 'Answer1' a more suitable choice."
+                " Answer1",
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
-                "Unknown"
+                "Mistral-7B-Instruct-v0.2"
             ]
         },
         {
@@ -4004,13 +4004,13 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
+                " Answer1",
                 " Tie",
-                " 'Answer1'",
-                " Tie\n\nBoth answers provide good explanations on what constitutes fair rules in a game. They both mention equal opportunities for all players, lack of bias, clearly defined rules, and the role of skill, strategy, and luck. Answer1 offers a more comprehensive approach, including checking if the results are clear, listening to what players say, and testing the rules with different groups. On the other hand, Answer2 provides a more concise and direct explanation, focusing on the role of random elements in leveling the playing field. However, the quality of the answers is similar, so a tie is an optimal choice."
+                " Tie"
             ],
             "extracted_answers": [
-                "TIE",
                 "gpt-4.1",
+                "TIE",
                 "TIE"
             ]
         }
@@ -4031,7 +4031,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
@@ -4052,12 +4052,12 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer2",
+                " Tie",
                 " 'Answer2'",
-                " Answer2"
+                " 'Answer2'"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
+                "TIE",
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
@@ -4077,12 +4077,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Tie",
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
+                "TIE",
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
@@ -4100,12 +4100,12 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer2",
+                " Answer1",
                 " 'Answer2'",
                 " 'Answer2'"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
+                "gpt-4.1",
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
@@ -4125,14 +4125,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
+                " Answer1",
                 " 'Answer1'",
-                " Tie"
+                " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
                 "Mistral-7B-Instruct-v0.2",
-                "TIE"
+                "Mistral-7B-Instruct-v0.2",
+                "Mistral-7B-Instruct-v0.2"
             ]
         },
         {
@@ -4148,14 +4148,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Tie",
-                " Tie. Both responses provide accurate, well-structured explanations that demonstrate a solid understanding of the importance of algebra in daily life. Both answers offer real-world examples to support their points. However, if pressed to choose, one may slightly prefer Answer2 for its focus on a wider range of practical applications in various disciplines, including personal finance and science. But overall, the responses are very alike in quality.",
-                " Tie"
+                " Answer2",
+                " Answer2 for its detail and comprehensive response that offers multiple relevant examples of algebra in daily life.",
+                " Answer2"
             ],
             "extracted_answers": [
-                "TIE",
+                "Mistral-7B-Instruct-v0.2",
                 "Unknown",
-                "TIE"
+                "Mistral-7B-Instruct-v0.2"
             ]
         }
     ],
@@ -4175,12 +4175,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Tie"
+                " Answer1 is the superior response. It provides a more accurate and concise estimate of the economic value of bee pollination, giving a specific figure ($20 billion per year in the US), as well as a clearer understanding of the role bees play in food production and the consequences of their absence. The phrasing is also more polished and professional. While both answers are informative, Answer1 presents the information in a more concise and easily digestible format."
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
-                "TIE"
+                "Unknown"
             ]
         },
         {
@@ -4196,14 +4196,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Tie",
-                " 'Answer2' is the superior answer. It provides a more precise statistic regarding the proportion of food reliant on bee pollination (1/3 versus 75%) and includes additional information about the value of pollination in the US. Both answers are accurate and provide good explanations, but Answer2 is more concise and provides a more specific statistic.",
-                " Answer1"
+                " Tie. Both responses provide comprehensive and accurate information regarding the importance of bees in our food supply, including their role in pollination, the types of crops they contribute to, and the economic significance of their work. The language and style may vary slightly, but the semantic quality is equally high in both cases.",
+                " 'Answer2'",
+                " 'Answer2'"
             ],
             "extracted_answers": [
-                "TIE",
                 "Unknown",
-                "gpt-4.1"
+                "Mistral-7B-Instruct-v0.2",
+                "Mistral-7B-Instruct-v0.2"
             ]
         }
     ],
@@ -4221,12 +4221,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Tie",
                 " 'Answer1'",
-                " Answer1",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
+                "TIE",
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
@@ -4244,13 +4244,13 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer2. The response provides a comprehensive list of factors that can be used to judge the success of a community fundraising event. It addresses not only the financial aspect (total amount raised), but also the engagement of the attendees, participation rate, cost-effectiveness, awareness, volunteer engagement, and donor retention. Each point is well-articulated and provides a clear and concise measure of success. The response also emphasizes the importance of building a sustainable base of support, which can have long-term benefits for the cause. These aspects make Answer2 a more detailed and useful response than Answer1.",
-                " Tie",
+                " Answer1",
+                " 'Answer1'",
                 " Tie"
             ],
             "extracted_answers": [
-                "Unknown",
-                "TIE",
+                "gpt-4.1",
+                "gpt-4.1",
                 "TIE"
             ]
         }
@@ -4270,13 +4270,13 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
-                " Tie. Both responses are clear, well-structured, and articulate the importance of voting in a democracy in a comprehensive manner. Both answers highlight the role of the citizen in influencing government through the ballot box, the impact of voting on maintaining the legitimacy of a democratic system, and the power of voting to effect change within a democratic framework. However, Answer2 leans more towards emphasizing the responsibility of citizens, while Answer1 emphasizes the power of voting to hold representatives accountable. In essence, the answers are largely similar, but present different angles on the same topic."
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
-                "Unknown"
+                "Mistral-7B-Instruct-v0.2"
             ]
         },
         {
@@ -4293,12 +4293,12 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " Tie",
                 " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1"
             ]
         }
@@ -4318,13 +4318,13 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2"
+                "TIE",
+                "TIE"
             ]
         },
         {
@@ -4341,13 +4341,13 @@
             },
             "result": [
                 " Answer2",
-                " Tie",
-                " Tie"
+                " Answer1 & Answer2 are both relatively good answers to the question, providing a well-rounded assessment of the influence of technology on communication. However, the second response provides a slightly more comprehensive and nuanced analysis, presenting both the benefits and the drawbacks of technology-driven communication and detailing the impact of these changes on global connectivity, privacy, and the sharing of multimedia content. Therefore, I prefer 'Answer2'.",
+                " Answer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "TIE",
-                "TIE"
+                "Unknown",
+                "gpt-4.1"
             ]
         }
     ],
@@ -4366,8 +4366,8 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
-                " Answer1"
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
@@ -4388,14 +4388,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
+                " Answer 2 is superior, providing a more precise, concise, and comprehensive answer. It emphasizes key aspects such as leveraging individual strengths, fostering diverse perspectives, and distributing workload effectively, which is not explicitly mentioned in the first response. The first response, although informative, is slightly less concise and lacks the same level of depth and precision in its explanation of the importance of teamwork. However, both responses have some merit and could be useful. In this case, I would grade 'Answer2' slightly higher.",
                 " Answer2",
-                " 'Answer2'",
-                " Tie"
+                " 'Answer2'"
             ],
             "extracted_answers": [
+                "Unknown",
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
-                "TIE"
+                "Mistral-7B-Instruct-v0.2"
             ]
         }
     ],
@@ -4415,12 +4415,12 @@
             "result": [
                 " Tie",
                 " 'Answer2'",
-                " Tie"
+                " Answer1"
             ],
             "extracted_answers": [
                 "TIE",
                 "gpt-4.1",
-                "TIE"
+                "Mistral-7B-Instruct-v0.2"
             ]
         },
         {
@@ -4436,13 +4436,13 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " 'Answer1'\n\nBoth responses provide a comprehensive list of factors to consider when evaluating the safety of a car. However, Answer1 provides a more detailed and organized response, dividing the factors into categories such as crash test scores, vehicle structure, safety features, visibility, and maintenance. Additionally, it mentions the importance of sharing information about safety recalls, which is not mentioned in Answer2. Therefore, I would find the answer provided in Answer1 to be of a higher quality.",
-                " Answer1 is the superior answer. It provides a more comprehensive list of safety standards, delves deeper into each category, and offers well-rounded insights. For instance, it discusses the safety features' effectiveness, the importance of rollover tests, the presence of features to protect pedestrians, and the role of headrests and seatbelt reminders. In addition, it touches upon the necessity of a car manufacturer sharing information about safety recalls and their frequency.\n\nOn the contrary, while Answer2 presents an acceptable list of safety standards, it does not provide as much detail as the first answer, and it fails to discuss essential factors such as the importance of seatbelt types, headrests, and the process of evaluating the effectiveness of safety features like blind-spot warning systems and automatic emergency braking. Furthermore, unlike Answer1, Answer2 only briefly mentions maintenance and safety ratings without heavily emphasizing their importance. Overall, Answer1 offers a more detailed and thoughtful response, making it the superior answer.",
-                " Answer1"
+                " Answer1",
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "Unknown",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -4462,13 +4462,13 @@
             },
             "result": [
                 " Answer1",
-                " Tie",
-                " 'Answer1' (More in-depth and covers all the aspects of the question including the role of biodiversity in maintaining ecological balance, enhancing productivity, increasing resilience of ecosystems, providing essential ecosystem services, and its significance for the health and sustainability of ecosystems and future generations.)"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "TIE",
-                "Unknown"
+                "Mistral-7B-Instruct-v0.2",
+                "Mistral-7B-Instruct-v0.2"
             ]
         },
         {
@@ -4484,14 +4484,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Tie",
-                " 'Answer1' is a good answer, but 'Answer2' is slightly more comprehensive and provides more detailed scientific reasons for the importance of biodiversity. It also includes more specific examples of ecosystem services (like water filtration and carbon sequestration) and the cascading effects of biodiversity loss. While both are well-written and accurate, 'Answer2' offers a more extensive explanation and is therefore a slightly superior response.",
-                " Answer1 (Tie)"
+                " Answer2",
+                " 'Answer2'",
+                " Answer2"
             ],
             "extracted_answers": [
-                "TIE",
-                "Unknown",
-                "Unknown"
+                "Mistral-7B-Instruct-v0.2",
+                "Mistral-7B-Instruct-v0.2",
+                "Mistral-7B-Instruct-v0.2"
             ]
         }
     ],
@@ -4510,13 +4510,13 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
-                " Answer1"
+                " Answer1",
+                " Tie"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2"
+                "TIE"
             ]
         },
         {
@@ -4532,13 +4532,13 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " 'Answer1' (The provided answer has a more detailed and comprehensive explanation, goes into explaining ensemble cohesion, stage presence, and the importance of interpreting and adding originality which are not covered in the second response.)",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "Unknown",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -4558,8 +4558,8 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " 'Answer1'",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
@@ -4580,13 +4580,13 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer1",
-                " Both answers are comprehensive and provide valid points to consider when evaluating a charity's effectiveness. However, Answer1 offers a more simplified approach for those who may not be familiar with financial reports and ratings, and includes a specific mention of checking independent websites and reading a charity's latest annual reports, which could make it more accessible to a wider audience. Therefore, I would lean slightly towards Answer1.\n\nAnswer2, while also providing valuable tips, seems to assume a certain level of familiarity with financial reports, ratings, and organizational structures, which might make it less accessible to some readers. However, it does offer a more detailed and encompassing list of factors to consider.\n\nIn a tie situation, I would lean towards the answer that is more accessible and easy to understand for a general audience, and Answer1 fits this description better.\n\nAnswer1: The balanced approach it offers, including the mention of independent ratings websites and the latest annual reports, makes it more accessible to a wider audience.",
-                " Answer1"
+                " 'Answer1'",
+                " 'Answer1'",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "Unknown",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -4629,13 +4629,13 @@
             },
             "result": [
                 " Tie",
-                " 'Answer2'",
-                " Tie (Both answers are accurate and provide reasonable additional information about Paris.)"
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
                 "TIE",
-                "Mistral-7B-Instruct-v0.2",
-                "Unknown"
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -4653,14 +4653,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " Tie"
+                " Tie. Both responses provide correct and clear explanations about the primary colors, albeit slightly different in their examples (painting or light) and the numbering of the primary colors. However, neither response is inherently superior in terms of quality and accuracy.",
+                " Answer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
-                "TIE"
+                "Unknown",
+                "Mistral-7B-Instruct-v0.2"
             ]
         },
         {
@@ -4676,13 +4676,13 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer1",
-                " Answer1",
-                " 'Answer1'"
+                " Tie",
+                " Tie",
+                " Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "gpt-4.1",
+                "TIE",
+                "TIE",
                 "gpt-4.1"
             ]
         }
@@ -4703,7 +4703,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
@@ -4724,14 +4724,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Tie",
                 " Answer1",
-                " Tie"
+                " 'Answer1'",
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "TIE",
                 "gpt-4.1",
-                "TIE"
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         }
     ],
@@ -4749,14 +4749,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " Tie"
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
-                "TIE"
+                "Mistral-7B-Instruct-v0.2"
             ]
         },
         {
@@ -4773,12 +4773,12 @@
             },
             "result": [
                 " Tie",
-                " Answer1",
+                " Tie",
                 " Tie"
             ],
             "extracted_answers": [
                 "TIE",
-                "gpt-4.1",
+                "TIE",
                 "TIE"
             ]
         }
@@ -4797,12 +4797,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
+                " 'Answer1'",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
+                "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
@@ -4820,7 +4820,7 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Tie (Both answers are equally good and accurate.)",
+                " Answer1, Answer2 or Tie: Tie (Both answers are equally good)",
                 " Tie",
                 " Tie"
             ],
@@ -4846,12 +4846,12 @@
             },
             "result": [
                 " Answer1",
-                " Tie",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "TIE",
+                "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
         },
@@ -4868,14 +4868,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " Tie"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "TIE"
+                "gpt-4.1"
             ]
         }
     ],
@@ -4916,12 +4916,12 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Tie. Both answers are equally accurate, clear, and informative in explaining what the element 'O' is, its properties, and its significance.",
+                " 'Answer1'",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "Unknown",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -4941,14 +4941,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Tie",
                 " Answer1",
-                " Answer1",
-                " 'Answer1'"
+                " Tie. Both answers are accurate and provide clear and concise information about the freezing point of water in Fahrenheit. They are equally good."
             ],
             "extracted_answers": [
+                "TIE",
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2"
+                "Unknown"
             ]
         },
         {
@@ -4965,13 +4965,13 @@
             },
             "result": [
                 " Answer1",
-                " Tie. Both answers provide accurate and clear explanations about the freezing point of water in Fahrenheit and describe how it's used on the Fahrenheit scale.",
-                " Tie. Both answers provide correct and comprehensive information about the freezing point of water in Fahrenheit. However, Answer2 is slightly more concise and keeps the focus more on the question itself by only mentioning the freezing point instead of discussing the history of Fahrenheit scale."
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "Unknown",
-                "Unknown"
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         }
     ],
@@ -4991,12 +4991,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Tie"
+                " Answer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
-                "TIE"
+                "Mistral-7B-Instruct-v0.2"
             ]
         },
         {
@@ -5037,13 +5037,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
-                " Tie",
+                " Answer1",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
+                "Mistral-7B-Instruct-v0.2",
+                "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
         },
@@ -5060,7 +5060,7 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -5087,7 +5087,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
@@ -5109,12 +5109,12 @@
             },
             "result": [
                 " 'Answer1'",
-                " Tie",
+                " Tie. Both answers are clear, accurate, and provide sufficient information about the author and the series.",
                 " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "TIE",
+                "Unknown",
                 "gpt-4.1"
             ]
         }
@@ -5181,8 +5181,8 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
-                " Answer1",
+                " 'Answer1'",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -5229,14 +5229,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
                 " Tie",
-                " Answer1"
+                " Answer1",
+                " Tie"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
                 "TIE",
-                "Mistral-7B-Instruct-v0.2"
+                "Mistral-7B-Instruct-v0.2",
+                "TIE"
             ]
         },
         {
@@ -5252,12 +5252,12 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " 'Answer1'",
+                " Tie",
                 " Answer1",
                 " Tie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1",
                 "TIE"
             ]
@@ -5277,12 +5277,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
                 " 'Answer1'",
-                " Answer1"
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "TIE",
+                "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
@@ -5300,14 +5300,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " Tie (Both answers are correct and of equal quality.)"
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
-                "Unknown"
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -5326,12 +5326,12 @@
             },
             "result": [
                 " Tie",
-                " Tie",
-                " Answer1"
+                " Tie. Both responses provide a correct and accurately explained chemical formula for water, as well as a basic structure description. The only difference lies in the use of semicolon in Answer1 and a period in Answer2, which does not fundamentally affect the semantic quality of the answers.",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "TIE",
-                "TIE",
+                "Unknown",
                 "Mistral-7B-Instruct-v0.2"
             ]
         },
@@ -5349,12 +5349,12 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " Tie",
                 " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1"
             ]
         }
@@ -5396,12 +5396,12 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Tie",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -5422,13 +5422,13 @@
             },
             "result": [
                 " Answer2",
-                " Answer2",
-                " Answer2"
+                " Answer1",
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
-                "gpt-4.1"
+                "Mistral-7B-Instruct-v0.2",
+                "TIE"
             ]
         },
         {
@@ -5493,12 +5493,12 @@
             },
             "result": [
                 " Answer2",
-                " Tie",
+                " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "TIE",
+                "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
         }
@@ -5540,14 +5540,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Tie",
-                " Tie",
-                " Tie. Both responses correctly identify that a thermometer measures temperature and provide similar levels of clarity in their explanations. However, Answer 2 introduces a slightly more formal definition of temperature, which may be preferred in some contexts."
+                " Answer2",
+                " 'Answer1'",
+                " Answer2"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
-                "Unknown"
+                "Mistral-7B-Instruct-v0.2",
+                "gpt-4.1",
+                "Mistral-7B-Instruct-v0.2"
             ]
         }
     ],
@@ -5565,12 +5565,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie. Both answers are accurate in describing what the heart does and why it is essential for the body.",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "Unknown",
+                "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
@@ -5588,13 +5588,13 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer1, Answer2 (Tie)",
-                " Answer1, Answer2 (Tie)",
+                " Tie",
+                " Tie",
                 " Tie"
             ],
             "extracted_answers": [
-                "Unknown",
-                "Unknown",
+                "TIE",
+                "TIE",
                 "TIE"
             ]
         }
@@ -5613,7 +5613,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -5638,7 +5638,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -5733,13 +5733,13 @@
             },
             "result": [
                 " Answer1",
-                " Tie. Both answers accurately and succinctly answer the question and provide additional context about Darwin's study and its contribution to his theory of evolution. However, neither response stands out significantly more than the other in terms of clarity, accuracy, or detail.",
-                " Answer1"
+                " Answer1",
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "Unknown",
-                "gpt-4.1"
+                "gpt-4.1",
+                "TIE"
             ]
         }
     ],
@@ -5757,14 +5757,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie. Both answers are incorrect. The correct answer for the first four letters in the second row of a QWERTY keyboard from left to right are \"O T U S.\" The keys are \"O\" (capital), \"T\" (lowercase), \"U\" (lowercase), and \"S\" (uppercase). The second line does include the home row keys, but the particular letters mentioned are not the first four from left to right.",
-                " Tie\n\nBoth answers are incorrect. The correct answer is \"QUEST,\" with \"Q,\" \"U,\" \"E,\" and \"T\" being the first four letters from left to right in the second row of a QWERTY keyboard. The second row contains the keys \"Q,\" \"U,\" \"E,\" \"I,\" \"O,\" \"N,\" and \"T.\"",
-                " Tie\n\nBoth answers provide information, but Answer1 correctly identifies the first four letters from left to right in the second line as \"WTAS\", while Answer2 incorrectly identifies the first four letters from the 'home row' (which are technically ASDF). Therefore, their responses are not exactly the same and both have some level of correctness. However, since the question specifically asks for the first four letters in the second line from left to right, Answer1 provides a more direct answer to the question posed. But, Answer2 is somewhat understandable in the context of typical keyboard layouts, hence the tie."
+                " Tie. Both responses are incorrect. The first four keys in the second row, from left to right, on a QWERTY keyboard are \"ROWD\". The correct keys for the question in the prompt should be \"Q W E R\".",
+                " Tie. Both responses are inaccurate. The first four letters on the second line of a QWERTY keyboard, going from left to right are \"RFDS,\" not \"WTAS\" or \"ASDF.\" The second line consists of the keys F, D, S, and G. The answer from Response 1 is correct for the third row, not the second. The second answer is inaccurate, as A, S, D, and F are not on the second line but rather on the home row. The term \"home row\" does not refer to a specific line but is simply a reference to the keys (ASDF, JKL;, and ;LKJ,) where most typing is done.",
+                " Tie. Both responses are providing information, but they are addressing different aspects of the question. Answer1 correctly identifies the first four letters on the second row, as per the question's instructions, while Answer2 focuses on the concept of the \"home row,\" which is not directly related to the question. However, it's worth noting that in a QWERTY keyboard, the \"home row\" does indeed contain the correct letters for the first four positions of the second line when considered left to right, starting from the A key. So, while the answers provide slightly different information, they are not completely incorrect."
             ],
             "extracted_answers": [
                 "Unknown",
-                "TIE",
-                "TIE"
+                "Unknown",
+                "Unknown"
             ]
         },
         {
@@ -5780,14 +5780,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Tie\n\nWhile both answers provide information, they are not entirely accurate. The correct answer should be A, S, D, F, as for the home row of a QWERTY keyboard. Answer 1 is closer to the right answer, but Answer 2 mentions the wrong row entirely, so it's not correct either. A tie would be more fitting for this situation to account for the inaccuracies in both responses.",
                 " Answer1",
-                " Answer1"
+                " Answer1",
+                " Tie. Both answers are correct, but they are referring to different rows. Answer1 refers to the second line of the keyboard which is known as the \"home row\". Answer2 refers to the second row from the number row. However, without clarifying which row the question is referring to, both responses are equally valid."
             ],
             "extracted_answers": [
-                "TIE",
                 "gpt-4.1",
-                "gpt-4.1"
+                "gpt-4.1",
+                "Unknown"
             ]
         }
     ],
@@ -5805,12 +5805,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie. Both answers are correct and demonstrate the same standard method for solving the equation 2*x=24, including isolating the variable and performing the division to find the solution.",
+                " Tie",
                 " Answer1",
                 " Tie"
             ],
             "extracted_answers": [
-                "Unknown",
+                "TIE",
                 "Mistral-7B-Instruct-v0.2",
                 "TIE"
             ]
@@ -5829,13 +5829,13 @@
             },
             "result": [
                 " Tie",
-                " Tie",
-                " Tie"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "TIE",
-                "TIE",
-                "TIE"
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         }
     ],
@@ -5854,7 +5854,7 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -5877,13 +5877,13 @@
             },
             "result": [
                 " Answer2",
-                " Answer2",
-                " Answer2"
+                " 'Answer2'",
+                " Tie"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2"
+                "TIE"
             ]
         }
     ],
@@ -5901,12 +5901,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Tie",
                 " 'Answer1'",
-                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
+                "TIE",
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
@@ -5924,14 +5924,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer1",
-                " Tie\n\nBoth answers provided insightful and comprehensive responses, emphasizing the importance of fairness, open communication, and respect for all parties involved. However, Answer2 offers a more detailed and systematic approach by providing specific steps and principles. On the other hand, Answer1 demonstrates a more practical and straightforward application of democratic values, focusing on communication and vote. Since both answers are valuable, a tie is the appropriate evaluation.",
-                " 'Answer1' is the superior response because it provides a more concrete and easy-to-understand step-by-step process for resolving conflicts in a student council using democratic principles. While 'Answer2' discusses important democratic values and principles, it does not offer a clear method for applying them to solve a specific conflict, making it less useful in a practical sense."
+                " Tie",
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "TIE",
-                "Unknown"
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -5949,14 +5949,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Both answers are well-written and accurately describe the water cycle within a terrarium. However, I would choose Answer1 as it provides a more comprehensive and structured explanation, including the steps of the water cycle in greater detail. Answer2 still offers a good explanation, but it is slightly less detailed. Therefore, my vote is 'Answer1'.",
                 " Answer1",
-                " 'Answer1'"
+                " Answer1",
+                " Tie"
             ],
             "extracted_answers": [
-                "Unknown",
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2"
+                "Mistral-7B-Instruct-v0.2",
+                "TIE"
             ]
         },
         {
@@ -5972,12 +5972,12 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer2",
-                " 'Answer1' (The first answer provides a simpler and more straightforward explanation that makes it easier for the reader to follow and understand the water cycle process. It also directly relates the terrarium to the water cycle's main parts: evaporation, condensation, and precipitation.)",
-                " Tie. Both answers are well-written, accurate, and provide a clear explanation of the water cycle in a terrarium. They both also refer to the common elements of the water cycle, such as evaporation, condensation, and precipitation. However, the montage answer (Answer1) presents a more engaging and accessible narrative, while the step-by-step answer (Answer2) may be more suitable for someone who prefers a list-like explanation."
+                " 'Answer1'",
+                " Tie. Both responses provide a clear and accurate explanation of the water cycle in a terrarium, explaining the main steps: evaporation, condensation, and precipitation. They both also include the process of water being absorbed by plants and re-emitted through transpiration. However, Answer2 provides a slightly more in-depth explanation by incorporating steps 4 to 6, which are not explicitly mentioned in Answer1 but are relevant to the water cycle within a terrarium. Nevertheless, Answer1 offers a more colloquial and concise explanation that could be more helpful for someone who needs a quick and easy-to-understand explanation.",
+                " Tie. Both answers accurately and concisely explain the water cycle in a terrarium, using an understandable and layman-friendly language. Both responses give a clear step-by-step explanation of the stages of the water cycle. However, Answer2 provides a slightly more detailed explanation of the transpiration process and runoff. On the other hand, Answer1 provides a more vivid and relatable example by likening the terrarium to the Earth's water cycle, making it more engaging for the reader. It's a tie because both answers are clear, accurate, and both have strengths in their explanations."
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
+                "gpt-4.1",
                 "Unknown",
                 "Unknown"
             ]
@@ -5997,12 +5997,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " Tie",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
+                "TIE",
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
@@ -6020,9 +6020,9 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " Answer1"
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -6045,14 +6045,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
-                " 'Answer1'",
-                " Tie. Both responses demonstrate the concept of gravity effectively in different ways. The first one uses a practical and more common experiment, while the second one introduces the concept of air resistance to explain why objects might fall at different rates in everyday situations. Ultimately, both responses provide accurate and well-explained illustrations of gravity."
+                " Answer1",
+                " 'Answer1' is the superior answer as it provides a more comprehensive explanation of gravity, including the force's behavior, the concept of gravitational pull, the constant acceleration due to gravity, and how Earth's gravity affects objects. Answer2, on the other hand, while it contains a correct statement about the identical behavior of objects in a vacuum, it misses the mark on other key aspects of gravity. Moreover, answering the question requesting a simple experiment with a complex multi-step hypothetical scenario, such as testing objects in a vacuum, deviates from the intended scope.",
+                " Answer2"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
-                "Unknown"
+                "Unknown",
+                "gpt-4.1"
             ]
         },
         {
@@ -6068,12 +6068,12 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
+                " Tie. Both responses adequately explain the concept of gravity using a simple experiment, but they focus on different aspects. Answer1 explains the concept of how different objects fall at the same speed in a vacuum, whereas Answer2 focuses on the accumulation of speed as an object falls under gravity due to the Earth's gravity. Both responses contribute valuable insights into understanding the nature of gravity.",
                 " 'Answer1'",
-                " 'Answer1'",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Unknown",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -6093,8 +6093,8 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
-                " 'Answer1'",
+                " Answer1",
+                " Answer1",
                 " 'Answer1'"
             ],
             "extracted_answers": [
@@ -6118,7 +6118,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -6191,12 +6191,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Tie. Both responses provide adequate and similar steps to plan a small party within a given budget. However, Answer1 offers a more detailed and structured approach with specific percentages for budget allocation, while Answer2 proposes a method using simplistic and practical math. Both approaches are valid and can be useful for different individuals."
+                " Answer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
-                "Unknown"
+                "Mistral-7B-Instruct-v0.2"
             ]
         },
         {
@@ -6212,13 +6212,13 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " 'Answer1' is more straightforward and easy to understand for the general public. Although 'Answer2' is also correct, it contains more formal language and mathematical percentages, which might not be easily comprehended by everyone. Therefore, the first answer is more suitable for helping someone who is a bit stuck on this question.",
-                " 'Answer2'",
-                " 'Answer2'"
+                " Answer1",
+                " Answer1 (Tie)\n\nBoth responses provide clear steps for planning a party within a budget by using mathematical skills. However, Answer1 tends to be more personal and conversational, while Answer2 is more organized, structured, and specifies percentages. If evaluating based on clarity and appropriateness, both answers are equally good.",
+                " Answer2"
             ],
             "extracted_answers": [
+                "gpt-4.1",
                 "Unknown",
-                "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
         }
@@ -6239,7 +6239,7 @@
             "result": [
                 " Answer1",
                 " 'Answer1'",
-                " Tie\n\nBoth responses provide accurate and detailed steps for finding the fastest route from a house to a park using a map. However, each answer employs a slightly different approach and language, which makes one superior to the other based on personal preference or context. It's essential for the user to understand the specific mapping app or tool they're using and the route planning options available, as the proper terminology (e.g., \"Directions\" or \"Route,\" \"Transportation mode,\" etc.) varies across platforms. Therefore, we find that both answers offer equally useful advice for the given question."
+                " Tie"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
@@ -6260,14 +6260,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer2",
-                " 'Answer1' (The first answer provides more detailed steps and covers various aspects of navigation such as one-way streets, traffic lights, public transport, and potential roadblocks. It also mentions the possibility of using a map app, although it doesn't focus much on digital solutions.)",
-                " Tie. Both answers provide a clear explanation for plotting the quickest route from one's house to the nearest park using a map. They both suggest identifying the house and park on the map, comparing routes, and choosing the shortest or least complicated one. However, Answer1 provides a more detailed explanation that includes using map apps, avoiding roadworks, and taking into account one-way streets, traffic lights, and public transport. Answer2 condenses the instructions and focuses on using mapping apps and websites. While Answer1 is more descriptive, Answer2 is more concise, offering a good balance for different readers."
+                " Tie",
+                " Answer1",
+                " Tie"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
-                "Unknown",
-                "Unknown"
+                "TIE",
+                "gpt-4.1",
+                "TIE"
             ]
         }
     ],
@@ -6286,13 +6286,13 @@
             },
             "result": [
                 " 'Answer1'",
-                " Tie",
-                " 'Answer1'"
+                " Answer1",
+                " Tie"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "TIE",
-                "Mistral-7B-Instruct-v0.2"
+                "Mistral-7B-Instruct-v0.2",
+                "TIE"
             ]
         },
         {
@@ -6308,13 +6308,13 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " 'Answer2'",
-                " Answer2",
+                " 'Answer1'",
+                " 'Answer1'\n\nBoth answers are well-written and effectively present their case for longer lunch breaks. Answer1, however, delivers a more personal and emotionally engaging argument by addressing the principal directly and speaking from the perspective of a student who has practical concerns about the current lunch break. Furthermore, the answer mentions specific benefits to students' health and well-being, providing a more compelling reason for the principal to consider the request. While Answer2 also outlines the benefits of longer lunch breaks, it is slightly more formal and less explicitly persuasive in its tone. For these reasons, I would choose Answer1 as the superior response.",
                 " Answer2"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
+                "gpt-4.1",
+                "gpt-4.1",
                 "Mistral-7B-Instruct-v0.2"
             ]
         }
@@ -6334,12 +6334,12 @@
             },
             "result": [
                 " Answer1",
-                " Tie\n\nBoth answers provide useful and somewhat similar information about designing a kite for moderate wind conditions, however, they do so in slightly different ways.\n\nAnswer1 is more detailed and focuses on specific geometric concepts such as aspect ratio, airfoil shape, bridle system, wing area, and tail length. It also provides specific numerical values for each factor to give a clearer idea of what is considered suitable for moderate wind conditions.\n\nAnswer2 is easier to understand for a layperson with less knowledge about geometry and provides a simplified version of some key factors, such as the importance of a balanced structure, suitable shape (diamond), and a long tail for stability. However, it lacks the numerical specificity of Answer1.\n\nGiven the focus on semantic quality, both answers are suitable for someone looking to design a kite for moderate wind conditions, but for different audiences. If a more detailed answer is preferred, one might choose Answer1. If a simpler, intuitive explanation is desired, one might choose Answer2. Therefore, it's a tie between the two answers.",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "TIE",
+                "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
         },
@@ -6356,14 +6356,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
+                " Tie\n\nBoth Answer1 and Answer2 provide valuable insights and guidelines for designing a kite suitable for moderate wind conditions. Answer1 offers a more concise, easy-to-understand solution, emphasizing key components like the kite's shape, materials, and string attachment point. On the other hand, Answer2 delves deeper into the mathematical aspects, including aspect ratio and airfoil shape, and provides a comprehensive, more technical approach.\n\nSince both responses offer valid knowledge and could potentially help the person in question with their dilemma, a tie is the optimal choice in this scenario.",
                 " Answer2",
-                " Answer2",
-                " Tie\n\nBoth answers provide explanations about the geometric principles for designing a kite suitable for moderate wind conditions. Answer1 offers a detailed, practical approach using concepts like shapes, sizes, and materials, while Answer2 provides a more comprehensive overview with a focus on specific geometric factors such as aspect ratio, airfoil shape, bridle system, wing area, and tail length. Though they approach the question from different perspectives, both answers offer valid information, and it could be subjective which one is more helpful depending on the reader's background and objectives."
+                " Answer2"
             ],
             "extracted_answers": [
+                "TIE",
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
-                "TIE"
+                "Mistral-7B-Instruct-v0.2"
             ]
         }
     ],
@@ -6382,12 +6382,12 @@
             },
             "result": [
                 " Answer1",
-                " Tie",
+                " 'Answer1'",
                 " 'Answer1'"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "TIE",
+                "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
         },
@@ -6404,12 +6404,12 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer1, Answer2 (Tie) - Both answers are clear, concise, and accurate in explaining how to calculate the area of a rectangular room. Both responses illustrate the same method, which is multiplying the length by the width, but Answer1 provides a more detailed explanation, including the reasoning behind the calculation and an example. On the other hand, Answer2 is shorter and more direct, providing the formula and an example without further explanation. In this case, both answers are equally good.",
                 " Answer1",
-                " 'Answer1'"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
-                "Unknown",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -6430,7 +6430,7 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -6452,12 +6452,12 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " 'Answer1'\n\nBoth answers provide excellent advice on planning a healthy week's menu, focusing on a balance of macronutrients and food groups. However, Answer1 offers more explicit and detailed advice, such as cooking methods, portion controls, and spreading meals throughout the day\u2014factors that can be crucial for maintaining a healthy diet. Therefore, Answer1 is preferred for being more comprehensive and informative.",
+                " 'Answer1' The response provided in Answer1 is more detailed and comprehensive, offering a general approach to planning a healthy menu that covers all food groups, nutrient requirements, food preparation methods, and portion sizes. It also addresses the importance of variety in meal choices to make meals interesting and tasty. While Answer2 provides specific meal suggestions for four days of the week, it lacks the holistic approach and depth provided by Answer1. Therefore, Answer1 is the superior response.",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Unknown",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -6548,9 +6548,9 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer1\n\nBoth responses are equally good and provide complete, accurate and systematic explanations about the order of operations in mathematics. However, Response1 provides a more detailed and comprehensive explanation including the acronym PEMDAS, which makes it more user-friendly for beginners. Hence, it is slightly superior to Response2.\n\nFinal answer: Answer1",
-                " 'Answer1'",
-                " 'Answer1'"
+                " Answer1",
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -6573,12 +6573,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " Answer1 (the first answer is more concise, comprehensive, and accurate in explaining why one gets tired after physical exercise)",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
+                "Unknown",
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
@@ -6596,14 +6596,14 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer1 (The first response provides a more comprehensive and detailed explanation, including factors like dehydration, loss of important minerals due to sweating, and exhaustion of the nerves.)",
                 " Answer1",
-                " Tie (Answer1 and Answer2 both provide an accurate and comprehensive explanation, and the order of their presentation is almost identical, making it difficult to select one as superior)"
+                " Tie",
+                " Answer1"
             ],
             "extracted_answers": [
-                "Unknown",
                 "gpt-4.1",
-                "Unknown"
+                "TIE",
+                "gpt-4.1"
             ]
         }
     ],
@@ -6645,13 +6645,13 @@
             },
             "result": [
                 " Answer2",
-                " Answer2",
-                " 'Answer1'"
+                " Tie",
+                " Answer2"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
-                "gpt-4.1"
+                "TIE",
+                "Mistral-7B-Instruct-v0.2"
             ]
         }
     ],
@@ -6669,9 +6669,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " 'Answer1'"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
@@ -6692,12 +6692,12 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " 'Answer2'",
-                " 'Answer2'",
+                " Tie",
+                " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
-                "Mistral-7B-Instruct-v0.2",
+                "TIE",
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2"
             ]
@@ -6717,13 +6717,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
-                " Answer1",
-                " Answer1"
+                " 'Answer1'",
+                " Tie",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "Mistral-7B-Instruct-v0.2",
+                "TIE",
                 "Mistral-7B-Instruct-v0.2"
             ]
         },
@@ -6740,12 +6740,12 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " Answer1",
+                " Tie",
                 " Tie",
                 " Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "TIE",
                 "TIE",
                 "gpt-4.1"
             ]
@@ -6765,14 +6765,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
-                " Answer1 (First response is more comprehensive and includes more detailed information about the factors influencing the expiration date of medicines, such as storage conditions and rotating stock.)",
-                " Tie"
+                " Answer1",
+                " Tie",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
-                "Unknown",
-                "TIE"
+                "TIE",
+                "Mistral-7B-Instruct-v0.2"
             ]
         },
         {
@@ -6788,8 +6788,8 @@
                 "label": "Mistral-7B-Instruct-v0.2"
             },
             "result": [
-                " 'Answer1'",
-                " 'Answer1'",
+                " Answer1",
+                " Answer1",
                 " 'Answer1'"
             ],
             "extracted_answers": [
@@ -6813,14 +6813,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " Answer1",
-                " Tie\n\nBoth responses are good explanations of the phenomenon, however, the second answer provides slightly more context and visualization of how the water vapor transforms into liquid droplets. But the first response is very concise and covers the necessary points in a more succinct manner. In this case, I would consider both answers equally good."
+                " Answer1"
             ],
             "extracted_answers": [
                 "Mistral-7B-Instruct-v0.2",
                 "Mistral-7B-Instruct-v0.2",
-                "TIE"
+                "Mistral-7B-Instruct-v0.2"
             ]
         },
         {

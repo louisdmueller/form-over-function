@@ -836,9 +836,9 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                "Answer1",
-                "Answer1",
-                "Answer1"
+                "Answer1 is superior because it provides a more accurate, comprehensive, and coherent explanation of the water cycle and the importance of each stage. It correctly identifies the key processes (evaporation, transpiration, condensation, precipitation, collection) and clearly explains how each contributes to the continuity and balance of the cycle, emphasizing ecological and life-sustaining functions. It also avoids introducing incorrect or misleading information.\n\nAnswer2 contains a significant error: it mentions \u201cintrusion\u201d as a stage in the water cycle, incorrectly referring to saltwater moving into freshwater aquifers. While this phenomenon (saltwater intrusion) is a real environmental issue, it is not a natural, essential stage of the water cycle \u2014 it is an anthropogenic or coastal hydrogeological problem. Including it as part of the core cycle misleadingly frames it as a normal, universal component, which distorts the scientific understanding of the cycle.\n\nAdditionally, Answer1 provides stronger reasoning for *why* each stage is important, while Answer2\u2019s conclusion is vague and less connected to the broader implications for life and ecosystems.\n\nThus, Answer1 is more accurate, thorough, and pedagogically sound.\n\nAnswer1",
+                "Answer1\n\nAnswer1 provides a more complete, accurate, and clearly explained account of the water cycle and the importance of each stage. It correctly identifies the core processes (evaporation, transpiration, condensation, precipitation, collection), explains how they link together, and clearly articulates the functional importance of each stage in sustaining life and ecosystems. The explanation is scientifically sound, coherent, and comprehensive.\n\nAnswer2 contains a critical error: it introduces \u201cintrusion\u201d as a stage of the water cycle, specifically referring to saltwater moving into freshwater aquifers. While saltwater intrusion is a real hydrogeological phenomenon, it is not a standard or necessary stage of the natural water cycle\u2014it is a human-induced or\u533a\u57df\u6027 issue, not a universal component of the cycle. Including it as if it were a core stage misrepresents the fundamental processes. Additionally, Answer2 is less detailed in explaining *why* each stage is important, offering a more superficial treatment.\n\nThus, Answer1 is superior in accuracy, completeness, and clarity.\n\nAnswer1",
+                "Answer1 is superior.\n\nIt provides a clearer, more accurate, and comprehensive explanation of the water cycle, correctly identifying the key stages (evaporation, transpiration, condensation, precipitation, collection) and explaining the importance of each in a logically connected way. It emphasizes the cyclical, self-renewing nature of the system and its essential role for life, without introducing misleading or incorrect information.\n\nAnswer2 contains a critical error: it mentions \u201cintrusion occurs when saltwater moves into freshwater aquifers\u201d as if it is a standard, necessary stage of the water cycle \u2014 but this is actually a form of contamination (saltwater intrusion), not a natural, integral phase of the hydrologic cycle. Including it as if it belongs to the core stages misrepresents the science.\n\nAdditionally, Answer1 is more pedagogically effective and better ties each stage\u2019s function to ecological and human importance \u2014 a direct requirement of the question.\n\nAnswer1 is scientifically accurate and thorough; Answer2 has a factual flaw that undermines its reliability.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -1678,12 +1678,12 @@
             },
             "result": [
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1",
+                "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "Unknown",
-                "Llama-2-7b-chat-hf",
+                "Unknown",
                 "Unknown"
             ]
         },
@@ -1700,14 +1700,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                "Answer2",
-                "Tie",
-                "Answer1  \nAnswer2  \nTie"
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie",
+                "Answer2"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
-                "TIE",
-                "Unknown"
+                "Unknown",
+                "Unknown",
+                "Llama-2-7b-chat-hf"
             ]
         }
     ],
@@ -2084,9 +2084,9 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                "Answer1 is superior.\n\nIt provides a more accurate, detailed, and nuanced explanation. It correctly identifies the inner planets as terrestrial and the outer planets as gas giants and ice giants, clarifies that Uranus and Neptune are not typical gas giants, mentions moons and rings (key distinguishing features), and correctly states that inner planets have solid surfaces while outer planets lack a true solid surface. It also explicitly notes proximity to the Sun, which is central to the classification.\n\nAnswer2 contains significant inaccuracies. It claims inner planets have \u201cdenser atmospheres,\u201d which is false \u2014 Venus has a very dense atmosphere, but Mercury has virtually none, and Mars and Earth have comparatively thin atmospheres. Meanwhile, gas giants like Jupiter have extremely thick, high-pressure atmospheres \u2014 so saying outer planets have \u201cless dense atmospheres\u201d is incorrect. It also omits key features like moons and rings, and fails to mention the ice giant distinction, reducing the explanation to an oversimplified and misleading comparison.\n\nThus, Answer1 is clearly more accurate and informative.\n\nAnswer1",
+                "Answer1\n\nAnswer1 provides a more accurate and detailed explanation. It correctly identifies the inner planets as terrestrial, notes their rocky composition, few or no moons, and solid surfaces. It also accurately distinguishes the outer planets as gas giants (with the important clarification that Uranus and Neptune are ice giants), mentions their numerous moons and ring systems, and correctly states that they lack a true solid surface. It also emphasizes their greater distance from the Sun.\n\nAnswer2 contains significant inaccuracies: it claims inner planets have \"denser atmospheres,\" which is false \u2014 Venus has a very dense atmosphere, but Mercury has virtually none, and Mars and Earth\u2019s atmospheres are much thinner than those of the outer planets. Also, saying outer planets have \"less dense atmospheres\" is misleading \u2014 their atmospheres are thick and extensive, just composed of light gases like hydrogen and helium. Furthermore, Answer2 omits key features like moons and rings, which are fundamental to differentiating the two groups.\n\nThus, Answer1 is superior in accuracy, completeness, and nuance.\n\nAnswer1",
                 "Answer1",
-                "Answer1\n\nAnswer1 provides a more comprehensive and accurate explanation. It correctly identifies the inner planets as terrestrial, notes their rocky composition, few or no moons, and solid surfaces, while accurately describing the outer planets as gas and ice giants with many moons and ring systems. It also properly clarifies that outer planets lack a true solid surface and are farther from the Sun.\n\nAnswer2 contains inaccuracies: it claims inner planets have \"denser atmospheres,\" which is false\u2014Venus has a very dense atmosphere, but Mercury has virtually none, and Mars has a thin one. Also, describing outer planets as having \"less dense atmospheres\" is misleading; their atmospheres are thick but less dense in terms of composition (mostly hydrogen/helium), not necessarily in pressure (in fact, pressures are immense deep inside). Answer2 also omits key details like rings and the distinction between gas giants and ice giants.\n\nThus, Answer1 is superior in accuracy, depth, and clarity.\n\nAnswer1"
+                "Answer1 is superior because it provides a more accurate, detailed, and nuanced explanation. It correctly identifies the inner planets as terrestrial and the outer planets as gas and ice giants, notes the presence of moons and rings in the outer planets, clarifies that outer planets lack a true solid surface, and accurately describes the distance from the Sun and surface composition. \n\nIn contrast, Answer2 contains a significant error: it claims the inner planets have \u201cdenser atmospheres,\u201d when in fact, Venus has a dense atmosphere, but Mercury has almost none, and Earth and Mars have relatively thin atmospheres compared to the thick, massive atmospheres of the outer gas giants. Moreover, Answer2 oversimplifies the composition of outer planets by calling them \u201cprimarily of gas,\u201d ignoring that Uranus and Neptune are ice giants with different compositions. \n\nAnswer1\u2019s accuracy and depth make it clearly superior.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -2301,14 +2301,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1  \nAnswer2  \nTie\n\nTie",
-                "Both Answer1 and Answer2 are well-structured, practical, and comprehensive in their approach to designing a recycling campaign. They both include key elements such as education (posters, awareness), infrastructure (labeled bins), engagement (competitions), student involvement (clubs), and measurement of impact (tracking recycled waste). \n\nAnswer1 emphasizes a **waste audit** as a foundational step, which adds a data-driven, analytical component that enhances the campaign\u2019s effectiveness and credibility. It also includes a **Recycling Fair**, which offers broader community engagement and learning about external programs.\n\nAnswer2, however, provides **more specific, actionable details**\u2014such as weekly announcements, monthly progress updates, inviting local experts, and clearly defining bin categories (paper, plastic, metal). It also emphasizes **daily habit formation** and **teamwork**, which are powerful psychological and social drivers for long-term behavioral change.\n\nWhile Answer1 is slightly more strategic in its initial planning, Answer2 offers a more **complete, operational, and sustainably engaging framework** with clearer mechanisms for ongoing involvement and accountability.\n\nThus, Answer2 edges out slightly in **practical implementation, sustainability, and student engagement**.\n\nAnswer2",
-                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a more comprehensive and systematically structured approach, beginning with a waste audit\u2014an evidence-based, data-driven step that ensures the campaign is tailored to actual school conditions. It also includes well-defined events (Recycling Challenge, Recycling Fair) and emphasizes student ownership through a dedicated club, which fosters long-term sustainability. The proposal is thoughtful, practical, and demonstrates understanding of behavioral change strategies.\n\nAnswer2 is also strong and well-organized, with clear tactics like labeled bins, weekly announcements, competitions, expert talks, and monthly progress updates. It emphasizes teamwork and habit formation, which are valuable. However, it lacks the initial assessment phase (like a waste audit), which limits its foundation in data. The absence of this step makes the campaign slightly less targeted and potentially less effective in addressing the school\u2019s specific needs.\n\nWhile both are excellent, Answer1\u2019s inclusion of a waste audit and broader strategic planning gives it a slight edge in quality, depth, and long-term viability.\n\nAnswer1"
+                "Answer1 and Answer2 are both highly effective, well-structured, and demonstrate strong understanding of how to design a school-based recycling campaign. They share many similar elements: education through posters, student involvement, competitions, and community engagement. \n\nHowever, Answer1 has a slight edge due to its inclusion of a **waste audit**\u2014a data-driven, foundational step that ensures the campaign is targeted and measurable. This adds a layer of scientific rigor and practical planning that makes the campaign more likely to succeed and adapt based on real campus data. Additionally, the idea of a **student-led recycling club** as an ongoing oversight body implies sustainability beyond the initial campaign, which enhances long-term impact.\n\nAnswer2 is excellent and very practical, especially with its emphasis on weekly reminders, monthly progress tracking, and expert involvement\u2014but it lacks the initial assessment phase, which is critical for designing an effective intervention.\n\nThus, Answer1 demonstrates a more comprehensive and strategic approach.\n\nAnswer1",
+                "Answer2",
+                "Answer1 and Answer2 are both well-structured, practical, and comprehensive responses that cover key elements of a successful school recycling campaign: education, infrastructure (bins), student engagement, competitions, and community involvement. \n\nAnswer1 emphasizes a **waste audit** as a foundational step, which adds data-driven insight and shows a strong understanding of evidence-based planning. It also proposes a **student-led recycling club** for long-term sustainability, which is a powerful way to ensure continuity beyond the initial campaign.\n\nAnswer2 is equally strong, with clear, actionable steps like **weekly announcements**, **monthly recycling updates**, and **inviting local experts**\u2014all of which enhance engagement and education. Its focus on **teamwork and daily habit formation** is particularly effective for behavioral change.\n\nBoth responses are high quality. Answer1 has a slight edge due to the inclusion of a waste audit\u2014a step that demonstrates deeper analytical thinking and planning. However, Answer2\u2019s inclusion of regular updates and expert involvement makes the campaign more dynamic and sustained in practice.\n\nGiven that both are excellent and differ only in minor strategic emphases\u2014with neither being clearly superior in overall quality\u2014the most balanced judgment is:\n\n**Tie**"
             ],
             "extracted_answers": [
-                "Unknown",
+                "Llama-2-7b-chat-hf",
                 "gpt-4.1",
-                "Unknown"
+                "TIE"
             ]
         },
         {
@@ -2517,8 +2517,8 @@
             },
             "result": [
                 "Answer1",
-                "Answer1 is superior because it provides a thoughtful, practical, and comprehensive guide on how to compose poetry about friendship. It offers actionable steps\u2014such as reflecting on personal experiences, choosing themes and tone, selecting a structure, using imagery, and revising for rhythm\u2014making it deeply educational and empowering for the reader. It also includes a structural outline and emphasizes authenticity and emotional sincerity, which are essential to meaningful poetry.\n\nAnswer2, while pleasant and correctly formatted as a poem, gives no guidance on *how* to compose poetry. It simply provides one example without explanation, offering no insight or learning value for someone trying to understand the craft. It fulfills the literal request for a poem but fails to address the underlying request for instruction.\n\nThe question asks \u201cHow would you compose a poetry about friendship?\u201d\u2014a *process-oriented* question. Answer1 answers that. Answer2 does not.\n\nAnswer1",
-                "Answer1"
+                "Answer1",
+                "Answer1\n\nAnswer1 provides a thoughtful, comprehensive guide on how to compose poetry about friendship, outlining key elements like theme selection, tone, structure, imagery, and revision techniques. It offers practical advice grounded in poetic craft and encourages authenticity, making it valuable for someone seeking to learn the process. In contrast, Answer2 simply presents a short, generic poem without any explanatory insight or instructional value. While the poem is pleasant, it does not answer the question of *how* to compose such a poem\u2014it only shows one example. The question asks for guidance on composition, not a sample. Therefore, Answer1 is superior in quality and relevance.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -2901,7 +2901,7 @@
             },
             "result": [
                 "Answer1",
-                "Answer1",
+                "Answer1 is superior.\n\nIt provides a more accurate and accessible explanation suitable for a primary school student. It uses a clear, relatable example (the moving train) to introduce the core intuition of relativity \u2014 that motion and perception are relative. It then gently introduces the more advanced (but still simplified) concept of time dilation in a way that sparks wonder without overwhelming (\"time would go slower for you... you might find everyone else got older faster\"). The final summary \u2014 \u201cIt all depends on your point of view\u201d \u2014 perfectly captures the essence of relativity in child-friendly language.\n\nAnswer2, while well-intentioned, contains a significant scientific error: it suggests that throwing a ball on a fast train makes it \u201clook like the ball is moving really slowly,\u201d which misrepresents both classical physics and relativity. In reality, to the person on the train, the ball behaves normally; to an outside observer, it moves forward with the train\u2019s speed plus its vertical motion \u2014 not \u201cslowly.\u201d This confusion could mislead a child.\n\nThus, Answer1 is not only more accurate but also more thoughtfully tailored to the audience.\n\nAnswer1",
                 "Answer1"
             ],
             "extracted_answers": [
@@ -3455,12 +3455,12 @@
             "result": [
                 "Answer2",
                 "Answer2",
-                "Answer2"
+                "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -3572,9 +3572,9 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                "Answer1",
-                "Answer1 provides a broader and more nuanced analysis of the societal and technological impacts of the inventions it selects, offering context on how each invention enabled further innovation (e.g., transistor enabling digital age and internet). It also makes a coherent argument about global transformation across communication, economics, and daily life.\n\nAnswer2 is factually accurate and highlights important inventions\u2014particularly the polio vaccine, which is a monumental medical achievement\u2014but it lacks depth in explaining *how* these inventions transformed society beyond listing applications. Additionally, while the laser is significant, its impact is arguably less foundational than the airplane in reshaping global infrastructure and human mobility.\n\nThe airplane\u2019s inclusion in Answer1, despite being early 20th century (1903), is still relevant as its full global impact unfolded throughout the century. Answer1 also better justifies *why* these inventions are \u201cmost significant\u201d by emphasizing systemic, cascading effects on civilization.\n\nAnswer2, while concise and informative, leans more toward a list of impactful inventions than a ranked argument for *most significant* on a civilizational scale.\n\nThus, Answer1 offers superior semantic quality through deeper reasoning and contextualization.\n\nAnswer1",
-                "Answer1 provides a broader and more balanced perspective by selecting inventions\u2014internet, transistor, and airplane\u2014that collectively represent foundational advancements in communication, computing, and transportation. These choices reflect deep, systemic impacts across society, economics, and technology, and the explanation clearly articulates their interdependence and far-reaching consequences. The transistor, in particular, is crucial as the enabler of the digital age, which Answer2 omits entirely.\n\nAnswer2 includes important inventions\u2014the polio vaccine and the laser\u2014but while they are undeniably impactful, they are more specialized. The polio vaccine is a medical breakthrough, not an \u201cinvention\u201d in the technological or engineering sense implied by the question\u2019s context. The laser is transformative, but its influence, while widespread, is arguably less foundational than the transistor or airplane as a platform for other technologies. Furthermore, Answer2 lacks the analytical depth of Answer1; it names the inventions and gives brief rationale but does not explore their interplay or societal transformation in the same comprehensive way.\n\nAnswer1 offers superior semantic quality: it demonstrates stronger reasoning, contextual grounding, and a cohesive narrative about how these inventions shaped the modern world.\n\nAnswer1"
+                "Answer1\n\nWhile both answers identify impactful inventions, Answer1 provides a more comprehensive and logically coherent rationale for its selections. It clearly explains the broad and foundational societal, economic, and technological impacts of the internet, transistor, and airplane\u2014highlighting how each enabled further innovations (e.g., the transistor enabling the digital age). The reasoning is nuanced, interconnected, and grounded in systemic transformation.\n\nAnswer2 includes important inventions (polio vaccine and laser), which are undeniably significant, but lacks the same depth of analysis. The polio vaccine is a medical breakthrough rather than an \u201cinvention\u201d in the technological/engineering sense typically implied by such questions, and while the laser is important, its impact, while wide-ranging, is not as foundational to the\u67b6\u6784 of modern civilization as the transistor or airplane. Answer1\u2019s selection of the transistor is particularly strong\u2014it is the unsung hero of the digital revolution and underpins the internet and modern computing, making it more conceptually central than the laser.\n\nAdditionally, Answer1 better addresses the \u201cranked\u201d nature of the question by implying a hierarchy through structure and emphasis, even if not numerically labeled. The explanation is richer, more analytical, and more aligned with historical and technological influence.\n\nThus, Answer1 is superior in semantic quality, depth, and reasoning.",
+                "Answer1 provides a broader and more comprehensive analysis of the societal, economic, and technological impacts of its chosen inventions, explicitly explaining how each one enabled further innovations and reshaped daily life. It presents a coherent argument rooted in systemic change across multiple domains.\n\nAnswer2 selects inventions with undeniable significance\u2014the polio vaccine and the laser\u2014but omits foundational technologies that enabled the digital and globalized world (e.g., the transistor, without which the internet and modern computing wouldn't exist). While the polio vaccine is a monumental medical achievement, and the laser is transformative, the list lacks the technological interconnectedness and foundational infrastructure that Answer1 emphasizes. The internet is rightly included, but without the transistor as its enabler, the ranking feels incomplete.\n\nAnswer1 offers a more nuanced, logically connected, and technically grounded ranking that accounts for cascading innovations across sectors. Answer2, while factually accurate, presents a more fragmented list without explaining the interdependencies or relative influence of each invention on broader progress.\n\n**Answer1** is superior in semantic quality: depth, coherence, and contextual reasoning.\n\nAnswer1",
+                "Answer1\n\nWhile both responses present thoughtful selections, Answer1 provides a more comprehensive justification for each invention's significance, explaining not only their direct impact but also how they enabled subsequent innovations (e.g., the transistor enabling computers and the internet). It also offers a broader perspective on societal, economic, and technological transformations.\n\nAnswer2 includes important inventions\u2014the polio vaccine and the laser\u2014but omits the airplane, which undeniably reshaped global infrastructure and human mobility in the 20th century. The absence of a clear rationale for excluding foundational technologies like the airplane, while including the laser (which, while transformative, is more of an enabling tool than a societal infrastructure transformation), makes Answer2 less balanced.\n\nAnswer1\u2019s ranking reflects inventions with wide-reaching, systemic, and interdependent impacts on modern civilization\u2014each of which fundamentally restructured how humanity lives, works, and communicates. Its reasoning is richer, more contextualized, and more convincing in terms of overall historical and societal significance.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -3597,14 +3597,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                "Answer1 and Answer2 are both well-reasoned, accurate, and comprehensive. They overlap significantly in content \u2014 both highlight the practical uses (navigation, agriculture, calendars), spiritual/mythological roles, and contributions to early science. \n\nHowever, **Answer1** slightly edges out by explicitly mentioning *divination and astrology* as distinct cultural practices and emphasizing the *dual purpose* (practical and spiritual) upfront. It also uses more precise terminology like \u201cpredicting celestial events,\u201d which adds depth. \n\n**Answer2** is also excellent, with strong phrasing like \u201cconnect with their cultural heritage\u201d and \u201cmake sense of their world,\u201d but it doesn\u2019t expand as explicitly on the predictive or ritualistic dimensions beyond mythology.\n\nThe difference is marginal, but **Answer1** provides a more nuanced and slightly more complete coverage of the multifaceted roles constellations played.\n\nAnswer1",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie",
-                "Answer1 and Answer2 are both well-reasoned, accurate, and comprehensive in explaining the importance of constellations to ancient civilizations. They cover overlapping key points: navigation, agriculture/seasonal tracking, spiritual/religious significance, and their role in early astronomy and culture.\n\nHowever, **Answer1** provides a slightly more detailed and nuanced discussion by explicitly mentioning *divination and astrology* as distinct applications, and it emphasizes the *dual role* (practical and spiritual) more explicitly in its concluding sentence. It also uses slightly more precise phrasing like \u201cpredicting celestial events,\u201d which adds depth.\n\n**Answer2** is equally strong and beautifully synthesized, but it doesn't introduce any new distinct categories beyond what Answer1 covers\u2014it slightly consolidates some points (e.g., \u201cmake sense of their world\u201d) which, while poetic, is a bit more general.\n\nGiven the subtle edge in specificity and breadth of coverage, **Answer1** slightly outperforms Answer2 in semantic quality.\n\nAnswer1"
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
+                "Llama-2-7b-chat-hf",
                 "Unknown",
-                "Unknown",
-                "Llama-2-7b-chat-hf"
+                "Unknown"
             ]
         },
         {
@@ -3620,12 +3620,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                "Answer1",
+                "Tie",
                 "Answer1",
                 "Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -4101,7 +4101,7 @@
             },
             "result": [
                 "Answer1",
-                "Answer1",
+                "Answer1  \nAnswer1 provides a more complete, coherent, and comprehensive evaluation of leadership effectiveness. While Answer2 starts strong with a well-structured list, it is cut off mid-sentence (\u201care they able to build\u201d), which undermines its completeness and professionalism. Answer1, in contrast, offers a full, logically organized, and nuanced discussion that integrates both qualitative (e.g., trust, morale, inclusivity) and quantitative factors (e.g., productivity, retention), while also addressing key dimensions like emotional intelligence, ethical standards, conflict management, and development of others\u2014all in a fluid and natural prose. This makes Answer1 superior in terms of semantic quality, completeness, and depth.\n\nAnswer1",
                 "Answer1"
             ],
             "extracted_answers": [
@@ -4607,7 +4607,7 @@
             "result": [
                 "Answer1  \nAnswer2  \nTie",
                 "Answer1  \nAnswer2  \nTie",
-                "Answer1  \nAnswer2  \nTie\n\nTie"
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "Unknown",
@@ -5711,12 +5711,12 @@
             "result": [
                 "Answer2",
                 "Answer2",
-                "Answer2"
+                "Answer1  \nAnswer2  \nTie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Unknown"
             ]
         },
         {
