@@ -47,12 +47,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Tie"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
-                "TIE"
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -69,12 +69,12 @@
             },
             "result": [
                 " 'Answer2'",
-                " Tie",
+                " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "TIE",
+                "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
         }
@@ -93,9 +93,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " Answer1"
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
@@ -117,13 +117,13 @@
             },
             "result": [
                 " Answer1",
-                " Tie",
-                " Answer1"
+                " Answer1",
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "TIE",
-                "gpt-4.1"
+                "gpt-4.1",
+                "TIE"
             ]
         }
     ],
@@ -142,12 +142,12 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " Tie",
                 " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
+                "TIE",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -191,7 +191,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
@@ -214,12 +214,12 @@
             "result": [
                 " Answer2",
                 " Answer2",
-                " Tie"
+                " Answer2"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
-                "TIE"
+                "Llama-2-7b-chat-hf"
             ]
         }
     ],
@@ -239,7 +239,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
@@ -261,12 +261,12 @@
             },
             "result": [
                 " Answer2",
-                " 'Answer2'",
-                " Answer2"
+                " Tie",
+                " 'Answer2'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
+                "TIE",
                 "Llama-2-7b-chat-hf"
             ]
         }
@@ -308,14 +308,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer2",
                 " Tie",
-                " Answer2"
+                " Answer2",
+                " Tie"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
                 "TIE",
-                "Llama-2-7b-chat-hf"
+                "Llama-2-7b-chat-hf",
+                "TIE"
             ]
         }
     ],
@@ -333,14 +333,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " Tie",
-                " Tie. Both answers provide a clear, concise, and understandable description of the key features of a democratic government and how they function together. They also take slightly different approaches in delivery, making the content accessible to a broader audience (Answer2 uses more informal language to maintain a conversational tone, while Answer1 employs a more formal, academic style). Ultimately, neither response is demonstrably superior in terms of content quality or accuracy."
+                " Tie"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "TIE",
-                "Unknown"
+                "Llama-2-7b-chat-hf",
+                "TIE"
             ]
         },
         {
@@ -356,14 +356,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
+                " 'Answer2'",
                 " Tie",
-                " Tie",
-                " Answer2"
+                " Tie"
             ],
             "extracted_answers": [
+                "Llama-2-7b-chat-hf",
                 "TIE",
-                "TIE",
-                "Llama-2-7b-chat-hf"
+                "TIE"
             ]
         }
     ],
@@ -381,12 +381,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
                 " 'Answer1'",
-                " Answer1"
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "TIE",
+                "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
@@ -429,14 +429,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
                 " Answer1",
-                " Answer1"
+                " Answer1",
+                " Tie"
             ],
             "extracted_answers": [
-                "TIE",
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "Llama-2-7b-chat-hf",
+                "TIE"
             ]
         },
         {
@@ -452,14 +452,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie. Both answers provide a satisfactory response to the question. However, answer 1 is more colloquial and uses informal language, while answer 2 is more formal and scientific.",
+                " Tie\n\nBoth responses correctly identify and describe the roles of various cellular components in their respective functions. However, Answer2 is somewhat clearer and more concise, whereas Answer1 provides a more informal, colloquial explanation which may be beneficial for certain learners, particularly young ones, or those who prefer a less formal learning style. Thus, it is difficult to definitively choose one response over the other based on the quality and accuracy of the answers alone.",
                 " Tie",
-                " Answer2"
+                " Tie"
             ],
             "extracted_answers": [
-                "Unknown",
                 "TIE",
-                "Llama-2-7b-chat-hf"
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -478,12 +478,12 @@
             },
             "result": [
                 " Answer1",
-                " Answer2",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "gpt-4.1",
+                "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -500,14 +500,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer1",
                 " Answer2",
-                " Tie"
+                " Tie",
+                " Answer2"
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "Llama-2-7b-chat-hf",
-                "TIE"
+                "TIE",
+                "Llama-2-7b-chat-hf"
             ]
         }
     ],
@@ -526,13 +526,13 @@
             },
             "result": [
                 " Tie",
-                " 'Answer1'",
-                " Answer1. Both answers are well written and informative, but the first answer is more concise, systematically explains the role of each ingredient, and includes a clear summary of the flavor profile created by the combination of ingredients. While the second answer provides a good description of flavors, it is less structured, and some of the explanations are phrased in a way that is less straightforward."
+                " Answer1",
+                " Tie"
             ],
             "extracted_answers": [
                 "TIE",
                 "Llama-2-7b-chat-hf",
-                "Unknown"
+                "TIE"
             ]
         },
         {
@@ -549,7 +549,7 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -575,12 +575,12 @@
             "result": [
                 " Answer1",
                 " 'Answer1'",
-                " Tie. Both answers are clear, comprehensive, and easy to understand, describing the key components of a complete sentence (subject, verb, and possibly an object) and their roles. They also explain how the subject and verb should agree in number and the verb should agree with the subject in tense. The second answer is more colloquial, but this does not affect the quality or accuracy of the answer. Both responses demonstrate an understanding of the question and provide informative responses."
+                " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
-                "Unknown"
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -596,13 +596,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
                 " Answer1",
+                " Tie",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
                 "gpt-4.1",
+                "TIE",
                 "gpt-4.1"
             ]
         }
@@ -622,8 +622,8 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " 'Answer1'",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
@@ -644,12 +644,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer2'",
+                " Tie",
                 " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
+                "TIE",
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
@@ -669,12 +669,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " Tie",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
+                "TIE",
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
@@ -693,13 +693,13 @@
             },
             "result": [
                 " Answer2",
-                " Tie",
-                " Answer2"
+                " 'Answer2'",
+                " Tie"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "TIE",
-                "Llama-2-7b-chat-hf"
+                "Llama-2-7b-chat-hf",
+                "TIE"
             ]
         }
     ],
@@ -717,7 +717,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -767,7 +767,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
@@ -789,13 +789,13 @@
             },
             "result": [
                 " Answer2",
-                " Answer2",
-                " Tie"
+                " Tie",
+                " Answer2"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
-                "TIE"
+                "TIE",
+                "Llama-2-7b-chat-hf"
             ]
         }
     ],
@@ -814,8 +814,8 @@
             },
             "result": [
                 " Tie",
-                " 'Answer1'",
-                " 'Answer1'"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "TIE",
@@ -837,12 +837,12 @@
             },
             "result": [
                 " Tie",
-                " Tie",
+                " Answer2",
                 " Tie"
             ],
             "extracted_answers": [
                 "TIE",
-                "TIE",
+                "Llama-2-7b-chat-hf",
                 "TIE"
             ]
         }
@@ -861,12 +861,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
+                " Answer1",
                 " Answer1",
                 " Tie"
             ],
             "extracted_answers": [
-                "TIE",
+                "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
                 "TIE"
             ]
@@ -884,13 +884,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
+                " Answer2",
                 " Tie",
-                " 'Answer2'",
                 " Answer2"
             ],
             "extracted_answers": [
-                "TIE",
                 "Llama-2-7b-chat-hf",
+                "TIE",
                 "Llama-2-7b-chat-hf"
             ]
         }
@@ -909,14 +909,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
                 " Tie",
-                " Answer1"
+                " Tie. Both responses offer answers that are accurate and well-structured. However, Answer 1 is more formal and standard, while Answer 2 uses more informal, conversational language. The choice between the two depends on the context and the preference for style.",
+                " Answer1 (The first answer provides a more detailed, organelle-specific, and scientifically accurate response, while the second answer is written more colloquially and metaphorically, although still understandable.)"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
                 "TIE",
-                "Llama-2-7b-chat-hf"
+                "Unknown",
+                "Unknown"
             ]
         },
         {
@@ -934,7 +934,7 @@
             "result": [
                 " Answer2",
                 " Answer2",
-                " Answer2"
+                " 'Answer2'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
@@ -980,14 +980,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
+                " Answer1",
                 " Tie",
-                " Tie",
-                " 'Answer1'"
+                " Tie"
             ],
             "extracted_answers": [
+                "gpt-4.1",
                 "TIE",
-                "TIE",
-                "gpt-4.1"
+                "TIE"
             ]
         }
     ],
@@ -1007,12 +1007,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1 is the superior response as it provides a more concise and accurate explanation of the relationship between portions and ratios in a recipe. It gives a clear definition of both portions and ratios, explains their significance in recipe creation, and highlights the importance of ratios in achieving the desired consistency, texture, and flavor in a dish. Answer2, while creative in its delivery, introduces a somewhat confusing distinction between \"portions\" referring to serving sizes and \"ratios\" referring to the measurements of ingredients, providing a less precise and less informative explanation compared to Answer1. Therefore, my evaluation is 'Answer1'."
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
-                "Unknown"
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -1028,12 +1028,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
-                " Answer2",
+                " Answer1, Answer2 (Tie)\nBoth responses provide clear and accurate information on the relationship between portions and ratios in a recipe. However, Answer1 offers a more conversational and engaging style that might be more approachable for some readers, while Answer2 delivers a more succinct and direct explanation of the technical aspects, which could make it more casual or formal depending on context. Ultimately, the choice between the two depends on the intended audience and the desired tone of voice.",
+                " 'Answer2'",
                 " Tie"
             ],
             "extracted_answers": [
-                "TIE",
+                "Unknown",
                 "Llama-2-7b-chat-hf",
                 "TIE"
             ]
@@ -1076,14 +1076,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer2",
+                " 'Answer2'",
                 " Tie",
-                " Tie"
+                " 'Answer2'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "TIE",
-                "TIE"
+                "Llama-2-7b-chat-hf"
             ]
         }
     ],
@@ -1125,12 +1125,12 @@
             },
             "result": [
                 " Tie",
-                " Tie",
+                " 'Answer2'",
                 " Tie"
             ],
             "extracted_answers": [
                 "TIE",
-                "TIE",
+                "Llama-2-7b-chat-hf",
                 "TIE"
             ]
         }
@@ -1172,14 +1172,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
                 " Answer2",
-                " Answer2"
+                " 'Answer2'",
+                " Tie"
             ],
             "extracted_answers": [
-                "TIE",
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "Llama-2-7b-chat-hf",
+                "TIE"
             ]
         }
     ],
@@ -1197,9 +1197,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " Answer1",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
@@ -1220,14 +1220,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer2",
                 " Tie",
-                " Tie"
+                " 'Answer2'",
+                " Answer2"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
                 "TIE",
-                "TIE"
+                "Llama-2-7b-chat-hf",
+                "Llama-2-7b-chat-hf"
             ]
         }
     ],
@@ -1246,13 +1246,13 @@
             },
             "result": [
                 " Tie",
-                " Tie (Both answers provide correct information but Answer1 is more concise and easier to understand, while Answer2 includes some redundant details and uses more formal language which may not be necessary in this context.)",
-                " Tie. Both answers correctly identify that an isosceles triangle has at least two sides of equal length, but Response2 provides a more detailed and precise explanation, including the fact that the angles across from the equal sides are also equal and the possible configurations of the sides in an isosceles triangle. However, Response1 is also accurate and succinct."
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
                 "TIE",
-                "Unknown",
-                "Unknown"
+                "TIE",
+                "TIE"
             ]
         },
         {
@@ -1268,14 +1268,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
-                " Tie",
-                " Tie"
+                " 'Answer1'",
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
-                "TIE"
+                "gpt-4.1",
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         }
     ],
@@ -1295,7 +1295,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
@@ -1316,12 +1316,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer2",
+                " Tie",
                 " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
+                "TIE",
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
@@ -1342,7 +1342,7 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -1364,14 +1364,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
+                " Tie",
                 " Answer2",
-                " Answer2",
-                " Answer2"
+                " Tie"
             ],
             "extracted_answers": [
+                "TIE",
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "TIE"
             ]
         }
     ],
@@ -1389,7 +1389,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -1412,12 +1412,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
                 " Answer2",
+                " 'Answer2'",
                 " Answer2"
             ],
             "extracted_answers": [
-                "TIE",
+                "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
@@ -1438,12 +1438,12 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " Tie",
                 " Tie"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
+                "TIE",
                 "TIE"
             ]
         },
@@ -1460,13 +1460,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer2",
-                " Answer2",
+                " Tie",
+                " Tie",
                 " Answer2"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
+                "TIE",
+                "TIE",
                 "Llama-2-7b-chat-hf"
             ]
         }
@@ -1508,14 +1508,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
-                " 'Answer2'",
-                " Answer2"
+                " Answer2",
+                " Answer2",
+                " Tie"
             ],
             "extracted_answers": [
-                "TIE",
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "Llama-2-7b-chat-hf",
+                "TIE"
             ]
         }
     ],
@@ -1556,13 +1556,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer2",
-                " Answer2",
+                " 'Answer2'",
+                " Tie",
                 " Tie"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
+                "TIE",
                 "TIE"
             ]
         }
@@ -1581,8 +1581,8 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
-                " Answer1",
+                " 'Answer1'",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -1606,12 +1606,12 @@
             "result": [
                 " Answer2",
                 " Answer2",
-                " Tie"
+                " Answer2"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
-                "TIE"
+                "Llama-2-7b-chat-hf"
             ]
         }
     ],
@@ -1653,12 +1653,12 @@
             },
             "result": [
                 " Tie",
-                " 'Answer2'",
+                " Tie",
                 " Answer2"
             ],
             "extracted_answers": [
                 "TIE",
-                "Llama-2-7b-chat-hf",
+                "TIE",
                 "Llama-2-7b-chat-hf"
             ]
         }
@@ -1700,13 +1700,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer2'",
                 " Answer2",
-                " Answer2"
+                " Tie",
+                " 'Answer2'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
+                "TIE",
                 "Llama-2-7b-chat-hf"
             ]
         }
@@ -1726,13 +1726,13 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "TIE",
+                "TIE"
             ]
         },
         {
@@ -1748,14 +1748,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
-                " Tie. Both answers provide equivalent, clear explanations for why we have leap years in our calendar system.",
-                " Answer2"
+                " Answer2",
+                " Answer2",
+                " Tie"
             ],
             "extracted_answers": [
-                "TIE",
-                "Unknown",
-                "Llama-2-7b-chat-hf"
+                "Llama-2-7b-chat-hf",
+                "Llama-2-7b-chat-hf",
+                "TIE"
             ]
         }
     ],
@@ -1797,13 +1797,13 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " 'Answer1'"
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
-                "gpt-4.1"
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -1823,7 +1823,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
@@ -1844,14 +1844,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
                 " Answer2",
-                " Answer2"
+                " Answer2",
+                " Tie"
             ],
             "extracted_answers": [
-                "TIE",
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "Llama-2-7b-chat-hf",
+                "TIE"
             ]
         }
     ],
@@ -1869,9 +1869,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
@@ -1892,14 +1892,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
+                " Answer2",
                 " Tie",
-                " Tie. Both responses provide clear and accurate explanations for the phenomenon of a rainbow. However, Answer2's explanation is more concise, while Answer1 provides a bit more detail and casual tone, which might be helpful for certain audiences. The key concepts and facts are present in both answers, so a tie is appropriate in this case.",
-                " Tie"
+                " Answer2"
             ],
             "extracted_answers": [
+                "Llama-2-7b-chat-hf",
                 "TIE",
-                "Unknown",
-                "TIE"
+                "Llama-2-7b-chat-hf"
             ]
         }
     ],
@@ -1940,13 +1940,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " Answer1"
+                " Tie",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1"
             ]
         }
@@ -1989,13 +1989,13 @@
             },
             "result": [
                 " Tie",
-                " Answer1",
-                " Tie"
+                " 'Answer1' (tie)",
+                " Answer1"
             ],
             "extracted_answers": [
                 "TIE",
-                "gpt-4.1",
-                "TIE"
+                "Unknown",
+                "gpt-4.1"
             ]
         }
     ],
@@ -2036,14 +2036,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
-                " Tie",
-                " Tie"
+                " Answer2",
+                " Answer2",
+                " Answer2"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
-                "TIE"
+                "Llama-2-7b-chat-hf",
+                "Llama-2-7b-chat-hf",
+                "Llama-2-7b-chat-hf"
             ]
         }
     ],
@@ -2061,12 +2061,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
+                "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
@@ -2084,14 +2084,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
+                " Tie\n\nBoth responses accurately describe the differences between inner and outer planets. While the tone and phrasing varies, they both convey the necessary information. However, for the sake of formal clarity, the second response may be more concise, making it slightly easier for the reader to comprehend.",
                 " Tie",
-                " Answer2",
-                " Tie"
+                " Answer2"
             ],
             "extracted_answers": [
                 "TIE",
-                "Llama-2-7b-chat-hf",
-                "TIE"
+                "TIE",
+                "Llama-2-7b-chat-hf"
             ]
         }
     ],
@@ -2109,13 +2109,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
                 " Tie",
-                " Answer1"
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
                 "TIE",
+                "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -2132,12 +2132,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer2'",
+                " Tie",
                 " Tie",
                 " Tie"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
+                "TIE",
                 "TIE",
                 "TIE"
             ]
@@ -2158,7 +2158,7 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -2205,7 +2205,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " 'Answer1'",
                 " Answer1",
                 " Answer1"
             ],
@@ -2229,12 +2229,12 @@
             },
             "result": [
                 " Answer2",
-                " Answer1",
+                " Tie",
                 " Answer2"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "gpt-4.1",
+                "TIE",
                 "Llama-2-7b-chat-hf"
             ]
         }
@@ -2253,7 +2253,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " 'Answer1'",
                 " Answer1",
                 " Answer1"
             ],
@@ -2278,12 +2278,12 @@
             "result": [
                 " Tie",
                 " Tie",
-                " Tie"
+                " Tie. Both answers provide an accurate and comprehensive response to the question, though Answer2 presents the information in a more concise and scientific format, while Answer1 offers a more informal, conversational tone that may be more accessible to some learners."
             ],
             "extracted_answers": [
                 "TIE",
                 "TIE",
-                "TIE"
+                "Unknown"
             ]
         }
     ],
@@ -2303,7 +2303,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
@@ -2325,7 +2325,7 @@
             },
             "result": [
                 " Answer2",
-                " 'Answer2'",
+                " Answer2",
                 " Tie"
             ],
             "extracted_answers": [
@@ -2349,14 +2349,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie. Both responses are creative and engaging, but Answer1 provides a more concise and readily understandable outline for a story about a heroic animal, while Answer2 offers a unique, conversational style that adds charm and personality to the story. Both responses are equally good, depending on the desired style of the story.",
                 " 'Answer1'",
-                " 'Answer1'"
+                " Tie",
+                " Tie\n\nBoth answers provide creative and well-structured story outlines focusing on heroic animals. The first answer is simpler in structure and uses common language with themes that are easily relatable, making it accessible for younger audiences or a wider readership. The second answer incorporates a more artistic and descriptive writing style, creating an imaginative and immersive atmosphere, which may resonate more with older audiences or those who enjoy more literary-style narratives. The choice between the two is largely dependent on the intended audience and tone of the story."
             ],
             "extracted_answers": [
-                "Unknown",
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "TIE",
+                "TIE"
             ]
         },
         {
@@ -2373,12 +2373,12 @@
             },
             "result": [
                 " Answer1",
-                " Tie",
-                " 'Answer1'"
+                " 'Answer1'",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "TIE",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -2398,12 +2398,12 @@
             },
             "result": [
                 " Tie",
-                " Tie",
+                " 'Answer1'",
                 " Tie"
             ],
             "extracted_answers": [
                 "TIE",
-                "TIE",
+                "Llama-2-7b-chat-hf",
                 "TIE"
             ]
         },
@@ -2420,14 +2420,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
+                " Tie. Both responses show a good level of creativity and understanding of potential applications for their gadgets. However, they differ in approach: the first focuses on personal health monitoring, while the second focuses on emotional expression. Depending on individual preferences, one might find one approach more appealing than the other, but both are valuable and original ideas.",
                 " Tie",
-                " Tie",
-                " 'Answer1'"
+                " Tie"
             ],
             "extracted_answers": [
+                "Unknown",
                 "TIE",
-                "TIE",
-                "gpt-4.1"
+                "TIE"
             ]
         }
     ],
@@ -2445,7 +2445,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -2468,14 +2468,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1'",
                 " Tie",
-                " Tie"
+                " Tie",
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "TIE",
-                "TIE"
+                "TIE",
+                "gpt-4.1"
             ]
         }
     ],
@@ -2493,13 +2493,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie. Both answers demonstrate creative and heartfelt approaches to composing a poem about friendship, but they differ significantly in form and style. Answer1 offers a more traditional, structured, and concise poem, while Answer2 provides a more casual, conversational, and personal narrative. Both answers can serve as useful prompts or examples for the original question.",
-                " 'Answer1'",
+                " Tie. Both responses provide original, thoughtful, and creative poems about friendship. Answer1 is more traditional in structure and language, while Answer2 offers a fresh, personal, and unique perspective. Both responses capture the essence of friendship effectively.",
+                " Answer1 (Tie)\n\nBoth answers provide a unique perspective on the subject of friendship. The first answer (Answer1) offers a traditional, rhyming poem about friendship. It is concise, clear, and conveys the qualities of friendship effectively.\n\nThe second answer (Answer2) offers a more unconventional, spoken-word style poem, that emphasizes the importance of authenticity and personal experiences in conveying the essence of friendship. This response also provides an outline for writing a friendship poem, giving readers a structured approach to crafting their own poem.\n\nUltimately, both answers offer valid and creative approaches to composing a poem about friendship.",
                 " Tie"
             ],
             "extracted_answers": [
                 "Unknown",
-                "Llama-2-7b-chat-hf",
+                "Unknown",
                 "TIE"
             ]
         },
@@ -2516,12 +2516,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
                 " 'Answer1'",
-                " Answer1"
+                " 'Answer1'",
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "TIE",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -2542,7 +2542,7 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -2564,13 +2564,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer1",
                 " Tie",
-                " 'Answer1'"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "TIE",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -2590,12 +2590,12 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " Tie",
                 " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
+                "TIE",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -2613,12 +2613,12 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " Tie",
                 " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1"
             ]
         }
@@ -2637,12 +2637,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie. Both Answer1 and Answer2 provide detailed and creative solutions for devising a new menu for a school canteen that is both tasty and nutritious. However, Answer1 is more formal and structured, while Answer2 uses a conversational tone and catchy phrasing to present the ideas. Both approaches have their merits, and either could be equally effective in certain contexts.",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "Unknown",
+                "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
@@ -2660,14 +2660,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer2",
-                " Tie",
-                " Answer2"
+                " 'Answer1'",
+                " 'Answer1'",
+                " Tie"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
-                "TIE",
-                "Llama-2-7b-chat-hf"
+                "gpt-4.1",
+                "gpt-4.1",
+                "TIE"
             ]
         }
     ],
@@ -2686,13 +2686,13 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " 'Answer1' (The provided answer is more detailed and comprehensive, focusing on features like homework tracking, resource library, personalized guidance, collaboration tools, and user-friendly interface. It also mentions the use of AI-powered algorithms, which is a more specific and technical aspect that adds to the quality of the answer.)",
+                " Tie"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "Unknown",
+                "TIE"
             ]
         },
         {
@@ -2708,14 +2708,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1'",
-                " Tie",
-                " Answer1"
+                " Answer1",
+                " Answer1",
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "TIE",
-                "gpt-4.1"
+                "gpt-4.1",
+                "TIE"
             ]
         }
     ],
@@ -2733,14 +2733,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1' is the superior response. The language used in Answer1 is clear, concise, and organized, making the plan easier to understand and follow. The steps outlined in Answer1 are logical and comprehensive, providing a tool for community garden establishment that is coherent and well-structured. Additionally, Answer1 includes the important consideration of providing educational resources and workshops, which is not explicitly mentioned in Answer2. While Answer2 provides a good general outline, it could benefit from more specific language and additional details, such as how to handle matters of composting, pest management, and community engagement events. Overall, Answer1 is the more semantically quality answer.",
                 " Answer1",
-                " Answer1"
+                " Answer1",
+                " Tie"
             ],
             "extracted_answers": [
-                "Unknown",
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "Llama-2-7b-chat-hf",
+                "TIE"
             ]
         },
         {
@@ -2757,12 +2757,12 @@
             },
             "result": [
                 " Tie",
-                " 'Answer1'",
-                " 'Answer2'"
+                " Tie",
+                " Answer2"
             ],
             "extracted_answers": [
                 "TIE",
-                "gpt-4.1",
+                "TIE",
                 "Llama-2-7b-chat-hf"
             ]
         }
@@ -2781,12 +2781,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1 (The answer is more cohesive, uses proper grammar, and is easier to read. While both responses communicate the day in the life of an ant effectively, Answer1 demonstrates a better command of standard English and organization.)",
+                " Tie",
                 " Tie",
                 " Tie"
             ],
             "extracted_answers": [
-                "Unknown",
+                "TIE",
                 "TIE",
                 "TIE"
             ]
@@ -2804,12 +2804,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
+                " Answer1",
                 " Tie",
                 " Tie"
             ],
             "extracted_answers": [
-                "TIE",
+                "gpt-4.1",
                 "TIE",
                 "TIE"
             ]
@@ -2830,7 +2830,7 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -2852,14 +2852,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
+                " Answer2. The response provides a more detailed and structured outline for a law to protect endangered species, covering all the essential aspects, such as the list of endangered species, prohibiting harmful activities, conserving habitats, imposing penalties, promoting awareness, and encouraging international cooperation. The language is clear and concise, making the proposed law easily understandable. In contrast, Answer1's response is written in a casual tone, making it harder to grasp the key points and ultimately less suitable for drafting a law.",
                 " 'Answer2'",
-                " Tie\nBoth answers provide a well-structured and comprehensive approach to the issue at hand. The first answer utilizes simple, everyday language that could help make the law more accessible to a wider audience. The second answer, on the other hand, offers a more formal, structured approach, which may be beneficial for policy implementation. However, both miss the importance of specifying mechanisms for enforcing the law and incorporating youth education programs to foster long-term protection of endangered species.",
-                " Tie\n\nWhile both responses provide a comprehensive overview of elements that should be included in a law to protect endangered species, Answer1 is written in a conversational tone and uses colloquial language, making it less formal and potentially more accessible to a broader audience, particularly those who may not be familiar with the technical language used in legal drafting. On the other hand, Answer2 is written in a more formal and technical language, making it clearer and more precise for professionals working in the field of law and conservation. However, both responses focus on the key elements of a law to protect endangered species, thus making this evaluation a tie."
+                " Answer2"
             ],
             "extracted_answers": [
+                "Unknown",
                 "Llama-2-7b-chat-hf",
-                "TIE",
-                "TIE"
+                "Llama-2-7b-chat-hf"
             ]
         }
     ],
@@ -2877,12 +2877,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
+                " 'Answer1'",
                 " Tie",
                 " Tie"
             ],
             "extracted_answers": [
-                "TIE",
+                "Llama-2-7b-chat-hf",
                 "TIE",
                 "TIE"
             ]
@@ -2900,12 +2900,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
+                " Answer1",
                 " Tie",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
+                "gpt-4.1",
                 "TIE",
                 "gpt-4.1"
             ]
@@ -2925,14 +2925,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
-                " Answer1",
-                " Tie"
+                " 'Answer1'",
+                " Tie",
+                " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
-                "TIE"
+                "TIE",
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -2949,13 +2949,13 @@
             },
             "result": [
                 " Tie",
-                " Tie",
-                " Tie"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "TIE",
-                "TIE",
-                "TIE"
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         }
     ],
@@ -2973,12 +2973,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Tie",
                 " 'Answer2'",
-                " Answer2",
-                " Answer2"
+                " 'Answer2'"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -2996,8 +2996,8 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer1",
-                " Answer1",
+                " 'Answer1'",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -3021,14 +3021,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
-                " 'Answer1'",
-                " Answer1"
+                " Tie",
+                " Tie",
+                " Answer2"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "TIE",
+                "TIE",
+                "gpt-4.1"
             ]
         },
         {
@@ -3044,13 +3044,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer1",
                 " Tie",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "TIE",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -3069,14 +3069,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
                 " 'Answer1'",
-                " Answer1"
+                " 'Answer1'",
+                " Tie"
             ],
             "extracted_answers": [
-                "TIE",
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "Llama-2-7b-chat-hf",
+                "TIE"
             ]
         },
         {
@@ -3092,13 +3092,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer2",
-                " Answer2",
+                " Tie",
+                " 'Answer1' is more engaging and provides a more detailed picture about the role and the environment. However, 'Answer2' has a clear job description that is easy to understand. Given that the primary focus is on the semantic quality, both responses offer valid job descriptions. However, 'Answer1' is slightly more engaging and informative, therefore it provides a superior answer when considering the quality and accuracy of the answers.",
                 " Tie"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
+                "TIE",
+                "Unknown",
                 "TIE"
             ]
         }
@@ -3141,7 +3141,7 @@
             },
             "result": [
                 " Tie",
-                " Answer1",
+                " 'Answer1'",
                 " Tie"
             ],
             "extracted_answers": [
@@ -3165,12 +3165,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1, Answer2 (Tie)",
+                " Tie",
                 " Tie",
                 " Tie"
             ],
             "extracted_answers": [
-                "Unknown",
+                "TIE",
                 "TIE",
                 "TIE"
             ]
@@ -3188,14 +3188,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie. Both responses convey thoughtful ideas about how one might spend their last moments on a doomsday scenario, focusing on love, connection, and reflection. However, Answer1 provides a more detailed and personal perspective, focusing on specific activities and emotions one might experience, making it more engaging to read. Answer2, while less detailed, offers a similar sentiment and maintains a calm and serene tone, which may resonate with others. The choice between the two ultimately depends on personal preference.",
                 " Tie",
-                " 'Answer1'"
+                " 'Answer1'",
+                " Tie"
             ],
             "extracted_answers": [
-                "Unknown",
                 "TIE",
-                "gpt-4.1"
+                "gpt-4.1",
+                "TIE"
             ]
         }
     ],
@@ -3237,12 +3237,12 @@
             },
             "result": [
                 " Answer2",
-                " 'Answer2'",
+                " Tie",
                 " 'Answer2'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
+                "TIE",
                 "Llama-2-7b-chat-hf"
             ]
         }
@@ -3261,14 +3261,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
-                " 'Answer1'",
-                " Tie"
+                " Answer1",
+                " Tie",
+                " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
-                "TIE"
+                "TIE",
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -3285,13 +3285,13 @@
             },
             "result": [
                 " Tie",
-                " Answer1",
-                " Answer1"
+                " 'Tie'",
+                " Tie"
             ],
             "extracted_answers": [
                 "TIE",
-                "gpt-4.1",
-                "gpt-4.1"
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -3310,13 +3310,13 @@
             },
             "result": [
                 " 'Answer1'",
-                " Answer1",
-                " Answer2"
+                " 'Answer1'",
+                " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
-                "gpt-4.1"
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -3332,14 +3332,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1'",
                 " Tie",
-                " Answer1"
+                " Answer1",
+                " Tie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "TIE",
-                "gpt-4.1"
+                "gpt-4.1",
+                "TIE"
             ]
         }
     ],
@@ -3357,13 +3357,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " 'Answer1' - This response provides a more detailed and comprehensive evaluation, touching on technical aspects, emotional connection, stage presence, consistency, and adaptability to challenges. The language is more formal and easy to understand, making it more accessible to a broader audience. While the response might not sound as engaging or poetic, it offers a clear and concise framework for evaluating a performance. The answer demonstrates a better focus on the semantic quality of the answer.\n\n'Answer2' - This response also provides a viable framework for evaluating a performance, but its language and structure are less formal. It includes colloquial language and dialect that may make it less accessible to people outside specific regions or communities. Although it does a good job highlighting the important factors in evaluating a performance, it is less organized and more idiomatic compared to the other answer.\n\nIn this case, the superior performance is shown in 'Answer1'. However, both responses offer valuable insights, and the choice of an answer can depend on the intended audience or purpose.",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Unknown",
+                "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -3380,12 +3380,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
+                " 'Answer2'",
                 " Tie",
                 " Tie"
             ],
             "extracted_answers": [
-                "TIE",
+                "Llama-2-7b-chat-hf",
                 "TIE",
                 "TIE"
             ]
@@ -3407,12 +3407,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " Answer1 is the superior response because it provides a clear and concise explanation of the importance of recycling, supporting its claims with solid arguments and facts about waste reduction, resource conservation, energy savings, greenhouse gas emissions, and environmental protection. The response also implicitly argues that recycling is essential for a sustainable future. While Answer2 is also a good response, it is more informal and includes colloquialisms, which may make it less effective in a formal context. Additionally, Answer2 does not provide concrete examples or data to back up its claims. Given that both responses are addressing the same question and seeking to detail the importance of recycling, Answer1 is the more informative, detailed, and precise answer. Therefore, I would vote 'Answer1'."
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "Unknown"
             ]
         },
         {
@@ -3428,12 +3428,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
+                " Answer2",
                 " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
-                "TIE",
+                "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
@@ -3453,13 +3453,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " Answer1"
+                " Tie",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
+                "TIE",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -3476,14 +3476,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " Answer1",
-                " 'Answer1'"
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "TIE"
             ]
         }
     ],
@@ -3503,12 +3503,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Tie"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
-                "TIE"
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -3525,12 +3525,12 @@
             },
             "result": [
                 " Tie",
-                " 'Answer2'",
+                " Tie",
                 " Tie"
             ],
             "extracted_answers": [
                 "TIE",
-                "Llama-2-7b-chat-hf",
+                "TIE",
                 "TIE"
             ]
         }
@@ -3572,14 +3572,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer1, Answer2 (Tie)",
-                " Answer1, Answer2 (Tie)",
-                " Answer1, Answer2 (Tie)"
+                " Answer1 is a more engaging and fluid response, giving a conversational feel and using relatable language for the audience. However, Response2 wins in accuracy and clarity, providing concise and correct information on each invention's impact in the 20th century, with detailed dates and contributions, making the response more transformative.\n\nTie",
+                " Tie",
+                " 'Answer2'"
             ],
             "extracted_answers": [
-                "Unknown",
-                "Unknown",
-                "Unknown"
+                "TIE",
+                "TIE",
+                "Llama-2-7b-chat-hf"
             ]
         }
     ],
@@ -3598,13 +3598,13 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " Tie"
+                " Tie",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
-                "TIE"
+                "TIE",
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -3621,13 +3621,13 @@
             },
             "result": [
                 " Tie",
-                " Tie",
-                " Answer1"
+                " Answer1, Answer2 (Tie)",
+                " Tie"
             ],
             "extracted_answers": [
                 "TIE",
-                "TIE",
-                "gpt-4.1"
+                "Unknown",
+                "TIE"
             ]
         }
     ],
@@ -3645,13 +3645,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
-                " Tie",
+                " Answer1",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "TIE",
+                "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -3669,12 +3669,12 @@
             },
             "result": [
                 " Tie",
-                " Answer2",
+                " Tie",
                 " 'Answer2'"
             ],
             "extracted_answers": [
                 "TIE",
-                "Llama-2-7b-chat-hf",
+                "TIE",
                 "Llama-2-7b-chat-hf"
             ]
         }
@@ -3694,12 +3694,12 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " 'Answer1' This answer provides a concise and well-structured list of the key metrics to evaluate the success of a social media campaign. Additionally, it explains the significance of each metric in a clear and coherent manner. In contrast, the language and phrasing in answer 2 while descriptive, is informal and can be difficult to understand for some readers, making it less optimal for a wide audience. However, both answers provide valuable insights into evaluating social media campaign success, and the difference in quality is subtle, making a 'tie' an acceptable option if strict semantic analysis is not applied.",
                 " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
+                "Unknown",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -3716,14 +3716,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer1",
-                " Answer1 (As it provides a more thorough and detailed analysis of success factors in a social media campaign, including factors such as the sentiment of followers, the performance of specific posts or ads, and comparisons to industry standards and previous campaigns.)",
-                " Answer2"
+                " 'Answer2'",
+                " Answer2",
+                " Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "Unknown",
-                "Llama-2-7b-chat-hf"
+                "Llama-2-7b-chat-hf",
+                "Llama-2-7b-chat-hf",
+                "gpt-4.1"
             ]
         }
     ],
@@ -3741,13 +3741,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
                 " Answer1",
-                " Answer1"
+                " Tie",
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "TIE",
                 "Llama-2-7b-chat-hf",
+                "TIE",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -3789,14 +3789,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Tie",
-                " Answer1"
+                " Tie"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "TIE",
-                "Llama-2-7b-chat-hf"
+                "TIE"
             ]
         },
         {
@@ -3812,12 +3812,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1'",
+                " Tie",
                 " Tie",
                 " Tie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "TIE",
                 "TIE",
                 "TIE"
             ]
@@ -3860,14 +3860,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer2",
                 " Tie",
-                " Answer2"
+                " 'Answer2'",
+                " Tie"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
                 "TIE",
-                "Llama-2-7b-chat-hf"
+                "Llama-2-7b-chat-hf",
+                "TIE"
             ]
         }
     ],
@@ -3885,7 +3885,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " 'Answer1'",
                 " Answer1",
                 " Answer1"
             ],
@@ -3910,7 +3910,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -3934,12 +3934,12 @@
             },
             "result": [
                 " Answer1",
-                " Answer1. The answer is concise, coherent, and directly addresses the question with a precise and clear explanation. It provides a comprehensive response, discussing the benefits of clean energy in terms of reducing reliance on fossil fuels, mitigating climate change, promoting sustainable development, enhancing energy security, and promoting economic growth. The language used is both understandable and professional, making it a superior response.\n\nAnswer2, while it conveys the same message as Answer1, is somewhat informal in its language and structure, which may make it less suitable for certain contexts or audiences. The answer could also be more concise, as it contains repeated phrases and repetitious arguments.\n\nHowever, if the context requires a more conversational or casual tone, Answer2 could be just as appropriate as Answer1, and thus a tie would be an acceptable choice. For this specific question, Answer1 appears to be the superior answer due to its concise and comprehensive nature. The answer is clear, concise, and conveyed in a consistently formal tone, making it the more suitable response for many purposes.",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Unknown",
+                "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -3956,14 +3956,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer2",
                 " Tie",
-                " 'Answer2'"
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
                 "TIE",
-                "Llama-2-7b-chat-hf"
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -3981,14 +3981,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
-                " Tie",
-                " Answer1"
+                " 'Answer2'",
+                " Answer1",
+                " Tie"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
-                "Llama-2-7b-chat-hf"
+                "gpt-4.1",
+                "Llama-2-7b-chat-hf",
+                "TIE"
             ]
         },
         {
@@ -4004,14 +4004,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
+                " Answer1",
                 " 'Answer1'",
-                " Tie",
-                " Answer2"
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "TIE",
-                "Llama-2-7b-chat-hf"
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         }
     ],
@@ -4031,7 +4031,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
@@ -4077,13 +4077,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
+                " 'Answer1' (This response provides a comprehensive list of factors for evaluating a leader, using formal and structured language, making it easier for the reader to understand and compare the points.)",
                 " 'Answer1'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
+                "Unknown",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -4100,14 +4100,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1' (The first answer provides a more conversational and easy-to-understand evaluation, using relatable terms and examples. It communicates a good understanding of the qualities a leader should possess while maintaining a positive and engaging tone.)",
-                " 'Answer1'\n\nWhile both answers provide factors to consider when evaluating a leader, Answer1 provides a more personal, conversational, and relatable list that includes intangible qualities such as emotional intelligence, handling changes well, and maintaining a positive vibe. Answer1 also includes a broader understanding of leader effectiveness in both quantitative (numbers and productivity) and qualitative (employee morale) terms. Therefore, Answer1 is a more superior response.",
-                " 'Answer1'"
+                " Tie\n\nBoth responses provide comprehensive and well-structured lists covering valuable aspects when evaluating a leader's effectiveness. However, the formality of Answer 2 might be more easily understood by formal settings, while the conversational style of Answer 1 might inspire more engagement and relatability among some readers. As I am limited to evaluating the quality and accuracy of answers, I find both responses equally good and well-written.",
+                " Answer1",
+                " Tie\n\nBoth answers provide a comprehensive list of factors to consider when evaluating an effective leader. However, Answer1 is presented in a more colloquial language, which might be easier for some people to understand, while Answer2 is more formal and structured, which might be preferred by others. Ultimately, the choice between the two can depend on the context and the audience."
             ],
             "extracted_answers": [
-                "Unknown",
+                "TIE",
                 "gpt-4.1",
-                "gpt-4.1"
+                "TIE"
             ]
         }
     ],
@@ -4125,7 +4125,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " 'Answer1'",
                 " Answer1",
                 " Answer1"
             ],
@@ -4148,14 +4148,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer2",
-                " Tie",
-                " Tie"
+                " Tie. Both responses provide an accurate and comprehensive explanation about the relevance of learning algebra in daily life. They both mention the importance of algebra in problem-solving, critical thinking, and various fields such as finance, science, engineering, and computer programming. However, Answer1 emphasizes more on the practical applications in everyday life scenarios while Answer2 focuses more on the cognitive benefits and fields where algebra is used. Both responses can be beneficial for a learner to understand the relevance of algebraic skills.",
+                " Tie. Both Answer1 and Answer2 provide clear, accurate, and well-elaborated reasons for the relevance of learning algebra in daily life. However, the language and style of Answer1 might be more accessible and engaging to a broader audience. Answer2, on the other hand, may present the information in a more concise and academic manner that some may find appealing. Ultimately, both answers are of excellent quality.",
+                " 'Answer2'"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
-                "TIE",
-                "TIE"
+                "Unknown",
+                "Unknown",
+                "Llama-2-7b-chat-hf"
             ]
         }
     ],
@@ -4196,14 +4196,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
-                " 'Answer1'",
-                " Answer2"
+                " Answer1",
+                " Answer2",
+                " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
                 "gpt-4.1",
-                "Llama-2-7b-chat-hf"
+                "Llama-2-7b-chat-hf",
+                "gpt-4.1"
             ]
         }
     ],
@@ -4223,12 +4223,12 @@
             "result": [
                 " Answer1",
                 " 'Answer1'",
-                " Tie. Both responses provide comprehensive and accurate information on the metrics to be considered for evaluating the success of a community fundraising event. However, Answer1 presents the information in a well-structured, bullet-pointed format, which may be more easily digestible for some readers. On the other hand, Answer2 offers a more conversational and colloquial tone, which could resonate better with certain communities. Therefore, both answers are equally good and effective at addressing the question posed."
+                " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
-                "Unknown"
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -4244,13 +4244,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
+                " Answer2",
                 " 'Answer2'",
-                " Tie",
                 " Answer2"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "TIE",
+                "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
         }
@@ -4269,7 +4269,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -4294,7 +4294,7 @@
             "result": [
                 " Answer2",
                 " Answer2",
-                " Answer2"
+                " 'Answer2'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
@@ -4317,14 +4317,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " 'Answer1'",
                 " Tie",
-                " Tie",
-                " Answer1"
+                " Tie"
             ],
             "extracted_answers": [
+                "Llama-2-7b-chat-hf",
                 "TIE",
-                "TIE",
-                "Llama-2-7b-chat-hf"
+                "TIE"
             ]
         },
         {
@@ -4340,13 +4340,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
+                " Answer2",
                 " Tie",
-                " 'Answer1'",
                 " Tie"
             ],
             "extracted_answers": [
+                "Llama-2-7b-chat-hf",
                 "TIE",
-                "gpt-4.1",
                 "TIE"
             ]
         }
@@ -4365,9 +4365,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " Answer1"
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
@@ -4388,14 +4388,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer2'",
                 " Answer2",
-                " Answer2"
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -4413,7 +4413,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " Answer1\n\nFor this question, both responses offer comprehensive and accurate answers. However, Answer1 presents the information in a more concise and structured manner, making it easier to understand for a wider audience. Therefore, I would evaluate Answer1 as the superior response.",
                 " Answer1",
                 " Answer1"
             ],
@@ -4436,13 +4436,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1' (The first answer provides a more comprehensive and detailed overview of the standards for judging the safety of a car, including a wider range of safety features, conditions for pedestrian protection, and factors such as rollover tests and safety recalls. The first answer also considers the potential impact of driver-assist features and wraps up the response with a clear rationale for how all these factors collectively indicate a car's safety.)",
-                " 'Answer1'",
+                " Answer1",
+                " Tie",
                 " Answer1"
             ],
             "extracted_answers": [
-                "Unknown",
                 "gpt-4.1",
+                "TIE",
                 "gpt-4.1"
             ]
         }
@@ -4462,7 +4462,7 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -4486,12 +4486,12 @@
             "result": [
                 " Answer2",
                 " Answer2",
-                " Answer2"
+                " Tie"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "TIE"
             ]
         }
     ],
@@ -4510,7 +4510,7 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " Answer1",
                 " 'Answer1'"
             ],
             "extracted_answers": [
@@ -4532,13 +4532,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
-                " Tie",
+                " 'Answer1'",
+                " 'Answer1'",
                 " Tie"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
+                "gpt-4.1",
+                "gpt-4.1",
                 "TIE"
             ]
         }
@@ -4558,13 +4558,13 @@
             },
             "result": [
                 " 'Answer1'",
-                " Answer1",
-                " Tie\n\nBoth responses provide informative and comprehensive responses to the question. Answer 1, while slightly more formal, gives the essential indicators of effective organizations: financial transparency, program impact, and accountability measures. Answer 2, while using colloquial language, offers similar principles in a more engaging way, also mentioning review sites and emphasizing the importance of looking for real, tangible results. Both answers are equally valuable in helping someone determine the effectiveness of a charity or nonprofit organization."
+                " 'Answer1'",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
-                "TIE"
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -4580,14 +4580,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer2'",
                 " Tie",
-                " 'Answer2'"
+                " Answer2",
+                " Tie"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
                 "TIE",
-                "Llama-2-7b-chat-hf"
+                "Llama-2-7b-chat-hf",
+                "TIE"
             ]
         }
     ],
@@ -4628,12 +4628,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer2",
-                " Answer2",
+                " Tie",
+                " 'Answer2'",
                 " Tie"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
+                "TIE",
                 "Llama-2-7b-chat-hf",
                 "TIE"
             ]
@@ -4724,12 +4724,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer1, Answer2 (Tie)",
-                " Tie. Both responses correctly identify George Washington as the first President of the United States and provide additional information such as his term and some context about his role. However, they do offer slightly different interpretations - Answer1 provides a more conversational tone while Answer2 presents factual data in a concise manner. In this case, the quality of both answers is almost identical.",
+                " 'Answer2'",
+                " Answer1 and Answer2 are both correct and complete responses, but Answer2 is more concise and provides the exact dates of Washington's term. Therefore, I would choose Answer2. However, if brevity wasn't a factor, I'd appreciate Answer1's more conversational style and historical context. In that case, it would be a tie. So, in this case, I choose Answer2.",
                 " Tie"
             ],
             "extracted_answers": [
-                "Unknown",
+                "Llama-2-7b-chat-hf",
                 "Unknown",
                 "TIE"
             ]
@@ -4749,9 +4749,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " Answer1"
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
@@ -4772,8 +4772,8 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer2'",
-                " 'Answer2'",
+                " Answer2",
+                " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
@@ -4797,13 +4797,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
-                " 'Answer1'",
-                " 'Answer1'"
+                " Tie",
+                " Tie",
+                " Answer1"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
+                "TIE",
+                "TIE",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -4845,12 +4845,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Tie",
-                " Answer1"
+                " Tie",
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
+                "TIE",
                 "TIE",
                 "Llama-2-7b-chat-hf"
             ]
@@ -4868,13 +4868,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " Tie",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "TIE",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -4893,13 +4893,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
-                " Tie",
+                " Answer1",
+                " 'Answer1'",
                 " 'Answer1'"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
+                "Llama-2-7b-chat-hf",
+                "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -4917,13 +4917,13 @@
             },
             "result": [
                 " 'Answer1'",
-                " Answer1",
-                " 'Answer1'"
+                " 'Answer1'",
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "TIE"
             ]
         }
     ],
@@ -4941,13 +4941,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
                 " Tie",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
                 "TIE",
+                "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -4964,13 +4964,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
-                " Tie",
+                " 'Answer2'",
+                " 'Answer2'",
                 " Tie"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
+                "Llama-2-7b-chat-hf",
+                "Llama-2-7b-chat-hf",
                 "TIE"
             ]
         }
@@ -4990,7 +4990,7 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -5014,12 +5014,12 @@
             "result": [
                 " Answer2",
                 " Answer2",
-                " Answer2"
+                " Tie"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "TIE"
             ]
         }
     ],
@@ -5037,13 +5037,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
-                " Tie",
-                " Answer1"
+                " Answer1",
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "TIE",
+                "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -5061,12 +5061,12 @@
             },
             "result": [
                 " Answer2",
-                " Tie",
-                " 'Answer2'"
+                " 'Answer2' (Tie | Answer1 provides a more colloquial and engaging response, while Answer2 presents the information in a much clearer, concise, and formal manner. Both answers are accurate and provide equally good responses to the question.)",
+                " Answer2"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "TIE",
+                "Unknown",
                 "Llama-2-7b-chat-hf"
             ]
         }
@@ -5085,14 +5085,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
                 " 'Answer1'",
-                " Tie"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
-                "TIE"
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -5108,14 +5108,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
                 " 'Answer1'",
-                " 'Answer1' (Tie)"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
                 "gpt-4.1",
-                "Unknown"
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         }
     ],
@@ -5133,14 +5133,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
                 " 'Answer1'",
-                " 'Answer1'"
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "TIE",
+                "TIE"
             ]
         },
         {
@@ -5156,14 +5156,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1'",
-                " 'Answer1'",
-                " 'Answer1' (Tie)"
+                " Answer1",
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "Unknown"
+                "gpt-4.1"
             ]
         }
     ],
@@ -5182,8 +5182,8 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
-                " Answer1"
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
@@ -5205,7 +5205,7 @@
             },
             "result": [
                 " Answer2",
-                " 'Answer2'",
+                " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
@@ -5229,7 +5229,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -5252,13 +5252,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer2",
-                " 'Answer2'",
+                " Tie",
+                " Tie",
                 " Tie"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
+                "TIE",
+                "TIE",
                 "TIE"
             ]
         }
@@ -5300,14 +5300,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
+                " 'Answer1'",
                 " Tie",
-                " Tie",
-                " 'Answer1'"
+                " 'Tie'"
             ],
             "extracted_answers": [
+                "gpt-4.1",
                 "TIE",
-                "TIE",
-                "gpt-4.1"
+                "TIE"
             ]
         }
     ],
@@ -5325,7 +5325,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -5350,12 +5350,12 @@
             "result": [
                 " Tie",
                 " Tie",
-                " Tie"
+                " Answer2"
             ],
             "extracted_answers": [
                 "TIE",
                 "TIE",
-                "TIE"
+                "Llama-2-7b-chat-hf"
             ]
         }
     ],
@@ -5375,12 +5375,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Tie"
+                " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
-                "TIE"
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -5398,7 +5398,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1, Answer2, Tie (Both answers are clear, concise, and accurate, so it's difficult to pick a superior response.)"
+                " Answer1, Answer2, Tie (the difference between the two answers is minor and therefore, I consider them to be equally good)"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -5444,14 +5444,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
+                " 'Answer2'",
                 " Tie",
-                " Tie",
-                " Tie"
+                " 'Answer2'"
             ],
             "extracted_answers": [
+                "Llama-2-7b-chat-hf",
                 "TIE",
-                "TIE",
-                "TIE"
+                "Llama-2-7b-chat-hf"
             ]
         }
     ],
@@ -5493,13 +5493,13 @@
             },
             "result": [
                 " Answer2",
-                " Answer2",
-                " Tie"
+                " Tie",
+                " Answer2"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
-                "TIE"
+                "TIE",
+                "Llama-2-7b-chat-hf"
             ]
         }
     ],
@@ -5517,12 +5517,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " Tie",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
+                "TIE",
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
@@ -5540,14 +5540,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
+                " Tie",
                 " Answer2",
-                " Answer2",
-                " 'Answer2'"
+                " Tie"
             ],
             "extracted_answers": [
+                "TIE",
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "TIE"
             ]
         }
     ],
@@ -5590,12 +5590,12 @@
             "result": [
                 " Answer2",
                 " Answer2",
-                " Tie"
+                " Answer2"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
-                "TIE"
+                "Llama-2-7b-chat-hf"
             ]
         }
     ],
@@ -5636,14 +5636,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer2",
+                " Answer1",
                 " Tie",
-                " Answer2"
+                " Answer1"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
+                "gpt-4.1",
                 "TIE",
-                "Llama-2-7b-chat-hf"
+                "gpt-4.1"
             ]
         }
     ],
@@ -5662,7 +5662,7 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -5685,13 +5685,13 @@
             },
             "result": [
                 " Answer2",
-                " Answer2",
-                " Answer2"
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -5734,7 +5734,7 @@
             "result": [
                 " Answer2",
                 " Answer2",
-                " 'Answer2'"
+                " Answer2"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
@@ -5757,14 +5757,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Answer1",
                 " Tie",
-                " Tie\n\nBoth answers are incorrect as the question asks for the second line which, on a QWERTY keyboard, starts with the letter \"A\" and the first answer (W-E-R-T) refers to the bottom row, not the second line. However, the second answer attributes the term \"home row\" to the second line that is clearly not true. The correct answer should be \"Q-W-E-R\".",
-                " Answer1"
+                " Tie. Both answers are incorrect. The correct answer for the first four letters on a QWERTY keyboard, from left to right in the second row, are \"A-S-D-F\". However, the question stated the second line, which is the third row, as the reference point. So neither answer exactly matches the stated question, but they both attempt an answer based on the typical assumption of QWERTY keyboard layout."
             ],
             "extracted_answers": [
+                "Llama-2-7b-chat-hf",
                 "TIE",
-                "TIE",
-                "Llama-2-7b-chat-hf"
+                "Unknown"
             ]
         },
         {
@@ -5780,14 +5780,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
-                " Tie. Both answers are incorrect. The first four letters in the second row of a QWERTY keyboard, from left to right, are \"O-P-A-S\". This row is referred to as the 'DH column' rather than the 'home row'. The home row consists of the keys with the numbers 1, 2, 3, A, S, D, F, G, H, J, K, L.",
-                " Answer1"
+                " 'Tie' (Answer1 and Answer2 provide correct answers, but Answer1 is more accurate to the question. The question asks for the second line, referring to the home row, whereas Answer2 does not specify this.)",
+                " Tie. Both answers are incorrect. The correct answer for the first four letters in the second line (or the \"home row\") of a QWERTY keyboard, from left to right, is \"A-S-D-F\". The response 'W-E-R-T' refers to the first row, not the second.",
+                " Tie"
             ],
             "extracted_answers": [
-                "TIE",
                 "Unknown",
-                "gpt-4.1"
+                "Unknown",
+                "TIE"
             ]
         }
     ],
@@ -5806,12 +5806,12 @@
             },
             "result": [
                 " Answer1",
-                " Tie",
-                " Answer1"
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "TIE",
+                "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -5828,13 +5828,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1'",
-                " 'Answer1'",
+                " 'Answer1' (due to the informal and colloquial nature, yet still managing to correctly solve the problem)",
+                " Tie",
                 " Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "gpt-4.1",
+                "Unknown",
+                "TIE",
                 "gpt-4.1"
             ]
         }
@@ -5877,12 +5877,12 @@
             },
             "result": [
                 " Answer2",
-                " Answer2",
+                " 'Answer2' (The second answer provides a clear and concise step-by-step process of applying the scientific method to test a hypothesis, with formal language and proper scientific terminology. The first answer, while understandable, contains colloquialisms and presents the steps in a less structured manner.)",
                 " Answer2"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
+                "Unknown",
                 "Llama-2-7b-chat-hf"
             ]
         }
@@ -5902,13 +5902,13 @@
             },
             "result": [
                 " Tie",
-                " Answer1",
-                " 'Answer1'"
+                " Tie. Both answers effectively convey the use of democratic principles to solve a conflict within a student council, but they use different tones and styles. The first answer provides a more formal and structured approach while the second answer uses a more colloquial and conversational tone, possibly appealing to a different audience.",
+                " Tie. Both Answers 1 and 2 are effective in capturing the essence of democratic principles and conflict resolution within a student council setting. However, Answer 1 provides a more formal and structured approach, while Answer 2 has a more engaging, conversational tone that may resonate with some audience members. The choice between these responses would likely depend on context and the specific audience being addressed."
             ],
             "extracted_answers": [
                 "TIE",
-                "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "Unknown",
+                "Unknown"
             ]
         },
         {
@@ -5924,13 +5924,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1'",
-                " 'Answer1'",
+                " Tie",
+                " Tie",
                 " 'Answer1'"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "gpt-4.1",
+                "TIE",
+                "TIE",
                 "gpt-4.1"
             ]
         }
@@ -5949,12 +5949,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
-                " 'Answer1'",
+                " Answer1",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
+                "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
@@ -5973,13 +5973,13 @@
             },
             "result": [
                 " Answer2",
-                " Tie",
-                " Tie. Both answers are providing accurate and comprehensive explanations of the water cycle in a terrarium. However, Answer2 provides a more scientific and structured explanation with specific steps, whereas Answer1 provides a more creative and engaging explanation with a story-like format. This could make Answer1 more appealing to young learners, while Answer2 might be more suitable for older learners or those seeking a more formal explanation. The overall quality and accuracy of the answers are comparable, but slightly different in approach and style."
+                " Answer2",
+                " Tie"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "TIE",
-                "Unknown"
+                "Llama-2-7b-chat-hf",
+                "TIE"
             ]
         }
     ],
@@ -6020,14 +6020,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
                 " Answer2",
-                " Tie"
+                " Answer2",
+                " 'Answer2'"
             ],
             "extracted_answers": [
-                "TIE",
                 "Llama-2-7b-chat-hf",
-                "TIE"
+                "Llama-2-7b-chat-hf",
+                "Llama-2-7b-chat-hf"
             ]
         }
     ],
@@ -6045,14 +6045,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Tie",
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " Tie. Both answers accurately and creatively illustrate the concept of gravity through simple experiments, albeit with different approaches and language styles. However, neither answer provides a definitive explanation about why the ball hits the ground first in the presence of air. The first answer succinctly explains gravitational force, while the second answer explains gravity's effect on objects in a vacuum."
             ],
             "extracted_answers": [
+                "TIE",
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "Unknown"
             ]
         },
         {
@@ -6069,7 +6069,7 @@
             },
             "result": [
                 " 'Answer1'",
-                " Answer1",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -6095,7 +6095,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
@@ -6116,13 +6116,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer2'",
                 " Tie",
+                " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
                 "TIE",
+                "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
         }
@@ -6165,12 +6165,12 @@
             },
             "result": [
                 " Answer2",
-                " Tie",
+                " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "TIE",
+                "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
         }
@@ -6189,14 +6189,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " Answer1"
+                " Tie. Both answers provide a clear and understandable approach to planning a party on a budget, and both focus on the key elements of calculating costs, prioritizing spending, and finding cost-effective solutions. However, the second answer uses more casual language, and the first answer is written in a more formal and concise manner. Both could be suitable depending on the context and audience.",
+                " 'Answer1' is a better answer as it provides a more comprehensive and organized approach to planning a small party. It explains steps like calculating the total cost, allocating the budget, prioritizing important elements, considering cost-effective alternatives, creating a detailed timeline, and guest list. Additionally, it is written in a clear and concise manner which makes it easier to understand and follow.\n\nComparatively, 'Answer2' gives a rough idea of the process but does not offer specific steps or an organized plan. It also contains informal language and colloquial expressions which may not be suitable for a formal evaluation. Hence, the choice is Answer1."
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "Unknown",
+                "Unknown"
             ]
         },
         {
@@ -6212,12 +6212,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Answer2",
+                " Tie",
                 " Tie",
                 " Tie"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
+                "TIE",
                 "TIE",
                 "TIE"
             ]
@@ -6237,13 +6237,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
                 " Answer1",
+                " Tie",
                 " Tie"
             ],
             "extracted_answers": [
-                "TIE",
                 "Llama-2-7b-chat-hf",
+                "TIE",
                 "TIE"
             ]
         },
@@ -6260,13 +6260,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Tie' (Both answers are understandable and provide similar solutions, but Answer 1 is more conversational and detailed, while Answer 2 is more concise and straightforward.)",
-                " Answer1",
+                " Tie",
+                " Tie",
                 " Tie"
             ],
             "extracted_answers": [
-                "Unknown",
-                "gpt-4.1",
+                "TIE",
+                "TIE",
                 "TIE"
             ]
         }
@@ -6286,13 +6286,13 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " Tie"
+                " 'Answer1'",
+                " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
-                "TIE"
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -6310,12 +6310,12 @@
             "result": [
                 " Tie",
                 " Tie",
-                " Answer2"
+                " 'Answer1' is the superior answer in this case. It does a great job of presenting a persuasive argument by using emotive language, citing specific benefits for both students and teachers, and providing a concrete solution (an extra 15 minutes). The language is engaging, easy to understand, and personally relatable, as it talks about common experiences and feelings of the students. The answer also utilizes logic (health professionals say longer lunch breaks improve focus and energy levels) and appeals to emotions by mentioning fewer health problems and reduced stress levels. It is a powerful and well-crafted letter that is likely to compel the reader to take action."
             ],
             "extracted_answers": [
                 "TIE",
                 "TIE",
-                "Llama-2-7b-chat-hf"
+                "Unknown"
             ]
         }
     ],
@@ -6333,9 +6333,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
-                " 'Answer1'",
-                " Answer1"
+                " Answer1",
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
@@ -6356,14 +6356,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
-                " 'Answer2'",
-                " Tie"
+                " Answer2",
+                " Answer2",
+                " 'Answer2'"
             ],
             "extracted_answers": [
-                "TIE",
                 "Llama-2-7b-chat-hf",
-                "TIE"
+                "Llama-2-7b-chat-hf",
+                "Llama-2-7b-chat-hf"
             ]
         }
     ],
@@ -6381,14 +6381,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " Tie"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "TIE"
             ]
         },
         {
@@ -6404,12 +6404,12 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
+                " Tie. Both responses are clear, concise, and accurate in explaining how to calculate the area of a rectangular room by multiplying the length and width. However, the first response includes informal language and a less straightforward explanation compared to the second response. The second response provides a more direct and formal answer using mathematical symbols, making it easier to understand for those who prefer a more conventional style.",
                 " 'Answer2'",
-                " Answer2",
                 " Tie"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
+                "Unknown",
                 "Llama-2-7b-chat-hf",
                 "TIE"
             ]
@@ -6429,13 +6429,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
                 " 'Answer1'",
+                " Tie",
                 " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf",
+                "TIE",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -6477,12 +6477,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
+                "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
@@ -6502,12 +6502,12 @@
             "result": [
                 " Tie",
                 " Tie",
-                " 'Answer1'"
+                " Answer2"
             ],
             "extracted_answers": [
                 "TIE",
                 "TIE",
-                "gpt-4.1"
+                "Llama-2-7b-chat-hf"
             ]
         }
     ],
@@ -6525,14 +6525,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie (Both answers are clear, easy to understand, and provide correct information about the order of operations. However, Answer2 uses casual, conversational language, which some people might appreciate, while Answer1 uses a more formal and conventional writing style.)",
+                " Tie",
                 " 'Answer1'",
-                " Tie. Both answers provide a clear and understandable explanation of the order of operations, and incorporate common mnemonics (PEMDAS or its variants) to help remember the sequence. Answer1 is concise and to-the-point, while Answer2 presents the same information with a more conversational tone and additional context. Ultimately, the choice between the two answers would depend on the reader's preference for style and tone."
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "Unknown",
+                "TIE",
                 "Llama-2-7b-chat-hf",
-                "Unknown"
+                "Llama-2-7b-chat-hf"
             ]
         },
         {
@@ -6548,14 +6548,14 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " Tie",
+                " 'Answer1'",
                 " Answer2",
-                " Tie"
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "TIE",
+                "gpt-4.1",
                 "Llama-2-7b-chat-hf",
-                "TIE"
+                "gpt-4.1"
             ]
         }
     ],
@@ -6575,12 +6575,12 @@
             "result": [
                 " 'Answer1'",
                 " Answer1",
-                " Answer1"
+                " Answer1 is the superior response, as it provides a clear and concise explanation of the physiological processes involved in muscle fatigue following exercise, while also mentioning lactic acid buildup as a contributing factor. The language is formal and scientific, making it easier for a broad audience to understand.\n\nOn the other hand, while Answer2 also covers some of the same aspects as Answer1, the language is less formal and more colloquial, which may make it harder for some readers to understand. Additionally, it provides some extra information (e.g., about dehydration and salts) that while technically related to exercise, is not directly related to muscle fatigue.\n\nTherefore, I would select 'Answer1' as the superior response."
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "Unknown"
             ]
         },
         {
@@ -6646,7 +6646,7 @@
             "result": [
                 " Answer2",
                 " Answer2",
-                " Answer2"
+                " 'Answer2'"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
@@ -6669,7 +6669,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " 'Answer1'",
                 " Answer1"
             ],
@@ -6694,12 +6694,12 @@
             "result": [
                 " Tie",
                 " Answer2",
-                " Answer2"
+                " Tie"
             ],
             "extracted_answers": [
                 "TIE",
                 "Llama-2-7b-chat-hf",
-                "Llama-2-7b-chat-hf"
+                "TIE"
             ]
         }
     ],
@@ -6717,12 +6717,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Tie",
                 " Answer1",
-                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
-                "Llama-2-7b-chat-hf",
+                "TIE",
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
@@ -6740,13 +6740,13 @@
                 "label": "Llama-2-7b-chat-hf"
             },
             "result": [
-                " 'Answer1'",
-                " Answer2",
+                " Tie",
+                " Tie",
                 " Tie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "Llama-2-7b-chat-hf",
+                "TIE",
+                "TIE",
                 "TIE"
             ]
         }
@@ -6766,12 +6766,12 @@
             },
             "result": [
                 " Answer1",
-                " Tie",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
                 "Llama-2-7b-chat-hf",
-                "TIE",
+                "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
         },
@@ -6813,12 +6813,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1 is the superior answer. It provides a more detailed and accurate explanation of the condensation process that occurs on the outside of a cold drink on a hot day. The use of technical language such as \"evaporation\", \"less dense\", \"rises\", \"condensation\", \"accelerates\", and \"water vapor\" demonstrates a greater understanding of the topic. Additionally, the answer is well-structured, easy to follow, and complete. Answer2, while not incorrect, uses informal language and a less structured approach, making it less clear and potentially less accurate. The answer also inadvertently uses incorrect grammar, such as splitting the word \"something\" and using the incorrect past tense of \"touch\" (touch'd).",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "Unknown",
+                "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf",
                 "Llama-2-7b-chat-hf"
             ]
@@ -6838,12 +6838,12 @@
             "result": [
                 " Tie",
                 " Tie",
-                " Tie"
+                " Tie. Both responses accurately explain the process of how a cold drink in a glass can cause it to become wet on the outside when placed on a hot day. However, the explanations slightly differ in their description of the process: Answer1 explains condensation, which is the direct cause of the moisture on the glass, while Answer2 mentions evaporation and the subsequent condensation. Despite this distinction, the information is still comprehensive and correct, so I cannot definitively choose one as superior to the other."
             ],
             "extracted_answers": [
                 "TIE",
                 "TIE",
-                "TIE"
+                "Unknown"
             ]
         }
     ]

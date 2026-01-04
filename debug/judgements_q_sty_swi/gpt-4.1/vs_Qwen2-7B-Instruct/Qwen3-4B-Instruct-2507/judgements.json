@@ -116,12 +116,12 @@
                 "label": "Qwen2-7B-Instruct"
             },
             "result": [
-                "Answer2",
+                "Answer1",
                 "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
-                "Qwen2-7B-Instruct",
+                "gpt-4.1",
                 "Qwen2-7B-Instruct",
                 "Qwen2-7B-Instruct"
             ]
@@ -237,14 +237,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1",
-                "Answer1",
-                "Answer2"
+                "Answer2",
+                "Answer2",
+                "Answer1"
             ],
             "extracted_answers": [
-                "Qwen2-7B-Instruct",
-                "Qwen2-7B-Instruct",
-                "gpt-4.1"
+                "gpt-4.1",
+                "gpt-4.1",
+                "Qwen2-7B-Instruct"
             ]
         },
         {
@@ -429,14 +429,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2",
                 "Answer1",
-                "Answer1"
+                "Answer2",
+                "Answer2"
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "Qwen2-7B-Instruct",
-                "Qwen2-7B-Instruct"
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         },
         {
@@ -479,12 +479,12 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Both Answer1 and Answer2 provide accurate and scientifically sound explanations for the increase in global temperatures over the past century. They both identify key human activities\u2014fossil fuel combustion, deforestation, agricultural practices, and land-use changes\u2014as primary drivers of greenhouse gas emissions. Both mention the greenhouse effect and reference the scientific consensus on human-induced climate change.\n\nHowever, Answer2 is slightly more precise and concise in its presentation. It more clearly differentiates between the dominant human causes and minor natural factors (like volcanic activity and solar variations), emphasizing that their impacts are small compared to human influences. This subtle but important distinction enhances clarity and scientific accuracy.\n\nAnswer1 is correct and well-reasoned but includes slightly more general descriptive language (e.g., \u201chas led to various environmental impacts\u201d) without a clear focus on the causation mechanism. It also adds a section on solutions, which, while helpful, is not directly relevant to the question\u2014\u201canalyze the reasons\u201d \u2014 and thus slightly detracts from the analytical focus.\n\nTherefore, Answer2 better addresses the question by being more focused, accurate, and concise in explaining the causes.\n\nAnswer2"
+                "Answer1"
             ],
             "extracted_answers": [
                 "Qwen2-7B-Instruct",
                 "Qwen2-7B-Instruct",
-                "gpt-4.1"
+                "Qwen2-7B-Instruct"
             ]
         },
         {
@@ -596,12 +596,12 @@
                 "label": "Qwen2-7B-Instruct"
             },
             "result": [
-                "Answer1",
+                "Answer1 is more comprehensive and accurate in addressing the core components of a complete sentence. While Answer2 correctly identifies subject, verb, and object, it oversimplifies by focusing only on those three elements and misses the broader definition that a complete sentence requires a subject and predicate. Answer1 properly defines the subject and predicate as the foundational components, explains how the predicate includes verbs and additional elements (like objects or complements), and emphasizes the essential relationship between subject and predicate in forming a complete thought. Answer1 also includes important contextual details (capitalization, punctuation) and provides a clearer explanation of how the components interact. Answer2, though correct in part, lacks depth and fails to address the predicate structure, which is central to grammatical understanding.\n\nVote: Answer1",
                 "Answer1",
                 "Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Unknown",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -1773,12 +1773,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                "Both Answer1 and Answer2 provide clear, accurate explanations of how a food chain works. They correctly identify producers, consumers, decomposers, trophic levels, and the flow of energy.\n\n- Answer1 is comprehensive and logically structured, covering the full cycle including energy transfer and nutrient recycling.\n- Answer2 adds the important detail that energy decreases at each trophic level and is lost as heat, which is a key ecological principle. This nuance enhances scientific accuracy.\n\nWhile both are strong, Answer2 includes a more precise and scientifically important detail (energy loss at each level), making it slightly more complete and educationally valuable.\n\nAnswer2",
                 "Answer1",
-                "Answer1",
-                "Both answers accurately explain the basic concept of a food chain, including producers, consumers, decomposers, and trophic levels. Answer1 is clear, well-structured, and covers all key elements without redundancy. Answer2 adds the detail about energy loss as heat, which is an important ecological principle, and uses simpler, more conversational language that enhances clarity. Both are accurate and appropriate for a general explanation.\n\nHowever, Answer2 includes a more scientifically precise detail (energy loss at each level) and explicitly mentions the cycle of life and death, which strengthens its explanation of ecological balance. This makes it slightly more comprehensive and pedagogically useful.\n\nAnswer2 is superior in terms of scientific accuracy and explanatory completeness.\n\nAnswer2"
+                "Answer2"
             ],
             "extracted_answers": [
-                "Qwen2-7B-Instruct",
+                "gpt-4.1",
                 "Qwen2-7B-Instruct",
                 "gpt-4.1"
             ]
@@ -2013,7 +2013,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Both Answer1 and Answer2 provide accurate and relevant information about the Sun's role in the solar system. They correctly highlight the Sun's gravitational influence, its role as a source of light and energy, its effect on weather and climate, and its importance for life on Earth.\n\nAnswer1 includes a more detailed explanation of nuclear fusion and its connection to sustaining life, as well as mentions photosynthesis and the water cycle\u2014adding depth to the explanation of how the Sun supports Earth's ecosystems.\n\nAnswer2 is concise and clear, covering key points like solar wind and planetary orbits, but lacks the specific detail about nuclear fusion and ecosystem processes such as photosynthesis and the water cycle.\n\nGiven that the question asks to \"explain the role of the Sun,\" a more comprehensive and scientifically precise explanation is preferable\u2014especially when emphasizing its direct impact on life and planetary dynamics.\n\nTherefore, Answer1 provides a slightly more complete and semantically richer explanation.\n\nAnswer1",
+                "Answer1",
                 "Answer1",
                 "Answer1"
             ],
@@ -2157,14 +2157,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Both Answer1 and Answer2 provide accurate, clear, and comprehensive explanations of global warming. They cover the key points: the cause (human activities, greenhouse gases), the effects (melting ice caps, rising sea levels, extreme weather), and the necessity of mitigation actions (reducing emissions, sustainable practices).\n\n- Answer1 is slightly more structured and includes a broader overview of consequences (impacts on ecosystems and wildlife) and a clear mention of mitigation efforts.\n- Answer2 is concise and impactful, emphasizing the urgency and broader implications (threats to human health and food security), which adds depth to the societal impact.\n\nIn terms of semantic quality \u2014 accuracy, completeness, clarity, and relevance \u2014 both are excellent. Answer2 is slightly more focused on the consequences and urgency, which aligns well with public understanding and awareness, while Answer1 offers a more balanced and detailed explanation.\n\nHowever, since both are semantically high-quality and cover the core aspects of the question without errors or omissions, the difference is subtle.\n\n**Tie**",
-                "Both Answer1 and Answer2 provide accurate, clear, and comprehensive explanations of global warming. They cover the primary cause (greenhouse gas emissions from human activities), the key effects (melting ice caps, rising sea levels, extreme weather), and mitigation efforts (reducing emissions, sustainable practices). \n\nAnswer1 slightly emphasizes the mechanism (heat trapping) and includes a more balanced presentation of consequences and solutions. Answer2 is concise and directly links the phenomenon to broader implications like human health and food security, adding a slightly stronger emphasis on urgency and societal impact.\n\nHowever, both are scientifically accurate and of comparable quality in terms of clarity, completeness, and relevance. There is no significant difference in semantic quality or factual correctness.\n\nTie",
-                "Both Answer1 and Answer2 provide accurate, clear, and comprehensive explanations of global warming. They cover the primary causes (greenhouse gases from fossil fuels, deforestation, industrial processes), the effects (melting ice caps, rising sea levels, extreme weather), and the need for action (reducing emissions, sustainable practices). \n\nAnswer1 is slightly more structured and flows logically, with a clear definition followed by causes, consequences, and solutions. Answer2 is concise and impactful, especially in emphasizing the broader implications for ecosystems and human health, and it adds a note about protecting future generations, which enhances the depth of the response.\n\nHowever, in terms of semantic quality\u2014accuracy, completeness, clarity, and relevance\u2014both are excellent. There is no significant difference in factual correctness or explanatory depth.\n\nTie"
+                "Both Answer1 and Answer2 provide accurate, clear, and comprehensive explanations of global warming. They cover the key points: the cause (human activities, greenhouse gases), the effects (melting ice caps, rising sea levels, extreme weather), and the necessity of mitigation actions (reducing emissions, sustainable practices). \n\nAnswer1 is slightly more detailed in describing the mechanism (\"trapping heat from the sun\") and includes a broader mention of impacts on ecosystems and wildlife. Answer2 emphasizes the broader consequences like human health and food security and frames the issue with a sense of urgency and future impact.\n\nHowever, both are factually sound, well-structured, and semantically equivalent in quality. There is no significant difference in accuracy or completeness.\n\nTie",
+                "Both Answer1 and Answer2 provide accurate, clear, and comprehensive explanations of global warming. They cover the key points: the cause (human activities, greenhouse gases), the effects (melting ice caps, rising sea levels, extreme weather), and the implications (ecosystems, human health, need for action).\n\n- Answer1 is slightly more structured and includes a clear definition, causes, consequences, and mitigation efforts.\n- Answer2 is concise and well-organized, with a strong flow and emphasis on the urgency and broader impacts (e.g., food security, future generations).\n\nWhile both are excellent, Answer1 provides a slightly more complete breakdown of the concept, including specific mitigation strategies, which adds depth to the explanation.\n\nAnswer1",
+                "Answer1"
             ],
             "extracted_answers": [
                 "TIE",
-                "TIE",
-                "TIE"
+                "Qwen2-7B-Instruct",
+                "Qwen2-7B-Instruct"
             ]
         },
         {
@@ -2182,7 +2182,7 @@
             "result": [
                 "Answer2",
                 "Answer2",
-                "Both Answer1 and Answer2 provide accurate, clear, and scientifically sound explanations of global warming. They cover the key points: human activities, greenhouse gases, temperature rise, impacts (melting ice, sea level rise, extreme weather), and mitigation efforts.\n\nHowever, Answer2 is slightly superior in terms of **clarity, flow, and completeness**. It begins with a precise definition, explains the greenhouse effect in a simple but accurate way, clearly links causes to outcomes, and provides a balanced view of consequences and solutions. The structure is logical and easy to follow.\n\nAnswer1 is also good, but it slightly condenses the explanation and includes \"threatens ecosystems\" without elaborating on the specific impacts as clearly as Answer2 does.\n\nThus, the better response is:\n\nAnswer2"
+                "Answer2"
             ],
             "extracted_answers": [
                 "Qwen2-7B-Instruct",
@@ -2397,14 +2397,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Both Answer1 and Answer2 are well-structured and provide clear, relevant, and reasonable justifications for their respective gadgets. However, when evaluating based on **semantic quality**\u2014specifically, clarity, coherence, depth of reasoning, and persuasive strength\u2014the distinction is subtle but meaningful.\n\n- **Answer1** describes a comprehensive, AI-driven personal health coach that monitors multiple aspects of health (sleep, diet, vital signs) and offers personalized recommendations. It includes a strong focus on long-term health outcomes, continuous learning, and integration into daily life. The explanation is thorough, with logical flow and a clear benefit to both individuals and healthcare systems.\n\n- **Answer2** presents a more focused, actionable, and user-friendly invention\u2014a portable scanner\u2014emphasizing immediacy, accessibility, and real-time feedback. It addresses a key public health issue (delayed health checks) and highlights practical, immediate benefits, especially for underserved populations. The simplicity and portability make it particularly compelling in terms of real-world usability.\n\nWhile Answer1 is more comprehensive in scope, Answer2 is more immediately grounded in user experience and practical impact. Moreover, the emphasis on early detection and accessibility makes it more impactful in addressing real-world health challenges.\n\nGiven that the question asks for **a new gadget**, and both answers meet that criterion, but **Answer2** offers a more tangible, immediately applicable, and socially relevant invention with clear, real-world benefits, it stands out in terms of semantic clarity, practicality, and persuasive impact.\n\nVote: **Answer2**",
+                "Both Answer1 and Answer2 present compelling, realistic inventions with clear benefits. However, when evaluating based on **quality of the answer**\u2014specifically, comprehensiveness, clarity, logical reasoning, and the strength of the motivation and functionality\u2014Answer2 stands out slightly.\n\nWhile Answer1 is thorough and detailed, it focuses on a more passive, long-term monitoring device that requires integration into daily routines (e.g., tracking sleep, diet). Answer2 introduces a **portable, immediate, and actionable** solution with a clear user interaction model (holding it against the skin), which makes it more tangible and accessible. It directly addresses the psychological barrier of health neglect by offering real-time feedback and immediate actionable steps. The mention of telemedicine integration adds value for underserved populations, enhancing social and medical relevance.\n\nMoreover, Answer2 more clearly articulates *why* this invention would make a difference in everyday life, emphasizing early detection and accessibility\u2014critical aspects of public health.\n\nAnswer1 is well-structured, but its recommendations feel more generic and less immediately useful without a defined user interaction or real-time feedback loop.\n\nTherefore, the superior response is:\n\nAnswer2",
                 "Answer1",
-                "Both Answer1 and Answer2 present well-thought-out inventions with clear motivations and practical applications. However, in terms of **semantic quality**, **specificity**, and **clarity of the gadget's function and value**, Answer2 slightly edges out.\n\n- Answer2 introduces a more tangible and immediately usable device\u2014a *portable health scanner*\u2014that is easy to visualize and integrate into daily life. The description of its physical form (\"fits in your pocket\") and simple user interaction (\"hold it against your skin\") makes it more accessible and relatable.\n- It clearly identifies the health metrics monitored and concrete actions suggested (e.g., \"drink water,\" \"take a walk\").\n- The motivation\u2014addressing delayed health-seeking behavior and improving access for underserved populations\u2014is compelling and grounded in real-world needs.\n\nAnswer1 is also strong, with a comprehensive vision of a health coach. However, it is less specific about the physical form or user interaction, and the AI-powered \"personal health coach\" is more of a software or app-based concept than a tangible gadget, which slightly weakens its alignment with the prompt (\"gadget\").\n\nThus, while both are valid, Answer2 better fulfills the requirement of inventing a *new gadget* with clear, tangible features and user benefits.\n\nAnswer2"
+                "Answer1"
             ],
             "extracted_answers": [
-                "Unknown",
+                "gpt-4.1",
                 "Qwen2-7B-Instruct",
-                "gpt-4.1"
+                "Qwen2-7B-Instruct"
             ]
         },
         {
@@ -2470,12 +2470,12 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1 beats Answer2 because it provides a more detailed, coherent, and actionable plan with specific examples (e.g., \"bake sale,\" \"talent show,\" \"neighborhood park\") and clearly outlines each step with realistic implementation details. While Answer2 is well-structured and covers key steps, it is cut off mid-sentence at \"Feedback: Gather feedback to improve future,\" making it incomplete and less reliable. Answer1 is comprehensive, logical, and fully actionable, offering concrete guidance that would directly help someone organize a real-world event. \n\nVote: Answer1"
+                "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "Unknown"
+                "gpt-4.1"
             ]
         }
     ],
@@ -2542,12 +2542,12 @@
             },
             "result": [
                 "Answer2",
-                "Both Answer1 and Answer2 provide thoughtful, actionable, and comprehensive suggestions for planning an eco-friendly birthday party. They cover key aspects such as venue selection, invitations, food, tableware, d\u00e9cor, transportation, waste management, and post-party practices.\n\n- Answer1 is well-structured and covers a broad range of eco-friendly practices, including sustainable food sourcing, reusable items, activities promoting environmental awareness, and post-event waste donation. It emphasizes a holistic approach and includes a final note on encouraging guests to maintain sustainable habits.\n\n- Answer2 is equally thorough and offers practical, easy-to-implement ideas such as using existing items, upcycling, and avoiding gifts. It adds specific party favor suggestions (seeds, small plants) and emphasizes reusing decorations. The tone is slightly more accessible and hands-on, which may appeal to a wider audience.\n\nBoth answers are accurate, relevant, and aligned with eco-friendly principles. There is no significant difference in semantic quality, depth, or usefulness.\n\nTie",
+                "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "TIE",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         },
@@ -2734,7 +2734,7 @@
             },
             "result": [
                 "Answer2",
-                "Answer2",
+                "Both Answer1 and Answer2 provide well-structured, practical plans for a community garden. However, Answer2 offers a more concise, actionable, and focused plan that emphasizes key elements like clear member responsibilities, sustainability, and community engagement with specific, easily implementable steps. It avoids redundancy, maintains flow, and includes practical details such as shared calendars, specific plant types (pollinator plants), and tools for communication (bulletin board or chat group).\n\nAnswer1 is thorough and comprehensive, covering many aspects, but it is slightly longer and less focused, with some points (like \"education\" and \"funding\") that may be more relevant to a larger-scale or institutional project rather than a foundational community garden plan.\n\nIn terms of *semantic quality*\u2014clarity, completeness, relevance, and practicality\u2014Answer2 is superior because it delivers a clear, streamlined, and realistic roadmap that community members and volunteers can easily follow and adapt.\n\nAnswer2",
                 "Answer2"
             ],
             "extracted_answers": [
@@ -2973,14 +2973,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer2",
-                "Answer2",
-                "Answer2"
+                "Both Answer1 and Answer2 provide thoughtful, emotionally resonant lyrics about overcoming challenges. However, when evaluating based on **semantic quality**\u2014specifically, clarity, coherence, emotional impact, rhetorical strength, and completeness\u2014the distinction becomes clear.\n\n**Answer1** is well-structured with a clear verse-chorus-bridge format, consistent imagery, and a strong thematic progression. It effectively conveys growth and resilience, using metaphors like \"mountains to climb\" and \"spirit unbound.\" The emotional arc is smooth and the message is uplifting. However, it is **incomplete**, cutting off mid-sentence at the end of the outro: \"So here's to the climb, the fall, and the rise, To the moments\" \u2014 this leaves the lyrics unsatisfying and unpolished.\n\n**Answer2** is equally strong in theme and emotional depth. It uses vivid, accessible imagery (\"sky turns gray,\" \"storm may rage\") and incorporates a more dynamic flow. The second verse adds a sense of belonging and internal strength (\"remember I belong / To the dreamers and believers\"), which deepens the human element. The final lines directly affirm the core message: overcoming challenges through hope and courage. The structure feels more natural and complete, with a powerful ending that ties back to the theme.\n\nWhile both are good, **Answer2** has superior **semantic quality** in terms of coherence, emotional resonance, natural rhythm, and completeness.\n\nVote: **Answer2**",
+                "Both Answer1 and Answer2 are strong lyric responses to the prompt about overcoming challenges. However, when evaluating based on **semantic quality**, **emotional resonance**, **coherence**, and **poetic impact**:\n\n- **Answer1** is well-structured with a clear verse-chorus-bridge format, uses evocative imagery (e.g., \"mountains to climb,\" \"fertile soil of my soul\"), and conveys growth and inner strength. It follows a traditional song format, which works well for lyrics. However, it cuts off mid-sentence in the outro, which slightly undermines completeness.\n\n- **Answer2** is more dynamic, with a tighter emotional flow. It uses vivid, relatable language (\"sky turns gray,\" \"stumble, every scar\"), and directly addresses resilience and courage. The internal rhyme and rhythm are stronger, and the message is more immediate and personal. Its structure is concise and impactful, and it doesn\u2019t trail off\u2014ending with a strong, empowering close.\n\nWhile both are good, **Answer2** demonstrates better emotional authenticity, rhythm, and cohesion, making it more effective as lyrical content for a song about overcoming challenges.\n\nAnswer2",
+                "Both Answer1 and Answer2 provide thoughtful, emotionally resonant lyrics about overcoming challenges. However, in terms of **semantic quality**, **flow**, **emotional impact**, and **coherence**, Answer2 stands out.\n\n- Answer2 avoids clich\u00e9s more effectively and uses vivid imagery (\"sky turns gray,\" \"storm may rage,\" \"night feels too long\") to create a stronger narrative arc.\n- The structure is tighter, the rhythm more natural, and the message more immediate and relatable.\n- Answer2 includes a clear progression from struggle to hope and self-discovery, with specific, tangible emotions tied to the experience.\n- While Answer1 is poetic and well-crafted, it feels slightly generic and repetitive (especially in the chorus), with some lines that lack depth or originality.\n\nAnswer1's outro cuts off mid-sentence, which weakens its completion and coherence.\n\nAnswer2 is more complete, engaging, and emotionally powerful.\n\n**Vote: Answer2**"
             ],
             "extracted_answers": [
+                "Unknown",
                 "gpt-4.1",
-                "gpt-4.1",
-                "gpt-4.1"
+                "Unknown"
             ]
         },
         {
@@ -3526,12 +3526,12 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1"
+                "Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Qwen2-7B-Instruct"
             ]
         }
     ],
@@ -4127,7 +4127,7 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1"
+                "Both Answer1 and Answer2 provide thoughtful, accurate, and relevant explanations for the question about the relevance of learning algebra in daily life. They emphasize logical thinking, financial management, and real-world applications such as budgeting, cooking, and problem-solving.\n\n- Answer1 offers a more structured and comprehensive development of relevance, with clear examples (e.g., discounts, interest rates, cooking, scheduling), and explicitly links algebra to cognitive development and adaptability.\n- Answer2 is concise and also includes strong examples, with a good balance of personal and professional applications. It effectively highlights transferable skills and real-life scenarios.\n\nWhile both are high-quality, **Answer1** provides slightly more depth, variety of daily-life examples, and a broader explanation of the cognitive benefits, making it more thorough in addressing the full scope of the question.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "Qwen2-7B-Instruct",
@@ -4149,12 +4149,12 @@
             },
             "result": [
                 "Answer1",
-                "Answer1",
+                "Both Answer1 and Answer2 provide well-structured, accurate, and relevant explanations of the importance of algebra in daily life. They both highlight logical thinking, problem-solving, financial management, real-world applications (e.g., budgeting, cooking), and career relevance. \n\nAnswer1 emphasizes practical examples such as interest rates, price comparisons, and home improvement, and clearly links algebraic thinking to everyday challenges. It also notes that advanced concepts may not appear daily, which adds balance and realism.\n\nAnswer2 is similarly thorough, with a strong emphasis on critical thinking and abstract reasoning, and includes relevant examples like discounts and recipe adjustments. It also underscores cognitive development and adaptability, offering a slightly broader philosophical appeal to the value of algebra.\n\nBoth responses are factually sound, clearly written, and maintain a balanced perspective. There is no significant difference in quality, accuracy, or depth of content.\n\nTie",
                 "Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1"
             ]
         }
@@ -4388,13 +4388,13 @@
                 "label": "Qwen2-7B-Instruct"
             },
             "result": [
-                "Answer1",
-                "Answer1",
+                "Both Answer1 and Answer2 provide clear, accurate, and relevant responses to the question about the importance of teamwork in achieving a goal. They highlight key aspects such as collaboration, communication, skill diversification, accountability, problem-solving, and shared purpose.\n\nAnswer1 is comprehensive and includes additional depth in explaining how teamwork reduces mistakes, supports motivation and accountability, and builds trust and community. It also explicitly notes that no single person has all necessary abilities or resources, which strengthens the argument for teamwork.\n\nAnswer2 is concise but equally valid, focusing on collaboration, communication, risk mitigation, and amplification of individual capabilities. It effectively emphasizes how teamwork accelerates progress and increases success likelihood.\n\nWhile both answers are strong, **Answer1** provides a slightly more nuanced and well-rounded evaluation by incorporating a broader range of benefits with specific examples and logical flow.\n\nVote: Answer1",
+                "Both Answer1 and Answer2 provide clear, well-structured, and accurate evaluations of the importance of teamwork in achieving a goal. They highlight key aspects such as collaboration, shared skills, communication, accountability, problem-solving, and motivation. \n\nAnswer1 emphasizes task division, creative problem-solving, support, and trust, with a strong focus on efficiency and positive team dynamics. Answer2 focuses on resource pooling, accountability, unity, risk mitigation, and amplification of individual capabilities, with a slightly more concise and direct flow.\n\nWhile both are strong, Answer2 is slightly more comprehensive in linking teamwork to *amplification of capabilities* and *accelerated progress*, and it uses terms like \"risk mitigation\" and \"smarter work\" that add depth. Answer1 is equally valid and detailed, but Answer2 offers a tighter, more impactful synthesis of the core benefits of teamwork.\n\nTherefore, the superior response is:\n\nAnswer2",
                 "Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "gpt-4.1",
+                "Unknown",
+                "Qwen2-7B-Instruct",
                 "gpt-4.1"
             ]
         }
@@ -4580,14 +4580,14 @@
                 "label": "Qwen2-7B-Instruct"
             },
             "result": [
-                "Answer1 is slightly more focused and directly addresses the core of effectiveness through a data-driven, practical lens\u2014emphasizing real-world outcomes, financial transparency, and independent evaluations. It avoids redundancy and provides a clear, actionable framework grounded in measurable impact. While Answer2 is well-structured and comprehensive, it includes some less critical or subjective factors (e.g., \"innovation,\" \"reputation,\" \"sustainability\") that may not always be directly tied to effectiveness in a measurable way.\n\nAnswer1 prioritizes what truly matters: demonstrable results, accountability, and efficiency\u2014key elements in assessing whether a nonprofit is genuinely helping people.\n\nVote: Answer1",
                 "Answer2",
-                "Answer1"
+                "Answer2",
+                "Answer2"
             ],
             "extracted_answers": [
-                "Unknown",
                 "Qwen2-7B-Instruct",
-                "gpt-4.1"
+                "Qwen2-7B-Instruct",
+                "Qwen2-7B-Instruct"
             ]
         }
     ],
@@ -4606,12 +4606,12 @@
             },
             "result": [
                 "Answer2",
-                "Both Answer1 and Answer2 provide accurate information about the capital of France being Paris. They both mention Paris as the capital and include relevant facts about its cultural and historical significance, such as the Eiffel Tower and the Louvre Museum.\n\nAnswer2 is slightly more comprehensive, as it explicitly notes that Paris is the largest city and describes it as the political, cultural, and economic center of France, adding a level of depth that Answer1 lacks.\n\nHowever, both responses are factually correct and semantically sound.\n\nTie",
+                "Answer2",
                 "Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "TIE",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         },
@@ -4751,7 +4751,7 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Answer1"
+                "Answer1 is slightly more precise and factual, as it provides specific numbers (diameter and mass percentage), which enhances its accuracy and completeness. Answer2 is also correct but less detailed and slightly less accurate in stating that Jupiter has \"more mass than all the other planets combined\" \u2014 this is misleading because while Jupiter has most of the mass, it does not have *more* mass than all the others combined; it has about 71% of the total mass of all planets. Answer1 correctly states \"71% of the total mass of the other planets combined,\" which is accurate.\n\nTherefore, Answer1 is more factually sound and detailed.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "Qwen2-7B-Instruct",
@@ -4820,7 +4820,7 @@
                 "label": "Qwen2-7B-Instruct"
             },
             "result": [
-                "Answer2",
+                "Both Answer1 and Answer2 provide accurate information about the author of *To Kill a Mockingbird*, which is Harper Lee. They both correctly state the publication year (1960) and highlight the novel's significance. \n\n- Answer1 includes a brief thematic description (racial injustice, moral growth, Scout Finch), which adds context.\n- Answer2 emphasizes Harper Lee's status as an American novelist and the novel's award and literary impact, which is also relevant and adds depth.\n\nNeither answer contains factual errors. Answer2 slightly improves on relevance by mentioning the Pulitzer Prize and the novel's classic status, which is significant in literary context. However, Answer1 provides a more direct and narrative-oriented response that ties the facts to the story's perspective.\n\nGiven that both are accurate and well-informed, and considering that Answer2 adds more literary context and recognition, it is slightly more comprehensive.\n\nAnswer2",
                 "Answer2",
                 "Answer2"
             ],
@@ -4916,14 +4916,14 @@
                 "label": "Qwen2-7B-Instruct"
             },
             "result": [
-                "Both Answer1 and Answer2 correctly identify oxygen as the element with the chemical symbol 'O' and provide accurate additional information about its properties and importance. \n\nAnswer1 includes information about oxygen being a nonmetal gas, its role in respiration, and its atomic number (8), which adds scientific depth.\n\nAnswer2 highlights oxygen as a colorless, odorless, tasteless gas and mentions its atmospheric composition (21%) and its essential role in life, which is also accurate and relevant.\n\nBoth responses are factually correct and semantically sound. However, Answer2 is slightly more concise and directly addresses the key properties relevant to the general public or students, while Answer1 includes more technical details (atomic number and crust abundance). Given that the question is straightforward, both are acceptable, but Answer2 is slightly more focused and clear without redundancy.\n\nTie",
-                "Both Answer1 and Answer2 correctly identify oxygen as the element with the chemical symbol 'O' and provide accurate, relevant information about its properties and importance.\n\n- Answer1 includes the atomic number (8), which is a key characteristic, and mentions oxygen's role in respiration and its abundance in the Earth\u2019s crust.\n- Answer2 emphasizes oxygen's physical properties (colorless, odorless, tasteless) and its percentage in the atmosphere, which is also accurate and helpful.\n\nBoth responses are factually correct, clear, and concise. There is no significant difference in quality or accuracy between the two.\n\nTie",
-                "Both Answer1 and Answer2 correctly identify oxygen as the element with the chemical symbol 'O' and provide accurate, relevant information about its properties and importance.\n\n- Answer1 includes correct details about oxygen being a nonmetal gas, essential for respiration, and mentions its atomic number (8), which adds scientific precision.\n- Answer2 emphasizes oxygen's physical properties (colorless, odorless, tasteless) and its atmospheric composition (21%), which is also factually accurate.\n\nNeither answer contains inaccuracies or irrelevant information. Both are clear, concise, and factually sound.\n\nTie"
+                "Answer1 and Answer2 both correctly identify oxygen as the element with the symbol 'O' and provide accurate, relevant information about its properties and importance. However, Answer1 includes additional factual detail (atomic number 8 and being the most abundant element in Earth\u2019s crust), which slightly enhances its completeness. Answer2 emphasizes atmospheric composition and sensory properties, which are also accurate but less comprehensive in terms of elemental facts.\n\nWhile both are high quality, Answer1 provides a slightly more comprehensive and scientifically precise response with key details about atomic number and abundance in the crust.\n\nAnswer1",
+                "Both Answer1 and Answer2 correctly identify oxygen as the element with the chemical symbol 'O'. They both provide accurate and relevant information about oxygen, including its state (gas), importance in life, and presence in the atmosphere. \n\nAnswer1 adds the atomic number (8) and mentions oxygen as a nonmetal gas essential for respiration and the most abundant element in the Earth\u2019s crust. Answer2 emphasizes oxygen's properties (colorless, odorless, tasteless) and its atmospheric composition (21%). \n\nBoth are factually sound and semantically effective. However, Answer2 is slightly more concise and focused on key physical and environmental facts, making it a slightly more direct and efficient response.\n\nStill, both are high-quality. \n\nTie",
+                "Answer1"
             ],
             "extracted_answers": [
+                "gpt-4.1",
                 "TIE",
-                "TIE",
-                "TIE"
+                "gpt-4.1"
             ]
         }
     ],
@@ -5037,13 +5037,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Both Answer1 and Answer2 list the same continents in slightly different orders, and both describe them accurately as large landmasses with distinct characteristics. The content is factually correct and semantically sound. However, Answer2 includes a more precise and slightly more natural phrasing\u2014particularly in describing the continents as \"separated by oceans\" and emphasizing \"geography, culture, and biodiversity\"\u2014which adds a bit more contextual depth without introducing error.\n\nThat said, the core information in both is identical and equally accurate. There is no significant difference in semantic quality or factual correctness.\n\nTie",
-                "Both Answer1 and Answer2 list the continents of the world in a generally accurate manner, with only slight differences in ordering and phrasing. \n\nAnswer1 includes \"Europe\" as a separate continent, which is correct, but it combines \"Europe\" and \"Asia\" in a way that could be misleading if not clearly separated. However, the list as a whole \u2014 Africa, Antarctica, Asia, Australia, Europe, North America, South America \u2014 is standard and acceptable. \n\nAnswer2 provides the same continents but in a more logically grouped and clearly separated list, and it enhances clarity by emphasizing the continents' uniqueness in geography, culture, and biodiversity. The phrasing is more descriptive and accurate in presenting the continents as distinct landmasses.\n\nWhile both are acceptable, Answer2 is slightly more semantically precise, well-structured, and clearly conveys the correct geographical classification.\n\nAnswer2",
-                "Both Answer1 and Answer2 list the continents in a generally accurate manner, and both include all the standard continents recognized in geographical classification. However, the order of presentation and slight differences in wording affect the clarity and completeness.\n\nAnswer1 includes \"Europe\" as a continent, which is debated in some modern geographical classifications (e.g., Europe is sometimes treated as part of Asia or as a semi-independent continent), though it is generally accepted as a continent. However, a more common and modern list includes \"Europe\" alongside \"Asia\" as a distinct continent. The omission of \"Europe\" or mispositioning could be misleading.\n\nAnswer2 correctly identifies all the standard continents and organizes them in a well-known order. Additionally, it emphasizes the distinctiveness of each continent in terms of geography, culture, and biodiversity\u2014adding useful context.\n\nA notable issue in Answer1 is that it lists \"Australia\" and \"Antarctica\" together, and includes \"Europe\" \u2014 but does not clarify that Australia is sometimes referred to as Oceania. However, the primary issue lies in potentially placing Europe and Australia without proper geographical context.\n\nAnswer2 is more accurate and clearly conveys the standard classification of continents with better phrasing and structure.\n\nAnswer2 is superior.\n\nAnswer2"
+                "Both Answer1 and Answer2 list the continents in a generally accurate manner. However, a key issue is the classification of Europe and Asia\u2014some geographical systems treat Europe and Asia as parts of a single landmass (Europe-Asia) or consider Europe as a separate continent. The standard recognition in modern geography typically includes seven continents: Africa, Antarctica, Asia, Australia (Oceania), Europe, North America, and South America.\n\nAnswer1 lists the continents but includes \"Europe\" as a separate continent, which is acceptable, though the order and phrasing could be more precise. Answer2 lists the same continents and organizes them in a slightly more conventional order (Asia, Africa, North America, South America, Antarctica, Europe, Australia), which aligns better with common listings. Additionally, Answer2 uses more precise descriptive language about the continents being \"separated by oceans\" and \"unique in its geography, culture, and biodiversity,\" which adds a touch of depth and clarity.\n\nWhile both answers are fundamentally accurate, Answer2 provides slightly better structure, clarity, and completeness in describing the continents.\n\nAnswer2",
+                "Tie",
+                "Answer2"
             ],
             "extracted_answers": [
-                "TIE",
                 "gpt-4.1",
+                "TIE",
                 "gpt-4.1"
             ]
         },
@@ -5060,14 +5060,14 @@
                 "label": "Qwen2-7B-Instruct"
             },
             "result": [
-                "Both Answer1 and Answer2 list the same continents in slightly different orders. Both are accurate and provide a clear, concise list of the seven widely accepted continents. \n\nAnswer1 includes a brief explanatory sentence about uniqueness and biodiversity, which adds contextual value. Answer2 is equally factual and well-structured, with similar explanatory content.\n\nSince both answers are semantically accurate, well-structured, and provide complete and correct information, there is no significant difference in quality.\n\nTie",
-                "Answer1 and Answer2 both list the continents correctly and provide reasonable context. However, Answer1 includes a slightly more accurate and complete explanation by noting that the continents are \"separated by oceans\" and emphasizes their uniqueness in geography, culture, and biodiversity. Answer2 is concise and accurate but lacks elaboration.\n\nWhile both are correct, Answer1 provides a more informative and well-structured response in terms of semantic quality and completeness.\n\nAnswer1",
-                "Both Answer1 and Answer2 list the same continents in slightly different orders. Both are accurate and include all seven widely accepted continents (Asia, Africa, North America, South America, Antarctica, Europe, and Australia). \n\nAnswer1 provides a bit more context by mentioning that each continent is unique in geography, culture, and biodiversity, which adds value beyond just listing the names. Answer2 is concise and accurate but lacks elaboration.\n\nHowever, since the question only asks to \"name\" the continents, the primary measure is completeness and accuracy\u2014both meet that requirement.\n\nThere is no significant difference in semantic quality or factual accuracy between the two.\n\nTie"
+                "Answer1",
+                "Both Answer1 and Answer2 provide a correct list of the continents, listing all seven major continents in a logical manner. The order of listing does not affect correctness, and both include all the major continents (Asia, Africa, North America, South America, Antarctica, Europe, Australia). \n\nAnswer1 adds a brief explanatory sentence about the uniqueness of each continent in terms of geography, culture, and biodiversity, which slightly enhances the quality by providing context. Answer2 is concise and accurate but offers no additional explanatory value.\n\nHowever, since the question only asks to \"name the continents,\" the primary requirement is accuracy and completeness\u2014both answers meet this. Answer1 is slightly more informative and clear, but not significantly better in terms of semantic quality.\n\nTie",
+                "Both Answer1 and Answer2 provide a correct list of the continents, accurately naming all seven major continents in a standard geographical classification. \n\nAnswer1 includes a slightly more detailed explanation about the uniqueness of each continent in terms of geography, culture, and biodiversity, adding context beyond mere naming. Answer2 is concise and accurate but lacks explanatory detail.\n\nHowever, the core task is to name the continents, and both do so correctly. The difference in quality lies in elaboration, not in factual accuracy.\n\nTherefore, the superior response in terms of quality\u2014considering clarity, completeness, and contextual relevance\u2014is:\n\nAnswer1"
             ],
             "extracted_answers": [
-                "TIE",
                 "gpt-4.1",
-                "TIE"
+                "TIE",
+                "gpt-4.1"
             ]
         }
     ],
@@ -5085,12 +5085,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Both Answer1 and Answer2 provide accurate information about the author of the 'Harry Potter' series, correctly identifying J.K. Rowling. They also mention key details such as the number of books (seven) and the global impact of the series. \n\nAnswer1 adds a brief anecdote about the origin of the idea (during a delayed train journey), which is a minor but interesting factual addition. Answer2 includes more context about Rowling being a British writer and the magical world adaptation into movies, which enhances the narrative and provides a slightly richer description.\n\nWhile both answers are factually sound and well-written, Answer2 offers a slightly more comprehensive and engaging explanation without introducing inaccuracies.\n\nAnswer2",
+                "Both Answer1 and Answer2 provide accurate and relevant information about J.K. Rowling and the Harry Potter series. They correctly identify her as the author, mention the number of books (seven), and highlight the global impact and adaptations. \n\nAnswer1 includes the detail about the inception of the idea during a delayed train journey, which adds a bit of context. Answer2 emphasizes her role as a British writer and the creation of the magical world, which adds a slightly more vivid narrative element.\n\nIn terms of semantic quality, both are factually correct and clearly communicate the key points. However, Answer2 slightly flows more naturally and offers a slightly richer description without adding unnecessary or unverifiable details.\n\nVote: Answer2",
                 "Answer2",
-                "Both Answer1 and Answer2 provide accurate and relevant information about J.K. Rowling and the Harry Potter series. They both correctly identify J.K. Rowling as the author and mention key details such as the number of books (seven) and the global impact of the series. \n\nAnswer1 includes the detail about the origin of the idea during a delayed train journey, which adds a slight human-interest element. Answer2 adds context about Rowling being a British writer and the magic world of Harry Potter, which enhances the narrative.\n\nHowever, in terms of semantic quality\u2014accuracy, completeness, clarity, and relevance\u2014both are strong. Answer2 is slightly more comprehensive in describing Rowling's role and the nature of the series, while Answer1 is concise and factual.\n\nTie"
+                "Both Answer1 and Answer2 provide accurate information about J.K. Rowling being the author of the Harry Potter series. They both mention the number of books (seven), the global impact, and her role as a British writer. \n\nAnswer1 adds context about the origin of the idea (delayed train journey), which is a well-known fact and enriches the response. Answer2 emphasizes the creation of a magical world and the movie adaptations, which are also relevant and engaging.\n\nSemantically, both answers are accurate, clear, and appropriately detailed. There is no significant difference in quality or factual correctness.\n\nTie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Unknown",
                 "gpt-4.1",
                 "TIE"
             ]
@@ -5108,9 +5108,9 @@
                 "label": "Qwen2-7B-Instruct"
             },
             "result": [
+                "Answer1 is slightly more comprehensive and neutral in tone, providing accurate information about the author, the nature of the series, and its cultural impact without adding anecdotal details. Answer2 includes a potentially unverified anecdote (the delayed train journey) that, while commonly known, is not essential to the factual correctness of the answer. Since the question only asks for the author, both answers correctly identify J.K. Rowling. However, Answer1 is more focused and factually concise without introducing potentially speculative details.\n\nTherefore, the superior response is:\n\nAnswer1",
                 "Answer1",
-                "Answer1 is slightly more comprehensive and objective in its statement, providing accurate information about J.K. Rowling's role and the series' structure without adding potentially speculative details. Answer2 adds a detail (\"conceived the idea during a delayed train journey\") which, while commonly cited, is not directly relevant to the core question asked\u2014\u201cWho is the author?\u201d\u2014and may introduce minor factual inaccuracies or unsupported anecdotes.\n\nSince the question specifically asks for the author, Answer1 directly and accurately answers the question without unnecessary or potentially misleading additions. Answer2, while factually correct in identifying the author, includes extra detail that is not required and could be seen as less directly relevant.\n\nTherefore, Answer1 is the better response in terms of semantic quality and relevance.\n\nAnswer1",
-                "Answer1"
+                "Answer1 is slightly more comprehensive and accurate in its general description, presenting a clear and factual account of J.K. Rowling's role and the series' success. Answer2 adds a specific detail about the origin of the idea (during a delayed train journey), which, while interesting, is not essential to the core answer and may slightly distract from the primary question. Both answers are factually correct and well-structured, but Answer1 provides a more balanced and straightforward response to the question.\n\nHowever, since the question is simply \"Who is the author,\" the most direct and accurate answer is the one that clearly identifies the author \u2014 both do this well. Answer2 includes an additional, potentially unverified anecdote about the origin, which may not be necessary or supported by the question's scope.\n\nThus, Answer1 is more appropriate and focused.\n\nAnswer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -5229,13 +5229,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1 and Answer2 both correctly identify the three states of matter and provide accurate descriptions of their properties. The content is factually sound and clear in both responses.\n\nHowever, Answer1 uses slightly more standard scientific phrasing (\"expanding to fill their container\"), while Answer2 uses \"spreading to fill any space available,\" which is less commonly used in scientific contexts. Answer1's language is more precise and conventional in describing the behavior of gases.\n\nBoth are accurate, but Answer1 is slightly more scientifically appropriate in tone and terminology.\n\nAnswer1",
-                "Answer1 and Answer2 both correctly identify the three states of matter and provide accurate descriptions of their properties. \n\nAnswer1 is clear, concise, and uses standard scientific terminology. It effectively explains the characteristics of solids, liquids, and gases.\n\nAnswer2 is nearly identical in accuracy but uses slightly different phrasing (\"spreading to fill any space available\" instead of \"expanding to fill their container\"). While this is a minor variation, it is not semantically or scientifically superior.\n\nBoth answers are factually correct and of equal quality in terms of accuracy and clarity. \n\nTie",
-                "Answer1 is slightly more precise in its description and uses clearer, standardized terminology. Both answers correctly identify the three states of matter and describe their properties accurately. However, Answer1 provides a more coherent and concise explanation with appropriate scientific language. Answer2 uses \"spreading to fill any space available,\" which is less precise than \"expanding to fill their container,\" a more conventional phrasing in physical science.\n\nWhile both are correct, Answer1 is superior in clarity and scientific accuracy.\n\nAnswer1"
+                "Answer1 and Answer2 both correctly identify the three states of matter and provide accurate descriptions of their properties. However, Answer1 is slightly more concise and clearly structured, while Answer2 uses the phrase \"spreading to fill any space available,\" which is less precise than \"expanding to fill their container\" (a more standard scientific term). Additionally, Answer1 avoids redundancy and maintains clarity without introducing minor inaccuracies.\n\nBoth are scientifically accurate, but Answer1 provides a clearer and more standard explanation.\n\nAnswer1",
+                "Answer1 and Answer2 both correctly identify the three states of matter and provide accurate descriptions of their properties. However, Answer1 offers a clear, straightforward explanation with slightly more natural phrasing and flow. Answer2 is also accurate but uses the less common phrase \"spreading to fill any space available,\" which is slightly more vague than \"expanding to fill their container,\" a more precise scientific term.\n\nWhile both are correct, Answer1 uses more precise and standard scientific language.\n\nAnswer1",
+                "Answer1 is slightly more precise and clearly structured in its explanation of the three states of matter. While both answers are factually correct and convey the same core information, Answer1 uses consistent and clear language, and the phrasing \"expanding to fill their container\" is more accurate and commonly used in scientific context than \"spreading to fill any space available,\" which is less precise.\n\nAnswer2 is close but uses less technically accurate phrasing (\"spreading to fill any space available\" is imprecise compared to \"expanding to fill their container\"). Answer1 maintains a clearer and more scientifically accurate description.\n\nTherefore, the better answer is:\n\nAnswer1"
             ],
             "extracted_answers": [
                 "Qwen2-7B-Instruct",
-                "TIE",
+                "Qwen2-7B-Instruct",
                 "Qwen2-7B-Instruct"
             ]
         },
@@ -5252,13 +5252,13 @@
                 "label": "Qwen2-7B-Instruct"
             },
             "result": [
-                "Answer1 and Answer2 both correctly identify the three states of matter and provide accurate descriptions of their properties. However, Answer1 includes a minor inaccuracy: it says gases \"spread to fill any space available,\" whereas Answer2 more precisely states that gases \"expand to fill their container,\" which is a more technically accurate and standard scientific expression. Additionally, Answer2's phrasing is slightly more concise and scientifically precise.\n\nWhile both are correct, Answer2 is slightly superior in terms of scientific accuracy and clarity.\n\nAnswer2",
-                "Answer1 and Answer2 both correctly identify the three states of matter and provide accurate descriptions of their properties. However, Answer1 is slightly more comprehensive in explaining the behavior of gases by mentioning \"spreading to fill any space available,\" which is a clear and precise description. Answer2 uses \"expanding to fill their container,\" which is also accurate but slightly less general. \n\nBoth are scientifically correct, but Answer1 includes a more complete and natural description of gas behavior. However, the difference is minimal, and both answers are of high quality.\n\nTie",
-                "Answer1 and Answer2 both provide accurate and clear explanations of the three states of matter. They are nearly identical in content and correctness. The only difference lies in slight phrasing\u2014Answer1 says \"spreading to fill any space available,\" while Answer2 says \"expanding to fill their container.\" Both are acceptable and scientifically accurate.\n\nSince both responses are of equal quality, accuracy, and clarity, there is no significant advantage in one over the other.\n\nTie"
+                "Answer1 and Answer2 both correctly identify the three states of matter and provide accurate descriptions of their properties. The content is factually consistent and scientifically sound. However, Answer1 includes a slightly more comprehensive description by mentioning that gases \"spread to fill any space available,\" while Answer2 describes gases as \"expanding to fill their container,\" which is also correct but slightly more precise in a physical context.\n\nBoth answers are semantically equivalent in quality and accuracy. There is no clear advantage in one over the other in terms of factual correctness or clarity.\n\nTie",
+                "Answer1",
+                "Answer1 and Answer2 both correctly identify the three states of matter and provide accurate descriptions of their properties. However, Answer1 includes a slightly more complete explanation by stating that gases \"spread to fill any space available,\" while Answer2 says gases \"expand to fill their container,\" which is also accurate but slightly less comprehensive in context.\n\nDespite the minor difference in phrasing, both responses are semantically equivalent in quality and accuracy. There is no significant advantage in one over the other in terms of correctness or clarity.\n\nTie"
             ],
             "extracted_answers": [
-                "Qwen2-7B-Instruct",
                 "TIE",
+                "gpt-4.1",
                 "TIE"
             ]
         }
@@ -5567,12 +5567,12 @@
             "result": [
                 "Answer2",
                 "Answer2",
-                "Answer2"
+                "Both Answer1 and Answer2 provide accurate and clear information about the heart pumping blood throughout the body. They both correctly identify the heart as the organ responsible and explain its muscular function, circulatory role, and importance to bodily function. \n\nAnswer1 is concise and clear, focusing on the core facts.  \nAnswer2 adds a slightly more detailed explanation about the consequences of heart failure, which enhances the contextual understanding but does not introduce factual inaccuracies.\n\nIn terms of semantic quality\u2014accuracy, clarity, and relevance\u2014the two are very similar. However, Answer2 provides a bit more depth without compromising accuracy.\n\nVote: Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Unknown"
             ]
         },
         {
@@ -5614,12 +5614,12 @@
             },
             "result": [
                 "Answer1",
-                "Both Answer1 and Answer2 provide a correct and complete list of the moon's phases and include accurate explanations. The only minor difference is in terminology: Answer1 uses \"Third (or Last) Quarter\" while Answer2 uses \"last quarter,\" and the phrasing of the explanation is slightly different. However, both are scientifically accurate.\n\nAnswer1 includes a more precise explanation of the cause \u2014 \"due to the moon's position relative to the sun\" \u2014 while Answer2 attributes the change to \"the moon orbits Earth, changing how much of its sunlit side is visible,\" which is also correct but less comprehensive in terms of the geometric relationship.\n\nGiven that both answers are semantically accurate, complete, and clear, with only minor differences in style and clarity, there is no significant advantage in one over the other.\n\nTie",
+                "Answer1",
                 "Answer1"
             ],
             "extracted_answers": [
                 "Qwen2-7B-Instruct",
-                "TIE",
+                "Qwen2-7B-Instruct",
                 "Qwen2-7B-Instruct"
             ]
         },
@@ -5636,14 +5636,14 @@
                 "label": "Qwen2-7B-Instruct"
             },
             "result": [
-                "Both Answer1 and Answer2 provide accurate and complete lists of the moon's phases. They include the standard sequence of lunar phases and explain the reason for the changes. \n\nAnswer1 is correct and clear: it lists all eight phases accurately and includes a simple, correct explanation.\n\nAnswer2 is also accurate, using slightly more precise terminology by specifying \"Third (or Last) Quarter\" and offering a slightly more detailed explanation about the moon's position relative to the sun.\n\nWhile both are semantically sound and factually correct, Answer2 offers a slightly more nuanced and scientifically accurate explanation regarding the cause of the phases. Additionally, the inclusion of \"Third (or Last) Quarter\" improves clarity by acknowledging alternative names.\n\nTherefore, Answer2 is slightly superior in terms of accuracy and completeness.\n\nAnswer2",
-                "Both Answer1 and Answer2 provide accurate and complete lists of the lunar phases. They both correctly identify the eight standard phases of the moon and explain the reason for the changes in appearance.\n\n- Answer1 mentions the phases clearly and includes a brief, accurate explanation about the moon orbiting Earth and changing the visible sunlight.\n- Answer2 is slightly more precise in terminology by referring to \"Third (or Last) Quarter,\" which is a common way of specifying the last quarter phase, and it frames the reason in terms of the moon's position relative to the sun, which is a scientifically valid explanation.\n\nBoth answers are accurate and clear, with only minor differences in phrasing and detail. Neither has factual errors, and both are well-structured.\n\nTie",
-                "Answer1 and Answer2 both correctly list the eight standard phases of the moon and provide scientifically accurate explanations. \n\nAnswer1 is clear, complete, and accurately describes the sequence. It correctly identifies the phases and explains the reason\u2014because the moon orbits Earth, changing the visible illuminated portion.\n\nAnswer2 is also accurate, uses slightly more precise terminology (referring to \"Third (or Last) Quarter\" to clarify), and offers a slightly more nuanced explanation about the moon's position relative to the sun.\n\nBoth are correct in content and structure. However, Answer2 provides a minor improvement in clarity by explicitly noting the alternate name for the last quarter and using slightly more precise phrasing about the position relative to the sun. That small enhancement in clarity and completeness makes it slightly superior.\n\nAnswer2"
+                "Both Answer1 and Answer2 provide accurate and complete lists of the moon's phases. Answer1 includes the standard names and offers a correct explanation about the moon's orbit. Answer2 provides the same phases but uses slightly more precise terminology (e.g., \"Third (or Last) Quarter\") and offers a more detailed explanation about the moon's position relative to the sun.\n\nWhile both are scientifically sound, Answer2 is slightly superior due to its improved clarity and more accurate phrasing (\"position relative to the sun\"), which better explains the cause of lunar phases.\n\nAnswer2",
+                "Answer1 and Answer2 both correctly list the standard lunar phases and provide accurate explanations. However, Answer2 includes the additional clarification of \"Third (or Last) Quarter,\" which is a minor but more precise detail, and uses slightly more accurate phrasing about the moon's position relative to the sun. While both are correct, Answer2 provides a marginally clearer and more thorough explanation of the cause.\n\nThat said, the core information in Answer1 is complete and accurate, and it is concise and clear. Answer2 is slightly more detailed and pedagogically precise in explaining the cause.\n\nHowever, the difference is minor, and both are semantically sound and factually correct.\n\nTie",
+                "Both Answer1 and Answer2 provide accurate and complete lists of the moon's phases, and both correctly explain the reason behind the phases.\n\n- Answer1 lists the phases in a clear sequence and gives a correct explanation based on the moon's orbit.\n- Answer2 offers a slightly more precise description by using \"Third (or Last) Quarter\" instead of \"last quarter,\" which is a common alternative name and improves clarity.\n\nThe content is semantically equivalent in accuracy and completeness, with only minor differences in phrasing and terminology. Neither response contains errors, and both are factually sound.\n\nTherefore, the quality of the answers is essentially the same.\n\nTie"
             ],
             "extracted_answers": [
                 "Qwen2-7B-Instruct",
                 "TIE",
-                "Qwen2-7B-Instruct"
+                "TIE"
             ]
         }
     ],
@@ -5732,14 +5732,14 @@
                 "label": "Qwen2-7B-Instruct"
             },
             "result": [
-                "Both Answer1 and Answer2 provide accurate and relevant information about Charles Darwin's study of finches on the Gal\u00e1pagos Islands and their role in the development of the theory of natural selection. \n\n- Answer1 clearly explains the observation of beak shapes and links it directly to natural selection and adaptation.\n- Answer2 emphasizes the importance of the study and highlights how each finch species has adaptations suited to its environment, illustrating evolution over generations.\n\nBoth answers are scientifically sound, well-structured, and include key points. Answer2 adds a slightly more detailed explanation of the evolutionary implications, while Answer1 focuses on the direct link between observation and theory.\n\nHowever, in terms of clarity, completeness, and depth of explanation, Answer2 offers a more comprehensive and insightful account.\n\nAnswer2",
-                "Answer2",
-                "Both Answer1 and Answer2 provide accurate and relevant information about Charles Darwin's study of finches on the Gal\u00e1pagos Islands and their role in the development of his theory of natural selection. \n\n- Answer1 clearly explains the observation of beak shapes and links it directly to natural selection and adaptation.\n- Answer2 emphasizes the significance of the study and mentions adaptations suited to environments, reinforcing evolutionary concepts.\n\nBoth answers are factually sound, well-structured, and convey the key points. There is no significant difference in quality or accuracy.\n\nTie"
+                "Tie",
+                "Both Answer1 and Answer2 provide accurate and relevant information about Charles Darwin's study of finches on the Gal\u00e1pagos Islands and their role in the development of the theory of natural selection. \n\nAnswer1 is clear, concise, and correctly states the key observation (differences in beak shapes) and its significance. \n\nAnswer2 includes slightly more detail by mentioning that each finch species had adaptations suited to its environment and explicitly links this to evolution over generations, which reinforces the evolutionary insight.\n\nWhile both are accurate, Answer2 offers a slightly richer and more complete explanation of the significance of Darwin\u2019s study, making it a more substantial response.\n\nAnswer2",
+                "Answer2"
             ],
             "extracted_answers": [
+                "TIE",
                 "Qwen2-7B-Instruct",
-                "Qwen2-7B-Instruct",
-                "TIE"
+                "Qwen2-7B-Instruct"
             ]
         }
     ],
@@ -5780,8 +5780,8 @@
                 "label": "Qwen2-7B-Instruct"
             },
             "result": [
-                "Answer1 is more accurate and directly answers the question with correct information. While Answer2 provides a relevant fact about the design purpose of the QWERTY layout, it does not correctly identify the letters in the second line. The second line of a standard QWERTY keyboard (the home row) is indeed A, S, D, F \u2014 so Answer1 correctly identifies these letters and explains the context appropriately. Answer2 simply states \"asdf\" without clarifying that this is the correct sequence, and the explanation about slowing typists is irrelevant to the specific question asked.\n\nThus, the better answer is:\n\nAnswer1",
-                "Answer1",
+                "Answer1 is superior because it correctly identifies the first four letters (A, S, D, F) on the second line of a QWERTY keyboard and provides a clear, accurate explanation that the second line is the home row where fingers rest. While Answer2 also correctly identifies \"asdf,\" it introduces irrelevant historical context about the design purpose of the QWERTY layout, which is not directly related to the question asked. The question only asks for the letters, not their historical background. Therefore, Answer1 is more focused and directly addresses the query with greater semantic precision.\n\nAnswer1  \n",
+                "Answer1 is more accurate in identifying the correct sequence of letters (A, S, D, F) and correctly referencing the home row. While Answer2 also mentions \"asdf,\" it introduces an incorrect explanation about the design intent (slowing typists) as a reason for the layout, which is not directly relevant to the question asked. The question only asks for the letters, not the historical design rationale.\n\nTherefore, Answer1 provides a more precise and semantically correct response to the specific question.\n\nAnswer1",
                 "Answer1"
             ],
             "extracted_answers": [
@@ -6116,14 +6116,14 @@
                 "label": "Qwen2-7B-Instruct"
             },
             "result": [
-                "Answer1 is concise and accurate, correctly explaining the basic method of dividing numerator by denominator, with clear examples of terminating and repeating decimals. It includes important details about handling remainders and repeating patterns.\n\nAnswer2 is more detailed and covers additional cases such as improper fractions and mixed numbers, which adds value. However, it introduces a non-essential complexity by suggesting a step-by-step conversion of improper fractions to mixed numbers, which is not required when converting a fraction to a decimal\u2014since the division of numerator by denominator directly yields the decimal, regardless of whether the fraction is proper or improper. The explanation about converting improper fractions seems more relevant to mixed number arithmetic than to decimal conversion.\n\nWhile Answer2 provides more information, it slightly overcomplicates the core method and introduces a misalignment in focus: converting a fraction to a decimal does not require first converting to a mixed number.\n\nAnswer1 is more directly aligned with the question and provides a clear, accurate, and sufficient explanation.\n\nVote: Answer1",
-                "Answer1 is more concise and accurate in describing the basic method without overcomplicating it. It correctly explains division of numerator by denominator, handles terminating and repeating decimals, and provides clear examples (3/8, 1/4, 2/3). It avoids introducing unnecessary steps like converting improper fractions to mixed numbers, which is not required for converting a fraction to a decimal\u2014only when dealing with mixed numbers.\n\nAnswer2 introduces an extra, unnecessary step (converting improper fractions to mixed numbers), which is not part of the core method of converting a fraction to a decimal. While it is technically correct in some cases, it misleads by implying that such conversion is required as part of the decimal conversion process, which is not true. The method of dividing numerator by denominator applies to all fractions regardless of whether they are proper or improper.\n\nTherefore, Answer1 is superior in both clarity and accuracy.\n\nAnswer1",
-                "Answer1 is accurate and provides a clear, concise explanation of converting fractions to decimals, including examples of terminating and repeating decimals. It correctly describes the division process and appropriately notes when decimals repeat.\n\nAnswer2 is also accurate and goes into more detail, including handling improper fractions and mixed numbers, which adds useful context. However, it introduces an unnecessary complication (converting improper fractions to mixed numbers) that is not required when converting a fraction directly to a decimal. For example, 7/4 does not need to be converted to 1 3/4 to get its decimal form; dividing 7 by 4 directly gives 1.75. This extra step is not fundamental to the basic method and may confuse learners.\n\nThe core method\u2014dividing the numerator by the denominator\u2014is correctly described in both answers, but Answer1 is simpler, more direct, and focuses precisely on the essential method without adding unnecessary steps.\n\nTherefore, Answer1 is superior in terms of clarity, relevance, and semantic accuracy for the question asked.\n\nAnswer1"
+                "Answer1 is more concise and directly addresses the core method of converting a fraction to a decimal without unnecessary elaboration. It correctly explains the division process, includes examples (3/8 and 2/3), and properly describes terminating and repeating decimals. However, it does not discuss improper fractions or mixed numbers, which limits its completeness.\n\nAnswer2 is more comprehensive. It clearly explains the division method, includes a relevant example (3/4), addresses repeating decimals, and goes further by explaining how to handle improper fractions and mixed numbers with a clear step-by-step example (7/4 \u2192 1 3/4 \u2192 1.75). This additional context makes it more thorough and educational, especially for learners who may encounter improper fractions.\n\nWhile both answers are accurate and correct, Answer2 provides a more complete and pedagogically sound explanation that covers a broader range of cases and includes practical steps for different types of fractions.\n\nAnswer2",
+                "Answer1 is correct and clear in explaining the basic method of converting a fraction to a decimal\u2014dividing the numerator by the denominator\u2014and includes examples of terminating and repeating decimals. It correctly identifies that when a decimal repeats, it should be indicated with a bar, and it gives accurate examples like 1/4 = 0.25 and 2/3 = 0.666...\n\nAnswer2 also correctly explains the method of dividing numerator by denominator and provides accurate examples such as 1/3 = 0.333... and 7/4 = 1.75. However, it introduces an unnecessary and potentially misleading step: converting improper fractions to mixed numbers before converting to decimals. This step is not required for converting a fraction to a decimal\u2014division of numerator by denominator directly gives the decimal value, regardless of whether the fraction is proper or improper. The mention of converting improper fractions to mixed numbers and then re-converting the fractional part is redundant and adds complexity without adding value. This could mislead a learner into thinking that such a conversion is necessary.\n\nTherefore, Answer1 is simpler, more accurate, and directly addresses the question without introducing unnecessary steps.\n\nAnswer1 \ud83d\udfe9  \nAnswer2 \u274c (due to unnecessary complication and potential for misunderstanding)\n\nVote: Answer1",
+                "Answer1 is concise, accurate, and covers the core method of converting fractions to decimals with clear examples and a mention of terminating and repeating decimals. It correctly explains the division process and handles basic cases well.\n\nAnswer2 provides a more thorough explanation, including handling improper fractions and mixed numbers, which adds value by addressing a broader range of fraction types. It also includes a clear example of converting an improper fraction step-by-step, which enhances clarity for learners. While the core method is correct, the extra detail on improper fractions and step-by-step conversion slightly improves the completeness and educational value.\n\nDespite Answer1 being more concise, Answer2 is superior in terms of **comprehensive accuracy and completeness** of explanation, especially for learners who may encounter improper fractions.\n\nVote: Answer2"
             ],
             "extracted_answers": [
+                "Qwen2-7B-Instruct",
                 "Unknown",
-                "gpt-4.1",
-                "gpt-4.1"
+                "Unknown"
             ]
         }
     ],
@@ -6287,12 +6287,12 @@
             "result": [
                 "Answer1",
                 "Answer1",
-                "Both Answer1 and Answer2 effectively use persuasive techniques to argue for longer lunch breaks, but Answer2 stands out in terms of **clarity, conciseness, and use of authoritative support**.\n\n- Answer2 incorporates **specific data references** (\"According to health experts\") and **real-world outcomes** (\"some schools... reported higher student satisfaction and improved academic results\"), which strengthens the argument with credible evidence.\n- It is more **direct and actionable**, proposing a specific duration (15 minutes), which makes the request concrete and easy to evaluate.\n- The tone is respectful yet confident, and the structure flows logically from problem to solution to rationale.\n\nAnswer1 is well-written and thoughtful, emphasizing health, socialization, and well-being, but it lacks specific evidence, concrete suggestions, or data-based support. While it is persuasive by design, it relies more on general claims rather than targeted persuasive techniques like citing expert opinions or observable outcomes.\n\nTherefore, **Answer2** employs stronger persuasive techniques\u2014specificity, expert validation, and actionable recommendations\u2014making it more effective in a real-world persuasive context.\n\nAnswer2"
+                "Answer1"
             ],
             "extracted_answers": [
                 "Qwen2-7B-Instruct",
                 "Qwen2-7B-Instruct",
-                "gpt-4.1"
+                "Qwen2-7B-Instruct"
             ]
         },
         {
@@ -6525,13 +6525,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                "Answer1",
                 "Answer2",
+                "Answer1",
                 "Answer1"
             ],
             "extracted_answers": [
-                "Qwen2-7B-Instruct",
                 "gpt-4.1",
+                "Qwen2-7B-Instruct",
                 "Qwen2-7B-Instruct"
             ]
         },
@@ -6548,14 +6548,14 @@
                 "label": "Qwen2-7B-Instruct"
             },
             "result": [
-                "Answer1",
-                "Answer1",
-                "Answer2"
+                "Answer2",
+                "Answer2",
+                "Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "gpt-4.1",
-                "Qwen2-7B-Instruct"
+                "Qwen2-7B-Instruct",
+                "Qwen2-7B-Instruct",
+                "gpt-4.1"
             ]
         }
     ],
@@ -6597,7 +6597,7 @@
             },
             "result": [
                 "Answer1",
-                "Answer1",
+                "Answer1 is more comprehensive and directly addresses the question by explaining multiple physiological mechanisms\u2014ATP utilization, oxygen delivery, anaerobic respiration, lactic acid buildup, dehydration, and nervous system fatigue\u2014in clear, accurate, and logically connected terms. It provides a well-rounded explanation that covers both immediate and systemic effects of physical exercise.\n\nAnswer2 is also accurate and touches on relevant concepts like glycogen depletion, lactic acid, hormones, and hydration. However, it cuts off mid-sentence at the end, which weakens its completeness. While it offers a good explanation of energy sources and metabolic byproducts, it lacks the clarity and depth in explaining the immediate muscular and systemic fatigue experienced during and after exercise.\n\nAnswer1 provides a more complete, coherent, and semantically rich response that directly answers the question with greater precision and flow.\n\nAnswer1",
                 "Answer1"
             ],
             "extracted_answers": [

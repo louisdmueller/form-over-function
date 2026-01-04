@@ -45,14 +45,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
+                " Answer1",
                 " 'Answer1'",
-                " Answer1"
+                " Tie"
             ],
             "extracted_answers": [
-                "TIE",
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct"
+                "Qwen2.5-3B-Instruct",
+                "TIE"
             ]
         },
         {
@@ -68,14 +68,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Answer1",
-                " 'Answer1'",
-                " 'Answer1'"
+                " Tie",
+                " Tie. Both responses provide clear, structured processes for demonstrating historical analysis using a historical event. They both include identifying key events, analyzing causes, and assessing long-term effects. However, Answer1 offers a more specific example (Berlin Wall) while Answer2 provides a broader historical context for analyzing events (French Revolution). Neither response significantly outperforms the other in terms of accuracy, explanation, or clarity. A tie would be an optimal choice for this question.",
+                " 'Answer1' (The first response outlines a more comprehensive and step-by-step approach to historical analysis, including the collection of information, understanding the context,comparing different viewpoints, and considering long-term effects. This response also provides a more concrete and specific example: the fall of the Berlin Wall in 1989, making it slightly clearer for a beginner.)"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "gpt-4.1",
-                "gpt-4.1"
+                "TIE",
+                "Unknown",
+                "Unknown"
             ]
         }
     ],
@@ -93,13 +93,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
                 " Answer1",
+                " Answer1. The first response provides a more detailed description of each part of the argumentative essay, including counterarguments and the role they play in strengthening the essay. It also explains how each part interacts and builds upon the others to form a coherent and persuasive argument, which is not explicitly mentioned in the second response. While both responses are informative, the first response offers a slightly more comprehensive explanation, making it the superior choice.",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
                 "Qwen2.5-3B-Instruct",
+                "Unknown",
                 "Qwen2.5-3B-Instruct"
             ]
         },
@@ -164,12 +164,12 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " 'Answer2' (The second answer is more concise and informative, providing a better explanation of the interaction among the components of a healthy balanced meal.)",
+                " Answer2",
                 " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
-                "Unknown",
+                "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct"
             ]
@@ -189,14 +189,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
-                " Answer1",
-                " Answer1"
+                " Answer1 (Tie)\n\nBoth answers provide a comprehensive, accurate, and well-structured explanation of the functioning and importance of the organs in the digestive system. The language used in both answers is clear, concise, and readily understandable. The only minor difference is in the ordering of the organs, but this does not significantly impact the overall quality of the answers. Given the semantic quality of the answers, a tie is the most appropriate choice.",
+                " Tie\n\nBoth responses correctly identify the main organs of the digestive system and explain the roles each organ plays in the digestive process. They both mention the important roles of the organs and highlight the sequence of digestion. However, Answer1 provides a slightly more detailed explanation of the functions of the stomach, small intestine, and large intestine, while Answer2 provides a somewhat more detailed description of the process of digestion in the mouth and the roles of the pancreas and liver. Both responses are comprehensive and accurate, so a tie is warranted in this case.",
+                " Answer1 (Tie) - Both answers are accurate and provide a comparable level of detail about the different organs in the digestive system and their roles. However, the answer from Answer1 offers a slightly more detailed explanation of the processes that occur within each organ, making it slightly more informative than Answer2. Ultimately, the difference in quality between the two answers is minimal and a tie is warranted."
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct"
+                "Unknown",
+                "TIE",
+                "Unknown"
             ]
         },
         {
@@ -212,12 +212,12 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " 'Answer1'",
-                " 'Answer1'",
+                " Answer 1",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "Unknown",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -237,13 +237,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
-                " Answer1",
-                " Answer1"
+                " 'Answer1'",
+                " 'Answer1' The first answer provides a more comprehensive and accurate explanation of the forces acting on a stationary car, including static and rolling friction, and reaction forces, which are not present in the second answer. Both answers are clear and easy to understand, but the first answer provides a more complete explanation of the forces and their role in the stationary car.",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct",
+                "Unknown",
                 "Qwen2.5-3B-Instruct"
             ]
         },
@@ -262,12 +262,12 @@
             "result": [
                 " Tie",
                 " Tie",
-                " Tie"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "TIE",
                 "TIE",
-                "TIE"
+                "gpt-4.1"
             ]
         }
     ],
@@ -285,7 +285,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -308,14 +308,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Tie",
-                " Tie",
-                " 'Answer2'"
+                " Answer2",
+                " 'Answer2'",
+                " Tie"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
-                "Qwen2.5-3B-Instruct"
+                "Qwen2.5-3B-Instruct",
+                "Qwen2.5-3B-Instruct",
+                "TIE"
             ]
         }
     ],
@@ -333,13 +333,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
-                " 'Answer1'",
+                " Answer1",
+                " 'Answer1' is the superior answer. While both answers provide adequate responses, Answer1 offers a more detailed and structured explanation of the key features of a democratic government, and also explains how these features function together. Additionally, Answer1 describes each feature more clearly and provides examples such as elections, separation of powers, and civil liberties. Answer2, though it provides a good summary, lacks the level of detail and structure found in Answer1.",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
                 "Qwen2.5-3B-Instruct",
+                "Unknown",
                 "Qwen2.5-3B-Instruct"
             ]
         },
@@ -357,13 +357,13 @@
             },
             "result": [
                 " Tie",
-                " Tie",
-                " Answer2, as it provides a more organized and comprehensive structure of the key features, and it largely covers the topics mentioned in Answer1, while also adding economic freedom. Both answers are good, but Answer2 has a slightly better structure and covers the topics more exhaustively."
+                " 'Answer2'",
+                " Answer2"
             ],
             "extracted_answers": [
                 "TIE",
-                "TIE",
-                "Unknown"
+                "Qwen2.5-3B-Instruct",
+                "Qwen2.5-3B-Instruct"
             ]
         }
     ],
@@ -381,7 +381,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " 'Answer1'",
                 " Answer1",
                 " Answer1"
             ],
@@ -404,14 +404,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Answer1 is the superior answer as it provides a more comprehensive and detailed explanation of the elements' relationships and differences in the Periodic Table. It includes more specific details about the atomic structure, physical and chemical properties, and special groups of elements. Additionally, it explains the connection between the atomic structure and the behavior of elements, which is not as clearly presented in Answer2. However, both answers are accurate and informative, so a tie is not entirely incorrect in this instance.\n\nAnswer1: The many differences between elements mostly come from how the electrons are arranged in their atoms. This affects how each element acts in chemical and physical ways.\n\nAnswer2 is also accurate and contains essential information, but it lacks the depth and clarity presented in Answer1.\n\nAnswer2: Elements in the same group have similar electronic configurations in their outermost shell, leading to similar chemical behaviors. Elements in different periods show a progression in atomic size, ionization energy, and electronegativity.\n\nTherefore, it is clear that Answer1 provides a more detailed and comprehensive explanation, making it the superior response. However, a tie would also be a justifiable evaluation, as both answers are informative and accurate while Answer1 offers more details on the topic. Answer2 is a succinct and precise response, making it an acceptable choice for providing a solution to the question.\n\nFinal answer: Answer1\n\nExplanation: Both answers are accurate and informative, but Answer1 offers a more detailed and comprehensive explanation of the elements' relationships and differences in the Periodic Table. It includes more specific details about the atomic structure, physical and chemical properties, and special groups of elements. Additionally, it explains the connection between the atomic structure and the behavior of elements, which is not as clearly presented in Answer2. However, both answers are accurate and informative, so a tie would also be a justified evaluation. Therefore, it is clear that Answer1 provides a more detailed and comprehensive explanation, making it the superior response.\n\nAlternate answer: Tie\n\nExplanation: Both answers are accurate and informative, providing essential information about the elements' relationships and differences in the Periodic Table. Although Answer1 offers a more detailed and comprehensive explanation, Answer2 provides a succinct and precise response that covers the necessary information in a concise manner. Furthermore, Answer2 is reasonably suitable for providing a solution to the question. Consequently, a tie would be a justifiable evaluation, as both answers are accurate and informative while offering different approaches to addressing the topic.",
-                " Answer1 (Tie)\n\nWhile both responses provide an accurate explanation and cover the necessary elements of the question, Answer1 delves a bit more into the differences between elements in terms of their physical forms, reactivity, and special groups, adding a more comprehensive quality to the response. However, Answer2 also provides valuable information and offers a clearer explanation of the periodic table organization and the progression of properties across a period. Overall, they both present informative and well-structured answers.",
-                " Tie"
+                " Answer1 (The provided answer is clearer and more comprehensive, explaining the differences and similarities, properties of elements, and the categorization of elements into groups such as metals, nonmetals, and metalloids.)",
+                " Answer1",
+                " Answer1 (tie)\n\nBoth Answer1 and Answer2 accurately explain the arrangement of elements in the Periodic Table and their relationships and differences based on atomic number, group (column), and period (row). They also discuss how the electron configuration of elements affects their chemical and physical properties. Answer1 provides more detailed explanations on the special qualities of each group (like metals, nonmetals, and metalloids), whereas Answer2 briefly mentions the progression in atomic size, ionization energy, and electronegativity moving across a period. Therefore, both answers offer valuable insights; it is a tie as they are equally good."
             ],
             "extracted_answers": [
                 "Unknown",
-                "Unknown",
-                "TIE"
+                "gpt-4.1",
+                "Unknown"
             ]
         }
     ],
@@ -453,12 +453,12 @@
             },
             "result": [
                 " Tie",
-                " Answer1",
+                " 'Answer1' (The response is more detailed, easier to understand, and more inclusive of various cellular parts, providing a more comprehensive answer.)",
                 " Tie"
             ],
             "extracted_answers": [
                 "TIE",
-                "gpt-4.1",
+                "Unknown",
                 "TIE"
             ]
         }
@@ -501,12 +501,12 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " Tie",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1"
             ]
         }
@@ -526,12 +526,12 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " Tie",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct",
+                "TIE",
                 "Qwen2.5-3B-Instruct"
             ]
         },
@@ -548,14 +548,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " Answer1",
-                " Tie"
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "TIE"
+                "gpt-4.1"
             ]
         }
     ],
@@ -575,12 +575,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Tie. Both answers provide clear and accurate explanations of the key components of a complete sentence and their relationships, as well as examples. They differ slightly in phrasing and use of grammatical terminology, but both are understandable and informative."
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct",
-                "Unknown"
+                "Qwen2.5-3B-Instruct"
             ]
         },
         {
@@ -621,13 +621,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Tie",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
                 "TIE",
+                "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct"
             ]
         },
@@ -646,12 +646,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "TIE"
             ]
         }
     ],
@@ -693,8 +693,8 @@
             },
             "result": [
                 " 'Answer2'",
-                " Answer2\n\nIn this case, both responses provide a clear and accurate explanation of the butterfly life cycle and their interdependence. However, Answer2 has a more organized and scientific tone that better represents the life cycle as a process with distinct stages and their specific roles. Answer2 also uses technical terms specific to the life cycle stages, which further demonstrates its understanding of the topic. Therefore, I would evaluate Answer2 as the superior response.",
-                " 'Answer2'"
+                " Answer2",
+                " Answer2"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
@@ -719,12 +719,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " 'Answer1'"
+                " Tie"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct"
+                "TIE"
             ]
         },
         {
@@ -740,13 +740,13 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " 'Answer1'",
                 " Tie",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "TIE",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -766,8 +766,8 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
-                " Answer1"
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
@@ -788,14 +788,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Tie. Both answers provide a comprehensive response that covers the causes and effects of deforestation on the local ecosystem, taking into account factors such as soil erosion, biodiversity loss, alteration of water cycles, changes in temperature, population declines or extinction, and increased soil erosion. However, the second response, in the last sentence, mentions the contribution of deforestation to climate change twice, which is redundant. Therefore, a tie is fair in this case.",
-                " Answer1",
-                " Tie. Both answers provide a clear and comprehensive response regarding the causes and effects of deforestation on the local ecosystem. However, Answer2 is slightly more concise and to the point, while Answer1 offers a bit more detail that might be valuable for a less informed reader, but with slightly more repetition. In this case, neither answer significantly outperforms the other, making a tie an appropriate response."
+                " Answer1 (Tie)\n\nBoth answers provide a thorough explanation of the causes and effects of deforestation on local ecosystems. Both explain the loss of habitats and biodiversity, soil erosion, changes in water cycles, increases in CO2 levels, and impacts on climate and local temperature. However, answer 1 includes more specific examples such as the loss of homes for animals and plants, the disappearance of species, and the impacts on people who rely on forests. Answer 2, on the other hand, is more concise and covers all the important points in a more academic tone. Both answers are well-researched and informative.",
+                " Answer2",
+                " Answer2"
             ],
             "extracted_answers": [
                 "Unknown",
-                "gpt-4.1",
-                "Unknown"
+                "Qwen2.5-3B-Instruct",
+                "Qwen2.5-3B-Instruct"
             ]
         }
     ],
@@ -814,7 +814,7 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -838,12 +838,12 @@
             "result": [
                 " 'Answer2'",
                 " Answer2",
-                " Tie. Both answers are accurate and informative, providing a detailed explanation of the water cycle and the importance of each stage. However, Answer2 provides slightly more technical terms (i.e., hydrological cycle, infiltration, runoff) that might be useful for someone studying the topic in a more formal context, while Answer1 uses simpler language that makes it more accessible for a general audience. In this case, the choice between the two depends on the intended audience, but since neither answer inherently outperforms the other in terms of overall quality, a tie is the best option."
+                " 'Answer2'"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct",
-                "Unknown"
+                "Qwen2.5-3B-Instruct"
             ]
         }
     ],
@@ -861,12 +861,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " The first answer (Answer1) provides a more comprehensive and nuanced explanation of the roles in a soccer team, including a better description of the midfielders' role in linking defense and attack, and the interdependence of all roles for communication and strategizing. The second answer (Answer2) is still a good answer, but it misses out on some finer details that improve the quality of the response. Therefore, my answer would be 'Answer1'.",
                 " Answer1",
-                " 'Answer1'"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
-                "Unknown",
+                "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct"
             ]
@@ -885,12 +885,12 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " 'Answer1'"
+                " Answer2",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
+                "Qwen2.5-3B-Instruct",
                 "gpt-4.1"
             ]
         }
@@ -932,14 +932,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Answer2",
-                " Answer2",
-                " Answer2"
+                " Tie",
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct"
+                "TIE",
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -959,7 +959,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
@@ -980,13 +980,13 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Tie\nBoth responses provide a clear and detailed explanation of how the plot, setting, and characters of a story interact to create a cohesive narrative. They both use examples to illustrate their points effectively, making it challenging to establish one as superior. However, Answer2 offers a slightly more concise and polished response. If pressed, I might slightly favor Answer2 for its economy of words and slightly more meticulous structure. But again, this is a close call, and it can easily be interpreted as a tie.",
-                " Answer2\n\nThe provided answer is superior because it not only explains the interactions between the plot, setting, and characters in a cohesive narrative but also provides an example from a famous story\u2014F. Scott Fitzgerald's \"The Great Gatsby\"\u2014to illustrate the points. This makes the answer more informative and engaging by demonstrating the presented concepts in practice.\n\nAnswer1 is also accurate in its explanation but lacks the concrete example, making it less persuasive and easier to understand for the reader seeking a more concrete understanding.\n\nHence, the appropriate answer would be Answer2.",
-                " Answer1\nThe example provided in Answer1 is more comprehensive and easier to understand for readers who might not be familiar with \"The Great Gatsby\" narrative. Both answers are informative, but Answer1 provides a clearer explanation of how the plot, setting, and characters interact by using simpler and more familiar language. Therefore, the superior answer would be Answer1.\n\n~~~\nTie\n\nAs both answers are well thought out and provide a good understanding of how the plot, setting, and characters interact to create a cohesive narrative, it's a reasonable choice to select a tie in this case.\n ~~~"
+                " Answer1 is the superior response as it provides a clear, concise, and comprehensive explanation of how the plot, setting, and characters interact in a story. It gives examples to illustrate its points and uses simpler language that is easier for the average reader to understand. Additionally, it delves deeper into the roles of each element by discussing their interconnections and mutual influences. While Answer2 also provides a good explanation, it is slightly more verbose, and its syntax might be a bit complex for some readers. However, both responses are of good quality and accurately answer the question. In this case, it's a close call, but I would choose Answer1 as the superior response due to its clarity and simpler language.\n\nAnswer1: Tie\nAnswer2: Tie",
+                " Answer2 provides a more detailed explanation of how the plot, setting, and characters interact in the context of a classic story, \"The Great Gatsby,\" utilizing specific examples from the plot to support their answer. Whereas Answer1 offers a general explanation, it lacks the specific detail and concrete examples seen in Answer2, which makes Answer2 a better answer to the question.\n\nAnswer2:\n\n* Provides a specific example from a famous story: \"The Great Gatsby\"\n* Offers a detailed explanation of how plot, setting, and characters interact in the example\n* The example clearly shows the interaction between the plot, setting, and characters, which helps readers understand the concept better.\n\nAnswer1:\n\n* Offers a general explanation\n* Lacks specific examples from a famous story\n* The explanation tends to focus more on the general principles rather than demonstrating them directly with a specific example.",
+                " Answer1\nThe example from \"The Great Gatsby\" is a suitable illustration of how plot, setting, and characters work together to create a cohesive narrative. In \"The Great Gatsby,\" the character Jay Gatsby (the plot) employs a grand strategy (the plot) to win back his former love, Daisy Buchanan (a character). The story unfolds during the Roaring Twenties (the setting), characterized by excessive consumerism, hedonism, and moral decay, which align with Gatsby's questionable methods and moral ambitions. The setting also serves to contrast Gatsby's background as a nouveau riche figure with the respectable yet shallow Buchanan family, shedding light on social issues of the time. The characters, their motivations, and the consequences of their actions effectively drive the plot and serve to underline the story's central themes, making \"The Great Gatsby\" an engaging and famous example of a cohesive narrative.\n\nAnswer2\nThe example provided from \"The Great Gatsby\" is indeed a compelling illustration of how the plot, setting, and characters work together to create a cohesive narrative. The story revolves around the character, Jay Gatsby, who attempts to win back his former love, Daisy Buchanan, by throwing extravagant parties (plot). The events take place during the Roaring Twenties (setting), characterized by a culture of materialism and moral decay, which serves to contrast Gatsby's motives and ultimately contributes to the tragic events that unfold. Furthermore, the characters and their actions not only drive the plot but also enable the exploration of deeper themes, such as the American Dream, disillusionment, and the corrupting influence of wealth. Overall, F. Scott Fitzgerald's \"The Great Gatsby\" is a well-known example of a cohesive narrative where plot, setting, and characters all play integral roles."
             ],
             "extracted_answers": [
-                "TIE",
-                "Qwen2.5-3B-Instruct",
+                "Unknown",
+                "Unknown",
                 "Unknown"
             ]
         }
@@ -1005,14 +1005,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
-                " Tie. Both answers provide a clear and accurate explanation of the relationship between portions and ratios in a recipe. However, Answer1 presents the concepts with more technical terms that might be more beneficial to someone studying the subject in a professional or academic context, while Answer2 presents the concepts in a more accessible and informal manner, which might be more useful for a beginner or someone looking for a more general understanding.",
-                " Tie"
+                " Answer1",
+                " Tie. Both answers provide a comprehensive explanation of the relationship between portions and ratios in a recipe, explaining the distinction between the two, their importance in cooking, and the effects of altering either portions or ratios on the final product. While Answer1 leans slightly more towards explaining ratios, Answer2 explains portions slightly better. However, the answers are fairly similar in quality, and both offer valuable insights into the subject matter.",
+                " Tie. Both responses provide clear explanations and are accurate in their descriptions of the relationships between portions and ratios in a recipe. However, they offer slightly different focus points: Answer1 discusses the impact of maintaining ratios in terms of consistency in taste, texture, and final product, whereas Answer2 emphasizes consistency in terms of servings and the importance of maintaining ratios to achieve that consistency. Either response could be useful depending on the specific context or audience."
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
                 "Unknown",
-                "TIE"
+                "Unknown"
             ]
         },
         {
@@ -1028,14 +1028,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Answer1",
-                " Answer1",
-                " Answer1"
+                " Tie",
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "gpt-4.1",
-                "gpt-4.1"
+                "TIE",
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -1077,12 +1077,12 @@
             },
             "result": [
                 " Answer2",
-                " Answer2",
+                " Answer2 is a more succinct and accurate response that directly addresses the question and explains the principle of supply and demand in a clear and concise manner. Answer1 provides a comprehensive response but includes extraneous details and redundancy, which makes it less efficient and easier to understand. Therefore, my vote is Answer2.",
                 " Tie"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct",
+                "Unknown",
                 "TIE"
             ]
         }
@@ -1101,12 +1101,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
+                " 'Answer1'",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "TIE",
+                "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct"
             ]
@@ -1124,12 +1124,12 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Tie",
+                " Answer2",
                 " Answer2",
                 " Tie"
             ],
             "extracted_answers": [
-                "TIE",
+                "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct",
                 "TIE"
             ]
@@ -1149,7 +1149,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " 'Answer1'",
                 " Answer1",
                 " Answer1"
             ],
@@ -1172,12 +1172,12 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Tie",
                 " Answer2",
-                " Answer2"
+                " Answer2",
+                " 'Answer2'"
             ],
             "extracted_answers": [
-                "TIE",
+                "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct"
             ]
@@ -1199,7 +1199,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
@@ -1220,14 +1220,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
+                " 'Answer1'",
                 " Tie",
-                " Tie",
-                " 'Answer1'"
+                " Tie"
             ],
             "extracted_answers": [
+                "gpt-4.1",
                 "TIE",
-                "TIE",
-                "gpt-4.1"
+                "TIE"
             ]
         }
     ],
@@ -1246,13 +1246,13 @@
             },
             "result": [
                 " Answer2",
-                " Tie",
-                " Answer1"
+                " 'Answer1'",
+                " Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "TIE",
-                "Qwen2.5-3B-Instruct"
+                "Qwen2.5-3B-Instruct",
+                "gpt-4.1"
             ]
         },
         {
@@ -1270,12 +1270,12 @@
             "result": [
                 " 'Answer1'",
                 " Answer1",
-                " Tie"
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "TIE"
+                "gpt-4.1"
             ]
         }
     ],
@@ -1293,13 +1293,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
                 " Answer1",
+                " Tie",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
                 "Qwen2.5-3B-Instruct",
+                "TIE",
                 "Qwen2.5-3B-Instruct"
             ]
         },
@@ -1317,13 +1317,13 @@
             },
             "result": [
                 " Tie",
-                " Answer1",
-                " Tie"
+                " 'Answer1'",
+                " Answer1"
             ],
             "extracted_answers": [
                 "TIE",
                 "gpt-4.1",
-                "TIE"
+                "gpt-4.1"
             ]
         }
     ],
@@ -1343,12 +1343,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1 is superior in terms of the quality of the answer. It provides a more comprehensive description, including the key participants, leaders, and the underlying issues that led to the conflict, as well as the beginning and end of the war. While both answers are correct, Answer1 provides more detailed information."
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct",
-                "Unknown"
+                "Qwen2.5-3B-Instruct"
             ]
         },
         {
@@ -1364,14 +1364,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Answer2",
                 " Tie",
-                " Tie"
+                " Answer2",
+                " 'Answer2'"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
                 "TIE",
-                "TIE"
+                "Qwen2.5-3B-Instruct",
+                "Qwen2.5-3B-Instruct"
             ]
         }
     ],
@@ -1389,14 +1389,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " 'Answer2'",
                 " Tie",
-                " Tie",
-                " Answer2"
+                " Tie"
             ],
             "extracted_answers": [
+                "gpt-4.1",
                 "TIE",
-                "TIE",
-                "gpt-4.1"
+                "TIE"
             ]
         },
         {
@@ -1412,13 +1412,13 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
+                " Answer1",
                 " 'Answer1'",
-                " Tie",
                 " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "TIE",
+                "gpt-4.1",
                 "TIE"
             ]
         }
@@ -1438,12 +1438,12 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " Answer1 (The Earth experiences different seasons due to its axial tilt of about 23.5 degrees relative to its orbital plane around the Sun. As the Earth orbits the Sun, different parts of the planet receive varying amounts of sunlight throughout the year... This tilt changes how much sunlight each part gets, which changes the temperature and the amount of daylight. This is what makes the seasons.)\n\nBoth responses are accurate and informative, providing a clear explanation of the Earth's seasonal changes. However, the first response clarifies the concept by using \"more direct sunlight\" and \"less direct sunlight\" to explain how the tilt affects the amount of sunlight each hemisphere receives. The first response focuses more on how the tilt and the Earth's orbit influence the seasons and thus, it provides a more articulate and thoughtful explanation.\n\nTherefore, my choice would be 'Answer1'.",
                 " Answer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct",
+                "Unknown",
                 "Qwen2.5-3B-Instruct"
             ]
         },
@@ -1460,13 +1460,13 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " 'Answer1' (or 'Answer2') would be a tie in this case. Both answers provide clear, comprehensive, and accurate explanations of why the Earth has different seasons. Both focus on the Earth's axial tilt, how it changes the amount of sunlight different regions receive, and how this leads to changes in temperature, which in turn results in the four seasons. Both answers are well-structured and easy to understand, making it difficult to favor one over the other in terms of quality and accuracy.",
-                " Answer1",
+                " 'Answer1'",
+                " Tie. Both answers are well-structured, accurate, and easy to understand. They provide a clear explanation of the cause of the Earth's seasons due to its axial tilt and the changing amount of sunlight received by different parts of the Earth as it orbits the Sun.",
                 " Answer1"
             ],
             "extracted_answers": [
-                "Unknown",
                 "gpt-4.1",
+                "Unknown",
                 "gpt-4.1"
             ]
         }
@@ -1485,13 +1485,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
+                " Tie",
                 " Answer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct",
+                "TIE",
                 "Qwen2.5-3B-Instruct"
             ]
         },
@@ -1508,13 +1508,13 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Answer2",
-                " Answer2",
+                " Tie",
+                " Tie",
                 " Tie"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct",
+                "TIE",
+                "TIE",
                 "TIE"
             ]
         }
@@ -1533,8 +1533,8 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
                 " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -1557,13 +1557,13 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
-                " Answer1"
+                " Answer1",
+                " Tie. Both answers provide an accurate and comprehensive explanation for why we have night and day. They are both concise, clear, and to the point. Furthermore, they both take into account the rotation of the Earth and the position of the Earth relative to the Sun to explain the day-night cycle. If pressed for an answer based on slight nuances of expression, Answer1 might be selected for its slightly more detailed wording that potentially helps a learner visualize the Earth's rotation more easily. However, for the purpose of this evaluation, I consider them equally good."
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Unknown"
             ]
         }
     ],
@@ -1605,13 +1605,13 @@
             },
             "result": [
                 " Answer2",
-                " Answer2",
-                " Answer2"
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct"
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         }
     ],
@@ -1629,14 +1629,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " Answer1",
-                " Tie"
+                " Answer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct",
-                "TIE"
+                "Qwen2.5-3B-Instruct"
             ]
         },
         {
@@ -1652,14 +1652,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
+                " Tie. Both answers are accurate and detailed explanations about the process of metamorphosis in a butterfly, albeit with slightly different phrasing and emphasis. However, both provide enough information to understand the transformation's four main stages: egg, larva (caterpillar), pupa (chrysalis), and adult.",
                 " Answer2",
-                " Answer2",
-                " Answer2"
+                " Tie"
             ],
             "extracted_answers": [
+                "Unknown",
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct"
+                "TIE"
             ]
         }
     ],
@@ -1677,13 +1677,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie. Both answers are clear, concise, and correctly explain what recycling is and why it is important, but Answerr2 provides a little more personal touch and emphasis on the importance of protecting the earth for future generations. However, the difference in quality between the two answers is minimal.",
-                " Tie",
+                " Answer1",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
-                "Unknown",
-                "TIE",
+                "Qwen2.5-3B-Instruct",
+                "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct"
             ]
         },
@@ -1700,13 +1700,13 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Answer2",
-                " 'Tie'",
+                " Tie",
+                " 'Answer2'",
                 " 'Answer1'"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
                 "TIE",
+                "Qwen2.5-3B-Instruct",
                 "gpt-4.1"
             ]
         }
@@ -1725,7 +1725,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " 'Answer1'",
                 " Answer1",
                 " Answer1"
             ],
@@ -1748,14 +1748,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
+                " Tie",
                 " Answer2",
-                " Answer2",
-                " Answer2"
+                " Answer2 is the superior answer because it gives a more accurate explanation of why we experience a leap year, specifically mentioning the synchronization of the calendar year with the solar year. However, Answer1 offers a sufficient explanation, and in a conversation, both responses might be considered acceptable. Therefore, it could be considered a tie for flexibility in context. So, 'Tie' would be the optimal choice."
             ],
             "extracted_answers": [
+                "TIE",
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct"
+                "Unknown"
             ]
         }
     ],
@@ -1775,7 +1775,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
@@ -1797,13 +1797,13 @@
             },
             "result": [
                 " 'Answer1'",
-                " Answer1 (Both answers are good, but Answer1 includes a bit more detail, such as mentioning the trophic levels and the role of decomposers in returning nutrients to the soil. However, a tie is a valid choice if one prefers a more scientific tone in Answer2 over the more descriptive approach in Answer1.)",
-                " Tie"
+                " Tie. Both responses are accurate and comprehensive in explaining how food chains function in an ecosystem. They cover the essential components of food chains, including the role of producers, consumers, and decomposers at each trophic level, the transfer and loss of energy, and the recycling of nutrients. Neither response offers new or significant insights over the other, making a tie the optimal choice.",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "Unknown",
-                "TIE"
+                "gpt-4.1"
             ]
         }
     ],
@@ -1821,7 +1821,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer2",
                 " Answer1"
             ],
@@ -1844,12 +1844,12 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Tie",
+                " Answer1",
                 " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -1870,8 +1870,8 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
-                " 'Answer1'"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
@@ -1893,13 +1893,13 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
-                " Tie. Both responses provide an accurate and comprehensive explanation of how rainbows form, demonstrating a good understanding of the physics involved. However, they have slightly different emphasis and some differences in the level of detail, particularly in the last sentence; Answer1 mentions the location of the sun and the persistence of raindrops, while Answer2 mentions the specific angles and wavelengths involved in the refraction and reflection processes. These differences do not significantly impact the overall quality and accuracy of the explanations, making it reasonable to call this a tie."
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "Unknown"
+                "gpt-4.1"
             ]
         }
     ],
@@ -1917,13 +1917,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer2'",
-                " Tie",
-                " Answer2"
+                " Answer2",
+                " Answer2",
+                " 'Answer2'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "TIE",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         },
@@ -1942,7 +1942,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -1965,7 +1965,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer2'",
+                " Answer2",
                 " Answer2",
                 " Answer2"
             ],
@@ -1989,7 +1989,7 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -2037,12 +2037,12 @@
             },
             "result": [
                 " Answer2",
-                " Tie",
-                " 'Answer2'"
+                " Answer2",
+                " Answer2"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "TIE",
+                "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct"
             ]
         }
@@ -2061,14 +2061,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
                 " Tie",
-                " 'Answer1'"
+                " Tie",
+                " Tie. Both responses provide accurate and well-explained explanations about the differences between inner and outer planets, although Answer2 offers slightly more specific details about the composition, size, and moons of each planet group. However, the distinction between inner planets as terrestrial and outer planets as gas, ice, and having rings is not essential for understanding the basic differences between the two categories."
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
                 "TIE",
-                "Qwen2.5-3B-Instruct"
+                "TIE",
+                "Unknown"
             ]
         },
         {
@@ -2084,14 +2084,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Tie",
-                " Tie",
-                " 'Answer1'"
+                " Answer1",
+                " 'Answer1'",
+                " Tie"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
-                "gpt-4.1"
+                "gpt-4.1",
+                "gpt-4.1",
+                "TIE"
             ]
         }
     ],
@@ -2109,14 +2109,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
-                " Answer1",
-                " Answer 1"
+                " Tie",
+                " Tie",
+                " Answer1"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct",
-                "Unknown"
+                "TIE",
+                "TIE",
+                "Qwen2.5-3B-Instruct"
             ]
         },
         {
@@ -2132,14 +2132,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Tie",
-                " Tie",
-                " Tie"
+                " Answer1",
+                " Answer1 (tie)",
+                " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
-                "TIE"
+                "gpt-4.1",
+                "Unknown",
+                "gpt-4.1"
             ]
         }
     ],
@@ -2157,12 +2157,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
                 " Answer2",
-                " 'Answer2'"
+                " Answer2",
+                " Answer2"
             ],
             "extracted_answers": [
-                "TIE",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -2180,7 +2180,7 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Answer1",
+                " 'Answer1'",
                 " Answer1",
                 " Answer1"
             ],
@@ -2230,12 +2230,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1' (The answer provided in the first response is more detailed and it explains the process of photosynthesis in a way that gives a clear image of the steps and the role of light, water, carbon dioxide, chlorophyll, and glucose in an engaging manner)"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Unknown"
             ]
         }
     ],
@@ -2253,13 +2253,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " Answer1"
+                " Tie (Both answers are well-written and provide accurate information about botanists and their field of study, including the focus on plants, their structure, growth, classification, distribution, and interactions with the environment. However, Answer2 offers a slightly more conversational and informative tone.)",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct",
+                "Unknown",
                 "Qwen2.5-3B-Instruct"
             ]
         },
@@ -2276,13 +2276,13 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Answer1",
-                " Answer1",
-                " 'Answer1'"
+                " Tie",
+                " Tie",
+                " Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "gpt-4.1",
+                "TIE",
+                "TIE",
                 "gpt-4.1"
             ]
         }
@@ -2301,12 +2301,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
+                "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct"
             ]
@@ -2325,13 +2325,13 @@
             },
             "result": [
                 " Answer1",
-                " Tie",
-                " Answer1"
+                " Answer1",
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "TIE",
-                "gpt-4.1"
+                "gpt-4.1",
+                "TIE"
             ]
         }
     ],
@@ -2349,8 +2349,8 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
-                " Answer1",
+                " 'Answer1'",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -2372,14 +2372,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Answer1",
                 " Tie",
-                " Answer1"
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "TIE",
-                "gpt-4.1"
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -2397,12 +2397,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Answer2",
                 " Answer1",
-                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
+                "gpt-4.1",
                 "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct"
             ]
@@ -2420,14 +2420,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " 'Answer1'",
-                " 'Answer1' (The first response provides a more comprehensive and beneficial health scanner concept, focusing on early detection and long-term illness management. It also addresses the issue of people not paying enough attention to their health until there's a problem. The second response while innovative, focuses more on cosmetic enhancements and virtual shopping experiences.)",
-                " Tie. Both answers provide innovative and beneficial ideas for gadgets. Answer1 offers a practical and potentially life-saving health scanner, while Answer2 presents an integrated health, skincare, and shopping solution that seeks to enhance daily life. Both answers demonstrate an understanding of technological advancements and user needs."
+                " Tie",
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "Unknown",
-                "Unknown"
+                "TIE",
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -2446,12 +2446,12 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " Tie. Both answers provide comprehensive, detailed, and practical steps for organizing a charity event in a neighborhood. They both emphasize the importance of identifying a cause, reaching out to the community, creating a plan, promoting the event, ensuring safety measures, and coordinating volunteers. However, Answer1 presents the information more concisely, using bullet points, while Answer2 adds more context and examples, making it slightly more engaging and easier to understand for some readers. The preference for one over the other may depend on the reader's learning style and personal preference.",
                 " Answer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct",
+                "Unknown",
                 "Qwen2.5-3B-Instruct"
             ]
         },
@@ -2470,12 +2470,12 @@
             "result": [
                 " 'Answer1'",
                 " Answer1",
-                " Answer1"
+                " 'Answer1' (The first response provides a more comprehensive and detailed outline of the steps involved in organizing a charity event, including specific suggestions for activities, communication strategies, safety considerations, and follow-up.)"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "gpt-4.1"
+                "Unknown"
             ]
         }
     ],
@@ -2494,7 +2494,7 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -2516,14 +2516,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Answer1",
                 " 'Answer1'",
-                " Answer1"
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
-                "gpt-4.1"
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -2541,14 +2541,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie. Both responses offer well-rounded and detailed strategies for planning an eco-friendly birthday party. They both emphasize reducing waste, using reusable items, and sourcing locally. However, Answer2 provides slightly more creative twists, such as using old materials for activities or giving edible party gifts. Additionally, it has a slight focus on reducing carbon emissions by encouraging active travel and utilizing composting for food waste. On the other hand, Answer1 is more concise and provides a clear list of action items, making it easier for someone to directly apply the suggestions. Both answers are equally useful, and the choice might depend on the person's preference for conciseness or elaboration.",
-                " 'Answer1'",
-                " Tie. Both responses offer comprehensive and thoughtful advice for planning an eco-friendly birthday party, making it difficult to determine a superior answer. Both responses advocate for reducing waste, using reusable items, and considering local and organic resources, among other suggestions. Both responses also offer unique ideas, such as planting a tree or donating to an environmental cause in Answer1, and the activity suggestion in Answer2. Both responses provide high-quality information, making it a tie."
+                " Answer1",
+                " Answer1",
+                " Tie"
             ],
             "extracted_answers": [
-                "Unknown",
                 "Qwen2.5-3B-Instruct",
-                "Unknown"
+                "Qwen2.5-3B-Instruct",
+                "TIE"
             ]
         },
         {
@@ -2590,12 +2590,12 @@
             },
             "result": [
                 " Answer1",
-                " Tie",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "TIE",
+                "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct"
             ]
         },
@@ -2612,14 +2612,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Tie",
-                " Tie",
-                " 'Answer1'"
+                " Tie. Both answers provide well-structured and thoughtful steps to invent a new sport, focusing on different aspects. While Answer1 offers a more practical and detailed approach with steps that can be easily followed, Answer2 offers a more strategic and holistic perspective, considering aspects such as audience captivation, cultural impact, and collaboration with experts. Both answers provide valuable insights and could potentially lead to the creation of a successful new sport.",
+                " Tie\n\nBoth responses provide a well-structured set of steps for inventing a new sport. Answer1 has a more detailed and practical approach, including specific suggestions for each step, making it easier to understand and implement for someone who wants to create a new sport. Answer2, on the other hand, emphasizes the need to consider unique challenges, inclusivity, and collaboration with experts. While these points are important, they are more conceptual, which makes the steps in Answer1 more actionable for someone just starting. If the goal is to invent a simple sport, Answer1 would be more helpful. However, if the goal is to create a new, complex, and potentially professional sport, Answer2 could be more useful. Both responses offer valuable tips but are geared towards different scenarios, making them similarly useful, hence the tie.",
+                " Tie\n\nBoth answers provide a comprehensive set of steps for inventing a new sport. However, Answer1 provides a more specific and practical approach with detailed suggestions, while Answer2 goes into a broader, conceptual understanding of the process, emphasizing potential impact, collaboration, and refinement. The optimal choice in this case would be a tie, as both responses offer valuable insights, but for different aspects of the task at hand."
             ],
             "extracted_answers": [
+                "Unknown",
                 "TIE",
-                "TIE",
-                "gpt-4.1"
+                "TIE"
             ]
         }
     ],
@@ -2639,12 +2639,12 @@
             "result": [
                 " Answer2",
                 " Answer2",
-                " Tie"
+                " Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "TIE"
+                "gpt-4.1"
             ]
         },
         {
@@ -2660,14 +2660,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
+                " Tie",
                 " Answer1",
-                " Answer1",
-                " 'Answer1' (Tie). Both answers provide detailed and nutritionally balanced suggestions for creating a school canteen menu. However, Answer1 goes the extra mile by offering a more diverse range of options, including vegetarian and gluten-free choices, and encourages moving towards healthier cooking methods (like baking and steaming) while reducing the reliance on salt and unhealthy sauces. Furthermore, it suggests engaging students in the process by soliciting their feedback and teaching them about healthy food choices, which could make the initiative more sustainable long-term. Answer2 also provides a well-balanced menu, but it lacks the depth and comprehensive approach of Answer1."
+                " Tie\n\nExplanation: Both answers provide good suggestions for a tasty and nutritious school canteen menu. However, Answer1 offers more comprehensive suggestions, including the use of different sources of protein (lean meats, beans), a variety of sides, and an emphasis on seasonal produce and lower cost. Answer2, while offering a balanced meal, does not provide as many specific suggestions for variety."
             ],
             "extracted_answers": [
+                "TIE",
                 "gpt-4.1",
-                "gpt-4.1",
-                "Unknown"
+                "TIE"
             ]
         }
     ],
@@ -2685,7 +2685,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -2708,7 +2708,7 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Answer1",
+                " 'Answer1'",
                 " Answer1",
                 " 'Answer1'"
             ],
@@ -2733,7 +2733,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " 'Answer1'",
                 " Answer1",
                 " Answer1"
             ],
@@ -2756,14 +2756,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Tie. Both responses provide a comprehensive plan for a community garden, outlining important steps such as location selection, membership, rules, supplies, water, scheduling, education, community events, and sustainability. However, Answer1 is more detailed and specific in its instructions, while Answer2 has a slightly more formal and concise tone. Ultimately, the choice between the two depends on the reader's preference for style and level of detail.",
+                " 'Answer1'",
                 " Tie",
-                " 'Answer1' (The Answer1 provides a more detailed and expansive plan, including specific steps like creating layouts, scheduling activities, offering educational classes, and even addressing sustainability concerns. The Answer2, while correct in its content, is less specific and detailed in its approach.)"
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "Unknown",
+                "gpt-4.1",
                 "TIE",
-                "Unknown"
+                "gpt-4.1"
             ]
         }
     ],
@@ -2781,14 +2781,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
-                " Tie",
-                " 'Answer2'"
+                " Answer2",
+                " Answer1",
+                " Tie"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
-                "gpt-4.1"
+                "gpt-4.1",
+                "Qwen2.5-3B-Instruct",
+                "TIE"
             ]
         },
         {
@@ -2853,8 +2853,8 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'\n\nBoth answers are well-structured and provide a detailed outline for a law protecting endangered species. However, Answer1 is more concise and easier to follow for a general audience, while Answer2 is more comprehensive and includes elements such as international cooperation, public awareness, and adaptive management, which are also crucial for effective protection of endangered species. Considering the question's target of a general audience, Answer1 might be more suitable. However, Answer2 is also an excellent response and may be beneficial for more specialized audiences or as a supplementary resource. Therefore, a tie would be a reasonable choice, as both responses offer valuable contributions.",
-                " Answer1"
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -2878,13 +2878,13 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " Tie. Both responses offer clear, engaging explanations of relativity to a primary school student. They both use simple analogies and metaphors, and address the concepts of relative motion and time dilation. However, Answer1 provides a slightly more detailed explanation of how Einstein's theory relates to the throw-up ball experiment, while Answer2 provides a more general explanation and introduces the idea of time dilation with the spaceship example. Ultimately, the choice may depend on the specific interests or learning style of the primary school student."
+                " Answer2",
+                " 'Answer1'\n\nThe chosen response provides a more comprehensive and accurate explanation of relativity suitable for a primary school student, incorporating aspects such as moving trains, the effects of motion on perception, and Einstein's theory about the relationship between space, time, and speed. Additionally, it provides an engaging and relatable analogy involving a moving train and a ball.\n\nWhile both responses attempt to simplify the explanation, answer one is more effective, as it successfully captures the essence of relativity, making it more understandable for the target audience without sacrificing accuracy.\n\nAnswer two provides a somewhat informative explanation, but it may not be as engaging or relatable to a primary school student, as it lacks a clear main point and examples. Moreover, it does not directly address the changes in time that occur due to movement, which is a crucial aspect of relativity.\n\nIn summary, answer one is the superior response in terms of accuracy, quality, and the delivery of a comprehensive, easy-to-understand explanation of relativity."
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct",
-                "Unknown"
+                "gpt-4.1",
+                "Qwen2.5-3B-Instruct"
             ]
         },
         {
@@ -2900,14 +2900,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " 'Answer1'",
-                " Answer1",
-                " Answer1"
+                " Tie",
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "gpt-4.1",
-                "gpt-4.1"
+                "TIE",
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -2925,14 +2925,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Tie",
-                " Tie"
+                " Tie",
+                " Answer1"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
                 "TIE",
-                "TIE"
+                "TIE",
+                "Qwen2.5-3B-Instruct"
             ]
         },
         {
@@ -2950,12 +2950,12 @@
             "result": [
                 " Tie",
                 " Answer1",
-                " 'Answer1'"
+                " Tie"
             ],
             "extracted_answers": [
                 "TIE",
                 "gpt-4.1",
-                "gpt-4.1"
+                "TIE"
             ]
         }
     ],
@@ -2996,13 +2996,13 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " 'Answer1'",
-                " 'Answer1'",
+                " Answer1",
+                " Tie",
                 " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1"
             ]
         }
@@ -3021,14 +3021,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
-                " 'Answer1'",
-                " Answer1"
+                " Answer2",
+                " Answer1",
+                " Tie"
             ],
             "extracted_answers": [
-                "TIE",
+                "gpt-4.1",
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct"
+                "TIE"
             ]
         },
         {
@@ -3045,13 +3045,13 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
-                "gpt-4.1"
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -3069,14 +3069,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Tie",
-                " Tie"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
                 "TIE",
-                "TIE"
+                "Qwen2.5-3B-Instruct",
+                "Qwen2.5-3B-Instruct"
             ]
         },
         {
@@ -3092,12 +3092,12 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Tie",
+                " Answer1",
                 " Answer1",
                 " Tie"
             ],
             "extracted_answers": [
-                "TIE",
+                "gpt-4.1",
                 "gpt-4.1",
                 "TIE"
             ]
@@ -3118,7 +3118,7 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -3166,12 +3166,12 @@
             },
             "result": [
                 " Tie",
-                " 'Answer2'",
+                " Tie",
                 " Tie"
             ],
             "extracted_answers": [
                 "TIE",
-                "gpt-4.1",
+                "TIE",
                 "TIE"
             ]
         },
@@ -3189,13 +3189,13 @@
             },
             "result": [
                 " Tie",
-                " Tie",
-                " 'Answer1'"
+                " Tie. Both answers provide thoughtful and considerate responses to the question, although they focus on different aspects: personal relationships (Answer1) and communal safety (Answer2). Both are reasonable and appropriate responses in the context of a hypothetical doomsday scenario. Answer1 focuses more on emotional and relational aspects, while Answer2 emphasizes more on practical survival measures. It is clear that both responses demonstrate compassion, empathy, and a concern for the well-being of others.",
+                " Tie"
             ],
             "extracted_answers": [
                 "TIE",
-                "TIE",
-                "gpt-4.1"
+                "Unknown",
+                "TIE"
             ]
         }
     ],
@@ -3213,8 +3213,8 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
-                " 'Answer1'",
+                " Answer1",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -3238,7 +3238,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -3262,12 +3262,12 @@
             },
             "result": [
                 " 'Answer1'",
-                " 'Answer1' - This response provides a clear and comprehensive explanation of metaphors, including examples, and a concise summary of their purpose. It effectively conveys the main points about metaphors, making it a superior response.",
+                " Tie",
                 " Answer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "Unknown",
+                "TIE",
                 "Qwen2.5-3B-Instruct"
             ]
         },
@@ -3285,13 +3285,13 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
-                " Tie. Both responses provide a clear and accurate explanation of what a metaphor is, include examples, and emphasize the creative and descriptive nature of metaphors in language. Answer1 gives a slightly more detailed explanation, while Answer2 emphasizes the similarity-highlighting aspect of metaphors more distinctly. In this case, both responses are equally good."
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "Unknown"
+                "gpt-4.1"
             ]
         }
     ],
@@ -3311,12 +3311,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Tie. Both Answer1 and Answer2 provide thoughtful and detailed insights into structuring a happy song. They both highlight the importance of key elements such as catchy melody, upbeat tempo, positive lyrics, and encouraging instrumentation. Both also offer specific suggestions on structural aspects like chorus repetition and bridge implementation. The primary difference in the responses lies in the level of technical and specific detail, with Answer1 focusing more on chord progressions and instrumentation, and Answer2 offering a more step-by-step process for a typical song structure. Since both answers effectively convey the essentials for composing a happy song, a tie is appropriate in this case."
+                " Answer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct",
-                "Unknown"
+                "Qwen2.5-3B-Instruct"
             ]
         },
         {
@@ -3357,9 +3357,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
+                " 'Answer1'",
                 " Tie",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
@@ -3380,13 +3380,13 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Tie",
-                " 'Answer2'",
+                " Answer1",
+                " 'Answer1'",
                 " Tie"
             ],
             "extracted_answers": [
-                "TIE",
-                "Qwen2.5-3B-Instruct",
+                "gpt-4.1",
+                "gpt-4.1",
                 "TIE"
             ]
         }
@@ -3405,12 +3405,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1 (Superior response due to its comprehensive and concise explanation, citing various benefits of recycling on our environment such as resource conservation, energy savings, job creation, reduction of greenhouse gases, and support for sustainable development.)",
+                " Answer1",
                 " 'Answer1'",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "Unknown",
+                "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct"
             ]
@@ -3428,14 +3428,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Answer2",
-                " 'Answer1' is a superior answer due to its comprehensive and easy-to-understand explanation of the importance of recycling, highlighting its effects on reducing pollution, conserving resources, supporting a sustainable economy, and preserving the environment for future generations. While Answer2 is also accurate and comprehensive, Answer1 does a better job of providing a concise explanation tailored to the question, making it the more suitable response.",
-                " 'Answer1'"
+                " Answer1",
+                " Answer1",
+                " Tie. Both responses provide comprehensive explanations as to the importance of recycling on our environment. They both touch upon reducing demand for raw materials, conserving natural resources, decreasing waste in landfills, promoting sustainable development, and supporting economic growth. The minor variations in language style do not significantly alter the semantic quality of their answers."
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
-                "Unknown",
-                "gpt-4.1"
+                "gpt-4.1",
+                "gpt-4.1",
+                "Unknown"
             ]
         }
     ],
@@ -3454,13 +3454,13 @@
             },
             "result": [
                 " 'Answer1'",
-                " 'Answer1' (This response provides a more comprehensive list of criteria that includes both fiction and non-fiction books, along with elements such as originality of ideas, depth and accuracy of research, literary devices, impact on the reader, contribution to the genre or field, and readability.)",
-                " Tie"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "Unknown",
-                "TIE"
+                "Qwen2.5-3B-Instruct",
+                "Qwen2.5-3B-Instruct"
             ]
         },
         {
@@ -3477,12 +3477,12 @@
             },
             "result": [
                 " Answer2",
-                " Tie",
+                " 'Answer2'",
                 " 'Answer2'"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "TIE",
+                "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct"
             ]
         }
@@ -3503,12 +3503,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " Tie"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct"
+                "TIE"
             ]
         },
         {
@@ -3524,13 +3524,13 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Tie",
                 " 'Answer1'",
+                " Tie",
                 " Tie"
             ],
             "extracted_answers": [
-                "TIE",
                 "gpt-4.1",
+                "TIE",
                 "TIE"
             ]
         }
@@ -3549,14 +3549,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
-                " Tie",
-                " Answer1"
+                " Answer1",
+                " Answer1",
+                " Tie"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
-                "Qwen2.5-3B-Instruct"
+                "Qwen2.5-3B-Instruct",
+                "Qwen2.5-3B-Instruct",
+                "TIE"
             ]
         },
         {
@@ -3572,14 +3572,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Tie",
                 " Answer1",
-                " Answer1"
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
-                "TIE",
                 "gpt-4.1",
-                "gpt-4.1"
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -3597,9 +3597,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
@@ -3622,7 +3622,7 @@
             "result": [
                 " 'Answer2'",
                 " 'Answer2'",
-                " Answer2"
+                " 'Answer2'"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
@@ -3647,7 +3647,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
@@ -3669,8 +3669,8 @@
             },
             "result": [
                 " Answer2",
-                " Answer2",
-                " 'Answer2'"
+                " 'Answer2'",
+                " Answer2"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
@@ -3694,13 +3694,13 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " Answer2",
+                " Answer1 (A tie could also be proposed, as both answers provide comprehensive evaluations. However, Answer1 offers a slightly more concise explanation and focuses more on key metrics, while Answer2 adds more details on comparisons and industry standards.)"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct"
+                "gpt-4.1",
+                "Unknown"
             ]
         },
         {
@@ -3716,9 +3716,9 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " Answer1"
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -3741,13 +3741,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie. Both answers provide a similar and comprehensive approach to assessing the moral or lesson of a short story, focusing on character actions, setting, events, themes, and authorial techniques. However, Answer1 offers a slightly more detailed analysis, while Answer2 offers a clear and direct conclusion. Ultimately, the preference for an answer may depend on individual readers' learning styles and preferences.",
                 " Answer1",
-                " 'Answer1'"
+                " Tie. Both responses are equally comprehensive and provide clear steps to evaluate the moral or lesson of a short story. It's a tie between 'Answer1' and 'Answer2'.",
+                " Answer1"
             ],
             "extracted_answers": [
-                "Unknown",
                 "Qwen2.5-3B-Instruct",
+                "Unknown",
                 "Qwen2.5-3B-Instruct"
             ]
         },
@@ -3765,12 +3765,12 @@
             },
             "result": [
                 " Tie",
-                " Answer1",
+                " Tie",
                 " Tie"
             ],
             "extracted_answers": [
                 "TIE",
-                "gpt-4.1",
+                "TIE",
                 "TIE"
             ]
         }
@@ -3789,12 +3789,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " Tie",
                 " Tie",
                 " Tie"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
+                "TIE",
                 "TIE",
                 "TIE"
             ]
@@ -3812,14 +3812,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
+                " 'Answer1'",
                 " Tie",
-                " Tie. Both responses provide clear, detailed, and accurate evaluations of the impact of the Internet on society, addressing both its benefits and challenges. They both touch upon topics such as communication, information exchange, economic impact, social aspects, privacy concerns, and digital divides. It is challenging to separate the two answers as they both offer high-quality responses.",
-                " 'Answer1'"
+                " Tie"
             ],
             "extracted_answers": [
+                "gpt-4.1",
                 "TIE",
-                "Unknown",
-                "gpt-4.1"
+                "TIE"
             ]
         }
     ],
@@ -3837,14 +3837,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Tie",
-                " Tie"
+                " Tie",
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
                 "TIE",
-                "TIE"
+                "TIE",
+                "Qwen2.5-3B-Instruct"
             ]
         },
         {
@@ -3860,13 +3860,13 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " Tie",
                 " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "TIE",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -3885,14 +3885,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Tie. Both responses are equally accurate and eloquent in detailing the camel's adaptations for desert survival.",
                 " Answer1",
-                " Answer1 (camel is pointed out as an example of a well-adapted animal rather than simply \"the best\" animal, pointing to a broader understanding of the subject matter)",
-                " Tie"
+                " Answer1"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
                 "Unknown",
-                "TIE"
+                "Qwen2.5-3B-Instruct",
+                "Qwen2.5-3B-Instruct"
             ]
         },
         {
@@ -3908,14 +3908,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Answer1",
-                " Answer1",
-                " Answer1 (Tie)\n\nBoth answers provide a detailed and accurate description of the camel's adaptations to desert environments. They both mention the camel's ability to conserve water, store fat in its humps, adapt to changing temperatures, and eat thorny or salty plants. Both answers also acknowledge the camel's capacity to travel long distances and withstand harsh conditions. The difference between the two answers is subtle, with Answer1 offering a slightly more comprehensive overview of the camel's adaptive traits. However, Answer2 is equally informative and maintain the same quality and accuracy. Therefore, I find it appropriate to call this a tie."
+                " Tie",
+                " Answer1 (both answers are equivalent in quality, but the first one provides a slightly more detailed explanation of camel's ability to save water and survive sandstorms, making it slightly more informative)",
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "gpt-4.1",
-                "Unknown"
+                "TIE",
+                "Unknown",
+                "gpt-4.1"
             ]
         }
     ],
@@ -3934,12 +3934,12 @@
             },
             "result": [
                 " 'Answer1'",
-                " Tie. Both answers provide a well-rounded and comprehensive explanation on the importance of clean energy for our future. They both highlight the environmental, economic, technological, and health benefits, as well as the long-term sustainability of clean energy sources. Additionally, both answers touch upon the job creation and conflict resolution potential of clean energy. However, Answer2 provides a more conversational tone, while Answer1 presents the information in a slightly more formal manner. As the evaluation is based on the quality and accuracy of the answers, and not on style or tone, a tie is the most suitable choice in this case.",
-                " 'Answer1'"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "Unknown",
+                "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct"
             ]
         },
@@ -3956,14 +3956,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Answer1",
-                " Answer1",
-                " Answer1"
+                " Answer1. This answer provides a comprehensive evaluation on the importance of clean energy, addressing various aspects such as environmental protection, health benefits, job creation, and prevention of conflicts. It also emphasizes the long-term nature of these benefits, and explains why clean energy is necessary for a sustainable future. While both responses are insightful, Answer1 goes into more detail and presents a more holistic overview of the topic, making it a slightly superior response.",
+                " 'Answer1'",
+                " Tie"
             ],
             "extracted_answers": [
+                "Unknown",
                 "gpt-4.1",
-                "gpt-4.1",
-                "gpt-4.1"
+                "TIE"
             ]
         }
     ],
@@ -3981,14 +3981,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
                 " Answer1",
-                " Answer1"
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
-                "TIE",
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct"
+                "TIE",
+                "TIE"
             ]
         },
         {
@@ -4004,13 +4004,13 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Answer1",
-                " Answer1",
-                " 'Answer1'"
+                " Tie",
+                " 'Answer2'",
+                " Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "gpt-4.1",
+                "TIE",
+                "Qwen2.5-3B-Instruct",
                 "gpt-4.1"
             ]
         }
@@ -4030,7 +4030,7 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -4052,12 +4052,12 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
+                " Tie",
                 " 'Answer2'",
-                " 'Answer2'",
-                " 'Answer2'"
+                " Answer2"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
+                "TIE",
                 "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct"
             ]
@@ -4100,14 +4100,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Answer2",
                 " Tie",
-                " Tie"
+                " Tie",
+                " 'Answer2'"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
                 "TIE",
-                "TIE"
+                "TIE",
+                "Qwen2.5-3B-Instruct"
             ]
         }
     ],
@@ -4125,13 +4125,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " Tie",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "TIE",
+                "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct"
             ]
         },
@@ -4148,14 +4148,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Tie",
                 " Answer1",
-                " Tie"
+                " Tie. Both responses are well-structured, clear, informative, and offer similar arguments. They both explain the relevance of algebra in daily life, emphasizing its utility in problem-solving, logical reasoning, and various real-life situations. However, Answer2 provides a slightly more concise explanation with a broader range of relevant examples. On the other hand, Answer1 offers more detailed examples related to daily activities. Hence, the two responses are well-balanced, and either could be viewed as superior, depending on the reader's preferences.",
+                " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
                 "gpt-4.1",
-                "TIE"
+                "Unknown",
+                "gpt-4.1"
             ]
         }
     ],
@@ -4173,12 +4173,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1 (Both answers are good, but Answer1 is slightly more concise and provides a monetary estimation for the value of bees, making it slightly more informative.)",
+                " Answer1",
                 " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
-                "Unknown",
+                "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct"
             ]
@@ -4196,12 +4196,12 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Tie",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'",
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "TIE",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -4221,14 +4221,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
                 " 'Answer1'",
-                " Answer1"
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct"
+                "TIE",
+                "TIE"
             ]
         },
         {
@@ -4244,13 +4244,13 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Tie",
                 " 'Answer1'",
+                " Tie",
                 " Tie"
             ],
             "extracted_answers": [
-                "TIE",
                 "gpt-4.1",
+                "TIE",
                 "TIE"
             ]
         }
@@ -4269,9 +4269,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " 'Answer1'"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
@@ -4292,13 +4292,13 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " 'Answer1'",
-                " Tie",
-                " 'Answer1'"
+                " Answer1",
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "TIE",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -4317,7 +4317,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
+                " Answer1",
                 " Answer1",
                 " Answer1"
             ],
@@ -4341,12 +4341,12 @@
             },
             "result": [
                 " Tie",
-                " 'Answer1'",
+                " Tie",
                 " Answer1"
             ],
             "extracted_answers": [
                 "TIE",
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1"
             ]
         }
@@ -4388,14 +4388,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Tie",
-                " Tie",
-                " Tie. Both responses have a similar level of quality and accuracy in evaluating the importance of teamwork in achieving a goal, and they both make valid points. However, neither response is significantly superior to the other."
+                " Answer2",
+                " Answer2",
+                " Answer2"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
-                "Unknown"
+                "Qwen2.5-3B-Instruct",
+                "Qwen2.5-3B-Instruct",
+                "Qwen2.5-3B-Instruct"
             ]
         }
     ],
@@ -4413,12 +4413,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie. Both Answer1 and Answer2 provide comprehensive and accurate information about the standards used to judge the safety of a car. They both cover important aspects such as crash test ratings, safety features, overall build quality, visibility, and the car's performance in emergency situations. However, Answer2 includes additional details about features to protect pedestrians, child safety, the importance of safety recalls, and the functionality of advanced safety systems. Similarly, Answer1 mentions the car's ability to handle unexpected situations, which is an aspect that Answer2 does not explicitly discuss. Given the slight differences in detail, it is challenging to definitively choose one answer over the other as they both offer high-quality and accurate responses.",
+                " Tie",
                 " 'Answer1'",
                 " Tie"
             ],
             "extracted_answers": [
-                "Unknown",
+                "TIE",
                 "Qwen2.5-3B-Instruct",
                 "TIE"
             ]
@@ -4436,14 +4436,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
+                " Tie",
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " Tie"
             ],
             "extracted_answers": [
+                "TIE",
                 "gpt-4.1",
-                "gpt-4.1",
-                "gpt-4.1"
+                "TIE"
             ]
         }
     ],
@@ -4461,12 +4461,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " 'Answer1' (There is a slight edge in clarity and comprehensive detail in Answer1 as it provides a concise but well-rounded explanation, though Answer2 is equally good.)",
                 " Answer1",
-                " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
+                "Unknown",
                 "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct"
             ]
@@ -4484,12 +4484,12 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Tie",
-                " 'Answer1'",
+                " Answer1",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -4509,13 +4509,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
-                " Answer2",
+                " Answer1",
+                " Tie",
                 " 'Answer1'"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "gpt-4.1",
+                "TIE",
                 "Qwen2.5-3B-Instruct"
             ]
         },
@@ -4532,14 +4532,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Answer1",
-                " Answer1",
-                " Answer1"
+                " Tie. Both answers provide comprehensive evaluations of musical performance quality by covering the essential aspects and showing knowledge of the subject. They display a similar structure, quality, and accuracy. However, Answer1 offers a slightly more detailed explanation of interpretation and originality, whereas Answer2 includes a mention of the audience's reaction and the overall atmosphere, which adds some additional perspective. Given that both points are legitimate and relevant to the evaluation of musical performances, it is difficult to discern a clear winner.",
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "gpt-4.1",
-                "gpt-4.1"
+                "Unknown",
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -4558,8 +4558,8 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
-                " 'Answer1'"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
@@ -4581,13 +4581,13 @@
             },
             "result": [
                 " 'Answer1'",
-                " Tie",
-                " Answer2"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "TIE",
-                "Qwen2.5-3B-Instruct"
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         }
     ],
@@ -4605,14 +4605,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
                 " Answer2",
-                " Answer2"
+                " Answer2",
+                " Tie"
             ],
             "extracted_answers": [
-                "TIE",
                 "gpt-4.1",
-                "gpt-4.1"
+                "gpt-4.1",
+                "TIE"
             ]
         },
         {
@@ -4628,12 +4628,12 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Answer1",
+                " Tie",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -4654,13 +4654,13 @@
             },
             "result": [
                 " Answer2",
-                " Answer2",
-                " Answer2, this response is more detailed and accurate as it not only confirms that the primary colors are red, blue, and yellow, but also explains that when painting, primary colors are red, blue, and yellow, whereas when using light, the primary colors are red, green, and blue. The second answer also points out why these colors are considered primary (i.e., they cannot be made by mixing other colors). This additional information makes the answer more comprehensive and enlightening."
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
-                "Unknown"
+                "Qwen2.5-3B-Instruct",
+                "Qwen2.5-3B-Instruct"
             ]
         },
         {
@@ -4701,12 +4701,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Tie",
                 " 'Answer2'",
-                " Answer2",
-                " Answer2"
+                " 'Answer2'"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -4724,12 +4724,12 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
+                " Tie",
                 " 'Answer1'",
-                " 'Answer1'",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -4750,7 +4750,7 @@
             },
             "result": [
                 " Answer2",
-                " 'Answer2'",
+                " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
@@ -4773,8 +4773,8 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
-                " 'Answer1'"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -4797,14 +4797,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
+                " Tie. Both answers are correct and complete, but Answer2 provides additional details that may be unnecessary in this context, making it slightly longer and more verbose than Answer1. For a direct question asking who wrote the novel, a simple answer such as Answer1 is sufficient. However, in a conversation or educational context, Answer2's additional information might be more useful or engaging. Therefore, a tie is an optimal choice as both answers are equally good.",
                 " Answer1",
-                " Tie"
+                " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
+                "Unknown",
                 "Qwen2.5-3B-Instruct",
-                "TIE"
+                "Qwen2.5-3B-Instruct"
             ]
         },
         {
@@ -4820,13 +4820,13 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " 'Answer1'",
-                " 'Answer1'",
+                " 'Answer1' is a more comprehensive and informative answer as it provides context and details about the book, its author, and the themes it explores. On the other hand, 'Answer2' merely repeats the name of the author, which is less informative. Therefore, 'Answer1' is the superior response.",
+                " Answer1 (Tie)\n\nBoth answers are correct, and while the first answer provides additional background and context that might help a reader, the second answer is also succinct and to the point. In this case, the difference in quality is minimal, so a tie is the appropriate evaluation.",
                 " Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "gpt-4.1",
+                "Unknown",
+                "Unknown",
                 "gpt-4.1"
             ]
         }
@@ -4845,14 +4845,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
-                " Tie",
-                " 'Answer2'"
+                " 'Answer2'",
+                " Answer2",
+                " Tie"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
-                "gpt-4.1"
+                "gpt-4.1",
+                "gpt-4.1",
+                "TIE"
             ]
         },
         {
@@ -4868,8 +4868,8 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Answer1",
-                " Answer1",
+                " 'Answer1'",
+                " 'Answer1'",
                 " 'Answer1'"
             ],
             "extracted_answers": [
@@ -4894,13 +4894,13 @@
             },
             "result": [
                 " 'Answer2'",
-                " Answer2",
-                " Answer2"
+                " Tie",
+                " Tie. Both answers correctly identify the element with the symbol 'O' as Oxygen. However, Answer2 provides additional information about the state of matter, the necessity of oxygen for most living things, its abundance on Earth's crust, and its atomic number, which is not irrelevant but slightly deviates from the main question asked."
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
-                "gpt-4.1"
+                "TIE",
+                "Unknown"
             ]
         },
         {
@@ -4916,9 +4916,9 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " 'Answer1'",
-                " 'Answer1'",
-                " Answer1"
+                " Answer1",
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -4941,13 +4941,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
-                " Tie\n\nBoth answers correctly provide the freezing point of water in Fahrenheit (32 degrees). However, Answer2 provides a slightly more detailed and precise explanation, mentioning that the temperature is normal air pressure and freeze-point-based definition of the Fahrenheit scale. While Answer1 is also correct, it could be considered less informative as it just provides the number without any additional context or explanation.",
+                " Answer2",
+                " Answer2",
                 " 'Answer1'"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
-                "TIE",
+                "gpt-4.1",
+                "gpt-4.1",
                 "Qwen2.5-3B-Instruct"
             ]
         },
@@ -4966,7 +4966,7 @@
             "result": [
                 " Answer1",
                 " 'Answer1'",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -4989,12 +4989,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Tie",
                 " Answer1",
-                " 'Answer1'",
                 " Tie"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
+                "TIE",
                 "Qwen2.5-3B-Instruct",
                 "TIE"
             ]
@@ -5013,12 +5013,12 @@
             },
             "result": [
                 " Tie",
-                " Tie",
-                " 'Answer1' is the superior response as it provides a more comprehensive answer. It not only mentions Thomas Edison but also gives credit to Sir Humphry Davy and Joseph Swan for their earlier work on lightbulbs. Additionally, it explains the practicality and commercial success of Edison's lightbulb. 'Answer2' provides the correct answer about Edison but lacks the additional context and historical perspective offered by 'Answer1'. Therefore, the answer is 'Answer1'."
+                " 'Answer2'",
+                " 'Answer1' (tie)\n\nBoth answers provide correct information about the invention of the lightbulb, but they do so in slightly different ways. Answer1 mentions that while Thomas Edison is commonly associated with the invention, others like Sir Humphry Davy and Joseph Swan also contributed to its development. This slightly expands the context of the question by mentioning other relevant figures in the development of the lightbulb. However, Answer2 specifically states that Thomas Edison was responsible for the practical and commercial implementation of the lightbulb, which is equally important and synthesized in fewer words. Therefore, both answers can be considered equally accurate and informative."
             ],
             "extracted_answers": [
                 "TIE",
-                "TIE",
+                "Qwen2.5-3B-Instruct",
                 "Unknown"
             ]
         }
@@ -5038,13 +5038,13 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
-                " 'Answer1'"
+                " Answer1",
+                " Answer2"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct"
+                "gpt-4.1"
             ]
         },
         {
@@ -5085,14 +5085,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
                 " Tie",
-                " Answer2"
+                " Answer2",
+                " Tie. Both responses are correct and succinct, providing necessary information about the author of the Harry Potter series. However, Answer2 provides slightly more context and background, making it slightly more informative for those who might not be familiar with J.K. Rowling. That said, the difference is minor, and both responses are equally good."
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
                 "TIE",
-                "gpt-4.1"
+                "gpt-4.1",
+                "Unknown"
             ]
         },
         {
@@ -5110,7 +5110,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -5134,12 +5134,12 @@
             },
             "result": [
                 " Tie",
-                " 'Answer2'",
+                " Tie",
                 " Tie"
             ],
             "extracted_answers": [
                 "TIE",
-                "gpt-4.1",
+                "TIE",
                 "TIE"
             ]
         },
@@ -5156,9 +5156,9 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
+                " Answer1",
                 " 'Answer1'",
-                " 'Answer1'",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -5183,12 +5183,12 @@
             "result": [
                 " Answer1",
                 " Tie",
-                " Tie. Both answers are equally accurate and provide essentially the same information. Answer2 includes additional details but the question did not ask for those details, so they do not add to the accuracy or quality of the answer."
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
                 "TIE",
-                "Unknown"
+                "Qwen2.5-3B-Instruct"
             ]
         },
         {
@@ -5205,8 +5205,8 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
-                " 'Answer1'"
+                " 'Answer1'",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -5229,14 +5229,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " 'Answer1'",
                 " Answer1",
-                " Answer1",
-                " Tie"
+                " Answer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct",
-                "TIE"
+                "Qwen2.5-3B-Instruct"
             ]
         },
         {
@@ -5252,14 +5252,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Tie. Both Answer1 and Answer2 provide clear and accurate answers, maintaining the structure of the question and offering detailed explanations of each state of matter.",
+                " 'Answer1'",
                 " Answer1",
-                " Answer1"
+                " Tie"
             ],
             "extracted_answers": [
-                "Unknown",
                 "gpt-4.1",
-                "gpt-4.1"
+                "gpt-4.1",
+                "TIE"
             ]
         }
     ],
@@ -5277,14 +5277,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Tie",
                 " 'Answer1'",
-                " Tie. Both answers are accurate and provide the correct response of the square root of 36 being 6. They both also provide some additional explanation, but the additional information in Answer2 doesn't significantly improve the answer's quality compared to Answer1.",
-                " Tie"
+                " 'Answer1'"
             ],
             "extracted_answers": [
+                "TIE",
                 "Qwen2.5-3B-Instruct",
-                "Unknown",
-                "TIE"
+                "Qwen2.5-3B-Instruct"
             ]
         },
         {
@@ -5300,12 +5300,12 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Tie",
+                " 'Answer1'",
                 " 'Answer1'",
                 " 'Answer1'"
             ],
             "extracted_answers": [
-                "TIE",
+                "gpt-4.1",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -5326,13 +5326,13 @@
             },
             "result": [
                 " Answer2",
-                " 'Answer1'",
-                " Tie"
+                " Answer2",
+                " Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "Qwen2.5-3B-Instruct",
-                "TIE"
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         },
         {
@@ -5348,9 +5348,9 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " 'Answer1' (The first answer provides more context about the structure of water, making it a slightly better answer.)"
+                " Answer1",
+                " 'Answer1' (tie) is slightly more informative than 'Answer2'. The additional context in Answer1 helps to further illustrate the structure of a water molecule. However, both answers are correct and provide the correct chemical formula for water, which makes a definitive choice difficult. Therefore, I would label this as a 'tie'."
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -5373,7 +5373,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer2'",
+                " Answer2",
                 " Answer2",
                 " Answer2"
             ],
@@ -5396,9 +5396,9 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " 'Answer1' is the superior response because it provides additional explanatory information beyond just the name of the planet. It explains why Mars is called the Red Planet, and the reason is because of the iron oxide (rust) on its surface.",
+                " Answer1. The first answer provides more detailed and accurate information as to why Mars is known as the Red Planet, including the scientific reason behind the color and the visibility of the red color from Earth without a telescope. The second answer is accurate but lacks the context and explanation provided in the first response, making it a less informative answer. Therefore, 'Answer1' would be a better choice.",
                 " Answer1",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
                 "Unknown",
@@ -5422,13 +5422,13 @@
             },
             "result": [
                 " Tie",
-                " Tie. Both answers provide a similar level of information, with Answer 1 focusing on Columbus's discovery in 1492 and the pre-existing indigenous inhabitants, and Answer 2 further elaborating that Leif Erikson also visited North America before Columbus. The added information in Answer 2 does not drastically improve the accuracy or depth of the response, making them equally good in this case.",
-                " Tie"
+                " Answer2",
+                " Answer2"
             ],
             "extracted_answers": [
                 "TIE",
-                "Unknown",
-                "TIE"
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         },
         {
@@ -5469,13 +5469,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
-                " Answer1",
+                " 'Answer1'",
+                " Tie. Both answers accurately provide the layers of the Earth and explain their characteristics succinctly. However, Answer2 provides slightly more details about the 'mantle' being partly solid which might be seen as more informative for some readers. It's a close call but I'll consider them as equally good.",
                 " Answer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct",
+                "Unknown",
                 "Qwen2.5-3B-Instruct"
             ]
         },
@@ -5493,13 +5493,13 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1' (The answer in Answer1 provides more detailed information about each layer, like the partial solidity of the mantle, the composition of the core, and the difference in heat between the layers.)",
-                " Tie"
+                " Answer1",
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "Unknown",
-                "TIE"
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         }
     ],
@@ -5517,14 +5517,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
-                " Tie",
-                " 'Answer1' (This answer is simpler and more direct in accurately answering the question.)"
+                " 'Answer1'",
+                " 'Answer1' (The response is concise, accurate, and clearly states what a thermometer measures without adding unnecessary details.)",
+                " Tie"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
-                "Unknown"
+                "Qwen2.5-3B-Instruct",
+                "Unknown",
+                "TIE"
             ]
         },
         {
@@ -5542,12 +5542,12 @@
             "result": [
                 " Answer1",
                 " Tie",
-                " Tie"
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "TIE",
-                "TIE"
+                "gpt-4.1"
             ]
         }
     ],
@@ -5567,7 +5567,7 @@
             "result": [
                 " Answer2",
                 " 'Answer2'",
-                " 'Answer2'"
+                " Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -5588,13 +5588,13 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " 'Answer1'",
                 " Tie",
+                " Answer1",
                 " Tie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
                 "TIE",
+                "gpt-4.1",
                 "TIE"
             ]
         }
@@ -5636,13 +5636,13 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " 'Answer1'",
-                " 'Answer1'",
+                " Answer1",
+                " Tie",
                 " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1"
             ]
         }
@@ -5661,14 +5661,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer2'",
-                " Answer2",
-                " Answer2"
+                " 'Answer1'",
+                " Tie",
+                " Tie. Both answers are correct but Answer2 provides additional information about why the lion is considered the 'king of the jungle' although it does not live exclusively in jungles. The semantic quality is good but it deviates slightly from the question which asked about the animal known as the 'king of the jungle' without asking for an explanation. A tie would be an optimal choice in this case."
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "gpt-4.1",
-                "gpt-4.1"
+                "Qwen2.5-3B-Instruct",
+                "TIE",
+                "Unknown"
             ]
         },
         {
@@ -5684,14 +5684,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
+                " Tie",
                 " 'Answer1'",
-                " 'Answer1'",
-                " Tie. While both answers correctly identify the animal known as the king of the jungle, Answer1 provides additional context and explanation about why lions are called that, which improves its educational value. However, Answer2 is concise and to the point, making it equally useful for quick responses. The question does not specify a need for an in-depth explanation, so both answers can be considered acceptable."
+                " Tie"
             ],
             "extracted_answers": [
+                "TIE",
                 "gpt-4.1",
-                "gpt-4.1",
-                "Unknown"
+                "TIE"
             ]
         }
     ],
@@ -5709,8 +5709,8 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer2",
                 " 'Answer2'",
+                " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
@@ -5732,14 +5732,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " 'Answer1'",
-                " Answer1",
-                " Answer1"
+                " Tie",
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
-                "gpt-4.1",
-                "gpt-4.1",
-                "gpt-4.1"
+                "TIE",
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -5757,14 +5757,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie. Both answers contain errors. The correct answer for the first four letters in the second line of a QWERTY keyboard, from left to right, is E, S, D, and F. The second line is indeed the home row, but the fingers do not usually rest exactly on the keys when typing and the first four letters are E, S, D, F, not A, S, D, F or S, T, R, D.",
-                " Tie\n\nWhile both answers are trying to respond to the question, Answer2 is inaccurate because it does not correctly identify the first four letters from left to right on the second line of a QWERTY keyboard, which are S, T, R, and D, not A, S, D, and F. Answer1 is the correct answer to the question. However, the question did not specifically ask for the definition or usage of the \"home row,\" and thus Answer2, while incorrect, does not necessarily provide a worse answer compared to Answer1. Hence, a tie seems appropriate in this case.",
-                " Tie. Both answers are incorrect but they are offering solutions for the given problem. The first line on a QWERTY keyboard, from left to right, is Q, W, E, R, and the second line is A, S, D, F, G, J, L, and U. Therefore, the correct answer for the first four letters of the second line from left to right is A, S, D, and F. However, in this context, the question is asking for the first four letters going from the left to right of the second line without considering the shift key. Therefore, since the question is misleading, neither answer can be considered superior as they are both not correct according to the question's premise."
+                " Tie. Both answers are incorrect. The correct answer for the first four letters on the second line of a QWERTY keyboard, from left to right, is E, S, D, and F. The second line also referred to as the \"home row.\"",
+                " Tie\n\nBoth answers are incorrect. The correct answer would be R, T, E, and W. The second line on a QWERTY keyboard, from left to right, starts with the letter 'R'. The question asks specifically for the first four letters, which none of the provided answers correctly identify.",
+                " Tie\n\nExplanation: While Answer1 provides a seemingly accurate answer, it contains errors. The correct answer for the first four letters from left to right on the second line of a QWERTY keyboard is indeed \"STRD,\" not \"S,T,R,D.\" This answer, although less detailed, is more accurate in addressing the specific question.\n\nOn the other hand, Answer2 provides additional information that is not requested, which is the explanation of the term \"home row\" and the incorrect time-saving keys (ASDF). By including irrelevant information, Answer2 does not offer a more superior or helpful answer compared to Answer1 in this situation."
             ],
             "extracted_answers": [
                 "Unknown",
                 "TIE",
-                "Unknown"
+                "TIE"
             ]
         },
         {
@@ -5780,8 +5780,8 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -5805,13 +5805,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie",
-                " Tie",
+                " 'Answer1' (due to Answer1 being more concise yet maintaining clarity and correctness)",
+                " 'Answer1'",
                 " Tie"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
+                "Unknown",
+                "Qwen2.5-3B-Instruct",
                 "TIE"
             ]
         },
@@ -5828,13 +5828,13 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Tie",
-                " Answer1",
+                " 'Answer1' (Both answers are grammatically correct and the solutions provided for the given equation are identical. Therefore, it's a tie.)",
+                " Tie. Both answers are equally clear and accurate in explaining how to solve the equation.",
                 " Tie"
             ],
             "extracted_answers": [
-                "TIE",
-                "gpt-4.1",
+                "Unknown",
+                "Unknown",
                 "TIE"
             ]
         }
@@ -5876,13 +5876,13 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Tie",
-                " Tie",
+                " 'Answer2'",
+                " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
+                "Qwen2.5-3B-Instruct",
+                "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct"
             ]
         }
@@ -5901,13 +5901,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Tie (Both answers demonstrate an understanding of democratic principles and offer effective strategies for addressing conflicts in a school's student council)",
                 " Answer1",
-                " Tie. Both answers demonstrate an understanding of democratic principles and their application in conflict resolution. Both responses include providing an opportunity for all parties to express their viewpoints, encouraging fairness, and ensuring everyone's voices are heard. However, Answer2 could be considered more concise in its explanation of the steps, while Answer1 offers a slightly more in-depth explanation of the investigative committee and vote counting process. A tie is appropriate in this case since both responses are similarly effective in providing a clear answer to the question.",
                 " 'Answer1'"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
                 "Unknown",
+                "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct"
             ]
         },
@@ -5925,13 +5925,13 @@
             },
             "result": [
                 " Tie",
-                " 'Answer1'",
-                " Answer1"
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
                 "TIE",
-                "gpt-4.1",
-                "gpt-4.1"
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -5949,14 +5949,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1\n\nBoth answers are well-written and informative, but Answer1 provides a bit more comprehensive explanation on the role of the plants in the water cycle, including the 'transpiration' process where plants release water through their leaves. This added detail does not make it a significantly better answer, but it makes it slightly more accurate and holistic. Therefore, Answer1 is the superior response.",
-                " Answer1 is the superior answer. It provides a concise, clear, and accurate explanation of how the water cycle works in a terrarium, including the steps of evaporation, condensation, and precipitation, as well as the role of the water cycle in the survival of the plants and its significance in the larger Earth system. Additionally, answer 1 describes the products of each stage of the water cycle, which helps the reader visualize and better understand the process. Answer 2 provides an accurate description of the water cycle in a terrarium, however, it is less comprehensive and does not provide as much detail, e.g. it does not mention that the water moving through the plants helps them grow. Answer 1 is both more accurate and more detailed, so it is the better answer.",
-                " Answer1 (The Answer1 provides a more detailed and concise explanation of the water cycle process within a terrarium, including the role of the mini-cloud formation on the glass, which is not mentioned in Answer2.)"
+                " Tie. Both answer 1 and answer 2 provide a clear, insightful explanation of how the water cycle works in a terrarium. They are both equally detailed, accurate and easy to understand.",
+                " Tie",
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
                 "Unknown",
-                "Unknown"
+                "TIE",
+                "Qwen2.5-3B-Instruct"
             ]
         },
         {
@@ -5997,8 +5997,8 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
                 " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -6020,8 +6020,8 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Answer1",
-                " Answer1",
+                " 'Answer1'",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -6045,7 +6045,7 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer2'",
+                " Answer2",
                 " Answer2",
                 " Answer2"
             ],
@@ -6068,13 +6068,13 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Tie",
-                " Tie",
+                " Answer1",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
+                "gpt-4.1",
+                "gpt-4.1",
                 "gpt-4.1"
             ]
         }
@@ -6118,7 +6118,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "gpt-4.1",
@@ -6165,12 +6165,12 @@
             },
             "result": [
                 " Answer2",
-                " Answer2. The response is more concise, yet comprehensible and informative. It accurately explains the process of photosynthesis and its dependence on sunlight for plants to produce energy and grow properly. The language used is clear and easy to understand, providing a better understanding of the topic for the reader.",
+                " Answer2",
                 " Answer2"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "Unknown",
+                "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct"
             ]
         }
@@ -6191,12 +6191,12 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Tie"
+                " Answer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct",
-                "TIE"
+                "Qwen2.5-3B-Instruct"
             ]
         },
         {
@@ -6212,14 +6212,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Tie",
                 " Answer2",
-                " Tie"
+                " Answer2",
+                " Answer2"
             ],
             "extracted_answers": [
-                "TIE",
                 "Qwen2.5-3B-Instruct",
-                "TIE"
+                "Qwen2.5-3B-Instruct",
+                "Qwen2.5-3B-Instruct"
             ]
         }
     ],
@@ -6237,12 +6237,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Tie",
                 " Answer1",
-                " Answer1",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
+                "TIE",
                 "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct"
             ]
@@ -6260,13 +6260,13 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Tie",
-                " Tie",
-                " Answer2"
+                " Answer2",
+                " Answer2",
+                " 'Answer2'"
             ],
             "extracted_answers": [
-                "TIE",
-                "TIE",
+                "Qwen2.5-3B-Instruct",
+                "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct"
             ]
         }
@@ -6308,12 +6308,12 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Answer1",
+                " Tie",
                 " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "gpt-4.1",
+                "TIE",
                 "gpt-4.1",
                 "gpt-4.1"
             ]
@@ -6334,12 +6334,12 @@
             },
             "result": [
                 " Answer1",
-                " Answer1",
+                " Tie\n\nBoth answers provide some useful information about designing a kite for moderate wind conditions. However, Answer1 goes into more detail about the principles of aerodynamics and optimization of kite geometry, while Answer2 focuses more on providing specific measurements for kite dimensions and materials. The clear distinction between the answers comes down to the level of detail in addressing the question. Since neither answer is significantly superior in terms of quality and accuracy, a tie is the optimal choice.",
                 " Answer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct",
+                "TIE",
                 "Qwen2.5-3B-Instruct"
             ]
         },
@@ -6381,12 +6381,12 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
-                " 'Answer1'",
+                " Tie",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
+                "TIE",
                 "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct"
             ]
@@ -6404,8 +6404,8 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Answer1",
-                " Answer1",
+                " 'Answer1'",
+                " 'Answer1'",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -6431,7 +6431,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " Answer1"
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
@@ -6452,14 +6452,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Tie",
+                " 'Answer1'",
                 " Answer1",
-                " Tie"
+                " Answer1"
             ],
             "extracted_answers": [
-                "TIE",
                 "gpt-4.1",
-                "TIE"
+                "gpt-4.1",
+                "gpt-4.1"
             ]
         }
     ],
@@ -6478,13 +6478,13 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1' provides a more comprehensive and systematic approach to troubleshooting a broken torch light. It identifies various potential issues with the circuit, suggests steps to check each problem, and also mentions the possibility of disassembling the torch for a more detailed inspection if necessary. Additionally, it specifically caters to both LED and incandescent bulbs, making it applicable to a wider range of torch models. 'Answer2' also provides valuable suggestions, but it is less organized and lacks the specificity found in 'Answer1'. Therefore, 'Answer1' would be the superior answer in this case.",
-                " Tie\n\nBoth responses provide comprehensive steps for troubleshooting a broken torch light. However, they do offer slightly different perspectives and levels of detail, with Answer1 focusing more on identifying the type of circuit used and potentially working on internal wiring and components, while Answer2 offers practical steps for checking and repairing common issues like batteries, contacts, wires, and the switch. Ultimately, the quality of the answers is comparable, thus a tie is appropriate."
+                " Answer1",
+                " 'Answer1' - The first response provides a more comprehensive and detailed explanation of the process to diagnose and fix a broken torch light. It covers a broader range of potential issues, including different types of bulbs, short-circuits, burnt-out components, and faulty switches. The explanation also includes the possibility of disassembling the torch for a more in-depth inspection, which the second response does not mention. However, both responses adequately explain the general steps to troubleshoot and fix a broken torch light."
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
-                "Unknown",
-                "TIE"
+                "Qwen2.5-3B-Instruct",
+                "Unknown"
             ]
         },
         {
@@ -6500,13 +6500,13 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Tie",
                 " Answer1",
-                " 'Answer1' (The first answer provides more detailed and practical steps to troubleshoot and fix a broken torch light, addressing the hardware issues, such as loose wire connections, corroded battery terminals, and even suggesting testing the switch and checking for short and open circuits. The second answer while nodded towards the right direction, it remains more conceptual, discussing the types of bulbs and circuits without providing as much detail as to the actual troubleshooting and repair process as the first answer.)"
+                " 'Answer1' (The first answer provides a more detailed and practical step-by-step process to fix a broken torch, including dealing with loose or broken connections, using a multimeter for testing, and cleaning battery contacts. It also advises to be careful with electricity, which is an important safety measure. While the second answer is also correct, it is less specific and doesn't go into as much detail, which makes the first answer more useful for the given situation.)",
+                " 'Answer1' (Answer 1 provides a more comprehensive step-by-step guide for troubleshooting and fixing a broken torch light.)"
             ],
             "extracted_answers": [
-                "TIE",
                 "gpt-4.1",
+                "Unknown",
                 "Unknown"
             ]
         }
@@ -6525,9 +6525,9 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " Answer1"
+                " Answer1",
+                " 'Answer1'"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
@@ -6573,14 +6573,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Tie. Both answers provide a comprehensive explanation of the factors that cause tiredness after physical exercise, although Answer2 includes some additional and acceptable details such as the role of water and minerals loss through sweating in dehydration, and the role of nerve exhaustion. However, both answers could be improved by providing clearer citations or referencing scientific studies to affirm their statements and possibly presenting the information in a clearer and more concise manner without compromising its completeness.",
+                " Answer1",
                 " 'Answer1'",
-                " Answer1"
+                " Tie"
             ],
             "extracted_answers": [
-                "Unknown",
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct"
+                "Qwen2.5-3B-Instruct",
+                "TIE"
             ]
         },
         {
@@ -6598,12 +6598,12 @@
             "result": [
                 " Answer1",
                 " 'Answer1'",
-                " Answer1 (for providing a more comprehensive explanation, including additional factors such as dehydration, loss of important minerals, and nervous system fatigue.)"
+                " Answer1"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "Unknown"
+                "gpt-4.1"
             ]
         }
     ],
@@ -6623,7 +6623,7 @@
             "result": [
                 " Answer1",
                 " Answer1",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
                 "Qwen2.5-3B-Instruct",
@@ -6645,7 +6645,7 @@
             },
             "result": [
                 " Answer1",
-                " 'Answer1'",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
@@ -6692,14 +6692,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Tie",
                 " Answer2",
-                " Tie\n\nBoth responses accurately explain why seat belts are necessary in cars using Newton's laws of motion. However, Response 2 seems more concise and precise in its explanation, while Response 1 is comprehensive and easier to understand for those who may not be familiar with physics terms. In this case, the quality of the answers is similar, which warrants a tie."
+                " Answer2",
+                " 'Answer2'"
             ],
             "extracted_answers": [
-                "TIE",
                 "Qwen2.5-3B-Instruct",
-                "TIE"
+                "Qwen2.5-3B-Instruct",
+                "Qwen2.5-3B-Instruct"
             ]
         }
     ],
@@ -6717,13 +6717,13 @@
                 "label": "gpt-4.1"
             },
             "result": [
-                " Answer1",
                 " Tie",
+                " Answer1",
                 " Answer1"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
                 "TIE",
+                "Qwen2.5-3B-Instruct",
                 "Qwen2.5-3B-Instruct"
             ]
         },
@@ -6740,14 +6740,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " Answer2",
-                " 'Answer1'",
-                " Tie"
+                " Answer1",
+                " Answer1 (The response is more concrete, providing specific examples and balanced portion sizes, while also mentioning a 'small amount of healthy fat', which is an important but often overlooked component of a balanced meal.)",
+                " 'Answer1'"
             ],
             "extracted_answers": [
-                "Qwen2.5-3B-Instruct",
                 "gpt-4.1",
-                "TIE"
+                "Unknown",
+                "gpt-4.1"
             ]
         }
     ],
@@ -6765,14 +6765,14 @@
                 "label": "gpt-4.1"
             },
             "result": [
+                " Tie",
                 " Answer1",
-                " 'Answer1'",
-                " Answer1"
+                " Tie"
             ],
             "extracted_answers": [
+                "TIE",
                 "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct",
-                "Qwen2.5-3B-Instruct"
+                "TIE"
             ]
         },
         {
@@ -6788,14 +6788,14 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
-                " 'Answer1'",
                 " Answer1",
-                " Answer1"
+                " Tie",
+                " Tie"
             ],
             "extracted_answers": [
                 "gpt-4.1",
-                "gpt-4.1",
-                "gpt-4.1"
+                "TIE",
+                "TIE"
             ]
         }
     ],
@@ -6814,13 +6814,13 @@
             },
             "result": [
                 " Answer2",
-                " 'Answer2'",
-                " Tie"
+                " Answer2",
+                " Answer2"
             ],
             "extracted_answers": [
                 "gpt-4.1",
                 "gpt-4.1",
-                "TIE"
+                "gpt-4.1"
             ]
         },
         {
@@ -6836,13 +6836,13 @@
                 "label": "Qwen2.5-3B-Instruct"
             },
             "result": [
+                " Tie",
                 " 'Answer1'",
-                " Tie. Both answers provide clear explanations of the condensation process and connect it to the water cycle. They both explain the temperature difference, the cooling of the air, and the formation of water droplets on the outside of the glass. The difference lies in the wording and slight variation in phrasing, which does not significantly affect the quality of the answers.",
-                " 'Answer1'"
+                " Answer1"
             ],
             "extracted_answers": [
+                "TIE",
                 "gpt-4.1",
-                "Unknown",
                 "gpt-4.1"
             ]
         }

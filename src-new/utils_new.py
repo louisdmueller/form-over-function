@@ -102,19 +102,27 @@ def prepare_question_with_intro(
         style (str): The style of the question, e.g., 'aave' or 'sae'.
 
     """
-    if style == "aave":
+    logger = logging.getLogger()
+    if style in ["aave", "aae"]:
+        logger.debug("Using AAVE/AAE style for question.")
         return (
             "Hey, I'm stuck on this question and was wonderin' if you could help me out. So, the question go: "
             + str(question)
         )
-    elif style == "sae":
+    elif style in ["sae", ""]:
+        logger.debug("Using SAE/Default style for question.")
         return (
             "Hi there, I'm a bit stuck on a question and was wondering if you could help me out. Here's the question: "
             + str(question)
         )
+    elif style == "simple":
+        logger.debug("Using Simple style for question.")
+        return (
+            "Hi, I'm stuck on a question and need your help. Here it is: "
+            + str(question)
+        )
     else:
-        logging.error(f"Unknown style '{style}' for question. No introductory text added.")
-        return question
+        raise Exception(f"Unknown style '{style}' for question. No introductory text added.")
 
 
 def get_judgements_path(
