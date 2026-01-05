@@ -11,24 +11,15 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Tuple
 
-# from get_next_task import get_next_valid_task, mark_task
-from get_next_task_new import (
-    get_next_meta_task_filepath,
-    get_next_not_finished_task_with_base_data_variant,
-    mark_variant_as_done,
-    mark_variant_as_submitted,
-)
-from model_new import get_model
 from tqdm import tqdm
 
 from evaluation.create_overview_xlsx import create_excel_overview
 from model import get_model
-
-# from get_next_task import get_next_valid_task, mark_task
 from utils.tasks.get_next_task_new import (
     get_next_meta_task_filepath,
     get_next_not_finished_task_with_base_data_variant,
     mark_variant_as_done,
+    mark_variant_as_submitted,
 )
 from utils.utils import (
     TimeBasedTimeoutHandler,

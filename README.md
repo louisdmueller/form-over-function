@@ -2,7 +2,11 @@
 
 Currently this project uses Python version 3.12.10. 
 
-This project uses venv. To create a venv execute `python -m venv venv`. Activate it via `source venv/bin/activate` and install the packages via `pip install -r requirements.txt`.
+
+It is recommended to create a virtual environment to run the code in this project. 
+You can use venv or conda. To create a venv execute `python -m venv venv`. Activate it via `source venv/bin/activate` and install the packages via `pip install -r requirements.txt`.
+
+To create a conda environment execute `conda env create -f environment.yml`. Activate it via `conda activate venv`.
 
 To access the newest Llama models one needs to accept the Meta tos on HuggingFace Hub and provide an api key. Create a file `config.yml` in the following format:
 ```yaml
@@ -16,22 +20,22 @@ openai_key: <key>
 
 ---
 
-For better project structure, we use multiple scripts to handle different tasks:
+For better project structure, we use multiple scripts to handle different tasks. Always run the scripts from the project root:
 
 ## Generating data and (optionally) translating it to AAE
 ```bash
-bash generate_data.sh [answer_generation_model] [aae_conversion_model]
+bash scripts/slurm/start-generate-data.sh [answer_generation_model]
 ```
 
 ## Generating the models judgements
 (Local)
 ```bash
-bash generate_judgements.sh
+bash scripts/bash/generate_judgements.sh
 ```
 
 (SLURM Cluster)
 ```bash
-sbatch start-generate-judgements.sh
+sbatch scripts/slurm/start-generate-judgements.sh
 ```
 
 ## Evaluating the models judgements
