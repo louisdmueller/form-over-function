@@ -10,7 +10,7 @@ from prompts import (
     error_prompt,
     simple_prompt,
 )
-from utils import read_file, write_file
+from utils.utils import read_data_file, write_file
 
 
 def rewrite_answers(
@@ -28,7 +28,7 @@ def rewrite_answers(
         config=config,
     )
 
-    original_dicts = read_file(src_file)
+    original_dicts = read_data_file(src_file)
     new_dicts = [dict(dictionary) for dictionary in original_dicts]
 
     texts = [
@@ -99,7 +99,7 @@ def rewrite_onestopqa(
     prompt_type: str = "simple",
     outfile: str = "data/readability_metrics/onestopqa_test_data/simple_prompt.json",
 ) -> None:
-    from calculate_readability_metrics import load_onestopqa
+    from evaluation.calculate_readability_metrics import load_onestopqa
     with open("config.yml", "r") as file:
         config = yaml.safe_load(file)
 
