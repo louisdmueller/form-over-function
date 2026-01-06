@@ -1,0 +1,12 @@
+huggingface_hub_token: <your_token_here>
+openai_key: <your_token_here>
+anthropic_api_key: <your_token_here>
+gemini_api_key: <your_token_here>
+gemini_project_id: <your_project_id_here>
+gemini_input_bucket: <your_bucket_here>
+batch_size: 8
+cache_dir: <cache workspace dir for bwUniCluster 3.0>
+do_sample: true
+judgement_files_directory: judgements
+excel_output_directory: judgements/excel_overviews
+run_info_csv_path: judgements/job_infos.csv
