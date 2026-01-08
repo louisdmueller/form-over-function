@@ -35,5 +35,5 @@ if python src/utils/tasks/check_all_metatasks_finished.py ; then
 else
     conda deactivate
     module unload devel/miniforge
-    sbatch scripts/slurm/start-vllm-judgements.sh
+    sbatch scripts/slurm/start-generate-judgements.sh
 fi
