@@ -1,0 +1,50 @@
+{
+    "1": {
+        "path": "tasks_files/tasks_Qwen3-Next-80B-A3B-Instruct.json",
+        "status": "FINISHED"
+    },
+    "2": {
+        "path": "tasks_files/tasks_Qwen3-4B-Instruct-2507.json",
+        "status": "FINISHED"
+    },
+    "5": {
+        "path": "tasks_files/tasks_Llama-3.3-70B-Instruct.json",
+        "status": "FINISHED"
+    },
+    "6": {
+        "path": "tasks_files/tasks_Llama-3.1-8B-Instruct.json",
+        "status": "FINISHED"
+    },
+    "7": {
+        "path": "tasks_files/tasks_Mistral-Small-3.2-24B-Instruct-2506.json",
+        "status": "FINISHED"
+    },
+    "8": {
+        "path": "tasks_files/tasks_phi-4.json",
+        "status": "FINISHED"
+    },
+    "9": {
+        "path": "tasks_files/tasks_Mistral-7B-Instruct-v0.3.json",
+        "status": "FINISHED"
+    },
+    "_comment": [
+        "meta-llama/Llama-3.1-8B",
+        "meta-llama/Llama-3.1-70B",
+        "Llama-3.2-3B-Instruct",
+        "https://huggingface.co/collections/meta-llama/llama-4",
+        "mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+        "Qwen2.5-72B-Instruct",
+        "mistralai/Mistral-7B-Instruct-v0.3"
+    ],
+    "_currently_not_used": {
+        "3": {
+            "path": "tasks_files/tasks_gpt-oss-120b.json",
+            "status": "NOT_FINISHED",
+            "_reason": "MXFP4 quantization + Triton Kernels...., didnt bother to invest much time"
+        },
+        "4": {
+            "path": "tasks_files/tasks_gpt-oss-20b.json",
+            "status": "NOT_FINISHED"
+        }
+    }
+}

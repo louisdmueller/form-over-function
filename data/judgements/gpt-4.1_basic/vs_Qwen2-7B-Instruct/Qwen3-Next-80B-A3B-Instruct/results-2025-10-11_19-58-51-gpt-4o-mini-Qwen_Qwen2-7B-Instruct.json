@@ -1,0 +1,681 @@
+{
+    "metadata": {
+        "judge_model": "Qwen/Qwen3-Next-80B-A3B-Instruct",
+        "data_1_path": "data/generated_answers/gpt-4.1-answers_basic.json",
+        "data_2_path": "data/generated_answers/Qwen2-7B-Instruct-answers.json",
+        "prompt_name": "directly_answer_question_without_cot",
+        "comment": ""
+    },
+    "41": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'Will you say what part the Sun has in our solar system?'",
+            "answer1": {
+                "text": "The Sun is the main star of our solar system. It gives the power needed for life on Earth through its light and heat. The Sun\u2019s pull keeps the planets, comets, and asteroids in their paths around it, controlling their movements. Its power drives weather and climate on Earth. The Sun also makes solar wind, which changes the space around the solar system. Without the Sun, Earth would be too cold for life, and the planets would not stay in their paths. The Sun is important to the form and work of the solar system.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "The Sun is the central star of our solar system, serving as the primary source of light and energy for Earth and all other planets. Its gravitational force holds the solar system together, determining the orbits of planets, moons, and other celestial bodies. The Sun's nuclear fusion reactions, converting hydrogen into helium, generate immense heat and light, sustaining life on Earth. It also influences weather patterns, drives the water cycle, and is crucial for photosynthesis in plants. Without the Sun, life as we know it would not exist on Earth.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer2",
+                "Both Answer1 and Answer2 are accurate, well-structured, and cover the Sun\u2019s key roles in the solar system: providing light and heat, exerting gravitational control, and enabling life on Earth. However, Answer2 is slightly superior because it includes more precise scientific detail\u2014specifically mentioning *nuclear fusion reactions converting hydrogen into helium*\u2014which adds depth and technical accuracy. It also more concisely connects the Sun\u2019s energy output to critical Earth processes like the water cycle and photosynthesis, enhancing the completeness of the explanation without redundancy.\n\nAnswer1 is clear and correct but lacks this level of scientific specificity and slightly repeats ideas (e.g., mentioning solar wind without elaborating on its significance beyond \u201cchanges the space around the solar system\u201d).\n\nThus, Answer2 demonstrates higher semantic quality through greater accuracy, depth, and precision.\n\nAnswer2",
+                "Both Answer1 and Answer2 are accurate, well-structured, and cover the Sun\u2019s key roles in the solar system: providing light and heat, exerting gravitational control, and enabling life on Earth. However, Answer2 is slightly superior because it includes more precise scientific detail\u2014specifically mentioning *nuclear fusion reactions converting hydrogen into helium*\u2014which adds depth and technical accuracy. It also more concisely connects the Sun\u2019s energy output to critical Earth processes like the water cycle and photosynthesis, enhancing the completeness of the explanation without redundancy.\n\nAnswer1 is clear and correct but lacks this level of scientific specificity and slightly repeats ideas (e.g., mentioning solar wind without elaborating on its significance beyond \u201cchanges the space around the solar system\u201d).\n\nThus, Answer2 demonstrates higher semantic quality through greater precision and depth.\n\nAnswer2"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'Will you say what part the Sun has in our solar system?'",
+            "answer1": {
+                "text": "The Sun is the central star of our solar system, serving as the primary source of light and energy for Earth and all other planets. Its gravitational force holds the solar system together, determining the orbits of planets, moons, and other celestial bodies. The Sun's nuclear fusion reactions, converting hydrogen into helium, generate immense heat and light, sustaining life on Earth. It also influences weather patterns, drives the water cycle, and is crucial for photosynthesis in plants. Without the Sun, life as we know it would not exist on Earth.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "The Sun is the main star of our solar system. It gives the power needed for life on Earth through its light and heat. The Sun\u2019s pull keeps the planets, comets, and asteroids in their paths around it, controlling their movements. Its power drives weather and climate on Earth. The Sun also makes solar wind, which changes the space around the solar system. Without the Sun, Earth would be too cold for life, and the planets would not stay in their paths. The Sun is important to the form and work of the solar system.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Answer1 is superior because it provides a more detailed, accurate, and scientifically nuanced explanation. It explicitly mentions nuclear fusion as the source of the Sun\u2019s energy, clarifies the conversion of hydrogen into helium, and links the Sun\u2019s role to specific Earth systems like the water cycle and photosynthesis. It also uses more precise language (e.g., \u201cgravitational force holds the solar system together\u201d) and conveys a deeper understanding of the Sun\u2019s multifaceted role. While Answer2 is correct and coherent, it is more general and lacks the depth and specificity of Answer1.\n\nAnswer1",
+                "Answer1 is superior because it provides a more detailed, accurate, and scientifically nuanced explanation. It explicitly mentions nuclear fusion as the source of the Sun\u2019s energy, clarifies the conversion of hydrogen into helium, and links the Sun\u2019s role to specific Earth systems like the water cycle and photosynthesis. It also uses more precise language (e.g., \u201cgravitational force holds the solar system together\u201d) and conveys a deeper understanding of the Sun\u2019s multifaceted role. While Answer2 is correct and coherent, it is more general and lacks the depth and specificity that make Answer1 more informative and authoritative.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        }
+    ],
+    "42": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'What is the difference between the inner planets and the outer planets?'",
+            "answer1": {
+                "text": "The inner planets, also called land planets, are Mercury, Venus, Earth, and Mars. They are small, rocky, and have few or no moons. The outer planets are Jupiter, Saturn, Uranus, and Neptune. These are called gas giants (except for Uranus and Neptune, which are also known as ice giants). They are much larger, made mostly of gas, have many moons, and have rings. Inner planets have a hard surface and are found closer to the Sun, while outer planets are farther from the Sun and do not have a true hard surface.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "Inner planets, comprising Mercury, Venus, Earth, and Mars, are closer to the Sun. They are smaller, denser, and rocky. Outer planets, including Jupiter, Saturn, Uranus, and Neptune, are farther from the Sun. They are larger, less dense, and gaseous, with prominent atmospheres and no solid surface.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer1",
+                "Answer1 provides a more comprehensive and nuanced explanation. It correctly identifies the inner planets as \"rocky\" and notes their proximity to the Sun, number of moons, and solid surfaces. It also accurately distinguishes the outer planets by categorizing Jupiter and Saturn as gas giants and Uranus and Neptune as ice giants \u2014 a detail that adds scientific precision. Additionally, it mentions planetary rings, which are a key feature of the outer planets (especially Saturn), and clarifies the absence of a \"true hard surface\" in the outer planets.\n\nAnswer2 is accurate but more concise and omits important distinctions such as the ice giants classification, the presence of rings, and the number of moons \u2014 all of which are relevant to understanding the full difference between inner and outer planets.\n\nTherefore, Answer1 is superior in terms of depth, accuracy, and completeness.\n\nAnswer1",
+                "Answer1 provides a more comprehensive and nuanced explanation. It correctly identifies the inner planets as \"rocky\" and notes their proximity to the Sun, number of moons, and solid surfaces. It also accurately distinguishes the outer planets by categorizing Jupiter and Saturn as gas giants and Uranus and Neptune as ice giants \u2014 a detail that adds scientific precision. Additionally, it mentions planetary rings, which are a key feature of the outer planets (especially Saturn), and clarifies the absence of a \"true hard surface\" in the outer planets.\n\nAnswer2 is accurate but more concise and omits important distinctions such as the ice giants classification, the presence of rings, and the number of moons \u2014 all of which are relevant to understanding the full difference between inner and outer planets.\n\nTherefore, Answer1 offers superior depth and accuracy.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'What is the difference between the inner planets and the outer planets?'",
+            "answer1": {
+                "text": "Inner planets, comprising Mercury, Venus, Earth, and Mars, are closer to the Sun. They are smaller, denser, and rocky. Outer planets, including Jupiter, Saturn, Uranus, and Neptune, are farther from the Sun. They are larger, less dense, and gaseous, with prominent atmospheres and no solid surface.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "The inner planets, also called land planets, are Mercury, Venus, Earth, and Mars. They are small, rocky, and have few or no moons. The outer planets are Jupiter, Saturn, Uranus, and Neptune. These are called gas giants (except for Uranus and Neptune, which are also known as ice giants). They are much larger, made mostly of gas, have many moons, and have rings. Inner planets have a hard surface and are found closer to the Sun, while outer planets are farther from the Sun and do not have a true hard surface.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer2",
+                "Answer2 is superior because it provides more detailed and nuanced information. It correctly distinguishes between gas giants and ice giants for the outer planets, mentions the presence of rings (a key feature of the outer planets), and notes the number of moons as a distinguishing factor. It also accurately describes the surface characteristics and relative distances. While Answer1 is correct and concise, Answer2 offers a richer, more comprehensive explanation without sacrificing clarity or accuracy.\n\nAnswer2",
+                "Answer2 is superior because it provides more detailed and nuanced information. It correctly distinguishes between gas giants and ice giants for the outer planets, mentions the presence of rings (a key feature of the outer planets), and notes the number of moons as a distinguishing factor. It also accurately describes the surface characteristics and relative distances. While Answer1 is correct and concise, Answer2 offers a richer, more comprehensive explanation without sacrificing accuracy.\n\nAnswer2"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        }
+    ],
+    "43": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "Give a short account of the story of 'Harry Potter and the Philosopher's Stone.'",
+            "answer1": {
+                "text": "Harry Potter, a boy without parents living with his cruel family, finds out on his eleventh birthday that he is a wizard. He goes to Hogwarts School of Witchcraft and Wizardry, where he makes friends and learns about his parents\u2019 strange deaths. Harry, with his friends Ron and Hermione, discovers the secret of the Philosopher\u2019s Stone and keeps it safe from the dark wizard Voldemort, who killed his parents and wants to live forever. With courage and teamwork, they stop Voldemort from coming back, and Harry starts to accept his place in the magical world.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "In 'Harry Potter and the Philosopher's Stone', young orphan Harry discovers he's a wizard on his 11th birthday. Sent to Hogwarts School of Witchcraft and Wizardry, he befriends Ron and Hermione. Voldemort, an evil wizard, seeks the Philosopher's Stone to regain his body. At Hogwarts, Harry, Ron, and Hermione thwart Voldemort's plans, protect the Stone, and save the school.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer1",
+                "Answer1 is superior because it provides a more detailed and nuanced account of the story. It includes key emotional and thematic elements\u2014such as Harry\u2019s difficult upbringing, the mystery of his parents\u2019 deaths, his journey of self-acceptance, and Voldemort\u2019s motive to achieve immortality\u2014which enrich the narrative beyond mere plot points. While Answer2 is accurate and concise, it lacks depth and omits important context that gives the story its emotional weight. Answer1 better captures the spirit and significance of the novel\u2019s events.\n\nAnswer1",
+                "Answer1 is superior because it provides a more detailed and nuanced account of the story. It includes key emotional and thematic elements\u2014such as Harry\u2019s difficult upbringing, the mystery of his parents\u2019 deaths, his journey of self-acceptance, and Voldemort\u2019s motive to achieve immortality\u2014which enrich the narrative beyond mere plot points. While Answer2 is accurate and concise, it lacks depth and omits important context that gives the story its emotional weight. Answer1 better captures the essence of the novel\u2019s beginning and Harry\u2019s personal growth.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "Give a short account of the story of 'Harry Potter and the Philosopher's Stone.'",
+            "answer1": {
+                "text": "In 'Harry Potter and the Philosopher's Stone', young orphan Harry discovers he's a wizard on his 11th birthday. Sent to Hogwarts School of Witchcraft and Wizardry, he befriends Ron and Hermione. Voldemort, an evil wizard, seeks the Philosopher's Stone to regain his body. At Hogwarts, Harry, Ron, and Hermione thwart Voldemort's plans, protect the Stone, and save the school.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "Harry Potter, a boy without parents living with his cruel family, finds out on his eleventh birthday that he is a wizard. He goes to Hogwarts School of Witchcraft and Wizardry, where he makes friends and learns about his parents\u2019 strange deaths. Harry, with his friends Ron and Hermione, discovers the secret of the Philosopher\u2019s Stone and keeps it safe from the dark wizard Voldemort, who killed his parents and wants to live forever. With courage and teamwork, they stop Voldemort from coming back, and Harry starts to accept his place in the magical world.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer2",
+                "Answer2 is superior because it provides more nuanced and emotionally resonant details\u2014such as Harry\u2019s difficult upbringing, the significance of his parents\u2019 deaths, and his personal journey toward accepting his identity in the magical world. It also more clearly connects Voldemort\u2019s motive (to live forever) to the Philosopher\u2019s Stone and explicitly ties his past actions (killing Harry\u2019s parents) to the present conflict. While Answer1 is accurate and concise, Answer2 offers richer context and a more complete narrative arc, enhancing the storytelling quality without unnecessary elaboration.\n\nAnswer2",
+                "Answer2 is superior because it provides more nuanced and emotionally resonant details\u2014such as Harry\u2019s difficult upbringing, the significance of his parents\u2019 deaths, and his personal journey toward accepting his identity in the magical world. It also more clearly connects Voldemort\u2019s motive (to live forever) to the Philosopher\u2019s Stone and explicitly ties his past actions (killing Harry\u2019s parents) to the present conflict. While Answer1 is accurate and concise, Answer2 offers richer context and a more complete narrative arc, enhancing the storytelling quality without unnecessary fluff.\n\nAnswer2"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        }
+    ],
+    "44": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'What does it mean by 'World Heat'?'",
+            "answer1": {
+                "text": "Global warming is the long time rise in Earth's average surface heat because of human actions, mainly the getting out of greenhouse gases like carbon dioxide and methane from burning fossil fuels, cutting down trees, and factory work. This rise leads to climate changes, such as melting ice caps, rising sea levels, and more extreme weather events. Global warming puts ecosystems, human health, and food safety at risk, and needs quick action to lessen emissions and use sustainable ways to care for the planet and future generations.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "Global Warming refers to the long-term rise in Earth's average surface temperature due to human activities, primarily the emission of greenhouse gases like carbon dioxide and methane. These gases trap heat from the sun in the Earth's atmosphere, leading to a gradual increase in global temperatures. This phenomenon results from the burning of fossil fuels, deforestation, and industrial processes. The consequences include melting ice caps, rising sea levels, more extreme weather events, and impacts on ecosystems and wildlife. Efforts to mitigate global warming involve reducing greenhouse gas emissions, increasing renewable energy sources, and promoting sustainable practices.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer2",
+                "Both Answer1 and Answer2 provide accurate and comprehensive explanations of global warming, which appears to be the intended meaning behind the ambiguous term \u201cWorld Heat.\u201d However, Answer2 is slightly superior in quality due to its clearer structure, more precise phrasing, and better flow. It explicitly explains *how* greenhouse gases cause warming (\u201ctrap heat from the sun\u201d), which adds a layer of scientific clarity. Additionally, Answer2 avoids minor grammatical issues present in Answer1, such as \u201cgetting out of greenhouse gases\u201d (should be \u201crelease\u201d or \u201cemission of\u201d) and \u201cfactory work\u201d (less precise than \u201cindustrial processes\u201d).\n\nAnswer2 also uses more consistent and professional terminology throughout, making it more suitable for an educational or informative context.\n\n**Answer2**",
+                "Both Answer1 and Answer2 provide accurate and comprehensive explanations of global warming, which appears to be the intended meaning behind the ambiguous term \u201cWorld Heat.\u201d However, Answer2 is slightly superior in quality due to its clearer structure, more precise phrasing, and better flow. It explicitly explains *how* greenhouse gases cause warming (\u201ctrap heat from the sun\u201d), which adds a layer of scientific clarity. Additionally, Answer2 avoids minor grammatical issues present in Answer1, such as \u201cgetting out of greenhouse gases\u201d (should be \u201crelease\u201d or \u201cemission of\u201d) and \u201cfactory work\u201d (less precise than \u201cindustrial processes\u201d).\n\nAnswer2 also uses more consistent and professional terminology throughout, making it more suitable for an educational or informational context.\n\n**Answer2**"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Unknown",
+                "Unknown"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'What does it mean by 'World Heat'?'",
+            "answer1": {
+                "text": "Global Warming refers to the long-term rise in Earth's average surface temperature due to human activities, primarily the emission of greenhouse gases like carbon dioxide and methane. These gases trap heat from the sun in the Earth's atmosphere, leading to a gradual increase in global temperatures. This phenomenon results from the burning of fossil fuels, deforestation, and industrial processes. The consequences include melting ice caps, rising sea levels, more extreme weather events, and impacts on ecosystems and wildlife. Efforts to mitigate global warming involve reducing greenhouse gas emissions, increasing renewable energy sources, and promoting sustainable practices.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "Global warming is the long time rise in Earth's average surface heat because of human actions, mainly the getting out of greenhouse gases like carbon dioxide and methane from burning fossil fuels, cutting down trees, and factory work. This rise leads to climate changes, such as melting ice caps, rising sea levels, and more extreme weather events. Global warming puts ecosystems, human health, and food safety at risk, and needs quick action to lessen emissions and use sustainable ways to care for the planet and future generations.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Answer1 is superior because it provides a more precise, well-structured, and scientifically accurate explanation. It clearly defines global warming as the long-term rise in Earth\u2019s average surface temperature, explicitly links it to greenhouse gas emissions from specific human activities (fossil fuels, deforestation, industrial processes), and details the consequences with greater clarity (melting ice caps, rising sea levels, extreme weather, ecosystem impacts). It also includes a concise mention of mitigation strategies, enhancing its completeness.\n\nAnswer2 is largely correct but contains less precise phrasing (\u201clong time rise\u201d instead of \u201clong-term rise,\u201d \u201cgetting out\u201d instead of \u201cemission,\u201d \u201cfactory work\u201d instead of \u201cindustrial processes\u201d) and lacks the same level of clarity and flow. While it covers similar points, its language is more colloquial and less polished, reducing its overall quality.\n\nThus, Answer1 demonstrates higher semantic quality, accuracy, and coherence.\n\nAnswer1",
+                "Answer1 is superior because it provides a more precise, well-structured, and scientifically accurate explanation. It clearly defines global warming as the long-term rise in Earth\u2019s average surface temperature, explicitly links it to greenhouse gas emissions from specific human activities (fossil fuels, deforestation, industrial processes), and details the consequences with greater clarity (melting ice caps, rising sea levels, extreme weather, ecosystem impacts). It also includes a concise mention of mitigation strategies, enhancing its completeness.\n\nAnswer2 is largely correct but contains less precise phrasing (\u201clong time rise\u201d instead of \u201clong-term rise,\u201d \u201cgetting out\u201d instead of \u201cemission,\u201d \u201cfactory work\u201d instead of \u201cindustrial processes\u201d) and lacks the same level of clarity and flow. While it covers similar points, its language is more colloquial and less polished, reducing its overall quality.\n\nThus, Answer1 demonstrates higher semantic quality in accuracy, clarity, and depth.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        }
+    ],
+    "45": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'Can you give an explanation of the process of making food in plants?'",
+            "answer1": {
+                "text": "Photosynthesis is the way green plants, algae, and some bacteria use sunlight to make food. It happens mostly in chloroplasts. Plants take in carbon dioxide from the air and water from the soil. With sunlight energy held by chlorophyll, they change these into glucose and oxygen. The simple equation is carbon dioxide plus water, with light and chlorophyll, makes glucose and oxygen. The glucose is used for energy and growth, while oxygen is let out as a byproduct into the air.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "Photosynthesis is a process used by plants, algae, and certain bacteria to convert light energy into chemical energy. Photosynthesis occurs in the chloroplasts of plant cells. The process can be divided into two main stages: the light-dependent reactions and the Calvin cycle (light-independent reactions). In the light-dependent reactions, light energy is captured by chlorophyll and converted into chemical energy in the form of ATP and NADPH. Water is split in this process, releasing oxygen as a byproduct. The ATP and NADPH produced are then used in the Calvin cycle to convert carbon dioxide into glucose. This cycle involves the fixation of carbon dioxide, reduction to produce sugar, and regeneration of the starting molecule, ribulose bisphosphate (RuBP). Photosynthesis is crucial for life on Earth as it provides the primary energy source for nearly all ecosystems and releases oxygen into the atmosphere.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer2",
+                "Answer2\n\nAnswer2 provides a more detailed, accurate, and scientifically comprehensive explanation of photosynthesis. It correctly identifies the two main stages (light-dependent reactions and the Calvin cycle), explains the roles of ATP and NADPH, mentions key molecules like RuBP, and clarifies the biochemical steps involved in carbon fixation and sugar production. It also contextualizes the importance of photosynthesis for life on Earth. \n\nAnswer1 is correct in its basic summary but lacks depth, omits critical intermediates (ATP, NADPH, RuBP), and oversimplifies the process into a single equation without distinguishing the mechanistic stages. While sufficient for a basic overview, Answer2 demonstrates superior semantic quality, precision, and educational value.\n\nAnswer2",
+                "Answer2\n\nAnswer2 provides a more detailed, accurate, and scientifically comprehensive explanation of photosynthesis. It correctly identifies the two main stages (light-dependent reactions and the Calvin cycle), explains the roles of ATP and NADPH, mentions key molecules like RuBP, and clarifies the biochemical steps involved in carbon fixation and sugar production. It also contextualizes the importance of photosynthesis for life on Earth. \n\nAnswer1 is correct in its basic summary but lacks depth, omits critical intermediates (ATP, NADPH, RuBP), and oversimplifies the process into a single equation without distinguishing the mechanistic stages. While adequate for a basic overview, Answer2 demonstrates superior semantic quality, precision, and educational value.\n\nAnswer2"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'Can you give an explanation of the process of making food in plants?'",
+            "answer1": {
+                "text": "Photosynthesis is a process used by plants, algae, and certain bacteria to convert light energy into chemical energy. Photosynthesis occurs in the chloroplasts of plant cells. The process can be divided into two main stages: the light-dependent reactions and the Calvin cycle (light-independent reactions). In the light-dependent reactions, light energy is captured by chlorophyll and converted into chemical energy in the form of ATP and NADPH. Water is split in this process, releasing oxygen as a byproduct. The ATP and NADPH produced are then used in the Calvin cycle to convert carbon dioxide into glucose. This cycle involves the fixation of carbon dioxide, reduction to produce sugar, and regeneration of the starting molecule, ribulose bisphosphate (RuBP). Photosynthesis is crucial for life on Earth as it provides the primary energy source for nearly all ecosystems and releases oxygen into the atmosphere.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "Photosynthesis is the way green plants, algae, and some bacteria use sunlight to make food. It happens mostly in chloroplasts. Plants take in carbon dioxide from the air and water from the soil. With sunlight energy held by chlorophyll, they change these into glucose and oxygen. The simple equation is carbon dioxide plus water, with light and chlorophyll, makes glucose and oxygen. The glucose is used for energy and growth, while oxygen is let out as a byproduct into the air.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Answer1\n\nAnswer1 provides a more detailed, accurate, and scientifically comprehensive explanation of photosynthesis. It correctly identifies the two main stages (light-dependent reactions and Calvin cycle), explains the role of ATP and NADPH, mentions RuBP regeneration, and clarifies the biochemical transformations involved. It also contextualizes the importance of photosynthesis for ecosystems and atmospheric oxygen.\n\nAnswer2 is correct in its basic premises but is significantly simplified. While it captures the essence of photosynthesis, it lacks depth, omits key intermediates and mechanisms, and presents the process as a single-step equation without explaining the underlying biochemistry.\n\nFor semantic quality \u2014 accuracy, completeness, and depth \u2014 Answer1 is superior.\n\nAnswer1",
+                "Answer1\n\nAnswer1 provides a more detailed, accurate, and scientifically comprehensive explanation of photosynthesis. It correctly identifies the two main stages (light-dependent reactions and Calvin cycle), explains the role of ATP and NADPH, mentions RuBP regeneration, and clarifies the biochemical transformations involved. It also contextualizes the importance of photosynthesis for ecosystems and atmospheric oxygen.\n\nAnswer2 is correct in its basic premises but is significantly simplified. While it captures the essence of photosynthesis, it lacks depth, omits key intermediates and mechanisms, and presents the process as a single-step equation without explaining the underlying biochemistry.\n\nFor semantic quality \u2014 accuracy, completeness, and depth \u2014 Answer1 is clearly superior.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        }
+    ],
+    "46": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'What does a plant man study?'",
+            "answer1": {
+                "text": "A plant man studies plants. This is about their form, growth, making more, changes, sickness, chemical properties, and family ties. Plant men may focus on special types of plants, such as flowering plants, green plants, or mushrooms. They often look at how plants get on with their surroundings and other living things. Their work helps in areas such as farming, saving nature, health, and protecting the environment. By knowing plant life, plant men add to discoveries that help food making, nature management, and the making of new medicines and materials.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "A botanist studies plants, including their structure, growth, classification, and distribution. They explore various aspects like plant anatomy, physiology, genetics, and ecology. Botanists also investigate plant diseases, interactions with other organisms, and the impact of environmental factors. Their research contributes to fields like agriculture, forestry, conservation, and medicine. Some specialize in specific areas such as aquatic plants, fungi, or plant biochemistry.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer2",
+                "Answer2\n\nAnswer2 is superior because it uses precise, scientifically accurate terminology (\u201cbotanist,\u201d \u201canatomy,\u201d \u201cphysiology,\u201d \u201cgenetics,\u201d \u201cecology\u201d) and provides a clear, concise, and professional description of the field. It correctly identifies the formal term for someone who studies plants and organizes the information logically with relevant subfields and applications.\n\nAnswer1, while not incorrect, uses the informal and non-standard term \u201cplant man,\u201d which is not a recognized scientific title. It also lacks precision in phrasing (\u201cmaking more,\u201d \u201cfamily ties,\u201d \u201cget on with their surroundings\u201d) and reads more like a simplified explanation rather than an accurate description of a scientific discipline.\n\nThe semantic quality, accuracy, and professionalism of Answer2 make it clearly superior.\n\nAnswer2",
+                "Answer2\n\nAnswer2 is superior because it uses precise, scientifically accurate terminology (\u201cbotanist,\u201d \u201canatomy,\u201d \u201cphysiology,\u201d \u201cgenetics,\u201d \u201cecology\u201d) and provides a clear, concise, and professional description of the field. It correctly identifies the formal term for someone who studies plants and organizes the information logically with relevant subfields and applications.\n\nAnswer1, while not incorrect, uses the informal and non-standard term \u201cplant man,\u201d which is not a recognized scientific title. It also lacks precision in phrasing (\u201cmaking more,\u201d \u201cfamily ties,\u201d \u201cget on with their surroundings\u201d) and reads more like a simplified explanation rather than an accurate description of a scientific discipline.\n\nThe semantic quality \u2014 accuracy, clarity, and professionalism \u2014 is significantly higher in Answer2.\n\nAnswer2"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'What does a plant man study?'",
+            "answer1": {
+                "text": "A botanist studies plants, including their structure, growth, classification, and distribution. They explore various aspects like plant anatomy, physiology, genetics, and ecology. Botanists also investigate plant diseases, interactions with other organisms, and the impact of environmental factors. Their research contributes to fields like agriculture, forestry, conservation, and medicine. Some specialize in specific areas such as aquatic plants, fungi, or plant biochemistry.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "A plant man studies plants. This is about their form, growth, making more, changes, sickness, chemical properties, and family ties. Plant men may focus on special types of plants, such as flowering plants, green plants, or mushrooms. They often look at how plants get on with their surroundings and other living things. Their work helps in areas such as farming, saving nature, health, and protecting the environment. By knowing plant life, plant men add to discoveries that help food making, nature management, and the making of new medicines and materials.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Answer1\n\nAnswer1 is superior because it uses precise, scientifically accurate terminology (\"botanist,\" \"anatomy,\" \"physiology,\" \"genetics,\" \"ecology,\" \"biochemistry\") and clearly defines the professional field with appropriate context and scope. It also correctly identifies the formal term for someone who studies plants, avoiding the non-standard and colloquial phrase \"plant man,\" which is not a recognized scientific title.\n\nAnswer2, while conceptually accurate in content, uses informal, imprecise language (\"plant man,\" \"making more,\" \"family ties,\" \"get on with\") that undermines its credibility and professionalism. The phrasing sounds like a simplified or childlike explanation, and the term \"plant man\" is misleading\u2014it implies a non-professional or fictional role rather than a legitimate scientific discipline.\n\nSemantic quality favors clarity, accuracy, and appropriate terminology\u2014Answer1 excels in all three.\n\nAnswer1",
+                "Answer1\n\nAnswer1 is superior because it uses precise, scientifically accurate terminology (\"botanist,\" \"anatomy,\" \"physiology,\" \"genetics,\" \"ecology,\" \"biochemistry\") and clearly defines the professional field with appropriate context and scope. It also correctly identifies the formal term for someone who studies plants, avoiding the non-standard and colloquial phrase \"plant man,\" which is not a recognized scientific title.\n\nAnswer2, while conceptually accurate in content, uses informal, imprecise language (\"plant man,\" \"making more,\" \"family ties,\" \"get on with\") that undermines its credibility and professionalism. The phrasing sounds like a simplified or childlike explanation rather than a serious academic description.\n\nSemantic quality \u2014 clarity, accuracy, and appropriateness of terminology \u2014 favors Answer1.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        }
+    ],
+    "47": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "How will you make a plan for a recycling push to help keep the earth safe at your school?",
+            "answer1": {
+                "text": "To make a recycling plan at my school, I would start by making an eco-club with students and teachers who care. We would make bright posters and put them around the school to share facts about recycling and its good points. We would set up clear bins for paper, plastic, and metal in classrooms and shared places. Our club would get people to announce every week to remind students and staff to recycle right. We would have fun contests between classes to see who can recycle the most, with small rewards. Also, we would ask local experts to give talks or classes about recycling and cutting waste. To keep everyone involved, we would share monthly news on how much waste we have recycled as a school. The plan would focus on working together, learning, and making recycling a daily habit for all.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "Designing an effective recycling campaign to promote environmental awareness in a school involves several key steps:\n\n1. **Education and Awareness**: Begin by educating students about the importance of recycling and its impact on the environment. Use posters, presentations, and interactive sessions to highlight the benefits of recycling, such as reducing waste in landfills, conserving resources, and saving energy.\n\n2. **Clear Guidelines**: Develop clear, concise guidelines on what can and cannot be recycled. Ensure these are easily accessible and prominently displayed around the school, including in classrooms, common areas, and near recycling bins.\n\n3. **Recycling Stations**: Install recycling bins in strategic locations around the school. Clearly label each bin for different types of recyclables (e.g., paper, plastic, glass, and metal). Encourage students to participate by making recycling a part of their daily routine.\n\n4. **Competition and Rewards**: Organize a recycling competition between classes or grades. The class that recycles the most over a set period could win a prize, such as a classroom party or extra recess time. This incentivizes participation and fosters a sense of community.\n\n5. **Volunteer Opportunities**: Create opportunities for students to volunteer in recycling initiatives, such as sorting collected materials or participating in community clean-up events. This hands-on experience can deepen their understanding and commitment to environmental stewardship.\n\n6. **Guest Speakers and Workshops**: Invite environmental experts or local recycling program",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer1",
+                "Answer1\n\nAnswer1 provides a complete, well-structured, and practical plan for a school recycling push. It includes clear actionable steps\u2014forming an eco-club, creating posters, placing labeled bins, weekly reminders, inter-class contests with rewards, guest talks, and monthly progress tracking\u2014all framed in an engaging, student-centered way. The tone is enthusiastic and inclusive, emphasizing collaboration and habit-building.\n\nAnswer2, while well-organized and informative, is cut off mid-sentence at the end (\u201cInvite environmental experts or local recycling program...\u201d), leaving the final point incomplete. This undermines its credibility and completeness as a full plan. Even though its content up to that point is strong, the lack of closure makes it feel unfinished and less reliable as a comprehensive strategy.\n\nSince the question asks for a full plan, completeness matters. Answer1 delivers a fully realized response; Answer2 does not.\n\nAnswer1",
+                "Answer1\n\nAnswer1 provides a complete, well-structured, and practical plan for a school recycling push. It includes clear actionable steps\u2014forming an eco-club, creating posters, placing labeled bins, weekly reminders, inter-class contests with rewards, guest talks, and monthly progress tracking\u2014all framed in an engaging, student-centered way. The tone is enthusiastic and inclusive, emphasizing collaboration and habit-building.\n\nAnswer2, while well-organized and informative, is cut off mid-sentence at the end (\u201cInvite environmental experts or local recycling program...\u201d), leaving the final point incomplete. This undermines its credibility and completeness as a full plan. Even though its content up to that point is strong, the lack of closure makes it feel unfinished and less reliable as a comprehensive strategy.\n\nSince the question asks for a full plan, completeness matters. Answer1 delivers a fully realized, coherent proposal; Answer2 does not.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "How will you make a plan for a recycling push to help keep the earth safe at your school?",
+            "answer1": {
+                "text": "Designing an effective recycling campaign to promote environmental awareness in a school involves several key steps:\n\n1. **Education and Awareness**: Begin by educating students about the importance of recycling and its impact on the environment. Use posters, presentations, and interactive sessions to highlight the benefits of recycling, such as reducing waste in landfills, conserving resources, and saving energy.\n\n2. **Clear Guidelines**: Develop clear, concise guidelines on what can and cannot be recycled. Ensure these are easily accessible and prominently displayed around the school, including in classrooms, common areas, and near recycling bins.\n\n3. **Recycling Stations**: Install recycling bins in strategic locations around the school. Clearly label each bin for different types of recyclables (e.g., paper, plastic, glass, and metal). Encourage students to participate by making recycling a part of their daily routine.\n\n4. **Competition and Rewards**: Organize a recycling competition between classes or grades. The class that recycles the most over a set period could win a prize, such as a classroom party or extra recess time. This incentivizes participation and fosters a sense of community.\n\n5. **Volunteer Opportunities**: Create opportunities for students to volunteer in recycling initiatives, such as sorting collected materials or participating in community clean-up events. This hands-on experience can deepen their understanding and commitment to environmental stewardship.\n\n6. **Guest Speakers and Workshops**: Invite environmental experts or local recycling program",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "To make a recycling plan at my school, I would start by making an eco-club with students and teachers who care. We would make bright posters and put them around the school to share facts about recycling and its good points. We would set up clear bins for paper, plastic, and metal in classrooms and shared places. Our club would get people to announce every week to remind students and staff to recycle right. We would have fun contests between classes to see who can recycle the most, with small rewards. Also, we would ask local experts to give talks or classes about recycling and cutting waste. To keep everyone involved, we would share monthly news on how much waste we have recycled as a school. The plan would focus on working together, learning, and making recycling a daily habit for all.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1 provides a more comprehensive, structured, and detailed plan with clearly defined steps that cover education, infrastructure, incentives, volunteer engagement, and expert involvement. It demonstrates a deeper understanding of behavioral change strategies and institutional implementation, with logical progression and specificity (e.g., labeling bins by material type, organizing competitions over a set period). While Answer2 is concise and practical, it lacks the depth and thoroughness of Answer1, omitting key elements like clear guidelines for recyclables and long-term sustainability measures.\n\nAnswer1\u2019s approach is more likely to lead to lasting behavioral change and systemic integration of recycling into school culture.\n\nAnswer1",
+                "Answer1 provides a more comprehensive, structured, and detailed plan with clearly defined steps that cover education, infrastructure, incentives, volunteer engagement, and expert involvement. It demonstrates a deeper understanding of behavioral change strategies and institutional implementation, with logical progression and specificity (e.g., labeling bins by material type, organizing competitions over a set period). While Answer2 is concise and practical, it lacks the depth and thoroughness of Answer1, omitting key elements like clear guidelines for recyclables and long-term sustainability measures.\n\nAnswer1\u2019s approach is more likely to result in a sustainable, school-wide cultural shift, making it the superior response in terms of quality, accuracy, and effectiveness.\n\nAnswer1",
+                "Answer1 provides a more comprehensive, structured, and detailed plan with clearly defined steps that cover education, infrastructure, incentives, volunteer engagement, and expert involvement. It demonstrates a deeper understanding of behavioral change strategies and institutional implementation, with logical progression and specificity (e.g., labeling bins by material type, organizing competitions over a set period). While Answer2 is concise and practical, it lacks the depth and thoroughness of Answer1, omitting key elements like clear guidelines for recyclables and long-term sustainability measures.\n\nAnswer1\u2019s approach is more likely to lead to lasting behavioral change and institutional integration, making it the superior response in terms of quality, accuracy, and effectiveness.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        }
+    ],
+    "48": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "How do you make a plan for a story about a brave animal?",
+            "answer1": {
+                "text": "**Title: The Brave Run of Shadow**\n\n1. **Introduction**  \n- Shadow is a loyal but unvalued stray dog in a small town.  \n- He wants a home and a bond with kind veterinarian Dr. Lee.\n\n2. **The Challenge**  \n- During a strong storm, a child named Mia goes missing near a risky river.  \n- Shadow sees what happens and knows he must help.\n\n3. **The Journey**  \n- Shadow faces the storm, moving through hard paths and barriers, using his senses to find Mia.  \n- On his way, he meets dangers like wild animals and rising water.\n\n4. **The Rescue**  \n- Shadow finds Mia hurt and scared.  \n- He comforts her and leads her back, calling for help and bringing Dr. Lee to them.\n\n5. **Conclusion**  \n- Shadow is called a hero.  \n- He finds a caring family with Mia and Dr. Lee, getting the home he always wanted.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "Title: \"The Heroic Hound\"\n\nIn a quaint village nestled among rolling hills, lived a loyal and brave dog named Max. Max was no ordinary dog; he possessed a heart of gold and an unwavering spirit. One fateful day, the village was threatened by a ferocious dragon that had been terrorizing nearby towns. The villagers, filled with fear, sought refuge in the safety of their homes, leaving their livestock and crops vulnerable.\n\nMax, sensing the imminent danger, decided to take matters into his own paws. He embarked on a perilous journey to confront the dragon, determined to protect his beloved village. Armed with nothing but his courage and sharp canine instincts, Max ventured into the dragon's lair.\n\nUpon reaching the dragon's lair, Max faced the beast head-on. The dragon, surprised by Max's audacity, underestimated him. Max, using his agility and quick reflexes, managed to dodge the dragon's fiery breath and land a series of powerful bites. The dragon, caught off guard, was eventually defeated.\n\nWith the dragon vanquished, Max returned to the village, hailed as a hero. The villagers, overjoyed and grateful, celebrated Max's bravery with a grand feast. From that day forward, Max was revered as the guardian of the village, ensuring peace and safety for all its inhabitants.\n\nMax's story became a legend, inspiring generations to come. It taught the",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer1\n\nAnswer1 presents a coherent, emotionally grounded, and realistic story plan centered on a brave animal\u2014Shadow, a stray dog\u2014whose heroism arises naturally from his character and environment. The structure follows a clear narrative arc (introduction, challenge, journey, rescue, conclusion), and the stakes are believable and relatable: a child lost in a storm, a dog using instinct and loyalty to save her. The resolution is satisfying and thematically consistent\u2014bravery leads to belonging.\n\nAnswer2, while well-written in prose, introduces a fantastical element\u2014a dragon\u2014that is wildly inconsistent with the premise of a \u201cbrave animal\u201d story in a realistic context. The inclusion of a dragon shifts the story into high fantasy, which is not inherently wrong, but it undermines the plausibility and emotional authenticity expected in a story about an animal\u2019s bravery grounded in real-world stakes. Additionally, Answer2 is cut off mid-sentence, suggesting incompleteness, and lacks the structural clarity of Answer1.\n\nThe quality of Answer1 lies in its realism, emotional resonance, and narrative discipline\u2014all of which make it a superior plan for a story about a brave animal.\n\nAnswer1",
+                "Answer1\n\nAnswer1 presents a coherent, emotionally grounded, and realistic story plan centered on a brave animal\u2014Shadow, a stray dog\u2014whose heroism arises naturally from his character and environment. The structure follows a clear narrative arc (introduction, challenge, journey, rescue, conclusion), and the stakes are believable and relatable: a child lost in a storm, a dog using instinct and loyalty to save her. The resolution is satisfying and thematically consistent\u2014bravery leads to belonging.\n\nAnswer2, while well-written in prose, introduces a fantastical element\u2014a dragon\u2014that is wildly inconsistent with the premise of a \u201cbrave animal\u201d story in a realistic context. The inclusion of a dragon shifts the story into high fantasy, which is not inherently wrong, but it undermines the plausibility and emotional authenticity expected in a story about an animal\u2019s bravery grounded in real-world stakes. Additionally, Answer2 is cut off mid-sentence, suggesting incompleteness, and lacks the structural clarity of Answer1.\n\nThe quality of Answer1 lies in its realism, emotional resonance, and narrative discipline\u2014qualities that make it a superior plan for a story about a brave animal.\n\nAnswer1",
+                "Answer1\n\nAnswer1 presents a coherent, emotionally grounded, and realistic story plan centered on a brave animal\u2014Shadow, a stray dog\u2014whose heroism arises naturally from his character and environment. The structure follows a clear narrative arc (introduction, challenge, journey, rescue, conclusion), and the stakes are believable and relatable: a child lost in a storm, a dog using instinct and loyalty to save her. The resolution is satisfying and thematically consistent\u2014bravery leads to belonging.\n\nAnswer2, while well-written in prose, introduces a fantastical element\u2014a dragon\u2014that is wildly inconsistent with the premise of a \u201cbrave animal\u201d story in a realistic context. The inclusion of a dragon shifts the story into high fantasy, which is not inherently wrong, but it undermines the plausibility and emotional authenticity expected in a story about an animal\u2019s bravery grounded in real-world stakes. Additionally, Answer2 is cut off mid-sentence, suggesting incompleteness, and lacks the structural clarity of Answer1.\n\nThe quality of Answer1 lies in its realism, emotional resonance, and narrative discipline\u2014all essential for a compelling story about a brave animal. Answer2, though imaginative, strays from the spirit of the prompt by introducing implausible elements and leaving the story unfinished.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "How do you make a plan for a story about a brave animal?",
+            "answer1": {
+                "text": "Title: \"The Heroic Hound\"\n\nIn a quaint village nestled among rolling hills, lived a loyal and brave dog named Max. Max was no ordinary dog; he possessed a heart of gold and an unwavering spirit. One fateful day, the village was threatened by a ferocious dragon that had been terrorizing nearby towns. The villagers, filled with fear, sought refuge in the safety of their homes, leaving their livestock and crops vulnerable.\n\nMax, sensing the imminent danger, decided to take matters into his own paws. He embarked on a perilous journey to confront the dragon, determined to protect his beloved village. Armed with nothing but his courage and sharp canine instincts, Max ventured into the dragon's lair.\n\nUpon reaching the dragon's lair, Max faced the beast head-on. The dragon, surprised by Max's audacity, underestimated him. Max, using his agility and quick reflexes, managed to dodge the dragon's fiery breath and land a series of powerful bites. The dragon, caught off guard, was eventually defeated.\n\nWith the dragon vanquished, Max returned to the village, hailed as a hero. The villagers, overjoyed and grateful, celebrated Max's bravery with a grand feast. From that day forward, Max was revered as the guardian of the village, ensuring peace and safety for all its inhabitants.\n\nMax's story became a legend, inspiring generations to come. It taught the",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "**Title: The Brave Run of Shadow**\n\n1. **Introduction**  \n- Shadow is a loyal but unvalued stray dog in a small town.  \n- He wants a home and a bond with kind veterinarian Dr. Lee.\n\n2. **The Challenge**  \n- During a strong storm, a child named Mia goes missing near a risky river.  \n- Shadow sees what happens and knows he must help.\n\n3. **The Journey**  \n- Shadow faces the storm, moving through hard paths and barriers, using his senses to find Mia.  \n- On his way, he meets dangers like wild animals and rising water.\n\n4. **The Rescue**  \n- Shadow finds Mia hurt and scared.  \n- He comforts her and leads her back, calling for help and bringing Dr. Lee to them.\n\n5. **Conclusion**  \n- Shadow is called a hero.  \n- He finds a caring family with Mia and Dr. Lee, getting the home he always wanted.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer2",
+                "Answer2\n\nAnswer2 provides a clear, structured, and emotionally resonant plan for a story about a brave animal. It follows a classic narrative arc (Introduction, Challenge, Journey, Rescue, Conclusion) with well-defined beats that are easy to expand into a full story. The character of Shadow is relatable, his motivation is heartfelt (seeking belonging), and the stakes are emotionally compelling (saving a child). The plan is concise yet complete, leaving room for development while maintaining focus on the animal\u2019s bravery and growth.\n\nAnswer1, while vivid and engaging, is incomplete (it cuts off mid-sentence), and its plot relies on a fantastical element (a dragon) that may not align with the more grounded, realistic tone often preferred in stories about brave animals. Additionally, it lacks a clear structural outline, making it less useful as a \u201cplan\u201d compared to Answer2\u2019s organized, step-by-step framework.\n\nThus, Answer2 is superior in terms of clarity, structure, emotional depth, and practicality as a story plan.\n\nAnswer2",
+                "Answer2\n\nAnswer2 provides a clear, structured, and emotionally resonant plan for a story about a brave animal. It follows a classic narrative arc (Introduction, Challenge, Journey, Rescue, Conclusion) with well-defined beats that are easy to expand into a full story. The character of Shadow is relatable, his motivation is heartfelt (seeking belonging), and the stakes are emotionally compelling (saving a child). The plan is concise yet complete, leaving room for development while maintaining focus on the animal\u2019s bravery and growth.\n\nAnswer1, while vivid and engaging, is incomplete (it cuts off mid-sentence), and its plot relies on a fantastical element (a dragon) that may not align with the more grounded, realistic tone often preferred in stories about brave animals. Additionally, it lacks a clear structural outline, making it less useful as a \"plan\" compared to Answer2\u2019s organized, step-by-step framework.\n\nThus, Answer2 is superior in terms of clarity, structure, emotional depth, and practicality as a story plan.\n\nAnswer2"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        }
+    ],
+    "49": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'If you make a new tool, what will it be and why?'",
+            "answer1": {
+                "text": "I will make a small health scanner that goes in your pocket. This tool will use gentle sensors and smart thinking to check things like heart rate, oxygen amount, water level, and stress. You will put it on your skin, and it will give quick word on your health state, suggesting steps like drinking water or going for a walk. If it finds anything worrying, it will say to see a doctor or link you with a health service online. The scanner can help people find health problems early and manage long-term issues easily. I chose this because many people do not pay attention to their health until it is serious. Making daily health checks easy could lead to better living and save lives, especially for those who cannot see doctors often.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "If I were to invent a new gadget, it would be an AI-powered personal health coach. This gadget would integrate seamlessly into daily life, monitoring vital signs, sleep patterns, and dietary habits. It would use AI algorithms to analyze this data and provide personalized health recommendations. For instance, if the gadget detects irregular heartbeats, it would alert the user and suggest consulting a doctor. If sleep patterns are poor, it could offer tips to improve sleep quality. It would also track nutrition intake, suggesting healthier food choices based on the user's dietary preferences and health goals. The gadget would learn from the user's responses, continuously refining its recommendations. It would be a comprehensive tool for maintaining and improving health, making it accessible and user-friendly. This invention would empower individuals to take proactive steps towards better health, potentially reducing the burden on healthcare systems and enhancing overall quality of life.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer2",
+                "Answer2\n\nAnswer2 provides a more comprehensive, nuanced, and professionally articulated response. It clearly outlines the functionality of the device (monitoring vital signs, sleep, diet), explains the role of AI in personalization and learning over time, and connects the invention to broader societal benefits (reducing healthcare burden, enhancing quality of life). The language is precise, coherent, and avoids redundancy or oversimplification.\n\nAnswer1 is also strong and thoughtful, particularly in its focus on accessibility and early detection. However, it contains minor inaccuracies (e.g., \u201cwater level\u201d is vague and not a standard health metric), less sophisticated phrasing (\u201cquick word on your health state\u201d), and lacks the depth of integration and adaptive learning described in Answer2.\n\nAnswer2 demonstrates superior semantic quality: clarity, technical plausibility, logical structure, and alignment with real-world health tech trends.\n\nAnswer2",
+                "Answer2\n\nAnswer2 provides a more comprehensive, nuanced, and professionally articulated response. It clearly outlines the functionality of the device (monitoring vital signs, sleep, diet), explains the role of AI in personalization and learning over time, and connects the invention to broader societal benefits (reducing healthcare burden, enhancing quality of life). The language is precise, coherent, and avoids redundancy or oversimplification.\n\nAnswer1 is also strong and thoughtful, particularly in its focus on accessibility and early detection. However, it contains minor inaccuracies (e.g., \u201cwater level\u201d is vague and not a standard health metric), less sophisticated phrasing (\u201cquick word on your health state\u201d), and lacks the depth of integration and adaptive learning described in Answer2.\n\nAnswer2 demonstrates superior semantic quality: clarity, technical plausibility, logical structure, and alignment with real-world AI health tech trends.\n\nAnswer2"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'If you make a new tool, what will it be and why?'",
+            "answer1": {
+                "text": "If I were to invent a new gadget, it would be an AI-powered personal health coach. This gadget would integrate seamlessly into daily life, monitoring vital signs, sleep patterns, and dietary habits. It would use AI algorithms to analyze this data and provide personalized health recommendations. For instance, if the gadget detects irregular heartbeats, it would alert the user and suggest consulting a doctor. If sleep patterns are poor, it could offer tips to improve sleep quality. It would also track nutrition intake, suggesting healthier food choices based on the user's dietary preferences and health goals. The gadget would learn from the user's responses, continuously refining its recommendations. It would be a comprehensive tool for maintaining and improving health, making it accessible and user-friendly. This invention would empower individuals to take proactive steps towards better health, potentially reducing the burden on healthcare systems and enhancing overall quality of life.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "I will make a small health scanner that goes in your pocket. This tool will use gentle sensors and smart thinking to check things like heart rate, oxygen amount, water level, and stress. You will put it on your skin, and it will give quick word on your health state, suggesting steps like drinking water or going for a walk. If it finds anything worrying, it will say to see a doctor or link you with a health service online. The scanner can help people find health problems early and manage long-term issues easily. I chose this because many people do not pay attention to their health until it is serious. Making daily health checks easy could lead to better living and save lives, especially for those who cannot see doctors often.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Answer1 is superior because it provides a more detailed, coherent, and nuanced explanation of the proposed tool. It clearly outlines the functionality (monitoring vital signs, sleep, diet), the AI-driven personalization, specific use cases (irregular heartbeats, poor sleep, nutrition), and the long-term societal benefits (reducing healthcare burden, improving quality of life). The language is precise, logically structured, and demonstrates a deeper understanding of both technology and health outcomes.\n\nAnswer2 is simpler and more conversational, with some imprecise phrasing (\u201cwater level\u201d instead of \u201chydration status,\u201d \u201csmart thinking\u201d instead of \u201cAI algorithms\u201d) and less depth in explaining how the tool works or learns over time. While it captures the core intent well, it lacks the richness, technical clarity, and persuasive depth of Answer1.\n\nThus, Answer1 is the higher-quality response.\n\nAnswer1",
+                "Answer1 is superior because it provides a more detailed, coherent, and nuanced explanation of the proposed tool. It clearly outlines the functionality (monitoring vital signs, sleep, diet), the AI-driven personalization, specific use cases (irregular heartbeats, poor sleep, nutrition), and the long-term societal benefits (reducing healthcare burden, improving quality of life). The language is precise, logically structured, and demonstrates a deeper understanding of both technology and health outcomes.\n\nAnswer2 is simpler and more conversational, with some imprecise phrasing (\u201cwater level\u201d instead of \u201chydration status,\u201d \u201csmart thinking\u201d instead of \u201cAI algorithms\u201d) and less depth in explaining how the tool works or learns over time. While it captures the core intent well, it lacks the richness, specificity, and polish of Answer1.\n\nThus, Answer1 is the higher-quality response.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        }
+    ],
+    "50": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'How do you make a charity event in your area?'",
+            "answer1": {
+                "text": "First, choose the charity's cause, like helping a local food bank. Form a small team and give roles like promotion, plan, and donation care. Pick a good date and place, like the neighborhood park. Talk to local shops for support or gifts. Share the news through flyers, community boards, social media, and neighborhood message apps. Plan fun activities like a bake sale, raffle, or talent show to get people involved. Set clear rules for donations, whether getting money, food, or clothes. Get tables, chairs, banners, and help with volunteers. Make sure there are safety steps, and get any needed permits. On event day, welcome people, explain the cause, and give updates on the progress. After, thank all volunteers and donors, and share the results to show clear work. Finally, take the collected items or money to the chosen charity and send a follow-up update to the community.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "Organizing a charity event in your neighborhood involves several key steps:\n\n1. **Define the Purpose**: Determine the cause you wish to support. It could be education, health, environment, or any other social issue.\n\n2. **Plan the Event**: Decide on the type of event (e.g., walkathon, bake sale, concert). Ensure it aligns with the purpose and is accessible to the community.\n\n3. **Set a Date and Venue**: Choose a date that works for most people and a venue that can accommodate the expected number of participants and attendees.\n\n4. **Recruit Volunteers**: Reach out to friends, family, and community members to help with planning, setup, and during the event.\n\n5. **Promote the Event**: Utilize social media, local newsletters, and community boards to spread the word. Encourage attendees to invite others.\n\n6. **Secure Sponsors**: Reach out to local businesses for donations or sponsorships. This can help cover costs and increase the event's visibility.\n\n7. **Plan Logistics**: Arrange for food, decorations, and any necessary equipment. Ensure safety measures are in place.\n\n8. **Execute the Event**: On the day, manage the event smoothly, ensuring everything runs according to plan.\n\n9. **Follow Up**: After the event, thank all participants, volunteers, and sponsors. Share the impact and funds raised.\n\n10. **Feedback**: Gather feedback to improve future",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer1",
+                "Answer1\n\nAnswer1 provides a more detailed, practical, and actionable step-by-step guide tailored to organizing a local charity event. It includes specific examples (e.g., \u201cneighborhood park,\u201d \u201cbake sale, raffle, or talent show\u201d), concrete logistics (e.g., \u201ctables, chairs, banners,\u201d \u201cpermits\u201d), and thoughtful touches like \u201csend a follow-up update to the community\u201d and \u201ctake the collected items or money to the chosen charity.\u201d These elements show a deeper understanding of real-world execution and community engagement.\n\nAnswer2 is well-structured and clear but remains more generic and incomplete\u2014it cuts off mid-sentence at the end of point 10 (\u201cFeedback: Gather feedback to improve future\u201d), which undermines its completeness and professionalism. While it covers the essential framework, it lacks the vivid, localized details that make Answer1 more useful and trustworthy for someone actually trying to organize an event.\n\nThus, Answer1 is superior in quality, depth, and practical utility.\n\nAnswer1",
+                "Answer1\n\nAnswer1 provides a more detailed, practical, and actionable step-by-step guide tailored to organizing a local charity event. It includes specific examples (e.g., \u201cneighborhood park,\u201d \u201cbake sale, raffle, or talent show\u201d), concrete logistics (e.g., \u201ctables, chairs, banners,\u201d \u201cpermits\u201d), and thoughtful touches like \u201csend a follow-up update to the community\u201d and \u201ctake the collected items or money to the chosen charity.\u201d These elements show a deeper understanding of real-world execution and community engagement.\n\nAnswer2 is well-structured and clear but remains more generic and incomplete\u2014it cuts off mid-sentence at the end of point 10 (\u201cFeedback: Gather feedback to improve future\u201d), which undermines its completeness and professionalism. While it covers the essential framework, it lacks the vivid, localized details that make Answer1 more useful and trustworthy for someone actually trying to organize an event.\n\nThus, Answer1 is superior in semantic quality, depth, and practical utility.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'How do you make a charity event in your area?'",
+            "answer1": {
+                "text": "Organizing a charity event in your neighborhood involves several key steps:\n\n1. **Define the Purpose**: Determine the cause you wish to support. It could be education, health, environment, or any other social issue.\n\n2. **Plan the Event**: Decide on the type of event (e.g., walkathon, bake sale, concert). Ensure it aligns with the purpose and is accessible to the community.\n\n3. **Set a Date and Venue**: Choose a date that works for most people and a venue that can accommodate the expected number of participants and attendees.\n\n4. **Recruit Volunteers**: Reach out to friends, family, and community members to help with planning, setup, and during the event.\n\n5. **Promote the Event**: Utilize social media, local newsletters, and community boards to spread the word. Encourage attendees to invite others.\n\n6. **Secure Sponsors**: Reach out to local businesses for donations or sponsorships. This can help cover costs and increase the event's visibility.\n\n7. **Plan Logistics**: Arrange for food, decorations, and any necessary equipment. Ensure safety measures are in place.\n\n8. **Execute the Event**: On the day, manage the event smoothly, ensuring everything runs according to plan.\n\n9. **Follow Up**: After the event, thank all participants, volunteers, and sponsors. Share the impact and funds raised.\n\n10. **Feedback**: Gather feedback to improve future",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "First, choose the charity's cause, like helping a local food bank. Form a small team and give roles like promotion, plan, and donation care. Pick a good date and place, like the neighborhood park. Talk to local shops for support or gifts. Share the news through flyers, community boards, social media, and neighborhood message apps. Plan fun activities like a bake sale, raffle, or talent show to get people involved. Set clear rules for donations, whether getting money, food, or clothes. Get tables, chairs, banners, and help with volunteers. Make sure there are safety steps, and get any needed permits. On event day, welcome people, explain the cause, and give updates on the progress. After, thank all volunteers and donors, and share the results to show clear work. Finally, take the collected items or money to the chosen charity and send a follow-up update to the community.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Answer1 is superior because it provides a more comprehensive, structured, and professionally organized guide to planning a charity event. Each step is clearly defined, logically sequenced, and covers critical aspects such as purpose definition, logistics, sponsor outreach, safety, and post-event follow-up with feedback \u2014 all of which are essential for a successful and sustainable event. The language is precise and thorough without being overly verbose.\n\nAnswer2 is also accurate and practical, but it is less detailed and slightly disorganized in structure. Some phrases are informal (\u201cgive roles like promotion, plan, and donation care\u201d), and key elements like venue selection criteria, legal permits, or impact measurement are mentioned but not fully developed. While it covers the basics, it lacks the depth and polish of Answer1.\n\nThus, Answer1 demonstrates higher semantic quality in terms of completeness, clarity, and professionalism.\n\nAnswer1",
+                "Answer1 is superior because it provides a more comprehensive, structured, and professionally organized guide to planning a charity event. Each step is clearly defined, logically sequenced, and covers critical aspects such as purpose definition, logistics, sponsor outreach, safety, and post-event follow-up with feedback \u2014 all of which are essential for a successful and sustainable event. The language is precise and thorough without being overly verbose.\n\nAnswer2 is also accurate and practical, but it is less detailed and slightly disorganized in structure. Some phrases are informal (\u201cgive roles like promotion, plan, and donation care\u201d), and key elements like venue selection criteria, legal permits, or impact measurement are mentioned but not fully developed. While it covers the basics, it lacks the depth and polish of Answer1.\n\nTherefore, Answer1 demonstrates higher semantic quality in terms of completeness, clarity, and professionalism.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        }
+    ],
+    "51": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'How will you make a poem about friendship?'",
+            "answer1": {
+                "text": "To make a poem about friendship, start by looking at your true feelings and personal times with friends. Pick main ideas like trust, laughter, help, or shared journeys. Choose a mood\u2014happy, thoughtful, grateful, or comforting. Find a poetic form that feels right, like rhymed pairs, open lines, or haiku. Use strong images, comparisons, or figures of speech to show clear feelings. Make strong opening and closing lines to leave a mark. Read your poem out loud to see that it moves well, and change it for clarity or flow. Here is a simple outline: \n\nStart with a picture that shows togetherness, bring up special moments that shape the friendship, show the feelings these memories create, point out how friendship helps in hard times, and close the poem with a note of thanks or lasting bond. In the end, trust your voice and write with truth\u2014the heart of lasting friendship poetry.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "Friendship, a bond so pure and true,\nIn hearts it dwells, in souls it grew.\nThrough laughter, tears, and miles apart,\nTwo souls entwined, a timeless art.\n\nIn whispers shared, in secrets told,\nA trust so deep, a love untold.\nThrough joys and sorrows, day by day,\nA friendship's strength, forever to stay.\n\nLike stars that twinkle in the night,\nGuiding each other through life's plight.\nThrough storms and sunshine, hand in hand,\nFriendship's flame, forever to stand.\n\nIn quiet moments, in bustling crowds,\nA friend's presence, a heart's reward.\nWith every smile, with every tear,\nA bond so strong, forever dear.\n\nThrough life's journey, miles or near,\nA friend's love, a precious treasure.\nIn laughter, in tears, in every phase,\nFriendship's light, a guiding grace.\n\nSo here's to friends, both old and new,\nWhose love endures, forever true.\nThrough life's ups and downs, side by side,\nFriendship's beauty, forever to abide.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer2",
+                "Answer2 is a fully realized, emotionally resonant poem that directly answers the question \u201cHow will you make a poem about friendship?\u201d by exemplifying one. It uses poetic devices\u2014rhyme, meter, imagery, metaphor (e.g., \u201clike stars that twinkle in the night\u201d), and thematic cohesion\u2014to embody the very act of creating a friendship poem. It is structured, lyrical, and evocative.\n\nAnswer1, while thoughtful and instructive, does not *make* a poem\u2014it only explains how to make one. It is a guide, not an artifact. The question asks for the creation of a poem, not a tutorial.\n\nTherefore, Answer2 is superior because it fulfills the request by producing a poem, while Answer1 only describes the process.\n\nAnswer2",
+                "Answer2 is a fully realized, emotionally resonant poem that directly answers the question \u201cHow will you make a poem about friendship?\u201d by exemplifying one. It uses poetic devices\u2014rhyme, meter, imagery, metaphor (e.g., \u201clike stars that twinkle in the night\u201d), and thematic cohesion\u2014to embody the very act of creating a friendship poem. It is structured, lyrical, and evocative.\n\nAnswer1, while thoughtful and instructive, does not *make* a poem\u2014it only describes how to make one. It is a guide, not an artifact. The question asks for the creation of a poem, not a tutorial.\n\nTherefore, Answer2 is superior because it fulfills the request by producing a poem, while Answer1 only discusses the process.\n\nAnswer2"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'How will you make a poem about friendship?'",
+            "answer1": {
+                "text": "Friendship, a bond so pure and true,\nIn hearts it dwells, in souls it grew.\nThrough laughter, tears, and miles apart,\nTwo souls entwined, a timeless art.\n\nIn whispers shared, in secrets told,\nA trust so deep, a love untold.\nThrough joys and sorrows, day by day,\nA friendship's strength, forever to stay.\n\nLike stars that twinkle in the night,\nGuiding each other through life's plight.\nThrough storms and sunshine, hand in hand,\nFriendship's flame, forever to stand.\n\nIn quiet moments, in bustling crowds,\nA friend's presence, a heart's reward.\nWith every smile, with every tear,\nA bond so strong, forever dear.\n\nThrough life's journey, miles or near,\nA friend's love, a precious treasure.\nIn laughter, in tears, in every phase,\nFriendship's light, a guiding grace.\n\nSo here's to friends, both old and new,\nWhose love endures, forever true.\nThrough life's ups and downs, side by side,\nFriendship's beauty, forever to abide.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "To make a poem about friendship, start by looking at your true feelings and personal times with friends. Pick main ideas like trust, laughter, help, or shared journeys. Choose a mood\u2014happy, thoughtful, grateful, or comforting. Find a poetic form that feels right, like rhymed pairs, open lines, or haiku. Use strong images, comparisons, or figures of speech to show clear feelings. Make strong opening and closing lines to leave a mark. Read your poem out loud to see that it moves well, and change it for clarity or flow. Here is a simple outline: \n\nStart with a picture that shows togetherness, bring up special moments that shape the friendship, show the feelings these memories create, point out how friendship helps in hard times, and close the poem with a note of thanks or lasting bond. In the end, trust your voice and write with truth\u2014the heart of lasting friendship poetry.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer2",
+                "Answer2\n\nAnswer1 is a well-crafted, emotionally resonant poem about friendship, but it does not answer the question \u201cHow will you make a poem about friendship?\u201d \u2014 it simply *is* a poem. The question asks for a process, method, or guidance on creating such a poem, not the final product.\n\nAnswer2 directly and thoroughly addresses the question by providing a clear, step-by-step approach: reflecting on personal feelings, selecting themes and mood, choosing a form, using imagery, crafting strong openings and closings, revising aloud, and writing authentically. It offers practical, actionable advice suitable for someone seeking to write a poem about friendship.\n\nThus, Answer2 is superior in semantic quality because it correctly and comprehensively responds to the question asked.\n\nAnswer2",
+                "Answer2\n\nAnswer1 is a well-crafted, emotionally resonant poem about friendship, but it does not answer the question \u201cHow will you make a poem about friendship?\u201d \u2014 it simply *is* a poem. The question asks for a process, method, or guidance on creating such a poem, not the final product.\n\nAnswer2 directly and thoroughly addresses the question by providing a clear, step-by-step approach: reflecting on personal feelings, selecting themes and mood, choosing a form, using imagery, crafting strong openings and closings, revising aloud, and writing authentically. It offers practical, actionable advice suitable for someone seeking to write a poem about friendship.\n\nThus, Answer2 is superior in semantic quality because it correctly and comprehensively responds to the prompt.\n\nAnswer2"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        }
+    ],
+    "52": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'How do you make a green birthday party?'",
+            "answer1": {
+                "text": "Choose e-invitations to reduce paper use. Set the party at a park or in your backyard to keep energy use low and enjoy nature. Use reusable or compostable tableware instead of single-use plastics. Decorate with items you have, like cloth banners or potted plants, to cut down on waste. Serve local, seasonal, and organic food to help sustainability and limit your carbon footprint. Offer a creative DIY activity with upcycled or eco-friendly materials. Encourage guests to bring gifts wrapped in reusable bags or fabric, or ask for no gifts. Provide recycling bins clearly marked for good waste handling. For party favors, give seeds, small plants, or homemade treats in reusable containers. Encourage walking, biking, or sharing rides to the event. After, donate leftover food or compost food scraps, and keep decorations for next time. This way, your party is fun and kind to the earth.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "To plan an eco-friendly birthday party, start by choosing a venue that prioritizes sustainability, such as a community garden, park, or eco-conscious event space. Send digital invitations to minimize paper waste. Opt for a plant-based menu with locally sourced ingredients to reduce carbon footprint and support local businesses. Use reusable plates, utensils, and cups, or biodegradable disposables. Decorate with natural elements like flowers, plants, and homemade paper crafts. Encourage guests to arrive by bike, public transport, or carpool. Offer activities that promote environmental awareness, like a nature scavenger hunt or a DIY upcycling project. Donate any leftover food to a local shelter or compost it. Lastly, thank guests for their participation in making the event eco-friendly and share tips on how they can continue to live sustainably.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer1",
+                "Answer1  \nAnswer1 provides a more comprehensive, detailed, and practical guide to hosting a green birthday party. It covers a wider range of actionable steps\u2014from e-invitations and venue selection to party favors, transportation, waste management, and post-party actions like donating leftovers and reusing decorations. The suggestions are specific (e.g., \u201cseeds, small plants, or homemade treats in reusable containers\u201d) and demonstrate a deeper understanding of sustainability across multiple dimensions (consumption, waste, energy, and behavior). Answer2 is also strong and well-structured, but it is slightly more general and omits key elements like reusable gift wrapping, clear recycling bin setup, and the emphasis on reusing decorations for future events. Answer1\u2019s thoroughness makes it superior in quality and utility.  \nAnswer1",
+                "Answer1  \nAnswer1 provides a more comprehensive, detailed, and practical guide to hosting a green birthday party. It covers a wider range of actionable steps\u2014from e-invitations and venue selection to party favors, transportation, waste management, and post-party actions like donating leftovers and reusing decorations. The suggestions are specific (e.g., \u201cseeds, small plants, or homemade treats in reusable containers\u201d) and demonstrate a deeper understanding of sustainability across multiple dimensions (consumption, waste, energy, and behavior). Answer2 is also strong and well-structured, but it is slightly more general and omits key elements like reusable gift wrapping, clear recycling bin setup, and the emphasis on reusing decorations for future events. Answer1\u2019s thoroughness and attention to detail make it superior in quality and practical utility.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'How do you make a green birthday party?'",
+            "answer1": {
+                "text": "To plan an eco-friendly birthday party, start by choosing a venue that prioritizes sustainability, such as a community garden, park, or eco-conscious event space. Send digital invitations to minimize paper waste. Opt for a plant-based menu with locally sourced ingredients to reduce carbon footprint and support local businesses. Use reusable plates, utensils, and cups, or biodegradable disposables. Decorate with natural elements like flowers, plants, and homemade paper crafts. Encourage guests to arrive by bike, public transport, or carpool. Offer activities that promote environmental awareness, like a nature scavenger hunt or a DIY upcycling project. Donate any leftover food to a local shelter or compost it. Lastly, thank guests for their participation in making the event eco-friendly and share tips on how they can continue to live sustainably.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "Choose e-invitations to reduce paper use. Set the party at a park or in your backyard to keep energy use low and enjoy nature. Use reusable or compostable tableware instead of single-use plastics. Decorate with items you have, like cloth banners or potted plants, to cut down on waste. Serve local, seasonal, and organic food to help sustainability and limit your carbon footprint. Offer a creative DIY activity with upcycled or eco-friendly materials. Encourage guests to bring gifts wrapped in reusable bags or fabric, or ask for no gifts. Provide recycling bins clearly marked for good waste handling. For party favors, give seeds, small plants, or homemade treats in reusable containers. Encourage walking, biking, or sharing rides to the event. After, donate leftover food or compost food scraps, and keep decorations for next time. This way, your party is fun and kind to the earth.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1 and Answer2 are both highly detailed, accurate, and practical responses that cover the key elements of planning an eco-friendly (green) birthday party: digital invitations, sustainable venues, reusable/compostable tableware, local and plant-based food, natural decorations, sustainable transportation, eco-friendly activities, waste management, and thoughtful party favors.\n\nAnswer1 is slightly more structured and comprehensive, with a clear progression from venue selection to post-party actions, and includes specific examples like \u201cnature scavenger hunt\u201d and \u201cDIY upcycling project,\u201d as well as the thoughtful touch of thanking guests and encouraging ongoing sustainable habits. It also explicitly mentions donating leftover food to shelters, which adds a community-benefit dimension.\n\nAnswer2 is equally strong, concise, and practical, with excellent suggestions like fabric-wrapped gifts and keeping decorations for reuse. It\u2019s very well-organized and covers nearly all the same points, just in a slightly more compact form.\n\nBoth answers are semantically excellent\u2014no factual errors, both are actionable, and both demonstrate deep understanding of sustainability principles.\n\n**Verdict: Tie** \u2014 both responses are of equal quality in terms of accuracy, depth, clarity, and practicality.\n\nTie",
+                "Answer1 and Answer2 are both highly detailed, accurate, and practical responses that cover the key elements of planning an eco-friendly (green) birthday party: digital invitations, sustainable venues, reusable/compostable tableware, local and plant-based food, natural decorations, sustainable transportation, eco-friendly activities, waste management, and thoughtful party favors.\n\nAnswer1 is slightly more structured and comprehensive, with a clear progression from venue selection to post-party actions, and includes specific examples like \u201cnature scavenger hunt\u201d and \u201cDIY upcycling project,\u201d as well as the thoughtful touch of thanking guests and encouraging ongoing sustainable habits. It also explicitly mentions donating leftover food to shelters, which adds a community-benefit dimension.\n\nAnswer2 is equally strong, concise, and practical, with excellent suggestions like fabric-wrapped gifts and keeping decorations for reuse. It\u2019s very well-organized and covers nearly all the same points, just in a slightly more compact form.\n\nBoth answers are semantically excellent\u2014no factual errors, both are actionable, and both demonstrate deep understanding of sustainability principles.\n\n**Verdict: Tie** \u2014 both responses are of equal quality in terms of accuracy, completeness, clarity, and practical advice.\n\nTie"
+            ],
+            "extracted_answers": [
+                "Unknown",
+                "Unknown",
+                "Unknown"
+            ]
+        }
+    ],
+    "53": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'What steps do you make to create a new game?'",
+            "answer1": {
+                "text": "1. Find your goals: Decide what you want from the sport (e.g., fitness, fun, teamwork, inclusion).\n\n2. Look at other sports: Study current sports for ideas and to prevent copying.\n\n3. Set the basics: Choose the place (inside/outside), needed things, number of players, and main actions (e.g., running, throwing).\n\n4. Make clear goals: Decide how to score, win, or finish the game.\n\n5. Write rules: Create simple, fair, and easy rules for playing, fouls, and penalties.\n\n6. Make a test version: Try your ideas with temporary things or spaces.\n\n7. Ask for thoughts: Invite friends or helpers to play, then ask for their view on fun and clarity.\n\n8. Improve and change: Adjust rules, things, or format as needed.\n\n9. Write everything down: Make a rulebook and guide.\n\n10. Share and promote: Host events or share with local groups to grow interest and get more thoughts.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "Inventing a new sport involves creativity, planning, and testing. Here's a simplified process:\n\n1. **Conceptualization**: Brainstorm unique ideas for gameplay, rules, equipment, and objectives. Consider factors like accessibility, safety, and inclusivity.\n\n2. **Research**: Look into existing sports for inspiration, but ensure your concept is distinct. Analyze rules, strategies, and equipment to avoid overlap.\n\n3. **Draft Rules**: Outline basic rules, including gameplay, scoring, and equipment. Ensure they're clear, fair, and adaptable for different skill levels.\n\n4. **Prototype**: Develop a basic version of the sport. This could be a simplified version or a simulation using existing equipment.\n\n5. **Testing**: Conduct trials with diverse groups to test the rules, equipment, and gameplay. Gather feedback on enjoyment, fairness, and safety.\n\n6. **Refinement**: Based on feedback, refine the rules, equipment, and gameplay to improve the sport's appeal and functionality.\n\n7. **Documentation**: Create comprehensive rulebooks, guidelines, and safety protocols.\n\n8. **Promotion**: Develop a marketing strategy to introduce the sport to the public. Leverage social media, events, and partnerships with sports organizations.\n\n9. **Growth**: Encourage participation through leagues, tournaments, and educational programs. Gather data on popularity, skill development, and health benefits.\n\n10. **Standardization**: As the sport gains traction,",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer1",
+                "Answer1\n\nBoth answers are well-structured and cover similar key steps in creating a new game. However, Answer1 is superior because it is complete, clearly written in plain language, and ends with a concrete final step (\u201cShare and promote\u201d) that ties the process together. Answer2 is cut off mid-sentence at step 10 (\u201cStandardization: As the sport gains traction,\u201d), leaving the final and potentially critical step incomplete. This truncation undermines its completeness and professionalism, even though its content up to that point is strong. Since the question asks for \u201csteps\u201d and expects a full process, an incomplete step disqualifies Answer2 as a fully reliable response.\n\nAnswer1 is semantically complete, coherent, and practical \u2014 making it the better answer.\n\nAnswer1",
+                "Answer1\n\nBoth answers are well-structured and cover similar key steps in creating a new game. However, Answer1 is superior because it is complete, clearly written in plain language, and ends with a concrete final step (\u201cShare and promote\u201d) that ties the process together. Answer2 is cut off mid-sentence at step 10 (\u201cStandardization: As the sport gains traction,\u201d), leaving the final and potentially critical step incomplete. This truncation undermines its credibility and completeness, even though its content up to that point is strong.\n\nSemantic quality requires full, coherent, and finished responses \u2014 Answer1 delivers that; Answer2 does not.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'What steps do you make to create a new game?'",
+            "answer1": {
+                "text": "Inventing a new sport involves creativity, planning, and testing. Here's a simplified process:\n\n1. **Conceptualization**: Brainstorm unique ideas for gameplay, rules, equipment, and objectives. Consider factors like accessibility, safety, and inclusivity.\n\n2. **Research**: Look into existing sports for inspiration, but ensure your concept is distinct. Analyze rules, strategies, and equipment to avoid overlap.\n\n3. **Draft Rules**: Outline basic rules, including gameplay, scoring, and equipment. Ensure they're clear, fair, and adaptable for different skill levels.\n\n4. **Prototype**: Develop a basic version of the sport. This could be a simplified version or a simulation using existing equipment.\n\n5. **Testing**: Conduct trials with diverse groups to test the rules, equipment, and gameplay. Gather feedback on enjoyment, fairness, and safety.\n\n6. **Refinement**: Based on feedback, refine the rules, equipment, and gameplay to improve the sport's appeal and functionality.\n\n7. **Documentation**: Create comprehensive rulebooks, guidelines, and safety protocols.\n\n8. **Promotion**: Develop a marketing strategy to introduce the sport to the public. Leverage social media, events, and partnerships with sports organizations.\n\n9. **Growth**: Encourage participation through leagues, tournaments, and educational programs. Gather data on popularity, skill development, and health benefits.\n\n10. **Standardization**: As the sport gains traction,",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "1. Find your goals: Decide what you want from the sport (e.g., fitness, fun, teamwork, inclusion).\n\n2. Look at other sports: Study current sports for ideas and to prevent copying.\n\n3. Set the basics: Choose the place (inside/outside), needed things, number of players, and main actions (e.g., running, throwing).\n\n4. Make clear goals: Decide how to score, win, or finish the game.\n\n5. Write rules: Create simple, fair, and easy rules for playing, fouls, and penalties.\n\n6. Make a test version: Try your ideas with temporary things or spaces.\n\n7. Ask for thoughts: Invite friends or helpers to play, then ask for their view on fun and clarity.\n\n8. Improve and change: Adjust rules, things, or format as needed.\n\n9. Write everything down: Make a rulebook and guide.\n\n10. Share and promote: Host events or share with local groups to grow interest and get more thoughts.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Both Answer1 and Answer2 provide clear, logical, and well-structured steps for creating a new game (or sport). They cover similar key phases: conceptualization, research, prototyping, testing, refinement, documentation, and promotion.\n\nHowever, **Answer1** is superior in **semantic quality** because:\n\n- It uses more precise and nuanced language (e.g., \u201caccessibility, safety, and inclusivity,\u201d \u201cstandardization,\u201d \u201cgather data on popularity, skill development, and health benefits\u201d).\n- It demonstrates deeper consideration of long-term development and institutionalization of the sport (e.g., partnerships, leagues, tournaments, standardization).\n- It avoids oversimplification while remaining accessible.\n- It is more comprehensive, especially in the later stages (e.g., growth and standardization), which are critical for a sport to become sustainable.\n\nAnswer2 is concise and practical, but it lacks the depth and sophistication in addressing real-world implementation and scalability. It reads more like a checklist than a thoughtful development process.\n\nThus, **Answer1** provides a higher-quality, more thoughtful, and professionally grounded response.\n\nAnswer1",
+                "Both Answer1 and Answer2 provide clear, logical, and well-structured steps for creating a new game (or sport). They cover similar key phases: conceptualization, research, prototyping, testing, refinement, documentation, and promotion.\n\nHowever, **Answer1** is superior in **semantic quality** because:\n\n- It uses more precise and nuanced language (e.g., \u201caccessibility, safety, and inclusivity,\u201d \u201cstandardization,\u201d \u201cgather data on popularity, skill development, and health benefits\u201d).\n- It demonstrates deeper consideration of long-term development and institutionalization of the sport (e.g., partnerships, leagues, tournaments, standardization).\n- It avoids oversimplification while remaining accessible.\n- It is more comprehensive, especially in the later stages (e.g., growth and standardization), which are critical for a sport to become sustainable.\n\nAnswer2 is concise and practical, but it lacks the depth and sophistication in addressing real-world implementation and scalability. It reads more like a checklist than a thoughtful process.\n\nThus, **Answer1** provides a higher-quality, more thoughtful, and professionally grounded response.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        }
+    ],
+    "54": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "How do you make a new menu for the school food place that is tasty and good for health?",
+            "answer1": {
+                "text": "To make a good and healthy school canteen menu, start by putting in many fruits, vegetables, whole grains, lean meats, and milk products. Change main dishes like grilled chicken wraps, vegetable stir-fries, wholegrain pasta, and bean burritos. Offer many sides like carrot sticks, apple slices, and yogurt. Change fried foods with baked or steamed foods. Limit sweet drinks by giving water, milk, or 100 percent fruit juice. Use fresh seasonal fruits and vegetables for good taste and low cost. Use herbs and spices to make food tasty instead of using salt or unhealthy sauces. Ask students for their thoughts to keep popular choices on the menu. Teach students about healthy eating with short menu notes or signs. Keep a balance by adding vegetarian and gluten-free choices, and watch portion sizes to stop food waste. Regular checks and surveys can help keep the menu new and attractive.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "To create a new menu for the school canteen that is both tasty and nutritious, I would follow these steps:\n\n1. **Nutritional Guidelines**: First, I would consult with a nutritionist to ensure that the menu adheres to recommended nutritional guidelines. This includes balancing macronutrients (carbohydrates, proteins, fats), ensuring adequate vitamins and minerals, and limiting added sugars and saturated fats.\n\n2. **Diverse Offerings**: Offer a variety of dishes that cater to different dietary preferences and restrictions, such as vegetarian, vegan, gluten-free, and low-sodium options. This ensures inclusivity and caters to a broader range of students.\n\n3. **Seasonal Ingredients**: Incorporate seasonal fruits and vegetables to keep the menu fresh, flavorful, and cost-effective. This also supports local agriculture and reduces carbon footprint.\n\n4. **Whole Foods**: Focus on whole, minimally processed foods like whole grains, legumes, lean proteins, and fresh produce. These provide essential nutrients and fiber.\n\n5. **Balanced Meals**: Design meals that include a balance of carbohydrates, proteins, and fats. For example, a meal might consist of a whole grain base, a protein source, and a variety of vegetables.\n\n6. **Interactive Elements**: Include interactive elements like salad bars or build-your-own options, which allow students to customize their meals according to their preferences and nutritional needs.\n\n7. **Regular Updates**:",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer1",
+                "Answer1\n\nAnswer1 provides a complete, well-structured, and practical guide to creating a healthy and tasty school menu. It covers key elements such as ingredient selection (fruits, vegetables, whole grains, lean proteins), cooking methods (baking instead of frying), beverage alternatives, flavor enhancement (herbs and spices), student feedback, dietary accommodations, portion control, and education\u2014all in clear, actionable language. The response is thorough and ends with a strong concluding point about regular evaluation.\n\nAnswer2, while starting strong with a logical, step-by-step approach, is abruptly cut off mid-sentence (\u201cRegular Updates:\u201d) and lacks closure. It misses the opportunity to complete critical points like implementation, student engagement, or evaluation\u2014key components mentioned in Answer1. As a result, it feels incomplete and less useful as a final guide.\n\nThe completeness, clarity, and practicality of Answer1 make it superior.\n\nAnswer1",
+                "Answer1\n\nAnswer1 provides a complete, well-structured, and practical guide to creating a healthy and tasty school menu. It covers key elements such as ingredient selection (fruits, vegetables, whole grains, lean proteins), cooking methods (baking instead of frying), beverage alternatives, flavor enhancement (herbs and spices), student feedback, dietary accommodations, portion control, and education\u2014all in clear, actionable language. The response is thorough and ends with a strong concluding point about regular evaluation.\n\nAnswer2, while starting strong with a logical, step-by-step approach, is abruptly cut off mid-sentence (\u201cRegular Updates:\u201d) and lacks closure. It misses the opportunity to complete critical points like implementation, student engagement, or evaluation\u2014key components mentioned in Answer1. As a result, it feels incomplete and less useful as a final guide.\n\nThe completeness, clarity, and practicality of Answer1 make it clearly superior.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "How do you make a new menu for the school food place that is tasty and good for health?",
+            "answer1": {
+                "text": "To create a new menu for the school canteen that is both tasty and nutritious, I would follow these steps:\n\n1. **Nutritional Guidelines**: First, I would consult with a nutritionist to ensure that the menu adheres to recommended nutritional guidelines. This includes balancing macronutrients (carbohydrates, proteins, fats), ensuring adequate vitamins and minerals, and limiting added sugars and saturated fats.\n\n2. **Diverse Offerings**: Offer a variety of dishes that cater to different dietary preferences and restrictions, such as vegetarian, vegan, gluten-free, and low-sodium options. This ensures inclusivity and caters to a broader range of students.\n\n3. **Seasonal Ingredients**: Incorporate seasonal fruits and vegetables to keep the menu fresh, flavorful, and cost-effective. This also supports local agriculture and reduces carbon footprint.\n\n4. **Whole Foods**: Focus on whole, minimally processed foods like whole grains, legumes, lean proteins, and fresh produce. These provide essential nutrients and fiber.\n\n5. **Balanced Meals**: Design meals that include a balance of carbohydrates, proteins, and fats. For example, a meal might consist of a whole grain base, a protein source, and a variety of vegetables.\n\n6. **Interactive Elements**: Include interactive elements like salad bars or build-your-own options, which allow students to customize their meals according to their preferences and nutritional needs.\n\n7. **Regular Updates**:",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "To make a good and healthy school canteen menu, start by putting in many fruits, vegetables, whole grains, lean meats, and milk products. Change main dishes like grilled chicken wraps, vegetable stir-fries, wholegrain pasta, and bean burritos. Offer many sides like carrot sticks, apple slices, and yogurt. Change fried foods with baked or steamed foods. Limit sweet drinks by giving water, milk, or 100 percent fruit juice. Use fresh seasonal fruits and vegetables for good taste and low cost. Use herbs and spices to make food tasty instead of using salt or unhealthy sauces. Ask students for their thoughts to keep popular choices on the menu. Teach students about healthy eating with short menu notes or signs. Keep a balance by adding vegetarian and gluten-free choices, and watch portion sizes to stop food waste. Regular checks and surveys can help keep the menu new and attractive.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer2",
+                "Answer2 is more comprehensive, practical, and directly addresses the question with clear, actionable steps that are easy to implement in a school setting. It includes specific food examples, strategies for flavor enhancement without unhealthy additives, student engagement, education through signage, portion control, and feedback mechanisms\u2014all of which contribute to both taste and health. While Answer1 is well-structured and thorough, it is cut off mid-sentence (\u201cRegular Updates:\u201d) and lacks closure, reducing its completeness and effectiveness.\n\nAnswer2 provides a full, cohesive, and student-centered approach that balances nutrition, taste, cost, and engagement\u2014making it superior in quality and utility.\n\nAnswer2",
+                "Answer2 is more comprehensive, practical, and directly addresses the question with clear, actionable steps that are easy to implement in a school setting. It includes specific food examples, strategies for flavor enhancement without unhealthy additives, student engagement, education through signage, portion control, and feedback mechanisms\u2014all of which contribute to both taste and health. While Answer1 is well-structured and thorough, it is cut off mid-sentence (\u201cRegular Updates:\u201d) and lacks closure, reducing its completeness and effectiveness.\n\nAnswer2 provides a full, cohesive, and realistic plan that balances nutrition, taste, cost, student preference, and sustainability.\n\nAnswer2"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,873 @@
+{
+    "metadata": {
+        "judge_model": "Qwen/Qwen3-Next-80B-A3B-Instruct",
+        "data_1_path": "data/generated_answers/gpt-4.1-answers_basic.json",
+        "data_2_path": "data/generated_answers/Qwen2-7B-Instruct-answers.json",
+        "prompt_name": "directly_answer_question_without_cot",
+        "comment": ""
+    },
+    "106": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'Who did the paint of the 'Mona Lisa'?'",
+            "answer1": {
+                "text": "The 'Mona Lisa' was made by Leonardo da Vinci, an Italian artist of the Renaissance. He made the picture from 1503 to 1506. The picture is famous for its subject's mysterious smile and Leonardo's new ways, like sfumato, which helped to give it a lifelike look and lasting fame.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "Leonardo da Vinci painted the 'Mona Lisa'. He was an Italian polymath of the Renaissance who is widely considered one of history's greatest painters. The 'Mona Lisa' is renowned for its enigmatic smile and is housed in the Louvre Museum in Paris.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer2",
+                "Answer1  \nAnswer2  \nTie\n\nTie",
+                "Answer1  \nAnswer2  \nTie"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Unknown",
+                "Unknown"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'Who did the paint of the 'Mona Lisa'?'",
+            "answer1": {
+                "text": "Leonardo da Vinci painted the 'Mona Lisa'. He was an Italian polymath of the Renaissance who is widely considered one of history's greatest painters. The 'Mona Lisa' is renowned for its enigmatic smile and is housed in the Louvre Museum in Paris.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "The 'Mona Lisa' was made by Leonardo da Vinci, an Italian artist of the Renaissance. He made the picture from 1503 to 1506. The picture is famous for its subject's mysterious smile and Leonardo's new ways, like sfumato, which helped to give it a lifelike look and lasting fame.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer2",
+                "Answer1  \nAnswer2  \nTie\n\nAnswer2 provides more specific details\u2014such as the timeframe (1503\u20131506) and the artistic technique (sfumato)\u2014that enhance the depth and accuracy of the response. It also explicitly connects Leonardo\u2019s methods to the painting\u2019s lasting fame, offering a more nuanced understanding. Answer1 is correct and well-written, but Answer2 adds valuable context that elevates its quality.\n\nAnswer2",
+                "Answer1  \nAnswer2  \nTie\n\nAnswer2 provides more specific details\u2014such as the timeframe (1503\u20131506) and the artistic technique (sfumato)\u2014that enhance the depth and accuracy of the response. It also explicitly connects Leonardo\u2019s methods to the painting\u2019s lasting fame, offering a more nuanced understanding. Answer1 is correct and well-written, but Answer2 adds valuable context that enriches the answer without introducing errors.\n\nAnswer2"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "Unknown",
+                "Unknown"
+            ]
+        }
+    ],
+    "107": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'What year did the Titanic go down?'",
+            "answer1": {
+                "text": "The Titanic went down in 1912. It hit an ice mountain on its first journey from Southampton to New York and sank in the early hours of April 15, 1912. The event caused the loss of over 1,500 lives and is one of the most well-known sea disasters.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "The Titanic sank in 1912. It hit an iceberg on its maiden voyage from Southampton to New York City. Despite efforts to rescue passengers and crew, the ship sank overnight, claiming over 1,500 lives.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer1  \nAnswer2  \nTie\n\nTie",
+                "Answer1  \nAnswer2  \nTie\n\nThe two answers are nearly identical in accuracy and quality. Both correctly state that the Titanic sank in 1912, hit an iceberg (not \u201cice mountain\u201d in Answer1 \u2014 a minor error), on its maiden voyage from Southampton to New York, and resulted in over 1,500 deaths. Answer1 contains a small factual inaccuracy by saying \u201cice mountain\u201d instead of \u201ciceberg,\u201d which is a notable error in terminology. Answer2 uses the correct term \u201ciceberg\u201d and is slightly more concise without sacrificing key details.\n\nTherefore, Answer2 is superior due to its precise wording.\n\nAnswer2",
+                "Answer1  \nAnswer2  \nTie\n\nThe two answers are nearly identical in accuracy and quality. Both correctly state that the Titanic sank in 1912, hit an iceberg (not \"ice mountain\" in Answer1 \u2014 a minor error), on its maiden voyage from Southampton to New York, and resulted in over 1,500 deaths. Answer1 contains a small factual inaccuracy by saying \"ice mountain\" instead of \"iceberg,\" which is a notable error in semantic precision. Answer2 uses the correct term \"iceberg\" and is slightly more concise without sacrificing key details.\n\nTherefore, Answer2 is superior due to its precise terminology.\n\nAnswer2"
+            ],
+            "extracted_answers": [
+                "Unknown",
+                "Unknown",
+                "Unknown"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'What year did the Titanic go down?'",
+            "answer1": {
+                "text": "The Titanic sank in 1912. It hit an iceberg on its maiden voyage from Southampton to New York City. Despite efforts to rescue passengers and crew, the ship sank overnight, claiming over 1,500 lives.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "The Titanic went down in 1912. It hit an ice mountain on its first journey from Southampton to New York and sank in the early hours of April 15, 1912. The event caused the loss of over 1,500 lives and is one of the most well-known sea disasters.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer2",
+                "Answer1 and Answer2 are both accurate and provide correct information: the Titanic sank in 1912, on its maiden voyage, after hitting an iceberg, resulting in over 1,500 deaths. \n\nThe only minor difference is that Answer2 incorrectly refers to an \u201cice mountain\u201d instead of \u201ciceberg,\u201d which is a factual inaccuracy. \u201cIce mountain\u201d is not the correct term \u2014 the standard and accurate term is \u201ciceberg.\u201d This error reduces the precision and quality of Answer2.\n\nAnswer1 uses the correct terminology and provides clear, concise, and accurate information without errors.\n\nTherefore, Answer1 is superior.\n\nAnswer1",
+                "Answer1 and Answer2 are both accurate and provide correct information: the Titanic sank in 1912, on its maiden voyage, after hitting an iceberg, resulting in over 1,500 deaths. \n\nThe only minor difference is that Answer2 incorrectly refers to an \u201cice mountain\u201d instead of \u201ciceberg,\u201d which is a factual inaccuracy. \u201cIce mountain\u201d is not the correct term \u2014 the standard and accurate term is \u201ciceberg.\u201d This error reduces the precision and quality of Answer2.\n\nAnswer1 uses the correct terminology and provides clear, concise, and accurate information without any factual errors.\n\nTherefore, Answer1 is superior.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        }
+    ],
+    "108": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'Can you say the three forms of matter?'",
+            "answer1": {
+                "text": "The three states of matter are solid, liquid, and gas. Solids keep a fixed shape and amount, liquids keep a fixed amount but take the shape of their container, and gases have no fixed shape or amount, spreading to fill any space that is open.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "The three states of matter are solid, liquid, and gas. Solids have a fixed shape and volume. Liquids have a fixed volume but take the shape of their container. Gases have neither a fixed shape nor volume, expanding to fill their container.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer2",
+                "Both Answer1 and Answer2 correctly identify the three states of matter: solid, liquid, and gas. They both accurately describe the key properties of each state.\n\n- Answer1 says solids \"keep a fixed shape and amount\" \u2014 \"amount\" is imprecise; it should be \"volume\" for scientific accuracy.\n- Answer2 uses the correct terminology: \"fixed shape and volume\" for solids, \"fixed volume but take the shape\" for liquids, and \"neither a fixed shape nor volume\" for gases \u2014 all scientifically precise.\n\nAnswer2 is superior because it uses accurate scientific terminology (\"volume\" instead of \"amount\") and is more concise without losing clarity.\n\nAnswer2",
+                "Both Answer1 and Answer2 correctly identify the three states of matter: solid, liquid, and gas. They both accurately describe the key properties of each state.\n\n- Answer1 says solids \"keep a fixed shape and amount\" \u2014 \"amount\" is imprecise; it should be \"volume\" for scientific accuracy.\n- Answer2 uses the correct terminology: \"fixed shape and volume\" for solids, \"fixed volume but take the shape\" for liquids, and \"neither a fixed shape nor volume\" for gases \u2014 all scientifically precise.\n\nAnswer2 is superior because it uses accurate scientific terminology (\"volume\" instead of \"amount\") and is more concise without sacrificing clarity.\n\nAnswer2"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'Can you say the three forms of matter?'",
+            "answer1": {
+                "text": "The three states of matter are solid, liquid, and gas. Solids have a fixed shape and volume. Liquids have a fixed volume but take the shape of their container. Gases have neither a fixed shape nor volume, expanding to fill their container.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "The three states of matter are solid, liquid, and gas. Solids keep a fixed shape and amount, liquids keep a fixed amount but take the shape of their container, and gases have no fixed shape or amount, spreading to fill any space that is open.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Answer1 is superior because it uses more precise and scientifically accurate terminology. It correctly states that solids have a fixed *shape and volume*, liquids have a fixed *volume* (not \u201camount\u201d), and gases have neither a fixed *shape nor volume*. The term \u201camount\u201d in Answer2 is ambiguous\u2014it could refer to mass, volume, or quantity, which dilutes the scientific clarity. Additionally, \u201cspreading to fill any space that is open\u201d is less precise than \u201cexpanding to fill their container,\u201d which is the standard phrasing in physics and chemistry.\n\nAnswer1 provides a clearer, more technically accurate explanation.\n\nAnswer1",
+                "Answer1 is superior because it uses more precise and scientifically accurate terminology. It correctly states that solids have a fixed *shape and volume*, liquids have a fixed *volume* (not \u201camount\u201d), and gases have neither a fixed *shape nor volume*. The term \u201camount\u201d in Answer2 is ambiguous\u2014it could refer to mass, volume, or quantity, which dilutes the scientific clarity. Additionally, \u201cspreading to fill any space that is open\u201d is less precise than \u201cexpanding to fill their container,\u201d which is the standard phrasing in physics and chemistry.\n\nAnswer1 provides clearer, more accurate descriptions aligned with standard scientific education.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        }
+    ],
+    "109": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'What is the number that, when you multiply it by itself, makes 36?'",
+            "answer1": {
+                "text": "The square root of 36 is 6. This is because 6 times 6 makes 36. The square root is the number that, when multiplied by itself, gives the first number.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "The square root of 36 is 6. This is because 6 multiplied by itself (6*6) equals 36.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer1",
+                "Both Answer1 and Answer2 are semantically accurate and correctly identify that 6 is the number which, when multiplied by itself, equals 36. Both explain the concept clearly and correctly reference the square root.\n\nThe only difference is that Answer1 includes a slightly more explanatory sentence: \u201cThe square root is the number that, when multiplied by itself, gives the first number.\u201d This adds a bit of definitional context, which may aid understanding, especially for a learner.\n\nHowever, Answer2 is more concise and equally correct. Since the question only asks for the number and the reasoning, and both answers provide that accurately, the additional explanation in Answer1 is helpful but not necessary for correctness.\n\nGiven that both are correct and the extra explanation in Answer1 does not introduce any error but merely enhances clarity, **Answer1** has a slight edge in quality due to its slightly more complete explanation.\n\nAnswer1",
+                "Both Answer1 and Answer2 are semantically accurate and correctly identify that 6 is the number which, when multiplied by itself, equals 36. Both explain the concept clearly and correctly reference the square root.\n\nThe only difference is that Answer1 includes a slightly more explanatory sentence: \u201cThe square root is the number that, when multiplied by itself, gives the first number.\u201d This adds a bit of definitional context, which may aid understanding, especially for a learner.\n\nHowever, Answer2 is more concise and equally correct. Since the question only asks for the number and the reasoning, and both answers provide that accurately, the added explanation in Answer1 is helpful but not necessary for correctness.\n\nGiven that both are correct and the difference is only in verbosity\u2014not accuracy or clarity\u2014the quality is effectively equal.\n\n**Tie**"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "Unknown"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'What is the number that, when you multiply it by itself, makes 36?'",
+            "answer1": {
+                "text": "The square root of 36 is 6. This is because 6 multiplied by itself (6*6) equals 36.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "The square root of 36 is 6. This is because 6 times 6 makes 36. The square root is the number that, when multiplied by itself, gives the first number.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer2",
+                "Both Answer1 and Answer2 are factually correct and clearly explain that 6 is the number which, when multiplied by itself, equals 36. However, Answer2 goes a step further by explicitly defining the concept of a square root in the context of the question: \u201cThe square root is the number that, when multiplied by itself, gives the first number.\u201d This additional clarification enhances understanding and directly ties the explanation back to the phrasing of the question.\n\nWhile Answer1 is concise and accurate, Answer2 provides a more complete and pedagogically helpful explanation.\n\n**Answer2**",
+                "Both Answer1 and Answer2 are factually correct and clearly explain that 6 is the number which, when multiplied by itself, equals 36. However, Answer2 goes a step further by explicitly defining the concept of a square root in the context of the question: \u201cThe square root is the number that, when multiplied by itself, gives the first number.\u201d This additional clarification enhances understanding and directly ties the explanation back to the phrasing of the question.\n\nWhile Answer1 is concise and accurate, Answer2 provides a more complete and pedagogically helpful response.\n\n**Answer2**"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "Unknown",
+                "Unknown"
+            ]
+        }
+    ],
+    "110": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'What is the formula of water?'",
+            "answer1": {
+                "text": "The chemical form of water is H2O. This means each water unit is made of two hydrogen atoms and one oxygen atom, joined together. This joining makes the basic form of water.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "Water's chemical formula is H2O. This indicates each water molecule consists of two hydrogen atoms (H) and one oxygen atom (O).",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer2",
+                "Both Answer1 and Answer2 are accurate and clearly explain that the chemical formula of water is H\u2082O, with two hydrogen atoms and one oxygen atom per molecule. \n\nAnswer1 uses slightly more verbose phrasing (\u201cchemical form\u201d instead of \u201cchemical formula,\u201d and \u201cwater unit\u201d instead of \u201cwater molecule\u201d), which is not incorrect but is less precise in scientific terminology. Answer2 uses more standard and concise scientific language (\u201cchemical formula,\u201d \u201cwater molecule\u201d), making it slightly more technically accurate and polished.\n\nThus, Answer2 is superior in terms of semantic quality and precision.\n\nAnswer2",
+                "Both Answer1 and Answer2 are accurate and clearly explain that the chemical formula of water is H\u2082O, with two hydrogen atoms and one oxygen atom per molecule. \n\nAnswer1 uses slightly more verbose phrasing (\u201cchemical form\u201d instead of \u201cchemical formula,\u201d and \u201cwater unit\u201d instead of \u201cwater molecule\u201d), which is not incorrect but is less precise in scientific terminology. Answer2 uses more standard and concise scientific language (\u201cchemical formula,\u201d \u201cwater molecule\u201d), making it slightly more polished and technically accurate.\n\nThus, Answer2 is superior in terms of semantic quality and precision.\n\nAnswer2"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'What is the formula of water?'",
+            "answer1": {
+                "text": "Water's chemical formula is H2O. This indicates each water molecule consists of two hydrogen atoms (H) and one oxygen atom (O).",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "The chemical form of water is H2O. This means each water unit is made of two hydrogen atoms and one oxygen atom, joined together. This joining makes the basic form of water.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Answer1\n\nBoth answers are factually correct, but Answer1 is superior in clarity, precision, and conciseness. It directly states the formula and explains the composition without unnecessary or slightly awkward phrasing (e.g., \u201cwater unit\u201d and \u201cbasic form of water\u201d in Answer2, which are imprecise or redundant). Answer1 uses standard scientific terminology and delivers the information more effectively.",
+                "Answer1\n\nBoth answers are factually correct, but Answer1 is superior in clarity, precision, and conciseness. It directly states the formula and explains the composition without unnecessary or slightly awkward phrasing (e.g., \u201cwater unit\u201d and \u201cbasic form of water\u201d in Answer2, which are imprecise or redundant). Answer1 uses standard scientific terminology (\u201cmolecule\u201d) and delivers the information more effectively."
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        }
+    ],
+    "111": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'Which planet is called the Red Planet?'",
+            "answer1": {
+                "text": "Mars is known as the Red Planet. This name comes from its red look, which is caused by iron dust, or rust, on its surface. The red color can be seen even from Earth with the eye.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "Mars is known as the Red Planet. Its reddish appearance is due to iron oxide (rust) on its surface.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer1",
+                "Both Answer1 and Answer2 correctly identify Mars as the Red Planet and accurately explain that its reddish color is due to iron oxide (rust) on its surface. \n\nAnswer1 provides a bit more detail by mentioning that the color is visible from Earth with the naked eye, which adds context but is not essential to answering the core question. Answer2 is more concise and equally accurate, using the precise scientific term \u201ciron oxide\u201d instead of \u201ciron dust, or rust,\u201d which is slightly more technically accurate (since rust is a form of iron oxide, but the term \u201ciron oxide\u201d is preferred in scientific contexts).\n\nHowever, the additional detail in Answer1 does not detract from its accuracy\u2014it enhances it slightly without introducing errors. Both answers are semantically strong, accurate, and clear.\n\nGiven that Answer1 includes a minor but helpful contextual detail without sacrificing precision, it has a slight edge in quality.\n\nAnswer1",
+                "Both Answer1 and Answer2 correctly identify Mars as the Red Planet and accurately explain that its reddish color is due to iron oxide (rust) on its surface. \n\nAnswer1 provides a bit more detail by mentioning that the color is visible from Earth with the naked eye, which adds context but is not essential to answering the core question. Answer2 is more concise and equally accurate, using the precise scientific term \u201ciron oxide\u201d instead of \u201ciron dust, or rust,\u201d which is slightly more technically accurate (since rust is a form of iron oxide, but the term \u201ciron oxide\u201d is preferred in scientific contexts).\n\nHowever, the additional detail in Answer1 does not detract from its accuracy\u2014it enhances it slightly without introducing errors. Both answers are semantically strong, accurate, and clear.\n\nGiven that Answer1 includes a minor but helpful contextual detail without compromising precision, and Answer2 is slightly more technically precise in terminology, the difference is negligible.\n\n**Tie**"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "Unknown"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'Which planet is called the Red Planet?'",
+            "answer1": {
+                "text": "Mars is known as the Red Planet. Its reddish appearance is due to iron oxide (rust) on its surface.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "Mars is known as the Red Planet. This name comes from its red look, which is caused by iron dust, or rust, on its surface. The red color can be seen even from Earth with the eye.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer2",
+                "Both Answer1 and Answer2 are accurate and provide correct information about Mars being called the Red Planet due to iron oxide (rust) on its surface. However, Answer2 adds an extra detail \u2014 that the red color is visible from Earth with the naked eye \u2014 which enhances the answer by providing additional context without introducing any inaccuracies.\n\nThis additional detail improves the completeness and usefulness of the response, making it slightly more informative.\n\nTherefore, Answer2 is superior in quality.\n\nAnswer2",
+                "Both Answer1 and Answer2 are accurate and provide correct information about Mars being called the Red Planet due to iron oxide (rust) on its surface. However, Answer2 adds an extra detail \u2014 that the red color is visible from Earth with the naked eye \u2014 which enhances the answer by providing additional context without introducing any inaccuracies.\n\nThis additional detail improves the completeness and usefulness of the response, making it slightly more informative.\n\nTherefore, Answer2 is superior.\n\nAnswer2"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        }
+    ],
+    "112": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'Who found America?'",
+            "answer1": {
+                "text": "Christopher Columbus is often seen as the man who found America in 1492 when he came to the Caribbean. But, Native Americans had been living there for many years, and Norse explorer Leif Erikson got to North America about 1000 AD, long before Columbus.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "Christopher Columbus is often credited with \"discovering\" America in 1492. However, the Americas were already inhabited by numerous indigenous peoples. Columbus believed he had reached Asia but instead found a new continent.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer1",
+                "Answer1\n\nBoth answers are factually accurate and acknowledge that Indigenous peoples were already in the Americas and that Columbus was not the first European to arrive. However, Answer1 provides additional specific historical context by mentioning Leif Erikson\u2019s arrival around 1000 AD, which adds depth and nuance to the response. This makes Answer1 more informative and comprehensive in addressing the complexity of the question. Answer2, while correct, is more concise and omits the Norse exploration detail, making it slightly less complete.\n\nThus, Answer1 is superior in quality and depth. \n\nAnswer1",
+                "Answer1\n\nBoth answers are factually accurate and acknowledge that Indigenous peoples were already in the Americas and that Columbus was not the first European to arrive. However, Answer1 provides additional specific historical context by mentioning Leif Erikson\u2019s arrival around 1000 AD, which adds depth and nuance to the response. This makes Answer1 more informative and comprehensive in addressing the complexity of the question. Answer2, while correct, is more concise and omits the Norse exploration detail, making it slightly less complete.\n\nThus, Answer1 is superior in quality and depth."
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'Who found America?'",
+            "answer1": {
+                "text": "Christopher Columbus is often credited with \"discovering\" America in 1492. However, the Americas were already inhabited by numerous indigenous peoples. Columbus believed he had reached Asia but instead found a new continent.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "Christopher Columbus is often seen as the man who found America in 1492 when he came to the Caribbean. But, Native Americans had been living there for many years, and Norse explorer Leif Erikson got to North America about 1000 AD, long before Columbus.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer2",
+                "Both Answer1 and Answer2 accurately acknowledge that Christopher Columbus is commonly credited with \"discovering\" America in 1492, while also correctly noting that Indigenous peoples were already living there. Both also address the historical nuance that Columbus did not realize he had found a new continent.\n\nHowever, Answer2 goes a step further by mentioning Leif Erikson\u2019s earlier arrival in North America around 1000 AD, which adds important historical context that Answer1 omits. This makes Answer2 more comprehensive and nuanced in its historical accuracy.\n\nThus, Answer2 provides a richer, more complete answer.\n\nAnswer2",
+                "Both Answer1 and Answer2 accurately acknowledge that Christopher Columbus is commonly credited with \"discovering\" America in 1492, while also correctly noting that Indigenous peoples were already living there. Both also address the historical nuance that Columbus did not realize he had found a new continent.\n\nHowever, Answer2 goes a step further by mentioning Leif Erikson\u2019s earlier arrival in North America around 1000 AD, which adds important historical context that Answer1 omits. This makes Answer2 more comprehensive and nuanced in its historical accuracy.\n\nTherefore, Answer2 provides a richer, more complete answer.\n\nAnswer2"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        }
+    ],
+    "113": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'Say the names of the parts of the earth.'",
+            "answer1": {
+                "text": "The earth has four main parts: crust, mantle, outer core, and inner core. The crust is the top solid part. The mantle below is semi-solid. The outer core is liquid metal, and the inner core is solid metal, mostly iron and nickel. These parts differ in makeup and heat.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "The Earth has four main layers: the crust, mantle, outer core, and inner core. The crust is the outermost layer, thin and rocky. Beneath is the mantle, thick and mostly solid. The outer core is liquid, made of iron and nickel. The inner core is solid, under immense pressure.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie\n\nTie",
+                "Answer1"
+            ],
+            "extracted_answers": [
+                "Unknown",
+                "Unknown",
+                "gpt-4o-mini"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'Say the names of the parts of the earth.'",
+            "answer1": {
+                "text": "The Earth has four main layers: the crust, mantle, outer core, and inner core. The crust is the outermost layer, thin and rocky. Beneath is the mantle, thick and mostly solid. The outer core is liquid, made of iron and nickel. The inner core is solid, under immense pressure.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "The earth has four main parts: crust, mantle, outer core, and inner core. The crust is the top solid part. The mantle below is semi-solid. The outer core is liquid metal, and the inner core is solid metal, mostly iron and nickel. These parts differ in makeup and heat.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Both Answer1 and Answer2 accurately describe the four main layers of the Earth\u2014crust, mantle, outer core, and inner core\u2014with correct descriptions of their physical states and compositions. \n\nAnswer1 provides slightly more detail, such as noting the crust is \u201cthin and rocky,\u201d the mantle is \u201cthick and mostly solid,\u201d and the outer core is \u201cmade of iron and nickel.\u201d It also mentions \u201cimmense pressure\u201d for the inner core, adding context.\n\nAnswer2 is concise and also correct, using terms like \u201csemi-solid\u201d for the mantle (which is acceptable, as the mantle behaves plastically over geological time) and \u201cliquid metal\u201d and \u201csolid metal\u201d for the cores. It adds a brief concluding note about differences in \u201cmakeup and heat,\u201d which is insightful.\n\nBoth are semantically accurate, clear, and complete. Answer1 has marginally more descriptive detail, but Answer2 is equally correct and adds a useful synthesis at the end.\n\nGiven the high quality of both and the minimal difference in depth, the choice is very close.\n\n**Tie**",
+                "Both Answer1 and Answer2 accurately describe the four main layers of the Earth\u2014crust, mantle, outer core, and inner core\u2014with correct descriptions of their physical states and compositions. \n\nAnswer1 provides slightly more detail, such as noting the crust is \u201cthin and rocky,\u201d the mantle is \u201cthick and mostly solid,\u201d and the outer core is \u201cmade of iron and nickel.\u201d It also mentions \u201cimmense pressure\u201d for the inner core, adding context.\n\nAnswer2 is concise and also correct, using terms like \u201csemi-solid\u201d for the mantle (which is acceptable, as the mantle behaves plastically over geological time) and \u201cliquid metal\u201d and \u201csolid metal\u201d for the cores. It adds a brief concluding note about differences in \u201cmakeup and heat,\u201d which is insightful.\n\nBoth are semantically accurate, clear, and complete. Answer1 has marginally more descriptive detail, but Answer2 is equally correct and adds a useful synthesis at the end.\n\nGiven the high quality of both and the minimal difference in depth, neither is clearly superior.\n\n**Tie**"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Unknown",
+                "Unknown"
+            ]
+        }
+    ],
+    "114": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'What does a thermometer tell?'",
+            "answer1": {
+                "text": "A thermometer takes the measure of temperature. It shows how hot or cold a thing or place is by finding changes in heat energy. The thermometer puts out this detail using a scale, usually in degrees Celsius or Fahrenheit.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "A thermometer measures temperature. It indicates the degree of hotness or coldness in a substance or environment.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer2",
+                "Answer1  \nAnswer2  \nTie\n\nTie",
+                "Answer1  \nAnswer2  \nTie"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Unknown",
+                "Unknown"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'What does a thermometer tell?'",
+            "answer1": {
+                "text": "A thermometer measures temperature. It indicates the degree of hotness or coldness in a substance or environment.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "A thermometer takes the measure of temperature. It shows how hot or cold a thing or place is by finding changes in heat energy. The thermometer puts out this detail using a scale, usually in degrees Celsius or Fahrenheit.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer2",
+                "Answer2 is more detailed and provides additional context\u2014such as the mechanism (changes in heat energy) and the use of scales (Celsius or Fahrenheit)\u2014which enhances the explanatory quality. While Answer1 is correct and concise, Answer2 offers a richer, more informative explanation without introducing inaccuracies.\n\nAnswer2",
+                "Answer2 is more detailed and provides additional context\u2014such as the mechanism (changes in heat energy) and the use of scales (Celsius or Fahrenheit)\u2014which enhances the explanatory quality. While Answer1 is correct and concise, Answer2 offers a richer, more complete explanation without introducing inaccuracies.\n\nAnswer2"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        }
+    ],
+    "115": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'Which part puts blood through the body?'",
+            "answer1": {
+                "text": "The heart moves blood around the body. It is a muscle that squeezes to push blood through blood tubes, giving oxygen and food to cells and taking away waste. Without the heart, blood could not flow, and the body would not work well.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "The heart pumps blood throughout the body. It's a muscular organ in the chest that contracts to force blood through the circulatory system, delivering oxygen and nutrients to tissues and removing waste.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer2",
+                "Both Answer1 and Answer2 are accurate and clearly explain the role of the heart in circulating blood. They both correctly identify the heart as the organ responsible, mention its muscular nature, and describe its function in delivering oxygen/nutrients and removing waste.\n\nHowever, Answer2 uses slightly more precise terminology \u2014 \u201cpumps\u201d instead of \u201cmoves,\u201d and \u201ccirculatory system\u201d instead of \u201cblood tubes\u201d \u2014 which is more scientifically accurate. \u201cBlood tubes\u201d is an informal and imprecise phrase, whereas \u201ccirculatory system\u201d is the correct anatomical term. Additionally, Answer2 is more concise and flows more naturally.\n\nThus, Answer2 is superior in terms of semantic quality, accuracy, and precision.\n\nAnswer2",
+                "Both Answer1 and Answer2 are accurate and clearly explain the role of the heart in circulating blood. They both correctly identify the heart as the organ responsible, mention its muscular nature, and describe its function in delivering oxygen/nutrients and removing waste.\n\nHowever, Answer2 uses slightly more precise terminology \u2014 \u201cpumps\u201d instead of \u201cmoves,\u201d and \u201ccirculatory system\u201d instead of \u201cblood tubes\u201d \u2014 which is more scientifically accurate. \u201cBlood tubes\u201d is an informal and imprecise phrase, whereas \u201ccirculatory system\u201d is the correct anatomical term. Additionally, Answer2 is more concise and flows more smoothly.\n\nThus, Answer2 is superior in terms of semantic quality, accuracy, and precision.\n\nAnswer2"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'Which part puts blood through the body?'",
+            "answer1": {
+                "text": "The heart pumps blood throughout the body. It's a muscular organ in the chest that contracts to force blood through the circulatory system, delivering oxygen and nutrients to tissues and removing waste.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "The heart moves blood around the body. It is a muscle that squeezes to push blood through blood tubes, giving oxygen and food to cells and taking away waste. Without the heart, blood could not flow, and the body would not work well.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Answer1  \nThe heart pumps blood throughout the body. It's a muscular organ in the chest that contracts to force blood through the circulatory system, delivering oxygen and nutrients to tissues and removing waste.  \n\nAnswer2  \nThe heart moves blood around the body. It is a muscle that squeezes to push blood through blood tubes, giving oxygen and food to cells and taking away waste. Without the heart, blood could not flow, and the body would not work well.  \n\nBoth answers are accurate and convey the same core information: the heart pumps blood, it\u2019s a muscle, and it delivers oxygen/nutrients while removing waste. However, Answer1 uses more precise and scientifically appropriate terminology \u2014 \u201ccirculatory system\u201d instead of \u201cblood tubes,\u201d and \u201cdelivering oxygen and nutrients\u201d instead of \u201cgiving oxygen and food.\u201d Answer1 also has a slightly more formal and complete structure, making it clearer and more informative.\n\nThus, Answer1 is superior in semantic quality.\n\nAnswer1",
+                "Answer1  \nThe heart pumps blood throughout the body. It's a muscular organ in the chest that contracts to force blood through the circulatory system, delivering oxygen and nutrients to tissues and removing waste.  \n\nAnswer2  \nThe heart moves blood around the body. It is a muscle that squeezes to push blood through blood tubes, giving oxygen and food to cells and taking away waste. Without the heart, blood could not flow, and the body would not work well.  \n\nBoth answers are accurate and convey the same core information: the heart pumps blood, it\u2019s a muscle, and it delivers oxygen/nutrients while removing waste. However, Answer1 uses more precise and scientifically appropriate terminology \u2014 \u201ccirculatory system\u201d instead of \u201cblood tubes,\u201d and \u201cdelivering oxygen and nutrients\u201d instead of \u201cgiving oxygen and food.\u201d Answer1 also has a slightly more formal and polished structure, making it clearer and more informative.\n\nThus, Answer1 is superior in semantic quality.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        }
+    ],
+    "116": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'Give the names of the parts of the moon.'",
+            "answer1": {
+                "text": "The times of the moon are new moon, growing crescent, first quarter, growing gibbous, full moon, shrinking gibbous, last quarter, and shrinking crescent. These times come about because the moon goes around Earth, changing how much of its bright side we can see.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "The phases of the moon are New Moon, Waxing Crescent, First Quarter, Waxing Gibbous, Full Moon, Waning Gibbous, Third (or Last) Quarter, and Waning Crescent. These phases occur due to the moon's position relative to the sun as seen from Earth.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer2",
+                "Answer2\n\nAnswer2 correctly identifies the **phases of the moon** using the proper astronomical terminology: \"Waxing Crescent,\" \"Waning Gibbous,\" etc., and accurately explains that the phases result from the moon\u2019s position relative to the sun as viewed from Earth. It uses precise, standard terms recognized in astronomy.\n\nAnswer1 incorrectly refers to \u201ctimes of the moon\u201d instead of \u201cphases,\u201d and uses non-standard terms like \u201cgrowing crescent\u201d and \u201cshrinking gibbous,\u201d which are not the accepted scientific names. While the general idea is similar, the terminology is imprecise and less accurate.\n\nThus, Answer2 is superior in semantic quality, accuracy, and use of correct terminology.\n\nAnswer2",
+                "Answer2\n\nAnswer2 correctly identifies the **phases of the moon** using the proper astronomical terminology: \"Waxing Crescent,\" \"Waning Gibbous,\" etc., and accurately explains that the phases result from the moon\u2019s position relative to the sun as viewed from Earth. It uses precise, standard terms recognized in astronomy.\n\nAnswer1 incorrectly refers to \u201ctimes of the moon\u201d instead of \u201cphases,\u201d and uses non-standard terms like \u201cgrowing crescent\u201d and \u201cshrinking gibbous,\u201d which are not the accepted scientific nomenclature. While the general idea is similar, the terminology is imprecise and less accurate.\n\nThus, Answer2 is superior in semantic quality, accuracy, and use of correct terminology.\n\nAnswer2"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'Give the names of the parts of the moon.'",
+            "answer1": {
+                "text": "The phases of the moon are New Moon, Waxing Crescent, First Quarter, Waxing Gibbous, Full Moon, Waning Gibbous, Third (or Last) Quarter, and Waning Crescent. These phases occur due to the moon's position relative to the sun as seen from Earth.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "The times of the moon are new moon, growing crescent, first quarter, growing gibbous, full moon, shrinking gibbous, last quarter, and shrinking crescent. These times come about because the moon goes around Earth, changing how much of its bright side we can see.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1 is superior because it uses the correct and standard astronomical terminology for the lunar phases: \"Waxing Crescent,\" \"Waxing Gibbous,\" \"Waning Gibbous,\" and \"Third (or Last) Quarter.\" It also correctly explains the cause of the phases in terms of the Moon\u2019s position relative to the Sun as viewed from Earth.\n\nAnswer2 uses non-standard and imprecise terms like \u201cgrowing crescent,\u201d \u201cshrinking gibbous,\u201d and \u201ctimes of the moon,\u201d which are not scientifically accurate. While the general idea is understandable, the terminology is informal and incorrect in an astronomical context. Additionally, \u201ctimes of the moon\u201d is misleading \u2014 these are phases, not times.\n\nThe semantic accuracy and precision of Answer1 make it clearly better.\n\nAnswer1",
+                "Answer1 is superior because it uses the correct and standard astronomical terminology for the lunar phases: \"Waxing Crescent,\" \"Waxing Gibbous,\" \"Waning Gibbous,\" and \"Third (or Last) Quarter.\" It also correctly explains the cause of the phases in terms of the Moon\u2019s position relative to the Sun as viewed from Earth.\n\nAnswer2 uses non-standard and imprecise terms like \u201cgrowing crescent,\u201d \u201cshrinking gibbous,\u201d and \u201ctimes of the moon,\u201d which are not scientifically accurate. While the general idea is understandable, the terminology is informal and incorrect in an astronomical context. Additionally, \u201ctimes of the moon\u201d is misleading \u2014 these are phases, not times.\n\nThe semantic accuracy and precision of Answer1 make it clearly superior.\n\nAnswer1",
+                "Answer1 is superior because it uses the correct and standard astronomical terminology for the lunar phases: \"Waxing Crescent,\" \"Waxing Gibbous,\" \"Waning Gibbous,\" and \"Third (or Last) Quarter.\" It also correctly explains the cause of the phases in terms of the Moon\u2019s position relative to the Sun as viewed from Earth.\n\nAnswer2 uses non-standard and imprecise terms like \u201cgrowing crescent,\u201d \u201cshrinking gibbous,\u201d and \u201ctimes of the moon,\u201d which are not scientifically accurate. While the general idea is understandable, the terminology is informal and incorrect in an astronomical context. Additionally, \u201ctimes of the moon\u201d is a misleading phrase \u2014 the question asks for \u201cparts of the moon,\u201d which is ambiguous, but in context, it clearly intends to ask for lunar phases, and Answer1 addresses this with proper terminology.\n\nThus, Answer1 is more accurate, precise, and scientifically valid.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        }
+    ],
+    "117": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'Which animal is called the king of the jungle?'",
+            "answer1": {
+                "text": "The lion is called the king of the field. This name comes from its great look, strength, and social power in its home. Though they have this name, lions usually live in grasslands and open areas, not jungles, but their strong presence has given them this royal fame.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "The lion is known as the king of the jungle. This title comes from the observation that lions are apex predators in their natural habitat, the African savanna, where they are at the top of the food chain and do not have natural predators. However, it's worth noting that the term \"jungle\" is not part of the lion's natural habitat, as lions typically live in grasslands and savannas.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer2",
+                "Answer2\n\nAnswer2 is superior because it correctly identifies the lion as the \"king of the jungle\" \u2014 the commonly accepted phrase \u2014 while also accurately clarifying that lions do not actually live in jungles but in savannas and grasslands. It provides a clear, concise explanation of why the title exists (apex predator status, no natural predators) and acknowledges the inaccuracy of the term \"jungle\" in a way that enhances understanding without confusion.\n\nAnswer1 contains a factual error by saying \u201cking of the field,\u201d which is not the standard phrase. While it correctly notes lions don\u2019t live in jungles, the misstatement of the title undermines its credibility and clarity. The phrase \u201cking of the field\u201d is not recognized or used in common parlance or literature.\n\nThus, Answer2 is more accurate, informative, and linguistically appropriate.\n\nAnswer2",
+                "Answer2\n\nAnswer2 is superior because it correctly identifies the lion as the \"king of the jungle\" \u2014 the commonly accepted phrase \u2014 while also accurately clarifying that lions do not actually live in jungles but in savannas and grasslands. It provides a clear, concise explanation of why the title exists (apex predator status, no natural predators) and acknowledges the inaccuracy of the term \"jungle\" in a way that enhances understanding without confusion.\n\nAnswer1 contains a factual error by saying \u201cking of the field,\u201d which is not the standard phrase. While it correctly notes lions don\u2019t live in jungles, the misstatement of the title undermines its credibility and clarity. The phrase \u201cking of the field\u201d is not recognized or used in common parlance, making Answer1 less accurate and potentially misleading.\n\nThus, Answer2 is more accurate, informative, and linguistically correct.\n\nAnswer2"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'Which animal is called the king of the jungle?'",
+            "answer1": {
+                "text": "The lion is known as the king of the jungle. This title comes from the observation that lions are apex predators in their natural habitat, the African savanna, where they are at the top of the food chain and do not have natural predators. However, it's worth noting that the term \"jungle\" is not part of the lion's natural habitat, as lions typically live in grasslands and savannas.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "The lion is called the king of the field. This name comes from its great look, strength, and social power in its home. Though they have this name, lions usually live in grasslands and open areas, not jungles, but their strong presence has given them this royal fame.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Answer1\n\nAnswer1 provides a more accurate, nuanced, and informative response. It correctly identifies the lion as the animal traditionally called the \"king of the jungle,\" while also accurately clarifying that lions do not live in jungles but in savannas and grasslands. It explains the reasoning behind the title (apex predator, no natural predators) and acknowledges the inaccuracy of the term \"jungle,\" which adds depth and educational value.\n\nAnswer2 contains a factual error: it claims the lion is called the \"king of the field,\" which is not a commonly recognized or accurate phrase. The traditional expression is \"king of the jungle,\" even if it\u2019s biologically inaccurate. Answer2 also lacks the same level of detail and clarity, and its phrasing (\"great look, strength, and social power\") is vague and less precise.\n\nThus, Answer1 is superior in accuracy, clarity, and depth.\n\nAnswer1",
+                "Answer1\n\nAnswer1 provides a more accurate, nuanced, and informative response. It correctly identifies the lion as the animal traditionally called the \"king of the jungle,\" while also accurately clarifying that lions do not live in jungles but in savannas and grasslands. It explains the reasoning behind the title (apex predator, no natural predators) and acknowledges the inaccuracy of the term \"jungle,\" which adds depth and educational value.\n\nAnswer2 contains a factual error: it claims the lion is called the \"king of the field,\" which is not a commonly recognized or accurate phrase. The traditional phrase is \"king of the jungle,\" even if it\u2019s biologically inaccurate. Answer2 also lacks the same level of detail and clarity, and its phrasing (\"great look, strength, and social power\") is vague and less precise.\n\nThus, Answer1 is superior in accuracy, clarity, and depth.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        }
+    ],
+    "118": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'What animal did Charles Darwin study famous?'",
+            "answer1": {
+                "text": "Charles Darwin well studied finches on the Gal\u00e1pagos Islands. He saw differences in their beak shapes, which helped him make his idea of natural selection by showing how kinds change to their environment over time.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "Charles Darwin famously studied the finches on the Galapagos Islands. This study was crucial in developing his theory of evolution by natural selection. Each finch species had adaptations suited to its environment, illustrating how species evolve over generations.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer2",
+                "Answer2\n\nBoth answers are factually correct, but Answer2 is superior in semantic quality. It uses more precise and formal language (\u201cfamously studied,\u201d \u201ccrucial in developing his theory,\u201d \u201cadaptations suited to its environment,\u201d \u201cevolve over generations\u201d) and conveys the scientific significance more clearly and cohesively. Answer1 contains minor grammatical issues (\u201cmake his idea of natural selection by showing how kinds change\u201d) and is less polished in expression. Answer2 communicates the same information with greater clarity, accuracy, and academic tone.",
+                "Answer2\n\nBoth answers are factually correct, but Answer2 is superior in semantic quality. It uses more precise and formal language (\u201cfamously studied,\u201d \u201ccrucial in developing his theory,\u201d \u201cadaptations suited to its environment,\u201d \u201cevolve over generations\u201d) and conveys the scientific significance more clearly and cohesively. Answer1 contains minor grammatical issues (\u201cmake his idea of natural selection by showing how kinds change\u201d) and is less polished in expression. Answer2 communicates the same information with greater accuracy, fluency, and depth."
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'What animal did Charles Darwin study famous?'",
+            "answer1": {
+                "text": "Charles Darwin famously studied the finches on the Galapagos Islands. This study was crucial in developing his theory of evolution by natural selection. Each finch species had adaptations suited to its environment, illustrating how species evolve over generations.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "Charles Darwin well studied finches on the Gal\u00e1pagos Islands. He saw differences in their beak shapes, which helped him make his idea of natural selection by showing how kinds change to their environment over time.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Answer1\n\nAnswer1 is superior because it is more precise, grammatically correct, and clearly explains the significance of Darwin\u2019s study of finches in relation to his theory of evolution by natural selection. It uses appropriate terminology (\u201cadaptations suited to its environment,\u201d \u201cevolve over generations\u201d) and conveys the scientific importance with clarity and depth.\n\nAnswer2, while factually correct, is less polished\u2014phrases like \u201cwell studied,\u201d \u201cmake his idea,\u201d and \u201ckinds change to their environment\u201d are awkward or imprecise in scientific phrasing. It lacks the clarity and sophistication of Answer1.\n\nThus, Answer1 is the better response in terms of semantic quality, accuracy, and expression.\n\nAnswer1",
+                "Answer1\n\nAnswer1 is superior because it is more precise, grammatically correct, and clearly explains the significance of Darwin\u2019s study of finches in relation to his theory of evolution by natural selection. It uses appropriate terminology (\u201cadaptations suited to its environment,\u201d \u201cevolve over generations\u201d) and conveys the scientific importance with clarity and depth.\n\nAnswer2, while factually correct, is less polished\u2014phrases like \u201cwell studied,\u201d \u201cmake his idea,\u201d and \u201ckinds change to their environment\u201d are awkward or imprecise in scientific phrasing. It lacks the clarity and sophistication of Answer1.\n\nThus, Answer1 is the better response in terms of semantic quality and accuracy.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        }
+    ],
+    "119": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "Can you say the first four letters in the second line on a QWERTY key board, from left to right?",
+            "answer1": {
+                "text": "The first four letterS in the second line on a QWERTY keyboard, from left to right, are A, S, D, and F. This happenS because the second line referS to the \"home row,\" which is the row where your fingerS naturally reST when typing.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "The first four letters in the second line on a QWERTY keyboard, from left to right, are \"asdf\". This layout was designed to slow down typists and reduce mechanical issues on early typewriters, forcing them to move their hands between keys.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer1",
+                "Answer1\n\nWhile both answers correctly identify the first four letters as \"A, S, D, F\" (or \"asdf\"), Answer1 is superior in semantic quality because it accurately describes the second row as the \"home row\" and provides context about typing posture, which is relevant and correct. Answer2 contains a factual error: the QWERTY layout was not designed to \"slow down typists\" to reduce mechanical issues \u2014 this is a common myth. In reality, QWERTY was designed to prevent jamming by spacing out commonly used letter pairs, not to slow typists. Thus, Answer1 is more accurate and informative. \n\nAnswer1",
+                "Answer1\n\nWhile both answers correctly identify the first four letters as \"A, S, D, F\" (or \"asdf\"), Answer1 is superior in semantic quality because it accurately describes the second row as the \"home row\" and provides context about typing posture, which is relevant and correct. Answer2 contains a factual error: the QWERTY layout was not designed to \"slow down typists\" to reduce mechanical issues \u2014 this is a common myth. In reality, QWERTY was designed to prevent jamming by spacing out commonly used letter pairs, not to slow typists. Thus, Answer1 is more accurate and informative."
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "Can you say the first four letters in the second line on a QWERTY key board, from left to right?",
+            "answer1": {
+                "text": "The first four letters in the second line on a QWERTY keyboard, from left to right, are \"asdf\". This layout was designed to slow down typists and reduce mechanical issues on early typewriters, forcing them to move their hands between keys.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "The first four letterS in the second line on a QWERTY keyboard, from left to right, are A, S, D, and F. This happenS because the second line referS to the \"home row,\" which is the row where your fingerS naturally reST when typing.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Answer1\n\nBoth answers correctly identify the first four letters on the second row of a QWERTY keyboard as A, S, D, F. However, Answer1 is superior in semantic quality because it provides a concise, accurate, and well-structured response without unnecessary capitalization errors or grammatical inconsistencies. Answer2 contains multiple capitalization errors (\u201cletterS\u201d, \u201chappenS\u201d, \u201creferS\u201d, \u201cfingerS\u201d, \u201creST\u201d), which detract from its clarity and professionalism, even though the factual content is correct. Answer1 also adds a brief, relevant historical note that enhances understanding without introducing inaccuracies. Thus, Answer1 is semantically stronger.",
+                "Answer1\n\nBoth answers correctly identify the first four letters on the second row of a QWERTY keyboard as A, S, D, F. However, Answer1 is superior in semantic quality because it provides a concise, accurate, and well-structured response without unnecessary capitalization errors or grammatical inconsistencies. Answer2 contains multiple capitalization errors (\u201cletterS\u201d, \u201chappenS\u201d, \u201creferS\u201d, \u201cfingerS\u201d, \u201creST\u201d), which detract from its clarity and professionalism, even though the factual content is correct. Answer1 also adds a brief, relevant historical note that enhances the answer without introducing inaccuracies. Thus, Answer1 is semantically stronger."
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        }
+    ],
+    "120": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "Can you show how to get the answer for the math problem: 2 times x equals 24?",
+            "answer1": {
+                "text": "Sure! To solve the problem 2*x = 24, do this:\n\n1. The problem is: 2*x = 24  \n2. To get x alone, take both sides of the problem by 2:  \n   (2*x) / 2 = 24 / 2  \n3. Making it simple gives:  \n   x = 12\n\nSo, the answer is x = 12.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "To solve the algebraic equation 2*x = 24, you need to isolate the variable 'x'. This is done by performing the same operation on both sides of the equation to maintain equality. In this case, since 'x' is being multiplied by 2, you need to perform the inverse operation, which is division, to isolate 'x'. \n\nHere are the steps:\n\n1. Start with the equation: 2*x = 24.\n2. Divide both sides of the equation by 2 to isolate 'x': (2*x) / 2 = 24 / 2.\n3. Simplify both sides of the equation: x = 12.\n\nSo, the solution to the equation 2*x = 24 is x = 12.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer2",
+                "Both Answer1 and Answer2 correctly solve the equation $ 2x = 24 $ and arrive at the correct solution $ x = 12 $. Both include the essential steps: recognizing the need to isolate $ x $, dividing both sides by 2, and simplifying.\n\nHowever, **Answer2** is superior in **semantic quality** because:\n\n- It provides a clearer **explanation of the reasoning** behind the operation (\u201cperforming the inverse operation, which is division, to isolate \u2018x\u2019\u201d).\n- It emphasizes the **principle of maintaining equality** by performing the same operation on both sides, which is a foundational concept in algebra.\n- The language is more precise and pedagogically stronger, making it more helpful for someone learning algebra.\n\nAnswer1 is correct but slightly less detailed and contains a minor phrasing issue: \u201ctake both sides of the problem by 2\u201d is awkward and imprecise \u2014 it should say \u201cdivide both sides by 2.\u201d\n\nThus, Answer2 demonstrates better clarity, accuracy, and explanatory depth.\n\nAnswer2",
+                "Both Answer1 and Answer2 correctly solve the equation $ 2x = 24 $ and arrive at the correct solution $ x = 12 $. Both include the essential steps: recognizing the need to isolate $ x $, dividing both sides by 2, and simplifying.\n\nHowever, **Answer2** is superior in **semantic quality** because:\n\n- It provides a clearer **explanation of the reasoning** behind the operation (\u201cperforming the inverse operation, which is division, to isolate \u2018x\u2019\u201d).\n- It emphasizes the **principle of maintaining equality** by performing the same operation on both sides, which is a foundational concept in algebra.\n- The language is more precise and pedagogically stronger, making it more helpful for someone learning algebra.\n\nAnswer1 is correct but slightly less thorough \u2014 for instance, it says \u201ctake both sides of the problem by 2,\u201d which is a minor phrasing error (should be \u201cdivide both sides by 2\u201d), and lacks the conceptual explanation.\n\nThus, Answer2 is semantically richer and more accurate in its explanation.\n\nAnswer2"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "Can you show how to get the answer for the math problem: 2 times x equals 24?",
+            "answer1": {
+                "text": "To solve the algebraic equation 2*x = 24, you need to isolate the variable 'x'. This is done by performing the same operation on both sides of the equation to maintain equality. In this case, since 'x' is being multiplied by 2, you need to perform the inverse operation, which is division, to isolate 'x'. \n\nHere are the steps:\n\n1. Start with the equation: 2*x = 24.\n2. Divide both sides of the equation by 2 to isolate 'x': (2*x) / 2 = 24 / 2.\n3. Simplify both sides of the equation: x = 12.\n\nSo, the solution to the equation 2*x = 24 is x = 12.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "Sure! To solve the problem 2*x = 24, do this:\n\n1. The problem is: 2*x = 24  \n2. To get x alone, take both sides of the problem by 2:  \n   (2*x) / 2 = 24 / 2  \n3. Making it simple gives:  \n   x = 12\n\nSo, the answer is x = 12.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Answer1\n\nAnswer1 provides a clearer, more precise, and pedagogically sound explanation. It correctly identifies the goal (isolating the variable), explains the reasoning behind using the inverse operation (division), and emphasizes maintaining equality by performing the same operation on both sides. The steps are logically ordered and use proper mathematical language.\n\nAnswer2 is mostly correct but contains a minor phrasing error: \u201ctake both sides of the problem by 2\u201d is imprecise and potentially confusing\u2014it should say \u201cdivide both sides by 2.\u201d While the math is right, the explanation lacks the clarity and completeness of Answer1.\n\nThus, Answer1 is superior in semantic quality and educational value.\n\nAnswer1",
+                "Answer1\n\nAnswer1 provides a clearer, more precise, and pedagogically sound explanation. It correctly identifies the goal (isolating the variable), explains the reasoning behind using the inverse operation (division), and emphasizes maintaining equality by performing the same operation on both sides. The steps are logically ordered and use proper mathematical language.\n\nAnswer2 is mostly correct but contains a minor phrasing error: \u201ctake both sides of the problem by 2\u201d is imprecise and potentially confusing\u2014it should say \u201cdivide both sides by 2.\u201d While the math is right, the explanation lacks the clarity and completeness of Answer1.\n\nTherefore, Answer1 is superior in semantic quality."
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        }
+    ],
+    "121": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'How do you use the science way to test a belief?'",
+            "answer1": {
+                "text": "To use the scientific way to test an idea, first, see something happening. Next, make a clear idea that can be tested as a possible reason. Then, plan and do a test to gather information, making sure to find changes and use controls. Write down and check the information carefully to see if the results agree with or go against the idea. Make a decision based on the check. If the idea is not agreed with, change it and do the test again. If it is agreed with, do it again and check the results or test other ideas. Write down all steps and findings clearly so others can copy or look at the way.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "To apply the scientific method to test a hypothesis, follow these steps:\n\n1. **Formulate the Hypothesis**: Clearly define your hypothesis based on observations or existing knowledge. It should be testable and falsifiable.\n\n2. **Literature Review**: Gather background information to ensure your hypothesis is grounded in relevant research and theory.\n\n3. **Design the Experiment**: Plan your experiment to test the hypothesis. Identify variables (independent, dependent, and controlled) and design a method to measure the dependent variable.\n\n4. **Conduct the Experiment**: Perform the experiment under controlled conditions. Record data meticulously.\n\n5. **Analyze the Data**: Use statistical methods to analyze the collected data. Determine if the results support or contradict the hypothesis.\n\n6. **Draw Conclusions**: Based on the data analysis, conclude whether the hypothesis is supported or not. If the hypothesis is not supported, consider possible reasons and refine the hypothesis.\n\n7. **Report the Results**: Document the entire process, including methodology, data, analysis, and conclusions. Share findings with the scientific community through publications or presentations.\n\n8. **Peer Review**: Have other experts in the field review your work to ensure accuracy and validity.\n\n9. **Replication**: Allow others to replicate your experiment to verify results. Replication is crucial for confirming scientific findings.\n\n10. **Iterate**: If necessary, refine the hypothesis and repeat the process based on feedback and new data",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer2",
+                "Answer2\n\nAnswer2 provides a more precise, structured, and comprehensive explanation of the scientific method, incorporating key elements such as falsifiability, controlled variables, statistical analysis, peer review, and replication\u2014core tenets of scientific inquiry. It uses appropriate terminology and logically sequences the steps in a way that reflects actual scientific practice. \n\nAnswer1, while generally correct and understandable, is less precise, omits critical components like peer review and statistical analysis, and lacks the rigor expected in a formal explanation of the scientific method. It also uses vague phrasing like \u201csee something happening\u201d and \u201cmake a clear idea,\u201d which are imprecise compared to the clearly defined steps in Answer2.\n\nThus, Answer2 is superior in semantic quality, accuracy, and depth.\n\nAnswer2",
+                "Answer2\n\nAnswer2 provides a more precise, structured, and comprehensive explanation of the scientific method, incorporating key elements such as falsifiability, controlled variables, statistical analysis, peer review, and replication\u2014core tenets of scientific inquiry. It uses appropriate terminology and logically sequences the steps in a way that reflects actual scientific practice. \n\nAnswer1, while generally correct and understandable, is less precise, omits critical components like peer review and statistical analysis, and lacks the formal structure and depth expected in a clear explanation of the scientific method. It also uses informal phrasing (\u201csee something happening,\u201d \u201cmake a clear idea\u201d) that diminishes its scientific rigor.\n\nThus, Answer2 is superior in semantic quality, accuracy, and completeness.\n\nAnswer2"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'How do you use the science way to test a belief?'",
+            "answer1": {
+                "text": "To apply the scientific method to test a hypothesis, follow these steps:\n\n1. **Formulate the Hypothesis**: Clearly define your hypothesis based on observations or existing knowledge. It should be testable and falsifiable.\n\n2. **Literature Review**: Gather background information to ensure your hypothesis is grounded in relevant research and theory.\n\n3. **Design the Experiment**: Plan your experiment to test the hypothesis. Identify variables (independent, dependent, and controlled) and design a method to measure the dependent variable.\n\n4. **Conduct the Experiment**: Perform the experiment under controlled conditions. Record data meticulously.\n\n5. **Analyze the Data**: Use statistical methods to analyze the collected data. Determine if the results support or contradict the hypothesis.\n\n6. **Draw Conclusions**: Based on the data analysis, conclude whether the hypothesis is supported or not. If the hypothesis is not supported, consider possible reasons and refine the hypothesis.\n\n7. **Report the Results**: Document the entire process, including methodology, data, analysis, and conclusions. Share findings with the scientific community through publications or presentations.\n\n8. **Peer Review**: Have other experts in the field review your work to ensure accuracy and validity.\n\n9. **Replication**: Allow others to replicate your experiment to verify results. Replication is crucial for confirming scientific findings.\n\n10. **Iterate**: If necessary, refine the hypothesis and repeat the process based on feedback and new data",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "To use the scientific way to test an idea, first, see something happening. Next, make a clear idea that can be tested as a possible reason. Then, plan and do a test to gather information, making sure to find changes and use controls. Write down and check the information carefully to see if the results agree with or go against the idea. Make a decision based on the check. If the idea is not agreed with, change it and do the test again. If it is agreed with, do it again and check the results or test other ideas. Write down all steps and findings clearly so others can copy or look at the way.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Answer1\n\nAnswer1 provides a comprehensive, structured, and accurate explanation of the scientific method, using precise terminology (e.g., falsifiable, independent/dependent/controlled variables, peer review, replication) and outlining each step in a logical, methodical sequence. It reflects a deep understanding of scientific practice and emphasizes rigor, reproducibility, and community validation\u2014core tenets of science.\n\nAnswer2, while conveying the general idea, is vague, lacks technical precision, and omits critical components such as literature review, statistical analysis, peer review, and the importance of controlled conditions. Its phrasing (\u201csee something happening,\u201d \u201cmake a clear idea\u201d) is overly simplistic and informal, reducing the scientific method to a loose sequence of casual steps.\n\nThe quality, depth, and accuracy of Answer1 make it clearly superior.\n\nAnswer1",
+                "Answer1\n\nAnswer1 provides a comprehensive, structured, and accurate explanation of the scientific method, using precise terminology (e.g., falsifiable, independent/dependent/controlled variables, peer review, replication) and outlining each step in a logical, methodical sequence. It reflects a deep understanding of scientific practice and emphasizes rigor, reproducibility, and community validation\u2014core tenets of science.\n\nAnswer2, while conveying the general idea, is vague, lacks technical precision, and omits critical components such as literature review, statistical analysis, peer review, and the importance of controlled conditions. Its phrasing (\u201csee something happening,\u201d \u201cmake a clear idea\u201d) is overly simplistic and informal, reducing the scientific method to a loose sequence of casual steps.\n\nThe semantic quality, accuracy, and depth of Answer1 are significantly superior.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        }
+    ],
+    "122": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'How will you use the ideas of democracy to fix a problem in your school\u2019s student group?'",
+            "answer1": {
+                "text": "To fix a trouble in the student group with democratic ideas, I will make sure that each member's voice is heard by setting up an open talk where everyone can say their thoughts freely. All members should get equal time to share their opinions and worries about the trouble. After hearing all views, I will support members to work together to think of possible answers. We can then make a clear list of the choices we have. Using a fair and clear voting way, each member can give a vote for their chosen answer. The choice with the most votes will be picked and put into action, respecting the result as the group decision. Throughout, it is important to stress respect, tolerance, and the right for everyone to join in. This way keeps the democratic values of taking part, equality, and majority rule, helping to solve the trouble fairly and with everyone included.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "To resolve a conflict within the school's student council using democratic principles, the first step would be to ensure transparency and fairness. This involves openly discussing the issue at a council meeting, allowing all members to voice their concerns and perspectives. Each member should have an equal opportunity to speak and be heard, promoting a sense of inclusivity and respect.\n\nNext, implementing a voting system would allow for a democratic decision-making process. This could involve a simple majority vote or, for more complex issues, a consensus-based approach where all members agree on a solution. It's crucial that the voting process is conducted fairly, with no bias or favoritism, ensuring that the outcome reflects the collective will of the council.\n\nIncorporating a feedback mechanism is also essential. After a decision is made, council members should be encouraged to provide feedback on the process and the outcome. This not only helps improve future decision-making but also fosters a culture of accountability and continuous improvement.\n\nLastly, it's important to maintain open lines of communication. Regular meetings, updates, and discussions can help prevent misunderstandings and conflicts from escalating. Encouraging dialogue and active listening among council members can lead to more harmonious relationships and effective conflict resolution.\n\nBy adhering to these democratic principles, the school's student council can create a fair, inclusive, and collaborative environment that promotes the best interests of all members and the school community as a whole.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer2",
+                "Both Answer1 and Answer2 present thoughtful, well-structured applications of democratic principles to resolve a problem in a student group. They both emphasize key democratic values: equal participation, open dialogue, fair voting, respect, and accountability.\n\nHowever, **Answer2** is slightly superior because:\n\n- It provides a more nuanced and comprehensive approach by introducing the concept of **consensus-based decision-making** as an alternative to simple majority voting, acknowledging that not all democratic processes require majority rule.\n- It explicitly adds a **feedback mechanism**, which is critical for long-term democratic health and institutional learning \u2014 something Answer1 omits.\n- It emphasizes **ongoing communication and prevention of future conflicts**, showing a deeper understanding of democracy as a sustainable system, not just a one-time fix.\n- The language is more polished, and the structure flows logically from problem identification to implementation to evaluation.\n\nAnswer1 is strong and clear, but Answer2 demonstrates a more mature, holistic grasp of democratic practice in organizational settings.\n\n**Answer2**",
+                "Both Answer1 and Answer2 present thoughtful, well-structured applications of democratic principles to resolve a problem in a student group. They both emphasize key democratic values: equal participation, open dialogue, fair voting, respect, and accountability.\n\nHowever, **Answer2** is slightly superior because:\n\n- It provides a more nuanced and comprehensive approach by introducing the concept of **consensus-based decision-making** as an alternative to simple majority voting, acknowledging that not all democratic processes require majority rule.\n- It explicitly adds a **feedback mechanism**, which is critical for long-term democratic health and institutional learning \u2014 something Answer1 omits.\n- It emphasizes **ongoing communication and prevention of future conflicts**, showing a deeper understanding of democracy as a sustainable system, not just a one-time fix.\n- The language is more polished, and the structure flows logically from problem identification to implementation to evaluation.\n\nAnswer1 is strong and clear, but Answer2 demonstrates a more mature, holistic grasp of democratic governance in practice.\n\n**Answer2**"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Unknown",
+                "Unknown"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'How will you use the ideas of democracy to fix a problem in your school\u2019s student group?'",
+            "answer1": {
+                "text": "To resolve a conflict within the school's student council using democratic principles, the first step would be to ensure transparency and fairness. This involves openly discussing the issue at a council meeting, allowing all members to voice their concerns and perspectives. Each member should have an equal opportunity to speak and be heard, promoting a sense of inclusivity and respect.\n\nNext, implementing a voting system would allow for a democratic decision-making process. This could involve a simple majority vote or, for more complex issues, a consensus-based approach where all members agree on a solution. It's crucial that the voting process is conducted fairly, with no bias or favoritism, ensuring that the outcome reflects the collective will of the council.\n\nIncorporating a feedback mechanism is also essential. After a decision is made, council members should be encouraged to provide feedback on the process and the outcome. This not only helps improve future decision-making but also fosters a culture of accountability and continuous improvement.\n\nLastly, it's important to maintain open lines of communication. Regular meetings, updates, and discussions can help prevent misunderstandings and conflicts from escalating. Encouraging dialogue and active listening among council members can lead to more harmonious relationships and effective conflict resolution.\n\nBy adhering to these democratic principles, the school's student council can create a fair, inclusive, and collaborative environment that promotes the best interests of all members and the school community as a whole.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "To fix a trouble in the student group with democratic ideas, I will make sure that each member's voice is heard by setting up an open talk where everyone can say their thoughts freely. All members should get equal time to share their opinions and worries about the trouble. After hearing all views, I will support members to work together to think of possible answers. We can then make a clear list of the choices we have. Using a fair and clear voting way, each member can give a vote for their chosen answer. The choice with the most votes will be picked and put into action, respecting the result as the group decision. Throughout, it is important to stress respect, tolerance, and the right for everyone to join in. This way keeps the democratic values of taking part, equality, and majority rule, helping to solve the trouble fairly and with everyone included.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Answer1\n\nAnswer1 provides a more thorough, nuanced, and well-structured explanation of how democratic principles can be applied to resolve a problem in a student group. It goes beyond basic voting by incorporating transparency, inclusivity, feedback mechanisms, and ongoing communication\u2014key elements of sustainable democratic practice. It also distinguishes between simple majority and consensus-based approaches, showing deeper understanding of democratic processes. The language is formal, precise, and logically organized, making the argument more persuasive and academically robust.\n\nAnswer2 is clear and correctly identifies core democratic values like equal voice, voting, and majority rule, but it is more simplistic and lacks depth. It doesn\u2019t address implementation challenges, accountability, or long-term cultural impact, which Answer1 effectively covers.\n\nThus, Answer1 is superior in semantic quality, depth, and accuracy.\n\nAnswer1",
+                "Answer1\n\nAnswer1 provides a more thorough, nuanced, and well-structured explanation of how democratic principles can be applied to resolve a problem in a student group. It goes beyond basic voting by incorporating transparency, inclusivity, feedback mechanisms, and ongoing communication\u2014key elements of sustainable democratic practice. It also distinguishes between simple majority and consensus-based approaches, showing deeper understanding of democratic processes. The language is formal, precise, and logically organized, making the argument more persuasive and academically robust.\n\nAnswer2 is clear and correctly identifies core democratic values like equal voice, voting, and majority rule, but it is more simplistic and lacks depth. It doesn\u2019t address implementation challenges, accountability, or long-term cultural impact, which Answer1 effectively covers.\n\nThus, Answer1 demonstrates superior semantic quality in terms of depth, accuracy, and sophistication.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct",
+                "Qwen/Qwen2-7B-Instruct"
+            ]
+        }
+    ],
+    "123": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'Will you show how the water cycle does work with a terrarium?'",
+            "answer1": {
+                "text": "A terrarium can show the water cycle in a simple way. When you give water to the soil and shut the lid, sunlight or warmth heats up the air and soil inside. Water goes off from the soil and plants, turning into vapor. This vapor goes up and hits the cooler glass walls or lid, where it changes into drops. Drops then drip down the sides, going back to the soil, just like rain. This happens again, showing all main stages of the water cycle: evaporation, condensation, and precipitation. The closed system lets water move in a loop, with plants using the water for growth and letting it go again through transpiration. The terrarium\u2019s mini-ecosystem keeps recycling water, just like on Earth.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "Creating a terrarium to demonstrate the water cycle involves assembling a sealed container with soil, plants, and a water source. The cycle begins when water from the soil evaporates due to sunlight, transforming into vapor. This vapor rises, cools, and condenses into tiny droplets, forming a mini cloud within the terrarium. These droplets then fall back to the soil as dew, completing the cycle. This process mimics Earth's natural water cycle on a smaller scale, illustrating evaporation, condensation, and precipitation.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "result": [
+                "Answer1",
+                "Both Answer1 and Answer2 accurately describe how a terrarium demonstrates the water cycle, including evaporation, condensation, and precipitation. However, Answer1 provides a more comprehensive and nuanced explanation by explicitly mentioning **transpiration** (the release of water vapor from plants), which is a key component of the water cycle often overlooked in simplified explanations. It also emphasizes the **closed-loop system** and the role of plants in sustaining the cycle, making the analogy to Earth\u2019s natural system more robust and scientifically complete.\n\nAnswer2 is clear and correct but omits transpiration and lacks the depth of explanation about the ecosystem\u2019s self-sustaining nature.\n\nThus, Answer1 is superior in semantic quality and scientific accuracy.\n\nAnswer1",
+                "Both Answer1 and Answer2 accurately describe how a terrarium demonstrates the water cycle, including evaporation, condensation, and precipitation. However, Answer1 provides a more comprehensive and nuanced explanation by explicitly mentioning **transpiration** (the release of water vapor from plants), which is a key component of the water cycle often overlooked in simplified explanations. It also emphasizes the **closed-loop system** and the role of plants in sustaining the cycle, making the analogy to Earth\u2019s natural system more robust and scientifically complete.\n\nAnswer2 is clear and correct but omits transpiration and lacks the depth of explanation about the ecosystem\u2019s self-sustaining nature.\n\nTherefore, Answer1 is superior in semantic quality and scientific accuracy.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'Will you show how the water cycle does work with a terrarium?'",
+            "answer1": {
+                "text": "Creating a terrarium to demonstrate the water cycle involves assembling a sealed container with soil, plants, and a water source. The cycle begins when water from the soil evaporates due to sunlight, transforming into vapor. This vapor rises, cools, and condenses into tiny droplets, forming a mini cloud within the terrarium. These droplets then fall back to the soil as dew, completing the cycle. This process mimics Earth's natural water cycle on a smaller scale, illustrating evaporation, condensation, and precipitation.",
+                "label": "Qwen/Qwen2-7B-Instruct"
+            },
+            "answer2": {
+                "text": "A terrarium can show the water cycle in a simple way. When you give water to the soil and shut the lid, sunlight or warmth heats up the air and soil inside. Water goes off from the soil and plants, turning into vapor. This vapor goes up and hits the cooler glass walls or lid, where it changes into drops. Drops then drip down the sides, going back to the soil, just like rain. This happens again, showing all main stages of the water cycle: evaporation, condensation, and precipitation. The closed system lets water move in a loop, with plants using the water for growth and letting it go again through transpiration. The terrarium\u2019s mini-ecosystem keeps recycling water, just like on Earth.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer2",
+                "Answer2\n\nAnswer2 provides a more comprehensive and accurate explanation of the water cycle within a terrarium. It not only describes evaporation, condensation, and precipitation but also correctly includes **transpiration**\u2014a critical component of the water cycle where plants release water vapor through their leaves. Additionally, it emphasizes the closed-loop nature of the system and the role of the plants in sustaining the cycle, making the analogy to Earth\u2019s natural water cycle more complete and scientifically robust. Answer1 omits transpiration and is slightly less detailed in explaining the dynamics of the system. Therefore, Answer2 is superior in semantic quality and scientific accuracy.",
+                "Answer2\n\nAnswer2 provides a more comprehensive and accurate explanation of the water cycle within a terrarium. It not only describes evaporation, condensation, and precipitation but also correctly includes **transpiration**\u2014a critical component of the water cycle where plants release water vapor through their leaves. Additionally, it emphasizes the closed-loop nature of the system and the role of the plants in sustaining the cycle, making the analogy to Earth\u2019s natural water cycle more complete and scientifically robust. Answer1 omits transpiration and is slightly less detailed in explaining how the system sustains itself. Therefore, Answer2 is superior in semantic quality and scientific accuracy."
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        }
+    ]
+}

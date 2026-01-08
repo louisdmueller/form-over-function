@@ -1,47 +1,28 @@
 """
-This script generates two files with answers to the prompts in the data file.
- - The first file contains the answers in Standard American English (SAE),
- - The second file (if AAE translation is requested) contains the answers translated to African American English (AAE)
+This script generates a file with answers to the prompts in the data file
 """
 
 import json
 import os
 
-from click import prompt
 from model import get_model
-from utils import load_config, parse_args, random_id, read_file, sanitize_output_path
-from style_conversion import convert_data, add_errors
+from utils.utils import (
+    load_config,
+    parse_args,
+    random_id,
+    read_data_file,
+    sanitize_output_path,
+)
 
-args = parse_args()
-config = load_config(args.config_path)
 
-data = read_file(args.data_path)
+def main():
+    """Main function to generate answers."""
+    args = parse_args()
+    config = load_config(args.config_path)
 
-desc = "Generating SAE answers" if not args.aae else "Generating AAE answers"
+    data = read_data_file(args.data_path)
 
-if args.aae:
-    data = read_file(args.output_path)
-    prompt_gen_model = get_model(
-        model_name_or_path=args.prompt_model_name_or_path,
-        config=config,
-    )
-    aae_data = convert_data(data, prompt_gen_model, ["answers"])
-    with open(args.output_path.replace(".json", "_aae.json"), "a") as f_aae:
-        for entry in aae_data:
-            f_aae.write(json.dumps(entry) + "\n")
-
-elif args.errors:
-    data = read_file(args.output_path)
-    prompt_gen_model = get_model(
-        model_name_or_path=args.prompt_model_name_or_path,
-        config=config,
-    )
-    error_data = convert_data(data, prompt_gen_model, ["answers"], add_errors)
-    with open(args.output_path.replace(".json", "_errors.json"), "a") as f_errors:
-        for entry in error_data:
-            f_errors.write(json.dumps(entry) + "\n")
-
-else:
+    desc = "Generating SAE answers"
 
     args.output_path = sanitize_output_path(
         args.output_path, args.answer_generation_model_name_or_path
@@ -55,12 +36,8 @@ else:
 
     if not os.path.exists(os.path.dirname(args.output_path)):
         os.makedirs(os.path.dirname(args.output_path), exist_ok=True)
-
-    answer_generation_model = get_model(
-        model_name_or_path=args.answer_generation_model_name_or_path,
-        config=config,
-    )
-
+        
+        
     # batch generate answers for all prompts
     prompts = [entry["prompt"] for entry in data]
     num_generations = 2
@@ -69,14 +46,24 @@ else:
         entry.get("temperature", None) if do_sample else None for entry in data
     ]
 
+    tasks = {
+        "vllm_parameters": {"tensor_parallel_size": 2},
+        "model_parameters": {"dtype": "bfloat16", "num_generations": num_generations, "max_output_tokens": max([len(p) for p in prompts]) + 50},
+        "sampling_parameters": {}
+    }
+
+
+
+    answer_generation_model = get_model(
+        model_name_or_path=args.answer_generation_model_name_or_path,
+        config=config,
+    )
+
+
+
     responses_batch = answer_generation_model.generate(
         system_prompts=[""] * len(prompts),
         input_texts=prompts,
-        max_output_tokens=max([len(p) for p in prompts]) + 50,
-        num_generations=num_generations,
-        do_sample=do_sample,
-        temperature=None,
-        **config,
     )
 
     generated_data_list = []
@@ -104,3 +91,7 @@ else:
 
         with open(args.output_path, "a") as f:
             f.write(json.dumps(generated_data) + "\n")
+
+
+if __name__ == "__main__":
+    main()

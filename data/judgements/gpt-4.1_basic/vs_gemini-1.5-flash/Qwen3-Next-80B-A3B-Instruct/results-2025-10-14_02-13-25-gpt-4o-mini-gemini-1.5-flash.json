@@ -1,0 +1,873 @@
+{
+    "metadata": {
+        "judge_model": "Qwen/Qwen3-Next-80B-A3B-Instruct",
+        "data_1_path": "data/generated_answers/gpt-4.1-answers_basic.json",
+        "data_2_path": "data/generated_answers/gemini-1.5-flash-answers.json",
+        "prompt_name": "directly_answer_question_without_cot",
+        "comment": ""
+    },
+    "93": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'What ways will you use to judge the quality of a music show?'",
+            "answer1": {
+                "text": "To judge the quality of a music act, I would look at some key points: skill, which includes correct notes, beats, and sounds; feeling and loudness, which cover how the player uses volume, speed, and flow to show emotion; group unity, seeing how well players stay together and balance their parts; stage presence, which includes trust, professionalism, and connection with the audience; understanding and new ideas, showing the player\u2019s grasp of the music and their personal style; and overall effect, meaning the lasting feeling and response in the audience. Each point can be used for both solo and group acts, and the importance of each may change by type and situation.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "Technical proficiency, including accuracy, tone production, and articulation, is crucial.  Musicality encompasses phrasing, dynamics, and emotional expression; a compelling performance conveys feeling effectively.  Interpretation reflects the performer's understanding and unique perspective on the piece.  Intonation and rhythm accuracy contribute to overall precision.  Balance and ensemble work are key in group performances.  Finally, stage presence and connection with the audience enhance the overall impact.  These factors, considered together, provide a holistic assessment of performance quality.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "result": [
+                "Answer1 provides a more comprehensive, nuanced, and vivid breakdown of the criteria for judging a music show. It includes not only technical elements (skill, rhythm, intonation) but also emotional and experiential dimensions like \u201cfeeling and loudness,\u201d \u201ctrust,\u201d \u201cconnection with the audience,\u201d and \u201coverall effect,\u201d which are critical in live music performances. It explicitly acknowledges variability by context (\u201cimportance may change by type and situation\u201d) and applies equally to solo and group acts, showing thoughtful adaptability.\n\nAnswer2 is well-structured and accurate, covering key musical concepts like technical proficiency, musicality, interpretation, and stage presence. However, it is more concise and somewhat generic, using standard terminology without the same depth of experiential or contextual insight. It lacks the emphasis on audience impact and emotional resonance that Answer1 articulates so clearly.\n\nAnswer1\u2019s richer language, broader scope, and attention to the lived experience of performance give it superior semantic quality.\n\nAnswer1",
+                "Answer1 provides a more comprehensive, nuanced, and vivid breakdown of the criteria for judging a music show. It includes not only technical elements (skill, rhythm, intonation) but also emotional and experiential dimensions like \u201cfeeling and loudness,\u201d \u201ctrust,\u201d \u201cconnection with the audience,\u201d and \u201coverall effect,\u201d which are critical in live music performances. It explicitly acknowledges variability by context (\u201cimportance may change by type and situation\u201d) and applies equally to solo and group acts, showing thoughtful adaptability.\n\nAnswer2 is well-structured and accurate, covering key musical concepts like technical proficiency, musicality, interpretation, and stage presence. However, it is more concise and somewhat generic, using standard terminology without the same depth of experiential or contextual insight. It lacks the emphasis on audience response and the holistic \u201clasting feeling\u201d that Answer1 highlights.\n\nAnswer1\u2019s richer language, broader scope, and attention to the lived experience of performance give it superior semantic quality.\n\nAnswer1",
+                "Answer1 provides a more comprehensive, nuanced, and vivid breakdown of the criteria for judging a music show. It includes not only technical elements (skill, rhythm, intonation) but also emotional and experiential dimensions like \u201cfeeling and loudness,\u201d \u201ctrust,\u201d \u201cconnection with the audience,\u201d and \u201coverall effect,\u201d which are critical in live music performances. It explicitly acknowledges variability by context (\u201cimportance may change by type and situation\u201d) and applies equally to solo and group acts, showing thoughtful adaptability.\n\nAnswer2 is well-structured and accurate, covering key musical concepts like technical proficiency, musicality, interpretation, and stage presence. However, it is more concise and somewhat generic, using standard terminology without the same depth of experiential or contextual insight. It lacks the emphasis on audience impact and emotional resonance that Answer1 captures so effectively.\n\nAnswer1\u2019s richer language, broader scope, and attention to the lived experience of performance give it superior semantic quality.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'What ways will you use to judge the quality of a music show?'",
+            "answer1": {
+                "text": "Technical proficiency, including accuracy, tone production, and articulation, is crucial.  Musicality encompasses phrasing, dynamics, and emotional expression; a compelling performance conveys feeling effectively.  Interpretation reflects the performer's understanding and unique perspective on the piece.  Intonation and rhythm accuracy contribute to overall precision.  Balance and ensemble work are key in group performances.  Finally, stage presence and connection with the audience enhance the overall impact.  These factors, considered together, provide a holistic assessment of performance quality.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "answer2": {
+                "text": "To judge the quality of a music act, I would look at some key points: skill, which includes correct notes, beats, and sounds; feeling and loudness, which cover how the player uses volume, speed, and flow to show emotion; group unity, seeing how well players stay together and balance their parts; stage presence, which includes trust, professionalism, and connection with the audience; understanding and new ideas, showing the player\u2019s grasp of the music and their personal style; and overall effect, meaning the lasting feeling and response in the audience. Each point can be used for both solo and group acts, and the importance of each may change by type and situation.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Answer1\n\nAnswer1 provides a more precise, nuanced, and professionally articulated evaluation framework. It uses accurate musical terminology\u2014such as \u201ctone production,\u201d \u201carticulation,\u201d \u201cphrasing,\u201d \u201cdynamics,\u201d \u201cintonation,\u201d and \u201censemble work\u201d\u2014that reflects a deep understanding of musical performance standards. The structure is logically organized, and each criterion is clearly defined with appropriate context. Additionally, it emphasizes holistic assessment, acknowledging the interplay of technical and expressive elements.\n\nAnswer2, while coherent and broadly accurate, uses less precise language (\u201cloudness\u201d instead of \u201cdynamics,\u201d \u201ctrust\u201d as a component of stage presence), and some phrasing is vague or colloquial (\u201cfeeling and loudness,\u201d \u201cnew ideas\u201d). It lacks the technical depth and formal clarity of Answer1.\n\nThus, Answer1 is superior in semantic quality, accuracy, and depth of musical insight.\n\nAnswer1",
+                "Answer1\n\nAnswer1 provides a more precise, nuanced, and professionally articulated evaluation framework. It uses accurate musical terminology\u2014such as \u201ctone production,\u201d \u201carticulation,\u201d \u201cphrasing,\u201d \u201cdynamics,\u201d \u201cintonation,\u201d and \u201censemble work\u201d\u2014that reflects a deep understanding of musical performance standards. The structure is logically organized, and each criterion is clearly defined with appropriate context. Additionally, it emphasizes holistic assessment, acknowledging the interplay of technical and expressive elements.\n\nAnswer2, while coherent and broadly correct, uses less precise language (\u201cloudness\u201d instead of \u201cdynamics,\u201d \u201ctrust\u201d as a component of stage presence), and some phrasing is vague or colloquial (\u201cfeeling and loudness,\u201d \u201cnew ideas\u201d). It lacks the depth and specificity that would make it suitable for a professional or academic evaluation context.\n\nThus, Answer1 is superior in semantic quality, accuracy, and depth.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "gemini-1.5-flash",
+                "gemini-1.5-flash",
+                "gemini-1.5-flash"
+            ]
+        }
+    ],
+    "94": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "How do you see if a charity or nonprofit group is good at helping people and say your reason?",
+            "answer1": {
+                "text": "To find out if a charity or nonprofit is good, check their openness, results, and outside reviews. A good group shares money details, like how much of their money goes to programs compared to running costs or money-raising. See if they report real outcomes, not just activities. For instance, they should say how many people got help, not just how many papers were given out or events held. Look at outside watchers like Charity Navigator, GuideStar, or GiveWell, which check their work, trust, and effects. Read recent yearly reports and look for clear goals, ways to measure progress, and honest talks about problems. Pick a group that shows real improvements for its target group and uses donations well. This way of looking at data helps make sure your help brings real change.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "Evaluating a charity's effectiveness requires examining several factors.  Transparency is key; readily available financial information showing how donations are spent is crucial.  Look for independent audits and reports detailing their programs' impact.  Consider their program's measurable outcomes:  do they provide quantifiable results demonstrating their success in achieving their stated goals?   Examine their efficiency; how much of each dollar donated directly supports their mission versus administrative costs? Websites like Charity Navigator and GuideStar provide ratings and data to aid in this assessment. A combination of financial accountability and demonstrable impact on beneficiaries provides the strongest indication of effectiveness.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "result": [
+                "Answer1",
+                "Both Answer1 and Answer2 are well-written, accurate, and cover the essential criteria for evaluating a charity\u2019s effectiveness: transparency, financial efficiency, measurable outcomes, and third-party evaluations (e.g., Charity Navigator, GuideStar). \n\nAnswer1 is slightly more detailed and concrete, offering specific examples (e.g., \u201chow many people got help, not just how many papers were given out\u201d) and emphasizing the importance of honesty about problems and recent reports. It also uses more accessible language, making it slightly more practical for a general audience.\n\nAnswer2 is concise and equally accurate but lacks the illustrative examples and nuanced emphasis on honesty and recent reporting found in Answer1.\n\nThe additional depth and clarity in Answer1 make it marginally superior in terms of semantic quality and practical guidance.\n\nAnswer1",
+                "Both Answer1 and Answer2 are well-written, accurate, and cover the essential criteria for evaluating a charity\u2019s effectiveness: transparency, financial efficiency, measurable outcomes, and third-party evaluations (e.g., Charity Navigator, GuideStar). \n\nAnswer1 is slightly more detailed and concrete, offering specific examples (e.g., \u201chow many people got help, not just how many papers were given out\u201d) and emphasizing the importance of honesty about problems and recent reports. It also uses more accessible language, making it slightly more practical for a general audience.\n\nAnswer2 is concise and equally accurate but lacks the illustrative examples and nuanced emphasis on honesty and recent reporting found in Answer1.\n\nThe additional depth and clarity in Answer1 give it a marginal edge in semantic quality.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "How do you see if a charity or nonprofit group is good at helping people and say your reason?",
+            "answer1": {
+                "text": "Evaluating a charity's effectiveness requires examining several factors.  Transparency is key; readily available financial information showing how donations are spent is crucial.  Look for independent audits and reports detailing their programs' impact.  Consider their program's measurable outcomes:  do they provide quantifiable results demonstrating their success in achieving their stated goals?   Examine their efficiency; how much of each dollar donated directly supports their mission versus administrative costs? Websites like Charity Navigator and GuideStar provide ratings and data to aid in this assessment. A combination of financial accountability and demonstrable impact on beneficiaries provides the strongest indication of effectiveness.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "answer2": {
+                "text": "To find out if a charity or nonprofit is good, check their openness, results, and outside reviews. A good group shares money details, like how much of their money goes to programs compared to running costs or money-raising. See if they report real outcomes, not just activities. For instance, they should say how many people got help, not just how many papers were given out or events held. Look at outside watchers like Charity Navigator, GuideStar, or GiveWell, which check their work, trust, and effects. Read recent yearly reports and look for clear goals, ways to measure progress, and honest talks about problems. Pick a group that shows real improvements for its target group and uses donations well. This way of looking at data helps make sure your help brings real change.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a more structured, comprehensive, and precise explanation of how to evaluate a charity\u2019s effectiveness. It clearly outlines key criteria\u2014transparency, independent audits, measurable outcomes, and efficiency\u2014and explicitly mentions reputable third-party evaluators (Charity Navigator, GuideStar) as tools for assessment. The language is formal and authoritative, with a logical flow that emphasizes both financial accountability and demonstrable impact as dual pillars of effectiveness.\n\nAnswer2 is also accurate and well-written, covering similar points: openness, outcome reporting, third-party reviews, and the importance of measurable impact over activity metrics. However, it is slightly less detailed in its explanations and lacks the same level of precision in terminology (e.g., \u201cmoney-raising\u201d instead of \u201cfundraising costs,\u201d \u201coutside watchers\u201d instead of \u201cindependent evaluators\u201d). While clear and practical, it doesn\u2019t elevate the analysis as effectively as Answer1.\n\nAnswer1\u2019s superior clarity, depth, and use of professional terminology make it the stronger response in terms of semantic quality and informational rigor.\n\nAnswer1",
+                "Answer1  \nAnswer2  \nTie\n\nAnswer1 provides a more structured, comprehensive, and precise explanation of how to evaluate a charity\u2019s effectiveness. It clearly outlines key criteria\u2014transparency, independent audits, measurable outcomes, and efficiency\u2014and explicitly mentions reputable third-party evaluators (Charity Navigator, GuideStar) as tools for assessment. The language is formal and authoritative, with a logical flow that emphasizes both financial accountability and demonstrable impact as dual pillars of effectiveness.\n\nAnswer2 is also accurate and well-written, covering similar points: openness, outcome reporting, third-party reviews, and the importance of measurable impact over activity metrics. However, it is slightly less detailed in its explanations and lacks the same level of precision in terminology (e.g., \u201cmoney-raising\u201d instead of \u201cfundraising costs,\u201d \u201coutside watchers\u201d instead of \u201cindependent evaluators\u201d). While clear and practical, it doesn\u2019t elevate the analysis as effectively as Answer1.\n\nAnswer1\u2019s superior clarity, depth, and use of precise language make it the stronger response in terms of semantic quality and informational rigor.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "gemini-1.5-flash",
+                "gemini-1.5-flash",
+                "gemini-1.5-flash"
+            ]
+        }
+    ],
+    "95": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'What is the seat of France?'",
+            "answer1": {
+                "text": "The capital of France is Paris. It is the big city in the country and is the center for politics, culture, and economy in France. Paris is known for its old places, such as the Eiffel Tower and the Louvre Museum.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "The capital of France is Paris.  This is widely known and accepted internationally; Paris is the seat of the French government and its major administrative center.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "result": [
+                "Answer2",
+                "Answer2\n\nWhile both answers correctly identify Paris as the capital of France, Answer2 is superior in semantic quality because it precisely uses the term \u201cseat\u201d as asked in the question \u2014 referring to the seat of government and administrative center \u2014 which is the exact meaning intended by \u201cseat of France.\u201d Answer1, though factually correct, conflates \u201ccapital\u201d with general cultural and economic centrality, and does not directly address the political/administrative meaning of \u201cseat.\u201d Answer2 is more accurate and contextually appropriate to the specific wording of the question.",
+                "Answer2\n\nWhile both answers correctly identify Paris as the capital of France, Answer2 is superior in semantic quality because it precisely uses the term \u201cseat\u201d as asked in the question \u2014 referring to the seat of government and administrative center \u2014 which is the exact meaning intended by \u201cseat of France.\u201d Answer1, though factually correct, conflates \u201ccapital\u201d with general cultural and economic centrality, and does not directly address the political/administrative meaning of \u201cseat.\u201d Answer2 is more accurate and contextually precise."
+            ],
+            "extracted_answers": [
+                "gemini-1.5-flash",
+                "gemini-1.5-flash",
+                "gemini-1.5-flash"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'What is the seat of France?'",
+            "answer1": {
+                "text": "The capital of France is Paris.  This is widely known and accepted internationally; Paris is the seat of the French government and its major administrative center.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "answer2": {
+                "text": "The capital of France is Paris. It is the big city in the country and is the center for politics, culture, and economy in France. Paris is known for its old places, such as the Eiffel Tower and the Louvre Museum.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Answer1\n\nBoth answers correctly identify Paris as the capital of France, but Answer1 is superior in semantic quality because it precisely uses the term \"seat of the French government\" as requested in the question, and adds context about it being the \"major administrative center,\" which directly addresses the meaning of \"seat.\" Answer2, while factually correct, drifts into general cultural and tourist information (Eiffel Tower, Louvre) that is irrelevant to the specific query about the seat of government. Answer1 is more accurate, focused, and semantically appropriate.",
+                "Answer1\n\nBoth answers correctly identify Paris as the capital of France, but Answer1 is superior in semantic quality because it precisely uses the term \"seat of the French government\" as requested in the question, and adds context about it being the \"major administrative center,\" which directly addresses the meaning of \"seat.\" Answer2, while factually correct, drifts into general cultural and tourist information (Eiffel Tower, Louvre) that is irrelevant to the specific query about the seat of government. Answer1 is more accurate, focused, and contextually appropriate."
+            ],
+            "extracted_answers": [
+                "gemini-1.5-flash",
+                "gemini-1.5-flash",
+                "gemini-1.5-flash"
+            ]
+        }
+    ],
+    "96": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'What are the main colours?'",
+            "answer1": {
+                "text": "The main colours are red, blue, and yellow in painting, or red, green, and blue in light. They are called main because you cannot make them by mixing other colours, and you can join them to make all other colours.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "The primary colors are red, yellow, and blue.  These are called primary because they cannot be created by mixing other colors, but all other colors can be created by mixing them.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "result": [
+                "Answer1",
+                "Answer1\n\nAnswer1 is superior because it accurately acknowledges two different systems of primary colors\u2014subtractive (painting: red, blue, yellow) and additive (light: red, green, blue)\u2014which provides a more complete and scientifically nuanced answer. Answer2 is correct within the context of traditional pigment-based color theory but omits the important distinction in light-based systems, making it less comprehensive. Answer1\u2019s inclusion of both contexts demonstrates a deeper understanding of color theory.",
+                "Answer1\n\nAnswer1 is superior because it accurately acknowledges two different systems of primary colors\u2014subtractive (painting: red, blue, yellow) and additive (light: red, green, blue)\u2014which provides a more complete and scientifically nuanced answer. Answer2 is correct within the context of traditional pigment-based color theory but omits the important distinction in light-based systems, making it incomplete. Answer1\u2019s inclusion of both contexts demonstrates a deeper understanding of color theory."
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'What are the main colours?'",
+            "answer1": {
+                "text": "The primary colors are red, yellow, and blue.  These are called primary because they cannot be created by mixing other colors, but all other colors can be created by mixing them.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "answer2": {
+                "text": "The main colours are red, blue, and yellow in painting, or red, green, and blue in light. They are called main because you cannot make them by mixing other colours, and you can join them to make all other colours.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer2",
+                "Answer2\n\nAnswer2 is superior because it acknowledges both the subtractive color model (painting: red, yellow, blue) and the additive color model (light: red, green, blue), providing a more comprehensive and accurate answer. It correctly identifies the context-dependent nature of \u201cmain colors\u201d and uses precise terminology (\u201csubtractive\u201d and \u201cadditive\u201d implied through context). Answer1 is correct but incomplete, as it only addresses the traditional RYB model used in art, ignoring the RGB model essential in digital and optical contexts. Answer2\u2019s broader scope and clarity make it more informative and technically sound.",
+                "Answer2\n\nAnswer2 is superior because it acknowledges both the subtractive color model (painting: red, yellow, blue) and the additive color model (light: red, green, blue), providing a more comprehensive and accurate answer. It correctly identifies the context-dependent nature of \u201cmain colors\u201d and uses precise terminology (\u201csubtractive\u201d and \u201cadditive\u201d implied through context). Answer1 is correct but incomplete, as it only addresses the traditional RYB model used in art, ignoring the RGB model essential in digital and optical contexts. Answer2\u2019s broader scope and clarity make it more informative and scientifically balanced."
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        }
+    ],
+    "97": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'Will you say the first President of the United States?'",
+            "answer1": {
+                "text": "The first leader of the United States was George Washington. He was in charge from 1789 to 1797 and was chosen by all. Washington is known for guiding the country in its early days and making many important rules for the job of the leader.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "George Washington.  He was unanimously elected by the Electoral College in 1789 and served two terms, setting many precedents for the presidency.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "result": [
+                "Answer2",
+                "Answer2\n\nAnswer2 is more precise and concise, accurately noting that Washington was \"unanimously elected by the Electoral College\" and that he \"served two terms, setting many precedents for the presidency.\" These details are historically accurate and add meaningful context without unnecessary wording. Answer1, while correct, uses less precise language (\u201cin charge,\u201d \u201cchosen by all\u201d) and includes vague phrasing like \u201cmaking many important rules for the job of the leader,\u201d which is imprecise compared to the formal term \u201csetting precedents.\u201d Answer2 demonstrates superior semantic quality through accuracy, conciseness, and appropriate historical terminology.",
+                "Answer2\n\nAnswer2 is more precise and concise, accurately noting that Washington was \"unanimously elected by the Electoral College\" and that he \"served two terms, setting many precedents for the presidency.\" These details are historically accurate and add meaningful context without unnecessary wording. Answer1, while correct, uses less precise language (\u201cin charge,\u201d \u201cchosen by all\u201d) and includes vague phrasing like \u201cmaking many important rules for the job of the leader,\u201d which is imprecise compared to the formal term \u201csetting precedents.\u201d Answer2 demonstrates superior semantic quality through accuracy, concision, and appropriate historical terminology."
+            ],
+            "extracted_answers": [
+                "gemini-1.5-flash",
+                "gemini-1.5-flash",
+                "gemini-1.5-flash"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'Will you say the first President of the United States?'",
+            "answer1": {
+                "text": "George Washington.  He was unanimously elected by the Electoral College in 1789 and served two terms, setting many precedents for the presidency.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "answer2": {
+                "text": "The first leader of the United States was George Washington. He was in charge from 1789 to 1797 and was chosen by all. Washington is known for guiding the country in its early days and making many important rules for the job of the leader.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Both Answer1 and Answer2 accurately identify George Washington as the first President of the United States and provide correct historical context, including his election in 1789, his two terms, and his role in establishing presidential precedents.\n\nHowever, Answer1 is slightly more precise and formal in its language. It correctly uses the term \u201cElectoral College,\u201d which is the official body that elected him, and specifies that he served \u201ctwo terms,\u201d which is more complete than Answer2\u2019s vague \u201cfrom 1789 to 1797\u201d (which, while factually correct, doesn\u2019t explicitly mention the number of terms). Answer1 also uses the phrase \u201csetting many precedents for the presidency,\u201d which is a more accurate and commonly used historical phrasing than Answer2\u2019s \u201cmaking many important rules for the job of the leader.\u201d\n\nAnswer2 is still correct and clear, but Answer1 demonstrates greater precision and historical nuance.\n\nAnswer1",
+                "Both Answer1 and Answer2 accurately identify George Washington as the first President of the United States and provide correct historical context, including his election in 1789, his two terms, and his role in establishing presidential precedents.\n\nHowever, Answer1 is slightly more precise and formal in its language. It correctly uses the term \u201cElectoral College,\u201d which is the official body that elected him, and specifies that he served \u201ctwo terms,\u201d which is more complete than Answer2\u2019s vague \u201cfrom 1789 to 1797\u201d (which, while factually correct, doesn\u2019t explicitly mention the number of terms). Answer1 also uses the phrase \u201csetting many precedents for the presidency,\u201d which is a more accurate and commonly used historical phrasing than Answer2\u2019s \u201cmaking many important rules for the job of the leader.\u201d\n\nAnswer2 is still correct and clear, but Answer1 demonstrates slightly better historical precision and phrasing.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "gemini-1.5-flash",
+                "gemini-1.5-flash",
+                "gemini-1.5-flash"
+            ]
+        }
+    ],
+    "98": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'What is the biggest planet in the sky system?'",
+            "answer1": {
+                "text": "The biggest planet in the solar system is Jupiter. It is a gas giant, over 11 times wider than Earth and has more mass than all the other planets put together, making it the heaviest and biggest planet in our solar system.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "Jupiter is the largest planet in our solar system.  Its mass is more than twice the mass of all the other planets combined.  It's a gas giant, significantly larger than the terrestrial planets.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "result": [
+                "Answer1",
+                "Both Answer1 and Answer2 are factually accurate and convey the same core information: Jupiter is the largest planet in the solar system, it is a gas giant, and it has more mass than all other planets combined. \n\nAnswer1 provides slightly more detail by mentioning Jupiter\u2019s width relative to Earth (\u201cover 11 times wider than Earth\u201d), which adds a tangible comparison for scale. Answer2 is concise and correct but omits that specific numerical comparison.\n\nSince the question asks for the \u201cbiggest planet in the sky system\u201d \u2014 which appears to be a misstatement of \u201csolar system\u201d \u2014 both answers correctly interpret and correct the intent. However, Answer1\u2019s additional detail enhances its explanatory quality without introducing error.\n\nThus, Answer1 is superior in terms of semantic quality and completeness.\n\nAnswer1",
+                "Both Answer1 and Answer2 are factually accurate and convey the same core information: Jupiter is the largest planet in the solar system, it is a gas giant, and it has more mass than all other planets combined. \n\nAnswer1 provides slightly more detail by mentioning Jupiter\u2019s width relative to Earth (\u201cover 11 times wider than Earth\u201d), which adds a tangible comparison for scale. Answer2 is concise and correct but omits that specific numerical comparison.\n\nSince the question asks for the \u201cbiggest planet in the sky system\u201d \u2014 which appears to be a misstatement of \u201csolar system\u201d \u2014 both answers correctly interpret and correct the intent. However, Answer1\u2019s additional detail enhances its explanatory quality without introducing errors.\n\nThus, Answer1 is superior in terms of semantic quality and completeness.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'What is the biggest planet in the sky system?'",
+            "answer1": {
+                "text": "Jupiter is the largest planet in our solar system.  Its mass is more than twice the mass of all the other planets combined.  It's a gas giant, significantly larger than the terrestrial planets.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "answer2": {
+                "text": "The biggest planet in the solar system is Jupiter. It is a gas giant, over 11 times wider than Earth and has more mass than all the other planets put together, making it the heaviest and biggest planet in our solar system.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer2",
+                "Answer1  \nAnswer2  \nTie\n\nAnswer2 is slightly more informative, providing specific comparative details like \"over 11 times wider than Earth,\" which adds concrete context beyond what Answer1 offers. Both answers are factually correct and clear, but Answer2 includes a more vivid quantitative comparison, enhancing its explanatory quality.\n\nAnswer2",
+                "Answer1  \nAnswer2  \nTie\n\nAnswer2 is slightly more informative, providing specific comparisons (e.g., \"over 11 times wider than Earth\") that enhance the clarity and richness of the answer. Both answers are factually correct and convey the same core information \u2014 that Jupiter is the largest planet in the solar system \u2014 but Answer2 adds measurable context that improves its quality.\n\nAnswer2"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "Unknown",
+                "Unknown"
+            ]
+        }
+    ],
+    "99": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'Who made the book 'To Kill a Mockingbird'?'",
+            "answer1": {
+                "text": "The book 'To Kill a Mockingbird' was made by Harper Lee. She gave it to the world in 1960. The story is about serious things like unfairness due to race and growing up in the south of America, seen through the eyes of a young girl named Scout Finch.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "Harper Lee wrote 'To Kill a Mockingbird'.  It's her only published novel, a critically acclaimed work of Southern Gothic fiction, published in 1960.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "result": [
+                "Answer1",
+                "Answer1  \nAnswer2  \nTie\n\nAnswer2 is more concise and accurate, using precise literary terminology (\"Southern Gothic fiction\") and correctly noting it as her only published novel, which adds valuable context. Answer1 is also factually correct but includes slightly informal phrasing (\"gave it to the world\") and adds interpretive details about the themes that, while true, are not necessary for answering the simple question of who made the book. Since the question only asks for the author, Answer2 provides a more refined, professional, and information-dense response without unnecessary elaboration.\n\nAnswer2",
+                "Answer1  \nAnswer2  \nTie\n\nAnswer2 is more concise and accurate, using precise literary terminology (\"Southern Gothic fiction\") and correctly noting it as her only published novel, which adds valuable context. Answer1 is also factually correct but includes slightly informal phrasing (\"gave it to the world\") and adds interpretive details about the themes that, while true, are not necessary for answering the simple question of who made the book. Since the question only asks for the author, Answer2 provides a more refined, professional, and succinct response without unnecessary elaboration.\n\nAnswer2"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "Unknown",
+                "Unknown"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'Who made the book 'To Kill a Mockingbird'?'",
+            "answer1": {
+                "text": "Harper Lee wrote 'To Kill a Mockingbird'.  It's her only published novel, a critically acclaimed work of Southern Gothic fiction, published in 1960.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "answer2": {
+                "text": "The book 'To Kill a Mockingbird' was made by Harper Lee. She gave it to the world in 1960. The story is about serious things like unfairness due to race and growing up in the south of America, seen through the eyes of a young girl named Scout Finch.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Answer1\n\nBoth answers correctly identify Harper Lee as the author and mention the 1960 publication date. However, Answer1 is superior in semantic quality because it uses more precise and formal language (\u201cwrote\u201d instead of \u201cmade,\u201d which is imprecise when referring to authorship), and it adds valuable contextual information about the genre (\u201cSouthern Gothic fiction\u201d) and the fact that it is her only published novel, enhancing the depth and accuracy of the response. Answer2, while informative, uses colloquial phrasing (\u201cgave it to the world\u201d) and lacks the same level of precision and conciseness. Answer1 is more academically appropriate and factually richer.",
+                "Answer1\n\nBoth answers correctly identify Harper Lee as the author and mention the 1960 publication date. However, Answer1 is superior in semantic quality because it uses more precise and formal language (\u201cwrote\u201d instead of \u201cmade,\u201d which is imprecise when referring to authorship), and it adds valuable contextual information about the genre (\u201cSouthern Gothic fiction\u201d) and the fact that it is her only published novel, enhancing the depth and accuracy of the response. Answer2, while informative, uses colloquial phrasing (\u201cgave it to the world\u201d) and lacks the same level of precision and conciseness. Answer1 is more academically appropriate and semantically richer."
+            ],
+            "extracted_answers": [
+                "gemini-1.5-flash",
+                "gemini-1.5-flash",
+                "gemini-1.5-flash"
+            ]
+        }
+    ],
+    "100": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'How many sides has a pentagon?'",
+            "answer1": {
+                "text": "A pentagon has five sides. The part \"penta-\" in Greek means \"five,\" and a pentagon is a shape with five straight sides and five angles.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "A pentagon has five sides.  The prefix \"penta\" means five, and a pentagon is a polygon with five sides and five angles.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "result": [
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie\n\nThe two answers are nearly identical in content and accuracy. Both correctly state that a pentagon has five sides, correctly explain that \"penta-\" means five, and both note that it has five angles. The only minor difference is in phrasing: Answer1 says \"the part 'penta-' in Greek\" while Answer2 says \"the prefix 'penta' means five.\" Both are semantically correct \u2014 \"penta-\" is indeed a Greek prefix meaning five. Neither contains an error, and both are clear and complete.\n\nTherefore, the quality is equivalent.\n\nTie",
+                "Answer1  \nAnswer2  \nTie\n\nThe two answers are nearly identical in content and accuracy. Both correctly state that a pentagon has five sides, correctly explain that \"penta-\" means five, and both note that it has five angles. The only minor difference is in phrasing: Answer1 says \"the part 'penta-' in Greek\" while Answer2 says \"the prefix 'penta' means five.\" Both are semantically correct \u2014 \"penta-\" is indeed a Greek prefix meaning five. Neither contains an error, and both provide clear, complete, and accurate information.\n\nTherefore, the quality is equivalent.\n\nTie"
+            ],
+            "extracted_answers": [
+                "Unknown",
+                "Unknown",
+                "Unknown"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'How many sides has a pentagon?'",
+            "answer1": {
+                "text": "A pentagon has five sides.  The prefix \"penta\" means five, and a pentagon is a polygon with five sides and five angles.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "answer2": {
+                "text": "A pentagon has five sides. The part \"penta-\" in Greek means \"five,\" and a pentagon is a shape with five straight sides and five angles.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \nTie\n\nTie",
+                "Answer2"
+            ],
+            "extracted_answers": [
+                "Unknown",
+                "Unknown",
+                "gpt-4o-mini"
+            ]
+        }
+    ],
+    "101": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'What thing has the chemical mark 'O'?'",
+            "answer1": {
+                "text": "The thing with the sign 'O' is oxygen. Oxygen is a gas that is very important for breathing in most living beings and is the most common thing in the Earth\u2019s outer layer. Its number is 8.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "The element with the chemical symbol 'O' is Oxygen.  This is a widely known chemical symbol, representing a highly reactive nonmetal crucial for respiration in most living organisms.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "result": [
+                "Answer2",
+                "Answer1  \nAnswer2  \nTie",
+                "Answer1  \nAnswer2  \n\nTie"
+            ],
+            "extracted_answers": [
+                "gemini-1.5-flash",
+                "Unknown",
+                "Unknown"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'What thing has the chemical mark 'O'?'",
+            "answer1": {
+                "text": "The element with the chemical symbol 'O' is Oxygen.  This is a widely known chemical symbol, representing a highly reactive nonmetal crucial for respiration in most living organisms.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "answer2": {
+                "text": "The thing with the sign 'O' is oxygen. Oxygen is a gas that is very important for breathing in most living beings and is the most common thing in the Earth\u2019s outer layer. Its number is 8.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Answer1\n\nAnswer1 is superior because it uses precise scientific terminology (\"chemical symbol\" instead of \"chemical mark\" or \"sign\"), correctly identifies oxygen as an element, and adds context about its chemical nature (\"highly reactive nonmetal\") and biological role (\"crucial for respiration\"). It is more accurate, concise, and professionally phrased.\n\nAnswer2 contains minor inaccuracies and imprecisions: \"sign\" is not the correct term (it should be \"symbol\"), \"most common thing in the Earth\u2019s outer layer\" is vague and misleading (oxygen is the most abundant element in the Earth's crust, but not necessarily the \"most common thing\" overall), and \"Its number is 8\" is ambiguous\u2014it could refer to atomic number, but this is not clearly stated.\n\nThus, Answer1 is semantically clearer, more accurate, and more informative.\n\nAnswer1",
+                "Answer1\n\nAnswer1 is superior because it uses precise scientific terminology (\"chemical symbol\" instead of \"chemical mark\" or \"sign\"), correctly identifies oxygen as an element, and adds context about its chemical nature (\"highly reactive nonmetal\") and biological role (\"crucial for respiration\"). It is more accurate, concise, and professionally phrased.\n\nAnswer2 contains minor inaccuracies and imprecisions: \"sign\" is not the correct term (it should be \"symbol\"), \"most common thing in the Earth\u2019s outer layer\" is vague and misleading (oxygen is the most abundant element in the Earth's crust, but not necessarily the \"most common thing\" overall), and \"Its number is 8\" is ambiguous\u2014it could mean atomic number, but this is not clearly stated.\n\nThus, Answer1 is semantically clearer, more accurate, and more informative.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "gemini-1.5-flash",
+                "gemini-1.5-flash",
+                "gemini-1.5-flash"
+            ]
+        }
+    ],
+    "102": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'What is the cold point of water in Fahrenheit?'",
+            "answer1": {
+                "text": "The freezing point of water in Fahrenheit is 32 degrees. This is the temperature where water goes from liquid to solid under normal air pressure. The Fahrenheit scale puts 32 degrees as the point where ice makes, based on the first design of the temperature scale.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "The freezing point of water in Fahrenheit is 32 degrees.  This is a defined point on the Fahrenheit scale; water freezes at this temperature under standard atmospheric pressure.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "result": [
+                "Answer2",
+                "Answer1  \nAnswer2  \nTie\n\nThe two answers are nearly identical in accuracy and clarity. Both correctly state that the freezing point of water is 32\u00b0F and mention standard atmospheric pressure. Answer1 adds a slightly more descriptive phrase (\u201cwhere water goes from liquid to solid\u201d) and a brief historical note (\u201cbased on the first design of the temperature scale\u201d), but this extra information is not strictly necessary and is somewhat imprecise (\u201cice makes\u201d is a minor grammatical error). Answer2 is more concise and technically precise without any errors.\n\nHowever, since both answers are factually correct, clear, and convey the essential information accurately, the difference in quality is negligible.\n\n**Tie**",
+                "Answer1  \nAnswer2  \nTie\n\nThe two answers are nearly identical in accuracy and clarity. Both correctly state that the freezing point of water is 32\u00b0F and mention standard atmospheric pressure. Answer1 adds a slightly more descriptive phrase (\u201cwhere water goes from liquid to solid\u201d) and a brief historical note (\u201cbased on the first design of the temperature scale\u201d), but this extra information is not strictly necessary and is somewhat imprecise (\u201cice makes\u201d is a minor grammatical error). Answer2 is more concise and technically precise without any errors.\n\nHowever, since both answers are factually correct, clear, and convey the essential information accurately, the difference in quality is negligible. Therefore, the most appropriate evaluation is:\n\nTie"
+            ],
+            "extracted_answers": [
+                "gemini-1.5-flash",
+                "gpt-4o-mini",
+                "Unknown"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'What is the cold point of water in Fahrenheit?'",
+            "answer1": {
+                "text": "The freezing point of water in Fahrenheit is 32 degrees.  This is a defined point on the Fahrenheit scale; water freezes at this temperature under standard atmospheric pressure.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "answer2": {
+                "text": "The freezing point of water in Fahrenheit is 32 degrees. This is the temperature where water goes from liquid to solid under normal air pressure. The Fahrenheit scale puts 32 degrees as the point where ice makes, based on the first design of the temperature scale.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Answer1 is superior because it is more precise and clearly states that 32\u00b0F is a *defined point* on the Fahrenheit scale, and it correctly specifies \u201cunder standard atmospheric pressure,\u201d which is scientifically accurate. \n\nAnswer2 contains minor inaccuracies and imprecise phrasing \u2014 for example, \u201cice makes\u201d is grammatically incorrect and unclear, and \u201cbased on the first design of the temperature scale\u201d is vague and not essential to answering the question. While both answers convey the correct numerical value, Answer1 provides a more professional, accurate, and well-structured explanation.\n\nAnswer1",
+                "Answer1 is superior because it is more precise and clearly states that 32\u00b0F is a *defined point* on the Fahrenheit scale, and it correctly specifies \u201cunder standard atmospheric pressure,\u201d which is scientifically accurate. \n\nAnswer2 contains minor inaccuracies and imprecise phrasing \u2014 for example, \u201cice makes\u201d is grammatically incorrect and unclear, and \u201cbased on the first design of the temperature scale\u201d is vague and not essential to answering the question. While the core fact is correct, Answer1 communicates the information more professionally and accurately.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "gemini-1.5-flash",
+                "gemini-1.5-flash",
+                "gemini-1.5-flash"
+            ]
+        }
+    ],
+    "103": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'Who made the light bulb?'",
+            "answer1": {
+                "text": "Thomas Edison is often seen as the maker of the useful lightbulb in 1879. But others like Sir Humphry Davy and Joseph Swan also helped with early forms. Edison\u2019s good design made it possible to use electric light in many places.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "Thomas Edison is most credited with inventing the lightbulb, though others contributed to its development.  Edison created the first commercially successful incandescent lightbulb with a long lifespan, making practical electric lighting a reality.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "result": [
+                "Answer1",
+                "Answer1\n\nBoth answers are accurate and similar in content, but Answer1 provides slightly more context by naming additional contributors (Sir Humphry Davy and Joseph Swan) and explicitly mentioning the year (1879) and the impact of Edison\u2019s design (\u201cmade it possible to use electric light in many places\u201d). This added detail gives a more nuanced and historically informed response, acknowledging the collaborative nature of invention while still crediting Edison appropriately. Answer2 is concise and correct but less informative.\n\nThus, Answer1 has superior semantic quality due to greater depth and context.",
+                "Answer1\n\nBoth answers are accurate and similar in content, but Answer1 provides slightly more context by naming additional contributors (Sir Humphry Davy and Joseph Swan) and explicitly mentioning the year (1879) and the impact of Edison\u2019s design (\u201cmade it possible to use electric light in many places\u201d). This added detail gives a more nuanced and historically informed response, acknowledging the collaborative nature of invention while still crediting Edison appropriately. Answer2 is concise and correct but less informative.\n\nThus, Answer1 has superior semantic quality due to greater depth and context. \n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'Who made the light bulb?'",
+            "answer1": {
+                "text": "Thomas Edison is most credited with inventing the lightbulb, though others contributed to its development.  Edison created the first commercially successful incandescent lightbulb with a long lifespan, making practical electric lighting a reality.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "answer2": {
+                "text": "Thomas Edison is often seen as the maker of the useful lightbulb in 1879. But others like Sir Humphry Davy and Joseph Swan also helped with early forms. Edison\u2019s good design made it possible to use electric light in many places.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer2",
+                "Both Answer1 and Answer2 accurately convey that Thomas Edison is most associated with the invention of the practical, commercially successful incandescent lightbulb, while acknowledging contributions from others like Joseph Swan and Humphry Davy. \n\nAnswer1 is slightly more precise in noting that Edison created \u201cthe first commercially successful incandescent lightbulb with a long lifespan,\u201d which directly addresses the core of why he is credited. Answer2 is also correct but uses slightly vaguer phrasing like \u201cgood design\u201d and \u201cmade it possible to use electric light in many places,\u201d which lacks the technical specificity of Answer1.\n\nAdditionally, Answer1 is more concise and flows better, without redundancy.\n\nThus, Answer1 provides a higher-quality, more accurate, and more informative response.\n\nAnswer1",
+                "Both Answer1 and Answer2 accurately convey that Thomas Edison is most associated with the invention of the practical, commercially successful incandescent lightbulb, while acknowledging contributions from others like Joseph Swan and Humphry Davy. \n\nAnswer1 is slightly more precise in noting that Edison created \u201cthe first commercially successful incandescent lightbulb with a long lifespan,\u201d which directly addresses the core of why he is credited. Answer2 is also correct but uses slightly vaguer phrasing like \u201cgood design\u201d and \u201cmade it possible to use electric light in many places,\u201d which lacks the technical specificity of Answer1.\n\nAdditionally, Answer1 is more concise and flows better, without redundancy.\n\nThus, Answer1 has a slight edge in semantic quality, accuracy, and clarity.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gemini-1.5-flash",
+                "gemini-1.5-flash"
+            ]
+        }
+    ],
+    "104": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'Say the names of the land areas of the world.'",
+            "answer1": {
+                "text": "The lands of the world are Asia, Africa, North America, South America, Antarctica, Europe, and Australia. These are big areas of land kept apart by seas. Each land is special in its shape, way of life, and living things, making up the main parts of the Earth\u2019s land.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "Africa, Antarctica, Asia, Australia, Europe, North America, and South America.  These are the seven continents generally recognized based on large landmasses separated by oceans.  Different models exist, but this is the most common.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "result": [
+                "Answer2",
+                "Answer2  \nAnswer2 is superior because it provides a more precise, concise, and accurate response. It correctly identifies the seven continents using standard geographical terminology and acknowledges that different models exist, demonstrating awareness of nuance. Answer1, while not incorrect, uses less precise language (\u201clands of the world,\u201d \u201cbig areas of land kept apart by seas\u201d) and lacks the clarity and authority of Answer2. Answer2 also avoids unnecessary elaboration, sticking to the factual request without over-explaining.  \n\nAnswer2",
+                "Answer2  \nAnswer2 is superior because it provides a more precise, concise, and accurate response. It correctly identifies the seven continents using standard geographical terminology and acknowledges that different models exist, demonstrating awareness of nuance. Answer1, while not incorrect, uses less precise language (\u201clands of the world,\u201d \u201cbig areas of land kept apart by seas\u201d) and lacks the clarity and technical accuracy of Answer2. The latter is more informative and aligned with standard educational and scientific usage."
+            ],
+            "extracted_answers": [
+                "gemini-1.5-flash",
+                "gemini-1.5-flash",
+                "gemini-1.5-flash"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'Say the names of the land areas of the world.'",
+            "answer1": {
+                "text": "Africa, Antarctica, Asia, Australia, Europe, North America, and South America.  These are the seven continents generally recognized based on large landmasses separated by oceans.  Different models exist, but this is the most common.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "answer2": {
+                "text": "The lands of the world are Asia, Africa, North America, South America, Antarctica, Europe, and Australia. These are big areas of land kept apart by seas. Each land is special in its shape, way of life, and living things, making up the main parts of the Earth\u2019s land.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Both Answer1 and Answer2 correctly list the seven commonly recognized continents: Africa, Antarctica, Asia, Australia, Europe, North America, and South America. Both also accurately describe them as large landmasses separated by oceans.\n\nHowever, Answer1 is slightly more precise and concise in its wording. It explicitly notes that \u201cthese are the seven continents generally recognized based on large landmasses separated by oceans\u201d and acknowledges that \u201cdifferent models exist,\u201d which adds nuance and academic awareness. Answer2, while correct, uses less formal phrasing (\u201cbig areas of land kept apart by seas\u201d) and adds subjective commentary (\u201cEach land is special in its shape, way of life, and living things\u201d) that, while true, is not directly relevant to the simple request to \u201csay the names\u201d of the land areas.\n\nSince the question is straightforward\u2014asking only for the names\u2014the superior answer is the one that delivers the information with greater clarity, accuracy, and appropriate context without unnecessary embellishment.\n\n**Answer1** is therefore the better response.\n\nAnswer1",
+                "Both Answer1 and Answer2 correctly list the seven commonly recognized continents: Africa, Antarctica, Asia, Australia, Europe, North America, and South America. Both also accurately describe them as large landmasses separated by oceans.\n\nHowever, Answer1 is slightly more precise and concise in its wording. It explicitly notes that \u201cthese are the seven continents generally recognized based on large landmasses separated by oceans\u201d and acknowledges that \u201cdifferent models exist,\u201d which adds nuance and academic awareness. Answer2, while correct, uses less formal phrasing (\u201cbig areas of land kept apart by seas\u201d) and adds subjective commentary (\u201cEach land is special in its shape, way of life, and living things\u201d) that, while true, is not directly relevant to the simple request to \u201csay the names\u201d of the land areas.\n\nSince the question is straightforward\u2014asking only for the names\u2014the superior answer is the one that delivers the information with greater clarity, accuracy, and appropriate context without unnecessary embellishment.\n\n**Answer1** is the better response.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "gemini-1.5-flash",
+                "gemini-1.5-flash",
+                "gemini-1.5-flash"
+            ]
+        }
+    ],
+    "105": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'Who is the maker of the 'Harry Potter' series?'",
+            "answer1": {
+                "text": "The maker of the 'Harry Potter' story is J.K. Rowling. She is a British writer who got world fame for making the magic place of Harry Potter, a young wizard. The story has seven books and has been changed into successful films.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "J.K. Rowling is the author of the 'Harry Potter' series.  She wrote the seven novels that comprise this globally popular fantasy series about a young wizard.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "result": [
+                "Answer2",
+                "Answer2\n\nAnswer2 is more concise, accurate, and uses precise language (\"author\" instead of \"maker,\" \"novels\" instead of \"books,\" and \"globally popular fantasy series\" for better context). It avoids informal or imprecise phrasing like \"magic place\" and \"changed into\" (which should be \"adapted into\"), making it semantically superior. Answer1, while correct in essence, contains minor inaccuracies and less polished phrasing.",
+                "Answer2\n\nAnswer2 is more concise, accurate, and uses precise language (\"author\" instead of \"maker,\" \"novels\" instead of \"books,\" and \"globally popular fantasy series\" for better context). It avoids informal or imprecise phrasing like \"magic place\" and \"changed into\" (which should be \"adapted into\"), making it semantically superior. Answer1, while correct in essence, contains minor inaccuracies and less polished wording."
+            ],
+            "extracted_answers": [
+                "gemini-1.5-flash",
+                "gemini-1.5-flash",
+                "gemini-1.5-flash"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'Who is the maker of the 'Harry Potter' series?'",
+            "answer1": {
+                "text": "J.K. Rowling is the author of the 'Harry Potter' series.  She wrote the seven novels that comprise this globally popular fantasy series about a young wizard.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "answer2": {
+                "text": "The maker of the 'Harry Potter' story is J.K. Rowling. She is a British writer who got world fame for making the magic place of Harry Potter, a young wizard. The story has seven books and has been changed into successful films.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Answer1\n\nAnswer1 is superior because it is more precise, grammatically correct, and uses appropriate terminology (\"author\" instead of \"maker,\" \"novels\" instead of \"books,\" and \"globally popular fantasy series\" for clarity and tone). It avoids informal or imprecise phrasing like \"making the magic place\" and \"changed into successful films,\" which appear in Answer2. Answer1 conveys the same information more professionally and accurately.",
+                "Answer1\n\nAnswer1 is superior because it is more precise, grammatically correct, and uses appropriate terminology (\"author\" instead of \"maker,\" \"novels\" instead of \"books,\" and \"globally popular fantasy series\" for better context). It avoids informal or imprecise phrasing like \"making the magic place\" and \"changed into successful films,\" which appear in Answer2. Answer1 conveys the same information more professionally and accurately."
+            ],
+            "extracted_answers": [
+                "gemini-1.5-flash",
+                "gemini-1.5-flash",
+                "gemini-1.5-flash"
+            ]
+        }
+    ],
+    "106": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'Who did the paint of the 'Mona Lisa'?'",
+            "answer1": {
+                "text": "The 'Mona Lisa' was made by Leonardo da Vinci, an Italian artist of the Renaissance. He made the picture from 1503 to 1506. The picture is famous for its subject's mysterious smile and Leonardo's new ways, like sfumato, which helped to give it a lifelike look and lasting fame.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "Leonardo da Vinci painted the Mona Lisa.  He was a renowned Renaissance artist, and the painting is famous for its sfumato technique and enigmatic subject.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "result": [
+                "Answer1",
+                "Both Answer1 and Answer2 are accurate and convey the essential information: that Leonardo da Vinci painted the Mona Lisa, that he was a Renaissance artist, and that the painting is famous for its sfumato technique and enigmatic smile.\n\nHowever, Answer1 provides slightly more detail \u2014 including the timeframe (1503\u20131506) and explicitly mentions the painting\u2019s \u201clifelike look and lasting fame,\u201d which adds context without being redundant. Answer2 is more concise but still fully correct.\n\nSince the question asks for a comparison based on **semantic quality** \u2014 meaning depth, accuracy, and clarity of meaning \u2014 Answer1 offers a richer, more informative response without sacrificing precision.\n\n**Answer1**",
+                "Both Answer1 and Answer2 are accurate and convey the essential information: that Leonardo da Vinci painted the Mona Lisa, that he was a Renaissance artist, and that the painting is famous for its sfumato technique and enigmatic smile.\n\nHowever, Answer1 provides slightly more detail \u2014 including the timeframe (1503\u20131506) and explicitly mentions the painting\u2019s \u201clifelike look and lasting fame,\u201d which adds context without being redundant. Answer2 is more concise but still fully correct.\n\nSince the question asks for the *quality* of the answer, and Answer1 offers a bit more depth and context while remaining accurate and clear, it provides a richer response without unnecessary fluff.\n\n**Answer1**"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "Unknown",
+                "Unknown"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'Who did the paint of the 'Mona Lisa'?'",
+            "answer1": {
+                "text": "Leonardo da Vinci painted the Mona Lisa.  He was a renowned Renaissance artist, and the painting is famous for its sfumato technique and enigmatic subject.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "answer2": {
+                "text": "The 'Mona Lisa' was made by Leonardo da Vinci, an Italian artist of the Renaissance. He made the picture from 1503 to 1506. The picture is famous for its subject's mysterious smile and Leonardo's new ways, like sfumato, which helped to give it a lifelike look and lasting fame.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer2",
+                "Both Answer1 and Answer2 are accurate and provide correct information about Leonardo da Vinci as the painter of the Mona Lisa, along with relevant details such as the Renaissance context, the sfumato technique, and the enigmatic smile. \n\nAnswer1 is slightly more concise and flows naturally, while Answer2 adds specific dates (1503\u20131506) and slightly more elaboration on the impact of Leonardo\u2019s techniques. However, the dates are not universally agreed upon (some sources suggest he worked on it until 1519), which introduces a minor potential inaccuracy, though not a major one.\n\nBoth are semantically strong, but Answer2 provides marginally more detail without sacrificing clarity or accuracy.\n\n**Answer2**",
+                "Both Answer1 and Answer2 are accurate and provide correct information about Leonardo da Vinci as the painter of the Mona Lisa, along with relevant details such as the Renaissance context, the sfumato technique, and the enigmatic smile. \n\nAnswer1 is slightly more concise and flows naturally, while Answer2 adds specific dates (1503\u20131506) and slightly more elaboration on the impact of Leonardo\u2019s techniques. However, the dates are not universally agreed upon (some sources suggest he worked on it until 1519), which introduces a minor potential inaccuracy, though not a major one.\n\nBoth are semantically strong, but Answer2 provides marginally more detail without sacrificing clarity or accuracy.\n\n**Answer2** is slightly superior due to the added contextual detail.\n\nAnswer2"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "Unknown",
+                "gpt-4o-mini"
+            ]
+        }
+    ],
+    "107": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'What year did the Titanic go down?'",
+            "answer1": {
+                "text": "The Titanic went down in 1912. It hit an ice mountain on its first journey from Southampton to New York and sank in the early hours of April 15, 1912. The event caused the loss of over 1,500 lives and is one of the most well-known sea disasters.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "The Titanic sank in 1912.  This is a well-documented historical event; its sinking on its maiden voyage is a significant tragedy remembered worldwide.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "result": [
+                "Answer1",
+                "Answer1  \nThe Titanic went down in 1912. It hit an ice mountain on its first journey from Southampton to New York and sank in the early hours of April 15, 1912. The event caused the loss of over 1,500 lives and is one of the most well-known sea disasters.\n\nAnswer2  \nThe Titanic sank in 1912. This is a well-documented historical event; its sinking on its maiden voyage is a significant tragedy remembered worldwide.\n\nBoth answers correctly state that the Titanic sank in 1912 and acknowledge the historical significance of the event. However, Answer1 provides additional specific and accurate details \u2014 such as the date (April 15, 1912), the origin and destination of the voyage (Southampton to New York), and the approximate death toll (over 1,500 lives). These details enhance the depth and informativeness of the response without introducing errors.\n\nAnswer2, while accurate, is more general and lacks the contextual richness that makes Answer1 superior in terms of semantic quality and completeness.\n\nAnswer1",
+                "Answer1  \nThe Titanic went down in 1912. It hit an ice mountain on its first journey from Southampton to New York and sank in the early hours of April 15, 1912. The event caused the loss of over 1,500 lives and is one of the most well-known sea disasters.\n\nAnswer2  \nThe Titanic sank in 1912. This is a well-documented historical event; its sinking on its maiden voyage is a significant tragedy remembered worldwide.\n\nBoth answers correctly state that the Titanic sank in 1912 and acknowledge the historical significance of the event. However, Answer1 provides additional specific and accurate details \u2014 such as the date (April 15, 1912), the origin and destination of the voyage (Southampton to New York), and the approximate death toll (over 1,500 lives). These details enhance the depth and informativeness of the response without introducing errors.\n\nAnswer2, while accurate, is more generic and lacks the contextual richness that makes Answer1 superior in terms of semantic quality and completeness.\n\nAnswer1"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'What year did the Titanic go down?'",
+            "answer1": {
+                "text": "The Titanic sank in 1912.  This is a well-documented historical event; its sinking on its maiden voyage is a significant tragedy remembered worldwide.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "answer2": {
+                "text": "The Titanic went down in 1912. It hit an ice mountain on its first journey from Southampton to New York and sank in the early hours of April 15, 1912. The event caused the loss of over 1,500 lives and is one of the most well-known sea disasters.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer2",
+                "Answer2\n\nBoth answers correctly state that the Titanic sank in 1912, but Answer2 provides additional accurate and relevant details \u2014 such as the cause (hitting an iceberg, not \"ice mountain\"), the route, the specific date (April 15, 1912), and the human toll (over 1,500 lives). These details enhance the depth and completeness of the response without introducing errors. Answer1 is correct but more generic. Therefore, Answer2 is superior in semantic quality.\n\nAnswer2",
+                "Answer2\n\nBoth answers correctly state that the Titanic sank in 1912, but Answer2 provides additional accurate and relevant details \u2014 such as the cause (hitting an iceberg, not \"ice mountain\"), the route, the specific date (April 15, 1912), and the human toll (over 1,500 lives). These details enhance the quality and depth of the response without introducing errors. Answer1 is correct but more generic. Therefore, Answer2 is superior in semantic quality.\n\nAnswer2"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "gpt-4o-mini"
+            ]
+        }
+    ],
+    "108": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'Can you say the three forms of matter?'",
+            "answer1": {
+                "text": "The three states of matter are solid, liquid, and gas. Solids keep a fixed shape and amount, liquids keep a fixed amount but take the shape of their container, and gases have no fixed shape or amount, spreading to fill any space that is open.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "The three states of matter are solid, liquid, and gas.  Solids have definite shape and volume. Liquids have definite volume but take the shape of their container. Gases have neither definite shape nor volume.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "result": [
+                "Answer2",
+                "Answer1  \nAnswer2  \nTie\n\nAnswer2 is more precise and concise, using the standard scientific terminology of \"definite shape and volume,\" which is more accurate than \"fixed shape and amount\" in Answer1 (where \"amount\" is ambiguous\u2014it should be \"volume\"). Answer1 also adds extra explanation about gases \"spreading to fill any space,\" which, while true, is not necessary for simply listing and defining the three forms. Answer2 sticks cleanly to the core definitions without unnecessary elaboration, making it superior in clarity and scientific accuracy.\n\nAnswer2",
+                "Answer1  \nAnswer2  \nTie\n\nAnswer2 is more precise and concise, using the standard scientific terminology of \"definite shape and volume,\" which is more accurate than \"fixed shape and amount\" in Answer1 (where \"amount\" is ambiguous\u2014it should be \"volume\"). Answer1 also adds extra explanation about gases \"spreading to fill any space,\" which, while true, is not necessary for simply listing and defining the three forms. Answer2 sticks to clear, textbook-style definitions without unnecessary elaboration, making it superior in semantic quality and accuracy.\n\nAnswer2"
+            ],
+            "extracted_answers": [
+                "gemini-1.5-flash",
+                "Unknown",
+                "Unknown"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'Can you say the three forms of matter?'",
+            "answer1": {
+                "text": "The three states of matter are solid, liquid, and gas.  Solids have definite shape and volume. Liquids have definite volume but take the shape of their container. Gases have neither definite shape nor volume.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "answer2": {
+                "text": "The three states of matter are solid, liquid, and gas. Solids keep a fixed shape and amount, liquids keep a fixed amount but take the shape of their container, and gases have no fixed shape or amount, spreading to fill any space that is open.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer2",
+                "Answer1\n\nBoth answers correctly identify the three states of matter: solid, liquid, and gas. However, Answer1 uses more precise and scientifically accurate terminology. It correctly states that gases have \u201cneither definite shape nor volume,\u201d whereas Answer2 says gases have \u201cno fixed shape or amount\u201d\u2014the term \u201camount\u201d is ambiguous and could be misinterpreted as referring to mass or quantity, rather than volume. In scientific contexts, \u201cvolume\u201d is the correct term to describe the space a substance occupies.\n\nAdditionally, Answer1\u2019s phrasing \u201ctake the shape of their container\u201d for liquids is slightly more natural and standard than Answer2\u2019s \u201ctake the shape of their container\u201d (which is also correct, but Answer1\u2019s overall clarity and precision give it the edge).\n\nThus, Answer1 is superior in semantic quality and scientific accuracy.",
+                "Answer1\n\nBoth answers correctly identify the three states of matter: solid, liquid, and gas. However, Answer1 uses more precise and scientifically accurate terminology. It correctly states that gases have \u201cneither definite shape nor volume,\u201d whereas Answer2 says gases have \u201cno fixed shape or amount\u201d\u2014the term \u201camount\u201d is ambiguous and could be misinterpreted as referring to mass or quantity, rather than volume. In scientific contexts, \u201cvolume\u201d is the correct term to describe the space a substance occupies.\n\nAdditionally, Answer1\u2019s phrasing \u201ctake the shape of their container\u201d for liquids is slightly more natural and standard than Answer2\u2019s \u201ctake the shape of their container\u201d (which is also correct, but Answer1\u2019s overall clarity and precision give it an edge).\n\nThus, Answer1 is superior in semantic quality and scientific accuracy."
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gemini-1.5-flash",
+                "gemini-1.5-flash"
+            ]
+        }
+    ],
+    "109": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'What is the number that, when you multiply it by itself, makes 36?'",
+            "answer1": {
+                "text": "The square root of 36 is 6. This is because 6 times 6 makes 36. The square root is the number that, when multiplied by itself, gives the first number.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "The square root of 36 is 6.  This is because 6 multiplied by itself (6 x 6) equals 36.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "result": [
+                "Answer1",
+                "Answer1  \nAnswer2  \nTie\n\nTie",
+                "Answer1  \nAnswer2  \nTie"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "Unknown",
+                "Unknown"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'What is the number that, when you multiply it by itself, makes 36?'",
+            "answer1": {
+                "text": "The square root of 36 is 6.  This is because 6 multiplied by itself (6 x 6) equals 36.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "answer2": {
+                "text": "The square root of 36 is 6. This is because 6 times 6 makes 36. The square root is the number that, when multiplied by itself, gives the first number.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer2",
+                "Both Answer1 and Answer2 are factually correct and clearly explain that 6 is the number which, when multiplied by itself, equals 36. However, Answer2 goes a step further by explicitly defining the concept of a square root in the context of the question: \u201cThe square root is the number that, when multiplied by itself, gives the first number.\u201d This additional clarification enhances understanding and directly ties the explanation back to the phrasing of the question.\n\nAnswer1 is correct but slightly more minimal. Answer2 provides a more complete and pedagogically helpful explanation.\n\nTherefore, Answer2 is superior in quality.\n\nAnswer2",
+                "Both Answer1 and Answer2 are factually correct and clearly explain that 6 is the number which, when multiplied by itself, equals 36. However, Answer2 goes a step further by explicitly defining the concept of a square root in the context of the question: \u201cThe square root is the number that, when multiplied by itself, gives the first number.\u201d This additional clarification enhances understanding and directly ties the explanation back to the phrasing of the question.\n\nWhile Answer1 is concise and accurate, Answer2 provides a more complete and pedagogically helpful explanation.\n\n**Answer2**"
+            ],
+            "extracted_answers": [
+                "gpt-4o-mini",
+                "gpt-4o-mini",
+                "Unknown"
+            ]
+        }
+    ],
+    "110": [
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model1-first",
+            "question": "'What is the formula of water?'",
+            "answer1": {
+                "text": "The chemical form of water is H2O. This means each water unit is made of two hydrogen atoms and one oxygen atom, joined together. This joining makes the basic form of water.",
+                "label": "gpt-4o-mini"
+            },
+            "answer2": {
+                "text": "The chemical formula of water is H\u2082O.  This means each molecule of water contains two hydrogen atoms (H) and one oxygen atom (O) covalently bonded together.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "result": [
+                "Answer2",
+                "Answer2\n\nBoth answers are factually correct, but Answer2 is superior in semantic quality because it uses precise scientific terminology (\"molecule,\" \"covalently bonded\") and properly formats the chemical formula with subscript notation (H\u2082O), which reflects standard scientific writing. Answer1 uses less precise language (\"water unit\" instead of \"molecule\") and lacks the technical accuracy in describing the bonding. Answer2 is more concise, accurate, and professionally phrased.",
+                "Answer2\n\nBoth answers are factually correct, but Answer2 is superior in semantic quality because it uses precise scientific terminology (\"molecule,\" \"covalently bonded\") and properly formats the chemical formula with subscript notation (H\u2082O), which reflects standard scientific writing. Answer1 uses less precise language (\"water unit\" instead of \"molecule\") and lacks the technical accuracy in describing the bonding. Answer2 is more concise, accurate, and aligned with scientific conventions."
+            ],
+            "extracted_answers": [
+                "gemini-1.5-flash",
+                "gemini-1.5-flash",
+                "gemini-1.5-flash"
+            ]
+        },
+        {
+            "prompt_style": "gpt-4o-mini",
+            "answer_order": "model2-first",
+            "question": "'What is the formula of water?'",
+            "answer1": {
+                "text": "The chemical formula of water is H\u2082O.  This means each molecule of water contains two hydrogen atoms (H) and one oxygen atom (O) covalently bonded together.\n",
+                "label": "gemini-1.5-flash"
+            },
+            "answer2": {
+                "text": "The chemical form of water is H2O. This means each water unit is made of two hydrogen atoms and one oxygen atom, joined together. This joining makes the basic form of water.",
+                "label": "gpt-4o-mini"
+            },
+            "result": [
+                "Answer1",
+                "Answer1\n\nAnswer1 is superior because it uses correct chemical notation (H\u2082O with proper subscript formatting), employs more precise language (\"covalently bonded together\"), and maintains a clearer, more scientifically accurate tone. Answer2 uses \"H2O\" without subscript (less formal), and phrases like \"water unit\" and \"basic form of water\" are imprecise or vague compared to the clear, standard terminology in Answer1. The semantic quality and accuracy are higher in Answer1.",
+                "Answer1\n\nAnswer1 is superior because it uses correct chemical notation (H\u2082O with proper subscript formatting), employs more precise language (\"covalently bonded together\"), and maintains a clearer, more scientifically accurate tone. Answer2 uses \"H2O\" without subscript (less formal), and phrases like \"water unit\" and \"basic form of water\" are imprecise and slightly misleading\u2014water is not defined by a \"basic form,\" and \"unit\" is vague compared to \"molecule.\" Answer1 demonstrates better scientific communication."
+            ],
+            "extracted_answers": [
+                "gemini-1.5-flash",
+                "gemini-1.5-flash",
+                "gemini-1.5-flash"
+            ]
+        }
+    ]
+}
