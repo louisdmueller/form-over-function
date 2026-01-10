@@ -5,7 +5,7 @@ import os
 import random
 import string
 import time
-from typing import Any, Dict, List
+from typing import Any
 
 import yaml
 from gguf import Optional
@@ -126,12 +126,12 @@ def get_file_path(data_name: str, data_variant: str = "") -> str:
     return f"data/generated_answers/{full_model_variant}.json"
 
 
-def read_data_file(file_path: str) -> List[Dict]:
+def read_data_file(file_path: str) -> list[dict]:
     with open(file_path, "r") as f:
         data = [json.loads(line) for line in f]
     return data
 
-def write_file(file_path: str, data: List[Dict[str, Any]]) -> None:
+def write_file(file_path: str, data: list[dict[str, Any]]) -> None:
     """
     Write a list of dicts to a Jsonl file.
     """
