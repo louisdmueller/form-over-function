@@ -13,6 +13,8 @@
 set -e # exit on error
 set -u # treat unset variables as an error
 
+export PYTHONPATH="$(pwd):$PYTHONPATH"
+
 echo "Time is $(date +"%H:%M %d-%m-%y") ($(date +%s))"
 echo "Endtime is $(date -d "@${SLURM_JOB_END_TIME}" '+%H:%M %d-%m-%y') (${SLURM_JOB_END_TIME})"
 

@@ -1,6 +1,7 @@
 set -e # Exit on error
 set -u # Treat unset variables as an error
 
+export PYTHONPATH="$(pwd):$PYTHONPATH"
 # Analysis script for comparing judgements
 cd src
 python -u evaluation/analyze_results.py \
