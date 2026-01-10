@@ -15,6 +15,7 @@ from tqdm import tqdm
 
 from model import get_model
 from src.evaluation.create_overview_xlsx import create_excel_overview
+from src.utils.logging import setup_logger
 from src.utils.tasks.get_next_task_new import (
     get_next_meta_task_filepath,
     get_next_not_finished_task_with_base_data_variant,
@@ -32,20 +33,7 @@ from src.utils.utils import (
     read_data_file,
 )
 
-logger = logging.getLogger("generate_judgements_logger")
-logger.setLevel(logging.DEBUG)
-
-# Add a stream handler so debug messages appear on stdout
-if not logger.handlers:
-    ch = logging.StreamHandler()
-    ch.setLevel(logging.DEBUG)
-    formatter = logging.Formatter(
-        "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-    )
-    ch.setFormatter(formatter)
-    logger.addHandler(ch)
-
-logger.debug("Logger initialized.")
+logger = setup_logger(__name__, log_level=logging.DEBUG)
 
 BATCH_QUEUE_DIR = Path("debug") / "batch_queue"
 PROCESSED_QUEUE_DIR = BATCH_QUEUE_DIR / "processed"
