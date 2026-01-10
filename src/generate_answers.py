@@ -10,7 +10,7 @@ from src.utils.utils import (
     load_config,
     parse_args,
     random_id,
-    read_data_file,
+    read_jsonl_file,
     sanitize_output_path,
 )
 
@@ -20,7 +20,7 @@ def main():
     args = parse_args()
     config = load_config(args.config_path)
 
-    data = read_data_file(args.data_path)
+    data = read_jsonl_file(args.data_path)
 
     desc = "Generating SAE answers"
 

@@ -9,12 +9,13 @@ import logging
 import os
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Optional
 
 from tqdm import tqdm
 
 from model import get_model
 from src.evaluation.create_overview_xlsx import create_excel_overview
-from src.utils.logging import setup_logger
+from src.utils.logging import log_job_info, setup_logger
 from src.utils.tasks.get_next_task_new import (
     get_next_meta_task_filepath,
     get_next_not_finished_task_with_base_data_variant,
@@ -78,14 +79,15 @@ class JudgementInput:
 
 def create_position_bias_mitigation_dict(
     answer_model_1: str, answer_model_2: str, name_model_1: str, name_model_2: str
-) -> dict:
-    """Create the answer dictionary with both orderings to mitigate position bias.
+) -> dict[str, dict[str, dict[str, Optional[str]]]]:
+    """Create the answer dictionary with both orderings to mitigate position bias. We 
+    can later use this to present the answers in different orders to the judge model.
 
     Args:
-        answer_model_1 (str): Answer from model 1.
-        answer_model_2 (str): Answer from model 2.
-        name_model_1 (str): Name of model 1.
-        name_model_2 (str): Name of model 2.
+        answer_model_1 (str): The answer provided by model 1.
+        answer_model_2 (str): The answer provided by model 2.
+        name_model_1 (str): The name of model 1.
+        name_model_2 (str): The name of model 2.
 
     Returns:
         dict: A dictionary containing both orderings of answers.
@@ -208,7 +210,7 @@ def main() -> None:
                 judgement_files_directory=judgement_files_directory,
                 excel_output_directory=excel_output_directory,
             )
-        log_job_info(tasks, config, timeout_handler)
+        log_job_info(tasks, config, timeout_handler.get_elapsed_time())
         return
 
     prompt, prompt_template = get_prompt(
@@ -272,14 +274,14 @@ def main() -> None:
             continue
 
         judgements = judge_model.generate(system_prompts, input_texts)
-        extracted_answers = judge_model.get_response_data(judgements)
+        model_response = judge_model.get_response_data(judgements)
 
         persist_and_write_judgements(
             tasks,
             base_data_filepath,
             comp_data_path,
             judgement_inputs,
-            extracted_answers,
+            model_response,
             judgement_files_directory,
             base_data_variant,
             comp_data_model,
@@ -294,39 +296,26 @@ def main() -> None:
             excel_output_directory=excel_output_directory,
         )
 
-    log_job_info(tasks, config, timeout_handler)
+    log_job_info(tasks, config, timeout_handler.get_elapsed_time())
 
 
-def log_job_info(
-    tasks: dict, config: dict, timeout_handler: TimeBasedTimeoutHandler
-) -> None:
-    # append job information to a csv file
-    execution_time = timeout_handler.get_elapsed_time()
-    # TODO: ressources used, files written, models used, ...
-    job_info = {
-        "job_id": os.getenv("SLURM_JOB_ID", "local_run"),
-        "execution_time": execution_time,
-        "base_data_model": tasks["base_data_model"],
-        "judge_model": tasks["judge_model_name"],
-    }
-
-    csv_file_path = config["run_info_csv_path"]
-    file_exists = os.path.isfile(csv_file_path)
-
-    with open(csv_file_path, mode="a", newline="") as csvfile:
-        fieldnames = list(job_info.keys())
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-        if not file_exists:
-            writer.writeheader()
-        writer.writerow(job_info)
-
-
-def extract_answer_labels(extracted_answers, i, judgement_input):
+def map_judge_decisions_to_labels(judge_decisions: list[list[str]], idx: int, model_name_to_answer_map: dict[str, dict[str, Optional[str]]]) -> list[str]:
+    """
+    Convert the judge model's extracted decision answers into the corresponding model names.
+    
+    Args:
+        judge_decisions (list[list[str]]): Each inner list contains the judge model's decisions for a specific input.
+        idx (int): The index of the current judgement input.
+        model_name_to_answer_map (dict): A mapping from model names to their corresponding answer details.
+        
+    Returns:
+        list[str]: A list of model names corresponding to the judge model's decisions.
+    """
     answer_preferences = []
-    for answer in extracted_answers["extracted_answers"][i]:
-        if answer in judgement_input.answer_dict[judgement_input.answer_position]:
+    for answer in judge_decisions[idx]:
+        if answer in model_name_to_answer_map.keys():
             answer_preferences.append(
-                judgement_input.answer_dict[judgement_input.answer_position][answer][
+                model_name_to_answer_map[answer][
                     "label"
                 ]
             )
@@ -335,7 +324,7 @@ def extract_answer_labels(extracted_answers, i, judgement_input):
     return answer_preferences
 
 
-def create_judgement_record(extracted_answers, i, judgement_input, answer_preferences):
+def create_judgement_record(model_response: dict[str, list[list[str]]], idx: int, judgement_input: JudgementInput, decision_labels: list[str]) -> dict:
     return {
         "prompt_style": judgement_input.question_style,
         "answer_order": judgement_input.answer_position,
@@ -346,8 +335,8 @@ def create_judgement_record(extracted_answers, i, judgement_input, answer_prefer
         "answer2": judgement_input.answer_dict[judgement_input.answer_position][
             "answer2"
         ],
-        "result": extracted_answers["output"][i],
-        "extracted_answers": answer_preferences,
+        "result": model_response["output"][idx],
+        "extracted_decisions": decision_labels,
     }
 
 
@@ -404,7 +393,7 @@ def persist_and_write_judgements(
     base_data_filepath: str,
     comp_data_path: str,
     judgement_inputs: list[JudgementInput],
-    extracted_answers: dict,
+    model_response: dict[str, list[list[str]]],
     judgement_files_directory: str,
     base_data_variant: str,
     comp_data_model: str,
@@ -413,17 +402,17 @@ def persist_and_write_judgements(
     file_content["metadata"] = create_judgement_metadata(
         tasks, base_data_filepath, comp_data_path
     )
-    for i, judgement_input in enumerate(judgement_inputs):
+    for idx, judgement_input in enumerate(judgement_inputs):
         if judgement_input.idx not in file_content:
             file_content[judgement_input.idx] = []
 
-        answer_preferences = extract_answer_labels(
-            extracted_answers, i, judgement_input
+        decision_labels = map_judge_decisions_to_labels(
+            model_response["extracted_decisions"], idx, judgement_input.answer_dict[judgement_input.answer_position]
         )
 
         file_content[judgement_input.idx].append(
             create_judgement_record(
-                extracted_answers, i, judgement_input, answer_preferences
+                model_response, idx, judgement_input, decision_labels
             )
         )
     output_filename = "judgements.json"
@@ -468,7 +457,7 @@ def process_batch_queue(config: dict) -> bool:
             entry["judge_model_name"], config, tasks_snapshot, job_id=job_id
         )
         outputs = judge_model.retrieve_batch()
-        extracted_answers = judge_model.get_response_data(outputs)
+        model_response = judge_model.get_response_data(outputs)
 
         judgement_inputs = [JudgementInput(**item) for item in entry["judgement_inputs"]]
 
@@ -477,7 +466,7 @@ def process_batch_queue(config: dict) -> bool:
             entry["base_data_filepath"],
             entry["comp_data_path"],
             judgement_inputs,
-            extracted_answers,
+            model_response,
             config["judgement_files_directory"],
             base_data_variant,
             comp_data_model,

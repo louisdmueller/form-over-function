@@ -6,7 +6,7 @@ import time
 from abc import ABC, abstractmethod
 from pathlib import Path
 from string import ascii_letters, digits
-from typing import Any, Dict, List, Optional
+from typing import Any, Optional
 
 from google import genai
 from google.genai.types import GenerateContentConfig
@@ -45,9 +45,9 @@ class Model(ABC):
     @abstractmethod
     def generate(
         self,
-        system_prompts: List[str],
-        input_texts: List[str],
-    ) -> List[List[str]]:
+        system_prompts: list[str],
+        input_texts: list[str],
+    ) -> list[list[str]]:
         """
         Input is a list of system prompts and a list of input texts.
         Each system prompt corresponds to a message in the input_texts list.
@@ -61,7 +61,7 @@ class Model(ABC):
         self,
         input_text: str,
         system_prompt: str = "",
-    ) -> List[Dict[str, str]]:
+    ) -> list[dict[str, str]]:
         """
         OpenAI uses this template directly.
         HuggingFace models have a method .apply_chat_template() themselves,
@@ -77,43 +77,43 @@ class Model(ABC):
 
     def get_response_data(
         self,
-        responses: List[List[str]],
-    ) -> Dict[str, List[List[str]]]:
+        responses: list[list[str]],
+    ) -> dict[str, list[list[str]]]:
         """
         Extracts the response data from the generated responses.
         The method should return a dictionary with the following structure:
         {
             "output": List[List[str]] # all generated outputs
-            "extracted_answers": List[List[str]] # extracted answers
+            "extracted_decisions": List[List[str]] # extracted answers
         }
         """
         all_outputs = []
-        all_extracted_answers = []
+        all_extracted_decisions = []
 
         # responses is a list of lists,
         # the inner list is num_generations responses for each input text
         # we call this a response_batch here, it has nothing do with the batch size
         for response_batch in responses:
             outputs = []
-            extracted_answers = []
+            extracted_decisions = []
             for response in response_batch:
                 outputs.append(response)
-                extracted_answer = self.extract_answer(response)
-                extracted_answers.append(extracted_answer)
+                extracted_decision = self.extract_decision(response)
+                extracted_decisions.append(extracted_decision)
             all_outputs.append(outputs)
-            all_extracted_answers.append(extracted_answers)
+            all_extracted_decisions.append(extracted_decisions)
 
         return {
             "output": all_outputs,
-            "extracted_answers": all_extracted_answers,
+            "extracted_decisions": all_extracted_decisions,
         }
 
-    def extract_answer(self, text: str) -> str | None:
+    def extract_decision(self, text: str) -> str | None:
         """
-        Given a text, extract the answer from it.
-        The answer can be one of "Answer1", "Answer2", or "Tie".
-        If the answer is ambiguous (e.g. both "Answer1" and "Answer2" are present), return None.
-        If no answer is found, return None.
+        Given a judge response text, extract the decision from it.
+        The decision can be one of "Answer1", "Answer2", or "Tie".
+        If the decision is ambiguous (e.g. both "Answer1" and "Answer2" are present), return None.
+        If no decision is found, return None.
         """
 
         if not text:
@@ -196,9 +196,9 @@ class vLLMModel(Model):
 
     def format_inputs(
         self,
-        input_texts: List[str],
-        system_prompts: List[str],
-    ) -> list[List[Dict[str, str]]]:
+        input_texts: list[str],
+        system_prompts: list[str],
+    ) -> list[list[dict[str, str]]]:
         messages_batch = [
             self.apply_chat_template(input_text, sys_prompt)
             for input_text, sys_prompt in zip(input_texts, system_prompts)
@@ -207,9 +207,9 @@ class vLLMModel(Model):
 
     def generate(
         self,
-        system_prompts: List[str],
-        input_texts: List[str],
-    ) -> List[List[str]]:
+        system_prompts: list[str],
+        input_texts: list[str],
+    ) -> list[list[str]]:
         inputs = self.format_inputs(input_texts, system_prompts)
 
         outputs = self.llm.chat(inputs, sampling_params=self.sampling_params)
@@ -227,11 +227,11 @@ class OpenAIModel(Model):
 
     def generate(
         self,
-        system_prompts: List[str],
-        input_texts: List[str],
+        system_prompts: list[str],
+        input_texts: list[str],
         num_generations: int = 1,
         **kwargs,
-    ) -> List[List[str]]:
+    ) -> list[list[str]]:
         if kwargs.get("use_batch_api", False):
             raise NotImplementedError(
                 "Batch API is not implemented for OpenAI models yet."
@@ -263,11 +263,11 @@ class GeminiModel(Model):
 
     def generate(
         self,
-        system_prompts: List[str],
-        input_texts: List[str],
+        system_prompts: list[str],
+        input_texts: list[str],
         num_generations: int = 1,
         **kwargs,
-    ) -> List[List[str]]:
+    ) -> list[list[str]]:
         responses = []
         for input_text, system_prompt in zip(input_texts, system_prompts):
             if system_prompt:
@@ -303,11 +303,11 @@ class ClaudeModel(Model):
 
     def generate(
         self,
-        system_prompts: List[str],
-        input_texts: List[str],
+        system_prompts: list[str],
+        input_texts: list[str],
         num_generations: int = 1,
         **kwargs,
-    ) -> List[List[str]]:
+    ) -> list[list[str]]:
         if kwargs.get("use_batch_api", False):
             raise NotImplementedError(
                 "Batch API is not implemented for Claude models yet."
@@ -342,11 +342,11 @@ class RandomAnswer(Model):
 
     def generate(
         self,
-        system_prompts: List[str],
-        input_texts: List[str],
+        system_prompts: list[str],
+        input_texts: list[str],
         num_generations: int = 1,
         **kwargs,
-    ) -> List[List[str]]:
+    ) -> list[list[str]]:
         from random import choice
 
         responses = []
@@ -408,21 +408,21 @@ class GeminiBatchModel(Model):
 
     def generate(
         self,
-        system_prompts: List[str],
-        input_texts: List[str],
-    ) -> List[List[str]]:
+        system_prompts: list[str],
+        input_texts: list[str],
+    ) -> list[list[str]]:
         if self.mode == "submit":
             self.submit_batch(system_prompts, input_texts)
             return []
         return self.retrieve_batch()
 
-    def submit_batch(self, system_prompts: List[str], input_texts: List[str]) -> None:
+    def submit_batch(self, system_prompts: list[str], input_texts: list[str]) -> None:
         self._submit_batch(system_prompts, input_texts)
 
-    def retrieve_batch(self) -> List[List[str]]:
+    def retrieve_batch(self) -> list[list[str]]:
         return self._retrieve_batch()
 
-    def _submit_batch(self, system_prompts: List[str], input_texts: List[str]) -> None:
+    def _submit_batch(self, system_prompts: list[str], input_texts: list[str]) -> None:
         if len(system_prompts) != len(input_texts):
             raise ValueError("system_prompts and input_texts must have the same length.")
 
@@ -431,7 +431,7 @@ class GeminiBatchModel(Model):
             raise ValueError("No requests to submit to Gemini batch API.")
 
         timestamp = time.strftime("%Y%m%d_%H%M%S")
-        jobs: List[Dict[str, Any]] = []
+        jobs: list[dict[str, Any]] = []
         start_index = 0
 
         for shard_index, shard in enumerate(self._shard_requests(requests_batch)):
@@ -467,10 +467,10 @@ class GeminiBatchModel(Model):
         self._write_state(state_payload)
         logger.info("Submitted %d Gemini batch job(s).", len(jobs))
 
-    def _retrieve_batch(self) -> List[List[str]]:
+    def _retrieve_batch(self) -> list[list[str]]:
         state = self._load_state()
-        request_id_order: List[str] = state.get("request_id_order", [])
-        outputs: List[List[str]] = [[] for _ in range(state["num_inputs"])]
+        request_id_order: list[str] = state.get("request_id_order", [])
+        outputs: list[list[str]] = [[] for _ in range(state["num_inputs"])]
 
         # If no custom ids are present, fall back to positional mapping with offset
         use_custom_ids = bool(request_id_order)
@@ -511,9 +511,9 @@ class GeminiBatchModel(Model):
         self._write_results_file(state.get("jobs", []), outputs)
         return outputs
 
-    def _build_requests(self, system_prompts: List[str], input_texts: List[str]) -> List[Dict[str, Any]]:
+    def _build_requests(self, system_prompts: list[str], input_texts: list[str]) -> list[dict[str, Any]]:
         requests_batch = []
-        self.request_id_order: List[str] = []
+        self.request_id_order: list[str] = []
         for idx, (sys_prompt, input_text) in enumerate(zip(system_prompts, input_texts)):
             request = {
                 "contents": [
@@ -536,8 +536,8 @@ class GeminiBatchModel(Model):
 
         return requests_batch
 
-    def _build_generation_config(self) -> Dict[str, Any]:
-        config: Dict[str, Any] = {
+    def _build_generation_config(self) -> dict[str, Any]:
+        config: dict[str, Any] = {
             "maxOutputTokens": self.max_tokens,
             "candidateCount": self.num_generations,
         }
@@ -555,7 +555,7 @@ class GeminiBatchModel(Model):
 
         return {k: v for k, v in config.items() if v is not None}
 
-    def _shard_requests(self, requests_batch: List[Dict[str, Any]]) -> List[List[Dict[str, Any]]]:
+    def _shard_requests(self, requests_batch: list[dict[str, Any]]) -> list[list[dict[str, Any]]]:
         if self.max_requests_per_job <= 0:
             return [requests_batch]
         return [
@@ -563,7 +563,7 @@ class GeminiBatchModel(Model):
             for i in range(0, len(requests_batch), self.max_requests_per_job)
         ]
 
-    def _write_request_file(self, shard: List[Dict[str, Any]], timestamp: str, shard_index: int) -> Path:
+    def _write_request_file(self, shard: list[dict[str, Any]], timestamp: str, shard_index: int) -> Path:
         filename = f"gemini_batch_{timestamp}_{shard_index}.jsonl"
         local_path = self.working_dir / filename
         with local_path.open("w", encoding="utf-8") as file:
@@ -579,7 +579,7 @@ class GeminiBatchModel(Model):
         blob.upload_from_filename(str(local_path))
         return f"gs://{bucket_name}/{object_name}"
 
-    def _find_prediction_files(self, dest_uri: str) -> List[str]:
+    def _find_prediction_files(self, dest_uri: str) -> list[str]:
         bucket_name, prefix = self._split_gcs_uri(dest_uri)
         bucket = self.storage_client.bucket(bucket_name)
         blobs = sorted(
@@ -588,17 +588,17 @@ class GeminiBatchModel(Model):
         )
         return [f"gs://{bucket_name}/{blob.name}" for blob in blobs]
 
-    def _read_jsonl_from_gcs(self, uri: str) -> List[Dict[str, Any]]:
+    def _read_jsonl_from_gcs(self, uri: str) -> list[dict[str, Any]]:
         bucket_name, blob_name = self._split_gcs_uri(uri)
         bucket = self.storage_client.bucket(bucket_name)
         blob = bucket.blob(blob_name)
         data = blob.download_as_text(encoding="utf-8")
         return [json.loads(line) for line in data.splitlines() if line.strip()]
 
-    def _extract_candidates(self, record: Dict[str, Any]) -> List[str]:
+    def _extract_candidates(self, record: dict[str, Any]) -> list[str]:
         response = record.get("response") or {}
         candidates = response.get("candidates") or []
-        outputs: List[str] = []
+        outputs: list[str] = []
         for candidate in candidates:
             content = candidate.get("content") or {}
             parts = content.get("parts") or []
@@ -606,12 +606,12 @@ class GeminiBatchModel(Model):
             outputs.append("".join(texts).strip())
         return outputs
 
-    def _write_state(self, payload: Dict[str, Any]) -> None:
+    def _write_state(self, payload: dict[str, Any]) -> None:
         self.state_path.parent.mkdir(parents=True, exist_ok=True)
         with self.state_path.open("w", encoding="utf-8") as file:
             json.dump(payload, file, indent=2)
 
-    def _load_state(self) -> Dict[str, Any]:
+    def _load_state(self) -> dict[str, Any]:
         if not self.state_path.exists():
             raise FileNotFoundError(
                 f"Gemini batch state file not found at {self.state_path}. Submit a batch first."
@@ -619,7 +619,7 @@ class GeminiBatchModel(Model):
         with self.state_path.open("r", encoding="utf-8") as file:
             return json.load(file)
 
-    def _write_results_file(self, jobs: List[Dict[str, Any]], outputs: List[List[str]]) -> None:
+    def _write_results_file(self, jobs: list[dict[str, Any]], outputs: list[list[str]]) -> None:
         self.results_path.parent.mkdir(parents=True, exist_ok=True)
         payload = {
             "jobs": jobs,
@@ -720,31 +720,31 @@ class AnthropicBatchModel(Model):
 
     def generate(
         self,
-        system_prompts: List[str],
-        input_texts: List[str],
-    ) -> List[List[str]]:
+        system_prompts: list[str],
+        input_texts: list[str],
+    ) -> list[list[str]]:
         if self.mode == "submit":
             self.submit_batch(system_prompts, input_texts)
             return []
         return self.retrieve_batch()
 
-    def submit_batch(self, system_prompts: List[str], input_texts: List[str]) -> None:
+    def submit_batch(self, system_prompts: list[str], input_texts: list[str]) -> None:
         self._submit_batch(system_prompts, input_texts)
 
-    def retrieve_batch(self) -> List[List[str]]:
+    def retrieve_batch(self) -> list[list[str]]:
         return self._retrieve_batch()
 
     def format_inputs(
         self,
-        input_texts: List[str],
-        system_prompts: List[str],
-    ) -> List[List[Dict[str, str]]]:
+        input_texts: list[str],
+        system_prompts: list[str],
+    ) -> list[list[dict[str, str]]]:
         return [
             self.apply_chat_template(input_text, sys_prompt)
             for input_text, sys_prompt in zip(input_texts, system_prompts)
         ]
 
-    def _submit_batch(self, system_prompts: List[str], input_texts: List[str]) -> None:
+    def _submit_batch(self, system_prompts: list[str], input_texts: list[str]) -> None:
         requests, request_metadata = self._build_requests(system_prompts, input_texts)
         if not requests:
             raise ValueError("No requests to submit to Anthropic.")
@@ -761,7 +761,7 @@ class AnthropicBatchModel(Model):
         self._write_state(state_payload)
         logger.info("Submitted Anthropic batch %s with %d requests.", batch.id, len(requests))
 
-    def _retrieve_batch(self) -> List[List[str]]:
+    def _retrieve_batch(self) -> list[list[str]]:
         state = self._load_state()
         batch_id = state["batch_id"]
 
@@ -773,7 +773,7 @@ class AnthropicBatchModel(Model):
             ) from exc
 
         responses = {item.custom_id: item for item in decoder}
-        outputs: List[List[str]] = [[] for _ in range(state["num_inputs"])]
+        outputs: list[list[str]] = [[] for _ in range(state["num_inputs"])]
 
         for request_info in state["requests"]:
             custom_id = request_info["custom_id"]
@@ -796,9 +796,9 @@ class AnthropicBatchModel(Model):
 
     def _build_requests(
         self,
-        system_prompts: List[str],
-        input_texts: List[str],
-    ) -> tuple[List[Dict[str, object]], List[Dict[str, int | str]]]:
+        system_prompts: list[str],
+        input_texts: list[str],
+    ) -> tuple[list[dict[str, Any]], list[dict[str, int | str]]]:
         messages_batch = self.format_inputs(input_texts, system_prompts)
         requests = []
         request_metadata = []
@@ -818,9 +818,9 @@ class AnthropicBatchModel(Model):
 
         return requests, request_metadata
 
-    def _convert_messages_to_params(self, messages: List[Dict[str, str]]) -> Dict[str, object]:
-        system_segments: List[str] = []
-        conversation: List[Dict[str, object]] = []
+    def _convert_messages_to_params(self, messages: list[dict[str, str]]) -> dict[str, object]:
+        system_segments: list[str] = []
+        conversation: list[dict[str, object]] = []
 
         for message in messages:
             role = message.get("role", "")
@@ -845,7 +845,7 @@ class AnthropicBatchModel(Model):
         if not conversation:
             raise ValueError("Anthropic requests require at least one non-system message.")
 
-        params: Dict[str, object] = {
+        params: dict[str, object] = {
             "model": self.model_name_or_path,
             "max_tokens": self.max_tokens,
             "messages": conversation,
@@ -857,7 +857,7 @@ class AnthropicBatchModel(Model):
         params.update(self._filtered_sampling_parameters())
         return params
 
-    def _filtered_sampling_parameters(self) -> Dict[str, float]:
+    def _filtered_sampling_parameters(self) -> dict[str, float]:
         allowed = {"temperature", "top_p"}
         return {
             key: value
@@ -865,11 +865,11 @@ class AnthropicBatchModel(Model):
             if key in allowed and value is not None
         }
 
-    def _write_state(self, payload: Dict[str, object]) -> None:
+    def _write_state(self, payload: dict[str, object]) -> None:
         with self.state_path.open("w", encoding="utf-8") as file:
             json.dump(payload, file, indent=2)
 
-    def _load_state(self) -> Dict[str, object]:
+    def _load_state(self) -> dict[str, object]:
         if not self.state_path.exists():
             raise FileNotFoundError(
                 f"Anthropic batch state file not found at {self.state_path}. Submit a batch first."
@@ -877,7 +877,7 @@ class AnthropicBatchModel(Model):
         with self.state_path.open("r", encoding="utf-8") as file:
             return json.load(file)
 
-    def _write_results_file(self, batch_id: str, outputs: List[List[str]]) -> None:
+    def _write_results_file(self, batch_id: str, outputs: list[list[str]]) -> None:
         self.results_path.parent.mkdir(parents=True, exist_ok=True)
         payload = {"batch_id": batch_id, "outputs": outputs}
         with self.results_path.open("w", encoding="utf-8") as file:

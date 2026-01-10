@@ -10,7 +10,7 @@ from src.prompts import (
     error_prompt,
     simple_prompt,
 )
-from src.utils.utils import load_config, read_data_file, write_file
+from src.utils.utils import load_config, read_jsonl_file, write_file
 
 
 def rewrite_answers(
@@ -26,7 +26,7 @@ def rewrite_answers(
         config=config,
     )
 
-    original_dicts = read_data_file(src_file)
+    original_dicts = read_jsonl_file(src_file)
     new_dicts = [dict(dictionary) for dictionary in original_dicts]
 
     texts = [
