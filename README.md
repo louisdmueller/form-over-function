@@ -8,7 +8,7 @@ You can use venv or conda. To create a venv execute `python -m venv venv`. Activ
 
 To create a conda environment execute `conda env create -f environment.yml`. Activate it via `conda activate venv`.
 
-To access the newest Llama models one needs to accept the Meta tos on HuggingFace Hub and provide an api key. Create a file `config.yml` in the following format:
+To access the newest Llama models one needs to accept the Meta tos on HuggingFace Hub and provide an api key. Create a file `config.yml` or adapt our example config `config.yml.example` using the following format:
 ```yaml
 huggingface_hub_token: <key>
 ```
@@ -30,7 +30,7 @@ bash scripts/slurm/start-generate-data.sh [answer_generation_model]
 ## Generating the models judgements
 (Local)
 ```bash
-bash scripts/bash/generate_judgements.sh
+bash scripts/bash/generate-judgements.sh
 ```
 
 (SLURM Cluster)
