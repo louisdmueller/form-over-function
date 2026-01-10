@@ -6,7 +6,7 @@ import json
 import os
 
 from model import get_model
-from utils.utils import (
+from src.utils.utils import (
     load_config,
     parse_args,
     random_id,

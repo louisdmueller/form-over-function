@@ -3,7 +3,7 @@ import os
 import sys
 from typing import Dict, List, Optional, Tuple
 
-from utils.slurm_helper_scripts.check_if_all_data_processed import (
+from src.utils.slurm_helper_scripts.check_if_all_data_processed import (
     check_if_all_data_processed,
 )
 

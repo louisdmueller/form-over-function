@@ -2,15 +2,15 @@ import json
 
 import yaml
 
-from model import get_model
-from prompts import (
+from src.model import get_model
+from src.prompts import (
     aave_prompt,
     basic_english_prompt,
     complex_prompt,
     error_prompt,
     simple_prompt,
 )
-from utils.utils import read_data_file, write_file
+from src.utils.utils import load_config, read_data_file, write_file
 
 
 def rewrite_answers(
@@ -19,9 +19,7 @@ def rewrite_answers(
     rewrite_type: str = "aave",
 ) -> None:
 
-    with open("config.yml", "r") as file:
-        # supply openAI key via config
-        config = yaml.safe_load(file)
+    config = load_config("config.yml")
 
     model = get_model(
         model_name_or_path=model_name_or_path,

@@ -6,7 +6,7 @@ import json
 import logging
 import os
 
-from utils.utils import load_config, parse_args
+from src.utils.utils import load_config, parse_args
 
 logger = logging.getLogger(__name__)
 

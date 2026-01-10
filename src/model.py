@@ -8,7 +8,6 @@ from pathlib import Path
 from string import ascii_letters, digits
 from typing import Any, Dict, List, Optional
 
-import requests
 from google import genai
 from google.genai.types import GenerateContentConfig
 from huggingface_hub import repo_exists

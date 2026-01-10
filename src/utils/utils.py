@@ -7,7 +7,6 @@ import string
 import time
 from typing import Any, Dict, List
 
-import pandas as pd
 import yaml
 from gguf import Optional
 
