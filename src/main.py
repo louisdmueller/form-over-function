@@ -9,7 +9,6 @@ import logging
 import os
 from dataclasses import dataclass
 from pathlib import Path
-from typing import List, Tuple
 
 from tqdm import tqdm
 
@@ -30,7 +29,7 @@ from src.utils.utils import (
     load_config,
     parse_args,
     prepare_question_with_intro,
-    read_data_file,
+    read_jsonl_file,
 )
 
 logger = setup_logger(__name__, log_level=logging.DEBUG)
@@ -39,13 +38,13 @@ BATCH_QUEUE_DIR = Path("debug") / "batch_queue"
 PROCESSED_QUEUE_DIR = BATCH_QUEUE_DIR / "processed"
 
 
-def load_data_lists(data_1_path: str, data_2_path: str) -> Tuple[list, list]:
+def load_data_lists(data_1_path: str, data_2_path: str) -> tuple[list, list]:
     """
     Load the data lists from the given file paths and ensure they are valid.
 
     Args:
-        data_1_path (str): Path to the first data file.
-        data_2_path (str): Path to the second data file.
+        data_1_path (str): Path to the first JSONL data file.
+        data_2_path (str): Path to the second JSONL data file.
 
     Returns:
         tuple: A tuple containing two lists of data.
@@ -55,14 +54,14 @@ def load_data_lists(data_1_path: str, data_2_path: str) -> Tuple[list, list]:
             "The paths for data_1 and data_2 are the same. "
             "Please provide different paths."
         )
-    data_1 = read_data_file(data_1_path)
-    data_2 = read_data_file(data_2_path)
+    data_1 = read_jsonl_file(data_1_path)
+    data_2 = read_jsonl_file(data_2_path)
 
     if len(data_1) != len(data_2):
         raise ValueError(
-            "The data lists have different lengths: "
+            "The data files have different lengths: "
             f"{len(data_1)} and {len(data_2)}. "
-            "Please provide lists with the same length."
+            "Please provide files with the same length."
         )
     return data_1, data_2
 
@@ -115,7 +114,7 @@ def prepare_judgement_inputs(
     prompt_template: str,
     question_style_switching: bool,
     introductory_beginning: bool,
-) -> List[JudgementInput]:
+) -> list[JudgementInput]:
     """Prepare all inputs for model evaluation."""
     judgement_inputs = []
 
@@ -226,12 +225,12 @@ def main() -> None:
         base_data_model = tasks["base_data_model"]
         base_data_variant = task["base_data_variant"]
         base_data_filepath = get_file_path(base_data_model, base_data_variant)
-        base_data = read_data_file(base_data_filepath)
+        base_data = read_jsonl_file(base_data_filepath)
 
         comp_data_model = task["compare_against"]
         comp_data_variant = ""
         comp_data_path = get_file_path(comp_data_model, comp_data_variant)
-        comp_data = read_data_file(comp_data_path)
+        comp_data = read_jsonl_file(comp_data_path)
 
         logger.info(
             f"Processing task: base_data_model={base_data_model}, base_data_variant={base_data_variant}, compare_against={comp_data_model}"
@@ -377,7 +376,7 @@ def persist_queue_entry(
     comp_data_model: str,
     comp_data_path: str,
     base_data_filepath: str,
-    judgement_inputs: List[JudgementInput],
+    judgement_inputs: list[JudgementInput],
     judge_model_name: str,
 ) -> None:
     BATCH_QUEUE_DIR.mkdir(parents=True, exist_ok=True)
@@ -404,7 +403,7 @@ def persist_and_write_judgements(
     tasks: dict,
     base_data_filepath: str,
     comp_data_path: str,
-    judgement_inputs: List[JudgementInput],
+    judgement_inputs: list[JudgementInput],
     extracted_answers: dict,
     judgement_files_directory: str,
     base_data_variant: str,
