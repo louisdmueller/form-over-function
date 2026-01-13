@@ -7,6 +7,6 @@ gemini_input_bucket: <your_bucket_here>
 batch_size: 8
 cache_dir: <cache workspace dir for bwUniCluster 3.0>
 do_sample: true
-judgement_files_directory: judgements
-excel_output_directory: judgements/excel_overviews
-run_info_csv_path: judgements/job_infos.csv
+judgement_files_directory: outputs/debug/judgements
+excel_output_directory: outputs/debug/judgements/excel_overviews
+run_info_csv_path: outputs/debug/judgements/job_infos.csv
