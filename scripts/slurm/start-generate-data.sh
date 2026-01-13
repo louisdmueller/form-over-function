@@ -32,7 +32,7 @@ Notes:
 
 echo Time is `date +"%H:%M %d-%m-%y"`
 
-export PYTHONPATH="$(pwd):$PYTHONPATH"
+export PYTHONPATH="$(pwd):${PYTHONPATH:-}"
 
 module load devel/cuda/12.8
 
