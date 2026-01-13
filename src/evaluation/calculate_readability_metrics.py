@@ -13,7 +13,7 @@ from datasets import load_dataset
 # easse package is not available on PyPI
 from spacy.matcher import Matcher
 
-from utils.utils import read_data_file, write_file
+from src.utils.utils import read_jsonl_file, write_file
 
 
 def calculate_readability_metrics(texts: List[str] | str, verbose: bool = True) -> dict:
@@ -30,7 +30,7 @@ def calculate_readability_metrics(texts: List[str] | str, verbose: bool = True) 
     """
     # if a file path is provided, read the file and extract texts
     if isinstance(texts, str):
-        sae_dicts = read_data_file(texts)
+        sae_dicts = read_jsonl_file(texts)
         texts = [entry["answers"]["answer1"]["answer"] for entry in sae_dicts] + [
             entry["answers"]["answer2"]["answer"] for entry in sae_dicts
         ]
