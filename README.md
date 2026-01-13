@@ -38,11 +38,13 @@ bash scripts/bash/generate-judgements.sh
 sbatch scripts/slurm/start-generate-judgements.sh
 ```
 
+## Rewriting the GPT-4.1 answers to AAVE/simple language
+```bash
+python src/rewrite_text.py
+```
+
 ## Evaluating the models judgements
 First merge the judgement outputs in to a single file:
-```bash
-python merge_json_files.py
-```
 
 Then evaluate the merged judgements:
 
