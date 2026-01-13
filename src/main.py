@@ -3,7 +3,6 @@ This script lets a judge model evaluate answers from two different models
 in batches.
 """
 
-import csv
 import json
 import logging
 import os
@@ -35,7 +34,7 @@ from src.utils.utils import (
 
 logger = setup_logger(__name__, log_level=logging.DEBUG)
 
-BATCH_QUEUE_DIR = Path("debug") / "batch_queue"
+BATCH_QUEUE_DIR = Path("outputs/debug") / "batch_queue"
 PROCESSED_QUEUE_DIR = BATCH_QUEUE_DIR / "processed"
 
 
