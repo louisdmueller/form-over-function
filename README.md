@@ -9,14 +9,14 @@ You can use venv or conda.
 ```bash
 python -m venv venv
 source venv/bin/activate
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
 ## conda
 ```bash
 conda env create -f environment.yml
 conda activate venv
-pip install -e .
+python -m pip install -e .
 ```
 
 To access the newest Llama models one needs to accept the Meta tos on HuggingFace Hub and provide an api key. Create a file `config.yml` or adapt our example config `config.yml.example` using the following format:
