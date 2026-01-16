@@ -159,7 +159,6 @@ def sanitize_output_path(output_path: str, model_name: str) -> str:
     return output_path
 
 
-
 def prepare_question_with_intro(
     question: str,
     style: str,

@@ -1,9 +1,9 @@
 from rouge_score import rouge_scorer
 
-from utils.utils import read_data_file
+from utils.utils import read_jsonl_file
 
-original_answers = read_data_file("data/generated_answers/gpt-4.1-answers.json")
-error_answers = read_data_file("data/generated_answers/gpt-4.1_errors-answers.json")
+original_answers = read_jsonl_file("data/generated_answers/gpt-4.1-answers.json")
+error_answers = read_jsonl_file("data/generated_answers/gpt-4.1_errors-answers.json")
 
 def compute_rouge2_scores(original_answers: list[dict], error_answers: list[dict]) -> list[dict]:
     scorer = rouge_scorer.RougeScorer(['rouge1', 'rouge2'], use_stemmer=False)

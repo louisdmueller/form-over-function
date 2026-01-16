@@ -8,7 +8,9 @@ translation to aae and it should support different models.
 """
 
 import json
+
 import anthropic
+
 
 def calculate_input_length(inputs: dict, prompt_style, model) -> tuple:
     with open("data/chen-et-al/prompts.json", "r") as f:

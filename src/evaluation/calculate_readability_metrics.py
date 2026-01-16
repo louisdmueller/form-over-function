@@ -13,7 +13,7 @@ from datasets import load_dataset
 # easse package is not available on PyPI
 from spacy.matcher import Matcher
 
-from src.utils.utils import read_jsonl_file, write_file
+from utils.utils import read_jsonl_file
 
 
 def calculate_readability_metrics(texts: List[str] | str, verbose: bool = True) -> dict:

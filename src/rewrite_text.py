@@ -2,15 +2,15 @@ import json
 
 import yaml
 
-from src.model import get_model
-from src.prompts import (
+from model import get_model
+from prompts import (
     aave_prompt,
     basic_english_prompt,
     complex_prompt,
     error_prompt,
     simple_prompt,
 )
-from src.utils.utils import load_config, read_jsonl_file, write_file
+from utils.utils import load_config, read_jsonl_file, write_file
 
 
 def rewrite_answers(

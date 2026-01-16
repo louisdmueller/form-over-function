@@ -1,12 +1,23 @@
 # Research Project
 
-Currently this project uses Python version 3.12.10. 
+This project requires Python 3.12 or higher. It's recommended to use a virtual environment.
 
+# Installation
 
-It is recommended to create a virtual environment to run the code in this project. 
-You can use venv or conda. To create a venv execute `python -m venv venv`. Activate it via `source venv/bin/activate` and install the packages via `pip install -r requirements.txt`.
+You can use venv or conda.
+## venv
+```bash
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
 
-To create a conda environment execute `conda env create -f environment.yml`. Activate it via `conda activate venv`.
+## conda
+```bash
+conda env create -f environment.yml
+conda activate venv
+pip install -e .
+```
 
 To access the newest Llama models one needs to accept the Meta tos on HuggingFace Hub and provide an api key. Create a file `config.yml` or adapt our example config `config.yml.example` using the following format:
 ```yaml

@@ -12,16 +12,16 @@ from typing import Optional
 
 from tqdm import tqdm
 
+from evaluation.create_overview_xlsx import create_excel_overview
 from model import get_model
-from src.evaluation.create_overview_xlsx import create_excel_overview
-from src.utils.logging import log_job_info, setup_logger
-from src.utils.tasks.get_next_task_new import (
+from utils.logging import log_job_info, setup_logger
+from utils.tasks.get_next_task_new import (
     get_next_meta_task_filepath,
     get_next_not_finished_task_with_base_data_variant,
     mark_variant_as_done,
     mark_variant_as_submitted,
 )
-from src.utils.utils import (
+from utils.utils import (
     TimeBasedTimeoutHandler,
     get_file_path,
     get_judgements_path,

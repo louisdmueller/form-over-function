@@ -3,7 +3,7 @@ import random
 import pandas as pd
 from nltk.metrics import edit_distance
 
-from src.utils.utils import read_jsonl_file
+from utils.utils import read_jsonl_file
 
 
 def compute_length_difference(original_answer: str, other_answer: str) -> int:

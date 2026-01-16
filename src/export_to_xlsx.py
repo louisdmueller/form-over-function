@@ -4,10 +4,12 @@ The XLSX file will have the following columns:
 id  question	question_style	answer1	answer_style1	answer2	answer_style2	model_answer1	extracted_answer1	model_answer2	extracted_answer2	model_answer3	extracted_answer3
 """
 
+import argparse
 import json
 from pathlib import Path
+
 import xlsxwriter
-import argparse
+
 
 def export_merged_json_to_xlsx(
     json_path,

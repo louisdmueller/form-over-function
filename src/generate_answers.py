@@ -6,7 +6,7 @@ import json
 import os
 
 from model import get_model
-from src.utils.utils import (
+from utils.utils import (
     load_config,
     parse_args,
     random_id,
@@ -21,8 +21,6 @@ def main():
     config = load_config(args.config_path)
 
     data = read_jsonl_file(args.data_path)
-
-    desc = "Generating SAE answers"
 
     args.output_path = sanitize_output_path(
         args.output_path, args.answer_generation_model_name_or_path
@@ -46,20 +44,10 @@ def main():
         entry.get("temperature", None) if do_sample else None for entry in data
     ]
 
-    tasks = {
-        "vllm_parameters": {"tensor_parallel_size": 2},
-        "model_parameters": {"dtype": "bfloat16", "num_generations": num_generations, "max_output_tokens": max([len(p) for p in prompts]) + 50},
-        "sampling_parameters": {}
-    }
-
-
-
     answer_generation_model = get_model(
         model_name_or_path=args.answer_generation_model_name_or_path,
         config=config,
     )
-
-
 
     responses_batch = answer_generation_model.generate(
         system_prompts=[""] * len(prompts),
