@@ -157,3 +157,33 @@ gemini_api_key: <key>
 Set a `cache_dir` to prevent excessive I/O operations in your home directory.
 
 ---
+
+
+## Using the code
+
+To reproduce our results, the following scripts can be used.
+
+### Generating data by letting LLMs answer the questions
+```bash
+sbatch scripts/slurm/start-generate-data.sh [answer_generation_model] [output_path]
+```
+
+### Rewriting the GPT-4.1 answers to AAVE/simple language/answers with error
+```bash
+python src/rewrite_text.py
+```
+
+
+### Generating judgements & evaluating them
+
+```bash
+sbatch scripts/slurm/start-generate-judgements.sh
+```
+
+This script runs through the task files specified in `meta_tasks.json` until all the judgements have been generated, then computes our metrics and puts the scores in a Excel Table to compare them.
+
+We run the reasoning analysis using 
+
+```bash
+python src/evaluation/reasoning_analysis.py
+```
