@@ -1,22 +1,21 @@
 import argparse
 import json
-import logging
 import os
 import random
 import string
 import time
+from logging import DEBUG
 from typing import Any
 
 import yaml
 from gguf import Optional
 
+from utils.logging import setup_logger
+
+logger = setup_logger(__file__, DEBUG)
 
 def parse_args() -> argparse.Namespace:
-    """
-    Parse arguments
-    """
     parser = argparse.ArgumentParser(
-        description="Argument parser for our research project."
     )
     
     parser.add_argument(
@@ -93,7 +92,7 @@ def get_prompt(prompt_file: str, prompt_key: str) -> tuple[str, str]:
         prompts = json.load(f)
     return prompts[prompt_key]["system"], prompts[prompt_key]["template"]
 
-def random_id(length=8):
+def random_id(length: int=8) -> str:
     chars = string.ascii_letters + string.digits
     return "".join(random.choices(chars, k=length))
 
@@ -170,7 +169,6 @@ def prepare_question_with_intro(
         style (str): The style of the question, e.g., 'aave' or 'sae'.
 
     """
-    logger = logging.getLogger()
     if style in ["aave", "aae"]:
         logger.debug("Using AAVE/AAE style for question.")
         return (
@@ -243,26 +241,26 @@ class TimeBasedTimeoutHandler:
             end_time (int): The end time as a unix timestamp.
             threshold (int): The threshold in seconds to consider the timeout imminent. Default is 300 seconds (5 minutes).
         """
-        self.logger = logging.getLogger()
-        self.logger.info("Initializing TimeBasedTimeoutHandler.")
+
+        logger.info("Initializing TimeBasedTimeoutHandler.")
 
         job_start_time = os.getenv("SLURM_JOB_START_TIME")
         if job_start_time is None:
-            self.logger.warning("SLURM_JOB_START_TIME environment variable not set. ")
+            logger.warning("SLURM_JOB_START_TIME environment variable not set. ")
             job_start_time = int(time.time())
         else:
             job_start_time = int(job_start_time)
 
         job_end_time = os.getenv("SLURM_JOB_END_TIME")
         if job_end_time is None:
-            self.logger.warning(
+            logger.warning(
                 "SLURM_JOB_END_TIME environment variable not set. "
                 "Timeout handling may not work as expected."
             )
             job_end_time = int(time.time()) + 1800  # Default to 30 minutes from now
         else:
             job_end_time = int(job_end_time)
-        self.logger.info(f"Job end time from SLURM: {time.ctime(job_end_time)}")
+        logger.info(f"Job end time from SLURM: {time.ctime(job_end_time)}")
 
         self.start_time = job_start_time
         self.end_time = job_end_time
@@ -277,10 +275,10 @@ class TimeBasedTimeoutHandler:
         """
         current_time = int(time.time())
         remaining_time = self.end_time - current_time
-        self.logger.info(f"Remaining time: {remaining_time} seconds")
+        logger.info(f"Remaining time: {remaining_time} seconds")
         timeout_imminent = remaining_time <= self.threshold
         if timeout_imminent:
-            self.logger.warning(
+            logger.warning(
                 f"Timeout imminent! Only {remaining_time} seconds remaining."
             )
         return timeout_imminent
