@@ -1,3 +1,5 @@
+""""Script to get the next available task for processing based on tasks.json and available data files."""
+
 import json
 import os
 import sys
