@@ -1,4 +1,4 @@
-# Research Project
+# Form over function: Linguistic bias towards SAE in LLM-as-a-Judge systems
 
 This repository contains the code and data for our research project on evaluating the impact of linguistic bias in LLM-as-a-judge-systems.
 
